@@ -1,0 +1,1018 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A DEEP REINFORCED MODEL FOR ABSTRACTIVE SUMMARIZATION</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2017-11-13">13 Nov 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Romain</forename><surname>Paulus</surname></persName>
+							<email>rpaulus@salesforce.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Salesforce Research</orgName>
+								<address>
+									<addrLine>172 University Avenue Palo Alto</addrLine>
+									<postCode>94301</postCode>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Caiming</forename><surname>Xiong</surname></persName>
+							<email>cxiong@salesforce.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Salesforce Research</orgName>
+								<address>
+									<addrLine>172 University Avenue Palo Alto</addrLine>
+									<postCode>94301</postCode>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+							<email>rsocher@salesforce.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Salesforce Research</orgName>
+								<address>
+									<addrLine>172 University Avenue Palo Alto</addrLine>
+									<postCode>94301</postCode>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A DEEP REINFORCED MODEL FOR ABSTRACTIVE SUMMARIZATION</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2017-11-13">13 Nov 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BBC8A906A174E3D4A8E40876102B516D</idno>
+					<idno type="arXiv">arXiv:1705.04304v3[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>Attentional, RNN-based encoder-decoder models for abstractive summarization have achieved good performance on short input and output sequences. For longer documents and summaries however these models often include repetitive and incoherent phrases. We introduce a neural network model with a novel intraattention that attends over the input and continuously generated output separately, and a new training method that combines standard supervised word prediction and reinforcement learning (RL). Models trained only with supervised learning often exhibit "exposure bias" -they assume ground truth is provided at each step during training. However, when standard word prediction is combined with the global sequence prediction training of RL the resulting summaries become more readable. We evaluate this model on the CNN/Daily Mail and New York Times datasets. Our model obtains a 41.16 ROUGE-1 score on the CNN/Daily Mail dataset, an improvement over previous state-of-the-art models. Human evaluation also shows that our model produces higher quality summaries.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head n="7">CONCLUSION</head><p>We presented a new model and training procedure that obtains state-of-the-art results in text summarization for the CNN/Daily Mail, improves the readability of the generated summaries and is better suited to long output sequences. We also run our abstractive model on the NYT dataset for the first time. We saw that despite their common use for evaluation, ROUGE scores have their shortcomings and should not be the only metric to optimize on summarization model for long sequences. Our intra-attention decoder and combined training objective could be applied to other sequence-tosequence tasks with long inputs and outputs, which is an interesting direction for further research.</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Neural machine translation by jointly learning to align and translate</title>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1409.0473</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Distraction-based neural networks for modeling documents</title>
+		<author>
+			<persName><forename type="first">Qian</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodan</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenhua</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Si</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Jiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-16)</title>
+		<meeting>the Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-16)</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="2754" to="2760" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Long short-term memory-networks for machine reading</title>
+		<author>
+			<persName><forename type="first">Jianpeng</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mirella</forename><surname>Lapata</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1601.06733</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Abstractive sentence summarization with attentive recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Sumit</forename><surname>Chopra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Auli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">M</forename><surname>Rush</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Harvard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of NAACL-HLT16</title>
+		<meeting>NAACL-HLT16</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="93" to="98" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Hedge trimmer: A parse-and-trim approach to headline generation</title>
+		<author>
+			<persName><forename type="first">Bonnie</forename><surname>Dorr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Zajic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Schwartz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the HLT-NAACL 03 on Text summarization workshop</title>
+		<meeting>the HLT-NAACL 03 on Text summarization workshop</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Learning-based single-document summarization with compression and anaphoricity constraints</title>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Durrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Taylor</forename><surname>Berg-Kirkpatrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Klein</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.08887</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">Caglar</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sungjin</forename><surname>Ahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ramesh</forename><surname>Nallapati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.08148</idno>
+		<title level="m">Pointing the unknown words</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Teaching machines to read and comprehend</title>
+		<author>
+			<persName><forename type="first">Karl</forename><surname>Moritz Hermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Kocisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Grefenstette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lasse</forename><surname>Espeholt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Will</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mustafa</forename><surname>Suleyman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1693" to="1701" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">Sepp</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jürgen</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Improving the estimation of word importance for news multi-document summarization-extended technical report</title>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ani</forename><surname>Nenkova</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">System combination for multi-document summarization</title>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mitchell</forename><surname>Marcus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ani</forename><surname>Nenkova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="107" to="117" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Tying word vectors and word classifiers: A loss framework for language modeling</title>
+		<author>
+			<persName><forename type="first">Hakan</forename><surname>Inan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Khashayar</forename><surname>Khosravi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Learning Representations</title>
+		<meeting>the International Conference on Learning Representations</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">Diederik</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Ba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.6980</idno>
+		<title level="m">Adam: A method for stochastic optimization</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The role of discourse units in near-extractive summarization</title>
+		<author>
+			<persName><forename type="first">Jessy</forename><surname>Junyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kapil</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Thadani</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Stent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">17th Annual Meeting of the Special Interest Group on Discourse and Dialogue</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page">137</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Rouge: A package for automatic evaluation of summaries</title>
+		<author>
+			<persName><forename type="first">Chin-Yew</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Text summarization branches out: Proceedings of the ACL-04 workshop</title>
+		<meeting><address><addrLine>Barcelona, Spain</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">8</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">How not to evaluate your dialogue system: An empirical study of unsupervised evaluation metrics for dialogue response generation</title>
+		<author>
+			<persName><forename type="first">Chia-Wei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Lowe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Iulian V Serban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Laurent</forename><surname>Noseworthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joelle</forename><surname>Charlin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pineau</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.08023</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The stanford corenlp natural language processing toolkit</title>
+		<author>
+			<persName><forename type="first">Mihai</forename><surname>Christopher D Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Surdeanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jenny</forename><forename type="middle">Rose</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Finkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Bethard</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mcclosky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL (System Demonstrations)</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="55" to="60" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Pointer sentinel mixture models</title>
+		<author>
+			<persName><forename type="first">Stephen</forename><surname>Merity</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caiming</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Bradbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Learning Representations</title>
+		<meeting>the International Conference on Learning Representations</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Distributed representations of words and phrases and their compositionality</title>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Dean</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="3111" to="3119" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">Abstractive text summarization using sequence-to-sequence rnns and beyond</title>
+		<author>
+			<persName><forename type="first">Ramesh</forename><surname>Nallapati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>¸aglar Gülc ¸ehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Xiang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1602.06023</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Summarunner: A recurrent neural network based sequence model for extractive summarization of documents</title>
+		<author>
+			<persName><forename type="first">Ramesh</forename><surname>Nallapati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Feifei</forename><surname>Zhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 31st AAAI conference</title>
+		<meeting>the 31st AAAI conference</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Reward augmented maximum likelihood for neural structured prediction</title>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Norouzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samy</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Navdeep</forename><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yonghui</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dale</forename><surname>Schuurmans</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances In Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1723" to="1731" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Identification and characterization of newsworthy verbs in world news</title>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Nye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ani</forename><surname>Nenkova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">HLT-NAACL</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1440" to="1445" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Glove: Global vectors for word representation</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1532" to="1543" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Using the output embedding to improve language models</title>
+		<idno type="arXiv">arXiv:1608.05859</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Ofir Press and Lior Wolf</publisher>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Sequence level training with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Aurelio</forename><surname>Marc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sumit</forename><surname>Ranzato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Chopra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wojciech</forename><surname>Auli</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zaremba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1511.06732</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Self-critical sequence training for image captioning</title>
+		<author>
+			<persName><forename type="first">Etienne</forename><surname>Steven J Rennie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Youssef</forename><surname>Marcheret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jarret</forename><surname>Mroueh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vaibhava</forename><surname>Ross</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Goel</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1612.00563</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">A neural attention model for abstractive sentence summarization</title>
+		<author>
+			<persName><forename type="first">Sumit</forename><surname>Alexander M Rush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Chopra</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Weston</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1509.00685</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The new york times annotated corpus</title>
+		<author>
+			<persName><forename type="first">Evan</forename><surname>Sandhaus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Linguistic Data Consortium</title>
+		<meeting><address><addrLine>Philadelphia</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">26752</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Temporal attention model for neural machine translation</title>
+		<author>
+			<persName><forename type="first">Haitao</forename><surname>Baskaran Sankaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yaser</forename><surname>Mi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abe</forename><surname>Al-Onaizan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ittycheriah</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1608.02927</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Get to the point: Summarization with pointer-generator networks</title>
+		<author>
+			<persName><forename type="first">Abigail</forename><surname>See</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 55th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Long Papers</publisher>
+			<date type="published" when="2017-07">July 2017</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1073" to="1083" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Sequence to sequence learning with neural networks</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quoc V</forename><surname>Le</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="3104" to="3112" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Improving multi-step prediction of learned time series models</title>
+		<author>
+			<persName><forename type="first">Arun</forename><surname>Venkatraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martial</forename><surname>Hebert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Bagnell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AAAI</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="3024" to="3030" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Pointer networks</title>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Meire</forename><surname>Fortunato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Navdeep</forename><surname>Jaitly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="2692" to="2700" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Simple statistical gradient-following algorithms for connectionist reinforcement learning</title>
+		<author>
+			<persName><forename type="first">Williams</forename><surname>Ronald</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Machine learning</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="229" to="256" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">A learning algorithm for continually running fully recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ronald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zipser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="270" to="280" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">Google's neural machine translation system: Bridging the gap between human and machine translation</title>
+		<author>
+			<persName><forename type="first">Yonghui</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhifeng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wolfgang</forename><surname>Norouzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxim</forename><surname>Macherey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuan</forename><surname>Krikun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qin</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klaus</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Macherey</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1609.08144</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Detecting information-dense texts in multiple news domains</title>
+		<author>
+			<persName><forename type="first">Yinfei</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ani</forename><surname>Nenkova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AAAI</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1650" to="1656" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<author>
+			<persName><forename type="first">Wenyuan</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenjie</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1611.03382</idno>
+		<title level="m">Sanja Fidler, and Raquel Urtasun. Efficient summarization with readagain and copy mechanism</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title level="m" type="main">PREPROCESSING We remove all documents that do not have a full article text, abstract or headline. We concatenate the headline, byline and full article text, separated by special tokens, to produce a single input sequence for each example. We tokenize the input and abstract pairs with the Stanford tokenizer</title>
+		<author>
+			<persName><forename type="first">Dataset</forename><forename type="middle">A</forename><surname>Nyt</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Manning</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>We convert all tokens to lower-case and replace all numbers with "0", remove "(s)" and "(m)" marks in the abstracts and all occurrences of the following words, singular or plural. if they are surrounded by semicolons or at the end of the abstract: "photo", "graph", "chart", "map", "table"</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

@@ -1,0 +1,851 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main" />
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2019-01-14">January 14, 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Raghavendra</forename><surname>Chalapathy</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Aditya</forename><forename type="middle">Krishna</forename><surname>Menon</surname></persName>
+							<email>aditya.menon@data61.csiro.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sanjay</forename><surname>Chawla</surname></persName>
+							<email>schawla@qf.org.qa</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Sydney</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Capital Markets Co-operative Research Centre</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Data61/CSIRO</orgName>
+								<orgName type="institution">Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Qatar Computing Research Institute (QCRI)</orgName>
+								<orgName type="institution" key="instit2">HBKU</orgName>
+							</affiliation>
+						</author>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-01-14">January 14, 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1B6C39793B5C9378AD76191E80E10435</idno>
+					<idno type="arXiv">arXiv:1802.06360v2[cs.LG]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>class svm</term>
+					<term>anomalies detection</term>
+					<term>outlier detection</term>
+					<term>deep learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>We propose a one-class neural network (OC-NN) model to detect anomalies in complex data sets. OC-NN combines the ability of deep networks to extract progressively rich representation of data with the one-class objective of creating a tight envelope around normal data. The OC-NN approach breaks new ground for the following crucial reason: data representation in the hidden layer is driven by the OC-NN objective and is thus customized for anomaly detection. This is a departure from other approaches which use a hybrid approach of learning deep features using an autoencoder and then feeding the features into a separate anomaly detection method like one-class SVM (OC-SVM). The hybrid OC-SVM approach is sub-optimal because it is unable to influence representational learning in the hidden layers. A comprehensive set of experiments demonstrate that on complex data sets (like CIFAR and GTSRB), OC-NN performs on par with state-of-the-art methods and outperformed conventional shallow methods in some scenarios.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="annex">
+<div />			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Outlier detection: A survey</title>
+		<author>
+			<persName><forename type="first">Varun</forename><surname>Chandola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arindam</forename><surname>Banerjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vipin</forename><surname>Kumar</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>ACM Computing Surveys</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Identification of outliers</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Douglas</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hawkins</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1980">1980</date>
+			<publisher>Springer</publisher>
+			<biblScope unit="volume">11</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Support vector machines, regularization, optimization, and beyond</title>
+		<author>
+			<persName><forename type="first">Bernhard</forename><surname>Schölkopf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">J</forename><surname>Smola</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<publisher>MIT Press</publisher>
+			<biblScope unit="volume">656</biblScope>
+			<biblScope unit="page">657</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Support vector data description</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tax</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Robert Pw Duin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Machine learning</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="45" to="66" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Vladimir Naumovich Vapnik and Vlamimir Vapnik. Statistical learning theory</title>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>Wiley</publisher>
+			<biblScope unit="volume">1</biblScope>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">J</forename><surname>Svn Vishwanathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M Narasimha</forename><surname>Smola</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Murty</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Simplesvm</surname></persName>
+		</author>
+		<title level="m">Proceedings of the Twentieth International Conference on International Conference on Machine Learning</title>
+		<meeting>the Twentieth International Conference on International Conference on Machine Learning</meeting>
+		<imprint>
+			<publisher>AAAI press</publisher>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="page" from="760" to="767" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Scaling learning algorithms towards ai. Large-scale kernel machines</title>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="1" to="41" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Anomaly detection with robust deep autoencoders</title>
+		<author>
+			<persName><forename type="first">Chong</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Randy</forename><forename type="middle">C</forename><surname>Paffenroth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</title>
+		<meeting>the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="665" to="674" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<author>
+			<persName><forename type="first">Raghavendra</forename><surname>Chalapathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Krishna Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanjay</forename><surname>Chawla</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1704.06743</idno>
+		<title level="m">Robust, deep and inductive anomaly detection</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Detecting anomalous data using auto-encoders</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Jerone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">J</forename><surname>Andrews</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lewis</forename><forename type="middle">D</forename><surname>Morton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Griffin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Machine Learning and Computing</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">21</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">High-dimensional and largescale anomaly detection using a linear one-class svm with deep learning</title>
+		<author>
+			<persName><forename type="first">Sarah</forename><forename type="middle">M</forename><surname>Erfani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sutharshan</forename><surname>Rajasegarar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shanika</forename><surname>Karunasekera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Leckie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pattern Recognition</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="121" to="134" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A survey on transfer learning</title>
+		<author>
+			<persName><forename type="first">Jialin</forename><surname>Sinno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qiang</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on knowledge and data engineering</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1345" to="1359" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Transfer representation-learning for anomaly detection</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Jerone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Andrews</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">J</forename><surname>Tanay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lewis</forename><forename type="middle">D</forename><surname>Morton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Griffin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICML</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Charu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Aggarwal</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>Outlier Analysis. Springer, 2nd edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Estimating the support of a high-dimensional distribution</title>
+		<author>
+			<persName><forename type="first">Bernhard</forename><surname>Schölkopf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">C</forename><surname>Platt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">C</forename><surname>Shawe-Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><forename type="middle">J</forename><surname>Smola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><forename type="middle">C</forename><surname>Williamson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1443" to="1471" />
+			<date type="published" when="2001-07">Jul 2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A comparison of pca, kpca and ica for dimensionality reduction in support vector machine</title>
+		<author>
+			<persName><surname>Lj Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seng</forename><surname>Kok</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chua</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="321" to="336" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Combined svm-based feature selection and classification</title>
+		<author>
+			<persName><forename type="first">Julia</forename><surname>Neumann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christoph</forename><surname>Schnörr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriele</forename><surname>Steidl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Machine learning</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">1-3</biblScope>
+			<biblScope unit="page" from="129" to="150" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Abnormal event detection in videos using spatiotemporal autoencoder</title>
+		<author>
+			<persName><forename type="first">Yong</forename><surname>Shean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chong</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yong</forename><forename type="middle">Haur</forename><surname>Tay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Symposium on Neural Networks</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="189" to="196" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Deep recurrent neural network-based autoencoders for acoustic novelty detection. Computational intelligence and neuroscience</title>
+		<author>
+			<persName><forename type="first">Erik</forename><surname>Marchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fabio</forename><surname>Vesperini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Squartini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Björn</forename><surname>Schuller</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A hybrid feature model and deep-learning-based bearing fault diagnosis</title>
+		<author>
+			<persName><forename type="first">Muhammad</forename><surname>Sohaib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cheol-Hong</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jong-Myon</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sensors</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page">2876</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Deep one-class classification</title>
+		<author>
+			<persName><forename type="first">Lukas</forename><surname>Ruff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Vandermeulen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nico</forename><surname>Goernitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucas</forename><surname>Deecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ahmed</forename><surname>Shoaib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Siddiqui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emmanuel</forename><surname>Binder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marius</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kloft</surname></persName>
+		</author>
+		<ptr target="http://proceedings.mlr.press/v80/ruff18a.html" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 35th International Conference on Machine Learning</title>
+		<editor>
+			<persName><forename type="first">Jennifer</forename><surname>Dy</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Andreas</forename><surname>Krause</surname></persName>
+		</editor>
+		<meeting>the 35th International Conference on Machine Learning<address><addrLine>Stockholmsmässan, Stockholm Sweden</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2018-07">Jul 2018</date>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="10" to="15" />
+		</imprint>
+	</monogr>
+	<note>PMLR</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Robust pca via outlier pursuit</title>
+		<author>
+			<persName><forename type="first">Huan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Constantine</forename><surname>Caramanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sujay</forename><surname>Sanghavi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="2496" to="2504" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">Stephen</forename><surname>Boyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lieven</forename><surname>Vandenberghe</surname></persName>
+		</author>
+		<title level="m">Convex optimization</title>
+		<imprint>
+			<publisher>Cambridge university press</publisher>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tony</forename><surname>Fei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Ting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhi-Hua</forename><surname>Zhou</surname></persName>
+		</author>
+		<title level="m">Eighth IEEE International Conference on</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="413" to="422" />
+		</imprint>
+	</monogr>
+	<note>Data Mining, 2008. ICDM'08</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">On estimation of a probability density function and mode. The annals of mathematical statistics</title>
+		<author>
+			<persName><forename type="first">Emanuel</forename><surname>Parzen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1962">1962</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1065" to="1076" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Stacked convolutional auto-encoders for hierarchical feature extraction</title>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Masci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ueli</forename><surname>Meier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Artificial Neural Networks</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="52" to="59" />
+		</imprint>
+	</monogr>
+	<note>Dan Cires ¸an, and Jürgen Schmidhuber</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Unsupervised representation learning with deep convolutional generative adversarial networks</title>
+		<author>
+			<persName><forename type="first">Alec</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luke</forename><surname>Metz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soumith</forename><surname>Chintala</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1511.06434</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">Chollet</forename><surname>Franc</surname></persName>
+		</author>
+		<ptr target="https://github.com/keras-team/keras" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Tensorflow: Large-scale machine learning on heterogeneous distributed systems</title>
+		<author>
+			<persName><forename type="first">Martín</forename><surname>Abadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ashish</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Barham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eugene</forename><surname>Brevdo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhifeng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Craig</forename><surname>Citro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andy</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthieu</forename><surname>Devin</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.04467</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Mnist handwritten digit database</title>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Corinna</forename><surname>Cortes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Christopher</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Burges</surname></persName>
+		</author>
+		<ptr target="http://yann.lecun.com/exdb/mnist" />
+	</analytic>
+	<monogr>
+		<title level="j">AT&amp;T Labs</title>
+		<imprint>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">The german traffic sign recognition benchmark: a multi-class classification competition</title>
+		<author>
+			<persName><forename type="first">Johannes</forename><surname>Stallkamp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marc</forename><surname>Schlipsing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Salmen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Igel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The 2011 International Joint Conference on</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="1453" to="1460" />
+		</imprint>
+	</monogr>
+	<note>Neural Networks (IJCNN)</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Learning multiple layers of features from tiny images</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Hinton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Decision-based adversarial attacks: Reliable attacks against black-box machine learning models</title>
+		<author>
+			<persName><forename type="first">Wieland</forename><surname>Brendel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonas</forename><surname>Rauber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Bethge</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1712.04248</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

@@ -1,0 +1,313 @@
+(.venv) PS C:\Users\manoj\Desktop\Research> python RAG.py                                                                                 
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_133653_977514.txt                               
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement                         
+[refine] user_question (first 200 chars): I’m training a deep neural network and I’m seeing very unstable gradients in the first few epochs. The loss oscillates a lot and sometimes diverges. I want a principled way to stabilize training witho
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251222_133700_570842.json
+{'refined_question': 'What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?', 'intent': 'Understand techniques to mitigate unstable gradients and loss divergence in deep neural network training, within the domain of machine learning, specifically focusing on stabilization methods that do not involve redesigning the network architecture', 'constraints': ['no architecture redesign', 'deep neural networks', 'early epoch stabilization'], 'excluded_topics': ['switching to larger pre-trained models', 'fine-tuning large pre-trained models', 'scaling parameter count as primary solution'], 'search_hint': 'gradient stabilization, loss regularization, early stopping, learning rate scheduling, batch normalization, gradient clipping, weight decay, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation', '_saved_path': 'C:\\Users\\manoj\\Desktop\\Research\\TEMP\\refined_query_20251222_133700_570842.json'}
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+   
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+
+1. paper_id=1602.07868v3.tei.tei chunk_id=1602.07868v3.tei.tei_chunk-5 score=0.4200 year=2016 section=Gradients
+   The rate of increase will depend on the the variance of the weight gradient. If our gradients are noisy, c will be high and the norm of v will quickly increase, which in turn will decrease the scaling factor g/||v||.  If...
+
+2. paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-5 score=0.4077 year=2015 section=Towards Reducing Internal Covariate Shift
+   Thus, the combination of the update to b and subsequent change in normalization led to no change in the output of the layer nor, consequently, the loss. As the training continues, b will grow indefinitely while the loss ...
+
+3. paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-13 score=0.3924 year=2015 section=ImageNet classification
+   In our experiments, we evaluated several modifications of Inception with Batch Normalization. In all cases, Batch Normalization was applied to the input of each nonlinearity, in a convolutional way, as described in secti...
+
+4. paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-3 score=0.3913 year=2015 section=Introduction
+   Fixed distribution of inputs to a sub-network would have positive consequences for the layers outside the subnetwork, as well. Consider a layer with a sigmoid activation function z = g(W u + b) where u is the layer input...
+
+5. paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-9 score=0.3906 year=2015 section=Training and Inference with Batch-Normalized Networks
+   Modify each layer in N tr BN with input x (k) to take y (k) instead 5: end for 6: Train N tr BN to optimize the parameters Θ ∪ {γ (k) , β (k) } K // For clarity,  B , etc.  10:  Process multiple training mini-batches B, ...
+
+6. paper_id=1607.06450v1.tei.tei chunk_id=1607.06450v1.tei.tei_chunk-1 score=0.3827 year=None section=Abstract
+   Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the training time is to normalize the activities of the neurons. A recently introduced technique called batch normalization ...
+
+7. paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-10 score=0.3603 year=2015 section=Batch-Normalized Convolutional Networks
+   For convolutional layers, we additionally want the normalization to obey the convolutional property -so that different elements of the same feature map, at different locations, are normalized in the same way. To achieve ...
+
+8. paper_id=1602.07868v3.tei.tei chunk_id=1602.07868v3.tei.tei_chunk-4 score=0.3504 year=2016 section=Weight Normalization
+   Instead of working with g directly, we may also use an exponential parameterization for the scale, i.e. g = e s , where s is a log-scale parameter to learn by stochastic gradient descent. Parameterizing the g parameter i...
+
+9. paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-1 score=0.3494 year=2015 section=None
+   **Published:** 2 Mar 2015  Training Deep Neural Networks is complicated by the fact that the distribution of each layer's inputs changes during training, as the parameters of the previous layers change. This slows down t...
+
+10. paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-14 score=0.3488 year=2015 section=Accelerating BN Networks
+   Reduce the photometric distortions. Because batchnormalized networks train faster and observe each training example fewer times, we let the trainer focus on more "real" images by distorting them less.  We evaluated the f...
+
+How many judge iterations to run before answering? (default 3): 5
+
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_133653_977514.txt
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_133653_977514.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=3
+[judge] refined_question: What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[judge] search_hint: gradient stabilization, loss regularization, early stopping, learning rate scheduling, batch normalization, gradient clipping, weight decay, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1602.07868v3.tei.tei chunk_id=1602.07868v3.tei.tei_chunk-5 retr_score=0.4200 section=Gradients :: The rate of increase will depend on the the variance of the weight gradient. If our gradients are noisy, c will be high and the norm of v will quickly increase,...
+[judge] cand#2: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-5 retr_score=0.4077 section=Towards Reducing Internal Covariate Shift :: Thus, the combination of the update to b and subsequent change in normalization led to no change in the output of the layer nor, consequently, the loss. As the ...
+[judge] cand#3: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-13 retr_score=0.3924 section=ImageNet classification :: In our experiments, we evaluated several modifications of Inception with Batch Normalization. In all cases, Batch Normalization was applied to the input of each...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["methods to stabilize deep neural network training without modifying the architecture", "addressing unstable gradients and loss oscillation in early epochs"],   "next_question": "What techniques can be used to stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering methods such as weight normalization, batch normalization, and learning rate scheduling?",   "accept": [     {"chunk_id": "1602.07868v3.tei.tei_chunk-5", "
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251222_133746_518803.json
+[judge] satisfied=False
+[judge] Accepted this iter: 3 | Rejected this iter: 0 | Total accepted: 3 | Total rejected: 0
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): What techniques can be used to stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering m
+[judge] search_hint: weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques
+[retrieve] Query (first 200 chars): What techniques can be used to stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering m
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1607.06450v1.tei.tei chunk_id=1607.06450v1.tei.tei_chunk-1 retr_score=0.4451 section=Abstract :: Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the training time is to normalize the activities of the neurons....
+[judge] cand#2: paper_id=1510.01378v1.tei.tei chunk_id=1510.01378v1.tei.tei_chunk-3 retr_score=0.4173 section=Batch Normalization :: where m is the size of the mini-batch. Using these statistics, we can standardize each feature as follows  where is a small positive constant to improve numeric...
+[judge] cand#3: paper_id=1603.09025v5.tei.tei chunk_id=1603.09025v5.tei.tei_chunk-2 retr_score=0.4042 section=INTRODUCTION :: Batch normalization (Ioffe & Szegedy, 2015) is a recently proposed technique for controlling the distributions of feed-forward neural network activations, there...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["techniques to stabilize deep neural network training without modifying the architecture", "methods to address unstable gradients and loss oscillation in early epochs"],   "next_question": "What methods can stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering techniques such as weight normalization, batch normalization, and learning rate scheduling?",   "accept": [     {"chunk_id": "1607.06450v1.tei.tei_chunk-1", "
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251222_133813_454986.json
+[judge] satisfied=False
+[judge] Accepted this iter: 3 | Rejected this iter: 0 | Total accepted: 6 | Total rejected: 0
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering techniques such
+[judge] search_hint: weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques, layer normalization, recurrent neural networks
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering techniques such
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 1 chunks
+[judge] Retrieved 1 candidate chunks
+[judge] cand#1: paper_id=1701.06538v1.tei.tei chunk_id=1701.06538v1.tei.tei_chunk-8 retr_score=0.4038 section=ADDRESSING PERFORMANCE CHALLENGES :: Increasing Batch Size for a Recurrent MoE: We suspect that even more powerful models may involve applying a MoE recurrently. For example, the weight matrices of...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["insufficient evidence for stabilization methods in deep neural networks without modifying architecture", "unresolved techniques for addressing unstable gradients and loss oscillation in early epochs"],   "next_question": "What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as weight normalization, batch normalization, and learning rate scheduling?",   "accept": [],   "reject": [{"chun
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251222_133839_155985.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 1 | Total accepted: 6 | Total rejected: 1
+
+[judge] ===== Iteration 4 =====
+[judge] retrieval_query (first 200 chars): What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as
+[judge] search_hint: weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques, layer normalization, recurrent neural networks, stabilization methods, architecture modification
+[retrieve] Query (first 200 chars): What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 0 chunks
+[judge] No candidates retrieved; stopping.
+
+JUDGE SUMMARY:
+{
+  "iterations_requested": 5,
+  "iterations_completed": 3,
+  "satisfied": false,
+  "final_refined_question": "What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as weight normalization, batch normalization, and learning rate scheduling?",
+  "final_intent": "Understand techniques to mitigate unstable gradients and loss divergence in deep neural network training, within the domain of machine learning, specifically focusing on stabilization methods that do not involve redesigning the network architecture",       
+  "final_constraints": [
+    "no architecture redesign",
+    "deep neural networks",
+    "early epoch stabilization"
+  ],
+  "final_excluded_topics": [
+    "switching to larger pre-trained models",
+    "fine-tuning large pre-trained models",
+    "scaling parameter count as primary solution"
+  ],
+  "final_search_hint": "weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques, layer normalization, recurrent neural networks, stabilization methods, architecture modification",
+  "accepted_chunk_count": 6,
+  "accepted_paper_count": 5,
+  "accepted_paper_ids": [
+    "1502.03167v3.tei.tei",
+    "1510.01378v1.tei.tei",
+    "1602.07868v3.tei.tei",
+    "1603.09025v5.tei.tei",
+    "1607.06450v1.tei.tei"
+  ],
+  "accepted_chunk_ids": [
+    "1502.03167v3.tei.tei_chunk-13",
+    "1502.03167v3.tei.tei_chunk-5",
+    "1510.01378v1.tei.tei_chunk-3",
+    "1602.07868v3.tei.tei_chunk-5",
+    "1603.09025v5.tei.tei_chunk-2",
+    "1607.06450v1.tei.tei_chunk-1"
+  ],
+  "rejected_chunk_count": 1,
+  "rejected_chunk_ids": [
+    "1701.06538v1.tei.tei_chunk-8"
+  ],
+  "rejected_paper_ids": [],
+  "solved_parts": [],
+  "unsolved_parts_by_iteration": [
+    {
+      "iteration": 1,
+      "unsolved_parts": [
+        "methods to stabilize deep neural network training without modifying the architecture",
+        "addressing unstable gradients and loss oscillation in early epochs"
+      ]
+    },
+    {
+      "iteration": 2,
+      "unsolved_parts": [
+        "techniques to stabilize deep neural network training without modifying the architecture",
+        "methods to address unstable gradients and loss oscillation in early epochs"
+      ]
+    },
+    {
+      "iteration": 3,
+      "unsolved_parts": [
+        "insufficient evidence for stabilization methods in deep neural networks without modifying architecture",
+        "unresolved techniques for addressing unstable gradients and loss oscillation in early epochs"
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\manoj\\Desktop\\Research\\TEMP\\full_run_20251222_133653_977514.txt"
+}
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What weight normalization techniques can be applied to deep neural networks to address unstable gradients in early epochs?
+[retrieve] Query (first 200 chars): What weight normalization techniques can be applied to deep neural networks to address unstable gradients in early epochs?  Search hints: weight normalization, deep neural networks, unstable gradients
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How does batch normalization impact loss oscillation in deep neural networks, and what are its limitations?
+[retrieve] Query (first 200 chars): How does batch normalization impact loss oscillation in deep neural networks, and what are its limitations?  Search hints: batch normalization, loss oscillation, deep neural networks, stabilization me
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What learning rate scheduling strategies can be employed to mitigate unstable gradients and loss oscillation in deep neural networks without
+[retrieve] Query (first 200 chars): What learning rate scheduling strategies can be employed to mitigate unstable gradients and loss oscillation in deep neural networks without modifying the architecture?  Search hints: learning rate sc
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+✗ Failed to connect to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+✓ Connected to PostgreSQL database: research_papers
+✓ Connected to Qdrant at localhost:6333
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 6 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_134128_602277.json
+
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_134128_602277.json
+
+FINAL ANSWER:
+To address unstable gradients and loss oscillation in deep neural networks without modifying the architecture, several techniques can be employed. Weight normalization is one such technique that can help stabilize the gradients by projecting the gradient away from the weight vector, thus eliminating noise in that direction. This is supported by the paper '1602.07868v3.tei.tei' in chunk '1602.07868v3.tei.tei_chunk-5', which describes the effect of weight normalization on gradients.
+
+Another technique is batch normalization, which helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network. This is supported by the paper '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.
+
+Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optim[final] Accepted chunks: 6 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_134128_602277.json
+
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_134128_602277.json
+
+FINAL ANSWER:
+To address unstable gradients and loss oscillation in deep neural networks without modifying the architecture, several techniques can be employed. Weight normalization is one such technique that can help stabilize the gradients by projecting the gradient away from the weight vector, thus eliminating noise in that direction. This is supported by the paper '1602.07868v3.tei.tei' in chunk '1602.07868v3.tei.tei_chunk-5', which describes the effect of weight normalization on gradients.
+
+Another technique is batch normalization, which helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network. This is supported by the paper '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.
+
+Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optim
+
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_134128_602277.json
+
+FINAL ANSWER:
+To address unstable gradients and loss oscillation in deep neural networks without modifying the architecture, several techniques can be employed. Weight normalization is one such technique that can help stabilize the gradients by projecting the gradient away from the weight vector, thus eliminating noise in that direction. This is supported by the paper '1602.07868v3.tei.tei' in chunk '1602.07868v3.tei.tei_chunk-5', which describes the effect of weight normalization on gradients.
+
+Another technique is batch normalization, which helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network. This is supported by the paper '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.
+
+Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optimTo address unstable gradients and loss oscillation in deep neural networks without modifying the architecture, several techniques can be employed. Weight normalization is one such technique that can help stabilize the gradients by projecting the gradient away from the weight vector, thus eliminating noise in that direction. This is supported by the paper '1602.07868v3.tei.tei' in chunk '1602.07868v3.tei.tei_chunk-5', which describes the effect of weight normalization on gradients.
+
+Another technique is batch normalization, which helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network. This is supported by the paper '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.
+
+Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optim
+
+Another technique is batch normalization, which helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network. This is supported by the paper '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.
+
+Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optim.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.
+
+Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optimBatch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optim
+
+Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optimization, computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients,Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optimization, computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients,ization, computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients, as described in '1412.6980v9.tei.tei' in chunk '1412.6980v9.tei.tei_chunk-2'.
+ as described in '1412.6980v9.tei.tei' in chunk '1412.6980v9.tei.tei_chunk-2'.
+
+
+Furthermore, batch normalization can help reduce internal covariate shift, which may lead to faster training and potentially more stable gradients, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-3'.
+
+In terms of recurrent neural networks, layer normalization can be particularly effective, as it can help stabilize the hidden state dynamics, as described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1'.
+
+Overall, these techniques can help mitigate unstable gradients and loss oscillation in deep neural networks without modifying the architecture. However, the exact impact of these techniques on loss oscillation is not explicitly stated in the provided chunks, and further research may be needed to fully understand their effects.
+
+It is also important to note that the provided chunks do not discuss other techniques such as gradient clipping and early stopping, which may also be useful in addressing unstable gradients and loss oscillation.
+
+In conclusion, weight normalization, batch normalization, and layer normalization are techniques that can help stabilize the gradients and reduce loss oscillation in deep neural networks without modifying the architecture. Learning rate scheduling, including methods like Adam, can also play a crucial role in training deep neural networks

@@ -1,0 +1,1392 @@
+{
+  "paper_id": "90DD9CFCEC8A07E0BAD65458FD53BE70",
+  "title": "DEEP GRAPH INFOMAX",
+  "arxiv_id": "arXiv:1809.10341v2[stat.ML]",
+  "authors": [
+    {
+      "given": "Petar",
+      "family": "Veličković"
+    },
+    {
+      "given": "William",
+      "family": "Fedus"
+    },
+    {
+      "given": "William L",
+      "family": "Hamilton"
+    },
+    {
+      "given": "Pietro",
+      "family": "Liò"
+    },
+    {
+      "given": "Yoshua",
+      "family": "Bengio"
+    },
+    {
+      "given": "Devon",
+      "family": "Hjelm"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Relational inductive biases, deep learning, and graph networks",
+      "container_title": "Relational inductive biases, deep learning, and graph networks",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1806.01261"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Jessica B",
+          "family": "Peter W Battaglia"
+        },
+        {
+          "given": "Victor",
+          "family": "Hamrick"
+        },
+        {
+          "given": "Alvaro",
+          "family": "Bapst"
+        },
+        {
+          "given": "Vinicius",
+          "family": "Sanchez-Gonzalez"
+        },
+        {
+          "given": "Mateusz",
+          "family": "Zambaldi"
+        },
+        {
+          "given": "Andrea",
+          "family": "Malinowski"
+        },
+        {
+          "given": "David",
+          "family": "Tacchetti"
+        },
+        {
+          "given": "Adam",
+          "family": "Raposo"
+        },
+        {
+          "given": "Ryan",
+          "family": "Santoro"
+        },
+        {
+          "given": null,
+          "family": "Faulkner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Mine: mutual information neural estimation",
+      "container_title": "Mine: mutual information neural estimation",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1801.04062"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ishmael",
+          "family": "Belghazi"
+        },
+        {
+          "given": "Aristide",
+          "family": "Baratin"
+        },
+        {
+          "given": "Sai",
+          "family": "Rajeswar"
+        },
+        {
+          "given": "Sherjil",
+          "family": "Ozair"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Aaron",
+          "family": "Courville"
+        },
+        {
+          "given": "Devon",
+          "family": "Hjelm"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "International Conference on Learning Representations",
+      "container_title": "International Conference on Learning Representations",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Aleksandar",
+          "family": "Bojchevski"
+        },
+        {
+          "given": "Stephan",
+          "family": "Günnemann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "ACL",
+      "container_title": "ACL",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Avishek",
+          "family": "Bose"
+        },
+        {
+          "given": "Huan",
+          "family": "Ling"
+        },
+        {
+          "given": "Yanshuai",
+          "family": "Cao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "IEEE Signal Processing Magazine",
+      "container_title": "IEEE Signal Processing Magazine",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Joan",
+          "family": "Michael M Bronstein"
+        },
+        {
+          "given": "Yann",
+          "family": "Bruna"
+        },
+        {
+          "given": "Arthur",
+          "family": "Lecun"
+        },
+        {
+          "given": "Pierre",
+          "family": "Szlam"
+        },
+        {
+          "given": null,
+          "family": "Vandergheynst"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+      "container_title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1801.10247"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Jie",
+          "family": "Chen"
+        },
+        {
+          "given": "Tengfei",
+          "family": "Ma"
+        },
+        {
+          "given": "Cao",
+          "family": "Xiao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Proceedings of the 25th international conference on Machine learning",
+      "container_title": "Proceedings of the 25th international conference on Machine learning",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ronan",
+          "family": "Collobert"
+        },
+        {
+          "given": "Jason",
+          "family": "Weston"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Semi-supervised learning on graphs with generative adversarial nets",
+      "container_title": "Semi-supervised learning on graphs with generative adversarial nets",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1809.00130"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ming",
+          "family": "Ding"
+        },
+        {
+          "given": "Jie",
+          "family": "Tang"
+        },
+        {
+          "given": "Jie",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "International ACM Conference on Knowledge Discovery and Data Mining",
+      "container_title": "International ACM Conference on Knowledge Discovery and Data Mining",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Claire",
+          "family": "Donnat"
+        },
+        {
+          "given": "Marinka",
+          "family": "Zitnik"
+        },
+        {
+          "given": "David",
+          "family": "Hallac"
+        },
+        {
+          "given": "Jure",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alberto",
+          "family": "Garcia"
+        },
+        {
+          "given": "Duran",
+          "family": null
+        },
+        {
+          "given": "Mathias",
+          "family": "Niepert"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Neural message passing for quantum chemistry",
+      "container_title": "Neural message passing for quantum chemistry",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1704.01212"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Justin",
+          "family": "Gilmer"
+        },
+        {
+          "given": "S",
+          "family": "Samuel"
+        },
+        {
+          "given": "Patrick F",
+          "family": "Schoenholz"
+        },
+        {
+          "given": "Oriol",
+          "family": "Riley"
+        },
+        {
+          "given": "George E",
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Dahl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics",
+      "container_title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Xavier",
+          "family": "Glorot"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ian",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "Jean",
+          "family": "Pouget-Abadie"
+        },
+        {
+          "given": "Mehdi",
+          "family": "Mirza"
+        },
+        {
+          "given": "Bing",
+          "family": "Xu"
+        },
+        {
+          "given": "David",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "Sherjil",
+          "family": "Ozair"
+        },
+        {
+          "given": "Aaron",
+          "family": "Courville"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "container_title": "Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Aditya",
+          "family": "Grover"
+        },
+        {
+          "given": "Jure",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics",
+      "container_title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Michael",
+          "family": "Gutmann"
+        },
+        {
+          "given": "Aapo",
+          "family": "Hyvärinen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Will",
+          "family": "Hamilton"
+        },
+        {
+          "given": "Zhitao",
+          "family": "Ying"
+        },
+        {
+          "given": "Jure",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Representation learning on graphs: Methods and applications",
+      "container_title": "Representation learning on graphs: Methods and applications",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1709.05584"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Rex",
+          "family": "William L Hamilton"
+        },
+        {
+          "given": "Jure",
+          "family": "Ying"
+        },
+        {
+          "given": null,
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of the IEEE international conference on computer vision",
+      "container_title": "Proceedings of the IEEE international conference on computer vision",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kaiming",
+          "family": "He"
+        },
+        {
+          "given": "Xiangyu",
+          "family": "Zhang"
+        },
+        {
+          "given": "Shaoqing",
+          "family": "Ren"
+        },
+        {
+          "given": "Jian",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Proceedings of the IEEE conference on computer vision and pattern recognition",
+      "container_title": "Proceedings of the IEEE conference on computer vision and pattern recognition",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kaiming",
+          "family": "He"
+        },
+        {
+          "given": "Xiangyu",
+          "family": "Zhang"
+        },
+        {
+          "given": "Shaoqing",
+          "family": "Ren"
+        },
+        {
+          "given": "Jian",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Learning deep representations by mutual information estimation and maximization",
+      "container_title": "Learning deep representations by mutual information estimation and maximization",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1808.06670"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Devon",
+          "family": "Hjelm"
+        },
+        {
+          "given": "Alex",
+          "family": "Fedorov"
+        },
+        {
+          "given": "Samuel",
+          "family": "Lavoie-Marchildon"
+        },
+        {
+          "given": "Karan",
+          "family": "Grewal"
+        },
+        {
+          "given": "Adam",
+          "family": "Trischler"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Gao",
+          "family": "Huang"
+        },
+        {
+          "given": "Zhuang",
+          "family": "Liu"
+        },
+        {
+          "given": "Laurens",
+          "family": "Van Der Maaten"
+        },
+        {
+          "given": "Kilian Q",
+          "family": "Weinberger"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Proceedings of the 12th International Conference on the World Wide Web",
+      "container_title": "Proceedings of the 12th International Conference on the World Wide Web",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Glen",
+          "family": "Jeh"
+        },
+        {
+          "given": "Jennifer",
+          "family": "Widom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Adam: A method for stochastic optimization",
+      "container_title": "Adam: A method for stochastic optimization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.6980"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Diederik",
+          "family": "Kingma"
+        },
+        {
+          "given": "Jimmy",
+          "family": "Ba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Semi-supervised classification with graph convolutional networks",
+      "container_title": "Semi-supervised classification with graph convolutional networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1609.02907"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Thomas"
+        },
+        {
+          "given": "Max",
+          "family": "Kipf"
+        },
+        {
+          "given": null,
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Variational graph auto-encoders",
+      "container_title": "Variational graph auto-encoders",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1611.07308"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Thomas"
+        },
+        {
+          "given": "Max",
+          "family": "Kipf"
+        },
+        {
+          "given": null,
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Journal of Machine Learning Research",
+      "container_title": "Journal of Machine Learning Research",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Laurens",
+          "family": "Van Der Maaten"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Kai",
+          "family": "Chen"
+        },
+        {
+          "given": "Greg S",
+          "family": "Corrado"
+        },
+        {
+          "given": "Jeff",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andriy",
+          "family": "Mnih"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sebastian",
+          "family": "Nowozin"
+        },
+        {
+          "given": "Botond",
+          "family": "Cseke"
+        },
+        {
+          "given": "Ryota",
+          "family": "Tomioka"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Representation learning with contrastive predictive coding",
+      "container_title": "Representation learning with contrastive predictive coding",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1807.03748"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Aaron",
+          "family": "Van Den Oord"
+        },
+        {
+          "given": "Yazhe",
+          "family": "Li"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Automatic differentiation in pytorch",
+      "container_title": "Automatic differentiation in pytorch",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Adam",
+          "family": "Paszke"
+        },
+        {
+          "given": "Sam",
+          "family": "Gross"
+        },
+        {
+          "given": "Soumith",
+          "family": "Chintala"
+        },
+        {
+          "given": "Gregory",
+          "family": "Chanan"
+        },
+        {
+          "given": "Edward",
+          "family": "Yang"
+        },
+        {
+          "given": "Zachary",
+          "family": "Devito"
+        },
+        {
+          "given": "Zeming",
+          "family": "Lin"
+        },
+        {
+          "given": "Alban",
+          "family": "Desmaison"
+        },
+        {
+          "given": "Luca",
+          "family": "Antiga"
+        },
+        {
+          "given": "Adam",
+          "family": "Lerer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)",
+      "container_title": "Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jeffrey",
+          "family": "Pennington"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Christopher",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "container_title": "Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bryan",
+          "family": "Perozzi"
+        },
+        {
+          "given": "Rami",
+          "family": "Al-Rfou"
+        },
+        {
+          "given": "Steven",
+          "family": "Skiena"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "container_title": "Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Pedro Hp",
+          "family": "Leonardo Fr Ribeiro"
+        },
+        {
+          "given": null,
+          "family": "Saverese"
+        },
+        {
+          "given": null,
+          "family": "Daniel R Figueiredo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Journal of computational and applied mathematics",
+      "container_title": "Journal of computational and applied mathematics",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Peter"
+        },
+        {
+          "given": null,
+          "family": "Rousseeuw"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "AI magazine",
+      "container_title": "AI magazine",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Prithviraj",
+          "family": "Sen"
+        },
+        {
+          "given": "Galileo",
+          "family": "Namata"
+        },
+        {
+          "given": "Mustafa",
+          "family": "Bilgic"
+        },
+        {
+          "given": "Lise",
+          "family": "Getoor"
+        },
+        {
+          "given": "Brian",
+          "family": "Galligher"
+        },
+        {
+          "given": "Tina",
+          "family": "Eliassi-Rad"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Journal of machine learning research",
+      "container_title": "Journal of machine learning research",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nitish",
+          "family": "Srivastava"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        },
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Ruslan",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "Proceedings of the National Academy of Sciences",
+      "container_title": "Proceedings of the National Academy of Sciences",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Aravind",
+          "family": "Subramanian"
+        },
+        {
+          "given": "Pablo",
+          "family": "Tamayo"
+        },
+        {
+          "given": "K",
+          "family": "Vamsi"
+        },
+        {
+          "given": "Sayan",
+          "family": "Mootha"
+        },
+        {
+          "given": "Benjamin L",
+          "family": "Mukherjee"
+        },
+        {
+          "given": "Michael A",
+          "family": "Ebert"
+        },
+        {
+          "given": "Amanda",
+          "family": "Gillette"
+        },
+        {
+          "given": null,
+          "family": "Paulovich"
+        },
+        {
+          "given": "L",
+          "family": "Scott"
+        },
+        {
+          "given": "Todd R",
+          "family": "Pomeroy"
+        },
+        {
+          "given": "Eric S",
+          "family": "Golub"
+        },
+        {
+          "given": null,
+          "family": "Lander"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Proceedings of the 24th International Conference on World Wide Web",
+      "container_title": "Proceedings of the 24th International Conference on World Wide Web",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jian",
+          "family": "Tang"
+        },
+        {
+          "given": "Meng",
+          "family": "Qu"
+        },
+        {
+          "given": "Mingzhe",
+          "family": "Wang"
+        },
+        {
+          "given": "Ming",
+          "family": "Zhang"
+        },
+        {
+          "given": "Jun",
+          "family": "Yan"
+        },
+        {
+          "given": "Qiaozhu",
+          "family": "Mei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "Graph Attention Networks. International Conference on Learning Representations",
+      "container_title": "Graph Attention Networks. International Conference on Learning Representations",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Petar",
+          "family": "Veličković"
+        },
+        {
+          "given": "Guillem",
+          "family": "Cucurull"
+        },
+        {
+          "given": "Arantxa",
+          "family": "Casanova"
+        },
+        {
+          "given": "Adriana",
+          "family": "Romero"
+        },
+        {
+          "given": "Pietro",
+          "family": "Liò"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "Order matters: Sequence to sequence for sets",
+      "container_title": "Order matters: Sequence to sequence for sets",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.06391"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Samy",
+          "family": "Bengio"
+        },
+        {
+          "given": "Manjunath",
+          "family": "Kudlur"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "container_title": "Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Daixin",
+          "family": "Wang"
+        },
+        {
+          "given": "Peng",
+          "family": "Cui"
+        },
+        {
+          "given": "Wenwu",
+          "family": "Zhu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "AAAI",
+      "container_title": "AAAI",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Xiao",
+          "family": "Wang"
+        },
+        {
+          "given": "Peng",
+          "family": "Cui"
+        },
+        {
+          "given": "Jing",
+          "family": "Wang"
+        },
+        {
+          "given": "Jian",
+          "family": "Pei"
+        },
+        {
+          "given": "Wenwu",
+          "family": "Zhu"
+        },
+        {
+          "given": "Shiqiang",
+          "family": "Yang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "Nauchno-Technicheskaya Informatsia",
+      "container_title": "Nauchno-Technicheskaya Informatsia",
+      "year": "1968",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Boris",
+          "family": "Weisfeiler"
+        },
+        {
+          "given": null,
+          "family": "Lehman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "Revisiting semi-supervised learning with graph embeddings",
+      "container_title": "Revisiting semi-supervised learning with graph embeddings",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.08861"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Zhilin",
+          "family": "Yang"
+        },
+        {
+          "given": "William W",
+          "family": "Cohen"
+        },
+        {
+          "given": "Ruslan",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "Graph convolutional neural networks for web-scale recommender systems",
+      "container_title": "Graph convolutional neural networks for web-scale recommender systems",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1806.01973"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Rex",
+          "family": "Ying"
+        },
+        {
+          "given": "Ruining",
+          "family": "He"
+        },
+        {
+          "given": "Kaifeng",
+          "family": "Chen"
+        },
+        {
+          "given": "Pong",
+          "family": "Eksombatchai"
+        },
+        {
+          "given": "William L",
+          "family": "Hamilton"
+        },
+        {
+          "given": "Jure",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "Hierarchical graph representation learning with differentiable pooling",
+      "container_title": "Hierarchical graph representation learning with differentiable pooling",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1806.08804"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Rex",
+          "family": "Ying"
+        },
+        {
+          "given": "Jiaxuan",
+          "family": "You"
+        },
+        {
+          "given": "Christopher",
+          "family": "Morris"
+        },
+        {
+          "given": "Xiang",
+          "family": "Ren"
+        },
+        {
+          "given": "William L",
+          "family": "Hamilton"
+        },
+        {
+          "given": "Jure",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+      "container_title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1803.07294"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Jiani",
+          "family": "Zhang"
+        },
+        {
+          "given": "Xingjian",
+          "family": "Shi"
+        },
+        {
+          "given": "Junyuan",
+          "family": "Xie"
+        },
+        {
+          "given": "Hao",
+          "family": "Ma"
+        },
+        {
+          "given": "Irwin",
+          "family": "King"
+        },
+        {
+          "given": "Dit-Yan",
+          "family": "Yeung"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "Proceedings of the 20th International conference on Machine learning (ICML-03)",
+      "container_title": "Proceedings of the 20th International conference on Machine learning (ICML-03)",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Xiaojin",
+          "family": "Zhu"
+        },
+        {
+          "given": "Zoubin",
+          "family": "Ghahramani"
+        },
+        {
+          "given": "John D",
+          "family": "Lafferty"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "Bioinformatics",
+      "container_title": "Bioinformatics",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Marinka",
+          "family": "Zitnik"
+        },
+        {
+          "given": "Jure",
+          "family": "Leskovec"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

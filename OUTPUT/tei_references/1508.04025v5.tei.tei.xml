@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Effective Approaches to Attention-based Neural Machine Translation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2015-09-20">20 Sep 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Minh-Thang</forename><surname>Luong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Computer Science Department</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hieu</forename><surname>Pham</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Computer Science Department</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+							<email>manning@stanford.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Computer Science Department</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Effective Approaches to Attention-based Neural Machine Translation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-09-20">20 Sep 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A988EE046B70676B2A3E7D667878BFAE</idno>
+					<idno type="arXiv">arXiv:1508.04025v5[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>An attentional mechanism has lately been used to improve neural machine translation (NMT) by selectively focusing on parts of the source sentence during translation. However, there has been little work exploring useful architectures for attention-based NMT. This paper examines two simple and effective classes of attentional mechanism: a global approach which always attends to all source words and a local one that only looks at a subset of source words at a time. We demonstrate the effectiveness of both approaches on the WMT translation tasks between English and German in both directions. With local attention, we achieve a significant gain of 5.0 BLEU points over non-attentional systems that already incorporate known techniques such as dropout. Our ensemble model using different attention architectures yields a new state-of-the-art result in the WMT'15 English to German translation task with 25.9 BLEU points, an improvement of 1.0 BLEU points over the existing best system backed by NMT and an n-gram reranker. 1</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgment</head><p>We gratefully acknowledge support from a gift from Bloomberg L.P. and the support of <rs type="institution">NVIDIA Corporation</rs> with the donation of Tesla K40 GPUs. We thank <rs type="person">Andrew Ng</rs> and his group as well as the <rs type="institution">Stanford Research Computing</rs> for letting us use their computing resources. We thank <rs type="person">Russell Stewart</rs> for helpful discussions on the models. Lastly, we thank <rs type="person">Quoc Le</rs>, <rs type="person">Ilya Sutskever</rs>, <rs type="person">Oriol Vinyals</rs>, <rs type="person">Richard Socher</rs>, <rs type="person">Michael Kayser</rs>, <rs type="person">Jiwei Li</rs>, <rs type="person">Panupong Pasupat</rs>, <rs type="person">Kelvin Guu</rs>, members of the <rs type="institution">Stanford NLP Group</rs> and the annonymous reviewers for their valuable comments and feedback.</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Learning phrase representations using RNN encoder-decoder for statistical machine translation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Buck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Heafield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bas</forename><surname>Van Ooyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename><surname>Cho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2007">2015. 2015. 2014. 2014. 2014. 2007. 2007</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="293" to="303" />
+		</imprint>
+	</monogr>
+	<note>Measuring word alignment quality for statistical machine translation</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Alex Graves, Danilo Jimenez Rezende, and Daan Wierstra</title>
+		<author>
+			<persName><surname>Gregor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+	<note>DRAW: A recurrent neural network for image generation</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">On using very large target vocabulary for neural machine translation</title>
+		<author>
+			<persName><forename type="first">Jean</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL</title>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Recurrent continuous translation models</title>
+		<author>
+			<persName><forename type="first">Blunsom</forename><surname>Kalchbrenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kalchbrenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Statistical phrase-based translation</title>
+		<author>
+			<persName><surname>Koehn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NAACL</title>
+		<imprint>
+			<date type="published" when="2003">2003. 2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Addressing the rare word problem in neural machine translation</title>
+		<author>
+			<persName><surname>Liang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NAACL</title>
+		<imprint>
+			<date type="published" when="2002">2006. 2006. 2015. 2015. 2014. 2002. 2002</date>
+		</imprint>
+	</monogr>
+	<note>ACL</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Sequence to sequence learning with neural networks</title>
+		<author>
+			<persName><surname>Sutskever</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014. 2014</date>
+		</imprint>
+	</monogr>
+	<note>In NIPS</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Show, attend and tell: Neural image caption generation with visual attention</title>
+		<author>
+			<persName><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Wojciech Zaremba, Ilya Sutskever, and Oriol Vinyals</title>
+		<imprint>
+			<date type="published" when="2015">2015. 2015. 2015</date>
+		</imprint>
+	</monogr>
+	<note>ICML. Recurrent neural network regularization. In ICLR</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

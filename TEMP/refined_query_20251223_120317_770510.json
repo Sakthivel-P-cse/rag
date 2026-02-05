@@ -1,0 +1,16 @@
+{
+  "refined_question": "What mechanisms allow cooperative traits to persist in biological simulations despite the presence of selfish behavior and natural selection?",
+  "intent": "Understand the persistence of cooperative traits in evolutionary biology simulations where selfish behavior is expected to dominate",
+  "constraints": [
+    "biological simulations",
+    "natural selection",
+    "selfish behavior",
+    "cooperative traits"
+  ],
+  "excluded_topics": [
+    "group selection mechanisms",
+    "kin selection as primary explanation",
+    "artificially imposed cooperation"
+  ],
+  "search_hint": "evolutionary game theory, prisoner's dilemma, cooperation emergence, natural selection, selfish behavior, altruism, reciprocal altruism, evolutionary simulations, biological modeling"
+}

@@ -1,0 +1,130 @@
+{
+  "paper_id": "D6601B4E8069C4D241805F16247F0E9E",
+  "title": "Fermilab-Pub-98/287 Collision Integrals and the Generalized Kinetic Equation for Charged Particle Beams",
+  "arxiv_id": "arXiv:physics/9809034v1[physics.acc-ph]",
+  "authors": [
+    {
+      "given": "Stephan I",
+      "family": "Tzenov"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Physics of Collisionless Plasma., Physics-Uspekhi",
+      "container_title": "Physics of Collisionless Plasma., Physics-Uspekhi",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Klimontovich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Nonlinear and Collective Phenomena in Beam Physics",
+      "container_title": "Nonlinear and Collective Phenomena in Beam Physics",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S I",
+          "family": "Tzenov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Statistical Theory of Open Systems",
+      "container_title": "Statistical Theory of Open Systems",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Klimontovich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Chemistry and the Natural Sciences",
+      "container_title": "Chemistry and the Natural Sciences",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C W",
+          "family": "Gardiner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Nonlinear and Collective Phenomena in Beam Physics",
+      "container_title": "Nonlinear and Collective Phenomena in Beam Physics",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S I",
+          "family": "Tzenov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Physics Letters A",
+      "container_title": "Physics Letters A",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S I",
+          "family": "Tzenov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Statistical Physics",
+      "container_title": "Statistical Physics",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Klimontovich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Transport Processes in Plasmas",
+      "container_title": "Transport Processes in Plasmas",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Balescu"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

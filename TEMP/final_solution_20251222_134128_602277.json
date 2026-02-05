@@ -1,0 +1,644 @@
+{
+  "judge_summary": {
+    "iterations_requested": 5,
+    "iterations_completed": 3,
+    "satisfied": false,
+    "final_refined_question": "What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as weight normalization, batch normalization, and learning rate scheduling?",
+    "final_intent": "Understand techniques to mitigate unstable gradients and loss divergence in deep neural network training, within the domain of machine learning, specifically focusing on stabilization methods that do not involve redesigning the network architecture",
+    "final_constraints": [
+      "no architecture redesign",
+      "deep neural networks",
+      "early epoch stabilization"
+    ],
+    "final_excluded_topics": [
+      "switching to larger pre-trained models",
+      "fine-tuning large pre-trained models",
+      "scaling parameter count as primary solution"
+    ],
+    "final_search_hint": "weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques, layer normalization, recurrent neural networks, stabilization methods, architecture modification",
+    "accepted_chunk_count": 6,
+    "accepted_paper_count": 5,
+    "accepted_paper_ids": [
+      "1502.03167v3.tei.tei",
+      "1510.01378v1.tei.tei",
+      "1602.07868v3.tei.tei",
+      "1603.09025v5.tei.tei",
+      "1607.06450v1.tei.tei"
+    ],
+    "accepted_chunk_ids": [
+      "1502.03167v3.tei.tei_chunk-13",
+      "1502.03167v3.tei.tei_chunk-5",
+      "1510.01378v1.tei.tei_chunk-3",
+      "1602.07868v3.tei.tei_chunk-5",
+      "1603.09025v5.tei.tei_chunk-2",
+      "1607.06450v1.tei.tei_chunk-1"
+    ],
+    "rejected_chunk_count": 1,
+    "rejected_chunk_ids": [
+      "1701.06538v1.tei.tei_chunk-8"
+    ],
+    "rejected_paper_ids": [],
+    "solved_parts": [],
+    "unsolved_parts_by_iteration": [
+      {
+        "iteration": 1,
+        "unsolved_parts": [
+          "methods to stabilize deep neural network training without modifying the architecture",
+          "addressing unstable gradients and loss oscillation in early epochs"
+        ]
+      },
+      {
+        "iteration": 2,
+        "unsolved_parts": [
+          "techniques to stabilize deep neural network training without modifying the architecture",
+          "methods to address unstable gradients and loss oscillation in early epochs"
+        ]
+      },
+      {
+        "iteration": 3,
+        "unsolved_parts": [
+          "insufficient evidence for stabilization methods in deep neural networks without modifying architecture",
+          "unresolved techniques for addressing unstable gradients and loss oscillation in early epochs"
+        ]
+      }
+    ],
+    "log_path": "C:\\Users\\manoj\\Desktop\\Research\\TEMP\\full_run_20251222_133653_977514.txt"
+  },
+  "accepted_chunks": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei",
+      "section": "Gradients",
+      "paragraph_index": 19,
+      "chunk_text": "The rate of increase will depend on the the variance of the weight gradient. If our gradients are\nnoisy, c will be high and the norm of v will quickly increase, which in turn will decrease the\nscaling factor g/||v||.\n\nIf the norm of the gradients is small, we get √ 1 + c 2 ≈ 1, and the norm of v will stop increasing.\nUsing this mechanism, the scaled gradient self-stabilizes its norm. This property does not strictly\nhold for optimizers that use separate learning rates for individual parameters, like Adam [12] which\nwe use in experiments, or when using momentum. However, qualitatively we still find the same effect\nto hold.\n\nEmpirically, we find that the ability to grow the norm ||v|| makes optimization of neural networks\nwith weight normalization very robust to the value of the learning rate: If the learning rate is too\nlarge, the norm of the unnormalized weights grows quickly until an appropriate effective learning\nrate is reached. Once the norm of the weights has grown large with respect to the norm of the\nupdates, the effective learning rate stabilizes. Neural networks with weight normalization therefore\nwork well with a much wider range of learning rates than when using the normal parameterization. It\nhas been observed that neural networks with batch normalization also have this property [11], which\ncan also be explained by this analysis.\n\nBy projecting the gradient away from the weight vector w, we also eliminate the noise in that\ndirection. If the covariance matrix of the gradient with respect to w is given by C, the covariance\nmatrix of the gradient in v is given by D = (g 2 /||v|| 2 )M w CM w . Empirically, we find that w is\noften (close to) a dominant eigenvector of the covariance matrix C: removing that eigenvector then\ngives a new covariance matrix D that is closer to the identity matrix, which may further speed up\nlearning.",
+      "year": 2016,
+      "created_at": "2025-12-22 07:56:22.941328",
+      "score_stage1": 0.51714605,
+      "score_stage2": 0.42004898,
+      "score": 0.42004898,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "discusses weight normalization and its effect on gradient stabilization"
+      }
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+      "paper_id": "1502.03167v3.tei.tei",
+      "section": "Towards Reducing Internal Covariate Shift",
+      "paragraph_index": 14,
+      "chunk_text": "Thus, the combination of the update to b and subsequent change in normalization led to no change in\nthe output of the layer nor, consequently, the loss. As the training continues, b will grow\nindefinitely while the loss remains fixed. This problem can get worse if the normalization not only\ncenters but also scales the activations. We have observed this empirically in initial experiments,\nwhere the model blows up when the normalization parameters are computed outside the gradient descent\nstep.\n\nThe issue with the above approach is that the gradient descent optimization does not take into\naccount the fact that the normalization takes place. To address this issue, we would like to ensure\nthat, for any parameter values, the network always produces activations with the desired\ndistribution. Doing so would allow the gradient of the loss with respect to the model parameters to\naccount for the normalization, and for its dependence on the model parameters Θ. Let again x be a\nlayer input, treated as a vector, and X be the set of these inputs over the training data set. The\nnormalization can then be written as a transformation x = Norm(x, X ) which depends not only on the\ngiven training example x but on all examples X -each of which depends on Θ if x is generated by\nanother layer. For backpropagation, we would need to compute the Jacobians ∂Norm(x, X ) ∂x and\n∂Norm(x, X ) ∂X ;\n\nignoring the latter term would lead to the explosion described above. Within this framework,\nwhitening the layer inputs is expensive, as it requires computing the covariance matrix Cov\n\nT and its inverse square root, to produce the whitened activations Cov\n\n), as well as the derivatives of these transforms for backpropagation. This motivates us to seek an\nalternative that performs input normalization in a way that is differentiable and does not require\nthe analysis of the entire training set after every parameter update. Some of the previous\napproaches (e.g. (Lyu & Simoncelli, 2008)) use statistics computed over a single training example,\nor, in the case of image networks, over different feature maps at a given location. However, this\nchanges the representation ability of a network by discarding the absolute scale of activations. We\nwant to a preserve the information in the network, by normalizing the activations in a training\nexample relative to the statistics of the entire training data.",
+      "year": 2015,
+      "created_at": "2025-12-22 07:56:22.385092",
+      "score_stage1": 0.44743705,
+      "score_stage2": 0.40765268,
+      "score": 0.40765268,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "explains the issue with normalization and its impact on gradient descent optimization"
+      }
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-13",
+      "paper_id": "1502.03167v3.tei.tei",
+      "section": "ImageNet classification",
+      "paragraph_index": 56,
+      "chunk_text": "In our experiments, we evaluated several modifications of Inception with Batch Normalization. In all\ncases, Batch Normalization was applied to the input of each nonlinearity, in a convolutional way, as\ndescribed in section 3.2, while keeping the rest of the architecture constant.\n\nSimply adding Batch Normalization to a network does not take full advantage of our method. To do so,\nwe further changed the network and its training parameters, as follows:\n\nIncrease learning rate. In a batch-normalized model, we have been able to achieve a training speedup\nfrom higher learning rates, with no ill side effects (Sec. 3.3).\n\nRemove Dropout. As described in Sec. 3.4, Batch Normalization fulfills some of the same goals as\nDropout. Removing Dropout from Modified BN-Inception speeds up training, without increasing\noverfitting.\n\nReduce the L 2 weight regularization. While in Inception an L 2 loss on the model parameters\ncontrols overfitting, in Modified BN-Inception the weight of this loss is reduced by a factor of 5.\nWe find that this improves the accuracy on the held-out validation data.\n\nAccelerate the learning rate decay. In training Inception, learning rate was decayed exponentially.\nBecause our network trains faster than Inception, we lower the learning rate 6 times faster.\n\nRemove Local Response Normalization While Inception and other networks (Srivastava et al., 2014)\nbenefit from it, we found that with Batch Normalization it is not necessary.\n\nShuffle training examples more thoroughly. We enabled within-shard shuffling of the training data,\nwhich prevents the same examples from always appearing in a mini-batch together. This led to about\n1% improvements in the validation accuracy, which is consistent with the view of Batch Normalization\nas a regularizer (Sec. 3.4): the randomization inherent in our method should be most beneficial when\nit affects an example differently each time it is seen.",
+      "year": 2015,
+      "created_at": "2025-12-22 07:56:22.385092",
+      "score_stage1": 0.53133905,
+      "score_stage2": 0.3924176,
+      "score": 0.3924176,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "describes the application of Batch Normalization and its effects on training speed and overfitting"
+      }
+    },
+    {
+      "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+      "paper_id": "1607.06450v1.tei.tei",
+      "section": "Abstract",
+      "paragraph_index": 0,
+      "chunk_text": "Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the\ntraining time is to normalize the activities of the neurons. A recently introduced technique called\nbatch normalization uses the distribution of the summed input to a neuron over a mini-batch of\ntraining cases to compute a mean and variance which are then used to normalize the summed input to\nthat neuron on each training case. This significantly reduces the training time in feedforward\nneural networks. However, the effect of batch normalization is dependent on the mini-batch size and\nit is not obvious how to apply it to recurrent neural networks. In this paper, we transpose batch\nnormalization into layer normalization by computing the mean and variance used for normalization\nfrom all of the summed inputs to the neurons in a layer on a single training case. Like batch\nnormalization, we also give each neuron its own adaptive bias and gain which are applied after the\nnormalization but before the non-linearity. Unlike batch normalization, layer normalization performs\nexactly the same computation at training and test times. It is also straightforward to apply to\nrecurrent neural networks by computing the normalization statistics separately at each time step.\nLayer normalization is very effective at stabilizing the hidden state dynamics in recurrent\nnetworks. Empirically, we show that layer normalization can substantially reduce the training time\ncompared with previously published techniques.\n\nDeep neural networks trained with some version of Stochastic Gradient Descent have been shown to\nsubstantially outperform previous approaches on various supervised learning tasks in computer vision\n[Krizhevsky et al., 2012] and speech processing [Hinton et al., 2012]. But state-of-the-art deep\nneural networks often require many days of training. It is possible to speed-up the learning by\ncomputing gradients for different subsets of the training cases on different machines or splitting\nthe neural network itself over many machines [Dean et al., 2012], but this can require a lot of\ncommunication and complex software. It also tends to lead to rapidly diminishing returns as the\ndegree of parallelization increases. An orthogonal approach is to modify the computations performed\nin the forward pass of the neural net to make learning easier. Recently, batch normalization [Ioffe\nand Szegedy, 2015] has been proposed to reduce training time by including additional normalization\nstages in deep neural networks. The normalization standardizes each summed input using its mean and\nits standard deviation across the training data. Feedforward neural networks trained using batch\nnormalization converge faster even with simple SGD. In addition to training time improvement, the\nstochasticity from the batch statistics serves as a regularizer during training.",
+      "year": null,
+      "created_at": "2025-12-22 07:56:23.160669",
+      "score_stage1": 0.4823654,
+      "score_stage2": 0.44505677,
+      "score": 0.44505677,
+      "llm_judge": {
+        "iteration": 2,
+        "decision": "accept",
+        "rationale": "discusses layer normalization as a technique to stabilize neural networks"
+      }
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-3",
+      "paper_id": "1510.01378v1.tei.tei",
+      "section": "Batch Normalization",
+      "paragraph_index": 6,
+      "chunk_text": "where m is the size of the mini-batch. Using these statistics, we can standardize each feature as\nfollows\n\nwhere is a small positive constant to improve numerical stability.\n\nHowever, standardizing the intermediate activations reduces the representational power of the layer.\n\nTo account for this, batch normalization introduces additional learnable parameters γ and β, which\nrespectively scale and shift the data, leading to a layer of the form\n\nBy setting γ k to σ k and β k to xk , the network can recover the original layer representation. So,\nfor a standard feedforward layer in a neural network\n\nwhere W is the weights matrix, b is the bias vector, x is the input of the layer and φ is an\narbitrary activation function, batch normalization is applied as follows\n\nNote that the bias vector has been removed, since its effect is cancelled by the standardization.\nSince the normalization is now part of the network, the back propagation procedure needs to be\nadapted to propagate gradients through the mean and variance computations as well.\n\nAt test time, we can't use the statistics of the mini-batch. Instead, we can estimate them by either\nforwarding several training mini-batches through the network and averaging their statistics, or by\nmaintaining a running average calculated over each mini-batch seen during training.\n\nRecurrent Neural Networks (RNNs) extend Neural Networks to sequential data. Given an input sequence\nof vectors (x 1 , . . . , x T ), they produce a sequence of hidden states (h 1 , . . . , h T ),\nwhich are computed at time step t as follows\n\nwhere W h is the recurrent weight matrix, W x is the input-to-hidden weight matrix, and φ is an\narbitrary activation function.\n\nIf we have access to the whole input sequence, we can use information not only from the past time\nsteps, but also from the future ones, allowing for bidirectional RNNs\n\nwhere [x : y] denotes the concatenation of x and y. Finally, we can stack RNNs by using h as the\ninput to another RNN, creating deeper architectures [13]",
+      "year": 2015,
+      "created_at": "2025-12-22 07:56:22.673788",
+      "score_stage1": 0.47261208,
+      "score_stage2": 0.41726345,
+      "score": 0.41726345,
+      "llm_judge": {
+        "iteration": 2,
+        "decision": "accept",
+        "rationale": "explains batch normalization and its application to feedforward layers"
+      }
+    },
+    {
+      "chunk_id": "1603.09025v5.tei.tei_chunk-2",
+      "paper_id": "1603.09025v5.tei.tei",
+      "section": "INTRODUCTION",
+      "paragraph_index": 4,
+      "chunk_text": "Batch normalization (Ioffe & Szegedy, 2015) is a recently proposed technique for controlling the\ndistributions of feed-forward neural network activations, thereby reducing internal covariate shift.\nIt involves standardizing the activations going into each layer, enforcing their means and variances\nto be invariant to changes in the parameters of the underlying layers. This effectively decouples\neach layer's parameters from those of other layers, leading to a better-conditioned optimization\nproblem. Indeed, deep neural networks trained with batch normalization converge significantly faster\nand generalize better.\n\nAlthough batch normalization has demonstrated significant training speed-ups and generalization\nbenefits in feed-forward networks, it is proven to be difficult to apply in recurrent architectures\n(Laurent et al., 2016;Amodei et al., 2015). It has found limited use in stacked RNNs, where the\nnormalization is applied \"vertically\", i.e. to the input of each RNN, but not \"horizontally\" between\ntimesteps. RNNs are deeper in the time direction, and as such batch normalization would be most\nbeneficial when applied horizontally. However, Laurent et al. (2016) hypothesized that applying\nbatch normalization in this way hurts training because of exploding gradients due to repeated\nrescaling.\n\nOur findings run counter to this hypothesis. We show that it is both possible and highly beneficial\nto apply batch normalization in the hidden-to-hidden transition of recurrent models. In particular,\nwe describe a reparameterization of LSTM (Section 3) that involves batch normalization and\ndemonstrate that it is easier to optimize and generalizes better. In addition, we empirically\nanalyze the gradient backpropagation and show that proper initialization of the batch normalization\nparameters is crucial to avoiding vanishing gradient (Section 4). We evaluate our proposal on\nseveral sequential problems and show (Section 5) that our LSTM reparameterization consistently\noutperforms the LSTM baseline across tasks, in terms of both time to convergence and performance.\nLiao & Poggio (2016) simultaneously investigated batch normalization in recurrent neural networks,\nalbeit only for very short sequences (10 steps). Ba et al. (2016) independently developed a variant\nof batch normalization that is also applicable to recurrent neural networks and delivers similar\nimprovements as our method.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:22.995412",
+      "score_stage1": 0.5392926,
+      "score_stage2": 0.40420774,
+      "score": 0.40420774,
+      "llm_judge": {
+        "iteration": 2,
+        "decision": "accept",
+        "rationale": "discusses batch normalization and its challenges in recurrent architectures"
+      }
+    }
+  ],
+  "subproblems": [
+    {
+      "id": "SP1",
+      "question": "What weight normalization techniques can be applied to deep neural networks to address unstable gradients in early epochs?",
+      "rationale": "Weight normalization is a technique that can help stabilize neural networks, and understanding its application is crucial for addressing unstable gradients.",
+      "search_hint": "weight normalization, deep neural networks, unstable gradients, early epochs, gradient clipping, normalization techniques"
+    },
+    {
+      "id": "SP2",
+      "question": "How does batch normalization impact loss oscillation in deep neural networks, and what are its limitations?",
+      "rationale": "Batch normalization is another technique that can affect the stability of neural networks, and its impact on loss oscillation needs to be understood.",
+      "search_hint": "batch normalization, loss oscillation, deep neural networks, stabilization methods, normalization techniques, gradient descent"
+    },
+    {
+      "id": "SP3",
+      "question": "What learning rate scheduling strategies can be employed to mitigate unstable gradients and loss oscillation in deep neural networks without modifying the architecture?",
+      "rationale": "Learning rate scheduling is a crucial aspect of training neural networks, and finding the right strategy can help stabilize the training process.",
+      "search_hint": "learning rate scheduling, unstable gradients, loss oscillation, deep neural networks, optimization methods, gradient descent, learning rate adaptation"
+    }
+  ],
+  "subproblem_chunks": {
+    "SP1": [
+      {
+        "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+        "paper_id": "1602.07868v3.tei.tei",
+        "section": "Gradients",
+        "paragraph_index": 19,
+        "chunk_text": "The rate of increase will depend on the the variance of the weight gradient. If our gradients are\nnoisy, c will be high and the norm of v will quickly increase, which in turn will decrease the\nscaling factor g/||v||.\n\nIf the norm of the gradients is small, we get √ 1 + c 2 ≈ 1, and the norm of v will stop increasing.\nUsing this mechanism, the scaled gradient self-stabilizes its norm. This property does not strictly\nhold for optimizers that use separate learning rates for individual parameters, like Adam [12] which\nwe use in experiments, or when using momentum. However, qualitatively we still find the same effect\nto hold.\n\nEmpirically, we find that the ability to grow the norm ||v|| makes optimization of neural networks\nwith weight normalization very robust to the value of the learning rate: If the learning rate is too\nlarge, the norm of the unnormalized weights grows quickly until an appropriate effective learning\nrate is reached. Once the norm of the weights has grown large with respect to the norm of the\nupdates, the effective learning rate stabilizes. Neural networks with weight normalization therefore\nwork well with a much wider range of learning rates than when using the normal parameterization. It\nhas been observed that neural networks with batch normalization also have this property [11], which\ncan also be explained by this analysis.\n\nBy projecting the gradient away from the weight vector w, we also eliminate the noise in that\ndirection. If the covariance matrix of the gradient with respect to w is given by C, the covariance\nmatrix of the gradient in v is given by D = (g 2 /||v|| 2 )M w CM w . Empirically, we find that w is\noften (close to) a dominant eigenvector of the covariance matrix C: removing that eigenvector then\ngives a new covariance matrix D that is closer to the identity matrix, which may further speed up\nlearning.",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.941328",
+        "score_stage1": 0.55918854,
+        "score_stage2": 0.5676848,
+        "score": 0.5676848
+      },
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-5",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Analysis",
+        "paragraph_index": 15,
+        "chunk_text": "In this section, we investigate the invariance properties of different normalization schemes.\n\nThe proposed layer normalization is related to batch normalization and weight normalization.\nAlthough, their normalization scalars are computed differently, these methods can be summarized as\nnormalizing the summed inputs a i to a neuron through the two scalars µ and σ. They also learn an\nadaptive bias b and gain g for each neuron after the normalization.\n\nNote that for layer normalization and batch normalization, µ and σ is computed according to Eq. 2\nand 3. In weight normalization, µ is 0, and σ = w 2 .\n\nTable 1: Invariance properties under the normalization methods.\n\nTable 1 highlights the following invariance results for three normalization methods.\n\nWeight re-scaling and re-centering: First, observe that under batch normalization and weight\nnormalization, any re-scaling to the incoming weights w i of a single neuron has no effect on the\nnormalized summed inputs to a neuron. To be precise, under batch and weight normalization, if the\nweight vector is scaled by δ, the two scalar µ and σ will also be scaled by δ. The normalized summed\ninputs stays the same before and after scaling. So the batch and weight normalization are invariant\nto the re-scaling of the weights. Layer normalization, on the other hand, is not invariant to the\nindividual scaling of the single weight vectors. Instead, layer normalization is invariant to\nscaling of the entire weight matrix and invariant to a shift to all of the incoming weights in the\nweight matrix. Let there be two sets of model parameters θ, θ whose weight matrices W and W differ\nby a scaling factor δ and all of the incoming weights in W are also shifted by a constant vector γ,\nthat is W = δW + 1γ . Under layer normalization, the two models effectively compute the same output:\n\nNotice that if normalization is only applied to the input before the weights, the model will not be\ninvariant to re-scaling and re-centering of the weights.",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.55299056,
+        "score_stage2": 0.5568677,
+        "score": 0.5568677
+      },
+      {
+        "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+        "paper_id": "1502.03167v3.tei.tei",
+        "section": "Towards Reducing Internal Covariate Shift",
+        "paragraph_index": 14,
+        "chunk_text": "Thus, the combination of the update to b and subsequent change in normalization led to no change in\nthe output of the layer nor, consequently, the loss. As the training continues, b will grow\nindefinitely while the loss remains fixed. This problem can get worse if the normalization not only\ncenters but also scales the activations. We have observed this empirically in initial experiments,\nwhere the model blows up when the normalization parameters are computed outside the gradient descent\nstep.\n\nThe issue with the above approach is that the gradient descent optimization does not take into\naccount the fact that the normalization takes place. To address this issue, we would like to ensure\nthat, for any parameter values, the network always produces activations with the desired\ndistribution. Doing so would allow the gradient of the loss with respect to the model parameters to\naccount for the normalization, and for its dependence on the model parameters Θ. Let again x be a\nlayer input, treated as a vector, and X be the set of these inputs over the training data set. The\nnormalization can then be written as a transformation x = Norm(x, X ) which depends not only on the\ngiven training example x but on all examples X -each of which depends on Θ if x is generated by\nanother layer. For backpropagation, we would need to compute the Jacobians ∂Norm(x, X ) ∂x and\n∂Norm(x, X ) ∂X ;\n\nignoring the latter term would lead to the explosion described above. Within this framework,\nwhitening the layer inputs is expensive, as it requires computing the covariance matrix Cov\n\nT and its inverse square root, to produce the whitened activations Cov\n\n), as well as the derivatives of these transforms for backpropagation. This motivates us to seek an\nalternative that performs input normalization in a way that is differentiable and does not require\nthe analysis of the entire training set after every parameter update. Some of the previous\napproaches (e.g. (Lyu & Simoncelli, 2008)) use statistics computed over a single training example,\nor, in the case of image networks, over different feature maps at a given location. However, this\nchanges the representation ability of a network by discarding the absolute scale of activations. We\nwant to a preserve the information in the network, by normalizing the activations in a training\nexample relative to the statistics of the entire training data.",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.385092",
+        "score_stage1": 0.56406087,
+        "score_stage2": 0.5347444,
+        "score": 0.5347444
+      }
+    ],
+    "SP2": [
+      {
+        "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+        "paper_id": "1602.07868v3.tei.tei",
+        "section": "Gradients",
+        "paragraph_index": 19,
+        "chunk_text": "The rate of increase will depend on the the variance of the weight gradient. If our gradients are\nnoisy, c will be high and the norm of v will quickly increase, which in turn will decrease the\nscaling factor g/||v||.\n\nIf the norm of the gradients is small, we get √ 1 + c 2 ≈ 1, and the norm of v will stop increasing.\nUsing this mechanism, the scaled gradient self-stabilizes its norm. This property does not strictly\nhold for optimizers that use separate learning rates for individual parameters, like Adam [12] which\nwe use in experiments, or when using momentum. However, qualitatively we still find the same effect\nto hold.\n\nEmpirically, we find that the ability to grow the norm ||v|| makes optimization of neural networks\nwith weight normalization very robust to the value of the learning rate: If the learning rate is too\nlarge, the norm of the unnormalized weights grows quickly until an appropriate effective learning\nrate is reached. Once the norm of the weights has grown large with respect to the norm of the\nupdates, the effective learning rate stabilizes. Neural networks with weight normalization therefore\nwork well with a much wider range of learning rates than when using the normal parameterization. It\nhas been observed that neural networks with batch normalization also have this property [11], which\ncan also be explained by this analysis.\n\nBy projecting the gradient away from the weight vector w, we also eliminate the noise in that\ndirection. If the covariance matrix of the gradient with respect to w is given by C, the covariance\nmatrix of the gradient in v is given by D = (g 2 /||v|| 2 )M w CM w . Empirically, we find that w is\noften (close to) a dominant eigenvector of the covariance matrix C: removing that eigenvector then\ngives a new covariance matrix D that is closer to the identity matrix, which may further speed up\nlearning.",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.941328",
+        "score_stage1": 0.46071497,
+        "score_stage2": 0.5782541,
+        "score": 0.5782541
+      },
+      {
+        "chunk_id": "1502.03167v3.tei.tei_chunk-10",
+        "paper_id": "1502.03167v3.tei.tei",
+        "section": "Batch-Normalized Convolutional Networks",
+        "paragraph_index": 47,
+        "chunk_text": "For convolutional layers, we additionally want the normalization to obey the convolutional property\n-so that different elements of the same feature map, at different locations, are normalized in the\nsame way. To achieve this, we jointly normalize all the activations in a minibatch, over all\nlocations. In Alg. 1, we let B be the set of all values in a feature map across both the elements of\na mini-batch and spatial locations -so for a mini-batch of size m and feature maps of size p × q, we\nuse the effective mini-batch of size m ′ = |B| = m • p q. We learn a pair of parameters γ (k) and β\n(k) per feature map, rather than per activation. Alg. 2 is modified similarly, so that during\ninference the BN transform applies the same linear transformation to each activation in a given\nfeature map.\n\nIn traditional deep networks, too-high learning rate may result in the gradients that explode or\nvanish, as well as getting stuck in poor local minima. Batch Normalization helps address these\nissues. By normalizing activations throughout the network, it prevents small changes to the\nparameters from amplifying into larger and suboptimal changes in activations in gradients; for\ninstance, it prevents the training from getting stuck in the saturated regimes of nonlinearities.\n\nBatch Normalization also makes training more resilient to the parameter scale. Normally, large\nlearning rates may increase the scale of layer parameters, which then amplify the gradient during\nbackpropagation and lead to the model explosion. However, with Batch Normalization, backpropagation\nthrough a layer is unaffected by the scale of its parameters. Indeed, for a scalar a, BN(W u) =\nBN((aW )u) and we can show that ∂BN((aW )u) ∂u\n\nThe scale does not affect the layer Jacobian nor, consequently, the gradient propagation. Moreover,\nlarger weights lead to smaller gradients, and Batch Normalization will stabilize the parameter\ngrowth.",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.385092",
+        "score_stage1": 0.6466112,
+        "score_stage2": 0.574004,
+        "score": 0.574004
+      },
+      {
+        "chunk_id": "1502.03167v3.tei.tei_chunk-8",
+        "paper_id": "1502.03167v3.tei.tei",
+        "section": "scale and shift",
+        "paragraph_index": 31,
+        "chunk_text": "During training we need to backpropagate the gradient of loss ℓ through this transformation, as well\nas compute the gradients with respect to the parameters of the BN transform. We use chain rule, as\nfollows (before simplification):\n\nThus, BN transform is a differentiable transformation that introduces normalized activations into\nthe network. This ensures that as the model is training, layers can continue learning on input\ndistributions that exhibit less internal covariate shift, thus accelerating the training.\nFurthermore, the learned affine transform applied to these normalized activations allows the BN\ntransform to represent the identity transformation and preserves the network capacity.\n\nTo Batch-Normalize a network, we specify a subset of activations and insert the BN transform for\neach of them, according to Alg. 1. Any layer that previously received x as the input, now receives\nBN(x). A model employing Batch Normalization can be trained using batch gradient descent, or\nStochastic Gradient Descent with a mini-batch size m > 1, or with any of its variants such as\nAdagrad (Duchi et al., 2011). The normalization of activations that depends on the mini-batch allows\nefficient training, but is neither necessary nor desirable during inference; we want the output to\ndepend only on the input, deterministically. For this, once the network has been trained, we use the\nnormalization\n\nVar[x] + ǫ using the population, rather than mini-batch, statistics. Neglecting ǫ, these normalized\nactivations have the same mean 0 and variance 1 as during training. We use the unbiased variance\nestimate Var\n\n, where the expectation is over training mini-batches of size m and σ 2 B are their sample\nvariances. Using moving averages instead, we can track the accuracy of a model as it trains. Since\nthe means and variances are fixed during inference, the normalization is simply a linear transform\napplied to each activation. It may further be composed with the scaling by γ and shift by β, to\nyield a single linear transform that replaces BN(x). Algorithm 2 summarizes the procedure for\ntraining batch-normalized networks.",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.385092",
+        "score_stage1": 0.6377832,
+        "score_stage2": 0.5511477,
+        "score": 0.5511477
+      }
+    ],
+    "SP3": [
+      {
+        "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+        "paper_id": "1602.07868v3.tei.tei",
+        "section": "Gradients",
+        "paragraph_index": 19,
+        "chunk_text": "The rate of increase will depend on the the variance of the weight gradient. If our gradients are\nnoisy, c will be high and the norm of v will quickly increase, which in turn will decrease the\nscaling factor g/||v||.\n\nIf the norm of the gradients is small, we get √ 1 + c 2 ≈ 1, and the norm of v will stop increasing.\nUsing this mechanism, the scaled gradient self-stabilizes its norm. This property does not strictly\nhold for optimizers that use separate learning rates for individual parameters, like Adam [12] which\nwe use in experiments, or when using momentum. However, qualitatively we still find the same effect\nto hold.\n\nEmpirically, we find that the ability to grow the norm ||v|| makes optimization of neural networks\nwith weight normalization very robust to the value of the learning rate: If the learning rate is too\nlarge, the norm of the unnormalized weights grows quickly until an appropriate effective learning\nrate is reached. Once the norm of the weights has grown large with respect to the norm of the\nupdates, the effective learning rate stabilizes. Neural networks with weight normalization therefore\nwork well with a much wider range of learning rates than when using the normal parameterization. It\nhas been observed that neural networks with batch normalization also have this property [11], which\ncan also be explained by this analysis.\n\nBy projecting the gradient away from the weight vector w, we also eliminate the noise in that\ndirection. If the covariance matrix of the gradient with respect to w is given by C, the covariance\nmatrix of the gradient in v is given by D = (g 2 /||v|| 2 )M w CM w . Empirically, we find that w is\noften (close to) a dominant eigenvector of the covariance matrix C: removing that eigenvector then\ngives a new covariance matrix D that is closer to the identity matrix, which may further speed up\nlearning.",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.941328",
+        "score_stage1": 0.5074544,
+        "score_stage2": 0.40177,
+        "score": 0.40177
+      },
+      {
+        "chunk_id": "1412.6980v9.tei.tei_chunk-2",
+        "paper_id": "1412.6980v9.tei.tei",
+        "section": "INTRODUCTION",
+        "paragraph_index": 3,
+        "chunk_text": "We propose Adam, a method for efficient stochastic optimization that only requires first-order\ngradients with little memory requirement. The method computes individual adaptive learning rates for\ndifferent parameters from estimates of first and second moments of the gradients; the name Adam is\nderived from adaptive moment estimation. Our method is designed to combine the advantages of two\nrecently popular methods: AdaGrad (Duchi et al., 2011), which works well with sparse gradients, and\nRMSProp (Tieleman & Hinton, 2012), which works well in on-line and non-stationary settings;\nimportant connections to these and other stochastic optimization methods are clarified in section 5.\nSome of Adam's advantages are that the magnitudes of parameter updates are invariant to rescaling of\nthe gradient, its stepsizes are approximately bounded by the stepsize hyperparameter, it does not\nrequire a stationary objective, it works with sparse gradients, and it naturally performs a form of\nstep size annealing.\n\nSee algorithm 1 for pseudo-code of our proposed algorithm Adam. Let f (θ) be a noisy objective\nfunction: a stochastic scalar function that is differentiable w.r.t. parameters θ. We are interested\nin minimizing the expected value of this function, E[f (θ)] w.r.t. its parameters θ. With f 1 (θ),\n..., , f T (θ) we denote the realisations of the stochastic function at subsequent timesteps 1, ...,\nT . The stochasticity might come from the evaluation at random subsamples (minibatches) of\ndatapoints, or arise from inherent function noise. With g t = ∇ θ f t (θ) we denote the gradient,\ni.e. the vector of partial derivatives of f t , w.r.t θ evaluated at timestep t.\n\nThe algorithm updates exponential moving averages of the gradient (m t ) and the squared gradient (v\nt ) where the hyper-parameters β 1 , β 2 ∈ [0, 1) control the exponential decay rates of these\nmoving averages. The moving averages themselves are estimates of the 1 st moment (the mean) and the\n2 nd raw moment (the uncentered variance) of the gradient. However, these moving averages are\ninitialized as (vectors of) 0's, leading to moment estimates that are biased towards zero,\nespecially during the initial timesteps, and especially when the decay rates are small (i.e. the βs\nare close to 1). The good news is that this initialization bias can be easily counteracted,\nresulting in bias-corrected estimates m t and v t . See section 3 for more details.",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.258221",
+        "score_stage1": 0.39834842,
+        "score_stage2": 0.3482571,
+        "score": 0.3482571
+      },
+      {
+        "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+        "paper_id": "1502.03167v3.tei.tei",
+        "section": "Introduction",
+        "paragraph_index": 9,
+        "chunk_text": "Fixed distribution of inputs to a sub-network would have positive consequences for the layers\noutside the subnetwork, as well. Consider a layer with a sigmoid activation function z = g(W u + b)\nwhere u is the layer input, the weight matrix W and bias vector b are the layer parameters to be\nlearned, and g(x) = 1 1+exp(-x) . As |x| increases, g ′ (x) tends to zero. This means that for all\ndimensions of x = W u+b except those with small absolute values, the gradient flowing down to u will\nvanish and the model will train slowly. However, since x is affected by W, b and the parameters of\nall the layers below, changes to those parameters during training will likely move many dimensions\nof x into the saturated regime of the nonlinearity and slow down the convergence. This effect is\namplified as the network depth increases. In practice, the saturation problem and the resulting\nvanishing gradients are usually addressed by using Rectified Linear Units (Nair & Hinton, 2010) ReLU\n(x) = max(x, 0), careful initialization (Bengio & Glorot, 2010;Saxe et al., 2013), and small\nlearning rates. If, however, we could ensure that the distribution of nonlinearity inputs remains\nmore stable as the network trains, then the optimizer would be less likely to get stuck in the\nsaturated regime, and the training would accelerate.\n\nWe refer to the change in the distributions of internal nodes of a deep network, in the course of\ntraining, as Internal Covariate Shift. Eliminating it offers a promise of faster training. We\npropose a new mechanism, which we call Batch Normalization, that takes a step towards reducing\ninternal covariate shift, and in doing so dramatically accelerates the training of deep neural nets.\nIt accomplishes this via a normalization step that fixes the means and variances of layer inputs.\nBatch Normalization also has a beneficial effect on the gradient flow through the network, by\nreducing the dependence of gradients on the scale of the parameters or of their initial values. This\nallows us to use much higher learning rates without the risk of divergence. Furthermore, batch\nnormalization regularizes the model and reduces the need for Dropout (Srivastava et al., 2014).\nFinally, Batch Normalization makes it possible to use saturating nonlinearities by preventing the\nnetwork from getting stuck in the saturated modes.",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.385092",
+        "score_stage1": 0.43964165,
+        "score_stage2": 0.33319387,
+        "score": 0.33319387
+      }
+    ]
+  },
+  "subproblem_answers": {
+    "SP1": {
+      "subproblem_id": "SP1",
+      "question": "What weight normalization techniques can be applied to deep neural networks to address unstable gradients in early epochs?",
+      "answer_paragraphs": [
+        "Weight normalization can be applied to deep neural networks to address unstable gradients in early epochs. By projecting the gradient away from the weight vector w, we also eliminate the noise in that direction.",
+        "Weight normalization is related to batch normalization and layer normalization, although their normalization scalars are computed differently. These methods can be summarized as normalizing the summed inputs a i to a neuron through the two scalars µ and σ."
+      ],
+      "key_points": [
+        "Weight normalization can address unstable gradients in early epochs",
+        "Weight normalization is related to batch normalization and layer normalization"
+      ],
+      "citations": [
+        {
+          "paper_id": "1602.07868v3.tei.tei",
+          "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+          "supports": "Describes the effect of weight normalization on gradients"
+        },
+        {
+          "paper_id": "1607.06450v1.tei.tei",
+          "chunk_id": "1607.06450v1.tei.tei_chunk-5",
+          "supports": "Compares weight normalization to batch normalization and layer normalization"
+        }
+      ],
+      "unknowns": [],
+      "used_chunk_ids": [
+        "1602.07868v3.tei.tei_chunk-5",
+        "1607.06450v1.tei.tei_chunk-5"
+      ],
+      "used_paper_ids": [
+        "1602.07868v3.tei.tei",
+        "1607.06450v1.tei.tei"
+      ],
+      "sufficient": true
+    },
+    "SP2": {
+      "subproblem_id": "SP2",
+      "question": "How does batch normalization impact loss oscillation in deep neural networks, and what are its limitations?",
+      "answer_paragraphs": [
+        "Batch Normalization helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network.",
+        "It prevents small changes to the parameters from amplifying into larger and suboptimal changes in activations in gradients and makes training more resilient to the parameter scale."
+      ],
+      "key_points": [
+        "Batch Normalization prevents exploding or vanishing gradients",
+        "Batch Normalization makes training more resilient to the parameter scale",
+        "Batch Normalization helps prevent getting stuck in poor local minima"
+      ],
+      "citations": [
+        {
+          "paper_id": "1502.03167v3.tei.tei",
+          "chunk_id": "1502.03167v3.tei.tei_chunk-10",
+          "supports": "Describes how Batch Normalization helps address issues in deep neural networks"
+        }
+      ],
+      "unknowns": [
+        "The exact impact of batch normalization on loss oscillation in deep neural networks is not explicitly stated in the provided chunks"
+      ],
+      "used_chunk_ids": [
+        "1502.03167v3.tei.tei_chunk-10"
+      ],
+      "used_paper_ids": [
+        "1502.03167v3.tei.tei"
+      ],
+      "sufficient": false
+    },
+    "SP3": {
+      "subproblem_id": "SP3",
+      "question": "What learning rate scheduling strategies can be employed to mitigate unstable gradients and loss oscillation in deep neural networks without modifying the architecture?",
+      "answer_paragraphs": [
+        "The text does not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation. However, it mentions that Adam, a method for efficient stochastic optimization, computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients. Additionally, it notes that batch normalization can help reduce internal covariate shift, which may lead to faster training and potentially more stable gradients."
+      ],
+      "key_points": [
+        "Adam computes individual adaptive learning rates for different parameters",
+        "Batch normalization can help reduce internal covariate shift"
+      ],
+      "citations": [
+        {
+          "paper_id": "1412.6980v9.tei.tei",
+          "chunk_id": "1412.6980v9.tei.tei_chunk-2",
+          "supports": "Adam's adaptive learning rates"
+        },
+        {
+          "paper_id": "1502.03167v3.tei.tei",
+          "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+          "supports": "Batch normalization's effect on internal covariate shift"
+        }
+      ],
+      "unknowns": [
+        "Specific learning rate scheduling strategies for mitigating unstable gradients and loss oscillation"
+      ],
+      "used_chunk_ids": [
+        "1412.6980v9.tei.tei_chunk-2",
+        "1502.03167v3.tei.tei_chunk-3"
+      ],
+      "used_paper_ids": [
+        "1412.6980v9.tei.tei",
+        "1502.03167v3.tei.tei"
+      ],
+      "sufficient": false
+    }
+  },
+  "solution": {
+    "final_answer_paragraphs": [
+      "To address unstable gradients and loss oscillation in deep neural networks without modifying the architecture, several techniques can be employed. Weight normalization is one such technique that can help stabilize the gradients by projecting the gradient away from the weight vector, thus eliminating noise in that direction. This is supported by the paper '1602.07868v3.tei.tei' in chunk '1602.07868v3.tei.tei_chunk-5', which describes the effect of weight normalization on gradients.",
+      "Another technique is batch normalization, which helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network. This is supported by the paper '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.",
+      "Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.",
+      "Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optimization, computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients, as described in '1412.6980v9.tei.tei' in chunk '1412.6980v9.tei.tei_chunk-2'.",
+      "Furthermore, batch normalization can help reduce internal covariate shift, which may lead to faster training and potentially more stable gradients, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-3'.",
+      "In terms of recurrent neural networks, layer normalization can be particularly effective, as it can help stabilize the hidden state dynamics, as described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1'.",
+      "Overall, these techniques can help mitigate unstable gradients and loss oscillation in deep neural networks without modifying the architecture. However, the exact impact of these techniques on loss oscillation is not explicitly stated in the provided chunks, and further research may be needed to fully understand their effects.",
+      "It is also important to note that the provided chunks do not discuss other techniques such as gradient clipping and early stopping, which may also be useful in addressing unstable gradients and loss oscillation.",
+      "In conclusion, weight normalization, batch normalization, and layer normalization are techniques that can help stabilize the gradients and reduce loss oscillation in deep neural networks without modifying the architecture. Learning rate scheduling, including methods like Adam, can also play a crucial role in training deep neural networks."
+    ],
+    "key_points": [
+      "Weight normalization can help stabilize gradients",
+      "Batch normalization helps address issues such as exploding or vanishing gradients",
+      "Batch normalization makes training more resilient to the parameter scale",
+      "Layer normalization can help stabilize the hidden state dynamics in recurrent neural networks",
+      "Adam computes individual adaptive learning rates for different parameters",
+      "Batch normalization can help reduce internal covariate shift"
+    ],
+    "keyword_coverage": [
+      {
+        "keyword": "weight normalization",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "batch normalization",
+        "where_used": "final_answer_paragraphs[1], final_answer_paragraphs[4]"
+      },
+      {
+        "keyword": "learning rate scheduling",
+        "where_used": "final_answer_paragraphs[3]"
+      },
+      {
+        "keyword": "gradient clipping",
+        "where_used": "None"
+      },
+      {
+        "keyword": "early stopping",
+        "where_used": "None"
+      },
+      {
+        "keyword": "optimization algorithms",
+        "where_used": "final_answer_paragraphs[3]"
+      },
+      {
+        "keyword": "deep learning",
+        "where_used": "final_answer_paragraphs[0], final_answer_paragraphs[5]"
+      },
+      {
+        "keyword": "neural network training",
+        "where_used": "final_answer_paragraphs[0], final_answer_paragraphs[5]"
+      },
+      {
+        "keyword": "unstable gradients",
+        "where_used": "final_answer_paragraphs[0], final_answer_paragraphs[6]"
+      },
+      {
+        "keyword": "loss oscillation",
+        "where_used": "final_answer_paragraphs[0], final_answer_paragraphs[6]"
+      },
+      {
+        "keyword": "normalization techniques",
+        "where_used": "final_answer_paragraphs[0], final_answer_paragraphs[2], final_answer_paragraphs[4]"
+      },
+      {
+        "keyword": "layer normalization",
+        "where_used": "final_answer_paragraphs[2], final_answer_paragraphs[5]"
+      },
+      {
+        "keyword": "recurrent neural networks",
+        "where_used": "final_answer_paragraphs[5]"
+      },
+      {
+        "keyword": "stabilization methods",
+        "where_used": "final_answer_paragraphs[0], final_answer_paragraphs[6]"
+      },
+      {
+        "keyword": "architecture modification",
+        "where_used": "None"
+      },
+      {
+        "keyword": "insufficient evidence for stabilization methods in deep neural networks without modifying architecture",
+        "where_used": "final_answer_paragraphs[6]"
+      },
+      {
+        "keyword": "unresolved techniques for addressing unstable gradients and loss oscillation in early epochs",
+        "where_used": "final_answer_paragraphs[6]"
+      },
+      {
+        "keyword": "no architecture redesign",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "deep neural networks",
+        "where_used": "final_answer_paragraphs[0], final_answer_paragraphs[5]"
+      },
+      {
+        "keyword": "early epoch stabilization",
+        "where_used": "final_answer_paragraphs[0]"
+      }
+    ],
+    "citations": [
+      {
+        "paper_id": "1602.07868v3.tei.tei",
+        "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+        "supports": "Describes the effect of weight normalization on gradients"
+      },
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "chunk_id": "1502.03167v3.tei.tei_chunk-10",
+        "supports": "Describes how batch normalization helps address issues in deep neural networks"
+      },
+      {
+        "paper_id": "1607.06450v1.tei.tei",
+        "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+        "supports": "Describes layer normalization as a method that normalizes the activities of the neurons"
+      },
+      {
+        "paper_id": "1412.6980v9.tei.tei",
+        "chunk_id": "1412.6980v9.tei.tei_chunk-2",
+        "supports": "Describes Adam's adaptive learning rates"
+      }
+    ],
+    "evidence_backed_sections": [
+      {
+        "title": "Weight Normalization",
+        "content": "Weight normalization can help stabilize gradients",
+        "citations": [
+          {
+            "paper_id": "1602.07868v3.tei.tei",
+            "chunk_id": "1602.07868v3.tei.tei_chunk-5"
+          }
+        ]
+      },
+      {
+        "title": "Batch Normalization",
+        "content": "Batch normalization helps address issues such as exploding or vanishing gradients",
+        "citations": [
+          {
+            "paper_id": "1502.03167v3.tei.tei",
+            "chunk_id": "1502.03167v3.tei.tei_chunk-10"
+          }
+        ]
+      },
+      {
+        "title": "Layer Normalization",
+        "content": "Layer normalization can help stabilize the hidden state dynamics in recurrent neural networks",
+        "citations": [
+          {
+            "paper_id": "1607.06450v1.tei.tei",
+            "chunk_id": "1607.06450v1.tei.tei_chunk-1"
+          }
+        ]
+      },
+      {
+        "title": "Learning Rate Scheduling",
+        "content": "Adam computes individual adaptive learning rates for different parameters",
+        "citations": [
+          {
+            "paper_id": "1412.6980v9.tei.tei",
+            "chunk_id": "1412.6980v9.tei.tei_chunk-2"
+          }
+        ]
+      }
+    ],
+    "unknowns": [
+      "The exact impact of batch normalization on loss oscillation in deep neural networks",
+      "The effect of gradient clipping and early stopping on unstable gradients and loss oscillation"
+    ],
+    "used_chunk_ids": [
+      "1602.07868v3.tei.tei_chunk-5",
+      "1502.03167v3.tei.tei_chunk-10",
+      "1607.06450v1.tei.tei_chunk-1",
+      "1412.6980v9.tei.tei_chunk-2"
+    ],
+    "used_paper_ids": [
+      "1602.07868v3.tei.tei",
+      "1502.03167v3.tei.tei",
+      "1607.06450v1.tei.tei",
+      "1412.6980v9.tei.tei"
+    ],
+    "used_papers": [
+      {
+        "paper_id": "1602.07868v3.tei.tei",
+        "used_chunk_ids": [
+          "1602.07868v3.tei.tei_chunk-5"
+        ],
+        "notes": "Describes the effect of weight normalization on gradients"
+      },
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "used_chunk_ids": [
+          "1502.03167v3.tei.tei_chunk-10"
+        ],
+        "notes": "Describes how batch normalization helps address issues in deep neural networks"
+      },
+      {
+        "paper_id": "1607.06450v1.tei.tei",
+        "used_chunk_ids": [
+          "1607.06450v1.tei.tei_chunk-1"
+        ],
+        "notes": "Describes layer normalization as a method that normalizes the activities of the neurons"
+      },
+      {
+        "paper_id": "1412.6980v9.tei.tei",
+        "used_chunk_ids": [
+          "1412.6980v9.tei.tei_chunk-2"
+        ],
+        "notes": "Describes Adam's adaptive learning rates"
+      }
+    ],
+    "_raw": "Here is the final answer in the requested JSON schema:\n\n```\n{\n    \"final_answer_paragraphs\": [\n        \"To address unstable gradients and loss oscillation in deep neural networks without modifying the architecture, several techniques can be employed. Weight normalization is one such technique that can help stabilize the gradients by projecting the gradient away from the weight vector, thus eliminating noise in that direction. This is supported by the paper '1602.07868v3.tei.tei' in chunk '1602.07868v3.tei.tei_chunk-5', which describes the effect of weight normalization on gradients.\",\n        \"Another technique is batch normalization, which helps address issues such as exploding or vanishing gradients and getting stuck in poor local minima by normalizing activations throughout the network. This is supported by the paper '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10', which describes how batch normalization helps address issues in deep neural networks.\",\n        \"Batch normalization also makes training more resilient to the parameter scale, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-10'. Additionally, layer normalization is another technique that can be used, which is described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1' as a method that normalizes the activities of the neurons.\",\n        \"Learning rate scheduling is also an important aspect of training deep neural networks. While the provided chunks do not explicitly discuss learning rate scheduling strategies for mitigating unstable gradients and loss oscillation, Adam, a method for efficient stochastic optimization, computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients, as described in '1412.6980v9.tei.tei' in chunk '1412.6980v9.tei.tei_chunk-2'.\",\n        \"Furthermore, batch normalization can help reduce internal covariate shift, which may lead to faster training and potentially more stable gradients, as described in '1502.03167v3.tei.tei' in chunk '1502.03167v3.tei.tei_chunk-3'.\",\n        \"In terms of recurrent neural networks, layer normalization can be particularly effective, as it can help stabilize the hidden state dynamics, as described in '1607.06450v1.tei.tei' in chunk '1607.06450v1.tei.tei_chunk-1'.\",\n        \"Overall, these techniques can help mitigate unstable gradients and loss oscillation in deep neural networks without modifying the architecture. However, the exact impact of these techniques on loss oscillation is not explicitly stated in the provided chunks, and further research may be needed to fully understand their effects.\",\n        \"It is also important to note that the provided chunks do not discuss other techniques such as gradient clipping and early stopping, which may also be useful in addressing unstable gradients and loss oscillation.\",\n        \"In conclusion, weight normalization, batch normalization, and layer normalization are techniques that can help stabilize the gradients and reduce loss oscillation in deep neural networks without modifying the architecture. Learning rate scheduling, including methods like Adam, can also play a crucial role in training deep neural networks.\"\n    ],\n    \"key_points\": [\n        \"Weight normalization can help stabilize gradients\",\n        \"Batch normalization helps address issues such as exploding or vanishing gradients\",\n        \"Batch normalization makes training more resilient to the parameter scale\",\n        \"Layer normalization can help stabilize the hidden state dynamics in recurrent neural networks\",\n        \"Adam computes individual adaptive learning rates for different parameters\",\n        \"Batch normalization can help reduce internal covariate shift\"\n    ],\n    \"keyword_coverage\": [\n        {\"keyword\": \"weight normalization\", \"where_used\": \"final_answer_paragraphs[0]\"},\n        {\"keyword\": \"batch normalization\", \"where_used\": \"final_answer_paragraphs[1], fin...",
+    "_required_keywords_phrases": [
+      "weight normalization",
+      "batch normalization",
+      "learning rate scheduling",
+      "gradient clipping",
+      "early stopping",
+      "optimization algorithms",
+      "deep learning",
+      "neural network training",
+      "unstable gradients",
+      "loss oscillation",
+      "normalization techniques",
+      "layer normalization",
+      "recurrent neural networks",
+      "stabilization methods",
+      "architecture modification",
+      "insufficient evidence for stabilization methods in deep neural networks without modifying architecture",
+      "unresolved techniques for addressing unstable gradients and loss oscillation in early epochs",
+      "no architecture redesign",
+      "deep neural networks",
+      "early epoch stabilization"
+    ]
+  }
+}

@@ -1,0 +1,846 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Vibrational properties of graphene fluoride and graphane</title>
+				<funder ref="#_X8gP7GV">
+					<orgName type="full">Belgian Science Policy (IAP)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Flemish Science Foundation (FWO-Vl)</orgName>
+				</funder>
+				<funder ref="#_aRRd2GB">
+					<orgName type="full">ANPCyT</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2018-10-25">25 October 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">H</forename><surname>Peelaers</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Hernández-Nieves</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">)</forename><forename type="middle">O</forename><surname>Leenaerts</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">B</forename><surname>Partoens</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Peeters</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">)</forename><surname>Centro</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Atomico</forename><surname>Bariloche</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>De Bariloche</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departement Fysica</orgName>
+								<orgName type="institution">Universiteit Antwerpen</orgName>
+								<address>
+									<addrLine>Groenenborgerlaan 171</addrLine>
+									<postCode>B-2020</postCode>
+									<settlement>Antwerpen</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Vibrational properties of graphene fluoride and graphane</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-10-25">25 October 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B31AC17179AFF07FCD736EE773D380DD</idno>
+					<idno type="arXiv">arXiv:1011.0018v1[cond-mat.mtrl-sci]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>numbers: 73.22.-f</term>
+					<term>73.22.Pr</term>
+					<term>71.15.Mb</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>The vibrational properties of graphene fluoride and graphane are studied using ab initio calculations. We find that both sp 3 bonded derivatives of graphene have different phonon dispersion relations and phonon density of states as expected from the different masses associated with the attached atoms fluorine and hydrogen, respectively. These differences manifest themselves in the predicted temperature behavior of the constant-volume specific heat of both compounds.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>This work was supported by the <rs type="funder">Flemish Science Foundation (FWO-Vl)</rs>, the <rs type="funder">Belgian Science Policy (IAP)</rs>, and the collaborative project <rs type="projectName">FWO-MINCyT</rs> (<rs type="grantNumber">FW/08/01</rs>). A. D. H. is also supported by <rs type="funder">ANPCyT</rs> (under Grant No. <rs type="grantNumber">PICT2008-2236</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_X8gP7GV">
+					<idno type="grant-number">FW/08/01</idno>
+					<orgName type="project" subtype="full">FWO-MINCyT</orgName>
+				</org>
+				<org type="funding" xml:id="_aRRd2GB">
+					<idno type="grant-number">PICT2008-2236</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Novoselov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Geim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Morozov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Dubonos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">V</forename><surname>Grigorieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Firsov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">306</biblScope>
+			<biblScope unit="page">666</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Dikin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stankovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Zimney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Piner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H B</forename><surname>Dommett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Evmenenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Ruoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">448</biblScope>
+			<biblScope unit="page">457</biblScope>
+			<date type="published" when="2007">2007</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Elias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Nair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M G</forename><surname>Mohiuddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Morozov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Blake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Halsall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Ferrari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Boukhvalov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Katsnelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Geim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Novoselov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">323</biblScope>
+			<biblScope unit="page">610</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Okino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Gutierrez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Eklund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Sofo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">205435</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><surname>Withers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dubois</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Savchenko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">73403</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Nair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jalil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Riaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">G</forename><surname>Kravets</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Britnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Blake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schedin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Mayorov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Katsnelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Strupinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Bulusheva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Okotrub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Novoselov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Geim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">V</forename><surname>Grigorieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Grigorenko</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1006.3016v1</idno>
+		<imprint />
+	</monogr>
+	<note>cond-mat.mtrl-sci</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Junkermeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Badescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Reinecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">K</forename><surname>Perkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Zalalutdniov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Baldwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Culbertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Sheehan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Snow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Lett</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">3001</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Sparks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Gutierrez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Okino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">H</forename><surname>Crespi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Sofo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">141915</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H F</forename><surname>Sluiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kawazoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">85410</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Sofo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Chaudhari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Barber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page">153401</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J.-C</forename><surname>Charlier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Gonze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Michenaud</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">16162</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">O</forename><surname>Leenaerts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Peelaers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Hernandez-Nieves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Partoens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Peeters</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1009.3847v1</idno>
+		<imprint />
+	</monogr>
+	<note>cond-mat.mtrl-sci</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Malard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Pimenta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dresselhaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Dresselhaus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Reports</title>
+		<imprint>
+			<biblScope unit="volume">473</biblScope>
+			<biblScope unit="page">51</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">V</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nakajima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ohzawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Žemva</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Fluorine Chemistry</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page">143</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Graphite fluorides were first synthesized in 1934</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bretschneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Anorg. Allg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">217</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="1934">1934</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">only recently in Refs. 6 and 7 it was possible to isolate monolayers of this material</title>
+		<author>
+			<persName><surname>However</surname></persName>
+		</author>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">N</forename><surname>Troullier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Martins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page">1993</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Monkhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Pack</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">5188</biblScope>
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">X</forename><surname>Gonze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Amadon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P.-M</forename><surname>Anglade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Beuken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bottin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Boulanger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bruneval</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Caliste</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Caracas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Côté</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Phys. Commun</title>
+		<imprint>
+			<biblScope unit="volume">180</biblScope>
+			<biblScope unit="page">2582</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>De Gironcoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Corso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev. Mod. Phys</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page">515</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Gonze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page">8610</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">N</forename><surname>Mounet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marzari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page">205214</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

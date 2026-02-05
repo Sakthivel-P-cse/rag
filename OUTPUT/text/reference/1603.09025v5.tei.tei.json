@@ -1,0 +1,859 @@
+{
+  "paper_id": "70F01AFF2FBE6E90237BF50BFF0FBCEB",
+  "title": "RECURRENT BATCH NORMALIZATION",
+  "arxiv_id": "arXiv:1603.09025v5[cs.LG]",
+  "authors": [
+    {
+      "given": "Tim",
+      "family": "Cooijmans"
+    },
+    {
+      "given": "Nicolas",
+      "family": "Ballas"
+    },
+    {
+      "given": "César",
+      "family": "Laurent"
+    },
+    {
+      "given": "Çaglar",
+      "family": "Gülçehre"
+    },
+    {
+      "given": "Aaron",
+      "family": "Courville"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Deep speech 2: End-to-end speech recognition in english and mandarin",
+      "container_title": "Deep speech 2: End-to-end speech recognition in english and mandarin",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1512.02595"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Amodei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Unitary evolution recurrent neural networks",
+      "container_title": "Unitary evolution recurrent neural networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.06464"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Arjovsky"
+        },
+        {
+          "given": "A",
+          "family": "Shah"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Layer normalization",
+      "container_title": "Layer normalization",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1607.06450"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Jimmy",
+          "family": "Lei Ba"
+        },
+        {
+          "given": "Jamie",
+          "family": "Ryan Kiros"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "IEEE Transactions on",
+      "container_title": "IEEE Transactions on",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "P",
+          "family": "Simard"
+        },
+        {
+          "given": "P",
+          "family": "Frasconi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Learning phrase representations using rnn encoder-decoder for statistical machine translation",
+      "container_title": "Learning phrase representations using rnn encoder-decoder for statistical machine translation",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1406.1078"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "B",
+          "family": "Van Merriënboer"
+        },
+        {
+          "given": "C",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "F",
+          "family": "Bougares"
+        },
+        {
+          "given": "H",
+          "family": "Schwenk"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Hierarchical multiscale recurrent neural networks",
+      "container_title": "Hierarchical multiscale recurrent neural networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1609.01704"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Junyoung",
+          "family": "Chung"
+        },
+        {
+          "given": "Sungjin",
+          "family": "Ahn"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Generating sequences with recurrent neural networks",
+      "container_title": "Generating sequences with recurrent neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1308.0850"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "",
+      "container_title": "",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1609.09106"
+        }
+      ],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Ha"
+        },
+        {
+          "given": "Andrew",
+          "family": "Dai"
+        },
+        {
+          "given": "Quoc V",
+          "family": "Le"
+        },
+        {
+          "given": null,
+          "family": "Hypernetworks"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K M",
+          "family": "Hermann"
+        },
+        {
+          "given": "T",
+          "family": "Kocisky"
+        },
+        {
+          "given": "E",
+          "family": "Grefenstette"
+        },
+        {
+          "given": "L",
+          "family": "Espeholt"
+        },
+        {
+          "given": "W",
+          "family": "Kay"
+        },
+        {
+          "given": "M",
+          "family": "Suleyman"
+        },
+        {
+          "given": "P",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Untersuchungen zu dynamischen neuronalen netzen",
+      "container_title": "Untersuchungen zu dynamischen neuronalen netzen",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Hochreiter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Hochreiter"
+        },
+        {
+          "given": null,
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "A method for stochastic optimization",
+      "container_title": "A method for stochastic optimization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.6980"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Kingma"
+        },
+        {
+          "given": "J",
+          "family": "Ba"
+        },
+        {
+          "given": null,
+          "family": "Adam"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Krueger"
+        },
+        {
+          "given": null,
+          "family": "Memisevic"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Regularizing rnns by randomly preserving hidden activations",
+      "container_title": "Regularizing rnns by randomly preserving hidden activations",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1606.01305"
+        }
+      ],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Krueger"
+        },
+        {
+          "given": "Tegan",
+          "family": "Maharaj"
+        },
+        {
+          "given": "János",
+          "family": "Kramár"
+        },
+        {
+          "given": "Mohammad",
+          "family": "Pezeshki"
+        },
+        {
+          "given": "Nicolas",
+          "family": "Ballas"
+        },
+        {
+          "given": "Nan Rosemary",
+          "family": "Ke"
+        },
+        {
+          "given": "Anirudh",
+          "family": "Goyal"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Hugo",
+          "family": "Larochelle"
+        },
+        {
+          "given": "Aaron",
+          "family": "Courville"
+        },
+        {
+          "given": null,
+          "family": "Zoneout"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Laurent"
+        },
+        {
+          "given": "G",
+          "family": "Pereyra"
+        },
+        {
+          "given": "P",
+          "family": "Brakel"
+        },
+        {
+          "given": "Y",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "A simple way to initialize recurrent networks of rectified linear units",
+      "container_title": "A simple way to initialize recurrent networks of rectified linear units",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1504.00941"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Quoc V Le"
+        },
+        {
+          "given": "G",
+          "family": "Jaitly"
+        },
+        {
+          "given": null,
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Bridging the gaps between residual learning, recurrent neural networks and visual cortex",
+      "container_title": "Bridging the gaps between residual learning, recurrent neural networks and visual cortex",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1604.03640"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Qianli",
+          "family": "Liao"
+        },
+        {
+          "given": "Tomaso",
+          "family": "Poggio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Large text compression benchmark",
+      "container_title": "Large text compression benchmark",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Mahoney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Comput. Linguist",
+      "container_title": "Comput. Linguist",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M P",
+          "family": "Marcus"
+        },
+        {
+          "given": "M",
+          "family": "Marcinkiewicz"
+        },
+        {
+          "given": "B",
+          "family": "Santorini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Martens"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Subword language modeling with neural networks",
+      "container_title": "Subword language modeling with neural networks",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Mikolov"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "A",
+          "family": "Deoras"
+        },
+        {
+          "given": "H",
+          "family": "Le"
+        },
+        {
+          "given": "S",
+          "family": "Kombrink"
+        },
+        {
+          "given": "J",
+          "family": "Cernocky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Persistent contextual neural networks for learning symbolic data sequences",
+      "container_title": "Persistent contextual neural networks for learning symbolic data sequences",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1306.0514"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yann",
+          "family": "Ollivier"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Regularization and nonlinearities for neural language models: when are they needed?",
+      "container_title": "Regularization and nonlinearities for neural language models: when are they needed?",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1301.5650"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Marius",
+          "family": "Pachitariu"
+        },
+        {
+          "given": "Maneesh",
+          "family": "Sahani"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "On the difficulty of training recurrent neural networks",
+      "container_title": "On the difficulty of training recurrent neural networks",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1211.5063"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Journal of statistical planning and inference",
+      "container_title": "Journal of statistical planning and inference",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Shimodaira"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "The Theano Development Team et al. Theano: A Python framework for fast computation of mathematical expressions",
+      "container_title": "The Theano Development Team et al. Theano: A Python framework for fast computation of mathematical expressions",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "abs/1605.02688"
+        }
+      ],
+      "authors": []
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Lecture 6.5-RmsProp: Divide the gradient by a running average of its recent magnitude. COURSERA: Neural Networks for Machine Learning",
+      "container_title": "Lecture 6.5-RmsProp: Divide the gradient by a running average of its recent magnitude. COURSERA: Neural Networks for Machine Learning",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Tieleman"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Blocks and fuel: Frameworks for deep learning",
+      "container_title": "Blocks and fuel: Frameworks for deep learning",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1506.00619"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Bart",
+          "family": "Van Merriënboer"
+        },
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Dmitriy",
+          "family": "Vincent Dumoulin"
+        },
+        {
+          "given": "David",
+          "family": "Serdyuk"
+        },
+        {
+          "given": "Jan",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Chorowski"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Show, attend and tell: Neural image caption generation with visual attention",
+      "container_title": "Show, attend and tell: Neural image caption generation with visual attention",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1502.03044"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Xu"
+        },
+        {
+          "given": "J",
+          "family": "Ba"
+        },
+        {
+          "given": "R",
+          "family": "Kiros"
+        },
+        {
+          "given": "A",
+          "family": "Courville"
+        },
+        {
+          "given": "R",
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": "R",
+          "family": "Zemel"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "ICCV",
+      "container_title": "ICCV",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Yao"
+        },
+        {
+          "given": "A",
+          "family": "Torabi"
+        },
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "N",
+          "family": "Ballas"
+        },
+        {
+          "given": "C",
+          "family": "Pal"
+        },
+        {
+          "given": "H",
+          "family": "Larochelle"
+        },
+        {
+          "given": "A",
+          "family": "Courville"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Architectural complexity measures of recurrent neural networks",
+      "container_title": "Architectural complexity measures of recurrent neural networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1602.08210"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": "Wu"
+        },
+        {
+          "given": "T",
+          "family": "Che"
+        },
+        {
+          "given": "Z",
+          "family": "Lin"
+        },
+        {
+          "given": "R",
+          "family": "Memisevic"
+        },
+        {
+          "given": "R",
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

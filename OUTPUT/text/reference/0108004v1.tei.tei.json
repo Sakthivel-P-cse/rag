@@ -1,0 +1,366 @@
+{
+  "paper_id": "00D99DE04D7C05BC6CAE7B52676A4653",
+  "title": "A stabilized Kuramoto-Sivashinsky system",
+  "arxiv_id": "arXiv:nlin/0108004v1[nlin.PS]",
+  "authors": [
+    {
+      "given": "Boris A",
+      "family": "Malomed"
+    },
+    {
+      "given": "Takuji",
+      "family": "Kawahara"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Progr. Theor. Phys",
+      "container_title": "Progr. Theor. Phys",
+      "year": "1976",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yamada"
+        },
+        {
+          "given": "Y",
+          "family": "Kuramoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Acta Astronautica",
+      "container_title": "Acta Astronautica",
+      "year": "1977",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G I",
+          "family": "Sivashinsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Ann. Rev. Fluid Mech",
+      "container_title": "Ann. Rev. Fluid Mech",
+      "year": "1983",
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Gaza (Izv. AN SSSR)",
+      "container_title": "Gaza (Izv. AN SSSR)",
+      "year": "1974",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A A",
+          "family": "Nepomnyashchy"
+        },
+        {
+          "given": "Mekhanika",
+          "family": "Zhidk"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Stability of Convective Flows (Nauka publishers: Moscow",
+      "container_title": "Stability of Convective Flows (Nauka publishers: Moscow",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G Z",
+          "family": "Gershuni"
+        },
+        {
+          "given": "E M",
+          "family": "Zhukhovitsky"
+        },
+        {
+          "given": "A A",
+          "family": "Nepomnyashchy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Physica D",
+      "container_title": "Physica D",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Kassler"
+        },
+        {
+          "given": "A K",
+          "family": "Hobbs"
+        },
+        {
+          "given": "P",
+          "family": "Metzener"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Prikl. Mekh. Tekhn. Fiz",
+      "container_title": "Prikl. Mekh. Tekhn. Fiz",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A P",
+          "family": "Ivansky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Phys. Fluids",
+      "container_title": "Phys. Fluids",
+      "year": "1985",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Kawahara"
+        },
+        {
+          "given": "S",
+          "family": "Toh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1985",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Toh"
+        },
+        {
+          "given": "T",
+          "family": "Kawahara"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Fluids",
+      "container_title": "Phys. Fluids",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Kawahara"
+        },
+        {
+          "given": "S",
+          "family": "Toh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H.-C",
+          "family": "Chang"
+        },
+        {
+          "given": "E A",
+          "family": "Demekhin"
+        },
+        {
+          "given": "D I",
+          "family": "Kopelevich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Fluids",
+      "container_title": "Phys. Fluids",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H.-C",
+          "family": "Chang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Stud. Appl. Math",
+      "container_title": "Stud. Appl. Math",
+      "year": "1984",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J A",
+          "family": "Gear"
+        },
+        {
+          "given": "R",
+          "family": "Grimshaw"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B A",
+          "family": "Malomed"
+        },
+        {
+          "given": "H G",
+          "family": "Winful"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Atai"
+        },
+        {
+          "given": "B A",
+          "family": "Malomed"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Phys. Lett. A",
+      "container_title": "Phys. Lett. A",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Atai"
+        },
+        {
+          "given": "B A",
+          "family": "Malomed"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Physica D",
+      "container_title": "Physica D",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Sakaguchi"
+        },
+        {
+          "given": "B A",
+          "family": "Malomed"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Fibre Systems Europe",
+      "container_title": "Fibre Systems Europe",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Kalaugher"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Van Saarloos"
+        },
+        {
+          "given": "E",
+          "family": "De Wit"
+        },
+        {
+          "given": "W",
+          "family": "Van Saarloos"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phys. Lett. A",
+      "container_title": "Phys. Lett. A",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Atai"
+        },
+        {
+          "given": "B A",
+          "family": "Malomed"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Physica D",
+      "container_title": "Physica D",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B.-F",
+          "family": "Feng"
+        },
+        {
+          "given": "T",
+          "family": "Kawahara"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

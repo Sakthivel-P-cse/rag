@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fermilab-Pub-98/287 Collision Integrals and the Generalized Kinetic Equation for Charged Particle Beams</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="1998-09-22">22 Sep 1998</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Stephan</forename><forename type="middle">I</forename><surname>Tzenov</surname></persName>
+							<email>tzenov@fnal.gov</email>
+							<affiliation key="aff0">
+								<orgName type="department">Fermi National Accelerator Laboratory</orgName>
+								<address>
+									<postBox>P. O. Box 500</postBox>
+									<postCode>60510</postCode>
+									<settlement>Batavia</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fermilab-Pub-98/287 Collision Integrals and the Generalized Kinetic Equation for Charged Particle Beams</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="1998-09-22">22 Sep 1998</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D6601B4E8069C4D241805F16247F0E9E</idno>
+					<idno type="arXiv">arXiv:physics/9809034v1[physics.acc-ph]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract />
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="middle">L</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Klimontovich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physics of Collisionless Plasma., Physics-Uspekhi</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="21" to="51" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">On the Unified Kinetic, Hydrodynamic and Diffusion Description of Particle Beam Propagation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Tzenov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Nonlinear and Collective Phenomena in Beam Physics</title>
+		<meeting><address><addrLine>Arcidosso, Italy; New York</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1996">1996. 1997</date>
+			<biblScope unit="page" from="391" to="406" />
+		</imprint>
+	</monogr>
+	<note>AIP Conf. Proc. No. 395</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Statistical Theory of Open Systems</title>
+		<author>
+			<persName><forename type="middle">L</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Klimontovich</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>Kluwer Academic Publishers</publisher>
+			<pubPlace>Dordrecht</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Handbook of Stochastic Methods for Physics</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Gardiner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Chemistry and the Natural Sciences</title>
+		<meeting><address><addrLine>Berlin, Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer-Verlag</publisher>
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Hydrodynamic Approximation with Self-Diffusion for Collisionless Beams</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Tzenov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Nonlinear and Collective Phenomena in Beam Physics</title>
+		<meeting><address><addrLine>Arcidosso, Italy; New York</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1996">1996. 1997</date>
+			<biblScope unit="page" from="381" to="390" />
+		</imprint>
+	</monogr>
+	<note>AIP Conf. Proc. No. 395</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Beam Dynamics in ee Storage Rings and a Stochastic Schrödinger-Like Equation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Tzenov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Letters A</title>
+		<imprint>
+			<biblScope unit="volume">232</biblScope>
+			<biblScope unit="page" from="260" to="268" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="middle">L</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Klimontovich</surname></persName>
+		</author>
+		<title level="m">Statistical Physics</title>
+		<meeting><address><addrLine>Chur</addrLine></address></meeting>
+		<imprint>
+			<publisher>Harwood Academic Publishers</publisher>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Balescu</surname></persName>
+		</author>
+		<title level="m">Transport Processes in Plasmas</title>
+		<meeting><address><addrLine>North-Holland, Amsterdam</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

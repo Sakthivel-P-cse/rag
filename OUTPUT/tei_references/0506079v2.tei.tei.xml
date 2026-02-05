@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Soliton control in modulated optically-induced photonic lattices</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2005-07-31">31 Jul 2005</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ivan</forename><forename type="middle">L</forename><surname>Garanovich</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research School of Physical Sciences and Engineering</orgName>
+								<orgName type="laboratory">Nonlinear Physics Centre and Centre for Ultra-high bandwidth Devices for Optical Systems (CUDOS)</orgName>
+								<orgName type="institution">Australian National University</orgName>
+								<address>
+									<postCode>ACT 0200</postCode>
+									<settlement>Canberra</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andrey</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research School of Physical Sciences and Engineering</orgName>
+								<orgName type="laboratory">Nonlinear Physics Centre and Centre for Ultra-high bandwidth Devices for Optical Systems (CUDOS)</orgName>
+								<orgName type="institution">Australian National University</orgName>
+								<address>
+									<postCode>ACT 0200</postCode>
+									<settlement>Canberra</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuri</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research School of Physical Sciences and Engineering</orgName>
+								<orgName type="laboratory">Nonlinear Physics Centre and Centre for Ultra-high bandwidth Devices for Optical Systems (CUDOS)</orgName>
+								<orgName type="institution">Australian National University</orgName>
+								<address>
+									<postCode>ACT 0200</postCode>
+									<settlement>Canberra</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Soliton control in modulated optically-induced photonic lattices</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2005-07-31">31 Jul 2005</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">617EA499F245D3A1424A0D3AC5CF064B</idno>
+					<idno type="arXiv">arXiv:physics/0506079v2[physics.optics]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>OCIS codes: (190.0190) Nonlinear optics</term>
+					<term>(190.4420) Nonlinear optics, transverse effects in</term>
+					<term>(190.5330) Photorefractive nonlinear optics</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>We discuss soliton control in reconfigurable optically-induced photonic lattices created by three interfering beams. We reveal novel dynamical regimes for strongly localized solitons, including binary switching and soliton revivals through resonant wave mixing.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Photonic Bloch waves and photonic band gaps</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>St</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Russell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Birks</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lloyd Lucas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Confined Electrons and Photons</title>
+		<editor>
+			<persName><forename type="first">E</forename><surname>Burstein</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Weisbuch</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Plenum Press</publisher>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="page" from="585" to="633" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Optical Solitons: From Fibers to Photonic Crystals</title>
+		<author>
+			<persName><forename type="middle">S</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Kivshar</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<publisher>Academic Press</publisher>
+			<pubPlace>San Diego</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Discrete solitons in photorefractive optically induced photonic lattices</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Efremidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sears</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Fleischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Segev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">46602</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Observation of discrete solitons in optically induced real time waveguide arrays</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Fleischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Carmon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Segev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Efremidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">23902</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Observation of two-dimensional discrete solitons in optically induced nonlinear photonic lattices</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Fleischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Segev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Efremidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature (London)</title>
+		<imprint>
+			<biblScope unit="volume">422</biblScope>
+			<biblScope unit="page" from="147" to="150" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Spatial solitons in optically induced gratings</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ostrovskaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kivshar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="710" to="712" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Discretizing light behaviour in linear and nonlinear waveguide lattices</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lederer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature (London)</title>
+		<imprint>
+			<biblScope unit="volume">424</biblScope>
+			<biblScope unit="page" from="817" to="823" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Nonlinear Bloch-wave interaction and Bragg scattering in optically induced lattices</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">93901</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Controlled generation and steering of spatial gap solitons</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page">83905</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Rosberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+		<idno>arXiv physics/0503226</idno>
+		<ptr target="http://arxiv.org/abs/physics/0503226" />
+	</analytic>
+	<monogr>
+		<title level="m">Tunable positive and negative refraction in optically-induced photonic lattices</title>
+		<imprint>
+			<date type="published" when="2005">2005. 2005</date>
+		</imprint>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Soliton dragging by dynamic optical lattices</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">V</forename><surname>Kartashov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Torner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1378" to="1380" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Diffraction management</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Eisenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Morandotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Aitchison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="1863" to="1866" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Discrete diffraction managed spatial solitons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Ablowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">H</forename><surname>Musslimani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page">254102</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Oscillation and decay of discrete solitons in modulated waveguide arrays</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Peschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lederer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Am. B</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="544" to="549" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Discrete gap solitons in modulated waveguide arrays</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="2112" to="2114" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Dynamics of discrete solitons in optical waveguide arrays</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Morandotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Peschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Aitchison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Eisenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="2726" to="2729" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Discrete solitons and soliton-Induced dislocations in partially coherent photonic lattices</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Maritn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Eugenieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">123902</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Observation of mutually trapped multiband optical breathers in waveguide arrays</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mandelik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Eisenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Morandotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Aitchison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">253902</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

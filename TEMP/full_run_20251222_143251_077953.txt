@@ -1,0 +1,95 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_143251_077953.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): My object detector struggles with small objects. Increasing resolution helps but is too slow. Is there a structural way to improve small-object detection?
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251222_143255_525704.json
+[retrieve] Query (first 200 chars): What structural modifications can improve the detection of small objects in images without relying on increased image resolution?  Search hints: small object detection, structural modifications, featu
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_143251_077953.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=3
+[judge] refined_question: What structural modifications can improve the detection of small objects in images without relying on increased image resolution?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): What structural modifications can improve the detection of small objects in images without relying on increased image resolution?  Search hints: small object detection, structural modifications, featu
+[judge] search_hint: small object detection, structural modifications, feature pyramid networks, spatial attention mechanisms, efficient object detection, real-time detection, model pruning, knowledge distillation
+[retrieve] Query (first 200 chars): What structural modifications can improve the detection of small objects in images without relying on increased image resolution?  Search hints: small object detection, structural modifications, featu
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1612.03144v2.tei.tei chunk_id=1612.03144v2.tei.tei_chunk-4 retr_score=0.6266 section=2. Related Work :: Hand-engineered features and early neural networks. SIFT features [25] were originally extracted at scale-space extrema and used for feature point matching. HOG...
+[judge] cand#2: paper_id=1612.03144v2.tei.tei chunk_id=1612.03144v2.tei.tei_chunk-12 retr_score=0.5910 section=(e). :: How important are pyramid representations? Instead of resorting to pyramid representations, one can attach the head to the highest-resolution, strongly semantic...
+[judge] cand#3: paper_id=1612.03144v2.tei.tei chunk_id=1612.03144v2.tei.tei_chunk-2 retr_score=0.5885 section=1. Introduction :: Nevertheless, featurizing each level of an image pyramid has obvious limitations. Inference time increases considerably (e.g., by four times [11]), making this ...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["structural modifications for small object detection without increased image resolution"],   "next_question": "What specific architectural modifications can be made to object detection models to improve detection of small objects in images without relying on increased image resolution or sacrificing real-time detection performance?",   "accept": [     {"chunk_id": "1612.03144v2.tei.tei_chunk-4", "paper_id": "1612.03144v2.tei.tei", "rationale": "Discusses image pyramids and feature extraction for object detection"},     {"ch
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251222_143427_349648.json
+[judge] satisfied=False
+[judge] Accepted this iter: 3 | Rejected this iter: 0 | Total accepted: 3 | Total rejected: 0
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): What specific architectural modifications can be made to object detection models to improve detection of small objects in images without relying on increased image resolution or sacrificing real-time 
+[judge] search_hint: object detection architectures, small object detection, real-time detection, image pyramids, feature extraction, convolutional neural networks, spatial attention mechanisms, efficient object detection
+[retrieve] Query (first 200 chars): What specific architectural modifications can be made to object detection models to improve detection of small objects in images without relying on increased image resolution or sacrificing real-time 
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1811.08883v1.tei.tei chunk_id=1811.08883v1.tei.tei_chunk-4 retr_score=0.5091 section=2. Related Work :: Detection from scratch. Before the prevalence of the 'pretraining and fine-tuning' paradigm, object detectors were trained with no pre-training (e.g., [31,38,45...
+[judge] cand#2: paper_id=1811.08883v1.tei.tei chunk_id=1811.08883v1.tei.tei_chunk-9 retr_score=0.4986 section=5.1. Training from scratch to match accuracy :: In the standard COCO training set, ImageNet pretraining mainly helps to speed up convergence on the target task early on in training, but shows little or no evi...
+[judge] cand#3: paper_id=1811.08883v1.tei.tei chunk_id=1811.08883v1.tei.tei_chunk-8 retr_score=0.4959 section=4. Experimental Settings :: By default Mask R-CNN in Detectron uses no data augmentation for testing, and only horizontal flipping augmentation for training. We use the same settings. Also...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["architectural modifications for small object detection", "real-time detection performance"],   "next_question": "What specific architectural modifications can be made to object detection models to improve detection of small objects in images without sacrificing real-time detection performance, considering multi-scale feature representations and efficient object detection techniques?",   "accept": [     {"chunk_id": "1811.08883v1.tei.tei_chunk-4", "paper_id": "1811.08883v1.tei.tei", "rationale": "discusses training object d
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251222_143458_346012.json
+[judge] satisfied=False
+[judge] Accepted this iter: 1 | Rejected this iter: 2 | Total accepted: 4 | Total rejected: 2
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): What specific architectural modifications can be made to object detection models to improve detection of small objects in images without sacrificing real-time detection performance, considering multi-
+[judge] search_hint: object detection architectures, small object detection, real-time detection, image pyramids, feature extraction, convolutional neural networks, spatial attention mechanisms, efficient object detection, multi-scale feature representations, detector accuracy
+[retrieve] Query (first 200 chars): What specific architectural modifications can be made to object detection models to improve detection of small objects in images without sacrificing real-time detection performance, considering multi-
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 0 chunks
+[judge] No candidates retrieved; stopping.
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What specific architectural modifications can be made to object detection models to improve detection of small objects in images without sacrificing real-time detection performance, considering multi-
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What multi-scale feature representation techniques can be applied to object detection models to improve detection of small objects?
+[retrieve] Query (first 200 chars): What multi-scale feature representation techniques can be applied to object detection models to improve detection of small objects?  Search hints: multi-scale features, feature pyramids, spatial pyram
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: What efficient object detection techniques can be integrated into object detection models to maintain real-time detection performance while 
+[retrieve] Query (first 200 chars): What efficient object detection techniques can be integrated into object detection models to maintain real-time detection performance while improving small object detection?  Search hints: efficient o
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: How can architectural modifications be made to object detection models to balance the trade-off between small object detection accuracy and 
+[retrieve] Query (first 200 chars): How can architectural modifications be made to object detection models to balance the trade-off between small object detection accuracy and real-time detection performance?  Search hints: object detec
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 4 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_143845_096676.json

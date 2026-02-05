@@ -1,0 +1,122 @@
+[
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-1",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": null,
+    "paragraph_index": 0,
+    "text": "**Published:** 7 Sep 2015\n\nWe characterize a weighted norm inequality which corresponds to the embedding of a class of\nabsolutely continuous functions into the fractional order Sobolev space. The auxiliary result of the\npaper is of independent interest. It comprises of several types of necessary and sufficient\nconditions for the boundedness of the Hardy-Steklov operator (an integral operator with two variable\nboundaries of integration) in weighted Lebesgue spaces.\n\nGiven s > 0 and a weight function v ≥ 0 on (0, ∞) let L s v (0, ∞) =: L s v denote the weighted\nLebesgue space of all measurable functions g on (0, ∞) satisfying\n\nSuppose that p ≥ 1, q > 0, λ ∈ (0, 1) and a weight function u is non-negative on (0, ∞) × (0, ∞).\nConsider the fractional inequality\n\n|x -y| 1+λq u(x, y) dx dy\n\nreflecting the embedding of a subclass W 1 p,v := {f ∈ AC(0, ∞) : f ′ p,v < ∞} of absolutely\ncontinuous functions (AC-functions) on (0, ∞) into the weighted fractional order Sobolev space\n\nis the weighted Slobodeckij type seminorm. For q ≥ 1 the space W λ q := W λ q,1 , equipped with the\nnorm f W λ q,1 = f q,1 + [f ] W λ q,1 < ∞, can also be called Aronszajn space [1], Gagliardo space\n[5] or Slobodeckij space [24]. Being a special case of Besov spaces [3,32] W λ q plays an important\nrole in the study of traces of Sobolev functions and are applicable to partial differential\nequations (see [14] for details).",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-2",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "1. Introduction",
+    "paragraph_index": 7,
+    "text": "The inequality (1.1) was studied by H. P. Heinig and G. Sinnamon in [9], where some conditions for\nthe validity of (1.1) were found. The method, employed in [9] for the investigation of (1.1), was\nbased on characterization of the Hardy-Steklov operator\n\ng(y) dy with the boundaries a(x) and b(x) satisfying the conditions:\n\n(1.3) (i) a(x), b(x) are differentiable and strictly increasing on (0, ∞);\n\nThe Hardy-Steklov operator (1.2) was studied in [2,4,9,7,27,29]. It has connections with other\nintegral transformations [8,9,13,30,34], some embedding theorems [20] and is applicable to other\nneighbour areas [13,Ch. 3]. The purpose of this paper is twofold. Firstly, we obtain new necessary\nand sufficient conditions for the boundedness of H from L p v to L q w , when p > 1 and q > 0 (see\nTheorem 2.2 and Corollary 2.3). These conditions complement the already existed ones (see e.g.\n[30,Th. 4.1]) with new facts and give alternative characteristics for the Hardy-Steklov operator H\nin weighted Lebesgue spaces. Secondly, using the idea by H. P. Heinig and G. Sinnamon from [9, § 3]\nand our new characterizations of H , in particular Corollary 2.3, we find conditions for the\ninequality (1.1) to hold for all p ≥ 1 and q > 0 (see Theorem 3.1). The conditions found in Theorem\n3.1 complement the earlier results by H. P. Heinig and G. Sinnamon [9,Th. 3.3 and Cor. 3.5] with the\ncase 0 < q < p < ∞, which was not considered in [9]. For 1 ≤ p ≤ q < ∞ we derive characteristics\nalternative to those given in [9].",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-3",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "1. Introduction",
+    "paragraph_index": 11,
+    "text": "Throughout the paper products of the form 0 • ∞ are taken to be equal to 0. Relations of the type A\n≪ B mean that A ≤ cB with some constant c depending, possibly, on parameters p and q only. We write\nA ≈ B instead of A ≪ B ≪ A or A = cB. We use Z and N for integers and natural numbers, respectively.\nχ E stands for the characteristic function (indicator) of a subset E ⊂ (0, ∞). We make use of marks\n:= and =: for introducing new quantities. We assume weight functions to be non-negative and locally\nintegrable to appropriate powers. In order to shorten big formulae, we use h to cut h(t) dt for a\none-variable integrand h(t), where it makes sence.\n\nLet p > 1, q > 0 and v, w be weight functions on (0, ∞). Suppose that the boundaries a(x) and b(x)\nof the operator (1.2) satisfy the conditions (1.3) and a -1 (y), b -1 (y) are the inverse functions\nto y = a(x) and y = b(x).\n\nThe most recent development, related to the characterization of the operators (1.2) with boundaries\na(x) and b(x) satisfying (1.3), is based on the conception of fairway. The fairway σ(x) is a\nfunction on (0, ∞) with some special properties. It was introduced in [27] in order to derive new\nforms of boundedness criteria for H acting in weighted Lebesgue spaces, say, from L p v to L q w .\nThe fairway-function σ(x) in [27] (see also [30,Def. 2.4]) is built on given boundaries a(x) and\nb(x), weight function v ≥ 0 and parameter p > 1 so that a(x) < σ(x) < b(x) and (2.1)",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-4",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "2. Hardy-Steklov operator",
+    "paragraph_index": 14,
+    "text": "The conception of fairway σ brought a collection of results for H : L p v → L q w , which appeared\nto be convenient to further development and applications (see e.g. [15,16,28,29,30,34]. In\nparticular, two different types of the boundedness criteria for (1.2) have been obtained in terms of\nthe fairway σ (see e.g. [30,Ths. 4.1,4.2] or [31,Th. 2.1]) and applied to neighbour problems: e.g.\ncharacterization of the geometric mean operator with variable boundaries in Lebesgue spaces,\nweighted embedding inequalities of Sobolev type (see Th. 5.1 and § 6 in [30] for details).\n\nThe dual form of the boundedness criteria for H : L p v → L q w was stated in [31, Th. 2.2] basing\non the definition of the dual fairway-function.\n\nDefinition 2.1. Given boundary functions a(x) and b(x), satisfying the conditions (1.3), and a\nweight function w(x) such that 0 < w(x) < ∞ a.e. x ∈ (0, ∞) and w(x) is locally integrable on (0,\n∞), we define the dual fairway-function ρ(y) such that b -1 (y) < ρ(y) < a -1 (y) on (0, ∞) and\n\nfor all y > 0.\n\nSimilarly to σ(x), the dual fairway ρ(y) is differentiable and strictly increasing function on (0,\n∞). The result of Theorem 2.2 from [31] follows, by duality, from [31, Th. 2.1] but is valid for p >\n1 and q > 1 only.\n\nIn this section we prove that the dual form of the boundedness criteria for (1.2) from L p v to L q\nw is also true when p > 1, 0 < q < 1 (see Theorem 2.2 (c), (e)) and can be obtained in terms of the\noriginal fairway-function σ for all p > 1, q > 0 as well. As a counterpart of this statement, we\nshow that the boundedness criteria in their original (non-dual) form can be obtained with help of\nthe dual fairway-function ρ instead of σ. In comparison with all the earlier results for Hardy-\nSteklov operator (1.2) in weighted Lebesgue spaces (see e.g. [30]) the sufficient parts of our new\nboundedness criteria for H : L p v → L q w do not require the condition (2.1) on σ or the condition\n(2.2) on ρ(y) (see Theorem 2.2 (a), (b)) if p, q > 1.",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-5",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "2. Hardy-Steklov operator",
+    "paragraph_index": 20,
+    "text": "Having several forms of characteristics for an operator in function spaces may promote solutions to\nsome neighbour problems. This argument concerns directly the embedding inequality (1.1),\ncharacterization of which is the main problem of our paper. The inequality (1.1) is connected to the\nHardy-Steklov operator (see Section 2 for details) and, depending on the weights v and w, extracting\nρ from the equation (2.2) may be more practical than finding σ from (2.1), and vice versa.\n\nGiven boundaries a(x) and b(x) satisfying the conditions (1.3) let y = ς(x) be a strictly increasing\ncontinuous function on (0, ∞) such that a(x) < ς(x) < b(x) for x > 0. Then the inverse x = ς -1 (y)\n=: ς * (y) is also a strictly increasing continuous function on (0, ∞) such that b -1 (y) < ς * (y)\n< a -1 (y) if y > 0. For such a function ς we put\n\nLet W I (t) := I(t) w and V I (t) := I(t) v 1-p ′ for some I(t) ⊂ (0, ∞). For p > 1 put p ′ := p/(p\n-1), q ′ := q/(q -1), r := pq/(pq) and denote ̺(t) := v 1-p ′ (t),\n\n.\n\nHere (•) * indicates the dual character of the functionals\n\n) * for all p > 1 and q > 0, while (B - ρ ) * + (B + ρ ) * ≈ (B ρ ) * if p > 1 and q > 1 only. The\nmain result of this section is stated in the following theorem. Theorem 2.2. Let p > 1, q > 0, q = 1\nand the operator H be defined by (1.2) with a(x), b(x) satisfying the conditions (1.3). Suppose that\nσ(x) is a strictly increasing continuous function on (0, ∞) such that a(x) < σ(x) < b(x) for x > 0,\nand ρ(y) is a strictly increasing continuous function on (0, ∞) such that b -1 (y) < ρ(y) < a -1 (y)\nfor y > 0. Let ς(x) denote either σ(x) or ρ -1 (x) on (0, ∞).",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-6",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "2. Hardy-Steklov operator",
+    "paragraph_index": 26,
+    "text": "(a\n\nfrom [30,Th. 3.2] (see also [27,Th. 3] and [9, Th. 2.2]) with\n\n̺(y) dy\n\nPut τ := ς -1 (a(t)). We can write that\n\nwhere\n\nand the estimate\n\nand put\n\nBreaking the semiaxis (0, ∞) by the points {ξ k } k∈Z we decompose the operator H into the sum (2.9)\nH = T + S of two block-diagonal operators T = k∈Z T k and S = k∈Z S k , where\n\nand\n\n, where\n\nApplying the estimate (2.44) from [30,Lem. 2.3] to the norm of the operator S - k we obtain, using\nqr/p + qr/p = r/p ′ , that\n\nAnalogously, on the strength of (2.42) from [30, Lem. 2.3], we obtain that\n\nTo estimate T k we make a decomposition\n\n.\n\nBy (2.50) from [30,Lem. 2.4] we obtain that\n\nFurther, by (2.52) from [30,Lem. 2.4] and in view of qr/p + qr/p = r/p ′ ,\n\nFrom here, (2.13) and (2.9) we find by [28, Lem. 1] (see also [30,Lem. 3.1] or [33,Lem. 2.1]) that\n\nfollows by duality for q > 1.\n\n(c) Assume that 0 < q < 1 < p < ∞ and introduce the sequence {ξ k } k∈Z ⊂ (0, ∞) by (2.8). Let ς\ndenote either the dual fairway-function ρ -1 satisfying (2.2) or the fairway-function σ satisfying\n(2.1). We put",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-7",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "2. Hardy-Steklov operator",
+    "paragraph_index": 45,
+    "text": "and decompose the operator into the sum (2.17)\n\nwhere\n\n) * because of (2.1). Thus, the two required estimates on H L p v →L q w will be established in this\npart of the theorem if we prove the inequality\n\nSince q ′ < 0 then, for simplicity, we assume that W Θ (t) < ∞ and 0 < V ϑ ± (t) < ∞ for any t > 0.\n\nNote that\n\n|g(y)| dy and, therefore, by [30, Lems. 2.3, 2.4],\n\nWe have, by r/p ′ = r/q ′ + 1 and in view of q ′ < 0, that\n\nNote that\n\nIf ς = σ then, by (2.1) and in view of a(ξ k ) = σ(ξ - k ),\n\n(2.20)\n\nIf ς = ρ -1 then, by (2.2),\n\nAnalogously to (2.18) (2.21), we can find that\n\nand, therefore, To prove the required lower estimates in the case 1 < p ≤ q < ∞ we refer to (2.7)\nagain. We have for any t > 0:\n\n, and\n\n< ∞, p > 1 and if the fairway-function σ satisfies the condition (2.1). The method of the proof of\nthis estimate on H L p v →L q w in [30, Th. 4.1] implies also the inequality H L p v →L q w ≫ (B σ\n-1 ) * for the case when σ ∈ (2.1). Indeed, suppose first that σ(x) = x. Then (2.24)\n\n(see [30, pp. 477-481] for details), where\n\nIf q ′ > 0 then, on the strength of (2.1) ∋ σ(x) = x and, similarly to that in the proof of the\nestimate",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-8",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "2. Hardy-Steklov operator",
+    "paragraph_index": 62,
+    "text": "(2.26)\n\n). The same estimate on λ k for q ′ < 0 follows by\n\nCombining (2.24) with (2.26) we obtain that (2.27)\n\nTherefore, we have that\n\nThe same statement with general σ ∈ (2.1) follows from the case σ(x) = x by substitutions ã(x) = σ\n-1 (a(x)), b(x) = σ -1 b((x)), f (y) = f (σ(t))σ ′ (t) and ṽ(x) = v(σ(x))(σ ′ (x)) 1-p . Now let ρ\nbe the dual fairway satisfying (2.2). If 1 < q < p < ∞ then the estimates\n\n) * , respectively (see also [31,Th. 2.2]). Since r/q ′ > 0, we also have\n\nfor the case when 0 < q < 1 < p < ∞ and ρ ∈ (2.2). To this end we assume that\n\nρ -1 we introduce the sequence (2.25) and form intervals κ k j , j = 1, . . . , j b , on each [η k ,\nη k+1 ), k ∈ Z, as follows:\n\n( , where m k j is the right end point of the interval κ k j , and define a function\n\nand each x ∈ (0, ∞) has intersection with two κ k j at most. Then, by r/(pq ′ ) + 1 = r/(p ′ q) and\nr/p + 1 = r/q, we obtain for any\n\nSince the intervals [m k j-1 , m k j ), which are formed by the right end points m k j of κ k j with\nm k 0 = η k , are disjoint, then\n\nand consider |k| ≤ N first. Notice that for all such k we have",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-9",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "2. Hardy-Steklov operator",
+    "paragraph_index": 74,
+    "text": "Therefore, any fixed |k| ≤ N and j(k),\n\n̺(y) dy.\n\nSince q ′ < 0, then\n\nMoreover, on the strength of (2.2) (see also (2.28)),\n\nThus, in view of r/q ′ + 1 = r/p ′ > 0 and r/q > 1,\n\nTherefore, by (2.2), analogously to (2.31),\n\nthen, by the same reason as before,\n\nCombining (2.30) (2.32) and (2.33) we obtain that\n\nThus and (2.29) it follows, letting N → ∞, that (2.34)\n\nTo obtain the estimate H L p v →L q w ≫ (B + ρ ) * from (2.34) notice that\n\nby the construction of κ k j provided q ′ < 0. Thus, by (2.28): (2.28), any two neighbour κ k j w\nare equivalent to each other. Therefore, the sum, say γ k,j , of two neighbour λ k,j can be\nestimated from below as follows: It now follows from (2.34) that\n\nThus,\n\nAnalogously, using the sequence (2.27) instead of (2.25), one can show that\n\nCorollary 2.3. Let p > 1, q > 0, q = 1 and the operator H be defined by (1.2) with a(x), b(x)\nsatisfying the conditions (1.3). Suppose that σ(x) is the fairway-function on (0, ∞) satisfying\n(2.1) and ρ(y) is the dual fairway-function on (0, ∞) satisfying (2.2). Then [22,Th. 2]).\n\nLet q > 0 and p > 1, weights u and v be non-negative on (0, ∞), and a function f ∈ W 1 p,v satisfy\none of the boundary conditions: f (0) = 0 or f (∞) = 0. The weighted differential Hardy inequality\nof the form",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-10",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "3. Fractional inequality",
+    "paragraph_index": 89,
+    "text": "is very well-studied (see [21] and references there). Higher order differential inequalities of\nHardy type\n\nwith f such that f (j) (0) = 0, j = 0, 1, . . . , k -1, or f (j) (∞) = 0, j = 0, 1, . . . , k -1,\nwere studied in [25,26]. An overdetermined analog of (3.2) (i.e. with some additional conditions on\nf ) appeared in [17,18,19]. Some norm inequalities involving fractional derivatives of smooth\nfunctions were considered in the papers [6] and [10]. For further historical remarks we refer to the\nbooks [12] and [13]. This section continues the study of weighted differential inequalities and\ninvestigates relations between Lebesgue norms of fractional and first derivatives of functions from\nW 1 p,v on (0, ∞). As it was mentioned in the introduction, the question arose from the paper [9] by\nH.P. Heinig and G. Sinnamon, where the authors obtained separate necessary and sufficient conditions\nfor the inequality (1.1) to hold. Here we give new conditions for the validity of (1.1) with general\nweights u and v (see Theorem 3.1). In addition, the case u = 1 is separately considered and\nillustrated by two examples. In particular, we state criteria for (1.1) to hold with a power weight\nv in the case 1 < p ≤ q < ∞ (see Proposition 3.3), and for v with antiderivative -1/γ(1\n\nConsider the inequality (1.1) in the form\n\n, where ũ(x, y) := u(x, y) |x -y| 1+λq and a constant 0 < C < ∞ is the best possible and independent\nof f . Analogously to that established in the proof of Corollary 3.5 from [9] one can state that\n(3.3) is equivalent to the inequality",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-11",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "3. Fractional inequality",
+    "paragraph_index": 93,
+    "text": "with Ũξ (x) = x(ũ(x, ξx) + ũ(ξx, x)). Thus, the initial inequality (1.1) becomes of the form (3.4)\n\nλq and, following the above transformations, (1.1) is equivalent to the inequality\n\nOn the other hand, suppose that H ξ ≈ F (ξ), where a functional\n\ne., g ξ ≥ 0 and\n\nIn other words, g ξ is supposed to be a test function corresponding to the chosen type of the\nfunctional F (ξ). Functions of such a type appear in the proof of the estimates H ξ ≫ F (ξ) (see\nTheorem 2.2.(d,e) for details). The required function f ξ can be easily constructed from g ξ . We\nhave from (3.8) that for some 0 < ξ 0 < 1\n\nNotice that the boundaries a(x) = ξx and b(x) = x of the Hardy-Steklov operator (3.6) satisfy the\nconditions (1.3). Besides, the explicit form of the weight function w(x) = x -λq is suitable for\nconstructing the dual fairway b -1 (y) ≤ ρ(y) ≤ a -1 (y) on (0, ∞) with the property (2.2). We find\nfrom (2.2) that (3.11) ρ(y)\n\nIn order to characterize the inequality (3.5) we need the intervals\n\nUsing the result of Corollary 2.3 from Section 2 of this paper, we obtain that\n\n(3.13)\n\n(see functionals (2.3) (2.6)). Thus and (3.10), we extract characterizations for the inequality\n(1.1) with u = 1:\n\n; for 0 < q < p < ∞ we have\n\nCharacterization of the initial inequality (1.1) in its equivalent form (3.4) with general u can be\nmade in the exact same way as for the one-weighted inequality (3.5). Indeed, following the same\npattern as the result of the estimates (3.7) (3.9) with general U ξ (x), and putting W ξ (x) := ξ 0\nU t (x) dt, we obtain that (3.16)",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-12",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "3. Fractional inequality",
+    "paragraph_index": 105,
+    "text": ".\n\nThe estimate (3.16) is true for the two-weighted inequality (3.4) as well as for (1.1) with general\nweight function u for all parameters p > 1 and q > 0.\n\nTo state the main result of this part of the paper we introduce three fairways. Let the first\nfairway σ ξ (x) be such that ξx < σ ξ (x) < x, 0 < ξ < 1, x > 0, and (3.17)\n\nAssume that, given 0 < ξ < 1, two others (dual) fairway-functions ρ W ξ (y) and ρ U ξ (y) are such\nthat y < ρ W ξ (y) < y/ξ, y < ρ U ξ (y) < y/ξ for all y > 0 and\n\n(3.18)\n\nU ξ (y > 0).\n\nTheorem 3.1. Let p > 1, q > 0 and q = 1. Suppose that C > 0 is the best possible in (1.1) and\nindependent of f . Let ρ w denote either the fairway-function ρ W ξ or ρ U ξ defined by (3.18). Then\nwe have for the case 1 < p ≤ q < ∞ that\n\nwhere\n\n̺(y) dy\n\nw(x) dx If 0 < q < p < ∞ and p > 1 then\n\nwhere\n\n, and Proof. Theorem follows by (3.16) and Corollary 2.3.\n\nTo characterize the inequality (1.1) for p = 1 or q = 1 one can use either Theorem 4 from [11, Ch.\n7, § 1.5] or Theorem 3.1 from this paper with p → 1 or q → 1. In particular, on the strength of\nCorollary 2.3,",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-13",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "3. Fractional inequality",
+    "paragraph_index": 118,
+    "text": "Analogously, one can characterize (1.1) if q = 1, using even the both types of the functionals A ς ,\n(A ς * ) * , B ς , (B ς * ) * (with ς = σ or ς = ρ -1 ) when p ′ = ∞. If p ′ = ∞ then only the\nfunctionals A ρ -1 , (A ρ ) * and B ρ -1 can be used. Notice also that if q = 1 then r/q ′ = 0, and,\ntherefore,\n\nWe complete the section by two examples giving criteria for (1.1) to hold with particular u and v.\n\nExample 3.2. Let 1 < p ≤ q < ∞, u = 1 and v(z) = z α . In order to derive necessary and sufficient\nconditions for the inequality (1.1) to hold under these assumptions we shall start from calculating\nthe functional A (ξ) of the form (3.12):\n\nThe suprema in A (ξ) are finite if and only if\n\nIn such a case α(1p ′ ) + 1 = p ′ (λ -1/q) and, therefore,\n\nIt follows from (3.14) that the inequality (1.1) is satisfied if Ā < ∞, where\n\nand if (1.1) holds with C < ∞ then A < ∞, where\n\nWe write\n\nNotice that for some β > 0\n\nIf λ > 1/q then the integral in Ā converges at the point 0, and, by (3.20), converges at 1 if q/p\n′λq > -1. Therefore, Ā < ∞ in the case λ > 1/q if\n\nThis condition is automatically satisfied and is also sufficient for finiteness of Ā if λ < 1/q. If\nλ = 1/q then, by substitution ξ = e -t , the functional Ā takes the form",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-14",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "3. Fractional inequality",
+    "paragraph_index": 129,
+    "text": ".\n\nThis integral converges at ∞. Since the integrand behaves like t q/p ′ -1 near 0, so Ā is finite.\nThus, the condition (3.22) is sufficient for the inequality (1.1) to hold when u = 1 and v(z) = z α\nwith α := 1 q λ + 1 p -1 > 0.\n\nIf λ > 1/q then the supremum in A is finite near 0, and, by (3.20), is finite near 1 if 1/q + 1/p ′λ\n≥ 0. Therefore, if (1.1) is true for λ > 1/q with C < ∞ then (3.24) λ ≤ 1 p ′ + 1 q .\n\nIn view of (3.21), the supremum in A is finite near 0 in the case λ < 1/q. By (3.20) the condition\n(3.24) necessarily follows from finiteness of the supremum in A near 1, and is automatically\nsatisfied if λ < 1/q. If λ = 1/q then, substituting ξ = e -t , we arrive to\n\n(1e -t ) λ .\n\nThis supremum is finite near ∞. In view of (3.23) and λ = 1/q it is finite near 0 as well. Thus, the\ncondition (3.24) is necessary for (1.1) when u = 1 and v(z) = z α , α ≥ 0. Combining this with\n(3.22) we obtain the following criterion. Proposition 3.3. Let 1 < p ≤ q < ∞, 0 < λ < 1 and put α =\n(1/qλ + 1)p -1. Assume that u = 1 and v(z) = z α in the inequality (1.1). Then (1.1) holds if and\nonly if λ < 1/p ′ + 1/q. Corollary 3.4. In particular, if p = q, then the inequality for any γ = 0\nthen we may and shall assume that γ > 0. We have",
+    "year": 2015
+  },
+  {
+    "chunk_id": "1503.06518v2.tei.tei_chunk-15",
+    "paper_id": "1503.06518v2.tei.tei",
+    "section": "3. Fractional inequality",
+    "paragraph_index": 135,
+    "text": "(1-λq)(1+ξ λq-1 )\n\nPut s := r(1/qλ) + γr/p ′ and assume that B(ξ) < ∞. Then the integral I(ξ) := ∞ 0 t s-1 dt [1 + (ξt)\nγ ] r/p ′ [1 + t γ ] r/p ′ in B(ξ) converges at 0. Therefore, s > 0, that is our λ has to satisfy\n(3.25) λ < 1 q + γ p ′ .\n\nThe condition (3.25) also guarantees convergence I(ξ) at ∞ in the case λq > 1. Indeed, since In view\nof (3.23) the integrand behaves like t q-2 near 0, therefore, the integral converges if q ≥ 1, which\ncorrelates with q = 1/λ > 1.\n\nFurther, if λq = 1 then the supremums in B are finite near 0 and 1 in view of (3.21) and (3.20),\nrespectively. In the case λq = 1 the substitution ξ = e -t and the relation (3.23) yield finiteness\nof the supremum in B.\n\nCombining all the above estimates we can state the following Proposition.\n\nProposition 3.7. Let 0 < q < p < ∞, 0 < λ < 1 and γ > 0. Assume that u = 1 and v(z) = z\n\n---\n## Footnotes\n\n[foot_0] Computing Center of the Far Eastern Branch of the Russian Academy of Sciences, Kim Yu Chena 65,\n680000 Khabarovsk, Russia E-mail address: elenau@inbox.ru, nassm@mail.ru",
+    "year": 2015
+  }
+]

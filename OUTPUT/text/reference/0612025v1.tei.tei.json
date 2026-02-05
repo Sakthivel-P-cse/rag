@@ -1,0 +1,656 @@
+{
+  "paper_id": "115C66679E3F64BDD5292E68EDD8804A",
+  "title": "Single neuron computation: from dynamical system to feature detector",
+  "arxiv_id": "arXiv:q-bio/0612025v1[q-bio.NC]",
+  "authors": [
+    {
+      "given": "Sungho",
+      "family": "Hong"
+    },
+    {
+      "given": "Blaise",
+      "family": "Agüera Y Arcas"
+    },
+    {
+      "given": "Adrienne L",
+      "family": "Fairhall"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Statistical Mechanics of Neural Networks",
+      "container_title": "Statistical Mechanics of Neural Networks",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Abbott",
+          "family": null
+        },
+        {
+          "given": "Kepler ;",
+          "family": "Abbott"
+        },
+        {
+          "given": "L F",
+          "family": "Kepler"
+        },
+        {
+          "given": "T",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Agüera",
+          "family": null
+        },
+        {
+          "given": "Arcas",
+          "family": "Fairhall ; Agüera Y Arcas"
+        },
+        {
+          "given": "B",
+          "family": "Fairhall"
+        },
+        {
+          "given": "A",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Agüera Y Arcas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "J. Neurosci",
+      "container_title": "J. Neurosci",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Aldworth"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Proc. Natl. Acad. Sci. USA",
+      "container_title": "Proc. Natl. Acad. Sci. USA",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Gray ; Azouz",
+          "family": "Azouz"
+        },
+        {
+          "given": "R",
+          "family": "Gray"
+        },
+        {
+          "given": "C",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Neuron",
+      "container_title": "Neuron",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I I",
+          "family": "Berry"
+        },
+        {
+          "given": ";",
+          "family": "Meister"
+        },
+        {
+          "given": "I I",
+          "family": "Berry"
+        },
+        {
+          "given": "M J",
+          "family": "Meister"
+        },
+        {
+          "given": "M",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Features and dimensions: motion estimation in fly vision",
+      "container_title": "Features and dimensions: motion estimation in fly vision",
+      "year": "2005",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "q-bio/0505003"
+        }
+      ],
+      "authors": [
+        {
+          "given": null,
+          "family": "Bialek"
+        },
+        {
+          "given": "W",
+          "family": "De Ruyter Van Steveninck ; Bialek"
+        },
+        {
+          "given": "R R",
+          "family": "De Ruyter Van Steveninck"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Proc Natl Acad Sci",
+      "container_title": "Proc Natl Acad Sci",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Borst"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Neuron",
+      "container_title": "Neuron",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Brenner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Proc. Roy. Soc. Lond. B",
+      "container_title": "Proc. Roy. Soc. Lond. B",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "De Ruyter Van Steveninck"
+        },
+        {
+          "given": ";",
+          "family": "Bialek"
+        },
+        {
+          "given": "R R",
+          "family": "De Ruyter Van Steveninck"
+        },
+        {
+          "given": "W",
+          "family": "Bialek"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Optimization principles for the neural code",
+      "container_title": "Optimization principles for the neural code",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Deweese ; Deweese"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "J. Neurophysiol",
+      "container_title": "J. Neurophysiol",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Fairhall"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Biophysics J",
+      "container_title": "Biophysics J",
+      "year": "1961",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Fitzhugh ; Fitzhugh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Spiking neuron models: single neurons, populations, plasticity",
+      "container_title": "Spiking neuron models: single neurons, populations, plasticity",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Gerstner"
+        },
+        {
+          "given": "W",
+          "family": "Kistler ; Gerstner"
+        },
+        {
+          "given": "W",
+          "family": "Kistler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Table of integrals, series, and products, 6th ed",
+      "container_title": "Table of integrals, series, and products, 6th ed",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Gradshteyn"
+        },
+        {
+          "given": "I S",
+          "family": "Ryzhik ; Gradshteyn"
+        },
+        {
+          "given": "I M",
+          "family": "Ryzhik"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "J. Neurophysiol",
+      "container_title": "J. Neurophysiol",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Horwitz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Trends Neurosci",
+      "container_title": "Trends Neurosci",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Hutcheon"
+        },
+        {
+          "given": "B",
+          "family": "Yarom ; Hutcheon"
+        },
+        {
+          "given": "Y",
+          "family": "Yarom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Neural Networks",
+      "container_title": "Neural Networks",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Huys"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Kistler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "International Journal of Control",
+      "container_title": "International Journal of Control",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Maravall"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "IEEE Press Series in Biomedical Engineering",
+      "container_title": "IEEE Press Series in Biomedical Engineering",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Marmarelis ; Marmarelis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Random Matrices, 3",
+      "container_title": "Random Matrices, 3",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M L",
+          "family": "Mehta ; Mehta"
+        },
+        {
+          "given": null,
+          "family": "Nagumo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Neurocomputing",
+      "container_title": "Neurocomputing",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Paninski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Neural Comp",
+      "container_title": "Neural Comp",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Paninski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Society for Neuroscience",
+      "container_title": "Society for Neuroscience",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Petersen ; Petersen"
+        },
+        {
+          "given": null,
+          "family": "Pillow"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Neurocomputing",
+      "container_title": "Neurocomputing",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Simoncelli ;",
+          "family": "Pillow"
+        },
+        {
+          "given": "J W",
+          "family": "Pillow"
+        },
+        {
+          "given": "E P",
+          "family": "Simoncelli"
+        },
+        {
+          "given": null,
+          "family": "Powers"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Physical principles underlying sensory processing and computation",
+      "container_title": "Physical principles underlying sensory processing and computation",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Rieke ; Rieke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Spikes: exploring the neural code",
+      "container_title": "Spikes: exploring the neural code",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Rieke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Spatiotemporal elements of macaque v1 receptive fields",
+      "container_title": "Spatiotemporal elements of macaque v1 receptive fields",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Rust"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "The Cognitive Neurosciences",
+      "container_title": "The Cognitive Neurosciences",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Simoncelli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "J Neurosci",
+      "container_title": "J Neurosci",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Slee"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "J. Neurosci",
+      "container_title": "J. Neurosci",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Touryan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "J. Neurophysiol",
+      "container_title": "J. Neurophysiol",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Truccolo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Biophys. J",
+      "container_title": "Biophys. J",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Shapley ;",
+          "family": "Victor"
+        },
+        {
+          "given": "J",
+          "family": "Victor"
+        },
+        {
+          "given": "R",
+          "family": "Shapley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "J. Gen. Physiol",
+      "container_title": "J. Gen. Physiol",
+      "year": "1979",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Shapley ;",
+          "family": "Victor"
+        },
+        {
+          "given": "J D",
+          "family": "Victor"
+        },
+        {
+          "given": "R M",
+          "family": "Shapley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Theory of Functions and of Integral and Integro-differential Equations",
+      "container_title": "Theory of Functions and of Integral and Integro-differential Equations",
+      "year": "1930",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Volterra ; Volterra"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1958",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Wiener ; Wiener"
+        },
+        {
+          "given": "Lee ;",
+          "family": "Yu"
+        },
+        {
+          "given": "Y",
+          "family": "Yu"
+        },
+        {
+          "given": "T S",
+          "family": "Lee"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "Figure",
+      "container_title": "Figure",
+      "year": null,
+      "idnos": [],
+      "authors": []
+    }
+  ],
+  "chunks": []
+}

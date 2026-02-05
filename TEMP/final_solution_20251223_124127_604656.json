@@ -1,0 +1,574 @@
+{
+  "judge_summary": {
+    "iterations_requested": 5,
+    "iterations_completed": 5,
+    "satisfied": false,
+    "final_refined_question": "What NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, character-level embeddings, and efficient neural networks, considering the challenges of out-of-vocabulary words and morphological complexity?",
+    "final_intent": "Understand techniques to enhance NLP model accuracy for rare words and morphologically rich languages within the domain of natural language processing, focusing on small to medium model sizes",
+    "final_constraints": [
+      "small model size",
+      "limited resources",
+      "no large pre-trained models"
+    ],
+    "final_excluded_topics": [
+      "fine-tuning large pre-trained models",
+      "transfer learning from foundation models",
+      "scaling parameter count"
+    ],
+    "final_search_hint": "morphologically rich languages, limited training data, small model sizes, subword modeling, character-level embeddings, efficient neural networks, rare word representation, low-resource languages, NLP for morphologically rich languages, out-of-vocabulary words, morphological complexity",
+    "accepted_chunk_count": 4,
+    "accepted_paper_count": 3,
+    "accepted_paper_ids": [
+      "1508.07909v5.tei.tei",
+      "1602.02410v2.tei.tei",
+      "1607.04606v2.tei.tei"
+    ],
+    "accepted_chunk_ids": [
+      "1508.07909v5.tei.tei_chunk-1",
+      "1508.07909v5.tei.tei_chunk-4",
+      "1602.02410v2.tei.tei_chunk-14",
+      "1607.04606v2.tei.tei_chunk-2"
+    ],
+    "rejected_chunk_count": 19,
+    "rejected_chunk_ids": [
+      "1308.0850v5.tei.tei_chunk-5",
+      "1308.0850v5.tei.tei_chunk-6",
+      "1308.0850v5.tei.tei_chunk-8",
+      "1508.07909v5.tei.tei_chunk-12",
+      "1508.07909v5.tei.tei_chunk-5",
+      "1510.01378v1.tei.tei_chunk-6",
+      "1511.06114v4.tei.tei_chunk-13",
+      "1601.06733v7.tei.tei_chunk-9",
+      "1603.09025v5.tei.tei_chunk-8",
+      "1607.04606v2.tei.tei_chunk-12",
+      "1607.04606v2.tei.tei_chunk-13",
+      "1607.04606v2.tei.tei_chunk-3",
+      "1608.05859v3.tei.tei_chunk-1",
+      "1608.05859v3.tei.tei_chunk-2",
+      "1608.05859v3.tei.tei_chunk-7",
+      "1608.05859v3.tei.tei_chunk-8",
+      "1610.10099v2.tei.tei_chunk-10",
+      "1701.06538v1.tei.tei_chunk-10",
+      "1705.03122v3.tei.tei_chunk-9"
+    ],
+    "rejected_paper_ids": [],
+    "solved_parts": [],
+    "unsolved_parts_by_iteration": [
+      {
+        "iteration": 1,
+        "unsolved_parts": [
+          "methods to improve NLP model performance on rare words and morphologically rich languages without relying on large pre-trained models"
+        ]
+      },
+      {
+        "iteration": 2,
+        "unsolved_parts": [
+          "techniques to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes"
+        ]
+      },
+      {
+        "iteration": 3,
+        "unsolved_parts": [
+          "specific NLP techniques for morphologically rich languages with limited training data and small model sizes"
+        ]
+      },
+      {
+        "iteration": 4,
+        "unsolved_parts": [
+          "insufficient evidence for NLP techniques to improve accuracy for rare words in morphologically rich languages with limited training data and small model sizes"
+        ]
+      },
+      {
+        "iteration": 5,
+        "unsolved_parts": [
+          "insufficient evidence for specific NLP techniques to improve accuracy for rare words in morphologically rich languages with limited training data and small model sizes"
+        ]
+      }
+    ],
+    "log_path": "C:\\Users\\manoj\\Desktop\\Research\\TEMP\\full_run_20251223_123724_552303.txt"
+  },
+  "accepted_chunks": [
+    {
+      "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+      "paper_id": "1607.04606v2.tei.tei",
+      "section": "Introduction",
+      "paragraph_index": 3,
+      "chunk_text": "Most of these techniques represent each word of the vocabulary by a distinct vector, without\nparameter sharing. In particular, they ignore the internal structure of words, which is an important\nlimitation for morphologically rich languages, such as Turkish or Finnish. For example, in French or\nSpanish, most verbs have more than forty different inflected forms, while the Finnish language has\nfifteen cases for nouns. These languages contain many word forms that occur rarely (or not at all)\nin the training corpus, making it difficult to learn good word representations. Because many word\nformations follow rules, it is possible to improve vector representations for morphologically rich\nlanguages by using character level information.\n\nIn this paper, we propose to learn representations for character n-grams, and to represent words as\nthe sum of the n-gram vectors. Our main contribution is to introduce an extension of the continuous\nskipgram model (Mikolov et al., 2013b), which takes into account subword information. We evaluate\nthis model on nine languages exhibiting different morphologies, showing the benefit of our approach.\n\nMorphological word representations. In recent years, many methods have been proposed to incorporate\nmorphological information into word representations. To model rare words better, Alexandrescu and\nKirchhoff (2006) introduced factored neural language models, where words are represented as sets of\nfeatures. These features might include morphological information, and this technique was succesfully\napplied to morphologically rich languages, such as Turkish (Sak et al., 2010). Recently, several\nworks have proposed different composition functions to derive representations of words from\nmorphemes (Lazaridou et al., 2013;Luong et al., 2013;Botha and Blunsom, 2014;Qiu et al., 2014).\nThese different approaches rely on a morphological decomposition of words, while ours does not.\nSimilarly, Chen et al. (2015) introduced a method to jointly learn embeddings for Chinese words and\ncharacters. Cui et al. (2015) proposed to constrain morphologically similar words to have similar\nrepresentations. Soricut and Och (2015) described a method to learn vector representations of\nmorphological transformations, allowing to obtain representations for unseen words by applying these\nrules. Word representations trained on morphologically annotated data were introduced by Cotterell\nand Schütze (2015). Closest to our approach, Schütze (1993) learned representations of character\nfour-grams through singular value decomposition, and derived representations for words by summing\nthe four-grams representations. Very recently, Wieting et al. (2016) also proposed to represent\nwords using character n-gram count vectors. However, the objective function used to learn these\nrepresentations is based on paraphrase pairs, while our model can be trained on any text corpus.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:23.104666",
+      "score_stage1": 0.66293204,
+      "score_stage2": 0.574295,
+      "score": 0.574295,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "proposes a method to learn representations for character n-grams and represent words as the sum of n-gram vectors, relevant to morphologically rich languages"
+      }
+    },
+    {
+      "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+      "paper_id": "1602.02410v2.tei.tei",
+      "section": "5.4. Word Embeddings vs Character CNN",
+      "paragraph_index": 70,
+      "chunk_text": "Replacing the embedding layer with a parametrized neural network that process characters of a given\nword allows the model to consume arbitrary words and is not restricted to a fixed vocabulary. This\nproperty is useful for data sets with conversational or informal text as well as for morphologically\nrich languages. Our experiments show that An additional advantage is that the number of parameters\nof the input layer is reduced by a factor of 11 (though training speed is slightly worse). For\ninference, the embeddings can be precomputed so there is no speed penalty. Overall, the embedding of\nthe best model is parametrized by 72M weights (down from 820M weights).\n\nTable 4 shows a few examples of nearest neighbor embeddings for some out-of-vocabulary words when\ncharacter CNNs are used.\n\nEven with character-level embeddings, the model is still fairly large (though much smaller than the\nbest competing models from previous work). Most of the parameters are in the linear layer before the\nSoftmax: 820M versus a total of 1.04B parameters.\n\nIn one of the experiments we froze the word-LSTM after convergence and replaced the Softmax layer\nwith the CNN Softmax sub-network. Without any fine-tuning that model was able to reach 39.8\nperplexity with only 293M weights (as seen in Table 1).\n\nAs described in Section 3.2, adding a \"correction\" word embedding term alleviates the gap between\nregular and CNN Softmax. Indeed, we can trade-off model size versus perplexity. For instance, by\nadding 100M weights (through a 128 dimensional bottleneck embedding) we achieve 35.8 perplexity (see\nTable 1).\n\nTo contrast with the CNN Softmax, we also evaluated a model that replaces the Softmax layer with a\nsmaller LSTM that predicts one character at a time (see Section 3.3). Such a model does not have to\nlearn long dependencies because the base LSTM still operates at the word-level (see Figure 1(c)).\nWith a single-layer LSTM of 1024 units we reached 49.0 test perplexity, far below the best model. In\norder to make the comparisons more fair, we performed a very expensive marginalization over the\nwords in the vocabulary (to rule out words not in the dictionary which the character LSTM would\nassign some probability). When doing this marginalization, the perplexity improved a bit down to\n47.9.",
+      "year": 2016,
+      "created_at": "2025-12-22 07:56:22.885366",
+      "score_stage1": 0.6082722,
+      "score_stage2": 0.52020323,
+      "score": 0.52020323,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "discusses using character-level embeddings to consume arbitrary words, useful for morphologically rich languages"
+      }
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-4",
+      "paper_id": "1508.07909v5.tei.tei",
+      "section": "Subword Translation",
+      "paragraph_index": 13,
+      "chunk_text": "• named entities. Between languages that share an alphabet, names can often be copied from source to\ntarget text. Transcription or transliteration may be required, especially if the alphabets or\nsyllabaries differ. Example: Barack Obama (English; German) Барак Обама (Russian) バラク・オバマ (ba-ra-ku\no-ba-ma) (Japanese)\n\n• cognates and loanwords. Cognates and loanwords with a common origin can differ in regular ways\nbetween languages, so that character-level translation rules are sufficient (Tiedemann, 2012).\nExample: claustrophobia (English) Klaustrophobie (German) Клаустрофобия (Klaustrofobiâ) (Russian)\n\n• morphologically complex words. Words containing multiple morphemes, for instance formed via\ncompounding, affixation, or inflection, may be translatable by translating the morphemes separately.\nExample: solar system (English) Sonnensystem (Sonne + System) (German) Naprendszer (Nap + Rendszer)\n(Hungarian)\n\nIn an analysis of 100 rare tokens (not among the 50 000 most frequent types) in our German training\ndata1 , the majority of tokens are potentially translatable from English through smaller units.\n\nWe find 56 compounds, 21 names, 6 loanwords with a common origin (emanci-pate→emanzipieren), 5 cases\nof transparent affixation (sweetish 'sweet' + '-ish' → süßlich 'süß' + '-lich'), 1 number and 1\ncomputer language identifier.\n\nOur hypothesis is that a segmentation of rare words into appropriate subword units is sufficient to\nallow for the neural translation network to learn transparent translations, and to generalize this\nknowledge to translate and produce unseen words. 2 We provide empirical support for this hy-pothesis\nin Sections 4 and 5. First, we discuss different subword representations.",
+      "year": 2016,
+      "created_at": "2025-12-22 07:56:22.617797",
+      "score_stage1": 0.4232988,
+      "score_stage2": 0.4730355,
+      "score": 0.4730355,
+      "llm_judge": {
+        "iteration": 3,
+        "decision": "accept",
+        "rationale": "discusses subword translation and its potential for improving NLP model accuracy for rare words"
+      }
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-1",
+      "paper_id": "1508.07909v5.tei.tei",
+      "section": null,
+      "paragraph_index": 0,
+      "chunk_text": "**Published:** 10 Jun 2016\n\nNeural machine translation (NMT) models typically operate with a fixed vocabulary, but translation\nis an open-vocabulary problem. Previous work addresses the translation of out-of-vocabulary words by\nbacking off to a dictionary. In this paper, we introduce a simpler and more effective approach,\nmaking the NMT model capable of open-vocabulary translation by encoding rare and unknown words as\nsequences of subword units. This is based on the intuition that various word classes are\ntranslatable via smaller units than words, for instance names (via character copying or\ntransliteration), compounds (via compositional translation), and cognates and loanwords (via\nphonological and morphological transformations). We discuss the suitability of different word\nsegmentation techniques, including simple character ngram models and a segmentation based on the\nbyte pair encoding compression algorithm, and empirically show that subword models improve over a\nback-off dictionary baseline for the WMT 15 translation tasks English→German and English→Russian by\nup to 1.1 and 1.3 BLEU, respectively.\n\nNeural machine translation has recently shown impressive results (Kalchbrenner and Blunsom,\n2013;Sutskever et al., 2014;Bahdanau et al., 2015). However, the translation of rare words is an\nopen problem. The vocabulary of neural models is typically limited to 30 000-50 000 words, but\ntranslation is an open-vocabulary prob-lem, and especially for languages with productive word\nformation processes such as agglutination and compounding, translation models require mechanisms\nthat go below the word level. As an example, consider compounds such as the German\nAbwasser|behandlungs|anlange 'sewage water treatment plant', for which a segmented, variable-length\nrepresentation is intuitively more appealing than encoding the word as a fixed-length vector.",
+      "year": 2016,
+      "created_at": "2025-12-22 07:56:22.617797",
+      "score_stage1": 0.46880162,
+      "score_stage2": 0.40151218,
+      "score": 0.40151218,
+      "llm_judge": {
+        "iteration": 3,
+        "decision": "accept",
+        "rationale": "introduces a simpler and more effective approach for open-vocabulary translation by encoding rare and unknown words as sequences of subword units"
+      }
+    }
+  ],
+  "subproblems": [
+    {
+      "id": "SP1",
+      "question": "What subword modeling techniques are effective for morphologically rich languages with limited training data?",
+      "rationale": "Subword modeling is crucial for handling out-of-vocabulary words and morphological complexity",
+      "search_hint": "subword modeling, morphologically rich languages, limited training data, wordpiece tokenization, BPE"
+    },
+    {
+      "id": "SP2",
+      "question": "How can character-level embeddings be utilized to improve accuracy for rare words in languages with small model sizes?",
+      "rationale": "Character-level embeddings can capture subtle patterns in words and are particularly useful for rare words",
+      "search_hint": "character-level embeddings, rare words, small model sizes, convolutional neural networks, recurrent neural networks"
+    },
+    {
+      "id": "SP3",
+      "question": "What efficient neural network architectures can be applied to morphologically rich languages to mitigate the challenges of out-of-vocabulary words and morphological complexity?",
+      "rationale": "Efficient neural networks are necessary to accommodate small model sizes and limited training data",
+      "search_hint": "efficient neural networks, morphologically rich languages, out-of-vocabulary words, transformer architectures, recurrent neural networks"
+    }
+  ],
+  "subproblem_chunks": {
+    "SP1": [
+      {
+        "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+        "paper_id": "1607.04606v2.tei.tei",
+        "section": "Introduction",
+        "paragraph_index": 3,
+        "chunk_text": "Most of these techniques represent each word of the vocabulary by a distinct vector, without\nparameter sharing. In particular, they ignore the internal structure of words, which is an important\nlimitation for morphologically rich languages, such as Turkish or Finnish. For example, in French or\nSpanish, most verbs have more than forty different inflected forms, while the Finnish language has\nfifteen cases for nouns. These languages contain many word forms that occur rarely (or not at all)\nin the training corpus, making it difficult to learn good word representations. Because many word\nformations follow rules, it is possible to improve vector representations for morphologically rich\nlanguages by using character level information.\n\nIn this paper, we propose to learn representations for character n-grams, and to represent words as\nthe sum of the n-gram vectors. Our main contribution is to introduce an extension of the continuous\nskipgram model (Mikolov et al., 2013b), which takes into account subword information. We evaluate\nthis model on nine languages exhibiting different morphologies, showing the benefit of our approach.\n\nMorphological word representations. In recent years, many methods have been proposed to incorporate\nmorphological information into word representations. To model rare words better, Alexandrescu and\nKirchhoff (2006) introduced factored neural language models, where words are represented as sets of\nfeatures. These features might include morphological information, and this technique was succesfully\napplied to morphologically rich languages, such as Turkish (Sak et al., 2010). Recently, several\nworks have proposed different composition functions to derive representations of words from\nmorphemes (Lazaridou et al., 2013;Luong et al., 2013;Botha and Blunsom, 2014;Qiu et al., 2014).\nThese different approaches rely on a morphological decomposition of words, while ours does not.\nSimilarly, Chen et al. (2015) introduced a method to jointly learn embeddings for Chinese words and\ncharacters. Cui et al. (2015) proposed to constrain morphologically similar words to have similar\nrepresentations. Soricut and Och (2015) described a method to learn vector representations of\nmorphological transformations, allowing to obtain representations for unseen words by applying these\nrules. Word representations trained on morphologically annotated data were introduced by Cotterell\nand Schütze (2015). Closest to our approach, Schütze (1993) learned representations of character\nfour-grams through singular value decomposition, and derived representations for words by summing\nthe four-grams representations. Very recently, Wieting et al. (2016) also proposed to represent\nwords using character n-gram count vectors. However, the objective function used to learn these\nrepresentations is based on paraphrase pairs, while our model can be trained on any text corpus.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.104666",
+        "score_stage1": 0.6373781,
+        "score_stage2": 0.5869843,
+        "score": 0.5869843
+      },
+      {
+        "chunk_id": "1607.04606v2.tei.tei_chunk-14",
+        "paper_id": "1607.04606v2.tei.tei",
+        "section": "Conclusion",
+        "paragraph_index": 52,
+        "chunk_text": "In this paper, we investigate a simple method to learn word representations by taking into account\nsubword information. Our approach, which incorporates character n-grams into the skipgram model, is\nrelated to an idea that was introduced by Schütze (1993). Because of its simplicity, our model\ntrains fast and does not require any preprocessing or supervision. We show that our model\noutperforms baselines that do not take into account subword information, as well as methods relying\non morphological analysis. We will open source the implementation of our model, in order to\nfacilitate comparison of future work on learning subword representations.\n\n---\n## Footnotes\n\n[1] http://www.isthe.com/chongo/tech/comp/fnv\n\n[2] https://code.google.com/archive/p/word2vec\n\n[3] https://github.com/facebookresearch/fastText\n\n[4] https://dumps.wikimedia.org\n\n[5] http://mattmahoney.net/dc/textdata",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.104666",
+        "score_stage1": 0.6929053,
+        "score_stage2": 0.5815393,
+        "score": 0.5815393
+      },
+      {
+        "chunk_id": "1508.07909v5.tei.tei_chunk-10",
+        "paper_id": "1508.07909v5.tei.tei",
+        "section": "Subword statistics",
+        "paragraph_index": 40,
+        "chunk_text": "In practice, we did not include infrequent subword units in the NMT network vocabulary, since there\nis noise in the subword symbol sets, e.g. because of characters from foreign alphabets. Hence, our\nnetwork vocabularies in Table 2 (Koehn and Knight, 2003); *: (Creutz and Lagus, 2002); ⋄: (Liang,\n1983).\n\nEnglish→German translation results are shown in Table 2; English→Russian results in Table 3.\n\nOur baseline WDict is a word-level model with a back-off dictionary. It differs from WUnk in that\nthe latter uses no back-off dictionary, and just represents out-of-vocabulary words as UNK 12 . The\nback-off dictionary improves unigram F 1 for rare and unseen words, although the improvement is\nsmaller for English→Russian, since the back-off dictionary is incapable of transliterating names.\n\nAll subword systems operate without a back-off dictionary. We first focus on unigram F 1 , where all\nsystems improve over the baseline, especially for rare words (36.8%→41.8% for EN→DE; 26.5%→29.7% for\nEN→RU). For OOVs, the baseline strategy of copying unknown words works well for English→German.\nHowever, when alphabets differ, like in English→Russian, the subword models do much better.\n\nUnigram F 1 scores indicate that learning the BPE symbols on the vocabulary union (BPE-J90k) is more\neffective than learning them separately (BPE-60k), and more effective than using character bigrams\nwith a shortlist of 50 000 unsegmented words (C2-50k), but all reported subword segmentations are\nviable choices and outperform the back-off dictionary baseline.\n\nOur subword representations cause big improvements in the translation of rare and unseen words, but\nthese only constitute 9-11% of the test sets. Since rare words tend to carry central information in\na sentence, we suspect that BLEU and CHRF3 underestimate their effect on translation quality. Still,\nwe also see improvements over the baseline in total unigram F 1 , as well as BLEU and CHRF3, and the\nsubword ensembles outperform the WDict baseline by 0.3-1.3 BLEU and 0.6-2 CHRF3. There is some\ninconsistency between BLEU and CHRF3, which we attribute to the fact that BLEU has a precision bias,\nand CHRF3 a recall bias.",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.617797",
+        "score_stage1": 0.501343,
+        "score_stage2": 0.5120684,
+        "score": 0.5120684
+      }
+    ],
+    "SP2": [
+      {
+        "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+        "paper_id": "1602.02410v2.tei.tei",
+        "section": "5.4. Word Embeddings vs Character CNN",
+        "paragraph_index": 70,
+        "chunk_text": "Replacing the embedding layer with a parametrized neural network that process characters of a given\nword allows the model to consume arbitrary words and is not restricted to a fixed vocabulary. This\nproperty is useful for data sets with conversational or informal text as well as for morphologically\nrich languages. Our experiments show that An additional advantage is that the number of parameters\nof the input layer is reduced by a factor of 11 (though training speed is slightly worse). For\ninference, the embeddings can be precomputed so there is no speed penalty. Overall, the embedding of\nthe best model is parametrized by 72M weights (down from 820M weights).\n\nTable 4 shows a few examples of nearest neighbor embeddings for some out-of-vocabulary words when\ncharacter CNNs are used.\n\nEven with character-level embeddings, the model is still fairly large (though much smaller than the\nbest competing models from previous work). Most of the parameters are in the linear layer before the\nSoftmax: 820M versus a total of 1.04B parameters.\n\nIn one of the experiments we froze the word-LSTM after convergence and replaced the Softmax layer\nwith the CNN Softmax sub-network. Without any fine-tuning that model was able to reach 39.8\nperplexity with only 293M weights (as seen in Table 1).\n\nAs described in Section 3.2, adding a \"correction\" word embedding term alleviates the gap between\nregular and CNN Softmax. Indeed, we can trade-off model size versus perplexity. For instance, by\nadding 100M weights (through a 128 dimensional bottleneck embedding) we achieve 35.8 perplexity (see\nTable 1).\n\nTo contrast with the CNN Softmax, we also evaluated a model that replaces the Softmax layer with a\nsmaller LSTM that predicts one character at a time (see Section 3.3). Such a model does not have to\nlearn long dependencies because the base LSTM still operates at the word-level (see Figure 1(c)).\nWith a single-layer LSTM of 1024 units we reached 49.0 test perplexity, far below the best model. In\norder to make the comparisons more fair, we performed a very expensive marginalization over the\nwords in the vocabulary (to rule out words not in the dictionary which the character LSTM would\nassign some probability). When doing this marginalization, the perplexity improved a bit down to\n47.9.",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.885366",
+        "score_stage1": 0.6893816,
+        "score_stage2": 0.6638601,
+        "score": 0.6638601
+      },
+      {
+        "chunk_id": "1602.02410v2.tei.tei_chunk-11",
+        "paper_id": "1602.02410v2.tei.tei",
+        "section": "4.2. Model Setup",
+        "paragraph_index": 52,
+        "chunk_text": "For the models that consume characters as inputs or as targets, each word is fed to the model as a\nsequence of character IDs of preespecified length (see Figure 1(b)). The words were processed to\ninclude special begin and end of word tokens and were padded to reach the expected length. I.e. if\nthe maximum word length was 10, the word \"cat\" would be transformed to \"$catˆ\" due to the CNN model.\n\nIn our experiments we found that limiting the maximum word length in training to 50 was sufficient\nto reach very good results while 32 was clearly insufficient. We used 256 characters in our\nvocabulary and the non-ascii symbols were represented as a sequence of bytes.\n\nWe evaluated many variations of RNN LM architectures. These include the dimensionalities of the\nembedding layers, the state, projection sizes, and number of LSTM layers to use. Exhaustively trying\nall combinations would be extremely time consuming for such a large data set, but our findings\nsuggest that LSTMs with a projection layer (i.e., a bottleneck between hidden states as in (Sak et\nal., 2014)) trained with truncated BPTT (Williams & Peng, 1990) for 20 steps performed well.\n\nFollowing (Zaremba et al., 2014) we use dropout (Srivastava, 2013) before and after every LSTM\nlayer. The biases of LSTM forget gate were initialized to 1.0 (Jozefowicz et al., 2015). The size of\nthe models will be described in more detail in the following sections, and the choices of hyper-\nparameters will be released as open source upon publication.\n\nFor any model using character embedding CNNs, we closely follow the architecture from (Kim et al.,\n2015). The only important difference is that we use a larger number of convolutional features of\n4096 to give enough capacity to the model. The resulting embedding is then linearly transformed to\nmatch the LSTM projection sizes. This allows it to match the performance of regular word embeddings\nbut only uses a small fraction of parameters. (OPTIMAL WEIGHTS) 26.1 10 LSTMS + 25.3 10 LSTMS + 25.1\n10 LSTMS + SNM10-SKIP (SHAZEER ET AL., 2015) 23.7",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.885366",
+        "score_stage1": 0.6244575,
+        "score_stage2": 0.6178662,
+        "score": 0.6178662
+      },
+      {
+        "chunk_id": "1602.02410v2.tei.tei_chunk-8",
+        "paper_id": "1602.02410v2.tei.tei",
+        "section": "3.1. Relationship between Noise Contrastive Estimation and Importance Sampling",
+        "paragraph_index": 38,
+        "chunk_text": "and, following a similar argument than for NCE, if we define word). Note that the only difference\nbetween NCE and IS is that, in NCE, we define a binary classification task between true or noise\nwords with a logistic loss, whereas in IS we define a multiclass classification problem with a\nSoftmax and cross entropy loss. We hope that our derivation helps clarify the similarities and\ndifferences between the two. In particular, we observe that IS, as it optimizes a multiclass\nclassification task (in contrast to solving a binary task), may be a better choice. Indeed, the\nupdates to the logits with IS are tied whereas in NCE they are independent.\n\nThe character-level features allow for a smoother and compact parametrization of the word\nembeddings. Recent efforts on small scale language modeling have used CNN character embeddings for\nthe input embeddings (Kim et al., 2015). Although not as straightforward, we propose an extension to\nthis idea to also reduce the number of parameters of the Softmax layer. Recall from Section 2.3 that\nthe Softmax computes a logit as z w = h T e w where h is a context vector and e w the word\nembedding. Instead of building a matrix of |V | × |h| (whose rows correspond to e w ), we produce e\nw with a CNN over the characters of w as e w = CN N (chars w ) -we call this a CNN Softmax. We used\nthe same network architecture to dynamically generate the Softmax word embeddings without sharing\nthe parameters with the input word-embedding sub-network. For inference, the vectors e w can be\nprecomputed, so there is no computational complexity increase w.r.t. the regular Softmax.\n\nWe note that, when using an importance sampling loss such as the one described in Section 3.1, only\na few logits have non-zero gradient (those corresponding to the true and sampled words). With a\nSoftmax where e w are independently learned word embeddings, this is not a problem. But we observed\nthat, when using a CNN, all the logits become tied as the function mapping from w to e w is quite\nsmooth. As a result, a much smaller learning rate had to be used.",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.885366",
+        "score_stage1": 0.5893769,
+        "score_stage2": 0.6059923,
+        "score": 0.6059923
+      }
+    ],
+    "SP3": [
+      {
+        "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+        "paper_id": "1607.04606v2.tei.tei",
+        "section": "Introduction",
+        "paragraph_index": 3,
+        "chunk_text": "Most of these techniques represent each word of the vocabulary by a distinct vector, without\nparameter sharing. In particular, they ignore the internal structure of words, which is an important\nlimitation for morphologically rich languages, such as Turkish or Finnish. For example, in French or\nSpanish, most verbs have more than forty different inflected forms, while the Finnish language has\nfifteen cases for nouns. These languages contain many word forms that occur rarely (or not at all)\nin the training corpus, making it difficult to learn good word representations. Because many word\nformations follow rules, it is possible to improve vector representations for morphologically rich\nlanguages by using character level information.\n\nIn this paper, we propose to learn representations for character n-grams, and to represent words as\nthe sum of the n-gram vectors. Our main contribution is to introduce an extension of the continuous\nskipgram model (Mikolov et al., 2013b), which takes into account subword information. We evaluate\nthis model on nine languages exhibiting different morphologies, showing the benefit of our approach.\n\nMorphological word representations. In recent years, many methods have been proposed to incorporate\nmorphological information into word representations. To model rare words better, Alexandrescu and\nKirchhoff (2006) introduced factored neural language models, where words are represented as sets of\nfeatures. These features might include morphological information, and this technique was succesfully\napplied to morphologically rich languages, such as Turkish (Sak et al., 2010). Recently, several\nworks have proposed different composition functions to derive representations of words from\nmorphemes (Lazaridou et al., 2013;Luong et al., 2013;Botha and Blunsom, 2014;Qiu et al., 2014).\nThese different approaches rely on a morphological decomposition of words, while ours does not.\nSimilarly, Chen et al. (2015) introduced a method to jointly learn embeddings for Chinese words and\ncharacters. Cui et al. (2015) proposed to constrain morphologically similar words to have similar\nrepresentations. Soricut and Och (2015) described a method to learn vector representations of\nmorphological transformations, allowing to obtain representations for unseen words by applying these\nrules. Word representations trained on morphologically annotated data were introduced by Cotterell\nand Schütze (2015). Closest to our approach, Schütze (1993) learned representations of character\nfour-grams through singular value decomposition, and derived representations for words by summing\nthe four-grams representations. Very recently, Wieting et al. (2016) also proposed to represent\nwords using character n-gram count vectors. However, the objective function used to learn these\nrepresentations is based on paraphrase pairs, while our model can be trained on any text corpus.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.104666",
+        "score_stage1": 0.60982627,
+        "score_stage2": 0.6476382,
+        "score": 0.6476382
+      },
+      {
+        "chunk_id": "1607.04606v2.tei.tei_chunk-9",
+        "paper_id": "1607.04606v2.tei.tei",
+        "section": "Word analogy tasks",
+        "paragraph_index": 31,
+        "chunk_text": "We report accuracy for the different models in Table 2. We observe that morphological information\nsignificantly improves the syntactic tasks; our approach outperforms the baselines. In contrast, it\ndoes not help for semantic questions, and even degrades the performance for German and Italian. Note\nthat this is tightly related to the choice of the length of character n-grams that we consider. We\nshow in Sec. 5.5 that when the size of the n-grams is chosen optimally, the semantic analogies\ndegrade We keep all the word pairs of the evaluation set and obtain representations for out-of-\nvocabulary words with our model by summing the vectors of character n-grams. Our model was trained\non the same datasets as the methods we are comparing to (hence the two lines of results for our\napproach).\n\nless. Another interesting observation is that, as expected, the improvement over the baselines is\nmore important for morphologically rich languages, such as Czech and German.\n\nWe also compare our approach to previous work on word vectors incorporating subword information on\nword similarity tasks. The methods used are: the recursive neural network of Luong et al. (2013),\nthe morpheme cbow of Qiu et al. (2014) and the morphological transformations of Soricut and Och\n(2015). In order to make the results comparable, we trained our model on the same datasets as the\nmethods we are comparing to: the English Wikipedia data released by Shaoul and Westbury (2010), and\nthe news crawl data from the 2013 WMT shared task for German, Spanish and French. We also compare\nour approach to the log-bilinear language model introduced by Botha and Blunsom (2014), which was\ntrained on the Europarl and news commentary corpora. Again, we trained our model on the same data to\nmake the results comparable. Using our model, we obtain representations of out-ofvocabulary words by\nsumming the representations of character n-grams. We report results in Table 3. We observe that our\nsimple approach performs well relative to techniques based on subword information obtained from\nmorphological segmentors. We also observe that our approach outperforms the Soricut and Och ( 2015)\nmethod, which is based on prefix and suffix analysis. The large improvement for German is due to the\nfact that their approach does not model noun compounding, contrary to ours.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.104666",
+        "score_stage1": 0.62992305,
+        "score_stage2": 0.573501,
+        "score": 0.573501
+      },
+      {
+        "chunk_id": "1602.02410v2.tei.tei_chunk-11",
+        "paper_id": "1602.02410v2.tei.tei",
+        "section": "4.2. Model Setup",
+        "paragraph_index": 52,
+        "chunk_text": "For the models that consume characters as inputs or as targets, each word is fed to the model as a\nsequence of character IDs of preespecified length (see Figure 1(b)). The words were processed to\ninclude special begin and end of word tokens and were padded to reach the expected length. I.e. if\nthe maximum word length was 10, the word \"cat\" would be transformed to \"$catˆ\" due to the CNN model.\n\nIn our experiments we found that limiting the maximum word length in training to 50 was sufficient\nto reach very good results while 32 was clearly insufficient. We used 256 characters in our\nvocabulary and the non-ascii symbols were represented as a sequence of bytes.\n\nWe evaluated many variations of RNN LM architectures. These include the dimensionalities of the\nembedding layers, the state, projection sizes, and number of LSTM layers to use. Exhaustively trying\nall combinations would be extremely time consuming for such a large data set, but our findings\nsuggest that LSTMs with a projection layer (i.e., a bottleneck between hidden states as in (Sak et\nal., 2014)) trained with truncated BPTT (Williams & Peng, 1990) for 20 steps performed well.\n\nFollowing (Zaremba et al., 2014) we use dropout (Srivastava, 2013) before and after every LSTM\nlayer. The biases of LSTM forget gate were initialized to 1.0 (Jozefowicz et al., 2015). The size of\nthe models will be described in more detail in the following sections, and the choices of hyper-\nparameters will be released as open source upon publication.\n\nFor any model using character embedding CNNs, we closely follow the architecture from (Kim et al.,\n2015). The only important difference is that we use a larger number of convolutional features of\n4096 to give enough capacity to the model. The resulting embedding is then linearly transformed to\nmatch the LSTM projection sizes. This allows it to match the performance of regular word embeddings\nbut only uses a small fraction of parameters. (OPTIMAL WEIGHTS) 26.1 10 LSTMS + 25.3 10 LSTMS + 25.1\n10 LSTMS + SNM10-SKIP (SHAZEER ET AL., 2015) 23.7",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.885366",
+        "score_stage1": 0.5647721,
+        "score_stage2": 0.5694278,
+        "score": 0.5694278
+      }
+    ]
+  },
+  "subproblem_answers": {
+    "SP1": {
+      "subproblem_id": "SP1",
+      "question": "What subword modeling techniques are effective for morphologically rich languages with limited training data?",
+      "answer_paragraphs": [
+        "In this paper, we propose to learn representations for character n-grams, and to represent words as the sum of the n-gram vectors. Our main contribution is to introduce an extension of the continuous skipgram model (Mikolov et al., 2013b), which takes into account subword information.",
+        "Our approach, which incorporates character n-grams into the skipgram model, is related to an idea that was introduced by Schütze (1993). Because of its simplicity, our model trains fast and does not require any preprocessing or supervision."
+      ],
+      "key_points": [
+        "Learning representations for character n-grams and representing words as the sum of the n-gram vectors is effective for morphologically rich languages.",
+        "Incorporating character n-grams into the skipgram model is a simple and effective approach."
+      ],
+      "citations": [
+        {
+          "paper_id": "1607.04606v2.tei.tei",
+          "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+          "supports": "Proposes a method for learning representations for character n-grams"
+        },
+        {
+          "paper_id": "1607.04606v2.tei.tei",
+          "chunk_id": "1607.04606v2.tei.tei_chunk-14",
+          "supports": "Describes the simplicity and effectiveness of the approach"
+        }
+      ],
+      "unknowns": [],
+      "used_chunk_ids": [
+        "1607.04606v2.tei.tei_chunk-2",
+        "1607.04606v2.tei.tei_chunk-14"
+      ],
+      "used_paper_ids": [
+        "1607.04606v2.tei.tei"
+      ],
+      "sufficient": true
+    },
+    "SP2": {
+      "subproblem_id": "SP2",
+      "question": "How can character-level embeddings be utilized to improve accuracy for rare words in languages with small model sizes?",
+      "answer_paragraphs": [
+        "Replacing the embedding layer with a parametrized neural network that process characters of a given word allows the model to consume arbitrary words and is not restricted to a fixed vocabulary. This property is useful for data sets with conversational or informal text as well as for morphologically rich languages.",
+        "The character-level features allow for a smoother and compact parametrization of the word embeddings. Recent efforts on small scale language modeling have used CNN character embeddings for the input embeddings (Kim et al., 2015)."
+      ],
+      "key_points": [
+        "Character-level embeddings can process arbitrary words, not restricted to a fixed vocabulary",
+        "Character-level features allow for a smoother and compact parametrization of word embeddings"
+      ],
+      "citations": [
+        {
+          "paper_id": "1602.02410v2.tei.tei",
+          "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+          "supports": "Character-level embeddings for arbitrary words"
+        },
+        {
+          "paper_id": "1602.02410v2.tei.tei",
+          "chunk_id": "1602.02410v2.tei.tei_chunk-8",
+          "supports": "Character-level features for compact parametrization"
+        }
+      ],
+      "unknowns": [],
+      "used_chunk_ids": [
+        "1602.02410v2.tei.tei_chunk-14",
+        "1602.02410v2.tei.tei_chunk-8"
+      ],
+      "used_paper_ids": [
+        "1602.02410v2.tei.tei"
+      ],
+      "sufficient": true
+    },
+    "SP3": {
+      "subproblem_id": "SP3",
+      "question": "What efficient neural network architectures can be applied to morphologically rich languages to mitigate the challenges of out-of-vocabulary words and morphological complexity?",
+      "answer_paragraphs": [
+        "Most of these techniques represent each word of the vocabulary by a distinct vector, without parameter sharing. In particular, they ignore the internal structure of words, which is an important limitation for morphologically rich languages, such as Turkish or Finnish.",
+        "For the models that consume characters as inputs or as targets, each word is fed to the model as a sequence of character IDs of preespecified length (see Figure 1(b))."
+      ],
+      "key_points": [
+        "Morphologically rich languages have many word forms that occur rarely, making it difficult to learn good word representations.",
+        "Using character level information can improve vector representations for morphologically rich languages.",
+        "Recursive neural networks and character embedding CNNs can be used to mitigate the challenges of out-of-vocabulary words and morphological complexity."
+      ],
+      "citations": [
+        {
+          "paper_id": "1607.04606v2.tei.tei",
+          "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+          "supports": "introduction to morphologically rich languages"
+        },
+        {
+          "paper_id": "1602.02410v2.tei.tei",
+          "chunk_id": "1602.02410v2.tei.tei_chunk-11",
+          "supports": "description of model setup"
+        }
+      ],
+      "unknowns": [
+        "The exact performance of the proposed architectures on specific morphologically rich languages."
+      ],
+      "used_chunk_ids": [
+        "1607.04606v2.tei.tei_chunk-2",
+        "1602.02410v2.tei.tei_chunk-11"
+      ],
+      "used_paper_ids": [
+        "1607.04606v2.tei.tei",
+        "1602.02410v2.tei.tei"
+      ],
+      "sufficient": false
+    }
+  },
+  "solution": {
+    "final_answer_paragraphs": [
+      "The problem of NLP models performing poorly on rare words and morphologically rich languages can be addressed by utilizing subword modeling techniques, character-level embeddings, and efficient neural network architectures.",
+      "Subword modeling techniques, such as learning representations for character n-grams and representing words as the sum of the n-gram vectors, have been shown to be effective for morphologically rich languages with limited training data (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2).",
+      "Character-level embeddings can process arbitrary words, not restricted to a fixed vocabulary, and allow for a smoother and compact parametrization of word embeddings (1602.02410v2.tei.tei, 1602.02410v2.tei.tei_chunk-14).",
+      "Efficient neural network architectures, such as recursive neural networks and character embedding CNNs, can be used to mitigate the challenges of out-of-vocabulary words and morphological complexity (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2; 1602.02410v2.tei.tei, 1602.02410v2.tei.tei_chunk-11).",
+      "The use of subword modeling techniques and character-level embeddings can improve the accuracy of NLP models for rare words in morphologically rich languages, even with small model sizes (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2; 1602.02410v2.tei.tei, 1602.02410v2.tei.tei_chunk-14).",
+      "However, the exact performance of the proposed architectures on specific morphologically rich languages is still unknown and requires further research.",
+      "In addition to subword modeling and character-level embeddings, other techniques such as byte pair encoding (BPE) and morphological decomposition can also be used to improve the performance of NLP models on morphologically rich languages (1508.07909v5.tei.tei, 1508.07909v5.tei.tei_chunk-1).",
+      "The choice of the length of character n-grams and the size of the n-grams is crucial for the performance of the model, and the optimal values may vary depending on the language and the task (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2).",
+      "Overall, the use of subword modeling techniques, character-level embeddings, and efficient neural network architectures can significantly improve the performance of NLP models on rare words and morphologically rich languages, even with small model sizes."
+    ],
+    "key_points": [
+      "Subword modeling techniques can improve the performance of NLP models on morphologically rich languages.",
+      "Character-level embeddings can process arbitrary words and allow for a smoother and compact parametrization of word embeddings.",
+      "Efficient neural network architectures can mitigate the challenges of out-of-vocabulary words and morphological complexity.",
+      "The use of subword modeling techniques and character-level embeddings can improve the accuracy of NLP models for rare words in morphologically rich languages, even with small model sizes."
+    ],
+    "keyword_coverage": [
+      {
+        "keyword": "morphologically rich languages",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "limited training data",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "small model sizes",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "subword modeling",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "character-level embeddings",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "efficient neural networks",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "rare word representation",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "low-resource languages",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "NLP for morphologically rich languages",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "out-of-vocabulary words",
+        "where_used": "final_answer_paragraphs"
+      },
+      {
+        "keyword": "morphological complexity",
+        "where_used": "final_answer_paragraphs"
+      }
+    ],
+    "citations": [
+      {
+        "paper_id": "1607.04606v2.tei.tei",
+        "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+        "supports": "subword modeling techniques"
+      },
+      {
+        "paper_id": "1602.02410v2.tei.tei",
+        "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+        "supports": "character-level embeddings"
+      },
+      {
+        "paper_id": "1607.04606v2.tei.tei",
+        "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+        "supports": "efficient neural network architectures"
+      },
+      {
+        "paper_id": "1508.07909v5.tei.tei",
+        "chunk_id": "1508.07909v5.tei.tei_chunk-1",
+        "supports": "byte pair encoding and morphological decomposition"
+      }
+    ],
+    "evidence_backed_sections": [
+      {
+        "title": "Introduction",
+        "content": "The problem of NLP models performing poorly on rare words and morphologically rich languages can be addressed by utilizing subword modeling techniques, character-level embeddings, and efficient neural network architectures.",
+        "citations": [
+          {
+            "paper_id": "1607.04606v2.tei.tei",
+            "chunk_id": "1607.04606v2.tei.tei_chunk-2"
+          }
+        ]
+      },
+      {
+        "title": "Subword Modeling Techniques",
+        "content": "Subword modeling techniques, such as learning representations for character n-grams and representing words as the sum of the n-gram vectors, have been shown to be effective for morphologically rich languages with limited training data.",
+        "citations": [
+          {
+            "paper_id": "1607.04606v2.tei.tei",
+            "chunk_id": "1607.04606v2.tei.tei_chunk-2"
+          }
+        ]
+      },
+      {
+        "title": "Character-Level Embeddings",
+        "content": "Character-level embeddings can process arbitrary words, not restricted to a fixed vocabulary, and allow for a smoother and compact parametrization of word embeddings.",
+        "citations": [
+          {
+            "paper_id": "1602.02410v2.tei.tei",
+            "chunk_id": "1602.02410v2.tei.tei_chunk-14"
+          }
+        ]
+      }
+    ],
+    "unknowns": [
+      "The exact performance of the proposed architectures on specific morphologically rich languages."
+    ],
+    "used_chunk_ids": [
+      "1607.04606v2.tei.tei_chunk-2",
+      "1602.02410v2.tei.tei_chunk-14",
+      "1508.07909v5.tei.tei_chunk-1"
+    ],
+    "used_paper_ids": [
+      "1607.04606v2.tei.tei",
+      "1602.02410v2.tei.tei",
+      "1508.07909v5.tei.tei"
+    ],
+    "used_papers": [
+      {
+        "paper_id": "1607.04606v2.tei.tei",
+        "used_chunk_ids": [
+          "1607.04606v2.tei.tei_chunk-2"
+        ],
+        "notes": "subword modeling techniques"
+      },
+      {
+        "paper_id": "1602.02410v2.tei.tei",
+        "used_chunk_ids": [
+          "1602.02410v2.tei.tei_chunk-14"
+        ],
+        "notes": "character-level embeddings"
+      },
+      {
+        "paper_id": "1508.07909v5.tei.tei",
+        "used_chunk_ids": [
+          "1508.07909v5.tei.tei_chunk-1"
+        ],
+        "notes": "byte pair encoding and morphological decomposition"
+      }
+    ],
+    "_raw": "Here is the final answer in the requested JSON schema:\n\n```\n{\n    \"final_answer_paragraphs\": [\n        \"The problem of NLP models performing poorly on rare words and morphologically rich languages can be addressed by utilizing subword modeling techniques, character-level embeddings, and efficient neural network architectures.\",\n        \"Subword modeling techniques, such as learning representations for character n-grams and representing words as the sum of the n-gram vectors, have been shown to be effective for morphologically rich languages with limited training data (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2).\",\n        \"Character-level embeddings can process arbitrary words, not restricted to a fixed vocabulary, and allow for a smoother and compact parametrization of word embeddings (1602.02410v2.tei.tei, 1602.02410v2.tei.tei_chunk-14).\",\n        \"Efficient neural network architectures, such as recursive neural networks and character embedding CNNs, can be used to mitigate the challenges of out-of-vocabulary words and morphological complexity (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2; 1602.02410v2.tei.tei, 1602.02410v2.tei.tei_chunk-11).\",\n        \"The use of subword modeling techniques and character-level embeddings can improve the accuracy of NLP models for rare words in morphologically rich languages, even with small model sizes (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2; 1602.02410v2.tei.tei, 1602.02410v2.tei.tei_chunk-14).\",\n        \"However, the exact performance of the proposed architectures on specific morphologically rich languages is still unknown and requires further research.\",\n        \"In addition to subword modeling and character-level embeddings, other techniques such as byte pair encoding (BPE) and morphological decomposition can also be used to improve the performance of NLP models on morphologically rich languages (1508.07909v5.tei.tei, 1508.07909v5.tei.tei_chunk-1).\",\n        \"The choice of the length of character n-grams and the size of the n-grams is crucial for the performance of the model, and the optimal values may vary depending on the language and the task (1607.04606v2.tei.tei, 1607.04606v2.tei.tei_chunk-2).\",\n        \"Overall, the use of subword modeling techniques, character-level embeddings, and efficient neural network architectures can significantly improve the performance of NLP models on rare words and morphologically rich languages, even with small model sizes.\"\n    ],\n    \"key_points\": [\n        \"Subword modeling techniques can improve the performance of NLP models on morphologically rich languages.\",\n        \"Character-level embeddings can process arbitrary words and allow for a smoother and compact parametrization of word embeddings.\",\n        \"Efficient neural network architectures can mitigate the challenges of out-of-vocabulary words and morphological complexity.\",\n        \"The use of subword modeling techniques and character-level embeddings can improve the accuracy of NLP models for rare words in morphologically rich languages, even with small model sizes.\"\n    ],\n    \"keyword_coverage\": [\n        {\"keyword\": \"morphologically rich languages\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"limited training data\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"small model sizes\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"subword modeling\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"character-level embeddings\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"efficient neural networks\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"rare word representation\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"low-resource languages\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"NLP for morphologically rich languages\", \"where_used\": \"final_answer_paragraphs\"},\n        {\"keyword\": \"out-of-vocabulary words\", \"where_used\": \"final_a...",
+    "_required_keywords_phrases": [
+      "morphologically rich languages",
+      "limited training data",
+      "small model sizes",
+      "subword modeling",
+      "character-level embeddings",
+      "efficient neural networks",
+      "rare word representation",
+      "low-resource languages",
+      "NLP for morphologically rich languages",
+      "out-of-vocabulary words",
+      "morphological complexity",
+      "insufficient evidence for specific NLP techniques to improve accuracy for rare words in morphologically rich languages with limited training data and small model sizes",
+      "small model size",
+      "limited resources",
+      "no large pre-trained models"
+    ]
+  }
+}

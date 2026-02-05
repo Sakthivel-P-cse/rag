@@ -1,0 +1,655 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Community structure in social and biological networks</title>
+				<funder ref="#_UWUTbkJ">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2001-12-07">December 7, 2001</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Michelle</forename><surname>Girvan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Santa Fe Institute</orgName>
+								<address>
+									<addrLine>1399 Hyde Park Road, Santa Fe</addrLine>
+									<postCode>87501</postCode>
+									<region>NM</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Cornell University</orgName>
+								<address>
+									<addrLine>Clark Hall</addrLine>
+									<postCode>14853-2501</postCode>
+									<settlement>Ithaca</settlement>
+									<region>NY</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><forename type="middle">E J</forename><surname>Newman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Santa Fe Institute</orgName>
+								<address>
+									<addrLine>1399 Hyde Park Road, Santa Fe</addrLine>
+									<postCode>87501</postCode>
+									<region>NM</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Community structure in social and biological networks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2001-12-07">December 7, 2001</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E4CC0D70011CF9B89DE1CAECFE76D39A</idno>
+					<idno type="arXiv">arXiv:cond-mat/0112110v1[cond-mat.stat-mech]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>A number of recent studies have focused on the statistical properties of networked systems such as social networks and the World-Wide Web. Researchers have concentrated particularly on a few properties which seem to be common to many networks: the small-world property, power-law degree distributions, and network transitivity. In this paper, we highlight another property which is found in many networks, the property of community structure, in which network nodes are joined together in tightly-knit groups between which there are only looser connections. We propose a new method for detecting such communities, built around the idea of using centrality indices to find community boundaries. We test our method on computer generated and real-world graphs whose community structure is already known, and find that it detects this known structure with high sensitivity and reliability. We also apply the method to two networks whose community structure is not well-known-a collaboration network and a food web-and find that it detects significant and informative community divisions in both cases.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>The authors would like to thank <rs type="person">Jennifer Dunne</rs>, <rs type="person">Neo Martinez</rs>, <rs type="person">Matthew Salganik</rs>, <rs type="person">Steve Strogatz</rs>, and <rs type="person">Doug White</rs> for useful conversations, and <rs type="person">Jennifer Dunne</rs>, <rs type="person">Sarah Knutson</rs>, <rs type="person">Matthew Salganik</rs>, and <rs type="person">Doug White</rs> for help compiling the data for the food web, collaboration, college football, and karate club networks, respectively. This work was funded in part by the <rs type="funder">National Science Foundation</rs> under grant number <rs type="grantNumber">DMS-0109086</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_UWUTbkJ">
+					<idno type="grant-number">DMS-0109086</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Exploring complex networks</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Strogatz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">410</biblScope>
+			<biblScope unit="page" from="268" to="276" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wasserman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Faust</surname></persName>
+		</author>
+		<title level="m">Social Network Analysis</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Social Network Analysis: A Handbook</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Scott</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<publisher>Sage Publications</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+	<note>2nd edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Collective dynamics of 'small-world' networks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Watts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Strogatz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">393</biblScope>
+			<biblScope unit="page" from="440" to="442" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Classes of small-world networks</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A N</forename><surname>Amaral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Scala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barthélémy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Stanley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="11149" to="11152" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The structure of scientific collaboration networks</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E J</forename><surname>Newman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="404" to="409" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">On powerlaw relationships of the internet topology</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Faloutsos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Faloutsos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Faloutsos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computer Communications Review</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="251" to="262" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<author>
+			<persName><forename type="first">R</forename><surname>Albert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-L</forename><surname>Barabási</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Diameter of the world-wide web</title>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">401</biblScope>
+			<biblScope unit="page" from="130" to="131" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Graph structure in the web</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Broder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Maghoul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Raghavan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rajagopalan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tomkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wiener</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computer Networks</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="309" to="320" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Simple rules yield complex food webs</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Martinez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">404</biblScope>
+			<biblScope unit="page" from="180" to="183" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The large-scale organization of metabolic networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tombor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Albert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">N</forename><surname>Oltvai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-L</forename><surname>Barabási</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">407</biblScope>
+			<biblScope unit="page" from="651" to="654" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The small world of metabolism</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Fell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wagner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Biotechnology</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1121" to="1122" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">I</forename><surname>Pool</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kochen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Contacts and influence. Social Networks</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1" to="48" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The small world problem</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Milgram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychology Today</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="60" to="67" />
+			<date type="published" when="1967">1967</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Emergence of scaling in random networks</title>
+		<author>
+			<persName><forename type="first">A.-L</forename><surname>Barabási</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Albert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">286</biblScope>
+			<biblScope unit="page" from="509" to="512" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Connectivity of growing random networks</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Krapivsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Redner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Leyvraz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="4629" to="4632" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Structure of growing networks with preferential linking</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Dorogovtsev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F F</forename><surname>Mendes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Samukhin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="4633" to="4636" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Random graphs with arbitrary degree distributions and their applications</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E J</forename><surname>Newman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Strogatz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Watts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">26118</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">How popular is your paper? An empirical study of the citation distribution</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Redner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eur. Phys. J. B</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="131" to="134" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Menger</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zur Allgemeinen Kurventheorie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Fundamenta Mathematicae</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="96" to="115" />
+			<date type="published" when="1927">1927</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The cohesiveness of blocks in social networks: Connectivity and conditional density</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Harary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sociological Methodology</title>
+		<imprint />
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A new status index derived from sociometric analysis</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychometrika</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="39" to="43" />
+			<date type="published" when="1953">1953</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">A set of measures of centrality based upon betweeness</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Freeman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sociometry</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="35" to="41" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Scientific collaboration networks: II. Shortest paths, weighted networks, and centrality</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E J</forename><surname>Newman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">16132</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">An information flow model for conflict and fission in small groups</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">W</forename><surname>Zachary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Anthropological Research</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="452" to="473" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">The seasonal dynamics of the Chesapeake Bay ecosystem</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Baird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Ulanowicz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ecological Monographs</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="329" to="364" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Martinez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Constant connectance in community food webs</title>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page" from="1208" to="1218" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Luczkovich</surname></persName>
+		</author>
+		<imprint />
+	</monogr>
+	<note>personal communication</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

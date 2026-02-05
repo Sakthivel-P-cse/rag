@@ -1,0 +1,514 @@
+{
+  "paper_id": "E4CC0D70011CF9B89DE1CAECFE76D39A",
+  "title": "Community structure in social and biological networks",
+  "arxiv_id": "arXiv:cond-mat/0112110v1[cond-mat.stat-mech]",
+  "authors": [
+    {
+      "given": "Michelle",
+      "family": "Girvan"
+    },
+    {
+      "given": "M E J",
+      "family": "Newman"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S H",
+          "family": "Strogatz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Social Network Analysis",
+      "container_title": "Social Network Analysis",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Wasserman"
+        },
+        {
+          "given": "K",
+          "family": "Faust"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Social Network Analysis: A Handbook",
+      "container_title": "Social Network Analysis: A Handbook",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Scott"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D J",
+          "family": "Watts"
+        },
+        {
+          "given": "S H",
+          "family": "Strogatz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Proc. Natl. Acad. Sci. USA",
+      "container_title": "Proc. Natl. Acad. Sci. USA",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L A N",
+          "family": "Amaral"
+        },
+        {
+          "given": "A",
+          "family": "Scala"
+        },
+        {
+          "given": "M",
+          "family": "Barthélémy"
+        },
+        {
+          "given": "H E",
+          "family": "Stanley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proc. Natl. Acad. Sci. USA",
+      "container_title": "Proc. Natl. Acad. Sci. USA",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M E J",
+          "family": "Newman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Computer Communications Review",
+      "container_title": "Computer Communications Review",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Faloutsos"
+        },
+        {
+          "given": "P",
+          "family": "Faloutsos"
+        },
+        {
+          "given": "C",
+          "family": "Faloutsos"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Diameter of the world-wide web",
+      "container_title": "Diameter of the world-wide web",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Albert"
+        },
+        {
+          "given": "H",
+          "family": "Jeong"
+        },
+        {
+          "given": "A.-L",
+          "family": "Barabási"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Computer Networks",
+      "container_title": "Computer Networks",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Broder"
+        },
+        {
+          "given": "R",
+          "family": "Kumar"
+        },
+        {
+          "given": "F",
+          "family": "Maghoul"
+        },
+        {
+          "given": "P",
+          "family": "Raghavan"
+        },
+        {
+          "given": "S",
+          "family": "Rajagopalan"
+        },
+        {
+          "given": "R",
+          "family": "Stata"
+        },
+        {
+          "given": "A",
+          "family": "Tomkins"
+        },
+        {
+          "given": "J",
+          "family": "Wiener"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R J",
+          "family": "Williams"
+        },
+        {
+          "given": "N D",
+          "family": "Martinez"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Jeong"
+        },
+        {
+          "given": "B",
+          "family": "Tombor"
+        },
+        {
+          "given": "R",
+          "family": "Albert"
+        },
+        {
+          "given": "Z N",
+          "family": "Oltvai"
+        },
+        {
+          "given": "A.-L",
+          "family": "Barabási"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Nature Biotechnology",
+      "container_title": "Nature Biotechnology",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D A",
+          "family": "Fell"
+        },
+        {
+          "given": "A",
+          "family": "Wagner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Contacts and influence. Social Networks",
+      "container_title": "Contacts and influence. Social Networks",
+      "year": "1978",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Pool"
+        },
+        {
+          "given": "M",
+          "family": "Kochen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Psychology Today",
+      "container_title": "Psychology Today",
+      "year": "1967",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Milgram"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A.-L",
+          "family": "Barabási"
+        },
+        {
+          "given": "R",
+          "family": "Albert"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P L",
+          "family": "Krapivsky"
+        },
+        {
+          "given": "S",
+          "family": "Redner"
+        },
+        {
+          "given": "F",
+          "family": "Leyvraz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S N",
+          "family": "Dorogovtsev"
+        },
+        {
+          "given": "J F F",
+          "family": "Mendes"
+        },
+        {
+          "given": "A N",
+          "family": "Samukhin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M E J",
+          "family": "Newman"
+        },
+        {
+          "given": "S H",
+          "family": "Strogatz"
+        },
+        {
+          "given": "D J",
+          "family": "Watts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Eur. Phys. J. B",
+      "container_title": "Eur. Phys. J. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Redner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Fundamenta Mathematicae",
+      "container_title": "Fundamenta Mathematicae",
+      "year": "1927",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Menger"
+        },
+        {
+          "given": null,
+          "family": "Zur Allgemeinen Kurventheorie"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Sociological Methodology",
+      "container_title": "Sociological Methodology",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D R",
+          "family": "White"
+        },
+        {
+          "given": "F",
+          "family": "Harary"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Psychometrika",
+      "container_title": "Psychometrika",
+      "year": "1953",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Katz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Sociometry",
+      "container_title": "Sociometry",
+      "year": "1977",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Freeman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M E J",
+          "family": "Newman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Journal of Anthropological Research",
+      "container_title": "Journal of Anthropological Research",
+      "year": "1977",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W W",
+          "family": "Zachary"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Ecological Monographs",
+      "container_title": "Ecological Monographs",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Baird"
+        },
+        {
+          "given": "R E",
+          "family": "Ulanowicz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Constant connectance in community food webs",
+      "container_title": "Constant connectance in community food webs",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N D",
+          "family": "Martinez"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J J",
+          "family": "Luczkovich"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

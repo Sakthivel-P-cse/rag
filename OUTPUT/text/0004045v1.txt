@@ -1,0 +1,351 @@
+4 Apr 2000 F C Alcaraz alcaraz@power.ufscar.br Departamento de Física Universidade Federal de São Carlos 13565-905 São Carlos SP Brazil V Rittenberg Physikalisches Institut Universität Bonn Nußallee 12 D -5300 Bonn 1 Germany Valence Bond Ground States in Quantum Antiferromagnets and Quadratic Algebras 4 Apr 2000 75B2B943D9B0356B6798EA3E91759519 arXiv:cond-mat/0004045v1[cond-mat.stat-mech] GROBID - A machine learning software for extracting information from scholarly documents The wave functions corresponding to the zero energy eigenvalue of a onedimensional quantum chain Hamiltonian can be written in a simple way using quadratic algebras. Hamiltonians describing stochastic processes have stationary states given by such wave functions and various quadratic algebras were found and applied to several diffusions processes. We show that similar methods can also be applied for equilibrium processes. As an example, for a class of q-deformed O(N ) symmetric antiferromagnetic quantum chains, we give the zero energy wave functions for periodic boundary conditions corresponding to momenta zero and π. We also consider free and various non-diagonal boundary conditions and give the corresponding wave functions.
+
+All correlation lengths are derived.
+
+Quadratic algebras and their representations have being extensively used recently in order to study the probability distributions of steady states of one-dimensional stochastic processes with open boundaries or on a ring [1, 2] . The basic idea is that if the Hamiltonian of a quantum chain which gives the time evolution of the system, has eigenvalue zero, the ket wave functions which are related to the steady states probability distributions have a simple expression in terms of a certain quadratic algebra determined by the bulk rates. This algebra has representations fixed by the boundary conditions, the corresponding matrices act in an auxiliary vector space. All correlation functions can be computed from these ket wave functions. The aim of this paper is to "import" these techniques to equilibrium statistical physics and stress the limitations and differences. For stochastic processes the lowest eigenvalue of the Hamiltonian which gives the time evolution of the system is zero. This is not the case for most of the Hamiltonians which are interesting in equilibrium problems.
+
+Therefore the possible applications of the algebraic approach to ground-states is bound to be more limited. Another difference is that in equilibrium and periodic boundary conditions, the ground-state can have momentum non-zero (is not translational invariant). This can't be the case for stochastic processes since the components of the ground-state ket vector have to be positive numbers (they are probabilities). Another difference appears when we want to calculate correlation functions which are expressed in terms of vacuum expectation values (implying the bra AND ket vacua). As we are going to see the expressions of the correlation functions are very similar in both cases. Actually the quadratic algebras approach was implicit already used in equilibrium problems where it is known as the matrix product approach [3] [4] [5] [6] . The matrices used are in fact representations of certain algebras.
+
+We hope to convince the reader that the algebraic approach is not only more aesthetic but more powerful since it makes contact with known results obtained in mathematics. Finally, we would like to mention that matrix product approach has been used as an alternative to the density matrix renormalization group method [7, 8] . How the methods presented in this paper can be applied to this problem is an open question. The application of quadratic algebras to zero-energy states is presented in Sec.2. Much of the contend of this Section is already known. What is new is how to handle zone boundary states which have momentum π. In Sec. 3 we give an application. The idea is simple: in the study of quantum groups [9] , in order to find the non-commutative manifold in which they act, Reshetikhin et al have introduced projector operators out of which one can build quantum chains having the quantum algebra as symmetry. Moreover, one gets for free a quadratic algebra (the manifold of the quantum group) which can be used to write the zero energy eigenfunctions of quantum chains build using the projector operators. These chains are not exactly integrable in the Yang-Baxter sense. We have considered, as an example, the O(N) case for which we get an N-state Hamiltonian. The quadratic algebra turns out to be the q-deformed Clifford algebra. In the special case N = 3 and q = 1 one recovers the model with valence bond ground state (VBS) of Affleck et al [3] . (The q-deformed case can be found in Refs. [10, 6] ).
+
+The N = 4 case is discussed in the Appendix A, it is a special case of the extended Hubbard model [11] . The Hamiltonians we consider can be mapped into quantum spin ladder models [12] and find applications in this context. We are going to show that for periodic boundary conditions and an even number of sites, we find a unique momentum zero ground-state. For N even, we also find one zone boundary state. For free boundary conditions, we find 2 N -1 ground-states. This degeneracy can be lifted adding boundary fields. In Sec. 4 we show how to choose the boundary conditions in order to get an unique vacuum. The boundary terms break the symmetry of the quantum chain. The calculation of all the correlation lengths (for any N) is presented in Sec.5. It is shown that for large N the correlation lengths diverge.
+
+In Appendix B we show how to compute the correlation function for some parity violating operators, appearing in the case where N is even. This problem is interesting in the case of periodic boundary conditions when the ground-state is twice degenerate even for a finite number of sites. The conclusions can be found in Sec.6.
+
+The application of quadratic algebras to the zero energy ket wave functions for diffusionreaction processes is well known [1, 13, 2] , in this section we will do a trivial extension to equilibrium processes and show how to compute correlation functions. We consider a most general one-dimensional quantum chain with N states, L sites and nearest-neighbour two body interactions. The Hamiltonian is:
+
+The bulk terms (k = 1, . . . , L -1) and the left and right boundary terms are:
+
+Here E αβ k are a basis for N × N matrices on the k-th site:
+
+We will assume that H has at least one eigenstate of energy zero
+
+Our aim is to describe the bra &lt; 0| and ket |0 &gt; states in a simple way. In order to do that, we consider two associative algebras defined by the bulk interaction:
+
+If the bulk part of the Hamiltonian is not symmetric, the two algebras are different. Each algebra has 2N generators x α , X α and y α , Y α ,( α = 1, . . . , N), respectively. We define two Fock-like representations of the two algebras:
+
+Here &lt; V K |, |W K &gt;, &lt; V B | and |W B &gt; are the bra and ket reference states defined by the equations ( 8 ) and ( 9 ) in AUXILIARY spaces. We make now the connexion between the two algebras and the zero energy eigenstates of the Hamiltonian. The basis in the ket vector space in which the Hamiltonian acts is:
+
+the N-dimensional vector u α k is in the k-th site and has the component α k equal to one and the others zero:
+
+We denote the basis in the bra vector space in which the Hamiltonian acts by
+
+The scalar product is obviously
+
+One can prove [14] that the unnormalized bra and ket vacua can be written using the two quadratic algebras:
+
+Notice that the generators X α and Y α don't appear in the expressions of the wave functions.
+
+One can also show that the quadratic algebras exist, and that one can find representations satisfying the conditions (8) and ( 9 ). Moreover, one can show that all the zero energy wave functions can be obtained in this way [14] . In the case of periodic boundary conditions, and translationally invariant zero energy eigenfunctions, one can use the expressions ( 14 ) and (15) making the substitution:
+
+provided that the algebra has a trace operation.
+
+As opposed to the case of the Hamiltonian with open boundaries, for periodic boundary conditions, it is not clear in which cases one obtains in this way all the zero energy eigenfunctions. A simple counter-example was given in Ref. [15] in which it is shown that there are zero energy eigenfunctions which can't be obtained using the algebraic method given by equation ( 16 ). On the other hand, examples are known [16] where indeed all the eigenfunctions are obtained.
+
+Ground-state wave functions can correspond to zone boundary states (momentum π).
+
+One can show that if the algebra (6) has the Str operation with the properties:
+
+than the ket vector
+
+satisfies equation (5) and it is obviously a zone boundary state. Similar expressions can be used for the algebra (7) and the bra eigenvector. The Str (called supertrace) operation is taken from the theory of superalgebras and it implies that the x α and X α are odd generators in this algebra. In particular if in the algebra (6) one takes X α c-numbers (this is often done for diffusion processes [2] ), the algebra can't have the Str operation. In Sec.3 we will show in examples how the Str operation works. As for translationally invariant ground-states it is not known if all of the zone boundary states can be obtained using equation (18) .
+
+Before showing how to compute correlation functions, let us see what are the consequences for the quadratic algebras of the existence of a symmetry of the Hamiltonian. Let us assume that the operator:
+
+commutes with the bulk part of the Hamiltonian, i. e.,
+
+[A,
+
+Simple arithmetics gives the relations:
+
+Similar relations can be obtained in the case of quantum algebra symmetries when the operator A has not the simple expression (19). We now show how to compute a two-point function. This calculation is interesting when the ground-state energy is zero. Consider two local operators P r and Q s on the r and s sites. They act on the basis (10) as follows:
+
+We want to compute the expression:
+
+where &lt; 0| and |0 &gt; are given by equations ( 14 ) and ( 15 ) and Z is a normalization factor coming from the fact that ( 14 ) and (15) give unnormalized wave functions. It is useful to define the following quantities (all related to the auxiliary space)
+
+x α ⊗ y α (25)
+
+and
+
+Using equations ( 25 )-( 27 ), the two-point function ( 22 ) has the following simple expression:
+
+where
+
+Notice that C plays the role of a space evolution operator in the auxiliary space but the analogy with a quantum mechanical problem can't be pushed further since &lt; V | and |W &gt; are not eigenfunctions of C. Nevertheless one can see that the spectrum of C gives all the correlation lengths. For periodic boundary conditions, we have to make the following substitution:
+
+for translationally invariant states, or for zone boundary states, in equations ( 28 ) and (29).
+
+Let us observe that the expressions (25)-( 29 ) are similar to the ones one obtain for stochastic processes [1, 2] . The difference is that instead of dealing with only one algebra (given by equation ( 6 )), one has the tensor product of two algebras. If the algebra (7) has a onedimensional representation, (this is always the case for diffusion processes with exclusion for example [1] ), the correlation functions computed using the ket vector only or the bra and ket vector (vacuum expectation values), coincide. Expressions like (25)-( 29 ) have been used in a different context in the matrix product approach to the density matrix renormalization group method [7] . In this case the x α are matrices obtained using the variational method and not using quadratic algebras defined by the Hamiltonian using equation ( 6 ). Besides they have to satisfy the condition:
+
+As we are going to see in the next section, this condition is not necessarily fulfilled in our applications.
+
+The quantum chains describing stochastic processes are given by non-hermitian Hamiltonians which always have zero as lowest eigenvalue. The quadratic algebra always exists [14] and the problem is to find representations of the algebra. In equilibrium problems one is interested in hermitian Hamiltonians which in general don't have zero as the lowest eigenvalue and therefore one has to find Hamiltonians which have this property. In order to illustrate the method, in this paper we have chosen an easy way: using known results in the theory of quantum groups. In this way we get not only hermitian quantum chains which have zero for the ground state energy but also quadratic algebras with known representations.
+
+A. The bulk Hamiltonian.
+
+Reading the paper of Reshetikhin et al [9] one can notice that there are several expressions of the form (6) with the X αs equal to zero. We will choose the one where Γ αβ γδ are projector operators of rank N(N + 1)/2 -1 for the q-deformed B(n) series (N = 2n + 1) and D(n) series (N = 2n). The x α are the generators of the non-commutative algebra of the manifold where the quantum groups act. Similar expressions for the Sp(n) and Osp(m/n) algebras and superalgebras can also be obtained [17] . In the present paper, we confine ourselves to the q-deformed O(N) case. As we will show we will use these projectors in order to write Hamiltonians for quantum chains. The projector operators have the following expressions:
+
+where q is a deformation parameter (taken real in this paper) and we use the notation
+
+[n] q = q n -q -n q -q -1 and α
+
+In equation (32) we also denote
+
+for N = 2n + 1, and
+
+for N=2n. By definition we have
+
+Since the matrix Γ αβ γδ in (32) is symmetric, i. e., Γ αβ γδ = Γ γδ αβ , the two associated algebras to the projector (32):
+
+Γ αβ γδ y α y β = 0 (37) are identical and therefore we give only one of them. It is convenient to denote (for obvious reasons); for N=2n:
+
+and for, N=2n+1
+
+where s = √ q. The 2n q-deformed fermionic creation and annihilation operators a α , a + α and the "γ 5 "-type generator Σ satisfy the following relations:
+
+The above algebra has a central element :
+
+and an obvious representation is:
+
+with
+
+In the first line of (42) the operator a is in the k-th position, and the operator s σ z σ z appears in the positions k+1, . . . , n. The fact that the algebra has finite-dimensional representations, makes all calculations much simpler (see Secs. 5 and 6) as compared with the cases when the algebra has infinite dimensional representations. Notice also that for q = 1, the generators x α do not satisfy the relation (31). We make now the connexion between the projectors (32) and the quantum chain (1) . Since the lowest eigenvalue E of a projector operator is zero, we can choose in (1):
+
+Notice that H k is hermitian and therefore since as mentioned its lowest eigenvalue is zero, H for periodic or free boundary conditions has also zero as its lowest eigenvalue. The problem of other boundary conditions is going to be discussed in Sec.4.
+
+B. Ground-states for periodic and free boundary conditions.
+
+We start with periodic boundary conditions. We first consider zero momentum states.
+
+Using equation ( 14 ) (together with the substitution given by ( 16 ) as well as the representation (42) we get for all N, one single ket vector of energy zero for L even and none for L odd. This result is confirmed by the spectra obtained from the numerical diagonalization of several Hamiltonians (various L and N). This check was necessary since as mentioned in Sec.2 there is no theorem which assures us that there are no zero energy eigenfunctions which are not obtained using the algebraic procedure. We now look for zone boundary states and therefore look for a definition of the Str operation such that the relations (17) and (18) are satisfied. We consider the matrix J defined by
+
+A vector
+
+is called even (odd) if it is an eigenvector of J corresponding the the eigenvalue +1 respectively -1. A matrix is called even if it takes an even (odd) vector into an even (odd) vector. A matrix is called odd if it takes an even (odd) vector into an odd (even) vector. For example, the matrices a k in equation ( 42 ) are odd but the matrix Σ is even. Consider now the matrix
+
+We define Str(M) = Tr(JM).
+
+(48)
+
+It is easy to check that if A and B are odd matrices, than
+
+If one of the two matrices is even and the other one is odd
+
+If the two matrices A and B are even
+
+From this properties we learn that in order to satisfy the relations (17) (the relations in the second line of ( 18 ) are automatically satisfied since X α = 0), the x α 's have to be all odd generators. This excludes the case of N = 2n + 1 because of the appearance of the sigma generator which is even. For L odd and N = 2n all the supertraces are zero and again we can't obtain a boundary state which is physically correct. For N and L even we expect therefore a unique zone boundary state. This is what is also seen in numerical diagonalizations for all L except for q = 1 and small values of L where something subtle happens. We illustrate the phenomenon taking N = 4. Using equations (42),( 45 ) and ( 48 )
+
+we obtain:
+
+which would imply that for q = 1 and L = 2 there are no zone boundary states. Actually there are two of them which can be obtained taking instead of J given by equation (45), two alternative expressions:
+
+These expressions can't be used however for monomials with more than two generators (the property (17) is not valid anymore). In the spectra for periodic boundary conditions as seen in numerical diagonalizations, there are no zero energy states besides those mentioned above.
+
+The existence for N even of a degenerate ground state, one of positive parity (momentum zero, obtained with the help of the Tr operation) that we denote by |0, + &gt; and one of negative parity (momentum π, obtained with the help of the Str operation that we denote by |0, -&gt;), allows for the existence of correlation functions of operators which break parity. For example one of the operators P or Q in equation ( 25 ) can break parity. In the Appendix B we show how to compute the correlation functions for this case (one considers matrix elements &lt; 0, -| • • • |0, + &gt; for example). A somehow similar problem occurs in spontaneously dimerized spin ladders [18] . We would like to stress that in our case the degeneracy of the vacuum takes place even for finite number of sites.
+
+We now consider free boundary conditions. An inspection of equation (8) shows that it brings no constrains therefore instead of equation ( 14 ) we have:
+
+where the various independent monomials (words) in the algebra are regarded as a basis in a vector space. Each component of |0 &gt; in this basis gives a zero energy eigenfunction.
+
+Therefore for both L even and odd we get 2 N -1 states. This result was obtained counting the independent words. For small values of L, the degeneracy can be smaller since higher degree monomials might not yet have appeared. For example for N = 4, and L = 2 the degeneracy is 7 instead of 8 but for L = 3 one obtains already 8.
+
+The boundary matrices L and R (we will choose them hermitian) have not only to be compatible with the quadratic algebra (see below), but have also to leave the value zero as the lowest eigenvalue. This property is warrantied if the lowest eigenvalues E L and E R are also zero. This follows from the relation:
+
+where E H and E are the lowest eigenvalues of H and H k .
+
+Since for the q-deformed O(N) symmetric quantum chains defined in the last section, the algebras ( 6 ) and ( 7 ) with X α and Y β equal to zero are identical, we have to find the matrices L and R as well as the vacua of the auxiliary spaces such that the following relations (obtained from equations ( 8 )-( 9 )) are satisfied:
+
+We have taken the same representation for the two sets of Clifford generators x α and y α .
+
+We now show that the solutions of equations ( 57 ) can be obtained from those of equations (56). We take the transpose of the two equations (57):
+
+and since from equations (38)-(39), we have x T α = x α ′ = x N +1-α , we can rewrite the equations (58) as follows:
+
+We can compare now the equations ( 56 ) and (59) and deduce that for any solution R β α of (56) (there are many of them) one gets a solution for L β α :
+
+One can use of course one solution of equations (56) for R β α and another solution to get L β α using equation (60). One can easily show that the solutions of (56) have a factorized form:
+
+It is convenient to choose the following basis in the auxiliary vector-spaces in which x α and y α (replaced formally by x α ) act (see equations ( 56 ) and ( 42 )-( 43 )):
+
+We are going to consider separately the cases N = 2, 3, . . . , 6 in order to illustrate the structure of the solutions. As we are going to show for N = 2, the values of η 1 and η1 are fixed and besides a common factor, the matrix elements of R contain no parameters.
+
+For N = 3 and 4, the parameters η 1 , η 2 respectively η1 , η2 are free and R is given by the parameters of the wave functions (62)-( 63 ) and a common factor. For N = 5 and 6, a new phenomenon appears. The wave function (62) is given by the free parameters η 1 , η 2 , η 3 , and the wave function (63) is specified by the corresponding parameters η1 , η2 , η3 . R depends now not only on the parameters of the wave functions but on supplementary free parameters.
+
+This implies that different boundary conditions are compatible with the same wave functions ( 14 )- (15) . We now consider the boundary conditions for some values of N.
+
+Since this is a very simple (and trivial) case, we discuss it in detail. From equations ( 32 ) and (44) we get:
+
+This implies that for free boundary conditions the ground-state is twice degenerate, with antiferromagnetic ordering. This degeneracy is a consequence of the existence of two independent words in the O(2) algebra:
+
+Demanding that R is diagonalizable, equations (56) have two solutions:
+
+and
+
+where
+
+and r &gt; 0.
+
+We consider separately the two cases:
+
+a) R = rA, L = lA with r, l &gt; 0. For lattice size L even, we obtain no zero energy eigenstate. The matrix elements ( 14 )-( 15 ) vanish. For L odd, one obtains an unique zero energy ground-state.
+
+b) R = rA, L = lB For L even, one obtains an unique zero energy ground-state and none for L odd.
+
+The solutions are :
+
+and the eigenvalues of R are: zero two times and
+
+this relation imposes r &gt; 0. Since we want R symmetric, we take (see equation ( 61 )) η 1 = η1 and therefore:
+
+One gets:
+
+The matrix R has three eigenvalues zero and one equal to:
+
+Notice that for N = 3 and 4, the parameters of the vacua and r determine the R matrix.
+
+This is abound to change for larger values of N.
+
+The solution is
+
+where a ia an additional free parameter. R has now four eigenvalues zero and one equal to
+
+One gets:
+
+with a arbitrary. R has now five eigenvalues zero and one equal to r 6 i=1 f 2 i . Notice that for N = 5 and 6 the f 's depend not only on η 1 , η 2 and η 3 but also on the supplementary parameter a. This implies that the same wave function can be used for different boundary matrices. We also notice that taking r positive makes sure that the lowest eigenvalue stays zero. One can obtain R matrices with only non-vanishing element on the diagonal (like in equation ( 67 )) taking one of the η i equal to zero or infinity. This remains valid for any N. For larger values of N the number of free parameters increases and it is certainly not our purpose to give here the general solution. We would like to stress that for N &gt; 2, the boundary conditions can break all the symmetries of the Hamiltonian. It is necessary to have a new look at the expression (28) of the two-point correlation function. In the last section we have shown how to get the bra and ket vacua (&lt; V | and |W &gt;, respectively) in the auxiliary spaces. In order to proceed further, one has to find the similarity transformation S which diagonalizes the matrix C:
+
+The matrix C is given by equation ( 25 ). In this equation the x α and y α are the generators of the two identical algebras (see (38)-( 40 )) having the representation (42)-(43). We will consider separately the cases where N is even or odd.
+
+It is convenient to write C as a four-state Hamiltonian with n sites in the auxiliary space:
+
+where the matrices E i and F i act on the i-th site and have the expression:
+
+where
+
+The basis vectors in the tensor products (77)-( 78 ) correspond to the two-dimensional representations used in (42)-( 43 ). In this basis the vacuum |W &gt; in the auxiliary space has the expression:
+
+where
+
+Notice the recurrence relation:
+
+that we are going to use later on. If q = 1, the diagonalization of C is trivial since E and F commute. Using the similarity transformation
+
+we have
+
+It is convenient to write C D as a one-dimensional two-state spin chain with 2n sites:
+
+In order to simplify the expression (85), it is useful to look at C as a function defined on the abelian group
+
+. In order to do so, we write:
+
+Using this notation, instead of equation ( 85 ) we obtain:
+
+We make now the change of variables:
+
+. . .
+
+Notice the identity:
+
+(-1)
+
+that we are going to use shortly. With the change of variables (88), instead of the expression (87), we get:
+
+From equation (90) it results that the spectrum of C (N ) for N = 2n is the same as that of the z-component of the total spin S z for 2n spins 1 2 . Therefore the eigenvalues are n -m (m = 0, 1, . . . , N) with a degeneracy given the binomial coefficient C N -m N .
+
+We now consider the case q = 1. We are going to use the recurrence relation (76). We first make a change of basis (see equations ( 77 )-( 78 )) in the four-state chain with n sites:
+
+and denote by u
+
+i , the basis vector on the k-th site having the i-th (i = 1, 2, 3, 4) component equal to one and the others zero. In this basis E and F have the expressions:
+
+In the same basis, for N = 2, one has
+
+and the eigenvalues (eigenfunctions) are:
+
+; 0, u
+
+.
+
+Assume that Ψ
+
+written in the basis
+
+is an eigenfunction of C (N ) corresponding to the eigenvalue Λ. We now consider the four wave functions
+
+We start again with q = 1 and from the definition of C (2n+1) we have:
+
+Using the equations ( 86 ) and ( 89 )-(90), we get the diagonal form of C (2n+1) :
+
+which has obviously the spectrum
+
+with a degeneracy:
+
+We now consider the case q = 1 . Instead of (101) one has:
+
+The recurrence relation (82) stays valid as well as (96)-( 97 ) and (98). As opposed to N = 2n
+
+where we use the recurrence relations starting with C (2) , for N = 2n + 1 we start with C (3) .
+
+In the basis u
+
+i (i = 1, 2, 3, 4), the matrix C (3) is
+
+having obviously the following eigenvalues (eigenfunctions):
+
+1 -√ qu
+
+(1)
+
+2 ) ;
+
+; -1 2 q u
+
+(1) 4
+
+.
+
+The spectrum of C (2n+1) is therefore:
+
+with a degeneracy:
+
+From the spectra of the matrix C, which plays the role of a transfer matrix (see equation ( 28 )), one can derive the mass spectra (the inverse of the correlation lengths) using equations ( 99 ) and (108). For N = 2n we have
+
+and for N = 2n + 1 we obtain:
+
+Therefore the system is always massive. It is interesting to note that in the large N limit, for q = 1, one obtains (see equations ( 110 )-( 111 )):
+
+This implies that in the N → ∞, all correlation lengths diverge. Looking at the expressions (112) and having in mind that in conformal invariant theories one has similar expressions with N substituted by L (N of O(N) replacing L, the size of the system, of the conformal invariant quantum chain) we would expect some similarity between both physics. The analogy, however is not so simple since the degeneracy of the level m also diverges (see equations ( 100 ) and ( 109 )). An explicit calculation of the correlation functions in the large N limit, which we didn't do, will clarify the issue.
+
+It is interesting to notice that for O(3), spin S, (2S + 1)-state quantum chain, VBS gives for the the smallest mass M 1 , the following large S behavior [4] :
+
+Comparing the equations ( 112 ) with (113) we learn that in the asymptotic cases, the largest correlation length is given essentially by the number of states of the chain.
+
+We have considered q-deformed O(N) symmetric, N-state quantum chains defined by Hamiltonians given by equation. ( 1 ), ( 32 ) and (44). The symmetry is unbroken for free boundary conditions. For q = 1 the quantum group symmetry is broken for periodic boundary conditions. For q = 1, no symmetry might be left because of boundary terms which can be chosen as described in Sec.4. Using algebraic methods, the ground-state wave functions for these quantum chains are known exactly for periodic, free and non-diagonal boundary conditions, they all correspond to energy zero. The wave functions are obtained using qdeformed Clifford algebras. These generalizes the construction of Affleck et al [3] . Using the trace and supertrace operation in an auxiliary space, for N even and periodic boundary conditions, one obtains two ground-states one for momentum zero and one for momentum π. This implies that even for a finite number of sites and periodic boundary conditions, the ground state is degenerate. For N odd one obtains only translationally invariant groundstates. For free boundary conditions the degeneracy of the ground-state is 2 N -1 . This degeneracy is lifted by boundary terms. We have shown how to compute correlation functions and have derived all the correlation lengths. They are finite and diverge only for q = 1 and L → ∞. What is the physical relevance of our results? For N = 4 we have shown in the Appendix A how the chain can be mapped into the extended Hubbard model [11] . For all values of N one can map our quantum chains for obvious reasons into various ladder models [12] writing the on-rung interaction as a two-site interaction. If what one obtains is physically interesting remains to be seen. On the other hand the wave functions we obtain can be used as trial ground-state for more realistic models [3] . Can the procedure described here be extended to other quantum chains? The answer is yes. One can consider q-deformed Sp(N) symmetric chains. In this case instead of the Clifford algebra one gets [17] the qdeformed Heisenberg algebra as a tool to compute the wave functions. One can go even one step further and take quantum chains with the superalgebra Osp(M/N) as symmetry. In this case [17] the algebra one uses to construct the wave functions is a combination of the Clifford and Heisenberg algebras. These extensions are straightforward. Again, it is an open question if these extensions are interesting from a physical point of view. Last but not least, very simple quadratic algebras were discussed above, if more interesting ones (with X α and Y α in equations ( 6 ) and ( 7 ) unequal to zero) find their use in equilibrium problems, remains to be seen. They do in non-equilibrium problems. Γ αβ γδ E γα k E δβ k+1 = 1 q + q -1 {(q + q -1 )[E The Hamiltonian (A.5) belongs to the class of extended Hubbard models considered in the recent literature [11] . Beyond the magnetic interaction (coupling J) we also have non-diagonal interactions that correspond to single particle correlated hopping (couplings t σ1 , t σ2 , t ′ σ ; σ = ±), as well as pair hopping terms (coupling t p ). The static interactions are given by the diagonal terms. The couplings U l and U r give us the on-site Coulomb interaction, and the interactions V σ,σ ′ (σ, σ ′ = ±), V
+
+and act with C (N +2) on them using the relation (82). We obtain:
+
+Two of the wave functions (95) for i = 3 and 4 are therefore eigenfunctions of C (N +2) corresponding to the same eigenvalue -Λ. One obtains also the two other eigenvalues:
+
+q , where we have used the notation (33). The eigenfunctions corresponding to the eigenvalues Ω ± are:
+
+).
+
+(98)
+
+Using the eigenvalues and eigenfunctions (94) for N = 2 and the recurrence relations (96)-( 97 ) and (98) one can get all the eigenvalues and eigenfunctions of C (N ) for any even N.
+
+The eigenvalues are
+
+with a degeneracy
+
+For q = 1 one recovers the spectrum given by S z (N ) ( see equation ( 90 )). Notice that the similarity transformations used here are even matrices (see Sec.3.2), therefore the supertrace operation define by eq.(48) stays valid.
+
+where
+
+It is also interesting to rewrite (A.2) in terms of spin-1 2 creation and annihilation fermion operators on the lattice. This is done by making the following correspondence between the basis |α &gt; j , α = 1, 2, 3, 4, in (A.2), at each lattice point j, and the Fock representation
+
+Using this fermionic basis the Hamiltonian density (A.2) is given by
+
+3 n k,+ n k+1,-n k+1,+ + V
+
+3 n k,-n k+1,-n k+1,+ + V where where S k = 1 2 σ k , and σ = (σ x , σ y , σ z ) are the spin-1 2 Pauli matrices.

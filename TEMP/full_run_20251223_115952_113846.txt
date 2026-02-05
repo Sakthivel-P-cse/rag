@@ -1,0 +1,149 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_115952_113846.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): In a biological simulation, selfish behavior should dominate, but I still see cooperation emerging. Why doesn’t natural selection eliminate cooperative traits?
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251223_115957_713372.json
+[retrieve] Query (first 200 chars): What mechanisms allow cooperative traits to persist in biological simulations despite the presence of selfish behavior and the expected effects of natural selection?  Search hints: evolutionary game t
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_115952_113846.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=5
+[judge] refined_question: What mechanisms allow cooperative traits to persist in biological simulations despite the presence of selfish behavior and the expected effects of natural selection?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): What mechanisms allow cooperative traits to persist in biological simulations despite the presence of selfish behavior and the expected effects of natural selection?  Search hints: evolutionary game t
+[judge] search_hint: evolutionary game theory, cooperation, selfish behavior, natural selection, biological simulations, evolutionary dynamics, trait persistence, simulation modeling, evolutionary biology, group selection, kin selection, reciprocal altruism
+[retrieve] Query (first 200 chars): What mechanisms allow cooperative traits to persist in biological simulations despite the presence of selfish behavior and the expected effects of natural selection?  Search hints: evolutionary game t
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1408.1869v1.tei.tei chunk_id=1408.1869v1.tei.tei_chunk-19 retr_score=0.3462 section=6. Discussion :: To sum up, negative feedback further introduces additional speed-accuracy trade-offs for genes as information processors. These trade-offs manifest through eith...
+[judge] cand#2: paper_id=0112110v1.tei.tei chunk_id=0112110v1.tei.tei_chunk-10 retr_score=0.3064 section=A. Collaboration network :: Our algorithm thus seems to find two types of communities: scientists grouped together by similarity either of research topic or of methodology. It is not surpr...
+[judge] cand#3: paper_id=0112110v1.tei.tei chunk_id=0112110v1.tei.tei_chunk-2 retr_score=0.3030 section=I. INTRODUCTION :: A third property that many networks have in common is clustering, or network transitivity, which is the property that two vertices that are both neighbors of th...
+[judge] cand#4: paper_id=0112110v1.tei.tei chunk_id=0112110v1.tei.tei_chunk-9 retr_score=0.2965 section=A. Collaboration network :: We have applied our community-finding method to a collaboration network of scientists at the Santa Fe Institute, an interdisciplinary research center in Santa F...
+[judge] cand#5: paper_id=1907.02893v3.tei.tei chunk_id=1907.02893v3.tei.tei_chunk-24 retr_score=0.2845 section=Eric: :: Eric: Thank you for the interesting chat, Irma. Irma: The pleasure is mine! Eric: One of my takeaways is that discarding spurious correlations is something doab...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["mechanisms allowing cooperative traits to persist in biological simulations"],   "next_question": "What specific evolutionary dynamics or mechanisms enable cooperative traits to persist in biological simulations despite the presence of selfish behavior?",   "accept": [],   "reject": [     {"chunk_id": "1408.1869v1.tei.tei_chunk-19", "paper_id": "1408.1869v1.tei.tei", "reason": "not relevant to cooperative traits in biological simulations"},     {"chunk_id": "0112110v1.tei.tei_chunk-10", "paper_id": "0112110v1.tei.tei", "reason
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251223_120056_237811.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 0 | Total rejected: 5
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): What specific evolutionary dynamics or mechanisms enable cooperative traits to persist in biological simulations despite the presence of selfish behavior?  Search hints: evolutionary game theory, coop
+[judge] search_hint: evolutionary game theory, cooperation, selfish behavior, natural selection, biological simulations, evolutionary dynamics, trait persistence, simulation modeling, evolutionary biology, group selection, kin selection, reciprocal altruism
+[retrieve] Query (first 200 chars): What specific evolutionary dynamics or mechanisms enable cooperative traits to persist in biological simulations despite the presence of selfish behavior?  Search hints: evolutionary game theory, coop
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1312.6120v3.tei.tei chunk_id=1312.6120v3.tei.tei_chunk-5 retr_score=0.2621 section=Learning dynamics with orthogonal inputs :: and display an interesting combination of cooperative and competitive interactions. Consider the first terms in each equation. In these terms, the connectivity ...
+[judge] cand#2: paper_id=1312.6120v3.tei.tei chunk_id=1312.6120v3.tei.tei_chunk-6 retr_score=0.2456 section=The time course of learning :: It is difficult though to exactly solve (5) starting from arbitrary initial conditions because of the competitive interactions between different input-output mo...
+[judge] cand#3: paper_id=1502.05477v5.tei.tei chunk_id=1502.05477v5.tei.tei_chunk-17 retr_score=0.2368 section=A Proof of Policy Improvement Bound :: Definition 1. (π, π) is an α-coupled policy pair if it defines a joint distribution (a, ã)|s, such that P (a = ã|s) ≤ α for all s. π and π will denote the margi...
+[judge] cand#4: paper_id=1312.6120v3.tei.tei chunk_id=1312.6120v3.tei.tei_chunk-7 retr_score=0.2213 section=The time course of learning :: Thus this class of conditions defines an invariant manifold in weight space where the modes evolve independently of each other.  If we let a = a α • r α , b = b...
+[judge] cand#5: paper_id=0401011v1.tei.tei chunk_id=0401011v1.tei.tei_chunk-7 retr_score=0.2123 section=METHODS :: Where possible, we adopt the notation of Yeramian et al.(ref. 25) to illustrate both the similarities and the differences between their approach and the present...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["evolutionary dynamics enabling cooperative traits to persist in biological simulations", "mechanisms of cooperation in the presence of selfish behavior"],   "next_question": "What specific mechanisms or dynamics allow cooperative traits to emerge and persist in biological simulations, despite the presence of selfish behavior, and how do these mechanisms interact with natural selection?",   "accept": [],   "reject": [     {"chunk_id": "1312.6120v3.tei.tei_chunk-5", "paper_id": "1312.6120v3.tei.tei", "reason": "irrelevant to
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251223_120110_370017.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 0 | Total rejected: 10
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): What specific mechanisms or dynamics allow cooperative traits to emerge and persist in biological simulations, despite the presence of selfish behavior, and how do these mechanisms interact with natur
+[judge] search_hint: cooperative traits, biological simulations, evolutionary dynamics, natural selection, selfish behavior, group selection, kin selection, reciprocal altruism, simulation modeling, evolutionary biology
+[retrieve] Query (first 200 chars): What specific mechanisms or dynamics allow cooperative traits to emerge and persist in biological simulations, despite the presence of selfish behavior, and how do these mechanisms interact with natur
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=0706.1079v2.tei.tei chunk_id=0706.1079v2.tei.tei_chunk-16 retr_score=0.2709 section=5. THE EQUILIBRIUM CO-ORBITAL NUMBER :: The numerical values we have chosen for these simulations reflect planet formation in the terrestrial region. We center the annulus of the simulations at 1 AU. ...
+[judge] cand#2: paper_id=0706.1079v2.tei.tei chunk_id=0706.1079v2.tei.tei_chunk-2 retr_score=0.2556 section=1. INTRODUCTION :: The early stages in the formation of planetary systems are well described by statistical calculations of the evolution of mass distributions and velocity disper...
+[judge] cand#3: paper_id=0706.1079v2.tei.tei chunk_id=0706.1079v2.tei.tei_chunk-13 retr_score=0.2391 section=4. OLIGARCHIC PLANET FORMATION :: The simulations of section 3 demonstrate the transition from a disordered swarm of protoplanets to an orderly configuration of co-orbital rows each containing s...
+[judge] cand#4: paper_id=0706.1079v2.tei.tei chunk_id=0706.1079v2.tei.tei_chunk-15 retr_score=0.2366 section=5. THE EQUILIBRIUM CO-ORBITAL NUMBER :: As the protoplanets evolve, they experience many epochs of reconfiguration that change the typical coorbital number. The examples given in previous sections of ...
+[judge] cand#5: paper_id=0706.1079v2.tei.tei chunk_id=0706.1079v2.tei.tei_chunk-5 retr_score=0.2351 section=2. THE THREE-BODY PROBLEM :: x 2 -e 2 = const.  (1)  If the encounter increases e, |x| must also increase. The change in x resulting from a single interaction on an initially circular orbit...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["mechanisms for cooperative traits to emerge and persist in biological simulations", "interaction with natural selection"],   "next_question": "What biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution of cooperative behavior?",   "accept": [],   "reject": [     {"chunk_id": "0706.1079v2.tei.tei_chunk-16", "paper_id": "0706.1079v2.tei.tei", "reason": "irrelevant to cooperative traits and biolo
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251223_120125_711704.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 0 | Total rejected: 15
+
+[judge] ===== Iteration 4 =====
+[judge] retrieval_query (first 200 chars): What biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution of cooper
+[judge] search_hint: cooperative traits, biological simulations, evolutionary dynamics, natural selection, selfish behavior, group selection, kin selection, reciprocal altruism, simulation modeling, evolutionary biology, emergence of cooperation
+[retrieve] Query (first 200 chars): What biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution of cooper
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-2 retr_score=0.2638 section=Introduction :: Humans' capacity for combinatorial generalization depends critically on our cognitive mechanisms for representing structure and reasoning about relations. We re...
+[judge] cand#2: paper_id=0612025v1.tei.tei chunk_id=0612025v1.tei.tei_chunk-3 retr_score=0.2108 section=Minimal spiking models :: Neural dynamics are typically described by conductance-based models which describe the temporal evolution of the voltage V due to an input current I and the var...
+[judge] cand#3: paper_id=0612025v1.tei.tei chunk_id=0612025v1.tei.tei_chunk-19 retr_score=0.2090 section=Abbott-Kepler model :: We compare results at different variances with our discussion in §2.4. Some features of variance dependence are shared with the toy model in §2.4: the eigenvalu...
+[judge] cand#4: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-33 retr_score=0.2056 section=Attention-based approaches :: --- ## Footnotes  [1] Whether this entails a "language of thought"(Fodor, 1975) is beyond the scope of this work.  [2] This pattern of composition in depth is u...
+[judge] cand#5: paper_id=0612025v1.tei.tei chunk_id=0612025v1.tei.tei_chunk-21 retr_score=0.2048 section=Summary :: Here we have investigated the meaning or interpretation of the features derived from the spike- triggered covariance method applied to two simple neuron models,...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["biological mechanisms and dynamics enabling cooperative traits to emerge and persist in simulations", "interaction with natural selection to influence the evolution of cooperative behavior"],   "next_question": "What specific biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution of cooperative behavior in biological systems?",   "accept": [],   "reject": [     {"chunk_id": "1806.01261v3.tei.te
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_4_20251223_120140_648263.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 0 | Total rejected: 20
+
+[judge] ===== Iteration 5 =====
+[judge] retrieval_query (first 200 chars): What specific biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution 
+[judge] search_hint: biological simulations, cooperative traits, natural selection, evolutionary biology, simulation modeling, emergence of cooperation, group selection, kin selection, reciprocal altruism
+[retrieve] Query (first 200 chars): What specific biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution 
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1605.02688v1.tei.tei chunk_id=1605.02688v1.tei.tei_chunk-8 retr_score=0.2523 section=2. Shared variables :: Shared variables are symbolic variables that are associated with persistent values, that are shared between Theano functions. They can only be input variables (...
+[judge] cand#2: paper_id=1802.06360v2.tei.tei chunk_id=1802.06360v2.tei.tei_chunk-11 retr_score=0.2121 section=Conclusion :: [5] http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
+[judge] cand#3: paper_id=1605.02688v1.tei.tei chunk_id=1605.02688v1.tei.tei_chunk-3 retr_score=0.1832 section=C. Software based on Theano :: Another example is PyMC3 [12], a probabilistic programming framework that uses Theano to derive expressions for gradients automatically, and to generate C code ...
+[judge] cand#4: paper_id=0408205v1.tei.tei chunk_id=0408205v1.tei.tei_chunk-7 retr_score=0.1828 section=)-(27). :: A first check is the elastic case, α = 1, for which one obtains a = b = 1 which gives γ T = 1 and, since a/b = γ R /γ T , γ R = 1 i.e., the temperatures of tran...
+[judge] cand#5: paper_id=1008.2026v1.tei.tei chunk_id=1008.2026v1.tei.tei_chunk-77 retr_score=0.1761 section=5. General phase diagram of topological Mott insulator and topological Anderson insulator :: Next we shall discuss the physical consequences implied by the topological order parameter such as P 2 and P 3 . The discussion we shall present is very general...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["biological mechanisms and dynamics enabling cooperative traits to emerge and persist in simulations", "interaction with natural selection to influence the evolution of cooperative behavior"],   "next_question": "What are the key biological mechanisms and dynamics that allow cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to shape the evolution of cooperative behavior in biological systems?",   "accept": [],   "reject": [     {"chunk_id": "1605.02688v1.tei
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_5_20251223_120158_710697.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 0 | Total rejected: 25
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What are the key biological mechanisms and dynamics that allow cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to shape the evoluti
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What are the key biological mechanisms that allow cooperative traits to emerge in simulations?
+[retrieve] Query (first 200 chars): What are the key biological mechanisms that allow cooperative traits to emerge in simulations?  Search hints: cooperative traits, emergence, simulations, biological mechanisms, evolutionary game theor
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How do these biological mechanisms interact with natural selection to shape the evolution of cooperative behavior?
+[retrieve] Query (first 200 chars): How do these biological mechanisms interact with natural selection to shape the evolution of cooperative behavior?  Search hints: natural selection, cooperative behavior, evolution, biological mechani
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What dynamics allow cooperative traits to persist in biological systems over time?
+[retrieve] Query (first 200 chars): What dynamics allow cooperative traits to persist in biological systems over time?  Search hints: cooperative traits, persistence, biological systems, evolutionary stability, dynamic models, cooperati
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 0 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251223_120258_197430.json

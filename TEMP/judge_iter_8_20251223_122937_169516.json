@@ -1,0 +1,248 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "genetic and environmental factors influencing cooperative traits in biological simulations",
+    "interaction with natural selection and individual fitness"
+  ],
+  "next_question": "What specific genetic and environmental factors contribute to the emergence of cooperative traits in biological simulations, and how do these factors interact with natural selection and individual fitness in evolutionary biology?",
+  "accept": [],
+  "reject": [
+    {
+      "chunk_id": "0306458v1.tei.tei_chunk-2",
+      "paper_id": "0306458v1.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "1809.10341v2.tei.tei_chunk-16",
+      "paper_id": "1809.10341v2.tei.tei",
+      "reason": "unrelated to evolutionary biology and cooperative traits"
+    },
+    {
+      "chunk_id": "1703.03130v1.tei.tei_chunk-15",
+      "paper_id": "1703.03130v1.tei.tei",
+      "reason": "not relevant to biological simulations and evolutionary biology"
+    },
+    {
+      "chunk_id": "1609.02907v4.tei.tei_chunk-13",
+      "paper_id": "1609.02907v4.tei.tei",
+      "reason": "unrelated to cooperative traits and evolutionary biology"
+    },
+    {
+      "chunk_id": "0210406v1.tei.tei_chunk-1",
+      "paper_id": "0210406v1.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    }
+  ],
+  "rejected_paper_ids": [
+    "0005544v1.tei.tei",
+    "0108004v1.tei.tei",
+    "0112110v1.tei.tei",
+    "0210406v1.tei.tei",
+    "0306458v1.tei.tei",
+    "0401011v1.tei.tei",
+    "0403020v1.tei.tei",
+    "0408205v1.tei.tei",
+    "0612025v1.tei.tei",
+    "0706.1079v2.tei.tei",
+    "0802.0678v1.tei.tei",
+    "1008.2026v1.tei.tei",
+    "1307.3414v1.tei.tei",
+    "1308.0850v5.tei.tei",
+    "1312.6120v3.tei.tei",
+    "1408.1869v1.tei.tei",
+    "1411.2738v4.tei.tei",
+    "1502.05477v5.tei.tei",
+    "1605.02688v1.tei.tei",
+    "1609.02907v4.tei.tei",
+    "1703.03130v1.tei.tei",
+    "1704.01212v2.tei.tei",
+    "1707.06347v2.tei.tei",
+    "1802.06360v2.tei.tei",
+    "1806.01261v3.tei.tei",
+    "1809.10341v2.tei.tei",
+    "1907.02893v3.tei.tei",
+    "9809034v1 (1).tei.tei",
+    "9809034v1.tei.tei",
+    "9906230v1.tei.tei",
+    "9908467v1.tei.tei"
+  ],
+  "search_hint": "cooperative traits, biological simulations, genetic factors, environmental factors, natural selection, individual fitness, evolutionary biology, game theory, kin selection, reciprocal altruism",
+  "iteration": 8,
+  "accepted_chunks": [],
+  "accepted_chunk_ids": [],
+  "accepted_paper_ids": [],
+  "rejected_chunk_ids": [
+    "0005544v1.tei.tei_chunk-7",
+    "0108004v1.tei.tei_chunk-13",
+    "0112110v1.tei.tei_chunk-10",
+    "0112110v1.tei.tei_chunk-2",
+    "0112110v1.tei.tei_chunk-9",
+    "0210406v1.tei.tei_chunk-1",
+    "0306458v1.tei.tei_chunk-2",
+    "0401011v1.tei.tei_chunk-6",
+    "0401011v1.tei.tei_chunk-7",
+    "0401011v1.tei.tei_chunk-8",
+    "0403020v1.tei.tei_chunk-1",
+    "0408205v1.tei.tei_chunk-1",
+    "0612025v1.tei.tei_chunk-19",
+    "0612025v1.tei.tei_chunk-21",
+    "0612025v1.tei.tei_chunk-7",
+    "0706.1079v2.tei.tei_chunk-16",
+    "0802.0678v1.tei.tei_chunk-3",
+    "1008.2026v1.tei.tei_chunk-77",
+    "1307.3414v1.tei.tei_chunk-10",
+    "1308.0850v5.tei.tei_chunk-22",
+    "1312.6120v3.tei.tei_chunk-5",
+    "1408.1869v1.tei.tei_chunk-19",
+    "1411.2738v4.tei.tei_chunk-5",
+    "1502.05477v5.tei.tei_chunk-17",
+    "1605.02688v1.tei.tei_chunk-7",
+    "1609.02907v4.tei.tei_chunk-13",
+    "1703.03130v1.tei.tei_chunk-15",
+    "1704.01212v2.tei.tei_chunk-8",
+    "1707.06347v2.tei.tei_chunk-8",
+    "1802.06360v2.tei.tei_chunk-11",
+    "1806.01261v3.tei.tei_chunk-2",
+    "1809.10341v2.tei.tei_chunk-16",
+    "1907.02893v3.tei.tei_chunk-24",
+    "9809034v1 (1).tei.tei_chunk-10",
+    "9809034v1 (1).tei.tei_chunk-4",
+    "9809034v1.tei.tei_chunk-10",
+    "9809034v1.tei.tei_chunk-4",
+    "9809034v1.tei.tei_chunk-7",
+    "9906230v1.tei.tei_chunk-1",
+    "9908467v1.tei.tei_chunk-3"
+  ],
+  "accepted_this_round": [],
+  "rejected_this_round": [
+    {
+      "chunk_id": "0306458v1.tei.tei_chunk-2",
+      "paper_id": "0306458v1.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "1809.10341v2.tei.tei_chunk-16",
+      "paper_id": "1809.10341v2.tei.tei",
+      "reason": "unrelated to evolutionary biology and cooperative traits"
+    },
+    {
+      "chunk_id": "1703.03130v1.tei.tei_chunk-15",
+      "paper_id": "1703.03130v1.tei.tei",
+      "reason": "not relevant to biological simulations and evolutionary biology"
+    },
+    {
+      "chunk_id": "1609.02907v4.tei.tei_chunk-13",
+      "paper_id": "1609.02907v4.tei.tei",
+      "reason": "unrelated to cooperative traits and evolutionary biology"
+    },
+    {
+      "chunk_id": "0210406v1.tei.tei_chunk-1",
+      "paper_id": "0210406v1.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    }
+  ],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "There is no evidence provided to support any conclusions about the genetic and environmental factors influencing the emergence of cooperative traits in biological simulations."
+    ],
+    "evidence_citations": []
+  },
+  "_debug": {
+    "retrieval_query": "What genetic and environmental factors influence the emergence of cooperative traits in biological simulations, and how do these factors interact with natural selection and individual fitness in evolutionary biology?\n\nSearch hints: cooperative traits, biological simulations, genetic factors, environmental factors, natural selection, individual fitness, evolutionary biology, game theory, kin selection, reciprocal altruism, evolutionary game theory, simulation modeling",
+    "candidates": [
+      {
+        "paper_id": "0306458v1.tei.tei",
+        "chunk_id": "0306458v1.tei.tei_chunk-2",
+        "retr_score": 0.13862465
+      },
+      {
+        "paper_id": "1809.10341v2.tei.tei",
+        "chunk_id": "1809.10341v2.tei.tei_chunk-16",
+        "retr_score": 0.12538166
+      },
+      {
+        "paper_id": "1703.03130v1.tei.tei",
+        "chunk_id": "1703.03130v1.tei.tei_chunk-15",
+        "retr_score": 0.11730826
+      },
+      {
+        "paper_id": "1609.02907v4.tei.tei",
+        "chunk_id": "1609.02907v4.tei.tei_chunk-13",
+        "retr_score": 0.10340437
+      },
+      {
+        "paper_id": "0210406v1.tei.tei",
+        "chunk_id": "0210406v1.tei.tei_chunk-1",
+        "retr_score": 0.10102147
+      }
+    ],
+    "excluded_chunk_ids": [
+      "0005544v1.tei.tei_chunk-7",
+      "0108004v1.tei.tei_chunk-13",
+      "0112110v1.tei.tei_chunk-10",
+      "0112110v1.tei.tei_chunk-2",
+      "0112110v1.tei.tei_chunk-9",
+      "0401011v1.tei.tei_chunk-6",
+      "0401011v1.tei.tei_chunk-7",
+      "0401011v1.tei.tei_chunk-8",
+      "0403020v1.tei.tei_chunk-1",
+      "0408205v1.tei.tei_chunk-1",
+      "0612025v1.tei.tei_chunk-19",
+      "0612025v1.tei.tei_chunk-21",
+      "0612025v1.tei.tei_chunk-7",
+      "0706.1079v2.tei.tei_chunk-16",
+      "0802.0678v1.tei.tei_chunk-3",
+      "1008.2026v1.tei.tei_chunk-77",
+      "1307.3414v1.tei.tei_chunk-10",
+      "1308.0850v5.tei.tei_chunk-22",
+      "1312.6120v3.tei.tei_chunk-5",
+      "1408.1869v1.tei.tei_chunk-19",
+      "1411.2738v4.tei.tei_chunk-5",
+      "1502.05477v5.tei.tei_chunk-17",
+      "1605.02688v1.tei.tei_chunk-7",
+      "1704.01212v2.tei.tei_chunk-8",
+      "1707.06347v2.tei.tei_chunk-8",
+      "1802.06360v2.tei.tei_chunk-11",
+      "1806.01261v3.tei.tei_chunk-2",
+      "1907.02893v3.tei.tei_chunk-24",
+      "9809034v1 (1).tei.tei_chunk-10",
+      "9809034v1 (1).tei.tei_chunk-4",
+      "9809034v1.tei.tei_chunk-10",
+      "9809034v1.tei.tei_chunk-4",
+      "9809034v1.tei.tei_chunk-7",
+      "9906230v1.tei.tei_chunk-1",
+      "9908467v1.tei.tei_chunk-3"
+    ],
+    "excluded_paper_ids": [
+      "0005544v1.tei.tei",
+      "0108004v1.tei.tei",
+      "0112110v1.tei.tei",
+      "0401011v1.tei.tei",
+      "0403020v1.tei.tei",
+      "0408205v1.tei.tei",
+      "0612025v1.tei.tei",
+      "0706.1079v2.tei.tei",
+      "0802.0678v1.tei.tei",
+      "1008.2026v1.tei.tei",
+      "1307.3414v1.tei.tei",
+      "1308.0850v5.tei.tei",
+      "1312.6120v3.tei.tei",
+      "1408.1869v1.tei.tei",
+      "1411.2738v4.tei.tei",
+      "1502.05477v5.tei.tei",
+      "1605.02688v1.tei.tei",
+      "1704.01212v2.tei.tei",
+      "1707.06347v2.tei.tei",
+      "1802.06360v2.tei.tei",
+      "1806.01261v3.tei.tei",
+      "1907.02893v3.tei.tei",
+      "9809034v1 (1).tei.tei",
+      "9809034v1.tei.tei",
+      "9906230v1.tei.tei",
+      "9908467v1.tei.tei"
+    ],
+    "raw_llm_output_first_2000_chars": "```\n{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"genetic and environmental factors influencing cooperative traits in biological simulations\", \"interaction with natural selection and individual fitness\"],\n  \"next_question\": \"What specific genetic and environmental factors contribute to the emergence of cooperative traits in biological simulations, and how do these factors interact with natural selection and individual fitness in evolutionary biology?\",\n  \"accept\": [],\n  \"reject\": [\n    {\"chunk_id\": \"0306458v1.tei.tei_chunk-2\", \"paper_id\": \"0306458v1.tei.tei\", \"reason\": \"irrelevant to biological simulations and cooperative traits\"},\n    {\"chunk_id\": \"1809.10341v2.tei.tei_chunk-16\", \"paper_id\": \"1809.10341v2.tei.tei\", \"reason\": \"unrelated to evolutionary biology and cooperative traits\"},\n    {\"chunk_id\": \"1703.03130v1.tei.tei_chunk-15\", \"paper_id\": \"1703.03130v1.tei.tei\", \"reason\": \"not relevant to biological simulations and evolutionary biology\"},\n    {\"chunk_id\": \"1609.02907v4.tei.tei_chunk-13\", \"paper_id\": \"1609.02907v4.tei.tei\", \"reason\": \"unrelated to cooperative traits and evolutionary biology\"},\n    {\"chunk_id\": \"0210406v1.tei.tei_chunk-1\", \"paper_id\": \"0210406v1.tei.tei\", \"reason\": \"irrelevant to biological simulations and cooperative traits\"}\n  ],\n  \"rejected_paper_ids\": [\"0306458v1.tei.tei\", \"1809.10341v2.tei.tei\", \"1703.03130v1.tei.tei\", \"1609.02907v4.tei.tei\", \"0210406v1.tei.tei\"],\n  \"search_hint\": \"cooperative traits, biological simulations, genetic factors, environmental factors, natural selection, individual fitness, evolutionary biology, game theory, kin selection, reciprocal altruism\"\n}\n```"
+  }
+}

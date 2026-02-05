@@ -1,0 +1,6614 @@
+{
+  "paper_id": "16DF9323F053C7755ECEFB25C2B7A771",
+  "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+  "arxiv_id": "arXiv:2312.10997v5[cs.CL]",
+  "authors": [
+    {
+      "given": "Yunfan",
+      "family": "Gao"
+    },
+    {
+      "given": "Yun",
+      "family": "Xiong"
+    },
+    {
+      "given": "Xinyu",
+      "family": "Gao"
+    },
+    {
+      "given": "Kangxiang",
+      "family": "Jia"
+    },
+    {
+      "given": "Jinliu",
+      "family": "Pan"
+    },
+    {
+      "given": "Yuxi",
+      "family": "Bi"
+    },
+    {
+      "given": "Yi",
+      "family": "Dai"
+    },
+    {
+      "given": "Jiawei",
+      "family": "Sun"
+    },
+    {
+      "given": "Meng",
+      "family": "Wang"
+    },
+    {
+      "given": "Haofen",
+      "family": "Wang"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Multi-Hop",
+          "family": "Hotpotqa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Multi-Choice QA QuALITY",
+      "container_title": "Multi-Choice QA QuALITY",
+      "year": null,
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b2",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Commonsenseqa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Q A",
+          "family": "Graph"
+        },
+        {
+          "given": null,
+          "family": "Graphqa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "International Conference on Machine Learning",
+      "container_title": "International Conference on Machine Learning",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Kandpal"
+        },
+        {
+          "given": "H",
+          "family": "Deng"
+        },
+        {
+          "given": "A",
+          "family": "Roberts"
+        },
+        {
+          "given": "E",
+          "family": "Wallace"
+        },
+        {
+          "given": "C",
+          "family": "Raffel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Siren's song in the ai ocean: A survey on hallucination in large language models",
+      "container_title": "Siren's song in the ai ocean: A survey on hallucination in large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2309.01219"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "L",
+          "family": "Cui"
+        },
+        {
+          "given": "D",
+          "family": "Cai"
+        },
+        {
+          "given": "L",
+          "family": "Liu"
+        },
+        {
+          "given": "T",
+          "family": "Fu"
+        },
+        {
+          "given": "X",
+          "family": "Huang"
+        },
+        {
+          "given": "E",
+          "family": "Zhao"
+        },
+        {
+          "given": "Y",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": "Chen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Gar-meets-rag paradigm for zero-shot information retrieval",
+      "container_title": "Gar-meets-rag paradigm for zero-shot information retrieval",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.20158"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Arora"
+        },
+        {
+          "given": "A",
+          "family": "Kini"
+        },
+        {
+          "given": "S R",
+          "family": "Chowdhury"
+        },
+        {
+          "given": "N",
+          "family": "Natarajan"
+        },
+        {
+          "given": "G",
+          "family": "Sinha"
+        },
+        {
+          "given": "A",
+          "family": "Sharma"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2020",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Lewis"
+        },
+        {
+          "given": "E",
+          "family": "Perez"
+        },
+        {
+          "given": "A",
+          "family": "Piktus"
+        },
+        {
+          "given": "F",
+          "family": "Petroni"
+        },
+        {
+          "given": "V",
+          "family": "Karpukhin"
+        },
+        {
+          "given": "N",
+          "family": "Goyal"
+        },
+        {
+          "given": "H",
+          "family": "Küttler"
+        },
+        {
+          "given": "M",
+          "family": "Lewis"
+        },
+        {
+          "given": "W",
+          "family": "-T. Yih"
+        },
+        {
+          "given": "T",
+          "family": "Rocktäschel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "International conference on machine learning",
+      "container_title": "International conference on machine learning",
+      "year": "2022",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Borgeaud"
+        },
+        {
+          "given": "A",
+          "family": "Mensch"
+        },
+        {
+          "given": "J",
+          "family": "Hoffmann"
+        },
+        {
+          "given": "T",
+          "family": "Cai"
+        },
+        {
+          "given": "E",
+          "family": "Rutherford"
+        },
+        {
+          "given": "K",
+          "family": "Millican"
+        },
+        {
+          "given": "G B",
+          "family": "Van Den Driessche"
+        },
+        {
+          "given": "J.-B",
+          "family": "Lespiau"
+        },
+        {
+          "given": "B",
+          "family": "Damoc"
+        },
+        {
+          "given": "A",
+          "family": "Clark"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2022",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Ouyang"
+        },
+        {
+          "given": "J",
+          "family": "Wu"
+        },
+        {
+          "given": "X",
+          "family": "Jiang"
+        },
+        {
+          "given": "D",
+          "family": "Almeida"
+        },
+        {
+          "given": "C",
+          "family": "Wainwright"
+        },
+        {
+          "given": "P",
+          "family": "Mishkin"
+        },
+        {
+          "given": "C",
+          "family": "Zhang"
+        },
+        {
+          "given": "S",
+          "family": "Agarwal"
+        },
+        {
+          "given": "K",
+          "family": "Slama"
+        },
+        {
+          "given": "A",
+          "family": "Ray"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Query rewriting for retrieval-augmented large language models",
+      "container_title": "Query rewriting for retrieval-augmented large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.14283"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Ma"
+        },
+        {
+          "given": "Y",
+          "family": "Gong"
+        },
+        {
+          "given": "P",
+          "family": "He"
+        },
+        {
+          "given": "H",
+          "family": "Zhao"
+        },
+        {
+          "given": "N",
+          "family": "Duan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Advanced rag techniques: an illustrated overview",
+      "container_title": "Advanced rag techniques: an illustrated overview",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Ilin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Large language model based long-tail query rewriting in taobao search",
+      "container_title": "Large language model based long-tail query rewriting in taobao search",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.03758"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Peng"
+        },
+        {
+          "given": "G",
+          "family": "Li"
+        },
+        {
+          "given": "Y",
+          "family": "Jiang"
+        },
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "D",
+          "family": "Ou"
+        },
+        {
+          "given": "X",
+          "family": "Zeng"
+        },
+        {
+          "given": "E",
+          "family": "Chen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Take a step back: Evoking reasoning via abstraction in large language models",
+      "container_title": "Take a step back: Evoking reasoning via abstraction in large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.06117"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H S",
+          "family": "Zheng"
+        },
+        {
+          "given": "S",
+          "family": "Mishra"
+        },
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "H.-T",
+          "family": "Cheng"
+        },
+        {
+          "given": "E H",
+          "family": "Chi"
+        },
+        {
+          "given": "Q V",
+          "family": "Le"
+        },
+        {
+          "given": "D",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Precise zero-shot dense retrieval without relevance labels",
+      "container_title": "Precise zero-shot dense retrieval without relevance labels",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2212.10496"
+        }
+      ],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Gao"
+        },
+        {
+          "given": "X",
+          "family": "Ma"
+        },
+        {
+          "given": "J",
+          "family": "Lin"
+        },
+        {
+          "given": "J",
+          "family": "Callan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker",
+      "container_title": "Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Blagojevi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Generate rather than retrieve: Large language models are strong context generators",
+      "container_title": "Generate rather than retrieve: Large language models are strong context generators",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2209.10063"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Yu"
+        },
+        {
+          "given": "D",
+          "family": "Iter"
+        },
+        {
+          "given": "S",
+          "family": "Wang"
+        },
+        {
+          "given": "Y",
+          "family": "Xu"
+        },
+        {
+          "given": "M",
+          "family": "Ju"
+        },
+        {
+          "given": "S",
+          "family": "Sanyal"
+        },
+        {
+          "given": "C",
+          "family": "Zhu"
+        },
+        {
+          "given": "M",
+          "family": "Zeng"
+        },
+        {
+          "given": "M",
+          "family": "Jiang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+      "container_title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.15294"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Shao"
+        },
+        {
+          "given": "Y",
+          "family": "Gong"
+        },
+        {
+          "given": "Y",
+          "family": "Shen"
+        },
+        {
+          "given": "M",
+          "family": "Huang"
+        },
+        {
+          "given": "N",
+          "family": "Duan"
+        },
+        {
+          "given": "W",
+          "family": "Chen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+      "container_title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2308.11761"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Wang"
+        },
+        {
+          "given": "Q",
+          "family": "Yang"
+        },
+        {
+          "given": "Y",
+          "family": "Qiu"
+        },
+        {
+          "given": "J",
+          "family": "Liang"
+        },
+        {
+          "given": "Q",
+          "family": "He"
+        },
+        {
+          "given": "Z",
+          "family": "Gu"
+        },
+        {
+          "given": "Y",
+          "family": "Xiao"
+        },
+        {
+          "given": "W",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Forget rag, the future is rag-fusion",
+      "container_title": "Forget rag, the future is rag-fusion",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A H",
+          "family": "Raudaschl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+      "container_title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.02437"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Cheng"
+        },
+        {
+          "given": "D",
+          "family": "Luo"
+        },
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "L",
+          "family": "Liu"
+        },
+        {
+          "given": "D",
+          "family": "Zhao"
+        },
+        {
+          "given": "R",
+          "family": "Yan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Training data is more valuable than you think: A simple and effective method by retrieving from training data",
+      "container_title": "Training data is more valuable than you think: A simple and effective method by retrieving from training data",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2203.08773"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Wang"
+        },
+        {
+          "given": "Y",
+          "family": "Xu"
+        },
+        {
+          "given": "Y",
+          "family": "Fang"
+        },
+        {
+          "given": "Y",
+          "family": "Liu"
+        },
+        {
+          "given": "S",
+          "family": "Sun"
+        },
+        {
+          "given": "R",
+          "family": "Xu"
+        },
+        {
+          "given": "C",
+          "family": "Zhu"
+        },
+        {
+          "given": "M",
+          "family": "Zeng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+      "container_title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.06595"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "E",
+          "family": "Nie"
+        },
+        {
+          "given": "S",
+          "family": "Liang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+      "container_title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2303.08518"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Cheng"
+        },
+        {
+          "given": "S",
+          "family": "Huang"
+        },
+        {
+          "given": "J",
+          "family": "Bi"
+        },
+        {
+          "given": "Y",
+          "family": "Zhan"
+        },
+        {
+          "given": "J",
+          "family": "Liu"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "H",
+          "family": "Sun"
+        },
+        {
+          "given": "F",
+          "family": "Wei"
+        },
+        {
+          "given": "D",
+          "family": "Deng"
+        },
+        {
+          "given": "Q",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Promptagator: Few-shot dense retrieval from 8 examples",
+      "container_title": "Promptagator: Few-shot dense retrieval from 8 examples",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2209.11755"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Dai"
+        },
+        {
+          "given": "V Y",
+          "family": "Zhao"
+        },
+        {
+          "given": "J",
+          "family": "Ma"
+        },
+        {
+          "given": "Y",
+          "family": "Luan"
+        },
+        {
+          "given": "J",
+          "family": "Ni"
+        },
+        {
+          "given": "J",
+          "family": "Lu"
+        },
+        {
+          "given": "A",
+          "family": "Bakalov"
+        },
+        {
+          "given": "K",
+          "family": "Guu"
+        },
+        {
+          "given": "K B",
+          "family": "Hall"
+        },
+        {
+          "given": "M.-W",
+          "family": "Chang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Recitation-augmented language models",
+      "container_title": "Recitation-augmented language models",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2210.01296"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Sun"
+        },
+        {
+          "given": "X",
+          "family": "Wang"
+        },
+        {
+          "given": "Y",
+          "family": "Tay"
+        },
+        {
+          "given": "Y",
+          "family": "Yang"
+        },
+        {
+          "given": "D",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp",
+      "container_title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2212.14024"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Khattab"
+        },
+        {
+          "given": "K",
+          "family": "Santhanam"
+        },
+        {
+          "given": "X L",
+          "family": "Li"
+        },
+        {
+          "given": "D",
+          "family": "Hall"
+        },
+        {
+          "given": "P",
+          "family": "Liang"
+        },
+        {
+          "given": "C",
+          "family": "Potts"
+        },
+        {
+          "given": "M",
+          "family": "Zaharia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Active retrieval augmented generation",
+      "container_title": "Active retrieval augmented generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.06983"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Jiang"
+        },
+        {
+          "given": "F F",
+          "family": "Xu"
+        },
+        {
+          "given": "L",
+          "family": "Gao"
+        },
+        {
+          "given": "Z",
+          "family": "Sun"
+        },
+        {
+          "given": "Q",
+          "family": "Liu"
+        },
+        {
+          "given": "J",
+          "family": "Dwivedi-Yu"
+        },
+        {
+          "given": "Y",
+          "family": "Yang"
+        },
+        {
+          "given": "J",
+          "family": "Callan"
+        },
+        {
+          "given": "G",
+          "family": "Neubig"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+      "container_title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.11511"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Asai"
+        },
+        {
+          "given": "Z",
+          "family": "Wu"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "A",
+          "family": "Sil"
+        },
+        {
+          "given": "H",
+          "family": "Hajishirzi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Bridging the preference gap between retrievers and llms",
+      "container_title": "Bridging the preference gap between retrievers and llms",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2401.06954"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Ke"
+        },
+        {
+          "given": "W",
+          "family": "Kong"
+        },
+        {
+          "given": "C",
+          "family": "Li"
+        },
+        {
+          "given": "M",
+          "family": "Zhang"
+        },
+        {
+          "given": "Q",
+          "family": "Mei"
+        },
+        {
+          "given": "M",
+          "family": "Bendersky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+      "container_title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.01352"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X V",
+          "family": "Lin"
+        },
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "M",
+          "family": "Chen"
+        },
+        {
+          "given": "W",
+          "family": "Shi"
+        },
+        {
+          "given": "M",
+          "family": "Lomeli"
+        },
+        {
+          "given": "R",
+          "family": "James"
+        },
+        {
+          "given": "P",
+          "family": "Rodriguez"
+        },
+        {
+          "given": "J",
+          "family": "Kahn"
+        },
+        {
+          "given": "G",
+          "family": "Szilvasy"
+        },
+        {
+          "given": "M",
+          "family": "Lewis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Fine-tuning or retrieval? comparing knowledge injection in llms",
+      "container_title": "Fine-tuning or retrieval? comparing knowledge injection in llms",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2312.05934"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Ovadia"
+        },
+        {
+          "given": "M",
+          "family": "Brief"
+        },
+        {
+          "given": "M",
+          "family": "Mishaeli"
+        },
+        {
+          "given": "O",
+          "family": "Elisha"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "The Eleventh International Conference on Learning Representations",
+      "container_title": "The Eleventh International Conference on Learning Representations",
+      "year": "2022",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Lan"
+        },
+        {
+          "given": "D",
+          "family": "Cai"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "H",
+          "family": "Huang"
+        },
+        {
+          "given": "X.-L",
+          "family": "Mao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Dense x retrieval: What retrieval granularity should we use?",
+      "container_title": "Dense x retrieval: What retrieval granularity should we use?",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2312.06648"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Chen"
+        },
+        {
+          "given": "H",
+          "family": "Wang"
+        },
+        {
+          "given": "S",
+          "family": "Chen"
+        },
+        {
+          "given": "W",
+          "family": "Yu"
+        },
+        {
+          "given": "K",
+          "family": "Ma"
+        },
+        {
+          "given": "X",
+          "family": "Zhao"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        },
+        {
+          "given": "H",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Divide & conquer for entailment-aware multi-hop evidence retrieval",
+      "container_title": "Divide & conquer for entailment-aware multi-hop evidence retrieval",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.02616"
+        }
+      ],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Luo"
+        },
+        {
+          "given": "M",
+          "family": "Surdeanu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Diversify question generation with retrieval-augmented style transfer",
+      "container_title": "Diversify question generation with retrieval-augmented style transfer",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.14503"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Q",
+          "family": "Gou"
+        },
+        {
+          "given": "Z",
+          "family": "Xia"
+        },
+        {
+          "given": "B",
+          "family": "Yu"
+        },
+        {
+          "given": "H",
+          "family": "Yu"
+        },
+        {
+          "given": "F",
+          "family": "Huang"
+        },
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "N",
+          "family": "Cam-Tu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Prompt-guided retrieval augmentation for non-knowledge-intensive tasks",
+      "container_title": "Prompt-guided retrieval augmentation for non-knowledge-intensive tasks",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.17653"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Guo"
+        },
+        {
+          "given": "S",
+          "family": "Cheng"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "P",
+          "family": "Li"
+        },
+        {
+          "given": "Y",
+          "family": "Liu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "Learning to filter context for retrieval-augmented generation",
+      "container_title": "Learning to filter context for retrieval-augmented generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.08377"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "J",
+          "family": "Araki"
+        },
+        {
+          "given": "Z",
+          "family": "Jiang"
+        },
+        {
+          "given": "M R",
+          "family": "Parvez"
+        },
+        {
+          "given": "G",
+          "family": "Neubig"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Retrieval-augmented data augmentation for low-resource domain tasks",
+      "container_title": "Retrieval-augmented data augmentation for low-resource domain tasks",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2402.13482"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Seo"
+        },
+        {
+          "given": "J",
+          "family": "Baek"
+        },
+        {
+          "given": "J",
+          "family": "Thorne"
+        },
+        {
+          "given": "S J",
+          "family": "Hwang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "Large language model is not a good few-shot information extractor, but a good reranker for hard samples",
+      "container_title": "Large language model is not a good few-shot information extractor, but a good reranker for hard samples",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2303.08559"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Ma"
+        },
+        {
+          "given": "Y",
+          "family": "Cao"
+        },
+        {
+          "given": "Y",
+          "family": "Hong"
+        },
+        {
+          "given": "A",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "Retrieval-augmented generative question answering for event argument extraction",
+      "container_title": "Retrieval-augmented generative question answering for event argument extraction",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2211.07067"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Du"
+        },
+        {
+          "given": "H",
+          "family": "Ji"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "Learning to retrieve in-context examples for large language models",
+      "container_title": "Learning to retrieve in-context examples for large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2307.07164"
+        }
+      ],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Wang"
+        },
+        {
+          "given": "N",
+          "family": "Yang"
+        },
+        {
+          "given": "F",
+          "family": "Wei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "Recommender systems with generative retrieval",
+      "container_title": "Recommender systems with generative retrieval",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.05065"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Rajput"
+        },
+        {
+          "given": "N",
+          "family": "Mehta"
+        },
+        {
+          "given": "A",
+          "family": "Singh"
+        },
+        {
+          "given": "R H",
+          "family": "Keshavan"
+        },
+        {
+          "given": "T",
+          "family": "Vu"
+        },
+        {
+          "given": "L",
+          "family": "Heldt"
+        },
+        {
+          "given": "L",
+          "family": "Hong"
+        },
+        {
+          "given": "Y",
+          "family": "Tay"
+        },
+        {
+          "given": "V Q",
+          "family": "Tran"
+        },
+        {
+          "given": "J",
+          "family": "Samost"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "Language models as semantic indexers",
+      "container_title": "Language models as semantic indexers",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.07815"
+        }
+      ],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Jin"
+        },
+        {
+          "given": "H",
+          "family": "Zeng"
+        },
+        {
+          "given": "G",
+          "family": "Wang"
+        },
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "T",
+          "family": "Wei"
+        },
+        {
+          "given": "R",
+          "family": "Li"
+        },
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "Z",
+          "family": "Li"
+        },
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "H",
+          "family": "Lu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "Context tuning for retrieval augmented generation",
+      "container_title": "Context tuning for retrieval augmented generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2312.05708"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Anantha"
+        },
+        {
+          "given": "T",
+          "family": "Bethi"
+        },
+        {
+          "given": "D",
+          "family": "Vodianik"
+        },
+        {
+          "given": "S",
+          "family": "Chappidi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "Few-shot learning with retrieval augmented language models",
+      "container_title": "Few-shot learning with retrieval augmented language models",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2208.03299"
+        }
+      ],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Izacard"
+        },
+        {
+          "given": "P",
+          "family": "Lewis"
+        },
+        {
+          "given": "M",
+          "family": "Lomeli"
+        },
+        {
+          "given": "L",
+          "family": "Hosseini"
+        },
+        {
+          "given": "F",
+          "family": "Petroni"
+        },
+        {
+          "given": "T",
+          "family": "Schick"
+        },
+        {
+          "given": "J",
+          "family": "Dwivedi-Yu"
+        },
+        {
+          "given": "A",
+          "family": "Joulin"
+        },
+        {
+          "given": "S",
+          "family": "Riedel"
+        },
+        {
+          "given": "E",
+          "family": "Grave"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "Raven: In-context learning with retrieval augmented encoderdecoder language models",
+      "container_title": "Raven: In-context learning with retrieval augmented encoderdecoder language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2308.07922"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Huang"
+        },
+        {
+          "given": "W",
+          "family": "Ping"
+        },
+        {
+          "given": "P",
+          "family": "Xu"
+        },
+        {
+          "given": "M",
+          "family": "Shoeybi"
+        },
+        {
+          "given": "K C",
+          "family": null
+        },
+        {
+          "given": "-C",
+          "family": "Chang"
+        },
+        {
+          "given": "B",
+          "family": "Catanzaro"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "Shall we pretrain autoregressive language models with retrieval? a comprehensive study",
+      "container_title": "Shall we pretrain autoregressive language models with retrieval? a comprehensive study",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2304.06762"
+        }
+      ],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Wang"
+        },
+        {
+          "given": "W",
+          "family": "Ping"
+        },
+        {
+          "given": "P",
+          "family": "Xu"
+        },
+        {
+          "given": "L",
+          "family": "Mcafee"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        },
+        {
+          "given": "M",
+          "family": "Shoeybi"
+        },
+        {
+          "given": "Y",
+          "family": "Dong"
+        },
+        {
+          "given": "O",
+          "family": "Kuchaiev"
+        },
+        {
+          "given": "B",
+          "family": "Li"
+        },
+        {
+          "given": "C",
+          "family": "Xiao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+      "container_title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.07713"
+        }
+      ],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Wang"
+        },
+        {
+          "given": "W",
+          "family": "Ping"
+        },
+        {
+          "given": "L",
+          "family": "Mcafee"
+        },
+        {
+          "given": "P",
+          "family": "Xu"
+        },
+        {
+          "given": "B",
+          "family": "Li"
+        },
+        {
+          "given": "M",
+          "family": "Shoeybi"
+        },
+        {
+          "given": "B",
+          "family": "Catanzaro"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "Transactions of the Association for Computational Linguistics",
+      "container_title": "Transactions of the Association for Computational Linguistics",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Siriwardhana"
+        },
+        {
+          "given": "R",
+          "family": "Weerasekera"
+        },
+        {
+          "given": "E",
+          "family": "Wen"
+        },
+        {
+          "given": "T",
+          "family": "Kaluarachchi"
+        },
+        {
+          "given": "R",
+          "family": "Rana"
+        },
+        {
+          "given": "S",
+          "family": "Nanayakkara"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b50",
+      "title": "Augmentation-adapted retriever improves generalization of language models as generic plug-in",
+      "container_title": "Augmentation-adapted retriever improves generalization of language models as generic plug-in",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.17331"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Yu"
+        },
+        {
+          "given": "C",
+          "family": "Xiong"
+        },
+        {
+          "given": "S",
+          "family": "Yu"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b51",
+      "title": "Making retrievalaugmented language models robust to irrelevant context",
+      "container_title": "Making retrievalaugmented language models robust to irrelevant context",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.01558"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Yoran"
+        },
+        {
+          "given": "T",
+          "family": "Wolfson"
+        },
+        {
+          "given": "O",
+          "family": "Ram"
+        },
+        {
+          "given": "J",
+          "family": "Berant"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b52",
+      "title": "Understanding retrieval augmentation for long-form question answering",
+      "container_title": "Understanding retrieval augmentation for long-form question answering",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.12150"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H.-T",
+          "family": "Chen"
+        },
+        {
+          "given": "F",
+          "family": "Xu"
+        },
+        {
+          "given": "S A",
+          "family": "Arora"
+        },
+        {
+          "given": "E",
+          "family": "Choi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b53",
+      "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+      "container_title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.09210"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Yu"
+        },
+        {
+          "given": "H",
+          "family": "Zhang"
+        },
+        {
+          "given": "X",
+          "family": "Pan"
+        },
+        {
+          "given": "K",
+          "family": "Ma"
+        },
+        {
+          "given": "H",
+          "family": "Wang"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b54",
+      "title": "CoRR",
+      "container_title": "CoRR",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Xu"
+        },
+        {
+          "given": "L",
+          "family": "Pang"
+        },
+        {
+          "given": "H",
+          "family": "Shen"
+        },
+        {
+          "given": "X",
+          "family": "Cheng"
+        },
+        {
+          "given": "T.-S",
+          "family": "Chua"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b55",
+      "title": "Optimizing retrieval-augmented reader models via token elimination",
+      "container_title": "Optimizing retrieval-augmented reader models via token elimination",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.13682"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Berchansky"
+        },
+        {
+          "given": "P",
+          "family": "Izsak"
+        },
+        {
+          "given": "A",
+          "family": "Caciularu"
+        },
+        {
+          "given": "I",
+          "family": "Dagan"
+        },
+        {
+          "given": "M",
+          "family": "Wasserblat"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b56",
+      "title": "Paperqa: Retrieval-augmented generative agent for scientific research",
+      "container_title": "Paperqa: Retrieval-augmented generative agent for scientific research",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2312.07559"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Lála"
+        },
+        {
+          "given": "O",
+          "family": "O'donoghue"
+        },
+        {
+          "given": "A",
+          "family": "Shtedritski"
+        },
+        {
+          "given": "S",
+          "family": "Cox"
+        },
+        {
+          "given": "S G",
+          "family": "Rodriques"
+        },
+        {
+          "given": "A D",
+          "family": "White"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b57",
+      "title": "The power of noise: Redefining retrieval for rag systems",
+      "container_title": "The power of noise: Redefining retrieval for rag systems",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2401.14887"
+        }
+      ],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Cuconasu"
+        },
+        {
+          "given": "G",
+          "family": "Trappolini"
+        },
+        {
+          "given": "F",
+          "family": "Siciliano"
+        },
+        {
+          "given": "S",
+          "family": "Filice"
+        },
+        {
+          "given": "C",
+          "family": "Campagnano"
+        },
+        {
+          "given": "Y",
+          "family": "Maarek"
+        },
+        {
+          "given": "N",
+          "family": "Tonellotto"
+        },
+        {
+          "given": "F",
+          "family": "Silvestri"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b58",
+      "title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Zhang"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": "Ren"
+        },
+        {
+          "given": "S",
+          "family": "Shi"
+        },
+        {
+          "given": "M",
+          "family": "Han"
+        },
+        {
+          "given": "Y",
+          "family": "Wu"
+        },
+        {
+          "given": "R",
+          "family": "Lai"
+        },
+        {
+          "given": "Z",
+          "family": "Cao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b59",
+      "title": "Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation",
+      "container_title": "Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2312.11361"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Thakur"
+        },
+        {
+          "given": "L",
+          "family": "Bonifacio"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "O",
+          "family": "Ogundepo"
+        },
+        {
+          "given": "E",
+          "family": "Kamalloo"
+        },
+        {
+          "given": "D",
+          "family": "Alfonso-Hermelo"
+        },
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "Q",
+          "family": "Liu"
+        },
+        {
+          "given": "B",
+          "family": "Chen"
+        },
+        {
+          "given": "M",
+          "family": "Rezagholizadeh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b60",
+      "title": "Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models",
+      "container_title": "Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.14696"
+        }
+      ],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Kim"
+        },
+        {
+          "given": "S",
+          "family": "Kim"
+        },
+        {
+          "given": "B",
+          "family": "Jeon"
+        },
+        {
+          "given": "J",
+          "family": "Park"
+        },
+        {
+          "given": "J",
+          "family": "Kang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b61",
+      "title": "Self-knowledge guided retrieval augmentation for large language models",
+      "container_title": "Self-knowledge guided retrieval augmentation for large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.05002"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "P",
+          "family": "Li"
+        },
+        {
+          "given": "M",
+          "family": "Sun"
+        },
+        {
+          "given": "Y",
+          "family": "Liu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b62",
+      "title": "Retrievalgeneration synergy augmented large language models",
+      "container_title": "Retrievalgeneration synergy augmented large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.05149"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Feng"
+        },
+        {
+          "given": "X",
+          "family": "Feng"
+        },
+        {
+          "given": "D",
+          "family": "Zhao"
+        },
+        {
+          "given": "M",
+          "family": "Yang"
+        },
+        {
+          "given": "B",
+          "family": "Qin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b63",
+      "title": "Retrieval meets long context large language models",
+      "container_title": "Retrieval meets long context large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.03025"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Xu"
+        },
+        {
+          "given": "W",
+          "family": "Ping"
+        },
+        {
+          "given": "X",
+          "family": "Wu"
+        },
+        {
+          "given": "L",
+          "family": "Mcafee"
+        },
+        {
+          "given": "C",
+          "family": "Zhu"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        },
+        {
+          "given": "S",
+          "family": "Subramanian"
+        },
+        {
+          "given": "E",
+          "family": "Bakhturina"
+        },
+        {
+          "given": "M",
+          "family": "Shoeybi"
+        },
+        {
+          "given": "B",
+          "family": "Catanzaro"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b64",
+      "title": "Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions",
+      "container_title": "Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2212.10509"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Trivedi"
+        },
+        {
+          "given": "N",
+          "family": "Balasubramanian"
+        },
+        {
+          "given": "T",
+          "family": "Khot"
+        },
+        {
+          "given": "A",
+          "family": "Sabharwal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b65",
+      "title": "Investigating the factual knowledge boundary of large language models with retrieval augmentation",
+      "container_title": "Investigating the factual knowledge boundary of large language models with retrieval augmentation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2307.11019"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Ren"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "Y",
+          "family": "Qu"
+        },
+        {
+          "given": "W X",
+          "family": "Zhao"
+        },
+        {
+          "given": "J",
+          "family": "Liu"
+        },
+        {
+          "given": "H",
+          "family": "Tian"
+        },
+        {
+          "given": "H",
+          "family": "Wu"
+        },
+        {
+          "given": "J.-R",
+          "family": "Wen"
+        },
+        {
+          "given": "H",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b66",
+      "title": "Raptor: Recursive abstractive processing for tree-organized retrieval",
+      "container_title": "Raptor: Recursive abstractive processing for tree-organized retrieval",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2401.18059"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Sarthi"
+        },
+        {
+          "given": "S",
+          "family": "Abdullah"
+        },
+        {
+          "given": "A",
+          "family": "Tuli"
+        },
+        {
+          "given": "S",
+          "family": "Khanna"
+        },
+        {
+          "given": "A",
+          "family": "Goldie"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b67",
+      "title": "In-context retrieval-augmented language models",
+      "container_title": "In-context retrieval-augmented language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2302.00083"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Ram"
+        },
+        {
+          "given": "Y",
+          "family": "Levine"
+        },
+        {
+          "given": "I",
+          "family": "Dalmedigos"
+        },
+        {
+          "given": "D",
+          "family": "Muhlgay"
+        },
+        {
+          "given": "A",
+          "family": "Shashua"
+        },
+        {
+          "given": "K",
+          "family": "Leyton-Brown"
+        },
+        {
+          "given": "Y",
+          "family": "Shoham"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b68",
+      "title": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics",
+      "container_title": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Ren"
+        },
+        {
+          "given": "Y",
+          "family": "Cao"
+        },
+        {
+          "given": "P",
+          "family": "Guo"
+        },
+        {
+          "given": "F",
+          "family": "Fang"
+        },
+        {
+          "given": "W",
+          "family": "Ma"
+        },
+        {
+          "given": "Z",
+          "family": "Lin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b69",
+      "title": "Zemi: Learning zero-shot semi-parametric language models from multiple tasks",
+      "container_title": "Zemi: Learning zero-shot semi-parametric language models from multiple tasks",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2210.00185"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "X",
+          "family": "Pan"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        },
+        {
+          "given": "J",
+          "family": "Chen"
+        },
+        {
+          "given": "H",
+          "family": "Ji"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b70",
+      "title": "Corrective retrieval augmented generation",
+      "container_title": "Corrective retrieval augmented generation",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2401.15884"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S.-Q",
+          "family": "Yan"
+        },
+        {
+          "given": "J.-C",
+          "family": "Gu"
+        },
+        {
+          "given": "Y",
+          "family": "Zhu"
+        },
+        {
+          "given": "Z.-H",
+          "family": "Ling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b71",
+      "title": "1-pager: One pass answer generation and evidence retrieval",
+      "container_title": "1-pager: One pass answer generation and evidence retrieval",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.16568"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Jain"
+        },
+        {
+          "given": "L B",
+          "family": "Soares"
+        },
+        {
+          "given": "T",
+          "family": "Kwiatkowski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b72",
+      "title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+      "container_title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.18347"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Yang"
+        },
+        {
+          "given": "Z",
+          "family": "Li"
+        },
+        {
+          "given": "Y",
+          "family": "Zhang"
+        },
+        {
+          "given": "J",
+          "family": "Wang"
+        },
+        {
+          "given": "N",
+          "family": "Cheng"
+        },
+        {
+          "given": "M",
+          "family": "Li"
+        },
+        {
+          "given": "J",
+          "family": "Xiao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b73",
+      "title": "Open-source large language models are strong zero-shot query likelihood models for document ranking",
+      "container_title": "Open-source large language models are strong zero-shot query likelihood models for document ranking",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.13243"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Zhuang"
+        },
+        {
+          "given": "B",
+          "family": "Liu"
+        },
+        {
+          "given": "B",
+          "family": "Koopman"
+        },
+        {
+          "given": "G",
+          "family": "Zuccon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b74",
+      "title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+      "container_title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.04408"
+        }
+      ],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Xu"
+        },
+        {
+          "given": "W",
+          "family": "Shi"
+        },
+        {
+          "given": "E",
+          "family": "Choi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b75",
+      "title": "Replug: Retrieval-augmented black-box language models",
+      "container_title": "Replug: Retrieval-augmented black-box language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2301.12652"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Shi"
+        },
+        {
+          "given": "S",
+          "family": "Min"
+        },
+        {
+          "given": "M",
+          "family": "Yasunaga"
+        },
+        {
+          "given": "M",
+          "family": "Seo"
+        },
+        {
+          "given": "R",
+          "family": "James"
+        },
+        {
+          "given": "M",
+          "family": "Lewis"
+        },
+        {
+          "given": "L",
+          "family": "Zettlemoyer"
+        },
+        {
+          "given": "W.-T",
+          "family": "Yih"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b76",
+      "title": "Enhancing llm intelligence with arm-rag: Auxiliary rationale memory for retrieval augmented generation",
+      "container_title": "Enhancing llm intelligence with arm-rag: Auxiliary rationale memory for retrieval augmented generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.04177"
+        }
+      ],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Melz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b77",
+      "title": "Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems",
+      "container_title": "Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2401.13256"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Wang"
+        },
+        {
+          "given": "W",
+          "family": "Huang"
+        },
+        {
+          "given": "Y",
+          "family": "Deng"
+        },
+        {
+          "given": "R",
+          "family": "Wang"
+        },
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "F",
+          "family": "Mi"
+        },
+        {
+          "given": "J Z",
+          "family": "Pan"
+        },
+        {
+          "given": "K.-F",
+          "family": "Wong"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b78",
+      "title": "Augmented large language models with parametric knowledge guiding",
+      "container_title": "Augmented large language models with parametric knowledge guiding",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.04757"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Luo"
+        },
+        {
+          "given": "C",
+          "family": "Xu"
+        },
+        {
+          "given": "P",
+          "family": "Zhao"
+        },
+        {
+          "given": "X",
+          "family": "Geng"
+        },
+        {
+          "given": "C",
+          "family": "Tao"
+        },
+        {
+          "given": "J",
+          "family": "Ma"
+        },
+        {
+          "given": "Q",
+          "family": "Lin"
+        },
+        {
+          "given": "D",
+          "family": "Jiang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b79",
+      "title": "Structureaware language model pretraining improves dense retrieval on structured data",
+      "container_title": "Structureaware language model pretraining improves dense retrieval on structured data",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.19912"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        },
+        {
+          "given": "C",
+          "family": "Xiong"
+        },
+        {
+          "given": "S",
+          "family": "Yu"
+        },
+        {
+          "given": "Y",
+          "family": "Gu"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        },
+        {
+          "given": "G",
+          "family": "Yu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b80",
+      "title": "Knowledge graph-augmented language models for knowledge-grounded dialogue generation",
+      "container_title": "Knowledge graph-augmented language models for knowledge-grounded dialogue generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.18846"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Kang"
+        },
+        {
+          "given": "J M",
+          "family": "Kwak"
+        },
+        {
+          "given": "J",
+          "family": "Baek"
+        },
+        {
+          "given": "S J",
+          "family": "Hwang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b81",
+      "title": "Retrievalgeneration alignment for end-to-end task-oriented dialogue system",
+      "container_title": "Retrievalgeneration alignment for end-to-end task-oriented dialogue system",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.08877"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Shen"
+        },
+        {
+          "given": "Y",
+          "family": "Gao"
+        },
+        {
+          "given": "C",
+          "family": "Huang"
+        },
+        {
+          "given": "F",
+          "family": "Wan"
+        },
+        {
+          "given": "X",
+          "family": "Quan"
+        },
+        {
+          "given": "W",
+          "family": "Bi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b82",
+      "title": "Dual-feedback knowledge retrieval for task-oriented dialogue systems",
+      "container_title": "Dual-feedback knowledge retrieval for task-oriented dialogue systems",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.14528"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Shi"
+        },
+        {
+          "given": "L",
+          "family": "Li"
+        },
+        {
+          "given": "Z",
+          "family": "Lin"
+        },
+        {
+          "given": "T",
+          "family": "Yang"
+        },
+        {
+          "given": "X",
+          "family": "Quan"
+        },
+        {
+          "given": "Q",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b83",
+      "title": "Fabula: Intelligence report generation using retrieval-augmented narrative construction",
+      "container_title": "Fabula: Intelligence report generation using retrieval-augmented narrative construction",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.13848"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Ranade"
+        },
+        {
+          "given": "A",
+          "family": "Joshi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b84",
+      "title": "Think and retrieval: A hypothesis knowledge graph enhanced medical large language models",
+      "container_title": "Think and retrieval: A hypothesis knowledge graph enhanced medical large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2312.15883"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Jiang"
+        },
+        {
+          "given": "R",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": "Xu"
+        },
+        {
+          "given": "R",
+          "family": "Qiu"
+        },
+        {
+          "given": "Y",
+          "family": "Fang"
+        },
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "J",
+          "family": "Tang"
+        },
+        {
+          "given": "H",
+          "family": "Ding"
+        },
+        {
+          "given": "X",
+          "family": "Chu"
+        },
+        {
+          "given": "J",
+          "family": "Zhao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b85",
+      "title": "Knowledge-augmented language model verification",
+      "container_title": "Knowledge-augmented language model verification",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.12836"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Baek"
+        },
+        {
+          "given": "S",
+          "family": "Jeong"
+        },
+        {
+          "given": "M",
+          "family": "Kang"
+        },
+        {
+          "given": "J C",
+          "family": "Park"
+        },
+        {
+          "given": "S J",
+          "family": "Hwang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b86",
+      "title": "Reasoning on graphs: Faithful and interpretable large language model reasoning",
+      "container_title": "Reasoning on graphs: Faithful and interpretable large language model reasoning",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.01061"
+        }
+      ],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Luo"
+        },
+        {
+          "given": "Y.-F",
+          "family": "Li"
+        },
+        {
+          "given": "G",
+          "family": "Haffari"
+        },
+        {
+          "given": "S",
+          "family": "Pan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b87",
+      "title": "G-retriever: Retrieval-augmented generation for textual graph understanding and question answering",
+      "container_title": "G-retriever: Retrieval-augmented generation for textual graph understanding and question answering",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2402.07630"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "He"
+        },
+        {
+          "given": "Y",
+          "family": "Tian"
+        },
+        {
+          "given": "Y",
+          "family": "Sun"
+        },
+        {
+          "given": "N V",
+          "family": "Chawla"
+        },
+        {
+          "given": "T",
+          "family": "Laurent"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "X",
+          "family": "Bresson"
+        },
+        {
+          "given": "B",
+          "family": "Hooi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b88",
+      "title": "Tablegpt: Towards unifying tables, nature language and commands into one gpt",
+      "container_title": "Tablegpt: Towards unifying tables, nature language and commands into one gpt",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2307.08674"
+        }
+      ],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Zha"
+        },
+        {
+          "given": "J",
+          "family": "Zhou"
+        },
+        {
+          "given": "L",
+          "family": "Li"
+        },
+        {
+          "given": "R",
+          "family": "Wang"
+        },
+        {
+          "given": "Q",
+          "family": "Huang"
+        },
+        {
+          "given": "S",
+          "family": "Yang"
+        },
+        {
+          "given": "J",
+          "family": "Yuan"
+        },
+        {
+          "given": "C",
+          "family": "Su"
+        },
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "A",
+          "family": "Su"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b89",
+      "title": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "container_title": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "year": "2022",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Gaur"
+        },
+        {
+          "given": "K",
+          "family": "Gunaratna"
+        },
+        {
+          "given": "V",
+          "family": "Srinivasan"
+        },
+        {
+          "given": "H",
+          "family": "Jin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b90",
+      "title": "International Conference on Machine Learning",
+      "container_title": "International Conference on Machine Learning",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Shi"
+        },
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "K",
+          "family": "Misra"
+        },
+        {
+          "given": "N",
+          "family": "Scales"
+        },
+        {
+          "given": "D",
+          "family": "Dohan"
+        },
+        {
+          "given": "E H",
+          "family": "Chi"
+        },
+        {
+          "given": "N",
+          "family": "Schärli"
+        },
+        {
+          "given": "D",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b91",
+      "title": "Evaluating the ideal chunk size for a rag system using llamaindex",
+      "container_title": "Evaluating the ideal chunk size for a rag system using llamaindex",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Teja"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b92",
+      "title": "Recursively split by character",
+      "container_title": "Recursively split by character",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Langchain"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b93",
+      "title": "Advanced rag 01: Small-tobig retrieval",
+      "container_title": "Advanced rag 01: Small-tobig retrieval",
+      "year": "1721",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Yang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b94",
+      "title": "Knowledge graph prompting for multi-document question answering",
+      "container_title": "Knowledge graph prompting for multi-document question answering",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2308.11730"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "N",
+          "family": "Lipka"
+        },
+        {
+          "given": "R A",
+          "family": "Rossi"
+        },
+        {
+          "given": "A",
+          "family": "Siu"
+        },
+        {
+          "given": "R",
+          "family": "Zhang"
+        },
+        {
+          "given": "T",
+          "family": "Derr"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b95",
+      "title": "Least-to-most prompting enables complex reasoning in large language models",
+      "container_title": "Least-to-most prompting enables complex reasoning in large language models",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2205.10625"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Zhou"
+        },
+        {
+          "given": "N",
+          "family": "Schärli"
+        },
+        {
+          "given": "L",
+          "family": "Hou"
+        },
+        {
+          "given": "J",
+          "family": "Wei"
+        },
+        {
+          "given": "N",
+          "family": "Scales"
+        },
+        {
+          "given": "X",
+          "family": "Wang"
+        },
+        {
+          "given": "D",
+          "family": "Schuurmans"
+        },
+        {
+          "given": "C",
+          "family": "Cui"
+        },
+        {
+          "given": "O",
+          "family": "Bousquet"
+        },
+        {
+          "given": "Q",
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b96",
+      "title": "Chain-of-verification reduces hallucination in large language models",
+      "container_title": "Chain-of-verification reduces hallucination in large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2309.11495"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Dhuliawala"
+        },
+        {
+          "given": "M",
+          "family": "Komeili"
+        },
+        {
+          "given": "J",
+          "family": "Xu"
+        },
+        {
+          "given": "R",
+          "family": "Raileanu"
+        },
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "A",
+          "family": "Celikyilmaz"
+        },
+        {
+          "given": "J",
+          "family": "Weston"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b97",
+      "title": "Angle-optimized text embeddings",
+      "container_title": "Angle-optimized text embeddings",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2309.12871"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "J",
+          "family": "Li"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b98",
+      "title": "Voyage's embedding models",
+      "container_title": "Voyage's embedding models",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Voyageai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b99",
+      "title": "Flagembedding",
+      "container_title": "Flagembedding",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Baai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b100",
+      "title": "Retrieve anything to augment large language models",
+      "container_title": "Retrieve anything to augment large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.07554"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Zhang"
+        },
+        {
+          "given": "S",
+          "family": "Xiao"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        },
+        {
+          "given": "Z",
+          "family": "Dou"
+        },
+        {
+          "given": "J.-Y",
+          "family": "Nie"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b101",
+      "title": "Lost in the middle: How language models use long contexts",
+      "container_title": "Lost in the middle: How language models use long contexts",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2307.03172"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N F",
+          "family": "Liu"
+        },
+        {
+          "given": "K",
+          "family": "Lin"
+        },
+        {
+          "given": "J",
+          "family": "Hewitt"
+        },
+        {
+          "given": "A",
+          "family": "Paranjape"
+        },
+        {
+          "given": "M",
+          "family": "Bevilacqua"
+        },
+        {
+          "given": "F",
+          "family": "Petroni"
+        },
+        {
+          "given": "P",
+          "family": "Liang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b102",
+      "title": "Chatrec: Towards interactive and explainable llms-augmented recommender system",
+      "container_title": "Chatrec: Towards interactive and explainable llms-augmented recommender system",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2303.14524"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Gao"
+        },
+        {
+          "given": "T",
+          "family": "Sheng"
+        },
+        {
+          "given": "Y",
+          "family": "Xiang"
+        },
+        {
+          "given": "Y",
+          "family": "Xiong"
+        },
+        {
+          "given": "H",
+          "family": "Wang"
+        },
+        {
+          "given": "J",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b103",
+      "title": "Proceedings of the 15th Biennial Conference of the Association for Machine Translation in the Americas",
+      "container_title": "Proceedings of the 15th Biennial Conference of the Association for Machine Translation in the Americas",
+      "year": "2022",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Anderson"
+        },
+        {
+          "given": "C",
+          "family": "Wilson"
+        },
+        {
+          "given": "S D",
+          "family": "Richardson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b104",
+      "title": "Longllmlingua: Accelerating and enhancing llms in long context scenarios via prompt compression",
+      "container_title": "Longllmlingua: Accelerating and enhancing llms in long context scenarios via prompt compression",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.06839"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Jiang"
+        },
+        {
+          "given": "Q",
+          "family": "Wu"
+        },
+        {
+          "given": "X",
+          "family": "Luo"
+        },
+        {
+          "given": "D",
+          "family": "Li"
+        },
+        {
+          "given": "C.-Y",
+          "family": "Lin"
+        },
+        {
+          "given": "Y",
+          "family": "Yang"
+        },
+        {
+          "given": "L",
+          "family": "Qiu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b105",
+      "title": "Dense passage retrieval for open-domain question answering",
+      "container_title": "Dense passage retrieval for open-domain question answering",
+      "year": "2020",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2004.04906"
+        }
+      ],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Karpukhin"
+        },
+        {
+          "given": "B",
+          "family": "Oguz"
+        },
+        {
+          "given": "S",
+          "family": "Min"
+        },
+        {
+          "given": "P",
+          "family": "Lewis"
+        },
+        {
+          "given": "L",
+          "family": "Wu"
+        },
+        {
+          "given": "S",
+          "family": "Edunov"
+        },
+        {
+          "given": "D",
+          "family": "Chen"
+        },
+        {
+          "given": "W.-T",
+          "family": "Yih"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b106",
+      "title": "ArXiv",
+      "container_title": "ArXiv",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Ma"
+        },
+        {
+          "given": "Y",
+          "family": "Cao"
+        },
+        {
+          "given": "Y",
+          "family": "Hong"
+        },
+        {
+          "given": "A",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b107",
+      "title": "Chatlaw: Open-source legal large language model with integrated external knowledge bases",
+      "container_title": "Chatlaw: Open-source legal large language model with integrated external knowledge bases",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2306.16092"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Cui"
+        },
+        {
+          "given": "Z",
+          "family": "Li"
+        },
+        {
+          "given": "Y",
+          "family": "Yan"
+        },
+        {
+          "given": "B",
+          "family": "Chen"
+        },
+        {
+          "given": "L",
+          "family": "Yuan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b108",
+      "title": "Making retrievalaugmented language models robust to irrelevant context",
+      "container_title": "Making retrievalaugmented language models robust to irrelevant context",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.01558"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Yoran"
+        },
+        {
+          "given": "T",
+          "family": "Wolfson"
+        },
+        {
+          "given": "O",
+          "family": "Ram"
+        },
+        {
+          "given": "J",
+          "family": "Berant"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b109",
+      "title": "Chain of knowledge: A framework for grounding large language models with structured knowledge bases",
+      "container_title": "Chain of knowledge: A framework for grounding large language models with structured knowledge bases",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.13269"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "R",
+          "family": "Zhao"
+        },
+        {
+          "given": "Y K",
+          "family": "Chia"
+        },
+        {
+          "given": "B",
+          "family": "Ding"
+        },
+        {
+          "given": "L",
+          "family": "Bing"
+        },
+        {
+          "given": "S",
+          "family": "Joty"
+        },
+        {
+          "given": "S",
+          "family": "Poria"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b110",
+      "title": "Auto-gpt for online decision making: Benchmarks and additional opinions",
+      "container_title": "Auto-gpt for online decision making: Benchmarks and additional opinions",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2306.02224"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Yang"
+        },
+        {
+          "given": "S",
+          "family": "Yue"
+        },
+        {
+          "given": "Y",
+          "family": "He"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b111",
+      "title": "Toolformer: Language models can teach themselves to use tools",
+      "container_title": "Toolformer: Language models can teach themselves to use tools",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2302.04761"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Schick"
+        },
+        {
+          "given": "J",
+          "family": "Dwivedi-Yu"
+        },
+        {
+          "given": "R",
+          "family": "Dessì"
+        },
+        {
+          "given": "R",
+          "family": "Raileanu"
+        },
+        {
+          "given": "M",
+          "family": "Lomeli"
+        },
+        {
+          "given": "L",
+          "family": "Zettlemoyer"
+        },
+        {
+          "given": "N",
+          "family": "Cancedda"
+        },
+        {
+          "given": "T",
+          "family": "Scialom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b112",
+      "title": "Graph-toolformer: To empower llms with graph reasoning ability via prompt augmented by chatgpt",
+      "container_title": "Graph-toolformer: To empower llms with graph reasoning ability via prompt augmented by chatgpt",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2304.11116"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b113",
+      "title": "Webgpt: Browserassisted question-answering with human feedback",
+      "container_title": "Webgpt: Browserassisted question-answering with human feedback",
+      "year": "2021",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2112.09332"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Nakano"
+        },
+        {
+          "given": "J",
+          "family": "Hilton"
+        },
+        {
+          "given": "S",
+          "family": "Balaji"
+        },
+        {
+          "given": "J",
+          "family": "Wu"
+        },
+        {
+          "given": "L",
+          "family": "Ouyang"
+        },
+        {
+          "given": "C",
+          "family": "Kim"
+        },
+        {
+          "given": "C",
+          "family": "Hesse"
+        },
+        {
+          "given": "S",
+          "family": "Jain"
+        },
+        {
+          "given": "V",
+          "family": "Kosaraju"
+        },
+        {
+          "given": "W",
+          "family": "Saunders"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b114",
+      "title": "Transactions of the Association for Computational Linguistics",
+      "container_title": "Transactions of the Association for Computational Linguistics",
+      "year": "2019",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Kwiatkowski"
+        },
+        {
+          "given": "J",
+          "family": "Palomaki"
+        },
+        {
+          "given": "O",
+          "family": "Redfield"
+        },
+        {
+          "given": "M",
+          "family": "Collins"
+        },
+        {
+          "given": "A",
+          "family": "Parikh"
+        },
+        {
+          "given": "C",
+          "family": "Alberti"
+        },
+        {
+          "given": "D",
+          "family": "Epstein"
+        },
+        {
+          "given": "I",
+          "family": "Polosukhin"
+        },
+        {
+          "given": "J",
+          "family": "Devlin"
+        },
+        {
+          "given": "K",
+          "family": "Lee"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b115",
+      "title": "Exploring the integration strategies of retriever and large language models",
+      "container_title": "Exploring the integration strategies of retriever and large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2308.12574"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Liu"
+        },
+        {
+          "given": "S",
+          "family": "Yavuz"
+        },
+        {
+          "given": "R",
+          "family": "Meng"
+        },
+        {
+          "given": "M",
+          "family": "Moorthy"
+        },
+        {
+          "given": "S",
+          "family": "Joty"
+        },
+        {
+          "given": "C",
+          "family": "Xiong"
+        },
+        {
+          "given": "Y",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b116",
+      "title": "Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension",
+      "container_title": "Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1705.03551"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Joshi"
+        },
+        {
+          "given": "E",
+          "family": "Choi"
+        },
+        {
+          "given": "D S",
+          "family": "Weld"
+        },
+        {
+          "given": "L",
+          "family": "Zettlemoyer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b117",
+      "title": "Squad: 100,000+ questions for machine comprehension of text",
+      "container_title": "Squad: 100,000+ questions for machine comprehension of text",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1606.05250"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Rajpurkar"
+        },
+        {
+          "given": "J",
+          "family": "Zhang"
+        },
+        {
+          "given": "K",
+          "family": "Lopyrev"
+        },
+        {
+          "given": "P",
+          "family": "Liang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b118",
+      "title": "Proceedings of the 2013 conference on empirical methods in natural language processing",
+      "container_title": "Proceedings of the 2013 conference on empirical methods in natural language processing",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Berant"
+        },
+        {
+          "given": "A",
+          "family": "Chou"
+        },
+        {
+          "given": "R",
+          "family": "Frostig"
+        },
+        {
+          "given": "P",
+          "family": "Liang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b119",
+      "title": "When not to trust language models: Investigating effectiveness and limitations of parametric and non-parametric memories",
+      "container_title": "When not to trust language models: Investigating effectiveness and limitations of parametric and non-parametric memories",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2212.10511"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mallen"
+        },
+        {
+          "given": "A",
+          "family": "Asai"
+        },
+        {
+          "given": "V",
+          "family": "Zhong"
+        },
+        {
+          "given": "R",
+          "family": "Das"
+        },
+        {
+          "given": "H",
+          "family": "Hajishirzi"
+        },
+        {
+          "given": "D",
+          "family": "Khashabi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b120",
+      "title": "Ms marco: A human-generated machine reading comprehension dataset",
+      "container_title": "Ms marco: A human-generated machine reading comprehension dataset",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Nguyen"
+        },
+        {
+          "given": "M",
+          "family": "Rosenberg"
+        },
+        {
+          "given": "X",
+          "family": "Song"
+        },
+        {
+          "given": "J",
+          "family": "Gao"
+        },
+        {
+          "given": "S",
+          "family": "Tiwary"
+        },
+        {
+          "given": "R",
+          "family": "Majumder"
+        },
+        {
+          "given": "L",
+          "family": "Deng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b121",
+      "title": "Hotpotqa: A dataset for diverse, explainable multi-hop question answering",
+      "container_title": "Hotpotqa: A dataset for diverse, explainable multi-hop question answering",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1809.09600"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Yang"
+        },
+        {
+          "given": "P",
+          "family": "Qi"
+        },
+        {
+          "given": "S",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "W W",
+          "family": "Cohen"
+        },
+        {
+          "given": "R",
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b122",
+      "title": "Constructing a multi-hop qa dataset for comprehensive evaluation of reasoning steps",
+      "container_title": "Constructing a multi-hop qa dataset for comprehensive evaluation of reasoning steps",
+      "year": "2020",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2011.01060"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Ho"
+        },
+        {
+          "given": "A.-K D",
+          "family": "Nguyen"
+        },
+        {
+          "given": "S",
+          "family": "Sugawara"
+        },
+        {
+          "given": "A",
+          "family": "Aizawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b123",
+      "title": "Transactions of the Association for Computational Linguistics",
+      "container_title": "Transactions of the Association for Computational Linguistics",
+      "year": "2022",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Trivedi"
+        },
+        {
+          "given": "N",
+          "family": "Balasubramanian"
+        },
+        {
+          "given": "T",
+          "family": "Khot"
+        },
+        {
+          "given": "A",
+          "family": "Sabharwal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b124",
+      "title": "Eli5: Long form question answering",
+      "container_title": "Eli5: Long form question answering",
+      "year": "2019",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1907.09190"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Fan"
+        },
+        {
+          "given": "Y",
+          "family": "Jernite"
+        },
+        {
+          "given": "E",
+          "family": "Perez"
+        },
+        {
+          "given": "D",
+          "family": "Grangier"
+        },
+        {
+          "given": "J",
+          "family": "Weston"
+        },
+        {
+          "given": "M",
+          "family": "Auli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b125",
+      "title": "Transactions of the Association for Computational Linguistics",
+      "container_title": "Transactions of the Association for Computational Linguistics",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Kočiskỳ"
+        },
+        {
+          "given": "J",
+          "family": "Schwarz"
+        },
+        {
+          "given": "P",
+          "family": "Blunsom"
+        },
+        {
+          "given": "C",
+          "family": "Dyer"
+        },
+        {
+          "given": "K M",
+          "family": "Hermann"
+        },
+        {
+          "given": "G",
+          "family": "Melis"
+        },
+        {
+          "given": "E",
+          "family": "Grefenstette"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b126",
+      "title": "A humaninspired reading agent with gist memory of very long contexts",
+      "container_title": "A humaninspired reading agent with gist memory of very long contexts",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2402.09727"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K.-H",
+          "family": "Lee"
+        },
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "H",
+          "family": "Furuta"
+        },
+        {
+          "given": "J",
+          "family": "Canny"
+        },
+        {
+          "given": "I",
+          "family": "Fischer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b127",
+      "title": "Asqa: Factoid questions meet long-form answers",
+      "container_title": "Asqa: Factoid questions meet long-form answers",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2204.06092"
+        }
+      ],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Stelmakh"
+        },
+        {
+          "given": "Y",
+          "family": "Luan"
+        },
+        {
+          "given": "B",
+          "family": "Dhingra"
+        },
+        {
+          "given": "M.-W",
+          "family": "Chang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b128",
+      "title": "Qmsum: A new benchmark for query-based multi-domain meeting summarization",
+      "container_title": "Qmsum: A new benchmark for query-based multi-domain meeting summarization",
+      "year": "2021",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2104.05938"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Zhong"
+        },
+        {
+          "given": "D",
+          "family": "Yin"
+        },
+        {
+          "given": "T",
+          "family": "Yu"
+        },
+        {
+          "given": "A",
+          "family": "Zaidi"
+        },
+        {
+          "given": "M",
+          "family": "Mutuma"
+        },
+        {
+          "given": "R",
+          "family": "Jha"
+        },
+        {
+          "given": "A H",
+          "family": "Awadallah"
+        },
+        {
+          "given": "A",
+          "family": "Celikyilmaz"
+        },
+        {
+          "given": "Y",
+          "family": "Liu"
+        },
+        {
+          "given": "X",
+          "family": "Qiu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b129",
+      "title": "A dataset of information-seeking questions and answers anchored in research papers",
+      "container_title": "A dataset of information-seeking questions and answers anchored in research papers",
+      "year": "2021",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2105.03011"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Dasigi"
+        },
+        {
+          "given": "K",
+          "family": "Lo"
+        },
+        {
+          "given": "I",
+          "family": "Beltagy"
+        },
+        {
+          "given": "A",
+          "family": "Cohan"
+        },
+        {
+          "given": "N A",
+          "family": "Smith"
+        },
+        {
+          "given": "M",
+          "family": "Gardner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b130",
+      "title": "ACL 2020 Workshop on Natural Language Processing for COVID-19",
+      "container_title": "ACL 2020 Workshop on Natural Language Processing for COVID-19",
+      "year": "2020",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Möller"
+        },
+        {
+          "given": "A",
+          "family": "Reina"
+        },
+        {
+          "given": "R",
+          "family": "Jayakumar"
+        },
+        {
+          "given": "M",
+          "family": "Pietsch"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b131",
+      "title": "Cmb: A comprehensive medical benchmark in chinese",
+      "container_title": "Cmb: A comprehensive medical benchmark in chinese",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2308.08833"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Wang"
+        },
+        {
+          "given": "G H",
+          "family": "Chen"
+        },
+        {
+          "given": "D",
+          "family": "Song"
+        },
+        {
+          "given": "Z",
+          "family": "Zhang"
+        },
+        {
+          "given": "Z",
+          "family": "Chen"
+        },
+        {
+          "given": "Q",
+          "family": "Xiao"
+        },
+        {
+          "given": "F",
+          "family": "Jiang"
+        },
+        {
+          "given": "J",
+          "family": "Li"
+        },
+        {
+          "given": "X",
+          "family": "Wan"
+        },
+        {
+          "given": "B",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b132",
+      "title": "Measuring massive multitask chinese understanding",
+      "container_title": "Measuring massive multitask chinese understanding",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2304.12986"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Zeng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b133",
+      "title": "Quality: Question answering with long input texts, yes",
+      "container_title": "Quality: Question answering with long input texts, yes",
+      "year": "2021",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2112.08608"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R Y",
+          "family": "Pang"
+        },
+        {
+          "given": "A",
+          "family": "Parrish"
+        },
+        {
+          "given": "N",
+          "family": "Joshi"
+        },
+        {
+          "given": "N",
+          "family": "Nangia"
+        },
+        {
+          "given": "J",
+          "family": "Phang"
+        },
+        {
+          "given": "A",
+          "family": "Chen"
+        },
+        {
+          "given": "V",
+          "family": "Padmakumar"
+        },
+        {
+          "given": "J",
+          "family": "Ma"
+        },
+        {
+          "given": "J",
+          "family": "Thompson"
+        },
+        {
+          "given": "H",
+          "family": "He"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b134",
+      "title": "Think you have solved question answering? try arc, the ai2 reasoning challenge",
+      "container_title": "Think you have solved question answering? try arc, the ai2 reasoning challenge",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1803.05457"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Clark"
+        },
+        {
+          "given": "I",
+          "family": "Cowhey"
+        },
+        {
+          "given": "O",
+          "family": "Etzioni"
+        },
+        {
+          "given": "T",
+          "family": "Khot"
+        },
+        {
+          "given": "A",
+          "family": "Sabharwal"
+        },
+        {
+          "given": "C",
+          "family": "Schoenick"
+        },
+        {
+          "given": "O",
+          "family": "Tafjord"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b135",
+      "title": "Commonsenseqa: A question answering challenge targeting commonsense knowledge",
+      "container_title": "Commonsenseqa: A question answering challenge targeting commonsense knowledge",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1811.00937"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Talmor"
+        },
+        {
+          "given": "J",
+          "family": "Herzig"
+        },
+        {
+          "given": "N",
+          "family": "Lourie"
+        },
+        {
+          "given": "J",
+          "family": "Berant"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b136",
+      "title": "Wizard of wikipedia: Knowledge-powered conversational agents",
+      "container_title": "Wizard of wikipedia: Knowledge-powered conversational agents",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1811.01241"
+        }
+      ],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Dinan"
+        },
+        {
+          "given": "S",
+          "family": "Roller"
+        },
+        {
+          "given": "K",
+          "family": "Shuster"
+        },
+        {
+          "given": "A",
+          "family": "Fan"
+        },
+        {
+          "given": "M",
+          "family": "Auli"
+        },
+        {
+          "given": "J",
+          "family": "Weston"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b137",
+      "title": "Large language models as source planner for personalized knowledge-grounded dialogue",
+      "container_title": "Large language models as source planner for personalized knowledge-grounded dialogue",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.08840"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Wang"
+        },
+        {
+          "given": "M",
+          "family": "Hu"
+        },
+        {
+          "given": "Y",
+          "family": "Deng"
+        },
+        {
+          "given": "R",
+          "family": "Wang"
+        },
+        {
+          "given": "F",
+          "family": "Mi"
+        },
+        {
+          "given": "W",
+          "family": "Wang"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "W.-C",
+          "family": "Kwan"
+        },
+        {
+          "given": "I",
+          "family": "King"
+        },
+        {
+          "given": "K.-F",
+          "family": "Wong"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b138",
+      "title": "Large language models as source planner for personalized knowledge-grounded dialogue",
+      "container_title": "Large language models as source planner for personalized knowledge-grounded dialogue",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.08840"
+        }
+      ],
+      "authors": []
+    },
+    {
+      "bibl_id": "b139",
+      "title": "Long time no see! open-domain conversation with long-term persona memory",
+      "container_title": "Long time no see! open-domain conversation with long-term persona memory",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2203.05797"
+        }
+      ],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Xu"
+        },
+        {
+          "given": "Z",
+          "family": "Gou"
+        },
+        {
+          "given": "W",
+          "family": "Wu"
+        },
+        {
+          "given": "Z.-Y",
+          "family": "Niu"
+        },
+        {
+          "given": "H",
+          "family": "Wu"
+        },
+        {
+          "given": "H",
+          "family": "Wang"
+        },
+        {
+          "given": "S",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b140",
+      "title": "Conditional generation and snapshot learning in neural dialogue systems",
+      "container_title": "Conditional generation and snapshot learning in neural dialogue systems",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1606.03352"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T.-H",
+          "family": "Wen"
+        },
+        {
+          "given": "M",
+          "family": "Gasic"
+        },
+        {
+          "given": "N",
+          "family": "Mrksic"
+        },
+        {
+          "given": "L M",
+          "family": "Rojas-Barahona"
+        },
+        {
+          "given": "P.-H",
+          "family": "Su"
+        },
+        {
+          "given": "S",
+          "family": "Ultes"
+        },
+        {
+          "given": "D",
+          "family": "Vandyke"
+        },
+        {
+          "given": "S",
+          "family": "Young"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b141",
+      "title": "proceedings of the 25th international conference on world wide web",
+      "container_title": "proceedings of the 25th international conference on world wide web",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "He"
+        },
+        {
+          "given": "J",
+          "family": "Mcauley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b142",
+      "title": "Document-level event argument extraction by conditional generation",
+      "container_title": "Document-level event argument extraction by conditional generation",
+      "year": "2021",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2104.05919"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Li"
+        },
+        {
+          "given": "H",
+          "family": "Ji"
+        },
+        {
+          "given": "J",
+          "family": "Han"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b143",
+      "title": "Multisentence argument linking",
+      "container_title": "Multisentence argument linking",
+      "year": "2019",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1911.03766"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Ebner"
+        },
+        {
+          "given": "P",
+          "family": "Xia"
+        },
+        {
+          "given": "R",
+          "family": "Culkin"
+        },
+        {
+          "given": "K",
+          "family": "Rawlins"
+        },
+        {
+          "given": "B",
+          "family": "Van Durme"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b144",
+      "title": "Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+      "container_title": "Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Elsahar"
+        },
+        {
+          "given": "P",
+          "family": "Vougiouklis"
+        },
+        {
+          "given": "A",
+          "family": "Remaci"
+        },
+        {
+          "given": "C",
+          "family": "Gravier"
+        },
+        {
+          "given": "J",
+          "family": "Hare"
+        },
+        {
+          "given": "F",
+          "family": "Laforest"
+        },
+        {
+          "given": "E",
+          "family": "Simperl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b145",
+      "title": "Zero-shot relation extraction via reading comprehension",
+      "container_title": "Zero-shot relation extraction via reading comprehension",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1706.04115"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Levy"
+        },
+        {
+          "given": "M",
+          "family": "Seo"
+        },
+        {
+          "given": "E",
+          "family": "Choi"
+        },
+        {
+          "given": "L",
+          "family": "Zettlemoyer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b146",
+      "title": "Hellaswag: Can a machine really finish your sentence?",
+      "container_title": "Hellaswag: Can a machine really finish your sentence?",
+      "year": "2019",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1905.07830"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Zellers"
+        },
+        {
+          "given": "A",
+          "family": "Holtzman"
+        },
+        {
+          "given": "Y",
+          "family": "Bisk"
+        },
+        {
+          "given": "A",
+          "family": "Farhadi"
+        },
+        {
+          "given": "Y",
+          "family": "Choi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b147",
+      "title": "The cot collection: Improving zero-shot and few-shot learning of language models via chain-of-thought fine-tuning",
+      "container_title": "The cot collection: Improving zero-shot and few-shot learning of language models via chain-of-thought fine-tuning",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2305.14045"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Kim"
+        },
+        {
+          "given": "S J",
+          "family": "Joo"
+        },
+        {
+          "given": "D",
+          "family": "Kim"
+        },
+        {
+          "given": "J",
+          "family": "Jang"
+        },
+        {
+          "given": "S",
+          "family": "Ye"
+        },
+        {
+          "given": "J",
+          "family": "Shin"
+        },
+        {
+          "given": "M",
+          "family": "Seo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b148",
+      "title": "Proceedings of the AAAI conference on artificial intelligence",
+      "container_title": "Proceedings of the AAAI conference on artificial intelligence",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Saha"
+        },
+        {
+          "given": "V",
+          "family": "Pahuja"
+        },
+        {
+          "given": "M",
+          "family": "Khapra"
+        },
+        {
+          "given": "K",
+          "family": "Sankaranarayanan"
+        },
+        {
+          "given": "S",
+          "family": "Chandar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b149",
+      "title": "Measuring massive multitask language understanding",
+      "container_title": "Measuring massive multitask language understanding",
+      "year": "2020",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2009.03300"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Hendrycks"
+        },
+        {
+          "given": "C",
+          "family": "Burns"
+        },
+        {
+          "given": "S",
+          "family": "Basart"
+        },
+        {
+          "given": "A",
+          "family": "Zou"
+        },
+        {
+          "given": "M",
+          "family": "Mazeika"
+        },
+        {
+          "given": "D",
+          "family": "Song"
+        },
+        {
+          "given": "J",
+          "family": "Steinhardt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b150",
+      "title": "Pointer sentinel mixture models",
+      "container_title": "Pointer sentinel mixture models",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1609.07843"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Merity"
+        },
+        {
+          "given": "C",
+          "family": "Xiong"
+        },
+        {
+          "given": "J",
+          "family": "Bradbury"
+        },
+        {
+          "given": "R",
+          "family": "Socher"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b151",
+      "title": "Transactions of the Association for Computational Linguistics",
+      "container_title": "Transactions of the Association for Computational Linguistics",
+      "year": "2021",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Geva"
+        },
+        {
+          "given": "D",
+          "family": "Khashabi"
+        },
+        {
+          "given": "E",
+          "family": "Segal"
+        },
+        {
+          "given": "T",
+          "family": "Khot"
+        },
+        {
+          "given": "D",
+          "family": "Roth"
+        },
+        {
+          "given": "J",
+          "family": "Berant"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b152",
+      "title": "Fever: a large-scale dataset for fact extraction and verification",
+      "container_title": "Fever: a large-scale dataset for fact extraction and verification",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1803.05355"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Thorne"
+        },
+        {
+          "given": "A",
+          "family": "Vlachos"
+        },
+        {
+          "given": "C",
+          "family": "Christodoulopoulos"
+        },
+        {
+          "given": "A",
+          "family": "Mittal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b153",
+      "title": "Explainable automated fact-checking for public health claims",
+      "container_title": "Explainable automated fact-checking for public health claims",
+      "year": "2020",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2010.09926"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Kotonya"
+        },
+        {
+          "given": "F",
+          "family": "Toni"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b154",
+      "title": "Neural text generation from structured data with application to the biography domain",
+      "container_title": "Neural text generation from structured data with application to the biography domain",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.07771"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Lebret"
+        },
+        {
+          "given": "D",
+          "family": "Grangier"
+        },
+        {
+          "given": "M",
+          "family": "Auli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b155",
+      "title": "Transactions of the Association for Computational Linguistics",
+      "container_title": "Transactions of the Association for Computational Linguistics",
+      "year": "2021",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Hayashi"
+        },
+        {
+          "given": "P",
+          "family": "Budania"
+        },
+        {
+          "given": "P",
+          "family": "Wang"
+        },
+        {
+          "given": "C",
+          "family": "Ackerson"
+        },
+        {
+          "given": "R",
+          "family": "Neervannan"
+        },
+        {
+          "given": "G",
+          "family": "Neubig"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b156",
+      "title": "Don't give me the details, just the summary! topic-aware convolutional neural networks for extreme summarization",
+      "container_title": "Don't give me the details, just the summary! topic-aware convolutional neural networks for extreme summarization",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1808.08745"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Narayan"
+        },
+        {
+          "given": "S B",
+          "family": "Cohen"
+        },
+        {
+          "given": "M",
+          "family": "Lapata"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b157",
+      "title": "Proceedings of the First Workshop on Bangla Language Processing",
+      "container_title": "Proceedings of the First Workshop on Bangla Language Processing",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Saha"
+        },
+        {
+          "given": "J A",
+          "family": "Junaed"
+        },
+        {
+          "given": "M",
+          "family": "Saleki"
+        },
+        {
+          "given": "A S",
+          "family": "Sharma"
+        },
+        {
+          "given": "M R",
+          "family": "Rifat"
+        },
+        {
+          "given": "M",
+          "family": "Rahouti"
+        },
+        {
+          "given": "S I",
+          "family": "Ahmed"
+        },
+        {
+          "given": "N",
+          "family": "Mohammed"
+        },
+        {
+          "given": "M R",
+          "family": "Amin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b158",
+      "title": "COLING 2002: The 19th International Conference on Computational Linguistics",
+      "container_title": "COLING 2002: The 19th International Conference on Computational Linguistics",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Li"
+        },
+        {
+          "given": "D",
+          "family": "Roth"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b159",
+      "title": "Proceedings of the 2013 conference on empirical methods in natural language processing",
+      "container_title": "Proceedings of the 2013 conference on empirical methods in natural language processing",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "A",
+          "family": "Perelygin"
+        },
+        {
+          "given": "J",
+          "family": "Wu"
+        },
+        {
+          "given": "J",
+          "family": "Chuang"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        },
+        {
+          "given": "C",
+          "family": "Potts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b160",
+      "title": "Codesearchnet challenge: Evaluating the state of semantic code search",
+      "container_title": "Codesearchnet challenge: Evaluating the state of semantic code search",
+      "year": "2019",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1909.09436"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Husain"
+        },
+        {
+          "given": "H.-H",
+          "family": "Wu"
+        },
+        {
+          "given": "T",
+          "family": "Gazit"
+        },
+        {
+          "given": "M",
+          "family": "Allamanis"
+        },
+        {
+          "given": "M",
+          "family": "Brockschmidt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b161",
+      "title": "Training verifiers to solve math word problems",
+      "container_title": "Training verifiers to solve math word problems",
+      "year": "2021",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2110.14168"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Cobbe"
+        },
+        {
+          "given": "V",
+          "family": "Kosaraju"
+        },
+        {
+          "given": "M",
+          "family": "Bavarian"
+        },
+        {
+          "given": "M",
+          "family": "Chen"
+        },
+        {
+          "given": "H",
+          "family": "Jun"
+        },
+        {
+          "given": "L",
+          "family": "Kaiser"
+        },
+        {
+          "given": "M",
+          "family": "Plappert"
+        },
+        {
+          "given": "J",
+          "family": "Tworek"
+        },
+        {
+          "given": "J",
+          "family": "Hilton"
+        },
+        {
+          "given": "R",
+          "family": "Nakano"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b162",
+      "title": "The jrc-acquis: A multilingual aligned parallel corpus with 20+ languages",
+      "container_title": "The jrc-acquis: A multilingual aligned parallel corpus with 20+ languages",
+      "year": "2006",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv preprint cs/0609058"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Steinberger"
+        },
+        {
+          "given": "B",
+          "family": "Pouliquen"
+        },
+        {
+          "given": "A",
+          "family": "Widiger"
+        },
+        {
+          "given": "C",
+          "family": "Ignat"
+        },
+        {
+          "given": "T",
+          "family": "Erjavec"
+        },
+        {
+          "given": "D",
+          "family": "Tufis"
+        },
+        {
+          "given": "D",
+          "family": "Varga"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b163",
+      "title": "Ralle: A framework for developing and evaluating retrieval-augmented large language models",
+      "container_title": "Ralle: A framework for developing and evaluating retrieval-augmented large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2308.10633"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Hoshi"
+        },
+        {
+          "given": "D",
+          "family": "Miyashita"
+        },
+        {
+          "given": "Y",
+          "family": "Ng"
+        },
+        {
+          "given": "K",
+          "family": "Tatsuno"
+        },
+        {
+          "given": "Y",
+          "family": "Morioka"
+        },
+        {
+          "given": "O",
+          "family": "Torii"
+        },
+        {
+          "given": "J",
+          "family": "Deguchi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b164",
+      "title": "Building production-ready rag applications",
+      "container_title": "Building production-ready rag applications",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Liu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b165",
+      "title": "Evaluating rag part i: How to evaluate document retrieval",
+      "container_title": "Evaluating rag part i: How to evaluate document retrieval",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Nguyen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b166",
+      "title": "Best practices for llm evaluation of rag applications",
+      "container_title": "Best practices for llm evaluation of rag applications",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Q",
+          "family": "Leng"
+        },
+        {
+          "given": "K",
+          "family": "Uhlenhuth"
+        },
+        {
+          "given": "A",
+          "family": "Polyzotis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b167",
+      "title": "Ragas: Automated evaluation of retrieval augmented generation",
+      "container_title": "Ragas: Automated evaluation of retrieval augmented generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2309.15217"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Es"
+        },
+        {
+          "given": "J",
+          "family": "James"
+        },
+        {
+          "given": "L",
+          "family": "Espinosa-Anke"
+        },
+        {
+          "given": "S",
+          "family": "Schockaert"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b168",
+      "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+      "container_title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.09476"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Saad-Falcon"
+        },
+        {
+          "given": "O",
+          "family": "Khattab"
+        },
+        {
+          "given": "C",
+          "family": "Potts"
+        },
+        {
+          "given": "M",
+          "family": "Zaharia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b169",
+      "title": "A survey of techniques for maximizing llm performance",
+      "container_title": "A survey of techniques for maximizing llm performance",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Jarvis"
+        },
+        {
+          "given": "J",
+          "family": "Allard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b170",
+      "title": "Benchmarking large language models in retrieval-augmented generation",
+      "container_title": "Benchmarking large language models in retrieval-augmented generation",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2309.01431"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Chen"
+        },
+        {
+          "given": "H",
+          "family": "Lin"
+        },
+        {
+          "given": "X",
+          "family": "Han"
+        },
+        {
+          "given": "L",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b171",
+      "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+      "container_title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2311.08147"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Liu"
+        },
+        {
+          "given": "L",
+          "family": "Huang"
+        },
+        {
+          "given": "S",
+          "family": "Li"
+        },
+        {
+          "given": "S",
+          "family": "Chen"
+        },
+        {
+          "given": "H",
+          "family": "Zhou"
+        },
+        {
+          "given": "F",
+          "family": "Meng"
+        },
+        {
+          "given": "J",
+          "family": "Zhou"
+        },
+        {
+          "given": "X",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b172",
+      "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+      "container_title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2401.17043"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lyu"
+        },
+        {
+          "given": "Z",
+          "family": "Li"
+        },
+        {
+          "given": "S",
+          "family": "Niu"
+        },
+        {
+          "given": "F",
+          "family": "Xiong"
+        },
+        {
+          "given": "B",
+          "family": "Tang"
+        },
+        {
+          "given": "W",
+          "family": "Wang"
+        },
+        {
+          "given": "H",
+          "family": "Wu"
+        },
+        {
+          "given": "H",
+          "family": "Liu"
+        },
+        {
+          "given": "T",
+          "family": "Xu"
+        },
+        {
+          "given": "E",
+          "family": "Chen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b173",
+      "title": "Retrieval meets long context large language models",
+      "container_title": "Retrieval meets long context large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.03025"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Xu"
+        },
+        {
+          "given": "W",
+          "family": "Ping"
+        },
+        {
+          "given": "X",
+          "family": "Wu"
+        },
+        {
+          "given": "L",
+          "family": "Mcafee"
+        },
+        {
+          "given": "C",
+          "family": "Zhu"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        },
+        {
+          "given": "S",
+          "family": "Subramanian"
+        },
+        {
+          "given": "E",
+          "family": "Bakhturina"
+        },
+        {
+          "given": "M",
+          "family": "Shoeybi"
+        },
+        {
+          "given": "B",
+          "family": "Catanzaro"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b174",
+      "title": "Memgpt: Towards llms as operating systems",
+      "container_title": "Memgpt: Towards llms as operating systems",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2310.08560"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Packer"
+        },
+        {
+          "given": "V",
+          "family": "Fang"
+        },
+        {
+          "given": "S G",
+          "family": "Patil"
+        },
+        {
+          "given": "K",
+          "family": "Lin"
+        },
+        {
+          "given": "S",
+          "family": "Wooders"
+        },
+        {
+          "given": "J E",
+          "family": "Gonzalez"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b175",
+      "title": "Efficient streaming language models with attention sinks",
+      "container_title": "Efficient streaming language models with attention sinks",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2309.17453"
+        }
+      ],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Xiao"
+        },
+        {
+          "given": "Y",
+          "family": "Tian"
+        },
+        {
+          "given": "B",
+          "family": "Chen"
+        },
+        {
+          "given": "S",
+          "family": "Han"
+        },
+        {
+          "given": "M",
+          "family": "Lewis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b176",
+      "title": "Raft: Adapting language model to domain specific rag",
+      "container_title": "Raft: Adapting language model to domain specific rag",
+      "year": "2024",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2403.10131"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Zhang"
+        },
+        {
+          "given": "S G",
+          "family": "Patil"
+        },
+        {
+          "given": "N",
+          "family": "Jain"
+        },
+        {
+          "given": "S",
+          "family": "Shen"
+        },
+        {
+          "given": "M",
+          "family": "Zaharia"
+        },
+        {
+          "given": "I",
+          "family": "Stoica"
+        },
+        {
+          "given": "J E",
+          "family": "Gonzalez"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b177",
+      "title": "Scaling laws for neural language models",
+      "container_title": "Scaling laws for neural language models",
+      "year": "2020",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2001.08361"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Kaplan"
+        },
+        {
+          "given": "S",
+          "family": "Mccandlish"
+        },
+        {
+          "given": "T",
+          "family": "Henighan"
+        },
+        {
+          "given": "T B",
+          "family": "Brown"
+        },
+        {
+          "given": "B",
+          "family": "Chess"
+        },
+        {
+          "given": "R",
+          "family": "Child"
+        },
+        {
+          "given": "S",
+          "family": "Gray"
+        },
+        {
+          "given": "A",
+          "family": "Radford"
+        },
+        {
+          "given": "J",
+          "family": "Wu"
+        },
+        {
+          "given": "D",
+          "family": "Amodei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b178",
+      "title": "International Conference on Machine Learning",
+      "container_title": "International Conference on Machine Learning",
+      "year": "2022",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "U",
+          "family": "Alon"
+        },
+        {
+          "given": "F",
+          "family": "Xu"
+        },
+        {
+          "given": "J",
+          "family": "He"
+        },
+        {
+          "given": "S",
+          "family": "Sengupta"
+        },
+        {
+          "given": "D",
+          "family": "Roth"
+        },
+        {
+          "given": "G",
+          "family": "Neubig"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b179",
+      "title": "Retrieval-augmented multimodal language modeling",
+      "container_title": "Retrieval-augmented multimodal language modeling",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2211.12561"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Yasunaga"
+        },
+        {
+          "given": "A",
+          "family": "Aghajanyan"
+        },
+        {
+          "given": "W",
+          "family": "Shi"
+        },
+        {
+          "given": "R",
+          "family": "James"
+        },
+        {
+          "given": "J",
+          "family": "Leskovec"
+        },
+        {
+          "given": "P",
+          "family": "Liang"
+        },
+        {
+          "given": "M",
+          "family": "Lewis"
+        },
+        {
+          "given": "L",
+          "family": "Zettlemoyer"
+        },
+        {
+          "given": "W.-T",
+          "family": "Yih"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b180",
+      "title": "Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models",
+      "container_title": "Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2301.12597"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Li"
+        },
+        {
+          "given": "D",
+          "family": "Li"
+        },
+        {
+          "given": "S",
+          "family": "Savarese"
+        },
+        {
+          "given": "S",
+          "family": "Hoi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b181",
+      "title": "Visualize before you write: Imagination-guided open-ended text generation",
+      "container_title": "Visualize before you write: Imagination-guided open-ended text generation",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2210.03765"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Zhu"
+        },
+        {
+          "given": "A",
+          "family": "Yan"
+        },
+        {
+          "given": "Y",
+          "family": "Lu"
+        },
+        {
+          "given": "W",
+          "family": "Xu"
+        },
+        {
+          "given": "X E",
+          "family": "Wang"
+        },
+        {
+          "given": "M",
+          "family": "Eckstein"
+        },
+        {
+          "given": "W Y",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b182",
+      "title": "Generating synthetic speech from spokenvocab for speech translation",
+      "container_title": "Generating synthetic speech from spokenvocab for speech translation",
+      "year": "2022",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2210.08174"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Zhao"
+        },
+        {
+          "given": "G",
+          "family": "Haffar"
+        },
+        {
+          "given": "E",
+          "family": "Shareghi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b183",
+      "title": "Using external off-policy speech-to-text mappings in contextual end-to-end automated speech recognition",
+      "container_title": "Using external off-policy speech-to-text mappings in contextual end-to-end automated speech recognition",
+      "year": "2023",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:2301.02736"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D M",
+          "family": "Chan"
+        },
+        {
+          "given": "S",
+          "family": "Ghosh"
+        },
+        {
+          "given": "A",
+          "family": "Rastrow"
+        },
+        {
+          "given": "B",
+          "family": "Hoffmeister"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b184",
+      "title": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "container_title": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Yang"
+        },
+        {
+          "given": "A",
+          "family": "Nagrani"
+        },
+        {
+          "given": "P H",
+          "family": "Seo"
+        },
+        {
+          "given": "A",
+          "family": "Miech"
+        },
+        {
+          "given": "J",
+          "family": "Pont-Tuset"
+        },
+        {
+          "given": "I",
+          "family": "Laptev"
+        },
+        {
+          "given": "J",
+          "family": "Sivic"
+        },
+        {
+          "given": "C",
+          "family": "Schmid"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b185",
+      "title": "2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)",
+      "container_title": "2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)",
+      "year": "2023",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Nashid"
+        },
+        {
+          "given": "M",
+          "family": "Sintaha"
+        },
+        {
+          "given": "A",
+          "family": "Mesbah"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

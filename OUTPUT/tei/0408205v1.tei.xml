@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Granular discorectangle in a thermalized bath of hard disks</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2004-08-10">10 Aug 2004</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">H</forename><surname>Gomart</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Laboratoire de Physique Théorique des Liquides</orgName>
+								<orgName type="institution">Université Pierre et Marie Curie</orgName>
+								<address>
+									<addrLine>4, place Jussieu</addrLine>
+									<postCode>75252, 05</postCode>
+									<settlement>Paris Cedex</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">J</forename><surname>Talbot</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry and Biochemistry</orgName>
+								<orgName type="institution">Duquesne University</orgName>
+								<address>
+									<postCode>15282-1530</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">P</forename><surname>Viot</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Laboratoire de Physique Théorique des Liquides</orgName>
+								<orgName type="institution">Université Pierre et Marie Curie</orgName>
+								<address>
+									<addrLine>4, place Jussieu</addrLine>
+									<postCode>75252, 05</postCode>
+									<settlement>Paris Cedex</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Granular discorectangle in a thermalized bath of hard disks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2004-08-10">10 Aug 2004</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">86BB4DABD5366F2EC3501A20F6662AF6</idno>
+					<idno type="arXiv">arXiv:cond-mat/0408205v1[cond-mat.stat-mech]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>numbers: 05.20.-y</term>
+					<term>51.10+y</term>
+					<term>44.90+c</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>By using the Enskog-Boltzmann approach, we study the steady-state dynamics of a granular discorectangle placed in a two-dimensional bath of thermalized hard disks. Hard core collisions are assumed elastic between disks and inelastic between the discorectangle and the disks, with a normal restitution coefficient α &lt; 1. Assuming a Gaussian ansatz for the probability distribution functions, we obtain analytical expressions for the granular temperatures. We show the absence of equipartition and investigate both the role of the anisotropy of the discorectangle and of the relative ratio of the bath particles to the linear sizes of the discorectangle. In addition, we investigate a model of a discorectangle with two normal restitution coefficients for collisions along the straight and curved surfaces of the discorectangle. In this case one observes equipartition for a non trivial ratio of normal restitution coefficients.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Granular matter is characterized by the existence of dissipative forces between particles. In order to sustain a collective motion, it is necessary to provide energy continuously. When power supply is sufficiently copious, the assembly of granular particles attains a non equilibrium steady state (NESS) <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>. It is customary to define the granular temperature as the second moment of the velocity distribution. It is a source of both fascination and inconvenience that the well-know properties of temperatures characterizing thermal systems are not necessarily transferable to granular temperatures. In particular, recent work, both theoretical <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8]</ref> and experimental <ref type="bibr" target="#b8">[9,</ref><ref type="bibr" target="#b9">10]</ref>, has shown that in a binary granular system the two species have different granular temperatures that are non-trivial functions of the microscopic parameters (mass, size, restitution coefficient,. . . ). Although the absence of equipartition is not surprising for a dissipative system sustained in a NESS, a more complete investigation is necessary since the granular temperatures play an important role in hydrodynamic descriptions of these systems (in particular the absence of equipartition in binary mixtures yields granular temperature gradients which enhance segregation <ref type="bibr" target="#b10">[11]</ref>). In addition, the extension of the fluctutation-dissipation theorem is an important issue in the context of granular gases <ref type="bibr" target="#b11">[12]</ref>. Other consequences of the absence of equipartition include the ability of a binary system to exhibit a segregation phenomena in a "Maxwell demon" experiment <ref type="bibr" target="#b12">[13]</ref>. See also the homogeneous cooling state of a granular mixture <ref type="bibr" target="#b13">[14]</ref> and the impurity problem <ref type="bibr" target="#b14">[15]</ref>.</p><p>Most of the above-referenced studies examined assemblies of spherical particles. Yet, in reality, the particles composing granular systems are to some degree anisotropic and, in many cases, strongly so. Even if the particles are smooth, each collision results in some exchange and, possibly loss, of rotational kinetic energy. There are relatively few studies of these systems (but see for example, Refs. <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b17">18]</ref>) and fewer still that focus specifically on equipartition. Huthmann et al. <ref type="bibr" target="#b18">[19]</ref> used kinetic theory to examine the free cooling of a system of granular needles in three dimensions and, more recently, two of the present authors studied a two-dimensional system composed of a single granular needle in a thermalized bath of point particles <ref type="bibr" target="#b19">[20]</ref> in a NESS. For inelastic needle-point collisions, the rotational granular temperature is smaller than the translational one while both are less than the bath temperature. The validity of the theoretical predictions were confirmed by comparison with numerical simulations of the model. While this study provided useful insights, infinitesimal width of the particle is obviously an idealization.</p><p>The objective of present article is to consider a more realistic system where both the tracer particle and bath particles are of finite extent. Specifically, we consider a discorectangle in a bath of thermalized hard disks. Fortunately, despite the increased complexity, it is still possible to obtain an analytic solution of the steady state kinetic equations. The principal difference between the discorectangle-disk and needle-point systems is that two kinds of collision are possible in the former compared to one in the latter. Specifically, a disk can collide with either the sides or the caps of the discorectangle. If each type of collision is characterized by different normal restitution coefficients we show that equipartition between the translational and rotational degrees of freedom can be obtained for specific values of these parameters. Consequently, for appropriate ranges of the restitution coefficients the translational granular temperature may be less than or greater than the rotational one.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. MODEL AND COLLISION RULES</head><p>We investigate a two-dimensional system consisting of a discorectangle of total length L + 2R, radius R and mass M with a moment of inertia I (The value of which is given in appendix A). The bath consists of disks of mass m and of radius r. The vector positions of the center of mass of the discorectangle and a disk particle are denoted by r 1 and r 2 , respectively. The orientation of the discorectangle is specified by a unit vector u 1 that points along the long axis. Let r 12 = r 1r 2 and u ⊥ 1 denote a vector perpendicular to u 1 . A collision between a discorectangle and a disk can take place either on the linear part or on the circular parts of the former,</p><formula xml:id="formula_0">r 12 .u ⊥ 1 = -(R + r),<label>(1)</label></formula><p>if |λ| &lt; L/2, and</p><formula xml:id="formula_1">r 12 .u r = -(R + r),<label>(2)</label></formula><p>if R &gt; |λ| -L/2 &gt; 0, where u r denotes the unit vector of the collision axis. (see Fig. <ref type="figure">1</ref>). The relative velocity of the point of contact V is given by</p><formula xml:id="formula_2">V = v 12 + ω 1 × OC,<label>(3)</label></formula><p>where ω 1 denotes the angular time derivative and OC the vector from the center of the discorectangle to the point of impact.</p><p>The pre-and post-collisional quantities (the latter are labeled with a prime) satisfy:</p><formula xml:id="formula_3">• Total momentum conservation M v ′ 1 + mv ′ 2 = M v 1 + mv 2 .<label>(4)</label></formula><p>• Angular momentum conservation with respect to the point of contact</p><formula xml:id="formula_4">Iω ′ 1 k = Iω 1 k + mOC × (v 2 -v ′ 2 ) ,<label>(5)</label></formula><p>where k is a unit vector perpendicular to the plane.</p><p>As a result of the collision, the relative velocity of the contacting points changes instantaneously according to the following relations:</p><formula xml:id="formula_5">V ′ .u ⊥ 1 = -αV.u ⊥ 1 ,<label>(6)</label></formula><formula xml:id="formula_6">V ′ .u 1 = V . u 1 ,<label>(7)</label></formula><p>where α is the normal restitution coefficient and u ⊥ 1 and u 1 denote the unit vectors of the collision along the rectilinear part of the discorectangle. When the collision occurs on the circular parts of the discorectangle, the collision rules are given by</p><formula xml:id="formula_7">V ′ .u r = -αV.u r ,<label>(8)</label></formula><formula xml:id="formula_8">V ′ .u θ = V . u θ ,<label>(9)</label></formula><p>where u r and u θ denote the unit vectors associated with the circular part of the discorectangle (See Fig <ref type="figure">1b</ref>).</p><p>The tangential restitution coefficient is set to one for the sake of simplicity. This choice is reflected in the form of Eqs. <ref type="bibr" target="#b6">(7)</ref><ref type="bibr" target="#b7">(8)</ref><ref type="bibr" target="#b8">(9)</ref></p><formula xml:id="formula_9">. R r O C L/2 (a) λ v 2 u 1 u ⊥ 1 r 12 (b) R L/2 λ O C θ ur u θ v 2 r r 12</formula><p>FIG. <ref type="figure">1</ref>: Geometry of the discorectangle and a disk in the plane: (a) Collision between the rectilinear part of the discorectangle and a disk, r12 denotes a vector joining the point labeled 2 and the center of the discorectangle; u1 is a unit vector along the axis of the discorectangle, λ is the algebraic distance between the center of the discorectangle and the point of impact and u ⊥ 1 is a unit vector perpendicular to the axis of the discorectangle. (b) Collision between the circular part of the discorectangle and a disk. θ denotes the angle between the direction of the long axis of the discorectangle and the axis defined by the contact point and the center of the disk.ur and u θ are unit vectors normal and tangential to the surface at the point of contact, respectively.</p><p>By combining Eqs. (3)-( <ref type="formula" target="#formula_5">6</ref>) one obtains, after some algebra, the change of the discorectangle momentum ∆p = M (v ′ 1v 1 ) for a collision along the linear part ∆p.u ⊥ 1 = -</p><formula xml:id="formula_10">(1 + α)V.u ⊥ 1 1 m + 1 M + λ 2 I . (<label>10</label></formula><formula xml:id="formula_11">)</formula><p>for |λ| ≤ L/2 and at the two ends of the discorectangle ∆p.u r = -</p><formula xml:id="formula_12">(1 + α)V.u r 1 m + 1 M + L 2 sin 2 θ 4I .<label>(11)</label></formula><p>for R &gt; |λ| -L/2 &gt; 0 with cos(θ) = λ-L/2 R .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. BOLTZMANN EQUATION</head><p>Since we are interested in the homogeneous state, the distribution function f (v 1 , ω 1 ) of the discorectangle obeys</p><formula xml:id="formula_13">∂f (v 1 , ω 1 ) ∂t = N dθ 1 2π dv 2 dr 2 T 12 f (v 1 , ω 1 , v 2 ) (<label>12</label></formula><formula xml:id="formula_14">)</formula><p>where N is the total number of disks, f (v 1 , ω 1 , v 2 ) is the distribution function of the discorectangle and a disk, and T 12 is the collision operator between a discorectangle and a disk.</p><p>Defining the granular temperatures as quadratic average of the appropriate velocity distribution, one has T T = M/2 v 2 and T R = I ω 2 for the translational and rotational granular temperatures, respectively (the angular brackets denote the average). By taking the second moment with respect of the velocity and of the angular velocity of Eq.( <ref type="formula" target="#formula_13">12</ref>), one obtains</p><formula xml:id="formula_15">2∂T T M ∂t = dv 1 dω 1 ∂ t (v 2 1 f (v 1 , ω 1 )) = N dv 1 dω 1 dθ 1 2π dv 2 dr 2 T 12 f (v 1 , ω 1 , v 2 )v 2 1 ,<label>(13)</label></formula><formula xml:id="formula_16">∂T R I∂t = dv 1 dω 1 ∂ t (ω 2 1 f (v 1 , ω 1 )) = N dv 1 dω 1 dθ 1 2π dv 2 dr 2 T 12 f (v 1 , ω 1 , v 2 )ω 2 1 .<label>(14)</label></formula><p>In the stationary state the time derivatives of the lefthand side of these two equations are equal to zero.</p><p>To build the collision operator between the discorectangle and a disk, T 12 , one must include the change in quantities (i.e. velocity and angular momentum) produced during the infinitesimal time interval of the collision. This operator is different from zero only if the two particles are in contact and if the particles were approaching just before the collision <ref type="bibr" target="#b20">[21]</ref>. For a collision between a disk and the rectilinear part of the discorectangle, the explicit form of the operator given by</p><formula xml:id="formula_17">T 12 ∝ Θ(L/2 -|λ|)δ(|r 12 .u ⊥ 1 | -r -R) × d|r 12 .u ⊥ 1 | dt Θ - d|r 12 .u ⊥ 1 | dt (b 12 -1), (<label>15</label></formula><formula xml:id="formula_18">)</formula><p>where b 12 is an operator that changes post-collisional quantities to pre-collisional quantities and Θ(x) is the Heaviside function, and for a collision at two ends of the discorectangle</p><formula xml:id="formula_19">T 12 ∝ Θ(R + L/2 -|λ|)Θ(|λ| -L/2)δ(|r 12 .u r | -(r + R)) × d|r 12 .u r | dt Θ - d|r 12 .u r | dt (b 12 -1), (<label>16</label></formula><formula xml:id="formula_20">)</formula><p>where b 12 is an operator that converts pre-collisional to post-collisional quantities.</p><p>The others terms of the collision operator correspond to the necessary conditions of contact Θ(L/2 -|λ|)δ(|r 12 .u ⊥ 1 | -(r + R)), and approach Θ -</p><formula xml:id="formula_21">d|r12.u ⊥ 1 | dt in the first case and Θ(R + L/2 -|λ|)Θ(|λ| - L/2)δ(|r 12 .u r | -(r + R))</formula><p>, and approach Θ -d|r12.ur| dt in the second case.</p><p>By taking the second moments of the distribution function of the discorectangle and after substitution of the collision operator (Eq.( <ref type="formula" target="#formula_17">15</ref>)), one obtains explicitly for the translational kinetic energy</p><formula xml:id="formula_22">... dr 2 dv 1 dv 2 dω 1 dθ 1 Θ(L/2 -|λ|)δ(|r 12 .u ⊥ 1 | -(r + R)) × d|r 12 .u ⊥ 1 | dt Θ - d|r 12 .u ⊥ 1 | dt f (v 1 , ω 1 )Φ(v 2 )∆E T 1 + Θ(R + L/2 -|λ|)Θ(|λ| -L/2)δ(|r 12 .u r | -(r + R)) × d|r 12 .u r | dt Θ - d|r 12 .u r | dt f (v 1 , ω 1 )Φ(v 2 )∆E T 1 = 0.<label>(17)</label></formula><p>A similar equation can be written for rotational kinetic energy. Since the impulse of the collision depends on the location of the impact, it is easy to show that the solution is not a Maxwell distribution function, a property already observed in the model of a needle and points <ref type="bibr" target="#b19">[20]</ref>. However, since the deviations from the Maxwell distribution are small, we use it as a trial function. That is we assume that</p><formula xml:id="formula_23">f (v 1 , ω 1 ) ∝ exp - M v 1 2 2γ T T - Iω 2 1 2γ R T ,<label>(18)</label></formula><p>where γ T and γ R are the ratios of the translational and rotational discorectangle temperatures to the bath temperature, respectively. In summary, in order to obtain the granular temperatures of the discorectangle, it is necessary to: (i) Calculate the change of translational and rotational energy occurring during a collision (ii) Perform an average over all degrees of freedom of the collision integral.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CALCULATION AND RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Energy changes during a collision</head><p>When a disk collides with the discorectangle, the change of the translational kinetic energy of the latter is given by</p><formula xml:id="formula_24">∆E T 1 = M 2 (v ′ 1 ) 2 -(v 1 ) 2 = ∆p.v 1 + 1 M ∆p 2 2 = -(1 + α) V.u ⊥ 1 v 1 .u ⊥ 1 1 m + 1 M + λ 2 I + 1 2M (1 + α) 2 (V.u ⊥ 1 ) 2 1 m + 1 M + λ 2 I 2 ,<label>(19)</label></formula><p>for |λ| &lt; L 2 , and</p><formula xml:id="formula_25">∆E T 1 = - (1 + α)V.u r v 1 .u r 1 m + 1 M + L 2 sin 2 θ 4I + 1 2M (1 + α) 2 (V.u r ) 2 ( 1 m + 1 M + L 2 sin 2 θ 4I ) 2 . (<label>20</label></formula><formula xml:id="formula_26">) for R &gt; |λ| -L 2 &gt; 0. The collision results in a change of rotational energy, for |λ| &lt; L 2 , ∆E R 1 = I 2 (ω ′ 1 ) 2 -(ω 1 ) 2 = - λ(1 + α) 2 V.u ⊥ 1 (ω ′ 1 + ω 1 ) 1 m + 1 M + λ 2 I = -λ(1 + α) V.u ⊥ 1 ω 1 1 m + 1 M + λ 2 I + λ 2 (1 + α) 2 (V.u ⊥ 1 ) 2 2I 1 m + 1 M + λ 2 I 2 . (<label>21</label></formula><formula xml:id="formula_27">)</formula><p>and for R &gt; |λ| -L/2 &gt; 0,</p><formula xml:id="formula_28">∆E R 1 = -(1 + α) L sin θV.u r ω 1 2 1 m + 1 M + L 2 sin 2 θ 4I + (1 + α) 2 L 2 sin 2 θ(V.u r ) 2 8I 1 m + 1 M + L 2 sin 2 θ 4I 2 .<label>(22)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Expressions of the granular temperatures</head><p>After inserting Eq. ( <ref type="formula" target="#formula_23">18</ref>) in Eq. ( <ref type="formula" target="#formula_22">17</ref>) it is necessary to perform integrations over each variable in the corresponding equation for the rotational energy. Details of this rather technical task are given in the Appendix B. After some tedious calculation, one obtains the following set of equations FIG. <ref type="figure">2</ref>: Ratio of the translational (full curve) γT and rotational γR (dashed curve) granular temperature to the temperature of the bath versus the normal restitution coefficient α for a system of a needle and a bath of points and a system of a needle and a bath of disks for c = 2/3 (a) and for c = 1/10. The curves corresponding to the needle-point system are always above those for the needle-disk system (b). The insets display the differences γT -γR versus α for the needle in the bath of disks (full curve) and the needle in the bath of points (dashed curve).</p><formula xml:id="formula_29">b cI 01 1 (a, k) + (1 -c)J 01 1 (a, k) = 1 + α 2 cI 03 2 (a, k) + (1 -c)J 03 2 (a, k)<label>(23)</label></formula><formula xml:id="formula_30">a cI 11 1 (a, k) + (1 -c)J 11 1 (a, k) = 1 + α 2 cI 13 2 (a, k) + (1 -c)J 13 2 (a, k)<label>(24)</label></formula><p>where</p><formula xml:id="formula_31">k = L 2 4I 1 m + 1 M ,<label>(25)</label></formula><formula xml:id="formula_32">a = γ R M + m M + mγ T ,<label>(26) b</label></formula><formula xml:id="formula_33">= γ T M + m M + mγ T . (<label>27</label></formula><formula xml:id="formula_34">)</formula><p>and</p><formula xml:id="formula_35">c = L/2 L/2 + (r + R)<label>(28)</label></formula><p>and I np m and J np m are given by</p><formula xml:id="formula_36">I np m (u, v) = 1 0 dx x 2n (1 + uvx 2 ) p/2 (1 + vx 2 ) m (29) J np m (u, v) = π 2 0 dθ sin 2n (θ) (1 + uv sin 2 θ) p/2 (1 + v sin 2 θ) m<label>(30)</label></formula><p>Explicit expressions for the integrals appearing in Eqs. ( <ref type="formula" target="#formula_29">23</ref>) and ( <ref type="formula" target="#formula_30">24</ref>) are given in Appendix C. Eq. ( <ref type="formula" target="#formula_30">24</ref>) is an implicit equation for a that, for a given value of α, can be solved with standard numerical methods. b is then easily obtained by calculating the ratio of integrals of Eq. ( <ref type="formula" target="#formula_29">23</ref>). Finally, from the values of a and b, γ T and γ R can be obtained from Eqs.( <ref type="formula" target="#formula_32">26</ref></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>)-(27).</head><p>A first check is the elastic case, α = 1, for which one obtains a = b = 1 which gives γ T = 1 and, since a/b = γ R /γ T , γ R = 1 i.e., the temperatures of translational and rotational degrees of freedom are the same and correspond to the bath temperature, a property of an equilibrium system.</p><p>In the limit R → 0 and r → 0, for which c → 1 corresponding to a needle in a bath of point particles, one recovers the results of Ref <ref type="bibr" target="#b19">[20]</ref>. More interesting is the limit R → 0 with r remaining finite, i.e., a needle in a bath of disks. By using Eq.(28) one obtains that c = L/(L + 2r). Since c &lt; 1, unlike the simple needle-point system, there is a contribution resulting from collisions between bath particles and the needle's tips. This type of collision is dominant when the bath particles are larger than the longest size of the anisotropic particle.</p><p>To illustrate the effect of this contribution, Figures 2a and b compare the system of a needle in a bath of point particles and the system of a needle in a bath of disks, the radius of disks r are equal to L/4 in Fig <ref type="figure">2a</ref> and<ref type="figure">r</ref> </p><formula xml:id="formula_37">= 9L/2 in Fig 2b.</formula><p>It is noticeable that the translational and rotational temperatures of the latter system are smaller than those of the needle in a bath of points, an effect that becomes more pronounced when the radius of the disks becomes larger than the length of the needle. The difference γ T -γ R are shown in the insets for the needle and the bath of points and for the needle and the bath of disks. Note that the translational temperature is always larger than the rotational temperature and that the difference depends very weakly on the size of the radius of the bath. Additionally, the difference increases when the restitution coefficient decreases from 1 (elastic case), reaches a maximum for a value of α ∼ 0.3 and decreases slightly when the restitution coefficient still decreases.</p><p>Figure <ref type="figure" target="#fig_1">3</ref> shows the influence of the anisotropy of the tracer particle. The rotational temperature is still lower than the translational temperature what ever the elongation of the particles, but the effect is greater when the elongation is large. The two upper curves correspond the translational (full curve) and rotational (dashed curve) temperature of the discorectangle when L = R, the two intermediate curve to granular temperatures when L = 3R, and the two lower curves for a discorectangle with L = 10R.</p><p>When the anisotropy of the discorectangle approaches zero, i.e. L/R → 0, c → 0, one can show by using Eqs.( <ref type="formula" target="#formula_29">23</ref>)-( <ref type="formula" target="#formula_30">24</ref>) that</p><formula xml:id="formula_38">γ T = 1 + α 2 + m M (1 -α) . (<label>31</label></formula><formula xml:id="formula_39">)</formula><p>which is the the result of Martin and Piasecki <ref type="bibr" target="#b1">[2]</ref> for a spherical tracer particle in a bath of spherical particles. Moreover, the limit L/R → 0 leads equipartition between the rotational and translational granular temperatures, a result which is different from a model of pure spherical particles where, in the absence of tangential friction, the particles cannot exchange rotational energy. In physical systems, the particles are never completely spherical and our model shows that if an infinitesimal amount of anisotropy is present, the translational and rotational temperatures are equal in the steady state. Although our analysis provides no quantitative information about the relaxation time to reach this NESS, it is certain to be very long in this limit of small anisotropy. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Influence of mass ratio</head><p>We consider a homogeneous discorectangle of mass M in a bath of disks each of mass m for which M = m. When m/M → 0 one obtains, from Eqs.( <ref type="formula" target="#formula_29">23</ref>)-( <ref type="formula" target="#formula_30">24</ref>), that</p><formula xml:id="formula_40">γ T = γ R = 1 + α 2<label>(32)</label></formula><p>i.e., equipartition between the degrees of freedom of the tracer particle, but not between the bath and the tracer particle. This is, moreover, the same result for a needle in a bath of point particles. We conjecture that this result is general in the sense that we expect equipartition between the different degrees of freedom of the tracer particle in a bath of light particles, whatever the shape of the tracer particle and the dimension of the system. The behavior for finite values of the ratio m/M is shown in Fig. <ref type="figure" target="#fig_2">4</ref>. The granular temperatures decrease when the ratio m/M increases, and the translational temperature remains higher than the rotational temperature for each value of α.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. NON UNIFORM RESTITUTION COEFFICIENT</head><p>In practice it may be difficult to construct a discorectangle for which the restitution coefficient is constant over the entire perimeter. It is clear, for example, that if the  <ref type="figure">6</ref>: Ratio of the translational (full curve) γT and rotational γR (dashed curve) granular temperature to the temperature of the bath versus the normal restitution coefficient α2 with a normal restitution coefficient α1 = 0.5 for a homogeneous discorectangle with M = m, L = 2R and R = r. Note that equipartition is recovered for a non-trivial value of α2 object is composed of a homogeneous viscoelastic material, collisions with the ends will be characterized by a smaller restitution coefficient than collisions with the linear part. This effect becomes more pronounced as the elongation (L/R) increases. Other possibilities exist for a non-homogeneous discorectangle composed of two or more materials. For example, a hard material may be used to construct the caps. In addition, the restitution coefficient could depend on the relative velocity of the point of impact <ref type="bibr" target="#b21">[22]</ref>, an effect that one neglects here as a first approximation.</p><p>As a first approach to describe this possibility, we consider in this section a discorectangle where the restitution coefficient is equal to α 1 for a collision along the rectilinear part of the object and equal to α 2 for one along the circular part: see Fig. <ref type="figure">5</ref>. Using the procedure outlined above one obtains the following set of closed equations</p><formula xml:id="formula_41">b (1 + α 1 )cI 01 1 (a, k) + (1 + α 2 )(1 -c)J 01 1 (a, k) = (1 + α 1 ) 2 2 cI 03 2 (a, k) + (1 + α 2 ) 2 2 (1 -c)J 03 2 (a, k)<label>(33)</label></formula><formula xml:id="formula_42">a (1 + α 1 )cI 11 1 (a, k) + (1 + α 2 )(1 -c)J 11 1 (a, k) = (1 + α 1 ) 2 2 cI 13 2 (a, k) + (1 + α 2 ) 2 2 (1 -c)J 13 2 (a, k)<label>(34)</label></formula><p>Figure <ref type="figure">6</ref> shows the ratio of translational and rotational temperature of a discorectangle with R = r and L = 2R to the temperature of the bath as a function of the normal restitution coefficient α 2 with a fixed α 1 = 0.5. One notes that the translational temperature becomes smaller than the rotational temperature for α 2 &gt; 0.765. When the two curves cross, equipartition is recovered, but unlike the limiting cases discussed above of a discorectangle with a uniform restitution coefficient (light bath particles, infinitely small anisotropy), for a non-trivial value of restitution coefficient α 2 and, moreover, for larger values of α 2 the ratio of temperatures is inverted. One can determine in general when equipartition is recovered for a discorectangle with two restitution coefficients. Using the relation a = b (assumption of equipartition) and Eqs.( <ref type="formula" target="#formula_41">33</ref>)-(34), one obtains two implicit equations with the three parameters α 1 , α 2 and a. A simple numerical procedure allows us to obtain the α 2 as a function of α 1 .</p><p>Figure <ref type="figure">7</ref> shows the equipartition lines in the (α 1 , α 2 ) space. Above each line, corresponding to a given elongation of the rectangle, T R &gt; T T while the reverse inequality applies to the region below the line. It is noticeable that as the elongation increases, the region of the (α 1 , α 2 ) space where T R &gt; T T decreases.</p><p>Figure <ref type="figure" target="#fig_5">8</ref> shows the role of the size of the bath particles on the existence of equipartition of a discorectangle of length L = 8R. For small bath particles, only a small range of α 1 , ( between 0 and ∼ 0.3) with a smaller range of α 2 ( between ∼ 0.89 and 1) allows equipartition for the tracer particle. For larger bath disks, all values of α 1 (between 0 and 1) are available with a smaller corresponding range of α 2 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>VI. CONCLUSION</head><p>We have investigated the influence of the anisotropy of a tracer particle in a bath of thermalized disks in two dimensions. By using a mean-field approach, we have obtained analytical results for the rotational and translational temperatures. For a homogeneous discorectangle with a uniform normal restitution coefficient, the translational temperature is always higher than the rotational temperature, with the difference depending on the elongation of the tracer particle, the size of the bath particles and the mass ratio. At present, the exact dependence of the restitution coefficient on the position of the point of impact is unknown. It seems likely, however, that it is not constant along the perimeter. As a first approximation, we considered an extension of the model where it takes on two values, one for collisions with the linear part and another for collisions with the caps. In this case the difference between the translational and rotational granular temperatures can be either positive or negative depending on the values of the restitution coefficients and the other parameters. It is clearly possible to generalize the calculation to allow for a continuously varying restitution coefficient.</p><p>It would also be interesting to investigate a system of a tracer particle with a small anisotropy where the tangential restitution coefficient has a non-trivial value (-1 &lt; α T &lt; 1) where the limits correspond to a perfectly rough and a perfectly smooth surface, respectively. The intermediate situation corresponds to some friction which is important in some granular systems. </p><formula xml:id="formula_43">I Oz = ρR πR R 2 2 + L 2 2 + 2 3 L 3R 2 + L 2 2 . (A3)</formula><p>By substituting the density as a function of the total mass of the discorectangle.</p><formula xml:id="formula_44">I = M     2L 3R 2 +( L 2 ) 2 3 + πR R 2 2 + L 2 2 πR + 2L     (A4)</formula><p>Two well-known limits are recovered</p><formula xml:id="formula_45">lim R→0 I Oz = M L 2 12 (A5) lim L→0 I Oz = M R 2 2 (A6)</formula><p>For an inhomogeneous discorectangle, the moment of inertia depends on the mass distribution. However, it is possible to determine the lower and upper bounds for allowable values. A trivial lower bound of zero is obtained when the mass is concentrated at the center. Conversely, when the mass is distributed equally at the two extremities of the object (point masses of M/2 at a distance of L + R from the center on each side), one obtains</p><formula xml:id="formula_46">I = M (L/2 + R) 2 (A7)</formula><p>which gives the upper bound for the moment of inertia.</p><p>Since Eq. (B5) depends only on χ.u ⊥ 1 and ν.u ⊥ 1 , one can freely integrate over the direction of u 1 for the vectors χ and ν, and similarly for Eq.(B6). The integration over θ 1 can be easily performed. If we introduce the three dimensional vectors G u ⊥ 1 and s u ⊥ 1 with components:</p><formula xml:id="formula_47">G u ⊥ 1 = (G 1 , G 2 , G 3 ) (B8) = 2T M γ T + m (γ T -1), 2T γ T M γ T + m m + M √ mM , λ 2T γ R I (B9) and s u ⊥ 1 = (s 1 , s 2 , s 3 ) (B10) = (χ.u ⊥ 1 , ν.u ⊥ 1 , ξ) (B11)</formula><p>Respectively, one has introduces G ur and s ur vectors associated with collisions on the circular parts of the discorectangle by changing u ⊥ 1 in u r and λ by L 2 sin θ. By inserting Eq. ( <ref type="formula" target="#formula_24">19</ref>) in Eq. (B7), the average energy loss can be rewritten as which finally leads to Eq. ( <ref type="formula" target="#formula_29">23</ref>). The equation for rotational energy is derived following exactly the same procedure.</p><formula xml:id="formula_48">p=±1 L/2 -L/2 dλ ds u ⊥ 1 exp(-s 2 u ⊥ 1 )|G u ⊥ 1 .s u ⊥ 1 |Θ(pG u ⊥ 1 .s u ⊥ 1 ) 1 2M (1 + α) 2 (G u ⊥ 1 .s u ⊥ 1 ) 2 ( 1 m + 1 M + λ 2 I ) 2 - (1 + α)G u ⊥ 1 .s u ⊥</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>APPENDIX C: INTEGRALS</head><p>The coupled equations ( <ref type="formula" target="#formula_29">23</ref>)-(24) depend on the eight integrals I 01 1 (a, k), I 03 2 (a, k), I 11 1 (a, k), I 13 2 (a, k) <ref type="bibr" target="#b22">[23]</ref>, J 01 1 (a, k), J 03 2 (a, k), J 11 1 (a, k), J 13 2 (a, k) which can be expressed in terms of transcendental and special functions. For completeness, we give below their expressions. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 3 :</head><label>3</label><figDesc>FIG.3: Ratio of the translational (full curve) γT and rotational γR (dashed curve) granular temperature to the temperature of the bath versus the normal restitution coefficient α for a discorectangle and a bath of disks, for different values of the anisotropy r = R and L = R, 3R, 10R</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 4 :</head><label>4</label><figDesc>FIG.4: Ratio of the granular temperatures γT (full curve) γR (dashed curve) to the bath temperature as a function of the mass ratio m/M , for a homogeneous discorectangle with c = 4/7.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>1 FIG. 5 :</head><label>15</label><figDesc>FIG.5: Sketch of the discorectangle with two restitution coefficients α1 (rectilinear part) and α2 (circular part).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>2 FIG. 7 :</head><label>27</label><figDesc>FIG. 7: α1 versus α2 where equipartition is obtained for r = R and different values of L = R, 2R, . . . , 5R from bottom to top</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 8 :</head><label>8</label><figDesc>FIG.8: α1 versus α2 where equipartition is obtained for L = 8R and for different values of disk radius r/R = 0, 1, 2, 3, 5 (number labelling each curve)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>2 ( 1 m + 1 M + L 2 sin 2 θ 4I ) 2 - ( 1 + 2 |G| 2</head><label>212122</label><figDesc>ur exp(-s 2 ur )|G ur .s ur |Θ(pG ur .s ur )1 2M (1 + α) 2 (G ur .s ur ) α)G ur .s ur 1 m + 1 M + L 2 sin 2 θ 4I 2T M γ T + m γ T s 1 + mγ T M s 2 = 0. (B12)By defining a new coordinate system in which the z-axis is parallel to G, one find that the integrals of Eq. (B12) involve gaussian integrals of the formds exp -s 2 (|G|s z ) 2 Θ(±s z )G i s z = π G i (B13)andds exp -s 2 (|G|s z ) 3 Θ(±s z ) = π 2 |G 3 | (B14)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head></head><label></label><figDesc>k) =aK( √ -ak) + (1 -a)Π(-k, √ -ak) (C5)where K(x) and Π(x, y) denote the complete elliptic inof the first kind and the incomplete elliptic integral of the third kind respectively. a)(2ak + a + k + 2) 2(k + 1) 2 (1 + ak)</figDesc></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>APPENDIX B: NEEDLE AVERAGE ENERGY LOSS</head><p>As for binary mixtures of spheres <ref type="bibr" target="#b2">[3]</ref>, we use a Gaussian ansatz for the distribution functions and introduce two different temperatures corresponding to the translational and rotational degrees of freedom of the needle. The homogeneous distribution functions of the needle and of the points are then given respectively by</p><p>where T is the temperature of the bath, γ T and γ R the ratio of the translational (and rotational) temperature of the needle to the bath temperature. We introduce the vectors χ and ν such that</p><p>The scalar products V.u ⊥ 1 and V.u r can be expressed as</p><p>The translational energy loss is given by the formula</p><p>where E(x) denotes the complete elliptic integral of the second kind.</p><p>and finally </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mcnamara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page">2247</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Piasecki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Europhys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page">613</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Trizac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Granul. Matter</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">57</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hrenya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Garzó</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">41301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Garzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">5706</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Clelland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hrenya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">31301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Montanero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Garzó</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Molecular Simulation</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">357</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Alam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluid. Mech</title>
+		<imprint>
+			<biblScope unit="volume">476</biblScope>
+			<biblScope unit="page">69</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Feitosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Menon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">198301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Wildman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Parker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">64301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Galvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hrenya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluid. Mech</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>to be published</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Loreto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Puglisi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica A</title>
+		<imprint>
+			<biblScope unit="volume">334</biblScope>
+			<biblScope unit="page">513</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Trizac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Phys</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page">1713</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">51305</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page">4823</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pöschel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. I France</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">1431</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Aranson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Tsimring</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">21305</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mullin</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>private communication</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huthmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aspelmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zippelius</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">654</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Viot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Talbot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">51106</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Free cooling of particles with rotational degrees of freedom</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aspelmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Huthmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zippelius</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<publisher>Springer</publisher>
+			<biblScope unit="page">31</biblScope>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Granular Gases</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramirez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Poschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">V</forename><surname>Brilliantov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schwager</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">4465</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">The integrals I 01 1 , I 03 2 , I 11 1 and I 13 2 corrrespond to the integrals I1, I2, I3 and I4 of Ref.[20] respectively. The expressions of I2 and I3 have some typos in Ref</title>
+		<imprint/>
+	</monogr>
+	<note>20] and the correct integrals are displayed here</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

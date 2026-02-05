@@ -1,0 +1,186 @@
+# Metallic low-temperature resistivity in 2D over an extended temperature range
+
+**Published:** April 26, 2024
+
+## Abstract
+
+We report measurements of the zero-field resistivity in dilute 2D electron system in silicon at
+temperatures down to 35 mK. This extends the previously explored range of temperatures in this
+system by almost an order of magnitude. On the metallic side, the resistivity near the metal-
+insulator transition continues to decrease with decreasing temperature and shows no low-temperature
+up-turn. At the critical electron density, the resistivity is found to be temperature-independent in
+the entire temperature range from 35 mK to 1 K.
+
+Although the behavior suggestive of a zero magnetic field metal-insulator transition (MIT) in two
+dimensions (2D) [1][2][3][4][5][6][7][8][9][10][11] was first reported five years ago, it still
+remains unexplained, with proposed driving mechanisms ranging from contaminations in the oxide to
+superconductivity, and from percolation to a non-Fermi liquid state (see, e.g., Refs.
+[2][3][4][5][6][7][8][9][10][11][12]). One of the unusual features of dilute 2D systems is a
+dramatic drop of the resistivity on the metallic side of the transition. This drop becomes apparent
+below a characteristic temperature T * ∼ 1 3 T F where T F is the Fermi temperature. T * is rather
+high but approaches zero at the critical particle density. The relatively high value of T * prompted
+classical explanations of the problem [16,17,20]. If the mechanism behind the unusual behavior is
+indeed classical, then quantum localization [21] should eventually take over at low enough
+temperatures, and in this case there will be no zero-temperature metal-insulator transition. This
+possibility calls for experiments to be done at the lowest temperatures possible.
+
+A decrease of the resistivity with decreasing temperature in 2D systems (metallic behavior) does not
+by itself necessarily signal the presence of any unanticipated physics. It can be due, for example,
+to phonon scattering, as it is in p-GaAs/AlGaAs heterostructures at relatively high hole densities ∼
+10 11 cm -2 [11]. At these densities, the conductivity is >
+
+∼ 300 e 2 /h, and the system may look metallic down to inaccessibly low temperatures because
+logarithmic quantum corrections to the conductivity are only ∼ e 2 /h per decade in temperature. But
+at the particle density, n s , close to the critical density for the metal-insulator transition, n c
+, the conductivity becomes of the order of e 2 /h, and the decrease in temperature by a decade
+should now produce a decrease in conductivity that is comparable to the conductivity itself. Quantum
+corrections can only be seen at temperatures T ≪ T F . In p-GaAs/AlGaAs heterostructures, T F at or
+near the critical hole density is very low, and the condition T ≪ T F is hard to fulfill. For
+example, in Ref. [11], T F is only about 300 mK [22] at the lowest (still metallic) hole density,
+and although temperatures as low as 40 mK have been reached in that paper, the lowest T was of the
+order of 0.1 T F . More convenient systems to reach the condition T ≪ T F at n s ∼ n c are silicon
+metaloxide-semiconductor field-effect transistors (MOSFET's) and p-SiGe heterostructures, where T F
+at n s = n c is of the order of 5 to 10 Kelvin. However, although occasional data at temperatures as
+low as 16 mK for Si MOSFET's [8] and 50 mK for p-SiGe [4] were reported, the resistivity at
+electron/hole densities close to the MIT was carefully studied only down to 3 He temperatures
+(250-300 mK) [2,9,10].
+
+In this Letter, we report studies of resistivity in highmobility Si MOSFET's at temperatures down to
+35 mK which extends the previously explored temperature range by almost an order of magnitude. We
+concentrate on electron densities near the metal-insulator transition, where the conductivity is < ∼
+e 2 /h. We show that even at these very low values of conductivity, but on the metallic side of the
+MIT (n s > n c ), the metallic temperature dependence of the resistivity, characterized by dR/dT >
+0, persists down to the lowest accessed temperatures, which are less than 10 -2 T F so the condition
+T ≪ T F is well satisfied. On the insulating side of the transition (n s < n c ), the behavior is
+always insulating, with dR/dT < 0. Between the metallic and insulating behaviors, at n s = n c ,
+there exists a resistivity, ρ c , which is practically temperature-independent in the entire
+temperature range from 35 mK to 1 K. If one admits that the MIT-like behavior in two dimensions is
+merely a result of a competition between quantum localization and a classical decrease of the Drude
+resistivity, then the existence of such a temperature-independent curve would require cancellation
+of two unrelated strong mechanisms in a wide temperature range, a coincidence which seems hardly
+probable.
+
+The samples used in our experiments were specially designed for measurements at low electron
+densities and low temperatures by use of the so-called split-gate technique. Narrow (< 100 nm) gaps
+in the gate metallization were introduced near the doped contact areas which allowed for maintaining
+high electron density near the contacts and therefore dramatically reduced their resistance. In the
+main part of the sample (50 × 120 µm 2 ) the electron density was controlled independently. Typical
+mobility dependence of the electron density, n s , is shown in the inset to Fig. 1. The peak
+mobility of this sample was 2.3 × 10 4 cm 2 /Vs at 4.2 K. In the main part of the same figure, the
+temperature dependence of the resistivity is shown in the temperature range 100 mK to 9 K.
+Experimentally, in the same material the higher the peak mobility of the electrons the larger the
+low-temperature drop of the resistivity [1,3,8]. Indeed, in this sample the drop is somewhat smaller
+than that in the best Si MOSFET's, being only a factor of 6 rather than > 10. However, the samples
+studied in this work were more convenient to use because of much higher quality of contacts which
+allowed reliable low-temperature transport measurements at these very low electron densities.
+
+The samples were mounted at the end of a copper finger attached to the mixing chamber of a
+Kelvinox-100 dilution refrigerator with base temperature of 14 mK. The electron gas was cooled by 16
+thick (0.5 mm) copper wires thermally coupled to the cold finger and mixing chamber, and connected
+to the contacts on the sample holder. Temperature was measured by a ruthenium oxide thermometer
+placed near the sample and connected to the mixing chamber and the cold finger by the same wires as
+the sample. Temperature readings by the thermometer were typically 10 mK higher than the temperature
+of the mixing chamber. To reduce the external noise, three sets of low-pass filters were used: R-C-R
+filters with a cut-off frequency of 40 Hz and two sets of C-L-C filters with a cut-off frequency of
+500 kHz. Resistivity was measured by a four-terminal dc method, while holding the voltage drop
+across the whole sample (between two opposite current leads) to be less than 200 µV to ensure that
+the total power dissipated in the sample was less than 10 -13 W. The Fermi temperature was
+calculated using the electron density determined from the positions of the Shubnikov-de Haas
+oscillations in a weak perpendicular Figure 2 shows the temperature dependence of the resistivity at
+five different electron densities at temperatures down to 35 mK. The two upper curves display
+insulating behavior with dR/dT < 0 and two lower curves display metallic behavior with dR/dT > 0, in
+the entire temperature interval. The middle curve shows almost no temperature dependence. Deviations
+from the average value ρ c = 2.82 h/e 2 do not exceed ±5% (see the inset); at low temperatures,
+typically < ∼ 300 mK, these deviations are not reproducible from one cool-down to another and even
+in different temperature sweeps. Both above and below the temperature-independent curve the
+resistivity continues to change strongly down to the lowest temperature reached. This confirms that
+the temperature of the electron gas continues to change down to the lowest temperatures. Note that
+the change in the electron density, resulting in a sharp transition from strongly insulating to
+strongly metallic behavior, is less than 15%. In particular, a decrease of n s by only 1% from its
+critical value is enough to cause a pronounced insulating behavior (see the second curve from the
+top which could be mistakenly identified as a "tilted separatrix" if the tuning of the electron
+density were not fine enough). Another obvious necessary condition to observe the flat separatrix is
+the high homogeneity of the electron density throughout the sample. In the low-temperature limit,
+the two lower curves display metallic, near-linear temperature dependence, as shown in Figs. 3 (a no
+insulating up-turn in the low-temperature limit. The lowest temperature reached corresponds to a
+ratio T /T F of less than 8 • 10 -3 (see upper x-axes in both figures).
+
+The almost linear temperature dependence observed near the MIT at these low temperatures is
+different from the exponential temperature dependence seen at higher temperatures and higher
+densities [2,5,11].
+
+A striking feature of the data is the existence of a practically temperature-independent curve at n
+s = n c which separates metallic (dR/dT > 0) and insulating (dR/dT < 0) behaviors. At resistivity
+levels on the order of or greater than h/e 2 , one is in the regime where k F l < ∼ 1 (here k F is
+the Fermi vector and l is the mean free path). To illustrate the expected strength of the quantum
+corrections in this case, in Fig. 4 we plot the experimentally measured ρ(n c ) together with the
+resistivity calculated from the one-parameter scaling theory (upper curve). We assumed that the
+single parameter scaling theory of localization holds even in the presence of very strong electron-
+electron interactions and that the Drude resistivity is temperature-independent in this temperature
+range. We use the standard formula [21]
+
+Here L φ ∝ ρ -γ T -p/2 is the phase-breaking length, p and γ are constants taken (after Ref. [20])
+to be equal to 3 and 0.5 respectively, and β(ρ) is the scaling function as a function of temperature
+(lower x-axis) and as a function of the ratio T /T F (upper x-axis) compared to that calculated
+using one-parameter scaling theory (the dashed curve); see text. As the dashed line shows, by the
+time the temperature reaches 100 mK, the resistivity of a "conventional" 2D system would have
+increased by a factor of more than 30. The dot-dashed lower curve shows the calculated Drude
+resistivity required to produce the temperatureindependent resistivity between metallic and
+insulating behaviors.
+
+approximated as β(ρ) = -ln(1 + aρ) where a = 2/π and ρ is measured in units of h/e 2 . The boundary
+condition is that at T = 1 K the calculated resistivity is equal to the measured one: ρ(1 K) = 2.82
+[23]. As shown by the dashed curve in Fig. 4, by the time the temperature reaches 100 mK, quantum
+localization would increase the resistivity by a factor of more than 30.
+
+The observation of a temperature-independent resistivity at n s = n c over such a wide temperature
+range and at temperatures where the electron system is clearly fully degenerate is certainly
+consistent with the existence of the zero-temperature quantum phase transition [24]. In combination
+with the results of Ref. [10] where the temperature-independent curve (with essentially the same
+value of resistivity as in this work) was observed in the temperature range 250 mK -1.8 K in another
+2D system in silicon, we further allege that there is no appreciable temperature dependence at n s =
+n c in the temperature range from 35 mK to 1.8 K, i.e., for temperatures between approximately
+6.5•10 -3 T F in the present work to 0.25 T F in Ref. [10]. At higher temperatures, the resistivity
+at n s = n c starts to decrease slowly with increasing temperature (see, e.g., Refs. [1,8]). One
+possible cause of this behavior can be quantum-classical crossover which leads to insulating-like
+temperature dependence at temperatures comparable to or greater than T F [17].
+
+The existence of a temperature-independent curve between insulating and metallic behaviors was also
+reported in another 2D system, p-GaAs/AlGaAs heterostructure [6], at temperatures below 150 mK.
+Above this temperature, the resistivity slowly decreases with increasing temperature similar to its
+behavior in our system at T > ∼ 1.8 K. Taking into account the much lower value of T F ∼ 800 mK [22]
+in the sample used in Ref. [6] compared to our system, one may suggest that as in our case, the loss
+of full degeneracy causes this behavior.
+
+In samples with lower mobility, the temperatureindependent curve between metallic and insulating
+behaviors no longer exists, as can be seen, e.g., in Fig. 4 of Ref. [9]: below a certain temperature
+∼ 1 K, the curve which is nearly flat at higher T , turns "insulating". In very disordered samples,
+the metallic behavior is not seen at all [1,3].
+
+Of course, the fact that we have observed no insulatinglike upturn of the resistivity in a wide, but
+still restricted, range of temperatures does not necessarily mean that the system will remain
+metallic at zero temperature. As has been already mentioned, if the MITlike behavior observed by us
+and others were a result of competition between Anderson localization and a temperature-dependent
+Drude resistivity, ρ D (T ), the localization would eventually dominate at low temperatures.
+However, the existence of the temperatureindependent curve between metallic and insulating behaviors
+makes this possibility unlikely. Indeed, it would require the Drude resistivity to have a very
+special temperature dependence (see Eq.6 in Ref. [20]):
+
+The Drude resistivity calculated using this equation with the same boundary conditions as before is
+shown in Fig. 4 by the dot-dashed line. We note that the shape of ρ D (T ) required to produce a
+temperature-independent curve is determined by the β-function which comes from the scaling theory,
+and the parameter p which comes from the relation between L φ and T . It would therefore be a
+remarkable coincidence if the required ρ D (T ) dependence over a wide temperature range were
+produced by some classical mechanism not related apriori to either β or p [25].
+
+In summary, we have shown experimentally that the strong metallic temperature dependence of the
+resistivity in silicon MOSFET's survives down to at least 35 mK. This extends the previously
+explored range of temperatures by almost an order of magnitude. At these temperatures, the system is
+clearly fully degenerate with the ratio T /T F being less than 10 -2 . At the critical electron
+density, the resistivity is temperature-independent in the entire temperature interval. These
+observations put valuable constraints on possible theoretical explanations.
+
+We are grateful to S. Bakker and R. Heemskerk for their contributions in developing and preparing
+the MOS-FET's used in this work, to C. Chamon, D. Heiman, V. Ya. Kravchenko, M. P. Sarachik, and D.
+Simonian for useful discussions, and to T. Hussey and Y. Zhu for technical assistance. This work was
+supported by the NSF Grant No. DMR-9803440.

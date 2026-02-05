@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Granular discorectangle in a thermalized bath of hard disks</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2004-08-10">10 Aug 2004</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">H</forename><surname>Gomart</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Laboratoire de Physique Théorique des Liquides</orgName>
+								<orgName type="institution">Université Pierre et Marie Curie</orgName>
+								<address>
+									<addrLine>4, place Jussieu</addrLine>
+									<postCode>75252, 05</postCode>
+									<settlement>Paris Cedex</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">J</forename><surname>Talbot</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry and Biochemistry</orgName>
+								<orgName type="institution">Duquesne University</orgName>
+								<address>
+									<postCode>15282-1530</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">P</forename><surname>Viot</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Laboratoire de Physique Théorique des Liquides</orgName>
+								<orgName type="institution">Université Pierre et Marie Curie</orgName>
+								<address>
+									<addrLine>4, place Jussieu</addrLine>
+									<postCode>75252, 05</postCode>
+									<settlement>Paris Cedex</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Granular discorectangle in a thermalized bath of hard disks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2004-08-10">10 Aug 2004</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">86BB4DABD5366F2EC3501A20F6662AF6</idno>
+					<idno type="arXiv">arXiv:cond-mat/0408205v1[cond-mat.stat-mech]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>numbers: 05.20.-y</term>
+					<term>51.10+y</term>
+					<term>44.90+c</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>By using the Enskog-Boltzmann approach, we study the steady-state dynamics of a granular discorectangle placed in a two-dimensional bath of thermalized hard disks. Hard core collisions are assumed elastic between disks and inelastic between the discorectangle and the disks, with a normal restitution coefficient α &lt; 1. Assuming a Gaussian ansatz for the probability distribution functions, we obtain analytical expressions for the granular temperatures. We show the absence of equipartition and investigate both the role of the anisotropy of the discorectangle and of the relative ratio of the bath particles to the linear sizes of the discorectangle. In addition, we investigate a model of a discorectangle with two normal restitution coefficients for collisions along the straight and curved surfaces of the discorectangle. In this case one observes equipartition for a non trivial ratio of normal restitution coefficients.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="annex">
+<div><head>APPENDIX B: NEEDLE AVERAGE ENERGY LOSS</head><p>As for binary mixtures of spheres <ref type="bibr" target="#b2">[3]</ref>, we use a Gaussian ansatz for the distribution functions and introduce two different temperatures corresponding to the translational and rotational degrees of freedom of the needle. The homogeneous distribution functions of the needle and of the points are then given respectively by</p><p>where T is the temperature of the bath, γ T and γ R the ratio of the translational (and rotational) temperature of the needle to the bath temperature. We introduce the vectors χ and ν such that</p><p>The scalar products V.u ⊥ 1 and V.u r can be expressed as</p><p>The translational energy loss is given by the formula</p><p>where E(x) denotes the complete elliptic integral of the second kind.</p><p>and finally </p></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Mcnamara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page">2247</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Piasecki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Europhys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page">613</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Trizac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Granul. Matter</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">57</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hrenya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Garzó</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">41301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">V</forename><surname>Garzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">5706</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><surname>Clelland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hrenya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">31301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><surname>Montanero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Garzó</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Molecular Simulation</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">357</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Alam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluid. Mech</title>
+		<imprint>
+			<biblScope unit="volume">476</biblScope>
+			<biblScope unit="page">69</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Feitosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Menon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">198301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Wildman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Parker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">64301</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><surname>Galvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hrenya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluid. Mech</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>to be published</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Loreto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Puglisi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica A</title>
+		<imprint>
+			<biblScope unit="volume">334</biblScope>
+			<biblScope unit="page">513</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Trizac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Phys</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page">1713</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">51305</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dufty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page">4823</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Pöschel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. I France</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">1431</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Aranson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Tsimring</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">21305</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Mullin</surname></persName>
+		</author>
+		<imprint />
+	</monogr>
+	<note>private communication</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Huthmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aspelmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zippelius</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">654</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Viot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Talbot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">51106</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Free cooling of particles with rotational degrees of freedom</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aspelmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Huthmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zippelius</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<publisher>Springer</publisher>
+			<biblScope unit="page">31</biblScope>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Granular Gases</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramirez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Poschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">V</forename><surname>Brilliantov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schwager</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">4465</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">The integrals I 01 1 , I 03 2 , I 11 1 and I 13 2 corrrespond to the integrals I1, I2, I3 and I4 of Ref.[20] respectively. The expressions of I2 and I3 have some typos in Ref</title>
+		<imprint />
+	</monogr>
+	<note>20] and the correct integrals are displayed here</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

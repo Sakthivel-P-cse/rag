@@ -1,0 +1,525 @@
+{
+  "judge_summary": {
+    "iterations_requested": 5,
+    "iterations_completed": 3,
+    "satisfied": false,
+    "final_refined_question": "What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in PPO and Adam algorithms to improve training stability?",
+    "final_intent": "Understand the factors contributing to training instability and sensitivity to hyperparameters in reinforcement learning, specifically in the context of policy updates and learning rate selection",
+    "final_constraints": [
+      "limited to reinforcement learning",
+      "focus on policy update instability",
+      "sensitive to learning rate",
+      "training stability"
+    ],
+    "final_excluded_topics": [
+      "switching to larger pre-trained models",
+      "fine-tuning large pre-trained models",
+      "scaling parameter count as primary solution"
+    ],
+    "final_search_hint": "reinforcement learning, training instability, policy updates, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability, policy gradient methods, advantage functions, stochastic gradient ascent",
+    "accepted_chunk_count": 3,
+    "accepted_paper_count": 3,
+    "accepted_paper_ids": [
+      "1502.05477v5.tei.tei",
+      "1602.07868v3.tei.tei",
+      "1707.06347v2.tei.tei"
+    ],
+    "accepted_chunk_ids": [
+      "1502.05477v5.tei.tei_chunk-3",
+      "1602.07868v3.tei.tei_chunk-5",
+      "1707.06347v2.tei.tei_chunk-1"
+    ],
+    "rejected_chunk_count": 5,
+    "rejected_chunk_ids": [
+      "1412.6980v9.tei.tei_chunk-11",
+      "1412.6980v9.tei.tei_chunk-5",
+      "1502.05477v5.tei.tei_chunk-16",
+      "1502.05477v5.tei.tei_chunk-4",
+      "1707.06347v2.tei.tei_chunk-6"
+    ],
+    "rejected_paper_ids": [],
+    "solved_parts": [],
+    "unsolved_parts_by_iteration": [
+      {
+        "iteration": 1,
+        "unsolved_parts": [
+          "causes of instability and collapse in reinforcement learning agents after policy updates",
+          "mitigating training sensitivity to learning rate in RL"
+        ]
+      },
+      {
+        "iteration": 2,
+        "unsolved_parts": [
+          "key factors contributing to training instability in reinforcement learning agents after policy updates",
+          "mitigating learning rate sensitivity in RL algorithms such as PPO and Adam"
+        ]
+      },
+      {
+        "iteration": 3,
+        "unsolved_parts": [
+          "primary causes of training instability in reinforcement learning agents after policy updates",
+          "effective mitigation of learning rate sensitivity in PPO and Adam algorithms"
+        ]
+      }
+    ],
+    "log_path": "C:\\Users\\manoj\\Desktop\\Research\\TEMP\\full_run_20251223_102549_816298.txt"
+  },
+  "accepted_chunks": [
+    {
+      "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+      "paper_id": "1707.06347v2.tei.tei",
+      "section": null,
+      "paragraph_index": 0,
+      "chunk_text": "**Published:** 28 Aug 2017\n\nWe propose a new family of policy gradient methods for reinforcement learning, which alternate\nbetween sampling data through interaction with the environment, and optimizing a \"surrogate\"\nobjective function using stochastic gradient ascent. Whereas standard policy gradient methods\nperform one gradient update per data sample, we propose a novel objective function that enables\nmultiple epochs of minibatch updates. The new methods, which we call proximal policy optimization\n(PPO), have some of the benefits of trust region policy optimization (TRPO), but they are much\nsimpler to implement, more general, and have better sample complexity (empirically). Our experiments\ntest PPO on a collection of benchmark tasks, including simulated robotic locomotion and Atari game\nplaying, and we show that PPO outperforms other online policy gradient methods, and overall strikes\na favorable balance between sample complexity, simplicity, and wall-time.\n\nIn recent years, several different approaches have been proposed for reinforcement learning with\nneural network function approximators. The leading contenders are deep Q-learning [Mni+15],\n\"vanilla\" policy gradient methods [Mni+16], and trust region / natural policy gradient methods\n[Sch+15b]. However, there is room for improvement in developing a method that is scalable (to large\nmodels and parallel implementations), data efficient, and robust (i.e., successful on a variety of\nproblems without hyperparameter tuning). Q-learning (with function approximation) fails on many\nsimple problems1 and is poorly understood, vanilla policy gradient methods have poor data effiency\nand robustness; and trust region policy optimization (TRPO) is relatively complicated, and is not\ncompatible with architectures that include noise (such as dropout) or parameter sharing (between the\npolicy and value function, or with auxiliary tasks).\n\nThis paper seeks to improve the current state of affairs by introducing an algorithm that attains\nthe data efficiency and reliable performance of TRPO, while using only first-order optimization. We\npropose a novel objective with clipped probability ratios, which forms a pessimistic estimate (i.e.,\nlower bound) of the performance of the policy. To optimize policies, we alternate between sampling\ndata from the policy and performing several epochs of optimization on the sampled data.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:23.829051",
+      "score_stage1": 0.48683313,
+      "score_stage2": 0.43108225,
+      "score": 0.43108225,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "introduces PPO algorithm and its benefits"
+      }
+    },
+    {
+      "chunk_id": "1502.05477v5.tei.tei_chunk-3",
+      "paper_id": "1502.05477v5.tei.tei",
+      "section": "Preliminaries",
+      "paragraph_index": 8,
+      "chunk_text": "We will use the following standard definitions of the stateaction value function Q π , the value\nfunction V π , and the advantage function A π :\n\n, where a t ∼ π(a t |s t ), s t+1 ∼ P (s t+1 |s t , a t ) for t ≥ 0.\n\nThe following useful identity expresses the expected return of another policy π in terms of the\nadvantage over π, accumulated over timesteps (see Kakade & Langford (2002) or Appendix A for proof):\n\nwhere the notation E s0,a0\n\nwhere s 0 ∼ ρ 0 and the actions are chosen according to π. We can rewrite Equation (1) with a sum\nover states instead of timesteps:\n\nThis equation implies that any policy update π → π that has a nonnegative expected advantage at\nevery state s, i.e., a π(a|s)A π (s, a) ≥ 0, is guaranteed to increase the policy performance η, or\nleave it constant in the case that the expected advantage is zero everywhere. This implies the\nclassic result that the update performed by exact policy iteration, which uses the deterministic\npolicy π(s) = arg max a A π (s, a), improves the policy if there is at least one state-action pair\nwith a positive advantage value and nonzero state visitation probability, otherwise the algorithm\nhas converged to the optimal policy. However, in the approximate setting, it will typically be\nunavoidable, due to estimation and approximation error, that there will be some states s for which\nthe expected advantage is negative, that is, a π(a|s)A π (s, a) < 0. The complex dependency of ρ π\n(s) on π makes Equation (2) difficult to optimize directly. Instead, we introduce the following\nlocal approximation to η:\n\n(3)\n\nNote that L π uses the visitation frequency ρ π rather than ρ π , ignoring changes in state\nvisitation density due to changes in the policy. However, if we have a parameterized policy π θ ,\nwhere π θ (a|s) is a differentiable function of the parameter vector θ, then L π matches η to first\norder (see Kakade & Langford (2002)). That is, for any parameter value θ 0 ,",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:22.441902",
+      "score_stage1": 0.39456648,
+      "score_stage2": 0.40099746,
+      "score": 0.40099746,
+      "llm_judge": {
+        "iteration": 2,
+        "decision": "accept",
+        "rationale": "provides background on policy gradient methods and advantage functions"
+      }
+    },
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei",
+      "section": "Gradients",
+      "paragraph_index": 19,
+      "chunk_text": "The rate of increase will depend on the the variance of the weight gradient. If our gradients are\nnoisy, c will be high and the norm of v will quickly increase, which in turn will decrease the\nscaling factor g/||v||.\n\nIf the norm of the gradients is small, we get √ 1 + c 2 ≈ 1, and the norm of v will stop increasing.\nUsing this mechanism, the scaled gradient self-stabilizes its norm. This property does not strictly\nhold for optimizers that use separate learning rates for individual parameters, like Adam [12] which\nwe use in experiments, or when using momentum. However, qualitatively we still find the same effect\nto hold.\n\nEmpirically, we find that the ability to grow the norm ||v|| makes optimization of neural networks\nwith weight normalization very robust to the value of the learning rate: If the learning rate is too\nlarge, the norm of the unnormalized weights grows quickly until an appropriate effective learning\nrate is reached. Once the norm of the weights has grown large with respect to the norm of the\nupdates, the effective learning rate stabilizes. Neural networks with weight normalization therefore\nwork well with a much wider range of learning rates than when using the normal parameterization. It\nhas been observed that neural networks with batch normalization also have this property [11], which\ncan also be explained by this analysis.\n\nBy projecting the gradient away from the weight vector w, we also eliminate the noise in that\ndirection. If the covariance matrix of the gradient with respect to w is given by C, the covariance\nmatrix of the gradient in v is given by D = (g 2 /||v|| 2 )M w CM w . Empirically, we find that w is\noften (close to) a dominant eigenvector of the covariance matrix C: removing that eigenvector then\ngives a new covariance matrix D that is closer to the identity matrix, which may further speed up\nlearning.",
+      "year": 2016,
+      "created_at": "2025-12-22 07:56:22.941328",
+      "score_stage1": 0.46042934,
+      "score_stage2": 0.3797102,
+      "score": 0.3797102,
+      "llm_judge": {
+        "iteration": 3,
+        "decision": "accept",
+        "rationale": "provides insight into the effect of learning rate on optimization"
+      }
+    }
+  ],
+  "subproblems": [
+    {
+      "id": "SP1",
+      "question": "What are the primary causes of training instability in reinforcement learning agents after policy updates?",
+      "rationale": "Identify the key factors contributing to instability to understand how to mitigate them",
+      "search_hint": "reinforcement learning, policy updates, training instability, convergence issues"
+    },
+    {
+      "id": "SP2",
+      "question": "How does learning rate sensitivity impact training stability in PPO algorithms?",
+      "rationale": "Understand the role of learning rate in PPO to develop strategies for mitigation",
+      "search_hint": "PPO, learning rate sensitivity, training stability, hyperparameter tuning"
+    },
+    {
+      "id": "SP3",
+      "question": "What methods can be used to mitigate learning rate sensitivity in Adam algorithms to improve training stability?",
+      "rationale": "Investigate techniques for reducing learning rate sensitivity in Adam to enhance overall training stability",
+      "search_hint": "Adam algorithm, learning rate sensitivity, mitigation strategies, training stability, optimization techniques"
+    }
+  ],
+  "subproblem_chunks": {
+    "SP1": [
+      {
+        "chunk_id": "1707.06347v2.tei.tei_chunk-6",
+        "paper_id": "1707.06347v2.tei.tei",
+        "section": "Algorithm",
+        "paragraph_index": 29,
+        "chunk_text": "Each algorithm was run on all 7 environments, with 3 random seeds on each. We scored each run of the\nalgorithm by computing the average total reward of the last 100 episodes. We shifted and scaled the\nscores for each environment so that the random policy gave a score of 0 and the best result was set\nto 1, and averaged over 21 runs to produce a single scalar for each algorithm setting.\n\nThe results are shown in Table 1. Note that the score is negative for the setting without clipping\nor penalties, because for one environment (half cheetah) it leads to a very negative score, which is\nworse than the initial random policy.\n\nNext, we compare PPO (with the \"clipped\" surrogate objective from Section 3) to several other\nmethods from the literature, which are considered to be effective for continuous problems. We\ncompared against tuned implementations of the following algorithms: trust region policy optimization\n[Sch+15b], cross-entropy method (CEM) [SL06], vanilla policy gradient with adaptive stepsize 3 , A2C\n[Mni+16], A2C with trust region [Wan+16]. A2C stands for advantage actor critic, and is a\nsynchronous version of A3C, which we found to have the same or better performance than the\nasynchronous version. For PPO, we used the hyperparameters from the previous section, with = 0.2. We\nsee that PPO outperforms the previous methods on almost all the continuous control environments.\n\nTo showcase the performance of PPO on high-dimensional continuous control problems, we train on a\nset of problems involving a 3D humanoid, where the robot must run, steer, and get up off the ground,\npossibly while being pelted by cubes. The three tasks we test on are (1) Ro-boschoolHumanoid:\nforward locomotion only, (2) RoboschoolHumanoidFlagrun: position of target is randomly varied every\n200 timesteps or whenever the goal is reached, (3) RoboschoolHumanoid-FlagrunHarder, where the robot\nis pelted by cubes and needs to get up off the ground. See Figure 5 for still frames of a learned\npolicy, and Figure 4 for learning curves on the three tasks. Hyperparameters are provided in Table\n4. In concurrent work, Heess et al. [Hee+17] used the adaptive KL variant of PPO (Section 4) to\nlearn locomotion policies for 3D robots.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.829051",
+        "score_stage1": 0.41181374,
+        "score_stage2": 0.5298841,
+        "score": 0.5298841
+      },
+      {
+        "chunk_id": "1502.05477v5.tei.tei_chunk-4",
+        "paper_id": "1502.05477v5.tei.tei",
+        "section": "Preliminaries",
+        "paragraph_index": 16,
+        "chunk_text": "Equation ( 4) implies that a sufficiently small step π θ0 → π that improves L π θ old will also\nimprove η, but does not give us any guidance on how big of a step to take.\n\nTo address this issue, Kakade & Langford (2002) proposed a policy updating scheme called\nconservative policy iteration, for which they could provide explicit lower bounds on the improvement\nof η. To define the conservative policy iteration update, let π old denote the current policy, and\nlet π = arg max π L π old (π ). The new policy π new was defined to be the following mixture: π new\n(a|s) = (1 -α)π old (a|s) + απ (a|s).\n\n(5)\n\nKakade and Langford derived the following lower bound:\n\n(We have modified it to make it slightly weaker but simpler.) Note, however, that so far this bound\nonly applies to mixture policies generated by Equation ( 5). This policy class is unwieldy and\nrestrictive in practice, and it is desirable for a practical policy update scheme to be applicable\nto all general stochastic policy classes.\n\n3 Monotonic Improvement Guarantee for General Stochastic Policies Equation ( 6), which applies to\nconservative policy iteration, implies that a policy update that improves the right-hand side is\nguaranteed to improve the true performance η. Our principal theoretical result is that the policy\nimprovement bound in Equation ( 6) can be extended to general stochastic policies, rather than just\nmixture polices, by replacing α with a distance measure between π and π, and changing the constant\nappropriately. Since mixture policies are rarely used in practice, this result is crucial for\nextending the improvement guarantee to practical problems. The particular distance measure we use is\nthe total variation divergence, which is defined by D T V (p q) = 1 2 i |p i -q i | for discrete\nprobability distributions p, q. 1 Define D max TV (π, π) as",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:22.441902",
+        "score_stage1": 0.43451506,
+        "score_stage2": 0.51764464,
+        "score": 0.51764464
+      },
+      {
+        "chunk_id": "1707.06347v2.tei.tei_chunk-3",
+        "paper_id": "1707.06347v2.tei.tei",
+        "section": "Trust Region Methods",
+        "paragraph_index": 12,
+        "chunk_text": "for some coefficient β. This follows from the fact that a certain surrogate objective (which\ncomputes the max KL over states instead of the mean) forms a lower bound (i.e., a pessimistic bound)\non the performance of the policy π. TRPO uses a hard constraint rather than a penalty because it is\nhard to choose a single value of β that performs well across different problems-or even within a\nsingle problem, where the the characteristics change over the course of learning. Hence, to achieve\nour goal of a first-order algorithm that emulates the monotonic improvement of TRPO, experiments\nshow that it is not sufficient to simply choose a fixed penalty coefficient β and optimize the\npenalized objective Equation (5) with SGD; additional modifications are required.\n\nLet r t (θ) denote the probability ratio r t (θ) = π θ (at | st) π θ old (at | st) , so r(θ old ) =\n1. TRPO maximizes a \"surrogate\" objective\n\nThe superscript CP I refers to conservative policy iteration [KL02], where this objective was\nproposed. Without a constraint, maximization of L CP I would lead to an excessively large policy\nupdate; hence, we now consider how to modify the objective, to penalize changes to the policy that\nmove r t (θ) away from 1.\n\nThe main objective we propose is the following:\n\nwhere epsilon is a hyperparameter, say, = 0.2. The motivation for this objective is as follows. The\nfirst term inside the min is L CP I . The second term, clip(r t (θ), 1 -, 1 + ) Ât , modifies the\nsurrogate objective by clipping the probability ratio, which removes the incentive for moving r t\noutside of the interval [1 -, 1 + ]. Finally, we take the minimum of the clipped and unclipped\nobjective, so the final objective is a lower bound (i.e., a pessimistic bound) on the unclipped\nobjective. With this scheme, we only ignore the change in probability ratio when it would make the\nobjective improve, and we include it when it makes the objective worse. Note that L CLIP (θ) = L CP\nI (θ) to first order around θ old (i.e., where r = 1), however, they become different as θ moves\naway from θ old . Figure 1 plots a single term (i.e., a single t) in L CLIP ; note that the\nprobability ratio r is clipped at 1or 1 + depending on whether the advantage is positive or\nnegative. Figure 2 provides another source of intuition about the surrogate objective L CLIP . It\nshows how several objectives vary as we interpolate along the policy update direction, obtained by\nproximal policy optimization (the algorithm we will introduce shortly) on a continuous control\nproblem. We can see that L CLIP is a lower bound on L CP I , with a penalty for having too large of\na policy update.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.829051",
+        "score_stage1": 0.3953283,
+        "score_stage2": 0.50776833,
+        "score": 0.50776833
+      }
+    ],
+    "SP2": [
+      {
+        "chunk_id": "1707.06347v2.tei.tei_chunk-3",
+        "paper_id": "1707.06347v2.tei.tei",
+        "section": "Trust Region Methods",
+        "paragraph_index": 12,
+        "chunk_text": "for some coefficient β. This follows from the fact that a certain surrogate objective (which\ncomputes the max KL over states instead of the mean) forms a lower bound (i.e., a pessimistic bound)\non the performance of the policy π. TRPO uses a hard constraint rather than a penalty because it is\nhard to choose a single value of β that performs well across different problems-or even within a\nsingle problem, where the the characteristics change over the course of learning. Hence, to achieve\nour goal of a first-order algorithm that emulates the monotonic improvement of TRPO, experiments\nshow that it is not sufficient to simply choose a fixed penalty coefficient β and optimize the\npenalized objective Equation (5) with SGD; additional modifications are required.\n\nLet r t (θ) denote the probability ratio r t (θ) = π θ (at | st) π θ old (at | st) , so r(θ old ) =\n1. TRPO maximizes a \"surrogate\" objective\n\nThe superscript CP I refers to conservative policy iteration [KL02], where this objective was\nproposed. Without a constraint, maximization of L CP I would lead to an excessively large policy\nupdate; hence, we now consider how to modify the objective, to penalize changes to the policy that\nmove r t (θ) away from 1.\n\nThe main objective we propose is the following:\n\nwhere epsilon is a hyperparameter, say, = 0.2. The motivation for this objective is as follows. The\nfirst term inside the min is L CP I . The second term, clip(r t (θ), 1 -, 1 + ) Ât , modifies the\nsurrogate objective by clipping the probability ratio, which removes the incentive for moving r t\noutside of the interval [1 -, 1 + ]. Finally, we take the minimum of the clipped and unclipped\nobjective, so the final objective is a lower bound (i.e., a pessimistic bound) on the unclipped\nobjective. With this scheme, we only ignore the change in probability ratio when it would make the\nobjective improve, and we include it when it makes the objective worse. Note that L CLIP (θ) = L CP\nI (θ) to first order around θ old (i.e., where r = 1), however, they become different as θ moves\naway from θ old . Figure 1 plots a single term (i.e., a single t) in L CLIP ; note that the\nprobability ratio r is clipped at 1or 1 + depending on whether the advantage is positive or\nnegative. Figure 2 provides another source of intuition about the surrogate objective L CLIP . It\nshows how several objectives vary as we interpolate along the policy update direction, obtained by\nproximal policy optimization (the algorithm we will introduce shortly) on a continuous control\nproblem. We can see that L CLIP is a lower bound on L CP I , with a penalty for having too large of\na policy update.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.829051",
+        "score_stage1": 0.41451705,
+        "score_stage2": 0.5260762,
+        "score": 0.5260762
+      },
+      {
+        "chunk_id": "1707.06347v2.tei.tei_chunk-4",
+        "paper_id": "1707.06347v2.tei.tei",
+        "section": "Clipped Surrogate Objective",
+        "paragraph_index": 17,
+        "chunk_text": "Figure 2: Surrogate objectives, as we interpolate between the initial policy parameter θ old , and\nthe updated policy parameter, which we compute after one iteration of PPO. The updated policy has a\nKL divergence of about 0.02 from the initial policy, and this is the point at which L CLIP is\nmaximal. This plot corresponds to the first policy update on the Hopper-v1 problem, using\nhyperparameters provided in Section 6.1.\n\nAnother approach, which can be used as an alternative to the clipped surrogate objective, or in\naddition to it, is to use a penalty on KL divergence, and to adapt the penalty coefficient so that\nwe achieve some target value of the KL divergence d targ each policy update. In our experiments, we\nfound that the KL penalty performed worse than the clipped surrogate objective, however, we've\nincluded it here because it's an important baseline.\n\nIn the simplest instantiation of this algorithm, we perform the following steps in each policy\nupdate:\n\n• Using several epochs of minibatch SGD, optimize the KL-penalized objective\n\nThe updated β is used for the next policy update. With this scheme, we occasionally see policy\nupdates where the KL divergence is significantly different from d targ , however, these are rare,\nand β quickly adjusts. The parameters 1.5 and 2 above are chosen heuristically, but the algorithm is\nnot very sensitive to them. The initial value of β is a another hyperparameter but is not important\nin practice because the algorithm quickly adjusts it.\n\nThe surrogate losses from the previous sections can be computed and differentiated with a minor\nchange to a typical policy gradient implementation. For implementations that use automatic\ndifferentation, one simply constructs the loss L CLIP or L KLP EN instead of L P G , and one\nperforms multiple steps of stochastic gradient ascent on this objective. Most techniques for\ncomputing variance-reduced advantage-function estimators make use a learned state-value function V\n(s); for example, generalized advantage estimation [Sch+15a], or the finite-horizon estimators in\n[Mni+16]. If using a neural network architecture that shares parameters between the policy and value\nfunction, we must use a loss function that combines the policy surrogate and a value function error\nterm. This objective can further be augmented by adding an entropy bonus to ensure sufficient\nexploration, as suggested in past work [Wil92;Mni+16]. Combining these terms, we obtain the\nfollowing objective, which is (approximately) maximized each iteration:",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.829051",
+        "score_stage1": 0.43523878,
+        "score_stage2": 0.49819362,
+        "score": 0.49819362
+      },
+      {
+        "chunk_id": "1707.06347v2.tei.tei_chunk-2",
+        "paper_id": "1707.06347v2.tei.tei",
+        "section": "Introduction",
+        "paragraph_index": 4,
+        "chunk_text": "Our experiments compare the performance of various different versions of the surrogate objective,\nand find that the version with the clipped probability ratios performs best. We also compare PPO to\nseveral previous algorithms from the literature. On continuous control tasks, it performs better\nthan the algorithms we compare against. On Atari, it performs significantly better (in terms of\nsample complexity) than A2C and similarly to ACER though it is much simpler.\n\n2 Background: Policy Optimization\n\nPolicy gradient methods work by computing an estimator of the policy gradient and plugging it into a\nstochastic gradient ascent algorithm. The most commonly used gradient estimator has the form\n\nwhere π θ is a stochastic policy and Ât is an estimator of the advantage function at timestep t.\n\nHere, the expectation Êt [. . .] indicates the empirical average over a finite batch of samples, in\nan algorithm that alternates between sampling and optimization. Implementations that use automatic\ndifferentiation software work by constructing an objective function whose gradient is the policy\ngradient estimator; the estimator ĝ is obtained by differentiating the objective\n\nWhile it is appealing to perform multiple steps of optimization on this loss L P G using the same\ntrajectory, doing so is not well-justified, and empirically it often leads to destructively large\npolicy updates (see Section 6.1; results are not shown but were similar or worse than the \"no\nclipping or penalty\" setting).\n\nIn TRPO [Sch+15b], an objective function (the \"surrogate\" objective) is maximized subject to a\nconstraint on the size of the policy update. Specifically,\n\nHere, θ old is the vector of policy parameters before the update. This problem can efficiently be\napproximately solved using the conjugate gradient algorithm, after making a linear approximation to\nthe objective and a quadratic approximation to the constraint. The theory justifying TRPO actually\nsuggests using a penalty instead of a constraint, i.e., solving the unconstrained optimization\nproblem",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.829051",
+        "score_stage1": 0.4446864,
+        "score_stage2": 0.48655358,
+        "score": 0.48655358
+      }
+    ],
+    "SP3": [
+      {
+        "chunk_id": "1412.6980v9.tei.tei_chunk-11",
+        "paper_id": "1412.6980v9.tei.tei",
+        "section": "EXPERIMENT: BIAS-CORRECTION TERM",
+        "paragraph_index": 42,
+        "chunk_text": "In Figure 4, values β 2 close to 1 indeed lead to instabilities in training when no bias correction\nterm was present, especially at first few epochs of the training. The best results were achieved\nwith small values of (1β 2 ) and bias correction; this was more apparent towards the end of\noptimization when gradients tends to become sparser as hidden units specialize to specific patterns.\nIn summary, Adam performed equal or better than RMSProp, regardless of hyper-parameter setting.\n\nIn Adam, the update rule for individual weights is to scale their gradients inversely proportional\nto a (scaled) L 2 norm of their individual current and past gradients. We can generalize the L 2\nnorm based update rule to a L p norm based update rule. Such variants become numerically unstable\nfor large p. However, in the special case where we let p → ∞, a surprisingly simple and stable\nalgorithm emerges; see algorithm 2. We'll now derive the algorithm. Let, in case of the L p norm,\nthe stepsize at time t be inversely proportional to v 1/p t , where:\n\nAlgorithm 2: AdaMax, a variant of Adam based on the infinity norm. See section 7.1 for details. Good\ndefault settings for the tested machine learning problems are α = 0.002, β 1 = 0.9 and β 2 = 0.999.\nWith β t 1 we denote β 1 to the power t. Here, (α/(1β t 1 )) is the learning rate with the bias-\ncorrection term for the first moment. All operations on vectors are element-wise. Require: α:\nStepsize Require: β 1 , β 2 ∈ [0, 1): Exponential decay rates Require: f (θ): Stochastic objective\nfunction with parameters θ Require: θ 0 : Initial parameter vector m 0 ← 0 (Initialize 1 st moment\nvector) u 0 ← 0 (Initialize the exponentially weighted infinity norm)",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.258221",
+        "score_stage1": 0.5697534,
+        "score_stage2": 0.5185381,
+        "score": 0.5185381
+      },
+      {
+        "chunk_id": "1412.6980v9.tei.tei_chunk-7",
+        "paper_id": "1412.6980v9.tei.tei",
+        "section": "RELATED WORK",
+        "paragraph_index": 27,
+        "chunk_text": "RMSProp: An optimization method closely related to Adam is RMSProp (Tieleman & Hinton, 2012). A\nversion with momentum has sometimes been used (Graves, 2013). There are a few important differences\nbetween RMSProp with momentum and Adam: RMSProp with momentum generates its parameter updates using\na momentum on the rescaled gradient, whereas Adam updates are directly estimated using a running\naverage of first and second moment of the gradient. RMSProp also lacks a bias-correction term; this\nmatters most in case of a value of β 2 close to 1 (required in case of sparse gradients), since in\nthat case not correcting the bias leads to very large stepsizes and often divergence, as we also\nempirically demonstrate in section 6.4.\n\nAdaGrad: An algorithm that works well for sparse gradients is AdaGrad (Duchi et al., 2011). Its\nbasic version updates parameters as\n\nNote that if we choose β 2 to be infinitesimally close to 1 from below, then\n\nAdaGrad corresponds to a version of Adam with β 1 = 0, infinitesimal (1β 2 ) and a replacement of α\nby an annealed version\n\nNote that this direct correspondence between Adam and Adagrad does not hold when removing the bias-\ncorrection terms; without bias correction, like in RMSProp, a β 2 infinitesimally close to 1 would\nlead to infinitely large bias, and infinitely large parameter updates.\n\nTo empirically evaluate the proposed method, we investigated different popular machine learning\nmodels, including logistic regression, multilayer fully connected neural networks and deep\nconvolutional neural networks. Using large models and datasets, we demonstrate Adam can efficiently\nsolve practical deep learning problems.\n\nWe use the same parameter initialization when comparing different optimization algorithms. The\nhyper-parameters, such as learning rate and momentum, are searched over a dense grid and the results\nare reported using the best hyper-parameter setting.",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.258221",
+        "score_stage1": 0.5216851,
+        "score_stage2": 0.42780107,
+        "score": 0.42780107
+      },
+      {
+        "chunk_id": "1412.6980v9.tei.tei_chunk-6",
+        "paper_id": "1412.6980v9.tei.tei",
+        "section": "CONVERGENCE ANALYSIS",
+        "paragraph_index": 22,
+        "chunk_text": "T , in particular if the class of function and data features are in the form of section 1.2 in\n(Duchi et al., 2011). Their results for the expected value E[ d i=1 g 1:T,i 2 ] also apply to Adam.\nIn particular, the adaptive method, such as Adam and Adagrad, can achieve O(log d √ T ), an\nimprovement over O( √ dT ) for the non-adaptive method. Decaying β 1,t towards zero is important in\nour theoretical analysis and also matches previous empirical findings, e.g. (Sutskever et al., 2013)\nsuggests reducing the momentum coefficient in the end of training can improve convergence.\n\nFinally, we can show the average regret of Adam converges, Corollary 4.2. Assume that the function\n\nAdam achieves the following guarantee, for all\n\nThis result can be obtained by using Theorem 4.1 and\n\nOptimization methods bearing a direct relation to Adam are RMSProp (Tieleman & Hinton, 2012;Graves,\n2013) and AdaGrad (Duchi et al., 2011); these relationships are discussed below. Other stochastic\noptimization methods include vSGD (Schaul et al., 2012), AdaDelta (Zeiler, 2012) and the natural\nNewton method from Roux & Fitzgibbon (2010), all setting stepsizes by estimating curvature from\nfirst-order information. The Sum-of-Functions Optimizer (SFO) (Sohl-Dickstein et al., 2014) is a\nquasi-Newton method based on minibatches, but (unlike Adam) has memory requirements linear in the\nnumber of minibatch partitions of a dataset, which is often infeasible on memory-constrained systems\nsuch as a GPU. Like natural gradient descent (NGD) (Amari, 1998), Adam employs a preconditioner that\nadapts to the geometry of the data, since v t is an approximation to the diagonal of the Fisher\ninformation matrix (Pascanu & Bengio, 2013); however, Adam's preconditioner (like AdaGrad's) is more\nconservative in its adaption than vanilla NGD by preconditioning with the square root of the inverse\nof the diagonal Fisher information matrix approximation.",
+        "year": 2015,
+        "created_at": "2025-12-22 07:56:22.258221",
+        "score_stage1": 0.51331794,
+        "score_stage2": 0.39574766,
+        "score": 0.39574766
+      }
+    ]
+  },
+  "subproblem_answers": {
+    "SP1": {
+      "subproblem_id": "SP1",
+      "question": "What are the primary causes of training instability in reinforcement learning agents after policy updates?",
+      "answer_paragraphs": [],
+      "key_points": [],
+      "citations": [],
+      "unknowns": [
+        "The primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks."
+      ],
+      "used_chunk_ids": [],
+      "used_paper_ids": [],
+      "sufficient": false
+    },
+    "SP2": {
+      "subproblem_id": "SP2",
+      "question": "How does learning rate sensitivity impact training stability in PPO algorithms?",
+      "answer_paragraphs": [],
+      "key_points": [],
+      "citations": [],
+      "unknowns": [
+        "The impact of learning rate sensitivity on training stability in PPO algorithms"
+      ],
+      "used_chunk_ids": [],
+      "used_paper_ids": [],
+      "sufficient": false
+    },
+    "SP3": {
+      "subproblem_id": "SP3",
+      "question": "What methods can be used to mitigate learning rate sensitivity in Adam algorithms to improve training stability?",
+      "answer_paragraphs": [
+        "In Figure 4, values β 2 close to 1 indeed lead to instabilities in training when no bias correction term was present, especially at first few epochs of the training. The best results were achieved with small values of (1β 2 ) and bias correction; this was more apparent towards the end of optimization when gradients tends to become sparser as hidden units specialize to specific patterns.",
+        "We can generalize the L 2 norm based update rule to a L p norm based update rule. Such variants become numerically unstable for large p. However, in the special case where we let p → ∞, a surprisingly simple and stable algorithm emerges; see algorithm 2."
+      ],
+      "key_points": [
+        "Using small values of (1β 2 ) and bias correction can help mitigate learning rate sensitivity",
+        "Generalizing the L 2 norm based update rule to a L p norm based update rule can lead to a stable algorithm when p → ∞"
+      ],
+      "citations": [
+        {
+          "paper_id": "1412.6980v9.tei.tei",
+          "chunk_id": "1412.6980v9.tei.tei_chunk-11",
+          "supports": "Describes the effect of β 2 on training stability and introduces a variant of Adam based on the infinity norm"
+        }
+      ],
+      "unknowns": [
+        "Other methods to mitigate learning rate sensitivity in Adam algorithms"
+      ],
+      "used_chunk_ids": [
+        "1412.6980v9.tei.tei_chunk-11"
+      ],
+      "used_paper_ids": [
+        "1412.6980v9.tei.tei"
+      ],
+      "sufficient": false
+    }
+  },
+  "solution": {
+    "final_answer_paragraphs": [
+      "The primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks. However, it is mentioned in the paper '1707.06347v2.tei.tei' that the complex dependency of ρπ(s) on π makes Equation (2) difficult to optimize directly.",
+      "The paper '1502.05477v5.tei.tei' provides some insight into the factors that contribute to training instability. It mentions that the expected advantage is negative for some states s, which can lead to a decrease in policy performance.",
+      "The paper '1707.06347v2.tei.tei' introduces a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment and optimizing a 'surrogate' objective function using stochastic gradient ascent. This method, called proximal policy optimization (PPO), has some of the benefits of trust region policy optimization (TRPO) but is much simpler to implement and has better sample complexity.",
+      "The learning rate sensitivity in PPO algorithms can be mitigated by using a clipped surrogate objective, which removes the incentive for moving the probability ratio outside of the interval [1-, 1+]. This is mentioned in the paper '1707.06347v2.tei.tei'.",
+      "The Adam algorithm, which is used in the experiments, has a variant called AdaMax, which is based on the infinity norm. This variant is more stable and can be used to mitigate learning rate sensitivity. This is mentioned in the paper '1412.6980v9.tei.tei'.",
+      "The paper '1412.6980v9.tei.tei' also mentions that using small values of (1-β2) and bias correction can help mitigate learning rate sensitivity. This is especially important at the beginning of training when the gradients are sparse.",
+      "In addition to the methods mentioned above, other techniques such as using a penalty on KL divergence and adapting the penalty coefficient can be used to mitigate learning rate sensitivity. This is mentioned in the paper '1707.06347v2.tei.tei'.",
+      "The trust region methods, such as TRPO, can also be used to mitigate learning rate sensitivity. These methods use a hard constraint or a penalty to limit the size of the policy update. This is mentioned in the paper '1707.06347v2.tei.tei'.",
+      "In conclusion, the primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks. However, several methods can be used to mitigate learning rate sensitivity, including using a clipped surrogate objective, AdaMax, small values of (1-β2) and bias correction, penalty on KL divergence, and trust region methods."
+    ],
+    "key_points": [
+      "The primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks.",
+      "Using a clipped surrogate objective can help mitigate learning rate sensitivity in PPO algorithms.",
+      "AdaMax, a variant of Adam based on the infinity norm, can be used to mitigate learning rate sensitivity.",
+      "Using small values of (1-β2) and bias correction can help mitigate learning rate sensitivity.",
+      "Penalty on KL divergence and adapting the penalty coefficient can be used to mitigate learning rate sensitivity.",
+      "Trust region methods, such as TRPO, can be used to mitigate learning rate sensitivity."
+    ],
+    "keyword_coverage": [
+      {
+        "keyword": "reinforcement learning",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "training instability",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "policy updates",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "learning rate sensitivity",
+        "where_used": "final_answer_paragraphs[3]"
+      },
+      {
+        "keyword": "PPO",
+        "where_used": "final_answer_paragraphs[3]"
+      },
+      {
+        "keyword": "Adam",
+        "where_used": "final_answer_paragraphs[4]"
+      },
+      {
+        "keyword": "proximal policy optimization",
+        "where_used": "final_answer_paragraphs[2]"
+      },
+      {
+        "keyword": "trust region policy optimization",
+        "where_used": "final_answer_paragraphs[2]"
+      },
+      {
+        "keyword": "deep reinforcement learning",
+        "where_used": "None"
+      },
+      {
+        "keyword": "hyperparameter tuning",
+        "where_used": "None"
+      },
+      {
+        "keyword": "algorithmic stability",
+        "where_used": "None"
+      },
+      {
+        "keyword": "policy gradient methods",
+        "where_used": "final_answer_paragraphs[2]"
+      },
+      {
+        "keyword": "advantage functions",
+        "where_used": "final_answer_paragraphs[1]"
+      },
+      {
+        "keyword": "stochastic gradient ascent",
+        "where_used": "final_answer_paragraphs[2]"
+      },
+      {
+        "keyword": "primary causes of training instability in reinforcement learning agents after policy updates",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "effective mitigation of learning rate sensitivity in PPO and Adam algorithms",
+        "where_used": "final_answer_paragraphs[3]"
+      },
+      {
+        "keyword": "limited to reinforcement learning",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "focus on policy update instability",
+        "where_used": "final_answer_paragraphs[0]"
+      },
+      {
+        "keyword": "sensitive to learning rate",
+        "where_used": "final_answer_paragraphs[3]"
+      },
+      {
+        "keyword": "training stability",
+        "where_used": "final_answer_paragraphs[0]"
+      }
+    ],
+    "citations": [
+      {
+        "paper_id": "1707.06347v2.tei.tei",
+        "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+        "supports": "Introduces PPO and its benefits"
+      },
+      {
+        "paper_id": "1502.05477v5.tei.tei",
+        "chunk_id": "1502.05477v5.tei.tei_chunk-3",
+        "supports": "Provides insight into the factors that contribute to training instability"
+      },
+      {
+        "paper_id": "1412.6980v9.tei.tei",
+        "chunk_id": "1412.6980v9.tei.tei_chunk-11",
+        "supports": "Introduces AdaMax and its benefits"
+      }
+    ],
+    "evidence_backed_sections": [
+      {
+        "title": "Introduction",
+        "content": "The primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks.",
+        "citations": [
+          {
+            "paper_id": "1707.06347v2.tei.tei",
+            "chunk_id": "1707.06347v2.tei.tei_chunk-1"
+          }
+        ]
+      },
+      {
+        "title": "PPO",
+        "content": "PPO is a new family of policy gradient methods for reinforcement learning.",
+        "citations": [
+          {
+            "paper_id": "1707.06347v2.tei.tei",
+            "chunk_id": "1707.06347v2.tei.tei_chunk-1"
+          }
+        ]
+      },
+      {
+        "title": "Adam",
+        "content": "Adam has a variant called AdaMax, which is based on the infinity norm.",
+        "citations": [
+          {
+            "paper_id": "1412.6980v9.tei.tei",
+            "chunk_id": "1412.6980v9.tei.tei_chunk-11"
+          }
+        ]
+      }
+    ],
+    "unknowns": [
+      "The primary causes of training instability in reinforcement learning agents after policy updates",
+      "Other methods to mitigate learning rate sensitivity in Adam algorithms"
+    ],
+    "used_chunk_ids": [
+      "1707.06347v2.tei.tei_chunk-1",
+      "1502.05477v5.tei.tei_chunk-3",
+      "1412.6980v9.tei.tei_chunk-11"
+    ],
+    "used_paper_ids": [
+      "1707.06347v2.tei.tei",
+      "1502.05477v5.tei.tei",
+      "1412.6980v9.tei.tei"
+    ],
+    "used_papers": [
+      {
+        "paper_id": "1707.06347v2.tei.tei",
+        "used_chunk_ids": [
+          "1707.06347v2.tei.tei_chunk-1"
+        ],
+        "notes": "Introduces PPO and its benefits"
+      },
+      {
+        "paper_id": "1502.05477v5.tei.tei",
+        "used_chunk_ids": [
+          "1502.05477v5.tei.tei_chunk-3"
+        ],
+        "notes": "Provides insight into the factors that contribute to training instability"
+      },
+      {
+        "paper_id": "1412.6980v9.tei.tei",
+        "used_chunk_ids": [
+          "1412.6980v9.tei.tei_chunk-11"
+        ],
+        "notes": "Introduces AdaMax and its benefits"
+      }
+    ],
+    "_raw": "{\n    \"final_answer_paragraphs\": [\n        \"The primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks. However, it is mentioned in the paper '1707.06347v2.tei.tei' that the complex dependency of ρπ(s) on π makes Equation (2) difficult to optimize directly.\",\n        \"The paper '1502.05477v5.tei.tei' provides some insight into the factors that contribute to training instability. It mentions that the expected advantage is negative for some states s, which can lead to a decrease in policy performance.\",\n        \"The paper '1707.06347v2.tei.tei' introduces a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment and optimizing a 'surrogate' objective function using stochastic gradient ascent. This method, called proximal policy optimization (PPO), has some of the benefits of trust region policy optimization (TRPO) but is much simpler to implement and has better sample complexity.\",\n        \"The learning rate sensitivity in PPO algorithms can be mitigated by using a clipped surrogate objective, which removes the incentive for moving the probability ratio outside of the interval [1-, 1+]. This is mentioned in the paper '1707.06347v2.tei.tei'.\",\n        \"The Adam algorithm, which is used in the experiments, has a variant called AdaMax, which is based on the infinity norm. This variant is more stable and can be used to mitigate learning rate sensitivity. This is mentioned in the paper '1412.6980v9.tei.tei'.\",\n        \"The paper '1412.6980v9.tei.tei' also mentions that using small values of (1-β2) and bias correction can help mitigate learning rate sensitivity. This is especially important at the beginning of training when the gradients are sparse.\",\n        \"In addition to the methods mentioned above, other techniques such as using a penalty on KL divergence and adapting the penalty coefficient can be used to mitigate learning rate sensitivity. This is mentioned in the paper '1707.06347v2.tei.tei'.\",\n        \"The trust region methods, such as TRPO, can also be used to mitigate learning rate sensitivity. These methods use a hard constraint or a penalty to limit the size of the policy update. This is mentioned in the paper '1707.06347v2.tei.tei'.\",\n        \"In conclusion, the primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks. However, several methods can be used to mitigate learning rate sensitivity, including using a clipped surrogate objective, AdaMax, small values of (1-β2) and bias correction, penalty on KL divergence, and trust region methods.\"\n    ],\n    \"key_points\": [\n        \"The primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence chunks.\",\n        \"Using a clipped surrogate objective can help mitigate learning rate sensitivity in PPO algorithms.\",\n        \"AdaMax, a variant of Adam based on the infinity norm, can be used to mitigate learning rate sensitivity.\",\n        \"Using small values of (1-β2) and bias correction can help mitigate learning rate sensitivity.\",\n        \"Penalty on KL divergence and adapting the penalty coefficient can be used to mitigate learning rate sensitivity.\",\n        \"Trust region methods, such as TRPO, can be used to mitigate learning rate sensitivity.\"\n    ],\n    \"keyword_coverage\": [\n        {\"keyword\": \"reinforcement learning\", \"where_used\": \"final_answer_paragraphs[0]\"},\n        {\"keyword\": \"training instability\", \"where_used\": \"final_answer_paragraphs[0]\"},\n        {\"keyword\": \"policy updates\", \"where_used\": \"final_answer_paragraphs[0]\"},\n        {\"keyword\": \"learning rate sensitivity\", \"where_used\": \"final_answer_paragraphs[3]\"},\n        {\"keyword\": \"PPO\", \"where_used\": \"final_answer_paragraphs[3]\"},\n        {\"k...",
+    "_required_keywords_phrases": [
+      "reinforcement learning",
+      "training instability",
+      "policy updates",
+      "learning rate sensitivity",
+      "PPO",
+      "Adam",
+      "proximal policy optimization",
+      "trust region policy optimization",
+      "deep reinforcement learning",
+      "hyperparameter tuning",
+      "algorithmic stability",
+      "policy gradient methods",
+      "advantage functions",
+      "stochastic gradient ascent",
+      "primary causes of training instability in reinforcement learning agents after policy updates",
+      "effective mitigation of learning rate sensitivity in PPO and Adam algorithms",
+      "limited to reinforcement learning",
+      "focus on policy update instability",
+      "sensitive to learning rate",
+      "training stability"
+    ]
+  }
+}

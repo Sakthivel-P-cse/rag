@@ -1,0 +1,428 @@
+{
+  "paper_id": "86BB4DABD5366F2EC3501A20F6662AF6",
+  "title": "Granular discorectangle in a thermalized bath of hard disks",
+  "arxiv_id": "arXiv:cond-mat/0408205v1[cond-mat.stat-mech]",
+  "authors": [
+    {
+      "given": "H",
+      "family": "Gomart"
+    },
+    {
+      "given": "J",
+      "family": "Talbot"
+    },
+    {
+      "given": "P",
+      "family": "Viot"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Mcnamara"
+        },
+        {
+          "given": "S",
+          "family": "Luding"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Europhys. Lett",
+      "container_title": "Europhys. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P A",
+          "family": "Martin"
+        },
+        {
+          "given": "J",
+          "family": "Piasecki"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Granul. Matter",
+      "container_title": "Granul. Matter",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Barrat"
+        },
+        {
+          "given": "E",
+          "family": "Trizac"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S R",
+          "family": "Dahl"
+        },
+        {
+          "given": "C M",
+          "family": "Hrenya"
+        },
+        {
+          "given": "V",
+          "family": "Garzó"
+        },
+        {
+          "given": "J W",
+          "family": "Dufty"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Garzo"
+        },
+        {
+          "given": "J",
+          "family": "Dufty"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Clelland"
+        },
+        {
+          "given": "C M",
+          "family": "Hrenya"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Molecular Simulation",
+      "container_title": "Molecular Simulation",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Montanero"
+        },
+        {
+          "given": "V",
+          "family": "Garzó"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "J. Fluid. Mech",
+      "container_title": "J. Fluid. Mech",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Alam"
+        },
+        {
+          "given": "S",
+          "family": "Luding"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Feitosa"
+        },
+        {
+          "given": "N",
+          "family": "Menon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R D",
+          "family": "Wildman"
+        },
+        {
+          "given": "D J",
+          "family": "Parker"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "J. Fluid. Mech",
+      "container_title": "J. Fluid. Mech",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Galvin"
+        },
+        {
+          "given": "S R",
+          "family": "Dahl"
+        },
+        {
+          "given": "C M",
+          "family": "Hrenya"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Physica A",
+      "container_title": "Physica A",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Barrat"
+        },
+        {
+          "given": "V",
+          "family": "Loreto"
+        },
+        {
+          "given": "A",
+          "family": "Puglisi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Mol. Phys",
+      "container_title": "Mol. Phys",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Barrat"
+        },
+        {
+          "given": "E",
+          "family": "Trizac"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Santos"
+        },
+        {
+          "given": "J W",
+          "family": "Dufty"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Santos"
+        },
+        {
+          "given": "J W",
+          "family": "Dufty"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "J. Phys. I France",
+      "container_title": "J. Phys. I France",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Pöschel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I S",
+          "family": "Aranson"
+        },
+        {
+          "given": "L S",
+          "family": "Tsimring"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Mullin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Huthmann"
+        },
+        {
+          "given": "T",
+          "family": "Aspelmeier"
+        },
+        {
+          "given": "A",
+          "family": "Zippelius"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Viot"
+        },
+        {
+          "given": "J",
+          "family": "Talbot"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Free cooling of particles with rotational degrees of freedom",
+      "container_title": "Free cooling of particles with rotational degrees of freedom",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Aspelmeier"
+        },
+        {
+          "given": "T M",
+          "family": "Huthmann"
+        },
+        {
+          "given": "A",
+          "family": "Zippelius"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Ramirez"
+        },
+        {
+          "given": "T",
+          "family": "Poschel"
+        },
+        {
+          "given": "N V",
+          "family": "Brilliantov"
+        },
+        {
+          "given": "T",
+          "family": "Schwager"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "The integrals I 01 1 , I 03 2 , I 11 1 and I 13 2 corrrespond to the integrals I1, I2, I3 and I4 of Ref.[20] respectively. The expressions of I2 and I3 have some typos in Ref",
+      "container_title": "The integrals I 01 1 , I 03 2 , I 11 1 and I 13 2 corrrespond to the integrals I1, I2, I3 and I4 of Ref.[20] respectively. The expressions of I2 and I3 have some typos in Ref",
+      "year": null,
+      "idnos": [],
+      "authors": []
+    }
+  ],
+  "chunks": []
+}

@@ -1,0 +1,669 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Published as a conference paper at ICLR 2015 ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2017-01-30">30 Jan 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Diederik</forename><forename type="middle">P</forename><surname>Kingma</surname></persName>
+							<email>dpkingma@openai.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jimmy</forename><surname>Lei Ba</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Amsterdam</orgName>
+								<address>
+									<country>OpenAI</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Published as a conference paper at ICLR 2015 ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2017-01-30">30 Jan 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5960B344851C685E12A021BBB31FEC97</idno>
+					<idno type="arXiv">arXiv:1412.6980v9[cs.LG]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm. * Equal contribution. Author ordering determined by coin flip over a Google Hangout.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head n="8">CONCLUSION</head><p>We have introduced a simple and computationally efficient algorithm for gradient-based optimization of stochastic objective functions. Our method is aimed towards machine learning problems with</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Natural gradient works efficiently in learning</title>
+		<author>
+			<persName><forename type="first">Shun-Ichi</forename><surname>Amari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="251" to="276" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Recent advances in deep learning for speech research at microsoft</title>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jinyu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jui-Ting</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kaisheng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Seide</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Seltzer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Michael</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zweig</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Geoff</surname></persName>
+		</author>
+		<author>
+			<persName><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Xiaodong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Williams</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICASSP</title>
+		<imprint>
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Adaptive subgradient methods for online learning and stochastic optimization</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Duchi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hazan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Elad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoram</forename><surname>Singer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="2121" to="2159" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Generating sequences with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1308.0850</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Speech recognition with deep recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohamed</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abdel-Rahman</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Acoustics, Speech and Signal Processing (ICASSP)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2013">2013. 2013</date>
+			<biblScope unit="page" from="6645" to="6649" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Reducing the dimensionality of data with neural networks</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">313</biblScope>
+			<biblScope unit="issue">5786</biblScope>
+			<biblScope unit="page" from="504" to="507" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups</title>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohamed</forename><surname>Abdel-Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Navdeep</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Andrew</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Patrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tara</forename><forename type="middle">N</forename><surname>Sainath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Signal Processing Magazine</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="82" to="97" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>IEEE</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Improving neural networks by preventing co-adaptation of feature detectors</title>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Srivastava</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nitish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ilya</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ruslan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1207.0580</idno>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Auto-Encoding Variational Bayes</title>
+		<author>
+			<persName><forename type="first">Diederik</forename><forename type="middle">P</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Welling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The 2nd International Conference on Learning Representations (ICLR)</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Imagenet classification with deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ilya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="1097" to="1105" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Learning word vectors for sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">L</forename><surname>Maas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><forename type="middle">E</forename><surname>Daly</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Peter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Andrew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Potts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="142" to="150" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Non-asymptotic analysis of stochastic approximation algorithms for machine learning</title>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Moulines</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francis</forename><forename type="middle">R</forename><surname>Bach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="451" to="459" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Revisiting natural gradient for deep networks</title>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1301.3584</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Acceleration of stochastic approximation by averaging</title>
+		<author>
+			<persName><forename type="first">Boris</forename><forename type="middle">T</forename><surname>Polyak</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Juditsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Anatoli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Control and Optimization</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="838" to="855" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A fast natural newton method</title>
+		<author>
+			<persName><forename type="first">Nicolas</forename><forename type="middle">L</forename><surname>Roux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">W</forename><surname>Fitzgibbon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 27th International Conference on Machine Learning (ICML-10)</title>
+		<meeting>the 27th International Conference on Machine Learning (ICML-10)</meeting>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="623" to="630" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Efficient estimations from a slowly convergent robbins-monro process</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Ruppert</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+		<respStmt>
+			<orgName>Cornell University Operations Research and Industrial Engineering</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Schaul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sixin</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1206.1106</idno>
+		<title level="m">No more pesky learning rates</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Fast large-scale optimization by unifying stochastic gradient and quasi-newton methods</title>
+		<author>
+			<persName><surname>Sohl-Dickstein</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jascha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Poole</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ganguli</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Surya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 31st International Conference on Machine Learning (ICML-14)</title>
+		<meeting>the 31st International Conference on Machine Learning (ICML-14)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="604" to="612" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">On the importance of initialization and momentum in deep learning</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Martens</surname></persName>
+		</author>
+		<author>
+			<persName><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 30th International Conference on Machine Learning (ICML-13)</title>
+		<meeting>the 30th International Conference on Machine Learning (ICML-13)</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="1139" to="1147" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">COURSERA: Neural Networks for Machine Learning</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tieleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">5</biblScope>
+		</imprint>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Fast dropout training</title>
+		<author>
+			<persName><forename type="first">Sida</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 30th International Conference on Machine Learning (ICML-13)</title>
+		<meeting>the 30th International Conference on Machine Learning (ICML-13)</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="118" to="126" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">D</forename><surname>Zeiler</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Adadelta</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1212.5701</idno>
+		<title level="m">An adaptive learning rate method</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Online convex programming and generalized infinitesimal gradient ascent</title>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Zinkevich</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

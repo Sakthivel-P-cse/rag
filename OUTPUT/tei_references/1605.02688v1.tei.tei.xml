@@ -1,0 +1,2009 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Theano: A Python framework for fast computation of mathematical expressions (The Theano Development Team) *</title>
+				<funder>
+					<orgName type="full">CIFAR</orgName>
+				</funder>
+				<funder ref="#_jUAMbqv">
+					<orgName type="full">Hei</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">NSERC</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Compute Canada</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Canada Research Chairs</orgName>
+				</funder>
+				<funder ref="#_ZTyfe9J">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_zajqw8S">
+					<orgName type="full">Texot</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2016-05-09">9 May 2016</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rami</forename><surname>Al-Rfou</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Stony Brook University</orgName>
+								<address>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guillaume</forename><surname>Alain</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amjad</forename><surname>Almahairi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christof</forename><surname>Angermueller</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">European Molecular Biology Laboratory</orgName>
+								<orgName type="institution">European Bioinformatics Institute</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nicolas</forename><surname>Ballas</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Frédéric</forename><surname>Bastien</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Justin</forename><surname>Bayer</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Anatoly</forename><surname>Belikov</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">Bauman Moscow State Technical University</orgName>
+								<address>
+									<country key="RU">Russia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexander</forename><surname>Belopolsky</surname></persName>
+							<affiliation key="aff6">
+								<orgName type="laboratory">Enlightenment Research LLC</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Arnaud</forename><surname>Bergeron</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">James</forename><surname>Bergstra</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Valentin</forename><surname>Bisson</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Josh</forename><forename type="middle">Bleecher</forename><surname>Snyder</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nicolas</forename><surname>Bouchard</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nicolas</forename><surname>Boulanger-Lewandowski</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xavier</forename><surname>Bouthillier</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexandre</forename><surname>De Brébisson</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Olivier</forename><surname>Breuleux</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pierre-Luc</forename><surname>Carrier</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff7">
+								<orgName type="institution">New York University</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jan</forename><surname>Chorowski</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="institution">University of Wroclaw</orgName>
+								<address>
+									<country key="PL">Poland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Paul</forename><surname>Christiano</surname></persName>
+							<affiliation key="aff9">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Berkeley</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tim</forename><surname>Cooijmans</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff10">
+								<orgName type="institution">Maastricht University</orgName>
+								<address>
+									<country key="NL">Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marc-Alexandre</forename><surname>Côté</surname></persName>
+							<affiliation key="aff11">
+								<orgName type="institution">Université de Sherbrooke</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Myriam</forename><surname>Côté</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aaron</forename><surname>Courville</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yann</forename><forename type="middle">N</forename><surname>Dauphin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff12">
+								<orgName type="department">Facebook AI Research 17</orgName>
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<addrLine>18 Google DeepMind 19</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff13">
+								<orgName type="institution">Ghent University</orgName>
+								<address>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Olivier</forename><surname>Delalleau</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julien</forename><surname>Demouth</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Guillaume</forename><surname>Desjardins</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sander</forename><surname>Dieleman</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Laurent</forename><surname>Dinh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mélanie</forename><surname>Ducoffe</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff14">
+								<orgName type="institution">Équipe MIND</orgName>
+								<address>
+									<addrLine>Sparks, laboratoire I3S</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff15">
+								<orgName type="institution">Université de Nice</orgName>
+								<address>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vincent</forename><surname>Dumoulin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Samira</forename><forename type="middle">Ebrahimi</forename><surname>Kahou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">École Polytechnique de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dumitru</forename><surname>Erhan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziye</forename><surname>Fan</surname></persName>
+							<affiliation key="aff16">
+								<orgName type="department">Speech and Hearing Research Center</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Orhan</forename><surname>Firat</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff17">
+								<orgName type="institution">Middle East Technical University</orgName>
+								<address>
+									<settlement>Ankara</settlement>
+									<country key="TR">Turkey</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mathieu</forename><surname>Germain</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xavier</forename><surname>Glorot</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ian</forename><surname>Goodfellow</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff18">
+								<orgName type="institution">OpenAI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matt</forename><surname>Graham</surname></persName>
+							<affiliation key="aff19">
+								<orgName type="institution">University of Edinburgh</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Caglar</forename><surname>Gulcehre</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Philippe</forename><surname>Hamel</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Iban</forename><surname>Harlouchet</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jean-Philippe</forename><surname>Heng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff20">
+								<orgName type="institution">Meiji University</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country>Japan 27 Gravity R&amp;D</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Balázs</forename><surname>Hidasi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sina</forename><surname>Honari</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Arjun</forename><surname>Jain</surname></persName>
+							<affiliation key="aff21">
+								<orgName type="institution">Indian Institute of Technology</orgName>
+								<address>
+									<settlement>Bombay</settlement>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sébastien</forename><surname>Jean</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="institution">New York University</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Jia</surname></persName>
+							<affiliation key="aff22">
+								<orgName type="laboratory">CIRRELT and Département d'informatique et recherche opérationnelle</orgName>
+								<orgName type="institution">Megvii Technology Inc</orgName>
+								<address>
+									<addrLine>30 ScrapingHub Inc. 31</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff23">
+								<orgName type="institution">Université de Montréal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mikhail</forename><surname>Korobov</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Vivek</forename><surname>Kulkarni</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Stony Brook University</orgName>
+								<address>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alex</forename><surname>Lamb</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Pascal</forename><surname>Lamblin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Eric</forename><surname>Larsen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">César</forename><surname>Laurent</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sean</forename><surname>Lee</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><surname>Lefrancois</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><surname>Lemieux</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nicholas</forename><surname>Léonard</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhouhan</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jesse</forename><forename type="middle">A</forename><surname>Livezey</surname></persName>
+							<affiliation key="aff24">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="laboratory">Redwood Center for Theoretical Neuroscience</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Berkeley</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cory</forename><surname>Lorenz</surname></persName>
+							<affiliation key="aff25">
+								<orgName type="institution">PlanGrid</orgName>
+								<address>
+									<settlement>San Francisco</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jeremiah</forename><surname>Lowin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Qianli</forename><surname>Ma</surname></persName>
+							<affiliation key="aff26">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pierre-Antoine</forename><surname>Manzagol</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Olivier</forename><surname>Mastropietro</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Robert</forename><forename type="middle">T</forename><surname>Mcgibbon</surname></persName>
+							<affiliation key="aff27">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Roland</forename><surname>Memisevic</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bart</forename><surname>Van Merriënboer</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Vincent</forename><surname>Michalski</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mehdi</forename><surname>Mirza</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Alberto</forename><surname>Orlandi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Christopher</forename><surname>Pal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammad</forename><surname>Pezeshki</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Colin</forename><surname>Raffel</surname></persName>
+							<affiliation key="aff28">
+								<orgName type="institution">Columbia University</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Renshaw</surname></persName>
+							<affiliation key="aff19">
+								<orgName type="institution">University of Edinburgh</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matthew</forename><surname>Rocklin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Adriana</forename><surname>Romero</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Markus</forename><surname>Roth</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Peter</forename><surname>Sadowski</surname></persName>
+							<affiliation key="aff29">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Irvine</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">John</forename><surname>Salvatier</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Franc ¸ois</forename><surname>Savard</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jan</forename><surname>Schlüter</surname></persName>
+							<affiliation key="aff31">
+								<orgName type="institution">Austrian Research Institute for Artificial Intelligence</orgName>
+								<address>
+									<settlement>Vienna</settlement>
+									<country key="AT">Austria</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">John</forename><surname>Schulman</surname></persName>
+							<affiliation key="aff18">
+								<orgName type="institution">OpenAI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gabriel</forename><surname>Schwartz</surname></persName>
+							<affiliation key="aff32">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Drexel University</orgName>
+								<address>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Iulian</forename><forename type="middle">Vlad</forename><surname>Serban</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dmitriy</forename><surname>Serdyuk</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Samira</forename><surname>Shabanian</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Étienne</forename><surname>Simon</surname></persName>
+							<affiliation key="aff33">
+								<orgName type="institution">École Normale Supérieure de Cachan</orgName>
+								<address>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sigurd</forename><surname>Spieckermann</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">S</forename><forename type="middle">Ramana</forename><surname>Subramanyam</surname></persName>
+							<affiliation key="aff34">
+								<orgName type="institution">Birla Institute of Technology and Science</orgName>
+								<address>
+									<settlement>Pilani</settlement>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jakub</forename><surname>Sygnowski</surname></persName>
+							<affiliation key="aff35">
+								<orgName type="institution">University of Warsaw</orgName>
+								<address>
+									<country key="PL">Poland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jérémie</forename><surname>Tanguay</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Gijs</forename><surname>Van Tulder</surname></persName>
+							<affiliation key="aff36">
+								<orgName type="department">Biomedical Imaging Group</orgName>
+								<orgName type="institution">Erasmus MC</orgName>
+								<address>
+									<settlement>Rotterdam</settlement>
+									<country key="NL">Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joseph</forename><surname>Turian</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sebastian</forename><surname>Urban</surname></persName>
+							<affiliation key="aff37">
+								<orgName type="department">Institut für Informatik VI</orgName>
+								<orgName type="institution">Technical University of Munich</orgName>
+								<address>
+									<settlement>Garching</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pascal</forename><surname>Vincent</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Francesco</forename><surname>Visin</surname></persName>
+							<affiliation key="aff38">
+								<orgName type="institution">Politecnico di Milano</orgName>
+								<address>
+									<settlement>Milan</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Harm</forename><surname>De Vries</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Warde-Farley</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dustin</forename><forename type="middle">J</forename><surname>Webb</surname></persName>
+							<affiliation key="aff39">
+								<orgName type="department">School of Computing</orgName>
+								<orgName type="institution">University of Utah</orgName>
+								<address>
+									<settlement>Salt Lake City</settlement>
+									<region>UT</region>
+									<country>USA 48 Swiftkey</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matthew</forename><surname>Willson</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kelvin</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Lijun</forename><surname>Xue</surname></persName>
+							<affiliation key="aff40">
+								<orgName type="institution">Carnegie Mellon University West</orgName>
+								<address>
+									<settlement>Moffett Field</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Li</forename><surname>Yao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Saizheng</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ying</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff30">
+								<orgName type="department">38 AI Impacts</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Theano: A Python framework for fast computation of mathematical expressions (The Theano Development Team) *</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2016-05-09">9 May 2016</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">02B089930CEF33F594CCE63F40F8C2DF</idno>
+					<idno type="arXiv">arXiv:1605.02688v1[cs.SC]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>Theano is a Python library that allows to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. Since its introduction in <ref type="bibr" target="#b0">[1]</ref> it has been one of the most used CPU and GPU mathematical compilers -especially in the machine learning community [2] -and has shown steady performance improvements <ref type="bibr" target="#b2">[3]</ref>. Theano is being actively and continuously developed since 2008, multiple frameworks have been built on top of it and it has been used to produce many state-of-the-art machine learning models.</p><p>The present article is structured as follows. Section I provides an overview of the Theano software and its community. Section II presents the principal features of Theano and how to use them, and compares them with other similar projects. Section III focuses on recently-introduced functionalities and improvements. Section IV compares the performance of Theano against Torch7 [4] and TensorFlow [5] on several machine learning models. Section V discusses current limitations of Theano and potential ways of improving it.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>We acknowledge the support of the following organizations for research funding and computing support: <rs type="funder">NSERC</rs>, <rs type="person">Calcul Québec</rs>, <rs type="funder">Compute Canada</rs>, the <rs type="funder">Canada Research Chairs</rs>, and <rs type="funder">CIFAR</rs>.</p><p><rs type="person">Lijun Xue</rs>, <rs type="person">Qianli Ma</rs>, <rs type="person">Ziye Fan</rs>, and <rs type="person">Christof Angermueller</rs> contributed to Theano through the <rs type="programName">Google Summer of Code program</rs>.</p><p>The authors would like to thank all the other committers to Theano: <rs type="person">Faruk Ahmed</rs>, <rs type="person">Diogo Moitinho de Almeida</rs>, <rs type="person">Hani Almousli</rs>, <rs type="institution">Andrea</rs>, <rs type="person">Martin Andrews</rs>, <rs type="person">John Arevalo</rs>, <rs type="person">Martin Arjovsky</rs>, <rs type="person">Kai Arulkumaran</rs>, <rs type="person">Ben Athiwaratkun</rs>, bbabeshkin, <rs type="person">Markus Beissinger</rs>, <rs type="person">Sebastian Berg</rs>, <rs type="person">Thierry Bertin-Mahieux</rs>, <rs type="person">Lucas Beyer</rs>, <rs type="person">Merlijn Blaauw</rs>, <rs type="person">Jörg Bornschein</rs>, <rs type="person">Ethan Buchman</rs>, <rs type="person">Bogdan Budescu</rs>, <rs type="person">Yaroslav Bulatov</rs>, <rs type="person">Liwei Cai</rs>, <rs type="person">Brian Cheung</rs>, <rs type="person">Claude Coulombe</rs>, <rs type="person">Frans Cronje</rs>, <rs type="person">Rolf van Dam</rs>, <rs type="person">Jonas Degrave</rs>, <rs type="person">Misha Denil</rs>, <rs type="person">Doug, Zach Dwiel</rs>, <rs type="person">Ilya Dyachenko</rs>, <rs type="person">Douglas Eck</rs>, <rs type="person">Michael Eickenberg</rs>, <rs type="person">Amir Elaguizy</rs>, eulerreich, <rs type="person">Marco Fagiani</rs>, <rs type="person">Raul Chandias Ferrari</rs>, <rs type="person">Abraham Flaxman</rs>, <rs type="person">Mike C. Fletcher</rs>, <rs type="person">Piotr Frankowski</rs>, <rs type="person">Geoffrey French</rs>, <rs type="person">Adithya Ganesh</rs>, <rs type="person">Dario Garcia</rs>, <rs type="person">Sergii Gavrylov</rs>, <rs type="person">Wojciech Głogowski</rs>, <rs type="person">Matthew Koichi Grimes</rs>, <rs type="grantNumber">gw0</rs>, <rs type="person">Christophe Van Gysel</rs>, <rs type="person">Yaroslav Halchenko</rs>, <rs type="person">Tim Head</rs>, <rs type="funder">Hei</rs>, <rs type="person">Jonathan Ho</rs>, <rs type="person">Paul Hollensen</rs>, <rs type="person">Andre Georg Holzner</rs>, <rs type="person">Liang-Chi Hsieh</rs>, <rs type="person">Eric Hunsberger</rs>, <rs type="person">Jonathan J. Hunt</rs>, <rs type="person">Vlad Ionescu</rs>, <rs type="person">Andy Jiang</rs>, jojolalpin, joncrall, <rs type="person">Yi-Lin Juang</rs>, <rs type="person">Vik Kamath</rs>, <rs type="person">Moslem Kazemi</rs>, <rs type="person">Kevin Keraudren</rs>, <rs type="person">Robert Kern</rs>, <rs type="person">Marius Killinger</rs>, <rs type="person">Taesup Kim</rs>, <rs type="person">Jey Kottalam</rs>, <rs type="person">Stefan Krastanov</rs>, <rs type="person">Gokula Krishnan</rs>, <rs type="person">Matthias Kümmerer</rs>, <rs type="person">Kosuke Kusano</rs>, <rs type="person">Micky Latowicki</rs>, <rs type="person">Eric Laufer</rs>, <rs type="person">Sergei Lebedev</rs>, <rs type="person">Rémy Léone</rs>, <rs type="person">Wei Li</rs>, <rs type="person">Peng Liu</rs>, <rs type="person">Jakob Lombacher</rs>, <rs type="person">Gilles Louppe</rs>, <rs type="person">Jan-Matthis Lückmann</rs>, <rs type="person">Michael I. Mandel</rs>, <rs type="person">Daniel Maturana</rs>, <rs type="person">Sergey Matyunin</rs>, <rs type="person">Madison May</rs>, <rs type="person">Ben McCann</rs>, <rs type="person">Clay McLeod</rs>, <rs type="person">Thomas Mesnard</rs>, <rs type="person">Grégoire Mesnil</rs>, <rs type="person">Luke Metz</rs>, <rs type="person">Kyle Meyer</rs>, <rs type="person">Marco De Nadai</rs>, <rs type="person">Anchit Navelkar</rs>, <rs type="person">Alassane Ndiaye</rs>, <rs type="person">Huy Nguyen</rs>, <rs type="person">Michael Opitz</rs>, <rs type="person">Johannes Otterbach</rs>, <rs type="person">Wei Ouyang</rs>, <rs type="person">Daniil Pakhomov</rs>, <rs type="person">Seon-Wook Park</rs>, <rs type="person">Fábio Perez</rs>, <rs type="person">Steven Pigeon</rs>, <rs type="person">Nicolas Pinto</rs>, <rs type="person">Zach Ploskey</rs>, <rs type="person">Bhavishya Pohani</rs>, <rs type="person">Ben Poole</rs>, <rs type="person">Rahul</rs>, <rs type="person">Sirisha Rambhatla</rs>, <rs type="person">Kashif Rasul</rs>, <rs type="person">Julien Rebetez</rs>, <rs type="person">Marc-Antoine Rondeau</rs>, <rs type="person">Tim Salimans</rs>, <rs type="person">Adam Salvail</rs>, <rs type="person">Joao Felipe Santos</rs>, <rs type="person">Utkarsh Saxena</rs>, <rs type="person">Ludwig Schmidt-Hackenberg</rs>, <rs type="person">Ilan Schnell</rs>, <rs type="person">Hannes Schulz</rs>, <rs type="person">Anish Shah</rs>, <rs type="person">Saatvik Shah</rs>, <rs type="person">Shai</rs>, <rs type="person">Yurii Shevchuk</rs>, <rs type="person">Scott Sievert</rs>, <rs type="person">Søren Kaae Sønderby</rs>, <rs type="grantNumber">spotted1234</rs>, <rs type="person">Graham Taylor</rs>, <rs type="funder">Texot</rs>, theaverageguy, <rs type="person">Martin Thoma</rs>, <rs type="person">Carl Thomé</rs>, <rs type="person">Chiheb Trabelsi</rs>, <rs type="person">Matthew Trentacoste</rs>, <rs type="person">Christos Tsirigotis</rs>, <rs type="person">Karen Ullrich</rs>, <rs type="person">Prayag Verma</rs>, <rs type="person">Karel Vesely</rs>, <rs type="person">Mang Wang</rs>, <rs type="person">XterNalz</rs>, <rs type="person">Yu Yang</rs>, yobibyte, <rs type="person">Jason Yosinski</rs>, <rs type="person">Lee Zamparo</rs>, <rs type="person">John Zedlewski</rs>, <rs type="person">Albert Zeyer</rs>, and ziyuang.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_ZTyfe9J">
+					<orgName type="program" subtype="full">Google Summer of Code program</orgName>
+				</org>
+				<org type="funding" xml:id="_jUAMbqv">
+					<idno type="grant-number">gw0</idno>
+				</org>
+				<org type="funding" xml:id="_zajqw8S">
+					<idno type="grant-number">spotted1234</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Theano: A CPU and GPU math expression compiler</title>
+		<author>
+			<persName><forename type="first">James</forename><surname>Bergstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Olivier</forename><surname>Breuleux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frédéric</forename><surname>Bastien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Lamblin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Desjardins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><surname>Turian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Warde-Farley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Python for Scientific Computing Conference (SciPy)</title>
+		<meeting>the Python for Scientific Computing Conference (SciPy)</meeting>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Theano: Deep learning on GPUs with Python</title>
+		<author>
+			<persName><forename type="first">James</forename><surname>Bergstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frédéric</forename><surname>Bastien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Olivier</forename><surname>Breuleux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Lamblin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Olivier</forename><surname>Delalleau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Desjardins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Warde-Farley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><forename type="middle">J</forename><surname>Goodfellow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arnaud</forename><surname>Bergeron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Big Learning Workshop, NIPS</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Theano: New features and speed improvements</title>
+		<author>
+			<persName><forename type="first">Frédéric</forename><surname>Bastien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Lamblin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Bergstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><forename type="middle">J</forename><surname>Goodfellow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arnaud</forename><surname>Bergeron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Bouchard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Deep Learning and Unsupervised Feature Learning Workshop</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>NIPS</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Torch7: A matlab-like environment for machine learning</title>
+		<author>
+			<persName><forename type="first">Ronan</forename><surname>Collobert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Koray</forename><surname>Kavukcuoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Clément</forename><surname>Farabet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Big Learning Workshop, NIPS</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">TensorFlow: Large-scale machine learning on heterogeneous systems</title>
+		<author>
+			<persName><forename type="first">Martín</forename><surname>Abadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ashish</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Barham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eugene</forename><surname>Brevdo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhifeng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Craig</forename><surname>Citro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andy</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthieu</forename><surname>Devin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanjay</forename><surname>Ghemawat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><surname>Goodfellow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Harp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Irving</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Isard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yangqing</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Jozefowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lukasz</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manjunath</forename><surname>Kudlur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josh</forename><surname>Levenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Mané</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rajat</forename><surname>Monga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sherry</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Derek</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Olah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathon</forename><surname>Shlens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benoit</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kunal</forename><surname>Talwar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Tucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vincent</forename><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vijay</forename><surname>Vasudevan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fernanda</forename><surname>Viégas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pete</forename><surname>Warden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Wattenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Wicke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuan</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoqiang</forename><surname>Zheng</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>software available from tensorflow.org</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The NumPy array: A structure for efficient numerical computation</title>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Van Der Walt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Chris</forename><surname>Colbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gael</forename><surname>Varoquaux</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/MCSE.2011.37</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computing in Science and Eng</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="22" to="30" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">SciPy: Open source scientific tools for Python</title>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Travis</forename><surname>Oliphant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pearu</forename><surname>Peterson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>Online; accessed 2016-04-19</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Pylearn2: A machine learning research library</title>
+		<author>
+			<persName><forename type="first">Ian</forename><forename type="middle">J</forename><surname>Goodfellow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Warde-Farley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Lamblin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mehdi</forename><surname>Vincent Dumoulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Mirza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frédéric</forename><surname>Bergstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bastien</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bengio</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1308.4214</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Blocks and Fuel: Frameworks for deep learning</title>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Van Merriënboer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dmitriy</forename><surname>Vincent Dumoulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Serdyuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Warde-Farley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Chorowski</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bengio</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1506.00619</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Lasagne: First release</title>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Sander Dieleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Colin</forename><surname>Schlüter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eben</forename><surname>Raffel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Søren</forename><forename type="middle">Kaae</forename><surname>Olson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Sønderby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Nouri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Maturana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Thoma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><surname>Battenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>De Fauw</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Heilman</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/zenodo.27878</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Hendrik Weideman, takacsg84, peterderivaz, Jon, instagibbs, Dr. Kashif Rasul, CongLiu, Britefury, and Jonas Degrave</title>
+		<meeting><address><addrLine>Brian McFee</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">149</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Franc ¸ois Chollet</title>
+		<ptr target="https://github.com/fchollet/keras" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>Keras</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Probabilistic programming in Python using PyMC3</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Salvatier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">V</forename><surname>Wiecki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Fonnesbeck</surname></persName>
+		</author>
+		<idno type="DOI">10.7717/peerj-cs.55</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PeerJ Computer Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">55</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Dataflow architectures</title>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">E</forename><surname>Arvind</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Culler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual Review of Computer Science</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="225" to="253" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Fast exact multiplication by the Hessian</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barak</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pearlmutter</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/neco.1994.6.1.147</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="147" to="160" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">MXNet: A flexible and efficient machine learning library for heterogeneous distributed systems</title>
+		<author>
+			<persName><forename type="first">Tianqi</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mu</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yutian</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Min</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naiyan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minjie</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianjun</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chiyuan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zheng</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1512.01274</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Caffe: Convolutional architecture for fast feature embedding</title>
+		<author>
+			<persName><forename type="first">Yangqing</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evan</forename><surname>Shelhamer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Donahue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sergey</forename><surname>Karayev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Long</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ross</forename><surname>Girshick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sergio</forename><surname>Guadarrama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Trevor</forename><surname>Darrell</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1408.5093</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Chainer: a next-generation open source framework for deep learning</title>
+		<author>
+			<persName><forename type="first">Seiya</forename><surname>Tokui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenta</forename><surname>Oono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shohei</forename><surname>Hido</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Clayton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Workshop on Machine Learning Systems (LearningSys)</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">ImageNet classification with deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="1097" to="1105" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">A guide to convolution arithmetic for deep learning</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dumoulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Visin</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1603.07285</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><forename type="first">Sharan</forename><surname>Chetlur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cliff</forename><surname>Woolley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philippe</forename><surname>Vandermersch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bryan</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evan</forename><surname>Shelhamer</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1410.0759</idno>
+		<title level="m">cuDNN: Efficient primitives for deep learning</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A common GPU n-dimensional array for Python and C</title>
+		<author>
+			<persName><forename type="first">Frédéric</forename><surname>Bastien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arnaud</forename><surname>Bergeron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andreas</forename><surname>Klöckner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Big Learning Workshop, NIPS</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Large scale distributed deep networks</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rajat</forename><surname>Monga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthieu</forename><surname>Devin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marc'aurelio</forename><surname>Ranzato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Tucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ke</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quoc</forename><forename type="middle">V</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="1223" to="1231" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Deep learning with elastic averaging SGD</title>
+		<author>
+			<persName><forename type="first">Sixin</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna</forename><forename type="middle">E</forename><surname>Choromanska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="685" to="693" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">One weird trick for parallelizing convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1404.5997</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">OverFeat: Integrated recognition, localization and detection using convolutional networks</title>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Sermanet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Eigen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michaël</forename><surname>Mathieu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rob</forename><surname>Fergus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1312.6229</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Very deep convolutional networks for large-scale image recognition</title>
+		<author>
+			<persName><forename type="first">Karen</forename><surname>Simonyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Zisserman</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1409.1556</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Going deeper with convolutions</title>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Szegedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yangqing</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Sermanet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dragomir</forename><surname>Anguelov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dumitru</forename><surname>Erhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vincent</forename><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Rabinovich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computer Vision and Pattern Recognition (CVPR</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Recurrent neural network regularization</title>
+		<author>
+			<persName><forename type="first">Wojciech</forename><surname>Zaremba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1409.2329</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Describing videos by exploiting temporal structure</title>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Atousa</forename><surname>Torabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Ballas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Pal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hugo</forename><surname>Larochelle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Courville</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE International Conference on</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+	<note>Computer Vision (ICCV)</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Virtualizing Deep Neural Networks for Memory-Efficient Neural Network Design</title>
+		<author>
+			<persName><forename type="first">Minsoo</forename><surname>Rhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Natalia</forename><surname>Gimelshein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Clemons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arslan</forename><surname>Zulfiqar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><forename type="middle">W</forename><surname>Keckler</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1602.08124</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Training deep nets with sublinear memory cost</title>
+		<author>
+			<persName><forename type="first">Tianqi</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chiyuan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlos</forename><surname>Guestrin</surname></persName>
+		</author>
+		<idno>arXiv e-prints abs/1604.06174</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m">SymPy Development Team, SymPy: Python library for symbolic mathematics</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

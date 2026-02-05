@@ -1,0 +1,95 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "causes of instability and collapse in reinforcement learning agents after policy updates",
+    "mitigating training sensitivity to learning rate in RL"
+  ],
+  "next_question": "What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in RL algorithms such as PPO and Adam?",
+  "accept": [
+    {
+      "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+      "paper_id": "1707.06347v2.tei.tei",
+      "rationale": "introduces PPO algorithm and its benefits"
+    }
+  ],
+  "reject": [
+    {
+      "chunk_id": "1707.06347v2.tei.tei_chunk-6",
+      "paper_id": "1707.06347v2.tei.tei",
+      "reason": "does not directly address causes of instability or learning rate sensitivity"
+    },
+    {
+      "chunk_id": "1412.6980v9.tei.tei_chunk-11",
+      "paper_id": "1412.6980v9.tei.tei",
+      "reason": "focuses on Adam algorithm and bias correction, not directly relevant to RL instability or learning rate sensitivity"
+    }
+  ],
+  "search_hint": "reinforcement learning, policy updates, training instability, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability",
+  "iteration": 1,
+  "accepted_chunks": [
+    {
+      "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+      "paper_id": "1707.06347v2.tei.tei"
+    }
+  ],
+  "accepted_chunk_ids": [
+    "1707.06347v2.tei.tei_chunk-1"
+  ],
+  "accepted_paper_ids": [
+    "1707.06347v2.tei.tei"
+  ],
+  "rejected_chunk_ids": [
+    "1412.6980v9.tei.tei_chunk-11",
+    "1707.06347v2.tei.tei_chunk-6"
+  ],
+  "rejected_paper_ids": [],
+  "accepted_this_round": [
+    {
+      "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+      "paper_id": "1707.06347v2.tei.tei"
+    }
+  ],
+  "rejected_this_round": [
+    {
+      "chunk_id": "1707.06347v2.tei.tei_chunk-6",
+      "paper_id": "1707.06347v2.tei.tei",
+      "reason": "does not directly address causes of instability or learning rate sensitivity"
+    },
+    {
+      "chunk_id": "1412.6980v9.tei.tei_chunk-11",
+      "paper_id": "1412.6980v9.tei.tei",
+      "reason": "focuses on Adam algorithm and bias correction, not directly relevant to RL instability or learning rate sensitivity"
+    }
+  ],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "Insufficient evidence to answer the question"
+    ],
+    "evidence_citations": []
+  },
+  "_debug": {
+    "retrieval_query": "What causes instability and collapse in reinforcement learning (RL) agents after policy updates, and how can training sensitivity to learning rate be mitigated in RL?\n\nSearch hints: reinforcement learning, policy updates, training instability, learning rate sensitivity, RL stability, policy gradient methods, Q-learning, actor-critic methods, deep reinforcement learning, hyperparameter tuning",
+    "candidates": [
+      {
+        "paper_id": "1707.06347v2.tei.tei",
+        "chunk_id": "1707.06347v2.tei.tei_chunk-6",
+        "retr_score": 0.43893772
+      },
+      {
+        "paper_id": "1707.06347v2.tei.tei",
+        "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+        "retr_score": 0.43108225
+      },
+      {
+        "paper_id": "1412.6980v9.tei.tei",
+        "chunk_id": "1412.6980v9.tei.tei_chunk-11",
+        "retr_score": 0.42918366
+      }
+    ],
+    "excluded_chunk_ids": [],
+    "excluded_paper_ids": [],
+    "raw_llm_output_first_2000_chars": "{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"causes of instability and collapse in reinforcement learning agents after policy updates\", \"mitigating training sensitivity to learning rate in RL\"],\n  \"next_question\": \"What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in RL algorithms such as PPO and Adam?\",\n  \"accept\": [{\"chunk_id\": \"1707.06347v2.tei.tei_chunk-1\", \"paper_id\": \"1707.06347v2.tei.tei\", \"rationale\": \"introduces PPO algorithm and its benefits\"}],\n  \"reject\": [{\"chunk_id\": \"1707.06347v2.tei.tei_chunk-6\", \"paper_id\": \"1707.06347v2.tei.tei\", \"reason\": \"does not directly address causes of instability or learning rate sensitivity\"}, {\"chunk_id\": \"1412.6980v9.tei.tei_chunk-11\", \"paper_id\": \"1412.6980v9.tei.tei\", \"reason\": \"focuses on Adam algorithm and bias correction, not directly relevant to RL instability or learning rate sensitivity\"}],\n  \"search_hint\": \"reinforcement learning, policy updates, training instability, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability\"\n}"
+  }
+}

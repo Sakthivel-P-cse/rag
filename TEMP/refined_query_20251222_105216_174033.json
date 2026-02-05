@@ -1,0 +1,16 @@
+{
+  "refined_question": "How can graph neural networks effectively leverage graph structure to improve node classification performance in scenarios with limited labeled nodes, without relying on additional labeling?",
+  "intent": "Understand methods to mitigate overfitting in graph neural networks for node classification tasks with scarce labels, within the domain of graph learning and semi-supervised learning (SSL), focusing on exploiting graph structure",
+  "constraints": [
+    "Limited labeled nodes",
+    "No additional labeling",
+    "Graph neural network models"
+  ],
+  "excluded_topics": [
+    "Adding more labeled nodes",
+    "Using large pre-trained or foundation models as the primary solution",
+    "Fine-tuning or transfer learning from large pre-trained/foundation models",
+    "Scaling parameter count as the main approach"
+  ],
+  "search_hint": "graph neural networks, semi-supervised learning (SSL), node classification, graph structure, limited labeled data, overfitting mitigation, transductive learning, inductive learning, graph attention networks (GAT), graph convolutional networks (GCN)"
+}

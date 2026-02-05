@@ -1,0 +1,5039 @@
+{
+  "paper_id": "9F0EAD85161D5432B8B812520FF4A9D3",
+  "title": "Relational inductive biases, deep learning, and graph networks",
+  "arxiv_id": "arXiv:1806.01261v3[cs.LG]",
+  "authors": [
+    {
+      "given": "Peter W",
+      "family": "Battaglia"
+    },
+    {
+      "given": "Jessica B",
+      "family": "Hamrick"
+    },
+    {
+      "given": "Victor",
+      "family": "Bapst"
+    },
+    {
+      "given": "Alvaro",
+      "family": "Sanchez-Gonzalez"
+    },
+    {
+      "given": "Vinicius",
+      "family": "Zambaldi"
+    },
+    {
+      "given": "Mateusz",
+      "family": "Malinowski"
+    },
+    {
+      "given": "Andrea",
+      "family": "Tacchetti"
+    },
+    {
+      "given": "David",
+      "family": "Raposo"
+    },
+    {
+      "given": "Adam",
+      "family": "Santoro"
+    },
+    {
+      "given": "Ryan",
+      "family": "Faulkner"
+    },
+    {
+      "given": "Caglar",
+      "family": "Gulcehre"
+    },
+    {
+      "given": "Francis",
+      "family": "Song"
+    },
+    {
+      "given": "Andrew",
+      "family": "Ballard"
+    },
+    {
+      "given": "Justin",
+      "family": "Gilmer"
+    },
+    {
+      "given": "George",
+      "family": "Dahl"
+    },
+    {
+      "given": "Ashish",
+      "family": "Vaswani"
+    },
+    {
+      "given": "Kelsey",
+      "family": "Allen"
+    },
+    {
+      "given": "Charles",
+      "family": "Nash"
+    },
+    {
+      "given": "Victoria",
+      "family": "Langston"
+    },
+    {
+      "given": "Chris",
+      "family": "Dyer"
+    },
+    {
+      "given": "Nicolas",
+      "family": "Heess"
+    },
+    {
+      "given": "Daan",
+      "family": "Wierstra"
+    },
+    {
+      "given": "Pushmeet",
+      "family": "Kohli"
+    },
+    {
+      "given": "Matt",
+      "family": "Botvinick"
+    },
+    {
+      "given": "Oriol",
+      "family": "Vinyals"
+    },
+    {
+      "given": "Yujia",
+      "family": "Li"
+    },
+    {
+      "given": "Razvan",
+      "family": "Pascanu"
+    },
+    {
+      "given": "Google",
+      "family": "Brain"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "These directions each involve rich notions of entities, relations, and combinatorial generalization, and can potentially benefit, and benefit from",
+      "container_title": "These directions each involve rich notions of entities, relations, and combinatorial generalization, and can potentially benefit, and benefit from",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ritchie",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Allamanis"
+        },
+        {
+          "given": "M",
+          "family": "Brockschmidt"
+        },
+        {
+          "given": "M",
+          "family": "Khademi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Allamanis"
+        },
+        {
+          "given": "P",
+          "family": "Chanthirasegaran"
+        },
+        {
+          "given": "P",
+          "family": "Kohli"
+        },
+        {
+          "given": "C",
+          "family": "Sutton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Psychological Review",
+      "container_title": "Psychological Review",
+      "year": "1982",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J R",
+          "family": "Anderson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Andreas"
+        },
+        {
+          "given": "D",
+          "family": "Klein"
+        },
+        {
+          "given": "S",
+          "family": "Levine"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "container_title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Andreas"
+        },
+        {
+          "given": "M",
+          "family": "Rohrbach"
+        },
+        {
+          "given": "T",
+          "family": "Darrell"
+        },
+        {
+          "given": "D",
+          "family": "Klein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Layer normalization",
+      "container_title": "Layer normalization",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1607.06450"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J L",
+          "family": "Ba"
+        },
+        {
+          "given": "J R",
+          "family": "Kiros"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Battaglia"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "M",
+          "family": "Lai"
+        },
+        {
+          "given": "D J",
+          "family": "Rezende"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Proceedings of the National Academy of Sciences",
+      "container_title": "Proceedings of the National Academy of Sciences",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P W",
+          "family": "Battaglia"
+        },
+        {
+          "given": "J B",
+          "family": "Hamrick"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Neural combinatorial optimization with reinforcement learning",
+      "container_title": "Neural combinatorial optimization with reinforcement learning",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1611.09940"
+        }
+      ],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Bello"
+        },
+        {
+          "given": "H",
+          "family": "Pham"
+        },
+        {
+          "given": "Q V",
+          "family": "Le"
+        },
+        {
+          "given": "M",
+          "family": "Norouzi"
+        },
+        {
+          "given": "S",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Essex, UK. Special Issue 1-2: On Connectionist Symbol Processing",
+      "container_title": "Essex, UK. Special Issue 1-2: On Connectionist Symbol Processing",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D G",
+          "family": "Bobrow"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Netgan: Generating graphs via random walks",
+      "container_title": "Netgan: Generating graphs via random walks",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1803.00816"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Bojchevski"
+        },
+        {
+          "given": "O",
+          "family": "Shchur"
+        },
+        {
+          "given": "D",
+          "family": "Zügner"
+        },
+        {
+          "given": "S",
+          "family": "Günnemann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Bordes"
+        },
+        {
+          "given": "N",
+          "family": "Usunier"
+        },
+        {
+          "given": "A",
+          "family": "Garcia-Duran"
+        },
+        {
+          "given": "J",
+          "family": "Weston"
+        },
+        {
+          "given": "O",
+          "family": "Yakhnenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Trends in Cognitive Sciences",
+      "container_title": "Trends in Cognitive Sciences",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M M",
+          "family": "Botvinick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "IEEE Signal Processing Magazine",
+      "container_title": "IEEE Signal Processing Magazine",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M M",
+          "family": "Bronstein"
+        },
+        {
+          "given": "J",
+          "family": "Bruna"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "A",
+          "family": "Szlam"
+        },
+        {
+          "given": "P",
+          "family": "Vandergheynst"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Bruna"
+        },
+        {
+          "given": "W",
+          "family": "Zaremba"
+        },
+        {
+          "given": "A",
+          "family": "Szlam"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M B",
+          "family": "Chang"
+        },
+        {
+          "given": "T",
+          "family": "Ullman"
+        },
+        {
+          "given": "A",
+          "family": "Torralba"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "container_title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "L",
+          "family": "Li"
+        },
+        {
+          "given": "L",
+          "family": "Fei-Fei"
+        },
+        {
+          "given": "A",
+          "family": "Gupta"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Workshops of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Workshops of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "C",
+          "family": "Liu"
+        },
+        {
+          "given": "D",
+          "family": "Song"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Proceeding of the Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceeding of the Conference on Empirical Methods in Natural Language Processing",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "B",
+          "family": "Van Merriënboer"
+        },
+        {
+          "given": "C",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "F",
+          "family": "Bougares"
+        },
+        {
+          "given": "H",
+          "family": "Schwenk"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Syntactic Structures",
+      "container_title": "Syntactic Structures",
+      "year": "1957",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Chomsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Aspects of the Theory of Syntax",
+      "container_title": "Aspects of the Theory of Syntax",
+      "year": "1965",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Chomsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "International Conference on Machine Learning",
+      "container_title": "International Conference on Machine Learning",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Cohen"
+        },
+        {
+          "given": "M",
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "The Nature of Explanation",
+      "container_title": "The Nature of Explanation",
+      "year": "1943",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K J W",
+          "family": "Craik"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "High-order graph convolutional recurrent neural network: A deep learning framework for network-scale traffic learning and forecasting",
+      "container_title": "High-order graph convolutional recurrent neural network: A deep learning framework for network-scale traffic learning and forecasting",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1802.07007"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Cui"
+        },
+        {
+          "given": "K",
+          "family": "Henrickson"
+        },
+        {
+          "given": "R",
+          "family": "Ke"
+        },
+        {
+          "given": "Y",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Dai"
+        },
+        {
+          "given": "B",
+          "family": "Dai"
+        },
+        {
+          "given": "L",
+          "family": "Song"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Dai"
+        },
+        {
+          "given": "E B",
+          "family": "Khalil"
+        },
+        {
+          "given": "Y",
+          "family": "Zhang"
+        },
+        {
+          "given": "B",
+          "family": "Dilkina"
+        },
+        {
+          "given": "L",
+          "family": "Song"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "MolGAN: An implicit generative model for small molecular graphs",
+      "container_title": "MolGAN: An implicit generative model for small molecular graphs",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1805.11973"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "De Cao"
+        },
+        {
+          "given": "T",
+          "family": "Kipf"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Defferrard"
+        },
+        {
+          "given": "X",
+          "family": "Bresson"
+        },
+        {
+          "given": "P",
+          "family": "Vandergheynst"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "",
+      "container_title": "",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1706.06383"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Denil"
+        },
+        {
+          "given": "S G",
+          "family": "Colmenarejo"
+        },
+        {
+          "given": "S",
+          "family": "Cabi"
+        },
+        {
+          "given": "D",
+          "family": "Saxton"
+        },
+        {
+          "given": "N",
+          "family": "Freitas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Semantic code repair using neuro-symbolic transformation networks",
+      "container_title": "Semantic code repair using neuro-symbolic transformation networks",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1710.11054"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Devlin"
+        },
+        {
+          "given": "J",
+          "family": "Uesato"
+        },
+        {
+          "given": "R",
+          "family": "Singh"
+        },
+        {
+          "given": "P",
+          "family": "Kohli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D K",
+          "family": "Duvenaud"
+        },
+        {
+          "given": "D",
+          "family": "Maclaurin"
+        },
+        {
+          "given": "J",
+          "family": "Iparraguirre"
+        },
+        {
+          "given": "R",
+          "family": "Bombarell"
+        },
+        {
+          "given": "T",
+          "family": "Hirzel"
+        },
+        {
+          "given": "A",
+          "family": "Aspuru-Guzik"
+        },
+        {
+          "given": "R P",
+          "family": "Adams"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Proceedings of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "container_title": "Proceedings of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Dyer"
+        },
+        {
+          "given": "M",
+          "family": "Ballesteros"
+        },
+        {
+          "given": "W",
+          "family": "Ling"
+        },
+        {
+          "given": "A",
+          "family": "Matthews"
+        },
+        {
+          "given": "N A",
+          "family": "Smith"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Machine Learning",
+      "container_title": "Machine Learning",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Džeroski"
+        },
+        {
+          "given": "L",
+          "family": "De Raedt"
+        },
+        {
+          "given": "K",
+          "family": "Driessens"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Towards a neural statistician",
+      "container_title": "Towards a neural statistician",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1606.02185"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Edwards"
+        },
+        {
+          "given": "A",
+          "family": "Storkey"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "How to build a brain: A neural architecture for biological cognition",
+      "container_title": "How to build a brain: A neural architecture for biological cognition",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Eliasmith"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "Cognitive Science",
+      "container_title": "Cognitive Science",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J L",
+          "family": "Elman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Machine Learning",
+      "container_title": "Machine Learning",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J L",
+          "family": "Elman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S A",
+          "family": "Eslami"
+        },
+        {
+          "given": "N",
+          "family": "Heess"
+        },
+        {
+          "given": "T",
+          "family": "Weber"
+        },
+        {
+          "given": "Y",
+          "family": "Tassa"
+        },
+        {
+          "given": "D",
+          "family": "Szepesvari"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "Journal of Artificial Intelligence Research",
+      "container_title": "Journal of Artificial Intelligence Research",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Evans"
+        },
+        {
+          "given": "E",
+          "family": "Grefenstette"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Evans"
+        },
+        {
+          "given": "D",
+          "family": "Saxton"
+        },
+        {
+          "given": "D",
+          "family": "Amos"
+        },
+        {
+          "given": "P",
+          "family": "Kohli"
+        },
+        {
+          "given": "E",
+          "family": "Grefenstette"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Farquhar"
+        },
+        {
+          "given": "T",
+          "family": "Rocktäschel"
+        },
+        {
+          "given": "M",
+          "family": "Igl"
+        },
+        {
+          "given": "S",
+          "family": "Whiteson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "Model-agnostic meta-learning for fast adaptation of deep networks",
+      "container_title": "Model-agnostic meta-learning for fast adaptation of deep networks",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1703.03400"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Finn"
+        },
+        {
+          "given": "P",
+          "family": "Abbeel"
+        },
+        {
+          "given": "S",
+          "family": "Levine"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "The Language of Thought",
+      "container_title": "The Language of Thought",
+      "year": "1975",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J A",
+          "family": "Fodor"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "Cognition",
+      "container_title": "Cognition",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J A",
+          "family": "Fodor"
+        },
+        {
+          "given": "Z W",
+          "family": "Pylyshyn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Foerster"
+        },
+        {
+          "given": "I A",
+          "family": "Assael"
+        },
+        {
+          "given": "N",
+          "family": "De Freitas"
+        },
+        {
+          "given": "S",
+          "family": "Whiteson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "Biological Cybernetics",
+      "container_title": "Biological Cybernetics",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Fukushima"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Garcia"
+        },
+        {
+          "given": "J",
+          "family": "Bruna"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "Learning graph representations with embedding propagation",
+      "container_title": "Learning graph representations with embedding propagation",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1710.03059"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "García-Durán"
+        },
+        {
+          "given": "M",
+          "family": "Niepert"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b50",
+      "title": "Towards deep symbolic reinforcement learning",
+      "container_title": "Towards deep symbolic reinforcement learning",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1609.05518"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Garnelo"
+        },
+        {
+          "given": "K",
+          "family": "Arulkumaran"
+        },
+        {
+          "given": "M",
+          "family": "Shanahan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b51",
+      "title": "Differentiable programs with neural libraries",
+      "container_title": "Differentiable programs with neural libraries",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1611.02109"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A L",
+          "family": "Gaunt"
+        },
+        {
+          "given": "M",
+          "family": "Brockschmidt"
+        },
+        {
+          "given": "N",
+          "family": "Kushman"
+        },
+        {
+          "given": "D",
+          "family": "Tarlow"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b52",
+      "title": "Neural networks and the bias/variance dilemma",
+      "container_title": "Neural networks and the bias/variance dilemma",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Geman"
+        },
+        {
+          "given": "E",
+          "family": "Bienenstock"
+        },
+        {
+          "given": "R",
+          "family": "Doursat"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b53",
+      "title": "American Psychologist",
+      "container_title": "American Psychologist",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Gentner"
+        },
+        {
+          "given": "A B",
+          "family": "Markman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b54",
+      "title": "Introduction to Statistical Relational Learning",
+      "container_title": "Introduction to Statistical Relational Learning",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Getoor"
+        },
+        {
+          "given": "B",
+          "family": "Taskar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b55",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Ghahramani"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b56",
+      "title": "Neural message passing for quantum chemistry",
+      "container_title": "Neural message passing for quantum chemistry",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1704.01212"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Gilmer"
+        },
+        {
+          "given": "S S",
+          "family": "Schoenholz"
+        },
+        {
+          "given": "P F",
+          "family": "Riley"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "G E",
+          "family": "Dahl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b57",
+      "title": "Deep Learning",
+      "container_title": "Deep Learning",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "A",
+          "family": "Courville"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b58",
+      "title": "Fact, Fiction, and Forecast",
+      "container_title": "Fact, Fiction, and Forecast",
+      "year": "1955",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Goodman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b59",
+      "title": "Church: a language for generative models",
+      "container_title": "Church: a language for generative models",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1206.3255"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Goodman"
+        },
+        {
+          "given": "V",
+          "family": "Mansinghka"
+        },
+        {
+          "given": "D M",
+          "family": "Roy"
+        },
+        {
+          "given": "K",
+          "family": "Bonawitz"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b60",
+      "title": "The Conceptual Mind: New Directions in the Study of Concepts",
+      "container_title": "The Conceptual Mind: New Directions in the Study of Concepts",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N D",
+          "family": "Goodman"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        },
+        {
+          "given": "T",
+          "family": "Gerstenberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b61",
+      "title": "Reasoning about relations",
+      "container_title": "Reasoning about relations",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G P",
+          "family": "Goodwin"
+        },
+        {
+          "given": "P",
+          "family": "Johnson-Laird"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b62",
+      "title": "Proceedings of the International Joint Conference on Neural Networks (IJCNN)",
+      "container_title": "Proceedings of the International Joint Conference on Neural Networks (IJCNN)",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Gori"
+        },
+        {
+          "given": "G",
+          "family": "Monfardini"
+        },
+        {
+          "given": "F",
+          "family": "Scarselli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b63",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "G",
+          "family": "Wayne"
+        },
+        {
+          "given": "M",
+          "family": "Reynolds"
+        },
+        {
+          "given": "T",
+          "family": "Harley"
+        },
+        {
+          "given": "I",
+          "family": "Danihelka"
+        },
+        {
+          "given": "A",
+          "family": "Grabska-Barwińska"
+        },
+        {
+          "given": "S G",
+          "family": "Colmenarejo"
+        },
+        {
+          "given": "E",
+          "family": "Grefenstette"
+        },
+        {
+          "given": "T",
+          "family": "Ramalho"
+        },
+        {
+          "given": "J",
+          "family": "Agapiou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b64",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Grefenstette"
+        },
+        {
+          "given": "K M",
+          "family": "Hermann"
+        },
+        {
+          "given": "M",
+          "family": "Suleyman"
+        },
+        {
+          "given": "P",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b65",
+      "title": "Trends in Cognitive Sciences",
+      "container_title": "Trends in Cognitive Sciences",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T L",
+          "family": "Griffiths"
+        },
+        {
+          "given": "N",
+          "family": "Chater"
+        },
+        {
+          "given": "C",
+          "family": "Kemp"
+        },
+        {
+          "given": "A",
+          "family": "Perfors"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b66",
+      "title": "Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "container_title": "Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Grover"
+        },
+        {
+          "given": "J",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b67",
+      "title": "Learning to search with MCTSnets",
+      "container_title": "Learning to search with MCTSnets",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1802.04697"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Guez"
+        },
+        {
+          "given": "T",
+          "family": "Weber"
+        },
+        {
+          "given": "I",
+          "family": "Antonoglou"
+        },
+        {
+          "given": "K",
+          "family": "Simonyan"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "D",
+          "family": "Wierstra"
+        },
+        {
+          "given": "R",
+          "family": "Munos"
+        },
+        {
+          "given": "D",
+          "family": "Silver"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b68",
+      "title": "Hyperbolic attention networks",
+      "container_title": "Hyperbolic attention networks",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1805.09786"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "M",
+          "family": "Denil"
+        },
+        {
+          "given": "M",
+          "family": "Malinowski"
+        },
+        {
+          "given": "A",
+          "family": "Razavi"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "K M",
+          "family": "Hermann"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        },
+        {
+          "given": "V",
+          "family": "Bapst"
+        },
+        {
+          "given": "D",
+          "family": "Raposo"
+        },
+        {
+          "given": "A",
+          "family": "Santoro"
+        },
+        {
+          "given": "N",
+          "family": "Freitas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b69",
+      "title": "Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)",
+      "container_title": "Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Hamaguchi"
+        },
+        {
+          "given": "H",
+          "family": "Oiwa"
+        },
+        {
+          "given": "M",
+          "family": "Shimbo"
+        },
+        {
+          "given": "Y",
+          "family": "Matsumoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b70",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Hamilton"
+        },
+        {
+          "given": "Z",
+          "family": "Ying"
+        },
+        {
+          "given": "J",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b71",
+      "title": "Proceedings of the 40th Annual Conference of the Cognitive Science Society",
+      "container_title": "Proceedings of the 40th Annual Conference of the Cognitive Science Society",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Hamrick"
+        },
+        {
+          "given": "K",
+          "family": "Allen"
+        },
+        {
+          "given": "V",
+          "family": "Bapst"
+        },
+        {
+          "given": "T",
+          "family": "Zhu"
+        },
+        {
+          "given": "K",
+          "family": "Mckee"
+        },
+        {
+          "given": "J",
+          "family": "Tenenbaum"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b72",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J B",
+          "family": "Hamrick"
+        },
+        {
+          "given": "A J",
+          "family": "Ballard"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "N",
+          "family": "Heess"
+        },
+        {
+          "given": "P W",
+          "family": "Battaglia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b73",
+      "title": "Deep models of interactions across sets",
+      "container_title": "Deep models of interactions across sets",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1803.02879"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Hartford"
+        },
+        {
+          "given": "D R",
+          "family": "Graham"
+        },
+        {
+          "given": "K",
+          "family": "Leyton-Brown"
+        },
+        {
+          "given": "S",
+          "family": "Ravanbakhsh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b74",
+      "title": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
+      "container_title": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Hay"
+        },
+        {
+          "given": "M",
+          "family": "Stark"
+        },
+        {
+          "given": "A",
+          "family": "Schlegel"
+        },
+        {
+          "given": "C",
+          "family": "Wendelken"
+        },
+        {
+          "given": "D",
+          "family": "Park"
+        },
+        {
+          "given": "E",
+          "family": "Purdy"
+        },
+        {
+          "given": "T",
+          "family": "Silver"
+        },
+        {
+          "given": "D S",
+          "family": "Phoenix"
+        },
+        {
+          "given": "D",
+          "family": "George"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b75",
+      "title": "Deep convolutional networks on graph-structured data",
+      "container_title": "Deep convolutional networks on graph-structured data",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1506.05163"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Henaff"
+        },
+        {
+          "given": "J",
+          "family": "Bruna"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b76",
+      "title": "Artificial Intelligence",
+      "container_title": "Artificial Intelligence",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b77",
+      "title": "Bayesian Nonparametrics",
+      "container_title": "Bayesian Nonparametrics",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N L",
+          "family": "Hjort"
+        },
+        {
+          "given": "C",
+          "family": "Holmes"
+        },
+        {
+          "given": "P",
+          "family": "Müller"
+        },
+        {
+          "given": "S G",
+          "family": "Walker"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b78",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Hoshen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b79",
+      "title": "Relation networks for object detection",
+      "container_title": "Relation networks for object detection",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1711.11575"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Hu"
+        },
+        {
+          "given": "J",
+          "family": "Gu"
+        },
+        {
+          "given": "Z",
+          "family": "Zhang"
+        },
+        {
+          "given": "J",
+          "family": "Dai"
+        },
+        {
+          "given": "Y",
+          "family": "Wei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b80",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D A",
+          "family": "Hudson"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b81",
+      "title": "On Language: On the diversity of human language construction and its influence on the mental development of the human species",
+      "container_title": "On Language: On the diversity of human language construction and its influence on the mental development of the human species",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Humboldt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b82",
+      "title": "Psychological Review",
+      "container_title": "Psychological Review",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J E",
+          "family": "Hummel"
+        },
+        {
+          "given": "K J",
+          "family": "Holyoak"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b83",
+      "title": "Proceedings of the 32nd International Conference on International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the 32nd International Conference on International Conference on Machine Learning (ICML)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Ioffe"
+        },
+        {
+          "given": "C",
+          "family": "Szegedy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b84",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D D",
+          "family": "Johnson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b85",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Joulin"
+        },
+        {
+          "given": "T",
+          "family": "Mikolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b86",
+      "title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Kansky"
+        },
+        {
+          "given": "T",
+          "family": "Silver"
+        },
+        {
+          "given": "D A",
+          "family": "Mély"
+        },
+        {
+          "given": "M",
+          "family": "Eldawy"
+        },
+        {
+          "given": "M",
+          "family": "Lázaro-Gredilla"
+        },
+        {
+          "given": "X",
+          "family": "Lou"
+        },
+        {
+          "given": "N",
+          "family": "Dorfman"
+        },
+        {
+          "given": "S",
+          "family": "Sidor"
+        },
+        {
+          "given": "S",
+          "family": "Phoenix"
+        },
+        {
+          "given": "D",
+          "family": "George"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b87",
+      "title": "Journal of computer-aided molecular design",
+      "container_title": "Journal of computer-aided molecular design",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Kearnes"
+        },
+        {
+          "given": "K",
+          "family": "Mccloskey"
+        },
+        {
+          "given": "M",
+          "family": "Berndl"
+        },
+        {
+          "given": "V",
+          "family": "Pande"
+        },
+        {
+          "given": "P",
+          "family": "Riley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b88",
+      "title": "Proceedings of the National Academy of Sciences",
+      "container_title": "Proceedings of the National Academy of Sciences",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Kemp"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b89",
+      "title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Kipf"
+        },
+        {
+          "given": "E",
+          "family": "Fetaya"
+        },
+        {
+          "given": "K.-C",
+          "family": "Wang"
+        },
+        {
+          "given": "M",
+          "family": "Welling"
+        },
+        {
+          "given": "R",
+          "family": "Zemel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b90",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T N",
+          "family": "Kipf"
+        },
+        {
+          "given": "M",
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b91",
+      "title": "Probabilistic Graphical Models: Principles and Techniques",
+      "container_title": "Probabilistic Graphical Models: Principles and Techniques",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Koller"
+        },
+        {
+          "given": "N",
+          "family": "Friedman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b92",
+      "title": "Covariant compositional networks for learning graphs",
+      "container_title": "Covariant compositional networks for learning graphs",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1801.02144"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Kondor"
+        },
+        {
+          "given": "H T",
+          "family": "Son"
+        },
+        {
+          "given": "H",
+          "family": "Pan"
+        },
+        {
+          "given": "B",
+          "family": "Anderson"
+        },
+        {
+          "given": "S",
+          "family": "Trivedi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b93",
+      "title": "On the generalization of equivariance and convolution in neural networks to the action of compact groups",
+      "container_title": "On the generalization of equivariance and convolution in neural networks to the action of compact groups",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1802.03690"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Kondor"
+        },
+        {
+          "given": "S",
+          "family": "Trivedi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b94",
+      "title": "Journal of Artificial Intelligence Research",
+      "container_title": "Journal of Artificial Intelligence Research",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Konidaris"
+        },
+        {
+          "given": "L P",
+          "family": "Kaelbling"
+        },
+        {
+          "given": "T",
+          "family": "Lozano-Perez"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b95",
+      "title": "Attention solves your TSP",
+      "container_title": "Attention solves your TSP",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1803.08475"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Kool"
+        },
+        {
+          "given": "M",
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b96",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b97",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Kurach"
+        },
+        {
+          "given": "M",
+          "family": "Andrychowicz"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b98",
+      "title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B M",
+          "family": "Lake"
+        },
+        {
+          "given": "M",
+          "family": "Baroni"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b99",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B M",
+          "family": "Lake"
+        },
+        {
+          "given": "R",
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b100",
+      "title": "Behavioral and Brain Sciences",
+      "container_title": "Behavioral and Brain Sciences",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B M",
+          "family": "Lake"
+        },
+        {
+          "given": "T D",
+          "family": "Ullman"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        },
+        {
+          "given": "S J",
+          "family": "Gershman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b101",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b102",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "B",
+          "family": "Boser"
+        },
+        {
+          "given": "J S",
+          "family": "Denker"
+        },
+        {
+          "given": "D",
+          "family": "Henderson"
+        },
+        {
+          "given": "R E",
+          "family": "Howard"
+        },
+        {
+          "given": "W",
+          "family": "Hubbard"
+        },
+        {
+          "given": "L D",
+          "family": "Jackel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b103",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "D",
+          "family": "Tarlow"
+        },
+        {
+          "given": "M",
+          "family": "Brockschmidt"
+        },
+        {
+          "given": "R",
+          "family": "Zemel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b104",
+      "title": "Workshops at the International Conference on Learning Representations (ICLR)",
+      "container_title": "Workshops at the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "C",
+          "family": "Dyer"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b105",
+      "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+      "container_title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1707.01926"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "R",
+          "family": "Yu"
+        },
+        {
+          "given": "C",
+          "family": "Shahabi"
+        },
+        {
+          "given": "Y",
+          "family": "Liu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b106",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Lin"
+        },
+        {
+          "given": "M",
+          "family": "Feng"
+        },
+        {
+          "given": "C N D",
+          "family": "Santos"
+        },
+        {
+          "given": "M",
+          "family": "Yu"
+        },
+        {
+          "given": "B",
+          "family": "Xiang"
+        },
+        {
+          "given": "B",
+          "family": "Zhou"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b107",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Liu"
+        },
+        {
+          "given": "K",
+          "family": "Simonyan"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "C",
+          "family": "Fernando"
+        },
+        {
+          "given": "K",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b108",
+      "title": "Effective approaches to attention-based neural machine translation",
+      "container_title": "Effective approaches to attention-based neural machine translation",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1508.04025"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M.-T",
+          "family": "Luong"
+        },
+        {
+          "given": "H",
+          "family": "Pham"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b109",
+      "title": "The algebraic mind",
+      "container_title": "The algebraic mind",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Marcus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b110",
+      "title": "Innateness, alphazero, and artificial intelligence",
+      "container_title": "Innateness, alphazero, and artificial intelligence",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1801.00631"
+        },
+        {
+          "type": "other",
+          "value": "arXiv:1801.05667"
+        }
+      ],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Marcus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b111",
+      "title": "International perspectives on psychological science",
+      "container_title": "International perspectives on psychological science",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J L",
+          "family": "Mcclelland"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b112",
+      "title": "Psychological Review",
+      "container_title": "Psychological Review",
+      "year": "1981",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J L",
+          "family": "Mcclelland"
+        },
+        {
+          "given": "D E",
+          "family": "Rumelhart"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b113",
+      "title": "Proceedings of the 2013 Conference of the North American Chapter",
+      "container_title": "Proceedings of the 2013 Conference of the North American Chapter",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Mikolov"
+        },
+        {
+          "given": "W.-T",
+          "family": "Yih"
+        },
+        {
+          "given": "G",
+          "family": "Zweig"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b114",
+      "title": "The need for biases in learning generalizations",
+      "container_title": "The need for biases in learning generalizations",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T M",
+          "family": "Mitchell"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b115",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Mnih"
+        },
+        {
+          "given": "N",
+          "family": "Heess"
+        },
+        {
+          "given": "A",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b116",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Mnih"
+        },
+        {
+          "given": "K",
+          "family": "Kavukcuoglu"
+        },
+        {
+          "given": "D",
+          "family": "Silver"
+        },
+        {
+          "given": "A A",
+          "family": "Rusu"
+        },
+        {
+          "given": "J",
+          "family": "Veness"
+        },
+        {
+          "given": "M G",
+          "family": "Bellemare"
+        },
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "M",
+          "family": "Riedmiller"
+        },
+        {
+          "given": "A K",
+          "family": "Fidjeland"
+        },
+        {
+          "given": "G",
+          "family": "Ostrovski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b117",
+      "title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "container_title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Monti"
+        },
+        {
+          "given": "D",
+          "family": "Boscaini"
+        },
+        {
+          "given": "J",
+          "family": "Masci"
+        },
+        {
+          "given": "E",
+          "family": "Rodola"
+        },
+        {
+          "given": "J",
+          "family": "Svoboda"
+        },
+        {
+          "given": "M M",
+          "family": "Bronstein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b118",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Moravčík"
+        },
+        {
+          "given": "M",
+          "family": "Schmid"
+        },
+        {
+          "given": "N",
+          "family": "Burch"
+        },
+        {
+          "given": "V",
+          "family": "Lisỳ"
+        },
+        {
+          "given": "D",
+          "family": "Morrill"
+        },
+        {
+          "given": "N",
+          "family": "Bard"
+        },
+        {
+          "given": "T",
+          "family": "Davis"
+        },
+        {
+          "given": "K",
+          "family": "Waugh"
+        },
+        {
+          "given": "M",
+          "family": "Johanson"
+        },
+        {
+          "given": "M",
+          "family": "Bowling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b119",
+      "title": "Workshops at the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "container_title": "Workshops at the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Narayanan"
+        },
+        {
+          "given": "M",
+          "family": "Chandramohan"
+        },
+        {
+          "given": "L",
+          "family": "Chen"
+        },
+        {
+          "given": "Y",
+          "family": "Liu"
+        },
+        {
+          "given": "S",
+          "family": "Saminathan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b120",
+      "title": "graph2vec: Learning distributed representations of graphs",
+      "container_title": "graph2vec: Learning distributed representations of graphs",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1707.05005"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Narayanan"
+        },
+        {
+          "given": "M",
+          "family": "Chandramohan"
+        },
+        {
+          "given": "R",
+          "family": "Venkatesan"
+        },
+        {
+          "given": "L",
+          "family": "Chen"
+        },
+        {
+          "given": "Y",
+          "family": "Liu"
+        },
+        {
+          "given": "S",
+          "family": "Jaiswal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b121",
+      "title": "Cognitive Psychology",
+      "container_title": "Cognitive Psychology",
+      "year": "1977",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Navon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b122",
+      "title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the International Conference on Machine Learning (ICML)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Niepert"
+        },
+        {
+          "given": "M",
+          "family": "Ahmed"
+        },
+        {
+          "given": "K",
+          "family": "Kutzkov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b123",
+      "title": "Strips: A new approach to the application of theorem proving to problem solving",
+      "container_title": "Strips: A new approach to the application of theorem proving to problem solving",
+      "year": "1970",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N J",
+          "family": "Nilsson"
+        },
+        {
+          "given": "R E",
+          "family": "Fikes"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b124",
+      "title": "Proceedings of the Principled Approaches to Deep Learning Workshop (PADL) at the International Conference of Machine Learning (ICML)",
+      "container_title": "Proceedings of the Principled Approaches to Deep Learning Workshop (PADL) at the International Conference of Machine Learning (ICML)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Nowak"
+        },
+        {
+          "given": "S",
+          "family": "Villar"
+        },
+        {
+          "given": "A S",
+          "family": "Bandeira"
+        },
+        {
+          "given": "J",
+          "family": "Bruna"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b125",
+      "title": "science",
+      "container_title": "science",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M A",
+          "family": "Nowak"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b126",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Ohtsuki"
+        },
+        {
+          "given": "C",
+          "family": "Hauert"
+        },
+        {
+          "given": "E",
+          "family": "Lieberman"
+        },
+        {
+          "given": "M A",
+          "family": "Nowak"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b127",
+      "title": "Representation learning for visual-relational knowledge graphs",
+      "container_title": "Representation learning for visual-relational knowledge graphs",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1709.02314"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Oñoro-Rubio"
+        },
+        {
+          "given": "M",
+          "family": "Niepert"
+        },
+        {
+          "given": "A",
+          "family": "García-Durán"
+        },
+        {
+          "given": "R",
+          "family": "González-Sánchez"
+        },
+        {
+          "given": "R J",
+          "family": "López-Sastre"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b128",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Parisotto"
+        },
+        {
+          "given": "A.-R",
+          "family": "Mohamed"
+        },
+        {
+          "given": "R",
+          "family": "Singh"
+        },
+        {
+          "given": "L",
+          "family": "Li"
+        },
+        {
+          "given": "D",
+          "family": "Zhou"
+        },
+        {
+          "given": "P",
+          "family": "Kohli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b129",
+      "title": "Learning model-based planning from scratch",
+      "container_title": "Learning model-based planning from scratch",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1707.06170"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "N",
+          "family": "Heess"
+        },
+        {
+          "given": "L",
+          "family": "Buesing"
+        },
+        {
+          "given": "S",
+          "family": "Racanière"
+        },
+        {
+          "given": "D",
+          "family": "Reichert"
+        },
+        {
+          "given": "T",
+          "family": "Weber"
+        },
+        {
+          "given": "D",
+          "family": "Wierstra"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b130",
+      "title": "Artificial intelligence",
+      "container_title": "Artificial intelligence",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Pearl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b131",
+      "title": "Probabilistic reasoning in intelligent systems: Networks of plausible inference",
+      "container_title": "Probabilistic reasoning in intelligent systems: Networks of plausible inference",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Pearl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b132",
+      "title": "Causality: Models, Reasoning and Inference",
+      "container_title": "Causality: Models, Reasoning and Inference",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Pearl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b133",
+      "title": "Theoretical impediments to machine learning with seven sparks from the causal revolution",
+      "container_title": "Theoretical impediments to machine learning with seven sparks from the causal revolution",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1801.04016"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Pearl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b134",
+      "title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Pennington"
+        },
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "C",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b135",
+      "title": "Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "container_title": "Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Perozzi"
+        },
+        {
+          "given": "R",
+          "family": "Al-Rfou"
+        },
+        {
+          "given": "S",
+          "family": "Skiena"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b136",
+      "title": "International Symposium on Neural Networks",
+      "container_title": "International Symposium on Neural Networks",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Pevnỳ"
+        },
+        {
+          "given": "P",
+          "family": "Somol"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b137",
+      "title": "Cognition",
+      "container_title": "Cognition",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Pinker"
+        },
+        {
+          "given": "A",
+          "family": "Prince"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b138",
+      "title": "IEEE Transactions on Neural Networks",
+      "container_title": "IEEE Transactions on Neural Networks",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T A",
+          "family": "Plate"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b139",
+      "title": "Psychological Review",
+      "container_title": "Psychological Review",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D C",
+          "family": "Plaut"
+        },
+        {
+          "given": "J L",
+          "family": "Mcclelland"
+        },
+        {
+          "given": "M S",
+          "family": "Seidenberg"
+        },
+        {
+          "given": "K",
+          "family": "Patterson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b140",
+      "title": "Artificial Intelligence",
+      "container_title": "Artificial Intelligence",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J B",
+          "family": "Pollack"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b141",
+      "title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "container_title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C R",
+          "family": "Qi"
+        },
+        {
+          "given": "H",
+          "family": "Su"
+        },
+        {
+          "given": "K",
+          "family": "Mo"
+        },
+        {
+          "given": "L J",
+          "family": "Guibas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b142",
+      "title": "Workshops at the International Conference on Learning Representations (ICLR)",
+      "container_title": "Workshops at the International Conference on Learning Representations (ICLR)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Raposo"
+        },
+        {
+          "given": "A",
+          "family": "Santoro"
+        },
+        {
+          "given": "D",
+          "family": "Barrett"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "T",
+          "family": "Lillicrap"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b143",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Reed"
+        },
+        {
+          "given": "N",
+          "family": "De Freitas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b144",
+      "title": "Deep amortized inference for probabilistic programs",
+      "container_title": "Deep amortized inference for probabilistic programs",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1610.05735"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Ritchie"
+        },
+        {
+          "given": "P",
+          "family": "Horsfall"
+        },
+        {
+          "given": "N D",
+          "family": "Goodman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b145",
+      "title": "Principles of neurodynamics. perceptrons and the theory of brain mechanisms",
+      "container_title": "Principles of neurodynamics. perceptrons and the theory of brain mechanisms",
+      "year": "1961",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Rosenblatt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b146",
+      "title": "Parallel Distributed Processing",
+      "container_title": "Parallel Distributed Processing",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D E",
+          "family": "Rumelhart"
+        },
+        {
+          "given": "J L",
+          "family": "Mcclelland"
+        },
+        {
+          "given": "P R",
+          "family": "Group"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b147",
+      "title": "Artificial Intelligence: A Modern Approach",
+      "container_title": "Artificial Intelligence: A Modern Approach",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S J",
+          "family": "Russell"
+        },
+        {
+          "given": "P",
+          "family": "Norvig"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b148",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Sabour"
+        },
+        {
+          "given": "N",
+          "family": "Frosst"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b149",
+      "title": "Proceedings of the 35th International Conference on Machine Learning (ICLR)",
+      "container_title": "Proceedings of the 35th International Conference on Machine Learning (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Sanchez-Gonzalez"
+        },
+        {
+          "given": "N",
+          "family": "Heess"
+        },
+        {
+          "given": "J T",
+          "family": "Springenberg"
+        },
+        {
+          "given": "J",
+          "family": "Merel"
+        },
+        {
+          "given": "M",
+          "family": "Riedmiller"
+        },
+        {
+          "given": "R",
+          "family": "Hadsell"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b150",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Santoro"
+        },
+        {
+          "given": "D",
+          "family": "Raposo"
+        },
+        {
+          "given": "D G",
+          "family": "Barrett"
+        },
+        {
+          "given": "M",
+          "family": "Malinowski"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        },
+        {
+          "given": "T",
+          "family": "Lillicrap"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b151",
+      "title": "IEEE Transactions on Neural Networks",
+      "container_title": "IEEE Transactions on Neural Networks",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Scarselli"
+        },
+        {
+          "given": "M",
+          "family": "Gori"
+        },
+        {
+          "given": "A C",
+          "family": "Tsoi"
+        },
+        {
+          "given": "M",
+          "family": "Hagenbuchner"
+        },
+        {
+          "given": "G",
+          "family": "Monfardini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b152",
+      "title": "IEEE Transactions on Neural Networks",
+      "container_title": "IEEE Transactions on Neural Networks",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Scarselli"
+        },
+        {
+          "given": "M",
+          "family": "Gori"
+        },
+        {
+          "given": "A C",
+          "family": "Tsoi"
+        },
+        {
+          "given": "M",
+          "family": "Hagenbuchner"
+        },
+        {
+          "given": "G",
+          "family": "Monfardini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b153",
+      "title": "Proceedings of the 2005 IEEE/WIC/ACM International Conference on Web Intelligence",
+      "container_title": "Proceedings of the 2005 IEEE/WIC/ACM International Conference on Web Intelligence",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Scarselli"
+        },
+        {
+          "given": "S L",
+          "family": "Yong"
+        },
+        {
+          "given": "M",
+          "family": "Gori"
+        },
+        {
+          "given": "M",
+          "family": "Hagenbuchner"
+        },
+        {
+          "given": "A C",
+          "family": "Tsoi"
+        },
+        {
+          "given": "M",
+          "family": "Maggini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b154",
+      "title": "Neural Networks",
+      "container_title": "Neural Networks",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b155",
+      "title": "Learning a sat solver from single-bit supervision",
+      "container_title": "Learning a sat solver from single-bit supervision",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1802.03685"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Selsam"
+        },
+        {
+          "given": "M",
+          "family": "Lamm"
+        },
+        {
+          "given": "B",
+          "family": "Bunz"
+        },
+        {
+          "given": "P",
+          "family": "Liang"
+        },
+        {
+          "given": "L",
+          "family": "De Moura"
+        },
+        {
+          "given": "D L",
+          "family": "Dill"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b156",
+      "title": "Failures of gradient-based deep learning",
+      "container_title": "Failures of gradient-based deep learning",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1703.07950"
+        }
+      ],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Shalev-Shwartz"
+        },
+        {
+          "given": "O",
+          "family": "Shamir"
+        },
+        {
+          "given": "S",
+          "family": "Shammah"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b157",
+      "title": "Proceedings of the 16th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+      "container_title": "Proceedings of the 16th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Shaw"
+        },
+        {
+          "given": "J",
+          "family": "Uszkoreit"
+        },
+        {
+          "given": "A",
+          "family": "Vaswani"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b158",
+      "title": "Journal of Machine Learning Research",
+      "container_title": "Journal of Machine Learning Research",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Shervashidze"
+        },
+        {
+          "given": "P",
+          "family": "Schweitzer"
+        },
+        {
+          "given": "E J V",
+          "family": "Leeuwen"
+        },
+        {
+          "given": "K",
+          "family": "Mehlhorn"
+        },
+        {
+          "given": "K M",
+          "family": "Borgwardt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b159",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Silver"
+        },
+        {
+          "given": "A",
+          "family": "Huang"
+        },
+        {
+          "given": "C J",
+          "family": "Maddison"
+        },
+        {
+          "given": "A",
+          "family": "Guez"
+        },
+        {
+          "given": "L",
+          "family": "Sifre"
+        },
+        {
+          "given": "G",
+          "family": "Van Den Driessche"
+        },
+        {
+          "given": "J",
+          "family": "Schrittwieser"
+        },
+        {
+          "given": "I",
+          "family": "Antonoglou"
+        },
+        {
+          "given": "V",
+          "family": "Panneershelvam"
+        },
+        {
+          "given": "M",
+          "family": "Lanctot"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b160",
+      "title": "Artificial Intelligence",
+      "container_title": "Artificial Intelligence",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Smolensky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b161",
+      "title": "Proceedings of the Joint Conference on Empirical Methods in Natural Language Processing (EMNLP) and Computational Natural Language Learning (CNLL)",
+      "container_title": "Proceedings of the Joint Conference on Empirical Methods in Natural Language Processing (EMNLP) and Computational Natural Language Learning (CNLL)",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "B",
+          "family": "Huval"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b162",
+      "title": "Proceedings of the 28th International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the 28th International Conference on Machine Learning (ICML)",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "C C",
+          "family": "Lin"
+        },
+        {
+          "given": "C",
+          "family": "Manning"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b163",
+      "title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "J",
+          "family": "Pennington"
+        },
+        {
+          "given": "E H",
+          "family": "Huang"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b164",
+      "title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "A",
+          "family": "Perelygin"
+        },
+        {
+          "given": "J",
+          "family": "Wu"
+        },
+        {
+          "given": "J",
+          "family": "Chuang"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        },
+        {
+          "given": "A",
+          "family": "Ng"
+        },
+        {
+          "given": "C",
+          "family": "Potts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b165",
+      "title": "Psychological review",
+      "container_title": "Psychological review",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E S",
+          "family": "Spelke"
+        },
+        {
+          "given": "K",
+          "family": "Breinlinger"
+        },
+        {
+          "given": "J",
+          "family": "Macomber"
+        },
+        {
+          "given": "K",
+          "family": "Jacobson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b166",
+      "title": "Core knowledge",
+      "container_title": "Core knowledge",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E S",
+          "family": "Spelke"
+        },
+        {
+          "given": "K D",
+          "family": "Kinzler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b167",
+      "title": "The Journal of Machine Learning Research",
+      "container_title": "The Journal of Machine Learning Research",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Srivastava"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        },
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "R",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b168",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Sukhbaatar"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b169",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Sukhbaatar"
+        },
+        {
+          "given": "J",
+          "family": "Weston"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b170",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Q V",
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b171",
+      "title": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
+      "container_title": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "S",
+          "family": "Ioffe"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "A A",
+          "family": "Alemi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b172",
+      "title": "Proceedings of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "container_title": "Proceedings of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K S",
+          "family": "Tai"
+        },
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "C D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b173",
+      "title": "Proceedings of the 24th International Conference on World Wide Web",
+      "container_title": "Proceedings of the 24th International Conference on World Wide Web",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Tang"
+        },
+        {
+          "given": "M",
+          "family": "Qu"
+        },
+        {
+          "given": "M",
+          "family": "Wang"
+        },
+        {
+          "given": "M",
+          "family": "Zhang"
+        },
+        {
+          "given": "J",
+          "family": "Yan"
+        },
+        {
+          "given": "Q",
+          "family": "Mei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b174",
+      "title": "Trends in Cognitive Sciences",
+      "container_title": "Trends in Cognitive Sciences",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        },
+        {
+          "given": "T L",
+          "family": "Griffiths"
+        },
+        {
+          "given": "C",
+          "family": "Kemp"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b175",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        },
+        {
+          "given": "C",
+          "family": "Kemp"
+        },
+        {
+          "given": "T L",
+          "family": "Griffiths"
+        },
+        {
+          "given": "N D",
+          "family": "Goodman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b176",
+      "title": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
+      "container_title": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Toyer"
+        },
+        {
+          "given": "F",
+          "family": "Trevizan"
+        },
+        {
+          "given": "S",
+          "family": "Thiebaux"
+        },
+        {
+          "given": "L",
+          "family": "Xie"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b177",
+      "title": "Trends in Cognitive Sciences",
+      "container_title": "Trends in Cognitive Sciences",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T D",
+          "family": "Ullman"
+        },
+        {
+          "given": "E",
+          "family": "Spelke"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        },
+        {
+          "given": "J B",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b178",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Van Steenkiste"
+        },
+        {
+          "given": "M",
+          "family": "Chang"
+        },
+        {
+          "given": "K",
+          "family": "Greff"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b179",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Vaswani"
+        },
+        {
+          "given": "N",
+          "family": "Shazeer"
+        },
+        {
+          "given": "N",
+          "family": "Parmar"
+        },
+        {
+          "given": "J",
+          "family": "Uszkoreit"
+        },
+        {
+          "given": "L",
+          "family": "Jones"
+        },
+        {
+          "given": "A N",
+          "family": "Gomez"
+        },
+        {
+          "given": "L",
+          "family": "Kaiser"
+        },
+        {
+          "given": "I",
+          "family": "Polosukhin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b180",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Veličković"
+        },
+        {
+          "given": "G",
+          "family": "Cucurull"
+        },
+        {
+          "given": "A",
+          "family": "Casanova"
+        },
+        {
+          "given": "A",
+          "family": "Romero"
+        },
+        {
+          "given": "P",
+          "family": "Liò"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b181",
+      "title": "Nature neuroscience",
+      "container_title": "Nature neuroscience",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J X",
+          "family": "Wang"
+        },
+        {
+          "given": "Z",
+          "family": "Kurth-Nelson"
+        },
+        {
+          "given": "D",
+          "family": "Kumaran"
+        },
+        {
+          "given": "D",
+          "family": "Tirumala"
+        },
+        {
+          "given": "H",
+          "family": "Soyer"
+        },
+        {
+          "given": "J Z",
+          "family": "Leibo"
+        },
+        {
+          "given": "D",
+          "family": "Hassabis"
+        },
+        {
+          "given": "M",
+          "family": "Botvinick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b182",
+      "title": "Learning to reinforcement learn",
+      "container_title": "Learning to reinforcement learn",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1611.05763"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J X",
+          "family": "Wang"
+        },
+        {
+          "given": "Z",
+          "family": "Kurth-Nelson"
+        },
+        {
+          "given": "D",
+          "family": "Tirumala"
+        },
+        {
+          "given": "H",
+          "family": "Soyer"
+        },
+        {
+          "given": "J Z",
+          "family": "Leibo"
+        },
+        {
+          "given": "R",
+          "family": "Munos"
+        },
+        {
+          "given": "C",
+          "family": "Blundell"
+        },
+        {
+          "given": "D",
+          "family": "Kumaran"
+        },
+        {
+          "given": "M",
+          "family": "Botvinick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b183",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Wang"
+        },
+        {
+          "given": "R",
+          "family": "Liao"
+        },
+        {
+          "given": "J",
+          "family": "Ba"
+        },
+        {
+          "given": "S",
+          "family": "Fidler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b184",
+      "title": "Proceedings of the Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "container_title": "Proceedings of the Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Wang"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        },
+        {
+          "given": "A",
+          "family": "Gupta"
+        },
+        {
+          "given": "K",
+          "family": "He"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b185",
+      "title": "Dynamic graph cnn for learning on point clouds",
+      "container_title": "Dynamic graph cnn for learning on point clouds",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1801.07829"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Wang"
+        },
+        {
+          "given": "Y",
+          "family": "Sun"
+        },
+        {
+          "given": "Z",
+          "family": "Liu"
+        },
+        {
+          "given": "S E",
+          "family": "Sarma"
+        },
+        {
+          "given": "M M",
+          "family": "Bronstein"
+        },
+        {
+          "given": "J M",
+          "family": "Solomon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b186",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Watters"
+        },
+        {
+          "given": "D",
+          "family": "Zoran"
+        },
+        {
+          "given": "T",
+          "family": "Weber"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "A",
+          "family": "Tacchetti"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b187",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Wu"
+        },
+        {
+          "given": "E",
+          "family": "Lu"
+        },
+        {
+          "given": "P",
+          "family": "Kohli"
+        },
+        {
+          "given": "B",
+          "family": "Freeman"
+        },
+        {
+          "given": "J",
+          "family": "Tenenbaum"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b188",
+      "title": "Workshops at the International Conference on Learning Representations (ICLR)",
+      "container_title": "Workshops at the International Conference on Learning Representations (ICLR)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Yoon"
+        },
+        {
+          "given": "R",
+          "family": "Liao"
+        },
+        {
+          "given": "Y",
+          "family": "Xiong"
+        },
+        {
+          "given": "L",
+          "family": "Zhang"
+        },
+        {
+          "given": "E",
+          "family": "Fetaya"
+        },
+        {
+          "given": "R",
+          "family": "Urtasun"
+        },
+        {
+          "given": "R",
+          "family": "Zemel"
+        },
+        {
+          "given": "X",
+          "family": "Pitkow"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b189",
+      "title": "GraphRNN: A deep generative model for graphs",
+      "container_title": "GraphRNN: A deep generative model for graphs",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1802.08773"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "You"
+        },
+        {
+          "given": "R",
+          "family": "Ying"
+        },
+        {
+          "given": "X",
+          "family": "Ren"
+        },
+        {
+          "given": "W L",
+          "family": "Hamilton"
+        },
+        {
+          "given": "J",
+          "family": "Leskovec"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b190",
+      "title": "Deep nets: What have they ever done for vision? arXiv preprint",
+      "container_title": "Deep nets: What have they ever done for vision? arXiv preprint",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1805.04025"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A L",
+          "family": "Yuille"
+        },
+        {
+          "given": "C",
+          "family": "Liu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b191",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Zaheer"
+        },
+        {
+          "given": "S",
+          "family": "Kottur"
+        },
+        {
+          "given": "S",
+          "family": "Ravanbakhsh"
+        },
+        {
+          "given": "B",
+          "family": "Poczos"
+        },
+        {
+          "given": "R R",
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": "A J",
+          "family": "Smola"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b192",
+      "title": "Relational deep reinforcement learning",
+      "container_title": "Relational deep reinforcement learning",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Zambaldi"
+        },
+        {
+          "given": "D",
+          "family": "Raposo"
+        },
+        {
+          "given": "A",
+          "family": "Santoro"
+        },
+        {
+          "given": "V",
+          "family": "Bapst"
+        },
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "I",
+          "family": "Babuschkin"
+        },
+        {
+          "given": "K",
+          "family": "Tuyls"
+        },
+        {
+          "given": "D",
+          "family": "Reichert"
+        },
+        {
+          "given": "T",
+          "family": "Lillicrap"
+        },
+        {
+          "given": "E",
+          "family": "Lockhart"
+        },
+        {
+          "given": "M",
+          "family": "Shanahan"
+        },
+        {
+          "given": "V",
+          "family": "Langston"
+        },
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "M",
+          "family": "Botvinick"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "P",
+          "family": "Battaglia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b193",
+      "title": "Composable planning with attributes",
+      "container_title": "Composable planning with attributes",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1803.00512"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Zhang"
+        },
+        {
+          "given": "A",
+          "family": "Lerer"
+        },
+        {
+          "given": "S",
+          "family": "Sukhbaatar"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        },
+        {
+          "given": "A",
+          "family": "Szlam"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b194",
+      "title": "Adversarial Attacks on Neural Networks for Graph Data",
+      "container_title": "Adversarial Attacks on Neural Networks for Graph Data",
+      "year": "2018",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1805.07984"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Zügner"
+        },
+        {
+          "given": "A",
+          "family": "Akbarnejad"
+        },
+        {
+          "given": "S",
+          "family": "Günnemann"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

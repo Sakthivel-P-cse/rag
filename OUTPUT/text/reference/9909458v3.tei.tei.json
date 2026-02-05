@@ -1,0 +1,626 @@
+{
+  "paper_id": "EB3F515A2AAC74AA0ECC355DAA011E5F",
+  "title": "Metallic low-temperature resistivity in 2D over an extended temperature range",
+  "arxiv_id": "arXiv:cond-mat/9909458v3[cond-mat.str-el]",
+  "authors": [
+    {
+      "given": "S V",
+      "family": "Kravchenko"
+    },
+    {
+      "given": "T M",
+      "family": "Klapwijk"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S V",
+          "family": "Kravchenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1996",
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b2",
+      "title": "JETP Lett",
+      "container_title": "JETP Lett",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V M",
+          "family": "Pudalov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Popović"
+        },
+        {
+          "given": "A B",
+          "family": "Fowler"
+        },
+        {
+          "given": "S",
+          "family": "Washburn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P T",
+          "family": "Coleridge"
+        },
+        {
+          "given": "R L",
+          "family": "Williams"
+        },
+        {
+          "given": "Y",
+          "family": "Feng"
+        },
+        {
+          "given": "P",
+          "family": "Zawadzki"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Hanein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Hanein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M Y",
+          "family": "Simmons"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S J",
+          "family": "Papadakis"
+        },
+        {
+          "given": "M",
+          "family": "Shayegan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Hanein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "JETP Lett",
+      "container_title": "JETP Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V M",
+          "family": "Pudalov"
+        },
+        {
+          "given": "G",
+          "family": "Brunthaler"
+        },
+        {
+          "given": "A",
+          "family": "Prinz"
+        },
+        {
+          "given": "G",
+          "family": "Bauer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X G",
+          "family": "Feng"
+        },
+        {
+          "given": "D",
+          "family": "Popović"
+        },
+        {
+          "given": "S",
+          "family": "Washburn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Proc. Natl. Acad. Sci. USA",
+      "container_title": "Proc. Natl. Acad. Sci. USA",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M P",
+          "family": "Sarachik"
+        },
+        {
+          "given": "S V",
+          "family": "Kravchenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A P",
+          "family": "Mills"
+        },
+        {
+          "given": "A P",
+          "family": "Ramirez"
+        },
+        {
+          "given": "L N",
+          "family": "Pfeiffer"
+        },
+        {
+          "given": "K W",
+          "family": "West"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Dobrosavljević"
+        },
+        {
+          "given": "E",
+          "family": "Abrahams"
+        },
+        {
+          "given": "E",
+          "family": "Miranda"
+        },
+        {
+          "given": "S",
+          "family": "Chakravarty"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Chakravarty"
+        },
+        {
+          "given": "L",
+          "family": "Yin"
+        },
+        {
+          "given": "E",
+          "family": "Abrahams"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Philos. Mag. B",
+      "container_title": "Philos. Mag. B",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Chakravarty"
+        },
+        {
+          "given": "S",
+          "family": "Kivelson"
+        },
+        {
+          "given": "C",
+          "family": "Nayak"
+        },
+        {
+          "given": "K",
+          "family": "Voelker"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Phillips"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "He"
+        },
+        {
+          "given": "X C",
+          "family": "Xie"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Castellani"
+        },
+        {
+          "given": "C D",
+          "family": "Castro"
+        },
+        {
+          "given": "P A",
+          "family": "Lee"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Q",
+          "family": "Si"
+        },
+        {
+          "given": "C M",
+          "family": "Varma"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B L",
+          "family": "Altshuler"
+        },
+        {
+          "given": "D L",
+          "family": "Maslov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Solid State Commun",
+      "container_title": "Solid State Commun",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T M",
+          "family": "Klapwijk"
+        },
+        {
+          "given": "S Das",
+          "family": "Sarma"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S Das",
+          "family": "Sarma"
+        },
+        {
+          "given": "E H",
+          "family": "Hwang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Benenti"
+        },
+        {
+          "given": "X",
+          "family": "Waintal"
+        },
+        {
+          "given": "J.-L",
+          "family": "Pichard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P J H",
+          "family": "Denteneer"
+        },
+        {
+          "given": "R T",
+          "family": "Scalettar"
+        },
+        {
+          "given": "N",
+          "family": "Trivedi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Ann. Phys. (Leipzig)",
+      "container_title": "Ann. Phys. (Leipzig)",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D L",
+          "family": "Shepelyansky"
+        },
+        {
+          "given": "Pil",
+          "family": "Hun"
+        },
+        {
+          "given": "Song",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Meir"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "other",
+          "value": "cond-mat/9909353"
+        }
+      ],
+      "authors": [
+        {
+          "given": "B L",
+          "family": "Altshuler"
+        },
+        {
+          "given": "D L",
+          "family": "Maslov"
+        },
+        {
+          "given": "V M",
+          "family": "Pudalov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1979",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Abrahams"
+        },
+        {
+          "given": "P W",
+          "family": "Anderson"
+        },
+        {
+          "given": "D C",
+          "family": "Licciardello"
+        },
+        {
+          "given": "T V",
+          "family": "Ramakrishnan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Hirakawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "By choosing this boundary condition we assume that the cut-off temperature at which localization effects become negligible is of the order of 1 K. In reality it is likely to be higher, and this would lead to even stronger quantum corrections",
+      "container_title": "By choosing this boundary condition we assume that the cut-off temperature at which localization effects become negligible is of the order of 1 K. In reality it is likely to be higher, and this would lead to even stronger quantum corrections",
+      "year": null,
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Rev. Mod. Phys",
+      "container_title": "Rev. Mod. Phys",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S L",
+          "family": "Sondhi"
+        },
+        {
+          "given": "S M",
+          "family": "Girvin"
+        },
+        {
+          "given": "J P",
+          "family": "Carini"
+        },
+        {
+          "given": "D",
+          "family": "Shahar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "We stress that Eq.(6) in Ref.[20] is obtained for a very general case",
+      "container_title": "We stress that Eq.(6) in Ref.[20] is obtained for a very general case",
+      "year": null,
+      "idnos": [],
+      "authors": []
+    }
+  ],
+  "chunks": []
+}

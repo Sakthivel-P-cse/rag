@@ -1,0 +1,1030 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A STRUCTURED SELF-ATTENTIVE SENTENCE EMBEDDING</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2017-03-09">9 Mar 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhouhan</forename><surname>Lin</surname></persName>
+							<email>lin.zhouhan@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minwei</forename><surname>Feng</surname></persName>
+							<email>mfeng@us.ibm.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cicero</forename><surname>Nogueira</surname></persName>
+							<email>cicerons@us.ibm.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mo</forename><surname>Santos</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bowen</forename><surname>Xiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yoshua</forename><surname>Zhou</surname></persName>
+							<email>zhou@us.ibm.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Bengio</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ibm</forename><surname>Watson</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Montreal Institute for Learning Algorithms (MILA)</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A STRUCTURED SELF-ATTENTIVE SENTENCE EMBEDDING</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2017-03-09">9 Mar 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4D7C51EFB22A7D038A60CF9B8EF49EFE</idno>
+					<idno type="arXiv">arXiv:1703.03130v1[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>This paper proposes a new model for extracting an interpretable sentence embedding by introducing self-attention. Instead of using a vector, we use a 2-D matrix to represent the embedding, with each row of the matrix attending on a different part of the sentence. We also propose a self-attention mechanism and a special regularization term for the model. As a side effect, the embedding comes with an easy way of visualizing what specific parts of the sentence are encoded into the embedding. We evaluate our model on 3 different tasks: author profiling, sentiment classification and textual entailment. Results show that our model yields a significant performance gain compared to other sentence embedding methods in all of the 3 tasks. * This work has been done during the 1st author's internship with IBM Watson.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The authors would like to acknowledge the developers of Theano (Theano Development Team, 2016) and Lasagne. The first author would also like to thank <rs type="person">IBM Watson</rs> for providing resources, fundings and valuable discussions to make this project possible, and <rs type="person">Caglar Gulcehre</rs> for helpful discussions.</p></div>
+			</div>			<div type="annex">
+<div><head>APPENDIX A PRUNED MLP FOR STRUCTURED MATRIX SENTENCE EMBEDDING</head><p>As a side effect of having multiple vectors to represent a sentence, the matrix sentence embedding is usually several times larger than vector sentence embeddings. This results in needing more parameters in the subsequent fully connected layer, which connects every hidden units to every units in the matrix sentence embedding. Actually in the example shown in Figure <ref type="figure">1</ref>, this fully connected layer takes around 90% percent of the parameters. See Table <ref type="table">4</ref>. In this appendix we are going to introduce a weight pruning method which, by utilizing the 2D structure of matrix embedding, is able to drastically reduce the number of parameters in the fully connected hidden layer.</p><p>Inheriting the notation used in the main paper, let the matrix embedding M has a shape of r by u, and let the fully connected hidden layer has b units. The normal fully connected hidden layer will require each hidden unit to be connected to every unit in the matrix embedding, as shown in Figure <ref type="figure">1</ref>. This ends up with r × u × b parameters in total.</p><p>However there are 2-D structures in the matrix embedding, which we should make use of. Each row (m i in Figure <ref type="figure">1</ref>) in the matrix is computed from a weighted sum of LSTM hidden states, which means they share some similarities To reflect these similarity in the fully connected layer, we split the hidden states into r equally sized groups, with each group having p units. The i-th group is only fully connected to the i-th row in the matrix representation. All connections that connects the i-th group hidden units to other rows of the matrix are pruned away. In this way, Simillarity between different rows of matrix embedding are reflected as symmetry of connecting type in the hidden layer. As a result, the hidden layer can be interperated as also having a 2-D structute, with the number (r) and size (p) of groups as its two dimensions (The M v in Figure <ref type="figure">6</ref>). When the total number of hidden units are the same (i.e.,  </p></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A neural probabilistic language model</title>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Réjean</forename><surname>Ducharme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Vincent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<biblScope unit="page" from="932" to="938" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">A large annotated corpus for learning natural language inference</title>
+		<author>
+			<persName><forename type="first">Gabor</forename><surname>Samuel R Bowman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Angeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Manning</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1508.05326</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Samuel R Bowman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abhinav</forename><surname>Gauthier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raghav</forename><surname>Rastogi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Potts</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.06021</idno>
+		<title level="m">A fast unified model for parsing and sentence understanding</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Long short-term memory-networks for machine reading</title>
+		<author>
+			<persName><forename type="first">Jianpeng</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mirella</forename><surname>Lapata</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Empirical evaluation of gated recurrent neural networks on sequence modeling</title>
+		<author>
+			<persName><forename type="first">Junyoung</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caglar</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.3555</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Deep convolutional neural networks for sentiment analysis of short texts</title>
+		<author>
+			<persName><forename type="first">Santos</forename><surname>Cicero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maira</forename><surname>Gatti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers</title>
+		<meeting>COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="69" to="78" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Cicero Dos Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhou</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1602.03609</idno>
+		<title level="m">Attentive pooling networks</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Applying deep learning to answer selection: a study and an open task</title>
+		<author>
+			<persName><forename type="first">Minwei</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">R</forename><surname>Glass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2015 IEEE Workshop on Automatic Speech Recognition and Understanding</title>
+		<meeting><address><addrLine>Scottsdale, AZ, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015-12-13">2015. December 13-17, 2015. 2015</date>
+			<biblScope unit="page" from="813" to="820" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Learning distributed representations of sentences from unlabelled data</title>
+		<author>
+			<persName><forename type="first">Felix</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Korhonen</surname></persName>
+		</author>
+		<ptr target="http://www.aclweb.org/anthology/N16-1162" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>San Diego, California</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016-06">June 2016</date>
+			<biblScope unit="page" from="1367" to="1377" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">Sepp</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jürgen</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">A convolutional neural network for modelling sentences</title>
+		<author>
+			<persName><forename type="first">Nal</forename><surname>Kalchbrenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Grefenstette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1404.2188</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Convolutional neural networks for sentence classification</title>
+		<author>
+			<persName><forename type="first">Yoon</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1408.5882</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Skip-thought vectors</title>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yukun</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ruslan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raquel</forename><surname>Zemel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antonio</forename><surname>Urtasun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanja</forename><surname>Torralba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fidler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="3294" to="3302" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Distributed representations of sentences and documents</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mikolov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1188" to="1196" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Sequential short-text classification with recurrent and convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Ji</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Franck</forename><surname>Dernoncourt</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.03827</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Dataset and neural recurrent sequence labeling model for open-domain factoid question answering</title>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhengyan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuguang</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ying</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jie</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Xu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1607.06275</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Not all contexts are created equal: Better word representations with variable attention</title>
+		<author>
+			<persName><forename type="first">Wang</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lin</forename><surname>Chu-Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yulia</forename><surname>Tsvetkov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silvio</forename><surname>Amir</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1367" to="1372" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Learning natural language inference using bidirectional LSTM model and inner-attention</title>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengjie</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaolong</forename><surname>Wang</surname></persName>
+		</author>
+		<idno>CoRR, abs/1605.09090</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Learning natural language inference using bidirectional lstm model and inner-attention</title>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengjie</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaolong</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1605.09090</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Dependency-based convolutional neural networks for sentence embedding</title>
+		<author>
+			<persName><forename type="first">Mingbo</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liang</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="174" to="179" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A batch-normalized recurrent network for sentiment classification</title>
+		<author>
+			<persName><forename type="first">Horia</forename><surname>Margarit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raghav</forename><surname>Subramaniam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Learning to relate images</title>
+		<author>
+			<persName><forename type="first">Roland</forename><surname>Memisevic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE transactions on pattern analysis and machine intelligence</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1829" to="1846" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Efficient estimation of word representations in vector space</title>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1301.3781</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<author>
+			<persName><forename type="first">Lili</forename><surname>Mou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Men</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ge</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhi</forename><surname>Jin</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1512.08422</idno>
+		<title level="m">Natural language inference by tree-based convolution and heuristic matching</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Discriminative neural sentence modeling by tree-based convolution</title>
+		<author>
+			<persName><forename type="first">Lili</forename><surname>Mou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ge</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhi</forename><surname>Jin</surname></persName>
+		</author>
+		<ptr target="http://aclweb.org/anthology/D15-1279" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2015-09">September 2015</date>
+			<biblScope unit="page" from="2315" to="2325" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tsendsuren</forename><surname>Munkhdalai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1607.04492</idno>
+		<title level="m">Neural tree indexers for text understanding</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tsendsuren</forename><surname>Munkhdalai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1607.04315</idno>
+		<title level="m">Neural semantic encoders</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Deep sentence embedding using long short-term memory networks: Analysis and application to information retrieval</title>
+		<author>
+			<persName><forename type="first">Hamid</forename><surname>Palangi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yelong</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianfeng</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianshu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinying</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rabab</forename><surname>Ward</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE/ACM Transactions on Audio, Speech, and Language Processing</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="694" to="707" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">A decomposable attention model for natural language inference</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ankur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oscar</forename><surname>Parikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dipanjan</forename><surname>Tackstrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jakob</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Uszkoreit</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of EMNLP</title>
+		<meeting>EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Glove: Global vectors for word representation</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1532" to="1543" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Semi-supervised recursive autoencoders for predicting sentiment distributions</title>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<ptr target="http://www.aclweb.org/anthology/D11-1014" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2011 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Edinburgh, Scotland, UK.</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2011-07">July 2011</date>
+			<biblScope unit="page" from="151" to="161" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Recursive deep models for semantic compositionality over a sentiment treebank</title>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Perelygin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jean</forename><forename type="middle">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Potts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the conference on empirical methods in natural language processing</title>
+		<meeting>the conference on empirical methods in natural language processing</meeting>
+		<imprint>
+			<publisher>Citeseer</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">1631</biblScope>
+			<biblScope unit="page">1642</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Improved semantic representations from tree-structured long short-term memory networks</title>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tai</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ACL</title>
+		<meeting>ACL</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1556" to="1566" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Improved representation learning for question answer matching</title>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Cicero Dos Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhou</surname></persName>
+		</author>
+		<ptr target="http://www.aclweb.org/anthology/P16-1044" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ACL</title>
+		<meeting>ACL<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016-08">August 2016</date>
+			<biblScope unit="page" from="464" to="473" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Theano: A {Python} framework for fast computation of mathematical expressions</title>
+		<author>
+			<orgName type="collaboration">Theano Development Team</orgName>
+		</author>
+		<idno>abs/1605.0</idno>
+		<ptr target="http://arxiv.org/abs/1605.02688" />
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>arXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<author>
+			<persName><forename type="first">Ivan</forename><surname>Vendrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1511.06361</idno>
+		<title level="m">Sanja Fidler, and Raquel Urtasun. Order-embeddings of images and language</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Convolutional neural network for paraphrase identification</title>
+		<author>
+			<persName><forename type="first">Wenpeng</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hinrich</forename><surname>Schütze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference of the North American Chapter</title>
+		<meeting>the 2015 Conference of the North American Chapter</meeting>
+		<imprint>
+			<publisher>Human Language Technologies</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="901" to="911" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

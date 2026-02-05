@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Magnetization plateaus in antiferromagnetic-(ferromagnetic) n polymerized S = 1/2 XXZ chains</title>
+				<funder ref="#_wvaqAd6">
+					<orgName type="full">Ministry of Education, Science, Sports and Culture of Japan</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Natural Science and Engineering Research Council of Canada</orgName>
+					<orgName type="abbreviated">NSERC</orgName>
+				</funder>
+				<funder ref="#_7gbMGR4">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2000-05-31">31 May 2000</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Chen</surname></persName>
+							<email>chen@chemistry.mcgill.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kazuo</forename><surname>Hida</surname></persName>
+							<email>hida@phy.saitama-u.ac.jp</email>
+						</author>
+						<author>
+							<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Sanctuary</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">McGill University</orgName>
+								<address>
+									<postCode>H3A 2K6</postCode>
+									<settlement>Montreal</settlement>
+									<region>PQ</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Saitama University</orgName>
+								<address>
+									<postCode>338-8570</postCode>
+									<settlement>Urawa</settlement>
+									<region>Saitama</region>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Depart-ment of Chemistry</orgName>
+								<orgName type="institution">McGill University</orgName>
+								<address>
+									<postCode>H3A</postCode>
+									<settlement>Montreal</settlement>
+									<region>PQ</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Magnetization plateaus in antiferromagnetic-(ferromagnetic) n polymerized S = 1/2 XXZ chains</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2000-05-31">31 May 2000</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">44E39CB0165B1C352C6462E80D391ABD</idno>
+					<idno type="arXiv">arXiv:cond-mat/0005544v1[cond-mat.stat-mech]</idno>
+					<note type="submission">Received November 17, 2018</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>magnetization plateau</term>
+					<term>level spectroscopy</term>
+					<term>exact diagonalization</term>
+					<term>BKT transition</term>
+					<term>twisted boundary condition</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The plateau-non-plateau transition in the antiferromagnetic-(ferromagnetic)n polymerized S = 1/2 XXZ chains under the magnetic field is investigated. The universality class of this transition belongs to the Brezinskii-Kosterlitz-Thouless (BKT) type. The critical points are determined by level spectroscopy analysis of the numerical diagonalization data for 4 ≤ p ≤ 13 where p(≡ n+1) is the size of a unit cell. It is found that the critical strength of ferromagnetic coupling decreases with p for small p but increases for larger enough p. It is also found that the plateau for large p is wide enough for moderate values of exchange coupling so that it should be easily observed experimentally. This is in contrast to the plateaus for p = 3 chains which are narrow for a wide range of exchange coupling even away from the critical point.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>§1. Introduction</head><p>Magnetization plateaus in one dimensional Heisenberg chains are attracting much attention as the field induced spin gap states. On the plateau, some spins are partly quenched by the magnetic field while the remaining spins form a spin gap state. <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13)</ref> It is evident that such magnetization plateaus can be realized in various non-homogeneous Heisenberg chains. Oshikawa, Yamanaka and Affleck <ref type="bibr" target="#b0">1)</ref> proposed the necessary condition for the magnetization plateaus as p(Sm z ) = q ≡ integer where p is the periodicity of the magnetic ground state in the thermodynamic limit, S is the magnitude of the spin, and m z is the magnetization per site.</p><p>In this context, the spin chains consisting of periodic arrays of ferromagnetic and antiferromagnetic bonds have been widely investigated. The S = 1/2 ferromagnetic-antiferromagnetic alternating chain has a spin gap ground state <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16)</ref> for arbitrary values of coupling constants. This state can be regarded as the plateau state with zero magnetization (p = 2, S = 1/2, q = 1 and m z = 0). In the isotropic case, this energy gap survives as the well-known Haldane gap even if the strength of the ferromagnetic bonds j is infinite. <ref type="bibr" target="#b13">14)</ref> There appears a magnetization plateau in the magnetization curve of the S = 1/2 ferromagnetic-ferromagneticantiferromagnetic trimerized chain at 1/3 of the saturation magnetization (p = 3, S = 1/2, q = 1 and m z = 1/6). <ref type="bibr" target="#b1">2)</ref> In this case, Kitazawa and Okamato <ref type="bibr" target="#b8">9)</ref> have shown that the plateau vanishes by the Brezinskii-Kosterlitz-Thouless (BKT) type transition for j ≥ j c ≃ 15.4 where the energy unit is the strength of the antiferromagnetic bonds.</p><p>In the present work, we investigate the plateau-nonplateau transition for general values of p using the method of ref. 9. Intuitively, the quantum fluctuations are expected to be suppressed as the number of the ferromagnetic bonds increases. Therefore it is natural to expect that the magnetization plateau, which is an essentially quantum phenomenon, becomes less favourable as the number of the ferromagnetic bonds increases. Surprisingly, our numerical calculation shows that this is incorrect. We discuss the physical origin of this unexpected behavior.</p><p>This paper is organized as follows. In the next section, the model Hamiltonian is defined and the numerical results of the magnetization curve and the phase diagram of the plateau-non-plateau transition is presented. The physical reason of the enhancement of the plateau state for large p is also explained in this section. The final section is devoted to a summary and discussion. §2. Numerical Results</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Model Hamiltonian</head><p>The Hamiltonian of the antiferromagnetic-(ferromagnetic) n polymerized S = 1/2 XXZ chain in the magnetic field is given by</p><formula xml:id="formula_0">H = -j L l=1 n-1 i=0 H (n+1)l+i (1) + L l=1 H (n+1)l+n (∆) -gµ B H (n+1)L l=1 S z l .<label>(2.1)</label></formula><p>where</p><formula xml:id="formula_1">H l (∆) = S x l S x l+1 + S y l S y l+1 + ∆S z l S z l+1 ,<label>(2.2)</label></formula><p>The ferromagnetic coupling constant, number of the ferromagnetic bond and anisotropy parameter of the antiferromagnetic bond are represented by j, n and ∆, respectively. The ferromagnetic bonds are assumed to be isotropic. The magnetic field, the electronic g-factor and Bohr magneton are denoted by H, g and µ B , respectively. This model has spatial periodicity p ≡ n + 1. In the following, we take gµ B = 1 as unit.</p><p>In the limiting case of j → ∞, this model tends to the S = p/2 uniform antiferromagnetic XXZ chain, so that no plateau is expected. Therefore the BKT type plateau-non-plateau transition is expected to take place at a finite critical value of j.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Magnetization plateaus</head><p>The schematic magnetization curve of the present model is shown in Fig. <ref type="figure" target="#fig_0">1</ref>. In the present paper, we concentrate on the highest plateau with q = 1 and m z = 1/2 -1/p. The total magnetization M ≡ m z on the plateau is given by to the energy gap in the absence of the magnetic field, H c1 , to the energy gap between the lowest energy with M z = M p and that with M z = M p -1, H c2 , the energy gap between the lowest energy with M z = M p + 1 and that with M z = M p . Finally H s is the saturation field. The lower part of the magnetization curve is represented by the dashed line where lower plateaus may appear.</p><formula xml:id="formula_2">M = M p ≡ pL(1/2 -1/p) = M s (1 -2/p) where M s ≡ pL/2 is the saturation mag- netization. In Fig. 1 the critical fields H c0 corresponds 0 1.5 3 0 1 M/M s H c 0 H c 1 H c 2 H s Gap Gap Plateau 1-2/p</formula><p>We use an exact diagonalization method to calculate the magnetization curve. As an example, the jdependence of the 3 critical fields H c0 , H c1 and H c2 for p = 4 and ∆ = 1 are shown in Fig. <ref type="figure" target="#fig_1">2</ref> by the symbols •, ✸ and •, respectively, which are obtained by the Shanks' <ref type="bibr" target="#b16">17)</ref> extrapolation of the results of the Lanczos exact diagonalization for 4L = 8, 16 and 24 with periodic boundary condition. The plateau seems to close at a finite value of j. Because the non-plateau state corresponds to the gapless spin liquid and the plateau state to the spin gap state, this transition is expected to be the BKT-type transition. In the next subsection. we determine the critical point of the plateau-non-plateau transition from numerical diagonalization data for general values of p. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">BKT critical point</head><p>It is difficult to estimate the BKT critical point precisely from standard finite size analysis of the numerical calculation data. To circumvent this difficulty Nomura and Kitazawa <ref type="bibr" target="#b18">19)</ref> proposed to use level spectroscopy method <ref type="bibr" target="#b17">18)</ref> with twisted boundary condition. This method has been successfully applied to the ferromagnetic-ferromagnetic-antiferromagnetic trimerized Heisenberg chain by Kitazawa and Okamoto. <ref type="bibr" target="#b8">9)</ref> In the present work, we employ this method for the present model. Here we do not explain how and why this method works, because methodological details are well described in ref. 9.</p><p>The finite size critical point is determined from the crossing point of ∆E 0,2 with the lower of ∆E c 1/2,0 or ∆E s 1/2,0 defined by,</p><formula xml:id="formula_3">∆E 0,2 = 1 2 E 0 (M p + 2, 0, 1) + E 0 (M p -2, 0, 1) -E 0 (M p , 0, 1). (2.3) and ∆E c 1/2,0 = E T BC (M p , 1) -E(M p , 0, 1) (2.4) ∆E s 1/2,0 = E T BC (M p , -1) -E(M p , 0, 1)<label>(2.5)</label></formula><p>where E 0 (M z , k, P ) is the lowest energy under a periodic boundary condition with magnetization M z , wave number k and parity P . The energy E T BC (M z , P ) is the lowest energy with the twist boundary conditions with magnetization M z and parity P .</p><p>To confirm the reliability of this method the following average</p><formula xml:id="formula_4">x = x c 1/2,0 (L) + 3x s 1/2 (L) 4 . (2.6)</formula><p>is close to 0.5 at the critical points <ref type="bibr" target="#b8">9)</ref> where x c,s 1/2,0 (L) are the scaling exponents corresponding to E c,s 1/2,0 and defined by</p><formula xml:id="formula_5">x c,s 1/2,0 = L 2πv s ∆E c,s 1/2,0 . (2.7)</formula><p>Here v s is the spin wave velocity given by</p><formula xml:id="formula_6">v s = lim L→∞ L 2π [E Mp,k1 (L) -E Mp (L)],<label>(2.8)</label></formula><p>where E Mp,k1 (L) is the energy of the excited state with wave number k 1 = 2π L and M z = M p . The results are shown in Fig. <ref type="figure">3</ref> for p = 4 which confirms that x = 0.5 holds with good accuracy.</p><p>Figure <ref type="figure">4</ref> shows the behavior of ∆E 0,2 and ∆E s 1/2,0 for L = 6 unit cells and p = 4. From the crossing point, we obtain j c (L) = 6.310 for L = 6 unit cells. The BKT transition point for the infinte system can be obtained by extrapolating from L = 2, 4 and 6 to N → ∞ as j c = 6.260 assuming the extrapolation formula</p><formula xml:id="formula_7">j c (L) = j c + c1 L 2 + c2 L 4 .</formula><p>- The phase boundaries are shown in Fig. <ref type="figure" target="#fig_3">5</ref> for p = 3, 4 and 5 by ✷, • and •, respectively. Extrapolation is made from L = 2, 4 and 6 for p = 4 and 5. The results for p = 3 are taken from ref. 9. From this figure, we see that the critical points j c does not decrease monotonically with an increase of periodicity p. Therefore we further calculate the cases of longer periodicity up to p = 13. The p dependence of j c is shown in Fig. <ref type="figure" target="#fig_4">6</ref> for ∆ = 1.0, 0.5, 0.0 and -0.5. The different symbols represent the critical points for different system size L. The data for p = 2 is also included for ∆ = -0.5. When ∆ ≥ 0 and p = 2 then j c equals infinity. <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16)</ref> For p = 4 and 5, the calculations are carried out for L = 2, 4 and 6 and for p = 6 and 7, L = 2 and 4. The extrapolation to L → ∞ is made for these cases. Nevertheless, the L-dependence of  the critical point becomes weaker as the periodicity p becomes larger as shown in Fig. <ref type="figure" target="#fig_4">6</ref>. Therefore for p ≥ 8, we can safely estimate approximate values of the thermodynamic critical point j c from that for L = 2. Surprisingly, the p-dependence of the critical point is strongly nonmonotonic. The decrease of j c with p for small values of p is consistent with intuition that the increasing the number of the ferromagnetic bonds suppresses the quantum fluctuation. The magnetization plateau, which is the quantum origin, becomes less favoured.</p><p>With the further increase of p, however, j c increases again almost linearly with p. This phenomenon can be explained by the following physical picture. On the magnetization plateau M z = M p , the singlet pairs are located on the antiferromagnetic bonds and other spins are alligned in the direction of the magnetic field. This is schematically shown in Fig. <ref type="figure">7(a</ref>). If the magnetization becomes M z = M p + 1, one singlet pair is broken as shown in Fig. <ref type="figure">7(b</ref>). The energy difference E 0 (M p + 1) -E 0 (M p ) determines the upper edge of the plateau H c2 . Because the additional up spin is localized around the antiferromagnetic bonds, the critical field H c2 tends to a constant value of the order of the antiferromagnetic coupling constant ∼ O(1) as p increases. On the other hand, if the magnetization becomes M z = M p -1, one of p -2 spins in the ferromagnetic segments is inverted as shown in Fig. <ref type="figure">7(c</ref>). In the absence of coupling to the 2 boundary spins forming a local singlet, the segment of the remaining p -2 spins, which contain one inverted spin, form a state with total spin S = p-2 2 and magnetization S z = p-2 2 -1. Since the ferromagnetic bonds are isotropic this state has the same energy as the fully polarized state with S = p-2 2 and S z = p-2</p><p>2 . The energy change E 0 (M p ) -E 0 (M p -1) is due to the interaction of the inverted spin with the singlet pair on the antiferroamgnetic bonds at the both ends of the ferromagnetic segment. The probability that the inverted spin stays on the boundary sites of the segment is proportional to 1 p-2 . Hence, the energy diference E 0 (M p ) -E 0 (M p -1), which determines the lower edge of the plateau H c1 is estimated as O( j p-2 ) for large enough p. Because the plateau-non-plateau transition takes place around the point H c1 ∼ H c2 , we find j c ∝ p -2 for large enough p. This explains why j c increases linearly with p for large p. To substantiate this argument, H c1 and H c2 are calculated numerically by exact diagonalization for L = 2 and ∆ = 1.0. Figure <ref type="figure">8</ref> shows that H c1 scales with j p-2 for p = 10, 11, 12 and 13 from top to bottom although there is some deviation as the critical point is approached. Figure <ref type="figure" target="#fig_6">9</ref> shows H c2 is approximately independent of p and tends to a constant value for large j. These results show that the increase of the critical point for large p is a consequence of delocalization of the down spin in a wide region of length p. In Fig. <ref type="figure" target="#fig_0">10,</ref><ref type="figure">jc</ref> p-2 is plotted against p. It is evident that jc p-2 tends to a constant value for large enough p. §3.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Summary and Discussion</head><p>The magnetization plateaus at m z = 1/2 -1/p in the S = 1/2 antiferromagnetic-(ferromagnetic) n polymerized XXZ chains are investigated by exact diagonalization of finite size systems. The plateau-non-plateau BKT transition points are determined precisely by the level spectroscopy method with twisted boundary condition. <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b8">9)</ref> The p-dependence of the critical point is not a monotonic function. For small p, the critical point decreases with p in agreement with the simple-minded intuition that an increase of the number of the ferromagnetic bonds suppresses the quantum fluctuation and the magnetization plateau, which is the quantum origin, becomes less favoured. With a further increase of p, however, j c increases again. This can be explained by the delocalization of down spin within the ferromagnetic segment with length p -2.</p><p>The plateau for p = 3 is narrow for a wide range of j ≤ j c . 2) This is the reason why so far this simplest example of the magnetization plateau has not even observed experimentally. Actually, no visible plateau is observed in the magnetization curve of 3CuCl 2 • 2dx which has j ∼ 4.5 &lt;&lt; j c . <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b19">20)</ref> In contrast, the magnetization plateaus for large p is fairly wide compared to that for p = 3 for moderate values of j. As an example, we show the magnetization curve for p = 12, ∆ = 1 and j = 4.0 obtained by exact diagonalization for L = 2 in Fig. <ref type="figure" target="#fig_0">11</ref>.</p><formula xml:id="formula_8">1 2 p p+1 p+2 2p af f (p-2) f f f (a) 1 2 p p+1 p+2 2p af f (p-2) f f f (b) 1 2 p p+1 p+2 2p af f (p-2) f f f (c)</formula><p>It is evident that this plateau is wide enough for experimental measurement, although the value of j c for p = 12 is less than that for p = 3. Thus a systematic synthesis of materials with broad spatial periodicity is hoped to experimentally confirm our predictions.</p><p>Chen and Hida thank K. Okamoto for fruitful discussion. We also thank A. Kitazawa and K. Okamoto for  </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Schematic magnetization curve of the present model.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. The critical fields for p = 4 and ∆ = 1. The critical fields H c0 , H c1 and H c2 are represented by •, ✸ and •.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .Fig. 4 .</head><label>34</label><figDesc>Fig. 3. The extrapolated values of the averaged scaling dimensionx on the critical points for p = 4. The solid line is x = 0.5</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. The phase boundaries on the ∆ -j-plane for p = 3, 4 and 5 represented by ✷ • and • , respectively. The lines are fitted.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 6 .</head><label>6</label><figDesc>Fig.6. The p-dependence of the critical point jc for ∆ = 1.0, 0.5, 0.0 and -0.5 from top to bottom. The different symbols distinguish jc's for different system sizes L. The + symbols are the values of jc extrapolated to L → ∞. The result for p = 3 is taken from ref. 9. For p = 2, jc → ∞ for ∆ ≥ 0.<ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16)</ref> </figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 7 .Fig. 8 .</head><label>78</label><figDesc>Fig. 7. The spin configurations (a) on the magnetization plateau M z = Mp, (b) at the magnetization M z = Mp + 1 and (c) at the magnetization M z = Mp -1. The spin pairs connected by ovals form local singlets.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 9 .</head><label>9</label><figDesc>Fig. 9. The j-dependence of H c2 for p = 10, 11, 12 and 13. H c2is almost independent of p and the tends to a constant value for large j.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 10 .Fig. 11 .</head><label>1011</label><figDesc>Fig. 10. The p-dependence of jc/(p -2).</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>supplying us the numerical data of ref. 9. The numerical calculation is performed using the program package TITPACK version 2 coded by <rs type="person">H. Nishimori</rs> on <rs type="grantNumber">HITAC S820</rs> and <rs type="grantNumber">SR2201</rs> at the <rs type="institution">Information Processing Center of Saitama University</rs> and the FACOM VPP500 at the <rs type="affiliation">Supercomputer Center of Institute for Solid State Physics, University of Tokyo</rs>. This work is supported by a <rs type="grantName">Grant-in-Aid for Scientific Research</rs> from the <rs type="funder">Ministry of Education, Science, Sports and Culture of Japan</rs> and a research grant from the <rs type="funder">Natural Science and Engineering Research Council of Canada (NSERC)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_7gbMGR4">
+					<idno type="grant-number">HITAC S820</idno>
+				</org>
+				<org type="funding" xml:id="_wvaqAd6">
+					<idno type="grant-number">SR2201</idno>
+					<orgName type="grant-name">Grant-in-Aid for Scientific Research</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Oshikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yamanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Affleck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<date type="published" when="1984">1997. 1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">2359</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Commun</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">245</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tonegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nakao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaburagi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">3317</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Totsuka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Lett. A</title>
+		<imprint>
+			<biblScope unit="volume">228</biblScope>
+			<biblScope unit="page">103</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Totsuka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page">3454</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takahashi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page">3201</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takahashi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">1126</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">9765</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A: Gen</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">4601</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+		<idno>cond-mat/9907481</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Narumi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hagiwara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kindo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takahashi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica</title>
+		<imprint>
+			<biblScope unit="page">234</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shiramura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takatsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kurniawan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Uekusa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ohashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takizawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Mitamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Goto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">1548</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys.Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page">2207</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">3357</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">1463</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shanks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Math. Phys</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="1955">1955</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A: Math. Gen</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">5451</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A.: Math. Gen</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">7341</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ajiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Asano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Inami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Aruga-Katori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Goto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">859</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

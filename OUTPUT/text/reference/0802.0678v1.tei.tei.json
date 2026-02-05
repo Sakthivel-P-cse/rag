@@ -1,0 +1,1278 @@
+{
+  "paper_id": "150882BA1C115D15D9C5E4EBD37A3DF6",
+  "title": "An inhomogeneous model for the Galactic halo: a possible explanation for the spread observed in s-and r-process elements",
+  "arxiv_id": "arXiv:0802.0678v1[astro-ph]",
+  "authors": [
+    {
+      "given": "G",
+      "family": "Cescutti"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Abel"
+        },
+        {
+          "given": "G L",
+          "family": "Bryan"
+        },
+        {
+          "given": "M L",
+          "family": "Norman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Argast"
+        },
+        {
+          "given": "M",
+          "family": "Samland"
+        },
+        {
+          "given": "O E",
+          "family": "Gerhard"
+        },
+        {
+          "given": "F.-K",
+          "family": "Thielemann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Argast"
+        },
+        {
+          "given": "M",
+          "family": "Samland"
+        },
+        {
+          "given": "F.-K",
+          "family": "Thielemann"
+        },
+        {
+          "given": "O E",
+          "family": "Gerhard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "ASPC",
+      "container_title": "ASPC",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Asplund"
+        },
+        {
+          "given": "N",
+          "family": "Grevesse"
+        },
+        {
+          "given": "A J",
+          "family": "Sauval"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D L",
+          "family": "Burris"
+        },
+        {
+          "given": "C A",
+          "family": "Pilachowski"
+        },
+        {
+          "given": "T E",
+          "family": "Armandroff"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Busso"
+        },
+        {
+          "given": "R",
+          "family": "Gallino"
+        },
+        {
+          "given": "D L",
+          "family": "Lambert"
+        },
+        {
+          "given": "C",
+          "family": "Travaglio"
+        },
+        {
+          "given": "V V",
+          "family": "Smith"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Cappellaro"
+        },
+        {
+          "given": "R",
+          "family": "Evans"
+        },
+        {
+          "given": "M",
+          "family": "Turatto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Carretta"
+        },
+        {
+          "given": "R G",
+          "family": "Gratton"
+        },
+        {
+          "given": "J G",
+          "family": "Cohen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "A.J",
+      "container_title": "A.J",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B W",
+          "family": "Carney"
+        },
+        {
+          "given": "J S",
+          "family": "Wright"
+        },
+        {
+          "given": "C",
+          "family": "Sneden"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Cayrel"
+        },
+        {
+          "given": "E",
+          "family": "Depagne"
+        },
+        {
+          "given": "M",
+          "family": "Spite"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "",
+      "container_title": "",
+      "year": "2007",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv, 0708.4163"
+        }
+      ],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Cescutti"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Cescutti"
+        },
+        {
+          "given": "P",
+          "family": "Franc"
+        },
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "R",
+          "family": "Cayrel"
+        },
+        {
+          "given": "M",
+          "family": "Spite"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Cescutti"
+        },
+        {
+          "given": "F",
+          "family": "Matteucci"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Chiappini"
+        },
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "R G",
+          "family": "Gratton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Chiappini"
+        },
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "D",
+          "family": "Romano"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J J",
+          "family": "Cowan"
+        },
+        {
+          "given": "C",
+          "family": "Sneden"
+        },
+        {
+          "given": "T C",
+          "family": "Beers"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Edvardsson"
+        },
+        {
+          "given": "J",
+          "family": "Andersen"
+        },
+        {
+          "given": "B",
+          "family": "Gustafsson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Franc"
+        },
+        {
+          "given": "E",
+          "family": "Depagne"
+        },
+        {
+          "given": "V",
+          "family": "Hill"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Franc"
+        },
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "R",
+          "family": "Cayrel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J P",
+          "family": "Fulbright"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J P",
+          "family": "Fulbright"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K K",
+          "family": "Gilroy"
+        },
+        {
+          "given": "C",
+          "family": "Sneden"
+        },
+        {
+          "given": "C A",
+          "family": "Pilachowski"
+        },
+        {
+          "given": "J J",
+          "family": "Cowan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Goswami"
+        },
+        {
+          "given": "N",
+          "family": "Prantzos"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R G",
+          "family": "Gratton"
+        },
+        {
+          "given": "C",
+          "family": "Sneden"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R G",
+          "family": "Gratton"
+        },
+        {
+          "given": "C",
+          "family": "Sneden"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "MNRAS",
+      "container_title": "MNRAS",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Hernandez"
+        },
+        {
+          "given": "A",
+          "family": "Ferrara"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Honda"
+        },
+        {
+          "given": "W",
+          "family": "Aoki"
+        },
+        {
+          "given": "T",
+          "family": "Kajino"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "PASJ",
+      "container_title": "PASJ",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Ikuta"
+        },
+        {
+          "given": "N",
+          "family": "Arimoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Ishimaru"
+        },
+        {
+          "given": "S",
+          "family": "Wanajo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Ishimaru"
+        },
+        {
+          "given": "S",
+          "family": "Wanajo"
+        },
+        {
+          "given": "W",
+          "family": "Aoki"
+        },
+        {
+          "given": "S G",
+          "family": "Ryan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "ApJS",
+      "container_title": "ApJS",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Iwamoto"
+        },
+        {
+          "given": "F",
+          "family": "Brachwitz"
+        },
+        {
+          "given": "K",
+          "family": "Nomoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "ApJS",
+      "container_title": "ApJS",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J A",
+          "family": "Johnson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Karlsson"
+        },
+        {
+          "given": "B",
+          "family": "Gustafsson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Koch"
+        },
+        {
+          "given": "B",
+          "family": "Edvardsson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "MNRAS",
+      "container_title": "MNRAS",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R B",
+          "family": "Larson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Mackey"
+        },
+        {
+          "given": "V",
+          "family": "Bromm"
+        },
+        {
+          "given": "L",
+          "family": "Hernquist"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Maeder"
+        },
+        {
+          "given": "G",
+          "family": "Meynet"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Mashonkina"
+        },
+        {
+          "given": "T",
+          "family": "Gehren"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Mashonkina"
+        },
+        {
+          "given": "T",
+          "family": "Gehren"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "MNRAS",
+      "container_title": "MNRAS",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "F",
+          "family": "Calura"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "L",
+          "family": "Greggio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "MNRAS",
+      "container_title": "MNRAS",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "A",
+          "family": "Pipino"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mcwilliam"
+        },
+        {
+          "given": "G W",
+          "family": "Preston"
+        },
+        {
+          "given": "C",
+          "family": "Sneden"
+        },
+        {
+          "given": "L",
+          "family": "Searle"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "ApJS",
+      "container_title": "ApJS",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mcwilliam"
+        },
+        {
+          "given": "R M",
+          "family": "Rich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "Ap&SS",
+      "container_title": "Ap&SS",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mcwilliam"
+        },
+        {
+          "given": "L",
+          "family": "Searle"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Nakamura"
+        },
+        {
+          "given": "M",
+          "family": "Umemura"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "A&A",
+      "container_title": "A&A",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P E",
+          "family": "Nissen"
+        },
+        {
+          "given": "W J",
+          "family": "Schuster"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "Nucl. Phys. A",
+      "container_title": "Nucl. Phys. A",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Nomoto"
+        },
+        {
+          "given": "N",
+          "family": "Tominaga"
+        },
+        {
+          "given": "H",
+          "family": "Umeda"
+        },
+        {
+          "given": "C",
+          "family": "Kobayashi"
+        },
+        {
+          "given": "K",
+          "family": "Maeda"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "New A",
+      "container_title": "New A",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Otsuki"
+        },
+        {
+          "given": "G J",
+          "family": "Mathews"
+        },
+        {
+          "given": "T",
+          "family": "Kajino"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Pompeia"
+        },
+        {
+          "given": "B",
+          "family": "Barbuy"
+        },
+        {
+          "given": "M",
+          "family": "Grenon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b50",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J X",
+          "family": "Prochaska"
+        },
+        {
+          "given": "S O",
+          "family": "Naumov"
+        },
+        {
+          "given": "B W",
+          "family": "Carney"
+        },
+        {
+          "given": "A",
+          "family": "Mcwilliam"
+        },
+        {
+          "given": "A M",
+          "family": "Wolfe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b51",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C M",
+          "family": "Raiteri"
+        },
+        {
+          "given": "M",
+          "family": "Villata"
+        },
+        {
+          "given": "R",
+          "family": "Gallino"
+        },
+        {
+          "given": "M",
+          "family": "Busso"
+        },
+        {
+          "given": "A",
+          "family": "Cravanzola"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b52",
+      "title": "MNRAS",
+      "container_title": "MNRAS",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Recchi"
+        },
+        {
+          "given": "F",
+          "family": "Matteucci"
+        },
+        {
+          "given": "D'",
+          "family": "Ercole"
+        },
+        {
+          "given": "A",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b53",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ryan S",
+          "family": "Norris"
+        },
+        {
+          "given": "J E",
+          "family": "Bessel"
+        },
+        {
+          "given": "M S",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b54",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ryan S",
+          "family": "Norris"
+        },
+        {
+          "given": "J E",
+          "family": "Beers"
+        },
+        {
+          "given": "T C",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b55",
+      "title": "Fund. Cosmic Phys",
+      "container_title": "Fund. Cosmic Phys",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J M",
+          "family": "Scalo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b56",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Schneider"
+        },
+        {
+          "given": "A",
+          "family": "Ferrara"
+        },
+        {
+          "given": "P",
+          "family": "Natarajan"
+        },
+        {
+          "given": "K",
+          "family": "Omukai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b57",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Stephens"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b58",
+      "title": "AJ",
+      "container_title": "AJ",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Stephens"
+        },
+        {
+          "given": "A M",
+          "family": "Boesgaard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b59",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Thornton"
+        },
+        {
+          "given": "M",
+          "family": "Gaudlitz"
+        },
+        {
+          "given": null,
+          "family": "Janka H.-Th"
+        },
+        {
+          "given": "M",
+          "family": "Steinmetz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b60",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Travaglio"
+        },
+        {
+          "given": "R",
+          "family": "Gallino"
+        },
+        {
+          "given": "E",
+          "family": "Arnone"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b61",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Tsujimoto"
+        },
+        {
+          "given": "T",
+          "family": "Shigeyama"
+        },
+        {
+          "given": "Y",
+          "family": "Yoshii"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b62",
+      "title": "ApJ",
+      "container_title": "ApJ",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V M",
+          "family": "Woolf"
+        },
+        {
+          "given": "J",
+          "family": "Tomkin"
+        },
+        {
+          "given": "D L",
+          "family": "Lambert"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

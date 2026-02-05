@@ -1,0 +1,739 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Speed-Up of DNA Melting Algorithm with Complete Nearest Neighbor Properties</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Eivind</forename><surname>Tøstesen</surname></persName>
+							<email>eivindto@radium.uio.no</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Tumor Biology</orgName>
+								<orgName type="institution">The Norwegian Radium Hospital</orgName>
+								<address>
+									<postCode>N-0310</postCode>
+									<settlement>Oslo</settlement>
+									<country key="NO">Norway</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Tumor Biology</orgName>
+								<orgName type="institution">The Norwegian Radium Hospital</orgName>
+								<address>
+									<postCode>N-0310</postCode>
+									<settlement>Oslo</settlement>
+									<country key="NO">Norway</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tor-Kristian</forename><surname>Jenssen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">PubGene AS</orgName>
+								<address>
+									<postBox>P.O. Box 180</postBox>
+									<postCode>2A, N-0319</postCode>
+									<settlement>Forskningsveien, Vinderen, Oslo</settlement>
+									<country key="NO">Norway</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eivind</forename><surname>Hovig</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Tumor Biology</orgName>
+								<orgName type="institution">The Norwegian Radium Hospital</orgName>
+								<address>
+									<postCode>N-0310</postCode>
+									<settlement>Oslo</settlement>
+									<country key="NO">Norway</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Speed-Up of DNA Melting Algorithm with Complete Nearest Neighbor Properties</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date />
+						</imprint>
+					</monogr>
+					<idno type="MD5">6C0192CD4C2D6F14AF0E75466867A0F5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>DNA</term>
+					<term>melting</term>
+					<term>hybridization</term>
+					<term>helix-coil transition</term>
+					<term>Poland-Scheraga</term>
+					<term>nearest neighbor</term>
+					<term>thermodynamic parameters</term>
+					<term>format</term>
+					<term>end interactions</term>
+					<term>algorithmic complexity</term>
+					<term>loop entropy factor</term>
+					<term>genomic sequences</term>
+					<term>partition function</term>
+					<term>numerical overflow</term>
+					<term>matrix multiplication</term>
+					<term>recursion</term>
+					<term>base-pairing probability</term>
+					<term>loop probability</term>
+					<term>domains</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>We describe an optimized algorithm, which is faster and more accurate compared to previously described algorithms, for computing the statistical mechanics of denaturation of nucleic acid sequences according to the classical Poland-Scheraga type of model. Nearest neighbor thermodynamics has been included in a complete and general way, by rigorously treating nearest neighbor interactions, helix end interactions and isolated base-pairs. This avoids the simplifications of previous approaches and achieves full generality and controllability with respect to thermodynamic modeling. The algorithm computes subchain partition functions by recursion, from which various quantitative aspects of the melting process is easily derived, for example the base-pairing probability profiles. The algorithm represents an optimization with respect to algorithmic complexity of the partition function algorithm of Yeramian et al. (Biopolymers 1990, 30, 481-497): We reduce the computation time for a base-pairing probability profile from O(N 2 ) to O(N), where N is the sequence length. This speed-up comes in addition to the speed-up due to a multiexponential approximation of the loop entropy factor as introduced by Fixman and Freire and applied by Yeramian et al. The speedup, however, is independent of the multiexponential approximation and reduces time from O(N 3 ) to O(N 2 ) in the exact case. A method for representing very large numbers is described, which avoids numerical overflow in the partition functions for genomic length sequences. In addition to calculating the standard base-pairing probability profiles, we propose to use the algorithm to calculate various other probabilities (loops, helices, tails) for a more direct view of the melting regions and their positions and sizes. This can provide a better understanding of the physics of denaturation and the biology of genomes.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="annex">
+<div><head>CONCLUSION</head><p>The preferred choice of algorithm for computing Poland-Scheraga type of melting for specific DNA sequences of genomic length is one where computation time grows linearly with length, O(N), at least when used on a common PC. Most available linear programs (ref. <ref type="bibr" target="#b0">1,</ref><ref type="bibr">23,</ref><ref type="bibr" target="#b22">24)</ref> are implementations of the probability-based Poland-Fixman-Freire algorithms. Yeramian et al. introduced a partition functionbased algorithm (ref. <ref type="bibr" target="#b23">25)</ref>, but its computation time grows quadratically with length for the computation of a base-pairing probability profile. These algorithms introduce certain approximations in the handling of thermodynamic parameters for nearest neighbor stabilities. Based on the work of Yeramian et al., we propose an improved partition function-based algorithm where computation time grows linearly with length. The improvement is both with respect to the speed and the thermodynamic parameters. The speed-up is based on symmetrical recursions in the "left-to-right" and "right-to-left" directions along the chain. Nearest neighbor effects are included in a fully general and non-approximative way by using a format with three types of stabilities for nearest neighbor bp's, isolated bp's and helixending bp's.</p><p>As noted by <ref type="bibr">Yeramian (ref. 25)</ref>, a partition function algorithm, as opposed to a probability-based algorithm, has more generality and flexibility. The quantities involved in a partition function formalism are conveniently handled by standard calculational methods and more quantities than we have discussed in this article can be calculated. Commonly, the thermal ensembles of melting DNA have been represented by the base-pairing probability profiles p closed (i). In this article we have shown that in addition to p closed (i), the calculation of loop probabilities, p loop (a,b), tail probabilities, p right (i) and p left (i), and helix probabilities, p helix (a,b), is possible with our algorithm. In principle, these probabilities contain more information than the base-pairing probabilities alone. Analysis of these probabilities offers a direct identification of the two-state melting domains and their exact positions and sizes, as well as a characterization of regions where melting is not two-state. These matters are not clearly revealed by the base-pairing probabilities p closed (i) alone, but can be further investigated using the algorithm presented here.</p></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">G</forename><surname>Steger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="2760" to="2768" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Yeramian</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gene</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">255</biblScope>
+			<biblScope unit="page" from="139" to="150" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Venter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Adams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Mural</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">O</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yandell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Evans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Holt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="1304" to="1351" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">International Human Genome Sequencing Consortium</title>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page" from="860" to="921" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Breslauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Methods Enzymol</title>
+		<imprint>
+			<biblScope unit="volume">259</biblScope>
+			<biblScope unit="page" from="221" to="242" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><surname>Santalucia</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="1460" to="1465" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><surname>Owczarzy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Vallone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Gallo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Paner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Lane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Benight</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="217" to="239" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Theory of helix-coil transitions in biopolymers</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Poland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Scheraga</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1970">1970</date>
+			<publisher>Academic Press</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Zuker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sankoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bull Math Biol</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="591" to="621" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Waterman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Math Suppl Stud</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="167" to="212" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><surname>Mccaskill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. S. Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1105" to="1119" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="4253" to="4266" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Kramers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Wannier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="252" to="263" />
+			<date type="published" when="1941">1941</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Phys Rev 1944</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Onsager</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="117" to="149" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Zimm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Bragg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="526" to="535" />
+			<date type="published" when="1959">1959</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Dyson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Commun Math Phys</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="91" to="107" />
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><surname>Poland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Scheraga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="1464" to="1469" />
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Fisher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="1469" to="1473" />
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Scaling concepts in polymer physics</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">G</forename><surname>De Gennes</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1979">1979</date>
+			<publisher>Cornell University Press</publisher>
+			<pubPlace>Ithaca</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Carlon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Orlandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Stella</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="198101" to="198101" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><surname>Poland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1859" to="1871" />
+			<date type="published" when="1974">1974</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Fixman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Freire</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="2693" to="2704" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Blake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Bizzaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Blake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Day</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Delcourt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Knowles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Marx</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Santalucia</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="370" to="375" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Yeramian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schaeffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Caudron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Claverie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Buc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="481" to="497" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Dill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="4602" to="4616" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">O</forename><surname>Gotoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tagashira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1033" to="1042" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Wartell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Benight</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rep</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="page" from="67" to="107" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Blake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Delcourt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucl Acid Res</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="3323" to="3332" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Gray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="783" to="793" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Gray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biopolymers</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="795" to="810" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

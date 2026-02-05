@@ -1,0 +1,435 @@
+{
+  "paper_id": "CC28A3100E795AC7C40F63FB81F6421B",
+  "title": "Multifractal statistics of Lagrangian velocity and acceleration in turbulence",
+  "arxiv_id": "arXiv:nlin/0403020v1[nlin.CD]",
+  "authors": [
+    {
+      "given": "L",
+      "family": "Biferale"
+    },
+    {
+      "given": "G",
+      "family": "Boffetta"
+    },
+    {
+      "given": "A",
+      "family": "Celani"
+    },
+    {
+      "given": "B J",
+      "family": "Devenish"
+    },
+    {
+      "given": "A",
+      "family": "Lanotte"
+    },
+    {
+      "given": "F",
+      "family": "Toschi"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Phys. Fluids",
+      "container_title": "Phys. Fluids",
+      "year": "1965",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R H",
+          "family": "Kraichnan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Turbulent Flows",
+      "container_title": "Turbulent Flows",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S B",
+          "family": "Pope"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Europhys. Lett",
+      "container_title": "Europhys. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Beck"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Lett. A",
+      "container_title": "Phys. Lett. A",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A K",
+          "family": "Aringazin"
+        },
+        {
+          "given": "M I",
+          "family": "Mazhitov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:cond-mat/0301516"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Arimitsu"
+        },
+        {
+          "given": "N",
+          "family": "Arimitsu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:nlin.CD/0305040"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Gotoh"
+        },
+        {
+          "given": "R H",
+          "family": "Kraichnan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "J. Fluid Mech",
+      "container_title": "J. Fluid Mech",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": null
+        },
+        {
+          "given": "La",
+          "family": "Porta"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Mordant"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "J. Fluid Mech",
+      "container_title": "J. Fluid Mech",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Ott"
+        },
+        {
+          "given": "J",
+          "family": "Mann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Ann. Rev. Fluid Mech",
+      "container_title": "Ann. Rev. Fluid Mech",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P K",
+          "family": "Yeung"
+        },
+        {
+          "given": "P",
+          "family": "Vedula"
+        },
+        {
+          "given": "P K",
+          "family": "Yeung"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Boffetta"
+        },
+        {
+          "given": "I M",
+          "family": "Sokolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Fluids",
+      "container_title": "Phys. Fluids",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Ishihara"
+        },
+        {
+          "given": "Y",
+          "family": "Kaneda"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Gotoh"
+        },
+        {
+          "given": "D",
+          "family": "Fukuyama"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:nlin.CD/0402032"
+        }
+      ],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Biferale"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "",
+      "container_title": "",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "U",
+          "family": "Frisch"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Turbulence and predictability in geophysical fluid dynamics",
+      "container_title": "Turbulence and predictability in geophysical fluid dynamics",
+      "year": "1985",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Parisi"
+        },
+        {
+          "given": "U",
+          "family": "Frisch"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "J. Phys., A",
+      "container_title": "J. Phys., A",
+      "year": "1984",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Benzi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Benzi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Fluids A",
+      "container_title": "Phys. Fluids A",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Biferale"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phil. Trans. R. Soc. Lond. A",
+      "container_title": "Phil. Trans. R. Soc. Lond. A",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M S",
+          "family": "Borgas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Chevillard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Boffetta"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Z S",
+          "family": "She"
+        },
+        {
+          "given": "E",
+          "family": "Lévêque"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Benzi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Phys. Fluids",
+      "container_title": "Phys. Fluids",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B L",
+          "family": "Sawford"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "J. Fluid Mech",
+      "container_title": "J. Fluid Mech",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R J",
+          "family": "Hill"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

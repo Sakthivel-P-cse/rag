@@ -1,0 +1,942 @@
+{
+  "paper_id": "78E309341D805929595BDA2B7ED1CF63",
+  "title": "Using the Output Embedding to Improve Language Models",
+  "arxiv_id": "arXiv:1608.05859v3[cs.CL]",
+  "authors": [
+    {
+      "given": "Ofir",
+      "family": "Press"
+    },
+    {
+      "given": "Lior",
+      "family": "Wolf"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Amittai",
+          "family": "Axelrod"
+        },
+        {
+          "given": "Xiaodong",
+          "family": "He"
+        },
+        {
+          "given": "Jianfeng",
+          "family": "Gao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Neural machine translation by jointly learning to align and translate",
+      "container_title": "Neural machine translation by jointly learning to align and translate",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.0473"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Simon",
+          "family": "Baker"
+        },
+        {
+          "given": "Roi",
+          "family": "Reichart"
+        },
+        {
+          "given": "Anna",
+          "family": "Korhonen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "J. Mach. Learn. Res",
+      "container_title": "J. Mach. Learn. Res",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Réjean",
+          "family": "Ducharme"
+        },
+        {
+          "given": "Pascal",
+          "family": "Vincent"
+        },
+        {
+          "given": "Christian",
+          "family": "Janvin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "J. Artif. Intell. Res.(JAIR)",
+      "container_title": "J. Artif. Intell. Res.(JAIR)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Elia",
+          "family": "Bruni"
+        },
+        {
+          "given": "Nam-Khanh",
+          "family": "Tran"
+        },
+        {
+          "given": "Marco",
+          "family": "Baroni"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Bart",
+          "family": "Van Merrienboer"
+        },
+        {
+          "given": "Caglar",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Fethi",
+          "family": "Bougares"
+        },
+        {
+          "given": "Holger",
+          "family": "Schwenk"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "The C Users Journal",
+      "container_title": "The C Users Journal",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Philip",
+          "family": "Gage"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Proceedings of the 33rd International Conference on Machine Learning",
+      "container_title": "Proceedings of the 33rd International Conference on Machine Learning",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yarin",
+          "family": "Gal"
+        },
+        {
+          "given": "Zoubin",
+          "family": "Ghahramani"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "A Theoretically Grounded Application of Dropout in Recurrent Neural Networks",
+      "container_title": "A Theoretically Grounded Application of Dropout in Recurrent Neural Networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1512.05287"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yarin",
+          "family": "Gal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Generating sequences with recurrent neural networks",
+      "container_title": "Generating sequences with recurrent neural networks",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoav",
+          "family": "Goldberg"
+        },
+        {
+          "given": "Omer",
+          "family": "Levy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Proc. 23rd International Conference on Machine learning (ICML'06)",
+      "container_title": "Proc. 23rd International Conference on Machine learning (ICML'06)",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Derek",
+          "family": "Greene"
+        },
+        {
+          "given": "Pádraig",
+          "family": "Cunningham"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Noisy activation functions",
+      "container_title": "Noisy activation functions",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.00391"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "¸aglar Gülc ¸ehre"
+        },
+        {
+          "given": "Marcin",
+          "family": "Moczulski"
+        },
+        {
+          "given": "Misha",
+          "family": "Denil"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Proceedings of the 18th ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "container_title": "Proceedings of the 18th ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Guy",
+          "family": "Halawi"
+        },
+        {
+          "given": "Gideon",
+          "family": "Dror"
+        },
+        {
+          "given": "Evgeniy",
+          "family": "Gabrilovich"
+        },
+        {
+          "given": "Yehuda",
+          "family": "Koren"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Simlex-999: Evaluating semantic models with (genuine) similarity estimation",
+      "container_title": "Simlex-999: Evaluating semantic models with (genuine) similarity estimation",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Felix",
+          "family": "Hill"
+        },
+        {
+          "given": "Roi",
+          "family": "Reichart"
+        },
+        {
+          "given": "Anna",
+          "family": "Korhonen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Distilling the knowledge in a neural network",
+      "container_title": "Distilling the knowledge in a neural network",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1503.02531"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Jeff",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Neural Comput",
+      "container_title": "Neural Comput",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Tying word vectors and word classifiers: A loss framework for language modeling",
+      "container_title": "Tying word vectors and word classifiers: A loss framework for language modeling",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1611.01462"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Hakan",
+          "family": "Inan"
+        },
+        {
+          "given": "Khashayar",
+          "family": "Khosravi"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Proceedings of the Seventeenth Conference on Computational Natural Language Learning, chapter Better Word Representations with Recursive Neural Networks for Morphology",
+      "container_title": "Proceedings of the Seventeenth Conference on Computational Natural Language Learning, chapter Better Word Representations with Recursive Neural Networks for Morphology",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Thang",
+          "family": "Luong"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Christopher",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies",
+      "container_title": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L Andrew",
+          "family": "Maas"
+        },
+        {
+          "given": "E Raymond",
+          "family": "Daly"
+        },
+        {
+          "given": "T Peter",
+          "family": "Pham"
+        },
+        {
+          "given": "Dan",
+          "family": "Huang"
+        },
+        {
+          "given": "Y Andrew",
+          "family": "Ng"
+        },
+        {
+          "given": "Christopher",
+          "family": "Potts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Comput. Linguist",
+      "container_title": "Comput. Linguist",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mitchell P",
+          "family": "Marcus"
+        },
+        {
+          "given": "Mary",
+          "family": null
+        },
+        {
+          "given": "Ann",
+          "family": "Marcinkiewicz"
+        },
+        {
+          "given": "Beatrice",
+          "family": "Santorini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "IN-TERSPEECH 2010, 11th Annual Conference of the International Speech Communication Association",
+      "container_title": "IN-TERSPEECH 2010, 11th Annual Conference of the International Speech Communication Association",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Martin",
+          "family": "Karafiát"
+        },
+        {
+          "given": "Lukás",
+          "family": "Burget"
+        },
+        {
+          "given": "Jan",
+          "family": "Cernocký"
+        },
+        {
+          "given": "Sanjeev",
+          "family": "Khudanpur"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "container_title": "2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomáš",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Stefan",
+          "family": "Kombrink"
+        },
+        {
+          "given": "Lukáš",
+          "family": "Burget"
+        },
+        {
+          "given": "Jan",
+          "family": "Černockỳ"
+        },
+        {
+          "given": "Sanjeev",
+          "family": "Khudanpur"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Efficient estimation of word representations in vector space",
+      "container_title": "Efficient estimation of word representations in vector space",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1301.3781"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Kai",
+          "family": "Chen"
+        },
+        {
+          "given": "Greg",
+          "family": "Corrado"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Kai",
+          "family": "Chen"
+        },
+        {
+          "given": "Greg S",
+          "family": "Corrado"
+        },
+        {
+          "given": "Jeff",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Learning longer memory in recurrent neural networks",
+      "container_title": "Learning longer memory in recurrent neural networks",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.7753"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Armand",
+          "family": "Joulin"
+        },
+        {
+          "given": "Sumit",
+          "family": "Chopra"
+        },
+        {
+          "given": "Michaël",
+          "family": "Mathieu"
+        },
+        {
+          "given": "Marc'aurelio",
+          "family": "Ranzato"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Eric",
+          "family": "Bhaskar Mitra"
+        },
+        {
+          "given": "Nick",
+          "family": "Nalisnick"
+        },
+        {
+          "given": "Rich",
+          "family": "Craswell"
+        },
+        {
+          "given": null,
+          "family": "Caruana"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andriy",
+          "family": "Mnih"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andriy",
+          "family": "Mnih"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "A fast and simple algorithm for training neural probabilistic language models",
+      "container_title": "A fast and simple algorithm for training neural probabilistic language models",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1206.6426"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Andriy",
+          "family": "Mnih"
+        },
+        {
+          "given": "Yee Whye",
+          "family": "Teh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "How to construct deep recurrent neural networks",
+      "container_title": "How to construct deep recurrent neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.6026"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "C",
+          "family": "¸aglar Gülc ¸ehre"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Edinburgh neural machine translation systems for wmt 16",
+      "container_title": "Edinburgh neural machine translation systems for wmt 16",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Rico",
+          "family": "Sennrich"
+        },
+        {
+          "given": "Barry",
+          "family": "Haddow"
+        },
+        {
+          "given": "Alexandra",
+          "family": "Birch"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Improving Neural Networks with Dropout. Master's thesis",
+      "container_title": "Improving Neural Networks with Dropout. Master's thesis",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nitish",
+          "family": "Srivastava"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Interspeech",
+      "container_title": "Interspeech",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Martin",
+          "family": "Sundermeyer"
+        },
+        {
+          "given": "Ralf",
+          "family": "Schlüter"
+        },
+        {
+          "given": "Hermann",
+          "family": "Ney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Quoc V",
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Recurrent neural network regularization",
+      "container_title": "Recurrent neural network regularization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.2329"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Adadelta: an adaptive learning rate method",
+      "container_title": "Adadelta: an adaptive learning rate method",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1212.5701"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Matthew"
+        },
+        {
+          "given": null,
+          "family": "Zeiler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "A fixed-size encoding method for variable-length sequences with its application to neural network language models",
+      "container_title": "A fixed-size encoding method for variable-length sequences with its application to neural network language models",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1505.01504"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Shiliang",
+          "family": "Zhang"
+        },
+        {
+          "given": "Hui",
+          "family": "Jiang"
+        },
+        {
+          "given": "Mingbin",
+          "family": "Xu"
+        },
+        {
+          "given": "Junfeng",
+          "family": "Hou"
+        },
+        {
+          "given": "Li-Rong",
+          "family": "Dai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Recurrent highway networks",
+      "container_title": "Recurrent highway networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1607.03474"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Julian G",
+          "family": "Zilly"
+        },
+        {
+          "given": "Rupesh Kumar",
+          "family": "Srivastava"
+        },
+        {
+          "given": "Jan",
+          "family": "Koutník"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

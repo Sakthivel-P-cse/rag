@@ -1,0 +1,731 @@
+{
+  "paper_id": "A2BB24E6E150514DDE5219593359E2BB",
+  "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+  "arxiv_id": "arXiv:1502.03167v3[cs.LG]",
+  "authors": [
+    {
+      "given": "Sergey",
+      "family": "Ioffe"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Proceedings of AISTATS 2010",
+      "container_title": "Proceedings of AISTATS 2010",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Xavier",
+          "family": "Glorot"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jeffrey",
+          "family": "Dean"
+        },
+        {
+          "given": "Greg S",
+          "family": "Corrado"
+        },
+        {
+          "given": null,
+          "family": "Monga"
+        },
+        {
+          "given": null,
+          "family": "Rajat"
+        },
+        {
+          "given": null,
+          "family": "Chen"
+        },
+        {
+          "given": null,
+          "family": "Kai"
+        },
+        {
+          "given": null,
+          "family": "Devin"
+        },
+        {
+          "given": null,
+          "family": "Matthieu"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": "Mark Z",
+          "family": "Mao"
+        },
+        {
+          "given": null,
+          "family": "Ranzato"
+        },
+        {
+          "given": null,
+          "family": "Marc'aurelio"
+        },
+        {
+          "given": null,
+          "family": "Senior"
+        },
+        {
+          "given": null,
+          "family": "Andrew"
+        },
+        {
+          "given": null,
+          "family": "Tucker"
+        },
+        {
+          "given": "Yang",
+          "family": "Paul"
+        },
+        {
+          "given": "Ke",
+          "family": "Ng"
+        },
+        {
+          "given": "Andrew Y",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Natural neural networks",
+      "container_title": "Natural neural networks",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Guillaume",
+          "family": "Desjardins"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "J. Mach. Learn. Res",
+      "container_title": "J. Mach. Learn. Res",
+      "year": "2011",
+      "idnos": [
+        {
+          "type": "ISSN",
+          "value": "1532-4435"
+        }
+      ],
+      "authors": [
+        {
+          "given": "John",
+          "family": "Duchi"
+        },
+        {
+          "given": null,
+          "family": "Hazan"
+        },
+        {
+          "given": null,
+          "family": "Elad"
+        },
+        {
+          "given": "Yoram",
+          "family": "Singer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Knowledge matters: Importance of prior information for optimization",
+      "container_title": "Knowledge matters: Importance of prior information for optimization",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1301.4083"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Gülc ¸ehre"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification",
+      "container_title": "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Neural Netw",
+      "container_title": "Neural Netw",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Hyvärinen"
+        },
+        {
+          "given": "E",
+          "family": "Oja"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "A literature survey on domain adaptation of statistical classifiers",
+      "container_title": "A literature survey on domain adaptation of statistical classifiers",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jing",
+          "family": "Jiang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Proceedings of the IEEE",
+      "container_title": "Proceedings of the IEEE",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "L",
+          "family": "Bottou"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "P",
+          "family": "Haffner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Neural Networks: Tricks of the trade",
+      "container_title": "Neural Networks: Tricks of the trade",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "L",
+          "family": "Bottou"
+        },
+        {
+          "given": "G",
+          "family": "Orr"
+        },
+        {
+          "given": "K",
+          "family": "Muller"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Proc. Computer Vision and Pattern Recognition",
+      "container_title": "Proc. Computer Vision and Pattern Recognition",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Lyu"
+        },
+        {
+          "given": "E",
+          "family": "Simoncelli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Vinod",
+          "family": "Nair"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Proceedings of the 30th International Conference on Machine Learning, ICML 2013",
+      "container_title": "Proceedings of the 30th International Conference on Machine Learning, ICML 2013",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Sanjeev. Parallel training of deep neural networks with natural gradient and parameter averaging",
+      "container_title": "Sanjeev. Parallel training of deep neural networks with natural gradient and parameter averaging",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1410.7455"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Daniel",
+          "family": "Povey"
+        },
+        {
+          "given": "Xiaohui",
+          "family": "Zhang"
+        },
+        {
+          "given": null,
+          "family": "Khudanpur"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "International Conference on Artificial Intelligence and Statistics (AISTATS)",
+      "container_title": "International Conference on Artificial Intelligence and Statistics (AISTATS)",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tapani",
+          "family": "Raiko"
+        },
+        {
+          "given": "Harri",
+          "family": "Valpola"
+        },
+        {
+          "given": "Yann",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "",
+      "container_title": "",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Olga",
+          "family": "Russakovsky"
+        },
+        {
+          "given": null,
+          "family": "Deng"
+        },
+        {
+          "given": null,
+          "family": "Jia"
+        },
+        {
+          "given": null,
+          "family": "Su"
+        },
+        {
+          "given": null,
+          "family": "Hao"
+        },
+        {
+          "given": "Jonathan",
+          "family": "Krause"
+        },
+        {
+          "given": null,
+          "family": "Satheesh"
+        },
+        {
+          "given": null,
+          "family": "Sanjeev"
+        },
+        {
+          "given": "Sean",
+          "family": "Ma"
+        },
+        {
+          "given": null,
+          "family": "Huang"
+        },
+        {
+          "given": null,
+          "family": "Zhiheng"
+        },
+        {
+          "given": "Andrej",
+          "family": "Karpathy"
+        },
+        {
+          "given": "Aditya",
+          "family": "Khosla"
+        },
+        {
+          "given": null,
+          "family": "Bernstein"
+        },
+        {
+          "given": null,
+          "family": "Michael"
+        },
+        {
+          "given": "Alexander C",
+          "family": "Berg"
+        },
+        {
+          "given": "Li",
+          "family": "Fei-Fei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+      "container_title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1312.6120"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Andrew M",
+          "family": "Saxe"
+        },
+        {
+          "given": "James L",
+          "family": "Mcclelland"
+        },
+        {
+          "given": null,
+          "family": "Ganguli"
+        },
+        {
+          "given": null,
+          "family": "Surya"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Journal of Statistical Planning and Inference",
+      "container_title": "Journal of Statistical Planning and Inference",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Hidetoshi",
+          "family": "Shimodaira"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "J. Mach. Learn. Res",
+      "container_title": "J. Mach. Learn. Res",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nitish",
+          "family": "Srivastava"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        },
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": "Ruslan",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Martens"
+        },
+        {
+          "given": null,
+          "family": "James"
+        },
+        {
+          "given": "George E",
+          "family": "Dahl"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Andrew. Going deeper with convolutions",
+      "container_title": "Andrew. Going deeper with convolutions",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1409.4842"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Christian",
+          "family": "Szegedy"
+        },
+        {
+          "given": null,
+          "family": "Liu"
+        },
+        {
+          "given": null,
+          "family": "Wei"
+        },
+        {
+          "given": null,
+          "family": "Jia"
+        },
+        {
+          "given": null,
+          "family": "Yangqing"
+        },
+        {
+          "given": null,
+          "family": "Sermanet"
+        },
+        {
+          "given": null,
+          "family": "Pierre"
+        },
+        {
+          "given": null,
+          "family": "Reed"
+        },
+        {
+          "given": null,
+          "family": "Scott"
+        },
+        {
+          "given": null,
+          "family": "Anguelov"
+        },
+        {
+          "given": null,
+          "family": "Dragomir"
+        },
+        {
+          "given": null,
+          "family": "Erhan"
+        },
+        {
+          "given": null,
+          "family": "Dumitru"
+        },
+        {
+          "given": null,
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "Rabinovich",
+          "family": "Vincent"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Advances in Neural Information Processing Systems 24",
+      "container_title": "Advances in Neural Information Processing Systems 24",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Simon",
+          "family": "Wiesler"
+        },
+        {
+          "given": "Hermann",
+          "family": "Ney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "container_title": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Simon",
+          "family": "Wiesler"
+        },
+        {
+          "given": null,
+          "family": "Richard"
+        },
+        {
+          "given": null,
+          "family": "Alexander"
+        },
+        {
+          "given": "Ralf",
+          "family": "Schlüter"
+        },
+        {
+          "given": "Hermann",
+          "family": "Ney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Deep image: Scaling up image recognition",
+      "container_title": "Deep image: Scaling up image recognition",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ren",
+          "family": "Wu"
+        },
+        {
+          "given": null,
+          "family": "Yan"
+        },
+        {
+          "given": null,
+          "family": "Shengen"
+        },
+        {
+          "given": null,
+          "family": "Shan"
+        },
+        {
+          "given": null,
+          "family": "Yi"
+        },
+        {
+          "given": "Qingqing",
+          "family": "Dang"
+        },
+        {
+          "given": "Gang",
+          "family": "Sun"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

@@ -1,0 +1,1342 @@
+{
+  "paper_id": "167F368768FC625EEB7B52A837C01B2A",
+  "title": "Neural Machine Translation in Linear Time",
+  "arxiv_id": null,
+  "authors": [
+    {
+      "given": "Nal",
+      "family": "Kalchbrenner"
+    },
+    {
+      "given": "Lasse",
+      "family": "Espeholt"
+    },
+    {
+      "given": "Karen",
+      "family": "Simonyan"
+    },
+    {
+      "given": "Aäron",
+      "family": "Van Den Oord"
+    },
+    {
+      "given": "Alex",
+      "family": "Graves"
+    },
+    {
+      "given": "Koray",
+      "family": "Kavukcuoglu"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Layer normalization",
+      "container_title": "Layer normalization",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1607.06450"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Lei",
+          "family": "Ba"
+        },
+        {
+          "given": null,
+          "family": "Jimmy"
+        },
+        {
+          "given": "Ryan",
+          "family": "Kiros"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Neural machine translation by jointly learning to align and translate",
+      "container_title": "Neural machine translation by jointly learning to align and translate",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1409.0473"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Journal of Machine Learning Research",
+      "container_title": "Journal of Machine Learning Research",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Ducharme"
+        },
+        {
+          "given": null,
+          "family": "Réjean"
+        },
+        {
+          "given": "Pascal",
+          "family": "Vincent"
+        },
+        {
+          "given": "Christian",
+          "family": "Jauvin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Semantic image segmentation with deep convolutional nets and fully connected crfs",
+      "container_title": "Semantic image segmentation with deep convolutional nets and fully connected crfs",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1412.7062"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Liang-Chieh",
+          "family": "Chen"
+        },
+        {
+          "given": null,
+          "family": "Papandreou"
+        },
+        {
+          "given": null,
+          "family": "George"
+        },
+        {
+          "given": null,
+          "family": "Kokkinos"
+        },
+        {
+          "given": null,
+          "family": "Iasonas"
+        },
+        {
+          "given": "Kevin",
+          "family": "Murphy"
+        },
+        {
+          "given": "Alan L",
+          "family": "Yuille"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Learning phrase representations using RNN encoderdecoder for statistical machine translation",
+      "container_title": "Learning phrase representations using RNN encoderdecoder for statistical machine translation",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1406.1078"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": null,
+          "family": "Van Merrienboer"
+        },
+        {
+          "given": null,
+          "family": "Bart"
+        },
+        {
+          "given": null,
+          "family": "Gülc ¸ehre"
+        },
+        {
+          "given": null,
+          "family": "Bougares"
+        },
+        {
+          "given": null,
+          "family": "Fethi"
+        },
+        {
+          "given": null,
+          "family": "Schwenk"
+        },
+        {
+          "given": null,
+          "family": "Holger"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Gated feedback recurrent neural networks",
+      "container_title": "Gated feedback recurrent neural networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1502.02367"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Junyoung",
+          "family": "Chung"
+        },
+        {
+          "given": null,
+          "family": "Gülc ¸ehre"
+        },
+        {
+          "given": null,
+          "family": "Caglar"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Hierarchical multiscale recurrent neural networks",
+      "container_title": "Hierarchical multiscale recurrent neural networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1609.01704"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Junyoung",
+          "family": "Chung"
+        },
+        {
+          "given": null,
+          "family": "Ahn"
+        },
+        {
+          "given": null,
+          "family": "Sungjin"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics",
+      "container_title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Junyoung",
+          "family": "Chung"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "ACL 2014 Ninth Workshop on Statistical Machine Translation",
+      "container_title": "ACL 2014 Ninth Workshop on Statistical Machine Translation",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Markus",
+          "family": "Freitag"
+        },
+        {
+          "given": null,
+          "family": "Peitz"
+        },
+        {
+          "given": null,
+          "family": "Stephan"
+        },
+        {
+          "given": null,
+          "family": "Wuebker"
+        },
+        {
+          "given": null,
+          "family": "Joern"
+        },
+        {
+          "given": null,
+          "family": "Ney"
+        },
+        {
+          "given": null,
+          "family": "Hermann"
+        },
+        {
+          "given": null,
+          "family": "Huck"
+        },
+        {
+          "given": null,
+          "family": "Matthias"
+        },
+        {
+          "given": null,
+          "family": "Sennrich"
+        },
+        {
+          "given": null,
+          "family": "Rico"
+        },
+        {
+          "given": null,
+          "family": "Durrani"
+        },
+        {
+          "given": null,
+          "family": "Nadir"
+        },
+        {
+          "given": null,
+          "family": "Nadejde"
+        },
+        {
+          "given": null,
+          "family": "Maria"
+        },
+        {
+          "given": null,
+          "family": "Williams"
+        },
+        {
+          "given": null,
+          "family": "Philip"
+        },
+        {
+          "given": null,
+          "family": "Koehn"
+        },
+        {
+          "given": null,
+          "family": "Philipp"
+        },
+        {
+          "given": "Teresa",
+          "family": "Herrmann"
+        },
+        {
+          "given": "Eunah",
+          "family": "Cho"
+        },
+        {
+          "given": "Alex",
+          "family": "Waibel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Generating sequences with recurrent neural networks",
+      "container_title": "Generating sequences with recurrent neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1308.0850"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "",
+      "container_title": "",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Ha"
+        },
+        {
+          "given": "A",
+          "family": "Dai"
+        },
+        {
+          "given": "Q V",
+          "family": "Le"
+        },
+        {
+          "given": null,
+          "family": "Hypernetworks"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Identity mappings in deep residual networks",
+      "container_title": "Identity mappings in deep residual networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1603.05027"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Kaiming",
+          "family": "He"
+        },
+        {
+          "given": null,
+          "family": "Zhang"
+        },
+        {
+          "given": null,
+          "family": "Xiangyu"
+        },
+        {
+          "given": null,
+          "family": "Ren"
+        },
+        {
+          "given": null,
+          "family": "Shaoqing"
+        },
+        {
+          "given": "Jian",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Field Guide to Dynamical Recurrent Networks",
+      "container_title": "Field Guide to Dynamical Recurrent Networks",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Yoshua"
+        },
+        {
+          "given": "Paolo",
+          "family": "Frasconi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "The human knowledge compression contest",
+      "container_title": "The human knowledge compression contest",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Marcus",
+          "family": "Hutter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Łukasz",
+          "family": "Kaiser"
+        },
+        {
+          "given": "Samy",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "International Conference on Learning Representations",
+      "container_title": "International Conference on Learning Representations",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": null,
+          "family": "Danihelka"
+        },
+        {
+          "given": null,
+          "family": "Ivo"
+        },
+        {
+          "given": "Alex",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "",
+      "container_title": "",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1610.00527"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": null,
+          "family": "Van Den Oord"
+        },
+        {
+          "given": null,
+          "family": "Aaron"
+        },
+        {
+          "given": null,
+          "family": "Simonyan"
+        },
+        {
+          "given": null,
+          "family": "Karen"
+        },
+        {
+          "given": null,
+          "family": "Danihelka"
+        },
+        {
+          "given": null,
+          "family": "Ivo"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": "Alex",
+          "family": "Graves"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Adam: A method for stochastic optimization",
+      "container_title": "Adam: A method for stochastic optimization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1412.6980"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Diederik P",
+          "family": "Kingma"
+        },
+        {
+          "given": "Jimmy",
+          "family": "Ba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "ACL",
+      "container_title": "ACL",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Minh-Thang And",
+          "family": "Luong"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Minh -",
+          "family": "Luong"
+        },
+        {
+          "given": null,
+          "family": "Thang"
+        },
+        {
+          "given": null,
+          "family": "Pham"
+        },
+        {
+          "given": null,
+          "family": "Hieu"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "INTERSPEECH 2010",
+      "container_title": "INTERSPEECH 2010",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": null,
+          "family": "Karafiát"
+        },
+        {
+          "given": null,
+          "family": "Martin"
+        },
+        {
+          "given": null,
+          "family": "Burget"
+        },
+        {
+          "given": null,
+          "family": "Lukás"
+        },
+        {
+          "given": "Jan",
+          "family": "Cernocký"
+        },
+        {
+          "given": null,
+          "family": "Khudanpur"
+        },
+        {
+          "given": null,
+          "family": "Sanjeev"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Recurrent memory array structures",
+      "container_title": "Recurrent memory array structures",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1607.03085"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Kamil",
+          "family": "Rocki"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Andrew. Deep inside convolutional networks: Visualising image classification models and saliency maps",
+      "container_title": "Andrew. Deep inside convolutional networks: Visualising image classification models and saliency maps",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1312.6034"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Karen",
+          "family": "Simonyan"
+        },
+        {
+          "given": "Andrea",
+          "family": "Vedaldi"
+        },
+        {
+          "given": "Zisserman",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Highway networks",
+      "container_title": "Highway networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1505.00387"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Rupesh",
+          "family": "Srivastava"
+        },
+        {
+          "given": null,
+          "family": "Kumar"
+        },
+        {
+          "given": "Klaus",
+          "family": "Greff"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Wavenet: A generative model for raw audio",
+      "container_title": "Wavenet: A generative model for raw audio",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1609.03499"
+        }
+      ],
+      "authors": [
+        {
+          "given": null,
+          "family": "Van Den Oord"
+        },
+        {
+          "given": null,
+          "family": "Aaron"
+        },
+        {
+          "given": null,
+          "family": "Dieleman"
+        },
+        {
+          "given": null,
+          "family": "Sander"
+        },
+        {
+          "given": null,
+          "family": "Zen"
+        },
+        {
+          "given": null,
+          "family": "Heiga"
+        },
+        {
+          "given": null,
+          "family": "Simonyan"
+        },
+        {
+          "given": null,
+          "family": "Karen"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": "Alex",
+          "family": "Graves"
+        },
+        {
+          "given": null,
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": null,
+          "family": "Nal"
+        },
+        {
+          "given": "Andrew",
+          "family": "Senior"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Van Den Oord"
+        },
+        {
+          "given": null,
+          "family": "Aäron"
+        },
+        {
+          "given": null,
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "container_title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Philip",
+          "family": "Williams"
+        },
+        {
+          "given": null,
+          "family": "Sennrich"
+        },
+        {
+          "given": null,
+          "family": "Rico"
+        },
+        {
+          "given": null,
+          "family": "Nadejde"
+        },
+        {
+          "given": null,
+          "family": "Maria"
+        },
+        {
+          "given": "Matthias",
+          "family": "Huck"
+        },
+        {
+          "given": "Philipp",
+          "family": "Koehn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Googles neural machine translation system: Bridging the gap between human and machine translation",
+      "container_title": "Googles neural machine translation system: Bridging the gap between human and machine translation",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1609.08144"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yonghui",
+          "family": "Wu"
+        },
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": null,
+          "family": "Chen"
+        },
+        {
+          "given": null,
+          "family": "Zhifeng"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": null,
+          "family": "Norouzi"
+        },
+        {
+          "given": null,
+          "family": "Mohammad"
+        },
+        {
+          "given": null,
+          "family": "Macherey"
+        },
+        {
+          "given": null,
+          "family": "Wolfgang"
+        },
+        {
+          "given": null,
+          "family": "Krikun"
+        },
+        {
+          "given": null,
+          "family": "Maxim"
+        },
+        {
+          "given": null,
+          "family": "Cao"
+        },
+        {
+          "given": null,
+          "family": "Yuan"
+        },
+        {
+          "given": null,
+          "family": "Gao"
+        },
+        {
+          "given": null,
+          "family": "Qin"
+        },
+        {
+          "given": null,
+          "family": "Macherey"
+        },
+        {
+          "given": null,
+          "family": "Klaus"
+        },
+        {
+          "given": null,
+          "family": "Klingner"
+        },
+        {
+          "given": null,
+          "family": "Jeff"
+        },
+        {
+          "given": null,
+          "family": "Shah"
+        },
+        {
+          "given": null,
+          "family": "Apurva"
+        },
+        {
+          "given": null,
+          "family": "Johnson"
+        },
+        {
+          "given": null,
+          "family": "Melvin"
+        },
+        {
+          "given": null,
+          "family": "Liu"
+        },
+        {
+          "given": null,
+          "family": "Xiaobing"
+        },
+        {
+          "given": null,
+          "family": "Kaiser"
+        },
+        {
+          "given": null,
+          "family": "Gouws"
+        },
+        {
+          "given": null,
+          "family": "Stephan"
+        },
+        {
+          "given": null,
+          "family": "Kato"
+        },
+        {
+          "given": null,
+          "family": "Yoshikiyo"
+        },
+        {
+          "given": null,
+          "family": "Kudo"
+        },
+        {
+          "given": null,
+          "family": "Taku"
+        },
+        {
+          "given": null,
+          "family": "Kazawa"
+        },
+        {
+          "given": null,
+          "family": "Hideto"
+        },
+        {
+          "given": null,
+          "family": "Stevens"
+        },
+        {
+          "given": null,
+          "family": "Keith"
+        },
+        {
+          "given": null,
+          "family": "Kurian"
+        },
+        {
+          "given": null,
+          "family": "George"
+        },
+        {
+          "given": null,
+          "family": "Patil"
+        },
+        {
+          "given": null,
+          "family": "Nishant"
+        },
+        {
+          "given": null,
+          "family": "Wang"
+        },
+        {
+          "given": null,
+          "family": "Wei"
+        },
+        {
+          "given": null,
+          "family": "Young"
+        },
+        {
+          "given": null,
+          "family": "Cliff"
+        },
+        {
+          "given": "Jason",
+          "family": "Smith"
+        },
+        {
+          "given": "Jason",
+          "family": "Riesa"
+        },
+        {
+          "given": "Alex",
+          "family": "Rudnick"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Corrado"
+        },
+        {
+          "given": null,
+          "family": "Greg"
+        },
+        {
+          "given": null,
+          "family": "Hughes"
+        },
+        {
+          "given": null,
+          "family": "Macduff"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "On multiplicative integration with recurrent neural networks",
+      "container_title": "On multiplicative integration with recurrent neural networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1606.06630"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yuhuai",
+          "family": "Wu"
+        },
+        {
+          "given": null,
+          "family": "Zhang"
+        },
+        {
+          "given": null,
+          "family": "Saizheng"
+        },
+        {
+          "given": null,
+          "family": "Zhang"
+        },
+        {
+          "given": null,
+          "family": "Ying"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Yoshua"
+        },
+        {
+          "given": "Ruslan",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Multi-scale context aggregation by dilated convolutions",
+      "container_title": "Multi-scale context aggregation by dilated convolutions",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1511.07122"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Fisher",
+          "family": "Yu"
+        },
+        {
+          "given": "Vladlen",
+          "family": "Koltun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Deep recurrent models with fast-forward connections for neural machine translation",
+      "container_title": "Deep recurrent models with fast-forward connections for neural machine translation",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1606.04199"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Jie",
+          "family": "Zhou"
+        },
+        {
+          "given": null,
+          "family": "Cao"
+        },
+        {
+          "given": null,
+          "family": "Ying"
+        },
+        {
+          "given": null,
+          "family": "Wang"
+        },
+        {
+          "given": null,
+          "family": "Xuguang"
+        },
+        {
+          "given": null,
+          "family": "Li"
+        },
+        {
+          "given": null,
+          "family": "Peng"
+        },
+        {
+          "given": "Wei",
+          "family": "Xu"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

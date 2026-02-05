@@ -1,0 +1,7 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_120313_485960.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): In a biological simulation, selfish behavior should dominate, but I still see cooperation emerging. Why doesn’t natural selection eliminate cooperative traits?
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251223_120317_770510.json
+[retrieve] Query (first 200 chars): What mechanisms allow cooperative traits to persist in biological simulations despite the presence of selfish behavior and natural selection?  Search hints: evolutionary game theory, prisoner's dilemm
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20

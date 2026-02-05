@@ -1,0 +1,111 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_133653_977514.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): I’m training a deep neural network and I’m seeing very unstable gradients in the first few epochs. The loss oscillates a lot and sometimes diverges. I want a principled way to stabilize training witho
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251222_133700_570842.json
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_133653_977514.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=3
+[judge] refined_question: What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[judge] search_hint: gradient stabilization, loss regularization, early stopping, learning rate scheduling, batch normalization, gradient clipping, weight decay, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1602.07868v3.tei.tei chunk_id=1602.07868v3.tei.tei_chunk-5 retr_score=0.4200 section=Gradients :: The rate of increase will depend on the the variance of the weight gradient. If our gradients are noisy, c will be high and the norm of v will quickly increase,...
+[judge] cand#2: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-5 retr_score=0.4077 section=Towards Reducing Internal Covariate Shift :: Thus, the combination of the update to b and subsequent change in normalization led to no change in the output of the layer nor, consequently, the loss. As the ...
+[judge] cand#3: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-13 retr_score=0.3924 section=ImageNet classification :: In our experiments, we evaluated several modifications of Inception with Batch Normalization. In all cases, Batch Normalization was applied to the input of each...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["methods to stabilize deep neural network training without modifying the architecture", "addressing unstable gradients and loss oscillation in early epochs"],   "next_question": "What techniques can be used to stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering methods such as weight normalization, batch normalization, and learning rate scheduling?",   "accept": [     {"chunk_id": "1602.07868v3.tei.tei_chunk-5", "
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251222_133746_518803.json
+[judge] satisfied=False
+[judge] Accepted this iter: 3 | Rejected this iter: 0 | Total accepted: 3 | Total rejected: 0
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): What techniques can be used to stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering m
+[judge] search_hint: weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques
+[retrieve] Query (first 200 chars): What techniques can be used to stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering m
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1607.06450v1.tei.tei chunk_id=1607.06450v1.tei.tei_chunk-1 retr_score=0.4451 section=Abstract :: Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the training time is to normalize the activities of the neurons....
+[judge] cand#2: paper_id=1510.01378v1.tei.tei chunk_id=1510.01378v1.tei.tei_chunk-3 retr_score=0.4173 section=Batch Normalization :: where m is the size of the mini-batch. Using these statistics, we can standardize each feature as follows  where is a small positive constant to improve numeric...
+[judge] cand#3: paper_id=1603.09025v5.tei.tei chunk_id=1603.09025v5.tei.tei_chunk-2 retr_score=0.4042 section=INTRODUCTION :: Batch normalization (Ioffe & Szegedy, 2015) is a recently proposed technique for controlling the distributions of feed-forward neural network activations, there...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["techniques to stabilize deep neural network training without modifying the architecture", "methods to address unstable gradients and loss oscillation in early epochs"],   "next_question": "What methods can stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering techniques such as weight normalization, batch normalization, and learning rate scheduling?",   "accept": [     {"chunk_id": "1607.06450v1.tei.tei_chunk-1", "
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251222_133813_454986.json
+[judge] satisfied=False
+[judge] Accepted this iter: 3 | Rejected this iter: 0 | Total accepted: 6 | Total rejected: 0
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering techniques such
+[judge] search_hint: weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques, layer normalization, recurrent neural networks
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation in early epochs, considering techniques such
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 1 chunks
+[judge] Retrieved 1 candidate chunks
+[judge] cand#1: paper_id=1701.06538v1.tei.tei chunk_id=1701.06538v1.tei.tei_chunk-8 retr_score=0.4038 section=ADDRESSING PERFORMANCE CHALLENGES :: Increasing Batch Size for a Recurrent MoE: We suspect that even more powerful models may involve applying a MoE recurrently. For example, the weight matrices of...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["insufficient evidence for stabilization methods in deep neural networks without modifying architecture", "unresolved techniques for addressing unstable gradients and loss oscillation in early epochs"],   "next_question": "What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as weight normalization, batch normalization, and learning rate scheduling?",   "accept": [],   "reject": [{"chun
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251222_133839_155985.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 1 | Total accepted: 6 | Total rejected: 1
+
+[judge] ===== Iteration 4 =====
+[judge] retrieval_query (first 200 chars): What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as 
+[judge] search_hint: weight normalization, batch normalization, learning rate scheduling, gradient clipping, early stopping, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation, normalization techniques, layer normalization, recurrent neural networks, stabilization methods, architecture modification
+[retrieve] Query (first 200 chars): What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as 
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 0 chunks
+[judge] No candidates retrieved; stopping.
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What stabilization methods can be applied to deep neural networks without modifying the architecture to address unstable gradients and loss oscillation in early epochs, considering techniques such as 
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What weight normalization techniques can be applied to deep neural networks to address unstable gradients in early epochs?
+[retrieve] Query (first 200 chars): What weight normalization techniques can be applied to deep neural networks to address unstable gradients in early epochs?  Search hints: weight normalization, deep neural networks, unstable gradients
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How does batch normalization impact loss oscillation in deep neural networks, and what are its limitations?
+[retrieve] Query (first 200 chars): How does batch normalization impact loss oscillation in deep neural networks, and what are its limitations?  Search hints: batch normalization, loss oscillation, deep neural networks, stabilization me
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What learning rate scheduling strategies can be employed to mitigate unstable gradients and loss oscillation in deep neural networks without
+[retrieve] Query (first 200 chars): What learning rate scheduling strategies can be employed to mitigate unstable gradients and loss oscillation in deep neural networks without modifying the architecture?  Search hints: learning rate sc
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 6 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_134128_602277.json

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Examination of self interaction correction methods for Na clusters</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="1999-06-16">16 Jun 1999</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">K</forename><surname>Yoshizaki</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Tohoku University</orgName>
+								<address>
+									<postCode>980-8578</postCode>
+									<settlement>Sendai</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><surname>Ono</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Tohoku University</orgName>
+								<address>
+									<postCode>980-8578</postCode>
+									<settlement>Sendai</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">N</forename><surname>Takigawa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Tohoku University</orgName>
+								<address>
+									<postCode>980-8578</postCode>
+									<settlement>Sendai</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Examination of self interaction correction methods for Na clusters</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="1999-06-16">16 Jun 1999</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8828A8EE6A8A1EEECD1962CEA43B1BA1</idno>
+					<idno type="arXiv">arXiv:cond-mat/9906230v1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We examine whether the self interaction correction method by Harrison, which does not introduce the spherical single particle density approximation to energy functional, can be applied to Na clusters. We show that it does not work well, especially, for large clusters, though it works well for atomic systems. We suggest that it is better to apply this method only to the Hartree term. We also show that the effects of non-diagonal Lagrange multiplier originating from the orthonormality of single particle orbitals are negligible.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The local density approximation (LDA) provides a powerful practical technique to apply the Kohn-Sham framework <ref type="bibr" target="#b0">[1]</ref> to interacting many body problems. A problem of this method is unphysical self interaction, i.e. the interaction of a particle with itself. Perdew and Zunger <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b2">3]</ref> proposed a prescription to remedy this shortcoming, which has been used for atoms <ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref>, molecules <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7]</ref>, bulk systems <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9]</ref> and also metal clusters <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref>. Though there still remain some effects of self interaction, the major part of the problem is removed in this method. Compared with the Hartree-Fock theory, which is free from the self interaction problem, the local density approximation with the self interaction correction (SIC) has advantages such as, i) exchange and correlation energies can be relatively easily handled in the same manner, ii) the resultant single particle energies well approximate the physical removal energy from each orbit, iii) the numerical calculation is much lighter, especially for three dimensional calculations.</p><p>A characteristic feature of the SIC method of Perdew and Zunger is that the energy functional depends not only on the total density, but explicitly also on the density of each single particle orbital. In almost all calculations for closed shell atoms and metal clusters, the single particle densities in the energy functional are substituted by the spherically averaged densities. The central single particle potential is then deduced by taking functional derivative of the resultant energy functional with respect to the spherically averaged single particle density. Following more closely the original idea of Perdew and Zunger, on the other hand, Harrison <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b4">5]</ref> proposed a method of using the original single particle densities without introducing spherical averaging. Since the energy functional is not invariant under unitary transformation of single particle orbitals, Harrison represented the single particle orbitals by either spherical harmonics or Cartesian basis as two choices.</p><p>Though the method by Harrison works well for atoms <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b4">5]</ref>, it has not been tested for metal clusters. We address this question in this paper by taking Na clusters as an example. We show that it does not work well, especially for large clusters which have single particle orbitals with large angular momentum. We confine our study to the exchange energy without referring to the correlation energy in order to make the argument clear and compare the results with those of Hartree-Fock calculations. We show that a better agreement with the Hartree-Fock calculations is obtained if one applies Harrison's method only to the Hartree term.</p><p>In addition to the validity of Harrison's method, we discuss in this paper the problem of non-diagonal Lagrange multipliers originating from the orthonormality of single particle orbitals in the self interaction correction method of Perdew and Zunger. We show that the non-diagonal property of the Lagrange multipliers introduces a negligible effect to single particle energies as well as the total energy.</p><p>The paper is organized as follows. In Sec.II the SIC method of Perdew and Zunger and Harrison's approach are briefly explained. In Sec.III A the exchange energies calculated by several SIC methods are compared, and the effect of non-diagonal Lagrange multipliers is discussed in Sec.III B. Summary and conclusion are given in Sec.IV.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. SIC FORMALISM AND HARRISON'S METHOD</head><p>The total energy in the self interaction corrected local density approximation (SIC-LDA) by Perdew and Zunger <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b2">3]</ref> is expressed as</p><formula xml:id="formula_0">E TOT = T + E ext + E H + E SIC X ,<label>(1)</label></formula><p>where</p><formula xml:id="formula_1">T = - 1 2 i d 3 r ψ * i (r)∇ 2 ψ i (r) ,<label>(2)</label></formula><formula xml:id="formula_2">E ext [ρ] = d 3 r v ext (r)ρ(r) ,<label>(3)</label></formula><formula xml:id="formula_3">E H [ρ] = 1 2 d 3 r d 3 r ′ ρ(r)ρ(r ′ ) |r -r ′ | ,<label>(4)</label></formula><formula xml:id="formula_4">E SIC X = E LDA X [ρ ↑ , ρ ↓ ] - N i=1 E H [ρ i ] + E LDA X [ρ i , 0] ,<label>(5)</label></formula><formula xml:id="formula_5">E LDA X [ρ ↑ , ρ ↓ ] = - 3 2 3 4π 1/3 σ=↑,↓ d 3 r ρ σ (r) 4/3 . (<label>6</label></formula><formula xml:id="formula_6">)</formula><p>Here all quantities are in Hartree atomic units, i.e. m = e 2 = h = 1. As mentioned in the introduction, the correlation energy has been neglected. We take the effects of ions into account in the spherical jellium model. The external potential is then given by</p><formula xml:id="formula_7">v ext (r) = -Z/(2R jell ) 3 -(r/R jell ) 2 r ≤ R jell -Z/r r &gt; R jell ,<label>(7)</label></formula><p>where the jellium radius R jell is related to the number of atoms in the cluster Z by R jell = r s Z 1/3 , r s being the bulk Wigner-Seitz radius which is 4 a.u. for Na. The Euler equation under the orthonormality condition</p><formula xml:id="formula_8">δ δψ * i (r)    E tot + ij ǫ ij δ ij -d 3 r ψ * j (r)ψ i (r)    = 0 (8)</formula><p>results in the following coupled equations for the single particle wave functions</p><formula xml:id="formula_9">- 1 2 ∇ 2 + v ext (r) + d 3 r ′ ρ(r ′ ) |r -r ′ | + v SIC(i) X (r) ψ i (r) = j ǫ ij ψ j (r) ,<label>(9)</label></formula><p>v</p><formula xml:id="formula_10">SIC(i) X (r) = - 3 π 1/3 ρ 1/3 (r) - d 3 r ′ ρ i (r ′ ) |r -r ′ | -2 3 4π 1/3 ρ 1/3 i (r) .<label>(10)</label></formula><p>The Lagrange multiplier ǫ ij becomes non-diagonal because of the orbital dependence of the self interaction corrected exchange potential. In the following, we approximate it by the diagonal components and solve the following non-coupled equations [3]</p><formula xml:id="formula_11">- 1 2 ∇ 2 + v ext (r) + d 3 r ′ ρ(r ′ ) |r -r ′ | + v SIC(i) X (r) ψ i (r) = ǫ i ψ i (r)<label>(11)</label></formula><p>We discuss the validity of this approximation in Sec. III B for Na clusters. As we see in Eq.( <ref type="formula" target="#formula_4">5</ref>) the SIC method of Perdew and Zunger is characteristic in that the total energy functional depends explicitly on the individual orbital density. A consequence is that it loses invariance under the unitary transformation of single particle orbitals.</p><p>Another problem is that the numerical load is heavy, because one has to solve threedimensional equations instead of the one-dimensional equations for the radial motion of electrons even for closed shell atoms and metal clusters. In applying this formalism to those systems, one usually replaces ρ i (r) in the curly brackets in Eqs.( <ref type="formula" target="#formula_4">5</ref>) and ( <ref type="formula" target="#formula_10">10</ref>) by the spherically averaged orbital density given by ρi (r)</p><formula xml:id="formula_12">ρi (r) = 1 4π dr ρ i (r) .<label>(12)</label></formula><p>This prescription certainly reduces the numerical load, because the resultant single particle potentials become central potentials. However, it does not optimize the SIC following the original scheme of Perdew and Zunger.</p><p>Harrison proposed an alternative procedure, which avoids replacing the single particle densities in the energy functional by spherically averaged ones. As mentioned in the introduction, he expressed them in the spherical harmonic basis</p><formula xml:id="formula_13">ρ SH nlm (r) = u nl (r) r Y m l (r) 2 ,<label>(13)</label></formula><p>or in Cartesian basis</p><formula xml:id="formula_14">ρ C nlm (r) =              u nl (r) r Y 0 l (r) 2 m = 0 u nl (r) r Y |m| l (r) ± Y -|m| l (r) √ 2 2 m = 0 .<label>(14)</label></formula><p>He noticed that the resultant energy functional can be expressed in terms of the spherically averaged orbital density after the integration over angle,</p><formula xml:id="formula_15">E SIC X = E LDA X [ρ ↑ , ρ ↓ ] - n,l 2(2l + 1) 2l k=0 E k,l H [ρ nl ] + c l X E LDA X [ρ nl , 0] ,<label>(15)</label></formula><formula xml:id="formula_16">E k,l H [ρ nl ] = 1 2 c k,l H dr dr ′ |u nl (r)| 2 |u nl (r ′ )| 2 r k &lt; r k+1 &gt; .<label>(16)</label></formula><p>The coefficients c k,l H and c l X for each of the spherical harmonic and Cartesian representations are listed in Tables I and II. Harrison then calculated the corresponding central potential for each set of quantum nembers n, l by taking the functional derivative with respect to the spherically averaged orbital density ρnl (r)  v</p><formula xml:id="formula_17">SIC(nl) X (r) = δE SIC X [ρ nl ] δ ρnl (r) .<label>(17)</label></formula><p>Though this method restricts the variational space smaller than that in the original scheme of Perdew and Zunger since it presumes a spherically symmetric potential from the beginning, Harrison showed that his method still improves both the exchange energy and the total energy for atoms compared with the simple procedure where ρ i (r) is replaced by the spherically averaged orbital density.</p><p>It is an interesting question to see whether Harrison's method can be applied to metal clusters. A simple minded consideration would suggest that Harrison's method becomes more powerful in metal clusters. This is because Harrison's treatment should have a large effect on high angular momentum orbitals which play more important roles in metal clusters than in atoms where the main contribution to the SIC originates from the 1s state <ref type="bibr" target="#b2">[3]</ref>. In the next section, we apply Harrison's method to Na clusters, and show that it does not work well contrary to the simple expectation. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS AND DISCUSSION</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Exchange and total energy</head><p>We compare in Table <ref type="table" target="#tab_2">III</ref> the exchange energy per electron for Na clusters calculated by several methods. In this table and in what follows, the abbreviations SA-SICX, SH-SICX and C-SICX stand for the SICX calculation using the spherically averaged, spherical harmonic and Cartesian orbital densities, respectively. The difference between the HF and the other calculations represents the error of each method since the HF calculation provides the exact exchange energy. Strictly speaking, the exact exchange energy in the Kohn-Sham formalism is the one given by the optimized effective potential method <ref type="bibr" target="#b12">[13]</ref>. It is known, however, that it is nearly the same as that given by the HF calculation for atoms <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14]</ref>.</p><p>We first compare the results of HF, LDAX and SA-SICX for four different Na clusters. The order of the estimated exchange energies, which are negative, is LDAX &gt; SA-SICX &gt; HF irrespectively of the size of the Na cluster. This is different from the order for atoms, where LDAX &gt; HF &gt; SA-SICX <ref type="bibr" target="#b3">[4]</ref>. The deviation of the result of LDAX from that of HF gets smaller with the size of the Na cluster, while that of SA-SICX is almost constant.</p><p>We next compare the results of HF and three SIC methods. The absolute value of the exchange energy calculated by using the spherical harmonic and Cartesian orbital densities becomes smaller than that estimated by the SA-SICX. Including the negative sign, the order is C-SICX &gt; SH-SICX &gt; SA-SICX. Consequently, the deviation of the results of SH-SICX and C-SICX from that of the HF gets larger than that for SA-SICX. These two calculations are even worse than LDAX for large systems. Their deviation from the HF calculation gets larger with increasing size of the cluster.</p><p>For atoms, the order of the exchange energies C-SICX &gt; SH-SICX &gt; SA-SICX is the same as that for Na clusters. However, the result of C-SICX is still below that of HF. This means that both of SH-SICX and C-SICX have smaller deviation from the HF result than SA-SICX and provide better prescriptions for atoms. We now investigate the reason why the SH-SICX and C-SICX methods are inferior to SA-SICX for Na clusters. Since the self-consistent density in the three SICX methods is almost the same, the first term of Eq.( <ref type="formula" target="#formula_15">15</ref>) is nearly the same for the three methods. The major difference among them is therefore associated with the second term of Eq.( <ref type="formula" target="#formula_15">15</ref>), which consists of contributions from orbitals with various n, l quantum numbers. In order to see the physics clearly, we consider the following self interaction averaged over the azimuthal quantum number for each set of quantum numbers n, l,</p><formula xml:id="formula_18">1 2l + 1 m E H [ρ lnm ] + E LDA X [ρ nlm , 0] . (<label>18</label></formula><formula xml:id="formula_19">)</formula><p>Its value evaluated by inserting the orbital densities given by Eqs.( <ref type="formula" target="#formula_12">12</ref>), ( <ref type="formula" target="#formula_13">13</ref>) and ( <ref type="formula" target="#formula_14">14</ref>) is compared in Fig. <ref type="figure" target="#fig_0">1</ref> for the occupied orbitals in Na 40 .</p><p>The three methods agree well for the s orbitals. The small differences originate from a subtle difference of the total densities in the three methods. On the other hand, a large difference appears among them for the finite angular momentum states, i.e. for the p, d and f orbitals. Two specific features can be remarked, i) always SA-SICX &gt; SH-SICX &gt; C-SICX, and ii) the higher the orbital angular momentum is, the larger the differences among them are.</p><p>The key point to understand these features is the degree of localization of single particle density adopted in the three SICX methods. Clearly they differ in their angular treatment of the orbital density. C-SICX has the most distinct localization in angle, while SA-SICX has, of course, no angular localization. Symborically, we express this situation of the degree of localization as C-SICX &gt; SH-SICX &gt; SA-SICX. This difference gets more prominent for higher angular momentum.</p><p>The problem is that the angular localization property affects the self Hartree term, i.e. the first term in the curly brackets in Eq.( <ref type="formula" target="#formula_4">5</ref>), and the self exchange terms, i.e. the second term, in different way. Since the self Hartree term uses the exact long range Coulomb interaction between electrons, it does not depend so much on the density profile of electrons including the angular localization. On the other hand, the self exchange term is evaluated based on the LDA. This is equivalent to assuming a short range δ interaction, which leads to  a strong sensitivity of the exchange energy on the details of the density profile of electrons. The more the orbital localizes, the larger the absolute value of the self exchange energy is. In C-SICX, which has the most prominent angular localization, the negative self exchange energy increases with angular momentum and eventually overwhelms the self Hartree term resulting in the sign change of the total self interaction energy. This can be clearly seen in Fig. <ref type="figure" target="#fig_0">1</ref>. A less prominent, but a similar, trend can be seen also for SH-SICX. However, this strong sensitivity of the self correction energy to the angular localization of electronic density may be unphysical because the LDA for the exchange term cannot be justified for the localized density in SH-SICX and C-SICX. The use of spherically averaged density in the SA-SICX moderates to some extent the overamplification of the angular localization dependendence leading to a better approximation.</p><p>The localization of radial wave functions in atoms is very different from that in Na clusters when one compares the states with the same nodal quantum number. For example, 1s and 1p orbitals have very similar radial distibution in Na clusters, while the latter (2p in the atomic notation) is much more extended than the former in atoms. Consequently, the self interaction correction mainly originates from the most localized 1s state <ref type="bibr" target="#b2">[3]</ref> in atoms. Moreover, only small angular momentum orbitals appear in atoms. Thus, the problem stated above, i.e. the unphysical strong angular localization dependence does not cause so serious trouble in atoms.</p><p>To remedy the problem for Na clusters, we propose to utilize spherical harmonic and Cartesian orbital densities only for the self Hartree term. This is a natural consequence of the considerations mentioned above. The exchange energy calculated in this way is given in the lower side in the rows for SH-SICX and C-SICX in Table <ref type="table" target="#tab_2">III</ref>. They are designated by the label "(H only)". All of the H-only exchange energies better agree with that in HF than the corresponding results of the SH-SICX and C-SICX which have been calculated using the spherical harmonic or Cartesian orbital densities both for the self Hartree and exchange terms (the upper side in each row). Especially, H-only SH-SICX is superior to the SA-SICX for most systems. We remark that a similar improvement has been obtained by the H-only method concerning the total energy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Effects of non-diagonal Lagrange multipliers</head><p>Before we conclude the paper we comment on the effects of off-diagonal Lagrange multipliers in Eq.( <ref type="formula" target="#formula_9">9</ref>). We performed calculations by keeping off-diagonal Lagrange multipliers for Na 20 and Na 40 with SA-SICX, SH-SICX and C-SICX. We found that the differences of the total energy and single particle energy obtained by self-consistently solving Eq.( <ref type="formula" target="#formula_9">9</ref>) and Eq.( <ref type="formula" target="#formula_11">11</ref>) are less than 10 -1 eV and 10 -2 eV, respectively. We therefore conjecture that one can safely ignore the off-diagonal components of the Lagrange multipliers for Na clusters. This result is consistent with that in Ref. <ref type="bibr" target="#b4">[5]</ref> for atoms.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. SUMMARY AND CONCLUSION</head><p>We have calculated the self interaction corrected exchange energy for Na clusters by using spherically averaged, spherical harmonic and Cartesian orbital densities. We found that both calculations using the spherical harmonic and Cartesian orbital densities deviate from the HF results more than the calculations with spherically averaged orbital densities. The deviation is especially large for systems with large angular momentum orbitals. We attribute this problem to the LDA to evaluate the self exchange term. From this consideration, we propose to use the spherical harmonic and Cartesian orbital deinsities only for the self Hartree term and to use spherically averaged orbital densities for the self exchange term. We have shown that this treatment improves indeed the exchange energy to well reproduce the results of HF calculations. We expect that the remaining errors can be diminished by the SIC using GGA(generalized gradient approximation) <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref>.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. Each orbital contribution to the self interaction energy for Na 40 . SA, SH and C mean the SICX with spherically averaged, spherical harmonic and Cartesian orbital densities, respectively.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE II .</head><label>II</label><figDesc>The coefficients c l X for the exchange term.</figDesc><table /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE III .</head><label>III</label><figDesc>Exchange energy per electron in eV. SA-SICX, SH-SICX and C-SICX are the abbreviations of the SICX calculated with spherically averaged, spherical harmonic and Cartesian orbital densities. H only means that only the Hartree term has been calculated by using either spherical harmonic or Cartesian bases (see text).</figDesc><table><row><cell></cell><cell>Na 8</cell><cell>Na 20</cell><cell>Na 40</cell><cell>Na 92</cell></row><row><cell>HF LDAX SA-SICX SH-SICX (H only) C-SICX (H only)</cell><cell>-2.95 -2.68 -2.93 -2.87 -3.00 -2.82 -3.07</cell><cell>-2.95 -2.78 -2.91 -2.84 -2.96 -2.78 -3.01</cell><cell>-2.95 -2.84 -2.91 -2.83 -2.96 -2.77 -3.00</cell><cell>-3.03 -2.93 -2.95 -2.87 -3.00 -2.80 -3.02</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE IV .</head><label>IV</label><figDesc>Total energy for Na clusters in eV. The relative error of each method (the difference between the values in each method and HF divided by the HF value) is shown in parentheses.</figDesc><table /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGEMENT</head><p>We are thankful to <rs type="person">David M. Brink</rs> for enlightening discussions.</p></div>
+			</div>			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Sham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. A</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page">1133</biblScope>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">127</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zunger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page">5048</biblScope>
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Harrison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Heaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. B</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">2079</biblScope>
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Pederson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Heaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<date type="published" when="1972">1972. 1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Heaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Pederson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Heaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">5992</biblScope>
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Harrison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">987</biblScope>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Madjet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Guet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. A</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page">1327</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">N</forename><surname>Onwuagba</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Commun</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">535</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Pacheco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ekardt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">6667</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Talman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Shadwick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. A</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">36</biblScope>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Krieger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Iafrate</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. A</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">165</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">8800</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Becke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page">6671</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ishii</surname></persName>
+		</author>
+		<title level="m">Computational Physics as a New Frontier in Condensed Matter Research</title>
+		<editor>
+			<persName><forename type="first">H</forename><surname>Takayama</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Tokyo</addrLine></address></meeting>
+		<imprint>
+			<publisher>The Physical Society of Japan</publisher>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="page">57</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

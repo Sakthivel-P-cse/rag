@@ -1,0 +1,642 @@
+{
+  "paper_id": "5960B344851C685E12A021BBB31FEC97",
+  "title": "Published as a conference paper at ICLR 2015 ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION",
+  "arxiv_id": "arXiv:1412.6980v9[cs.LG]",
+  "authors": [
+    {
+      "given": "Diederik P",
+      "family": "Kingma"
+    },
+    {
+      "given": "Jimmy",
+      "family": "Lei Ba"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Shun-Ichi",
+          "family": "Amari"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Li",
+          "family": "Deng"
+        },
+        {
+          "given": null,
+          "family": "Li"
+        },
+        {
+          "given": null,
+          "family": "Jinyu"
+        },
+        {
+          "given": null,
+          "family": "Huang"
+        },
+        {
+          "given": null,
+          "family": "Jui-Ting"
+        },
+        {
+          "given": null,
+          "family": "Yao"
+        },
+        {
+          "given": null,
+          "family": "Kaisheng"
+        },
+        {
+          "given": null,
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Dong"
+        },
+        {
+          "given": null,
+          "family": "Seide"
+        },
+        {
+          "given": null,
+          "family": "Frank"
+        },
+        {
+          "given": null,
+          "family": "Seltzer"
+        },
+        {
+          "given": null,
+          "family": "Michael"
+        },
+        {
+          "given": null,
+          "family": "Zweig"
+        },
+        {
+          "given": null,
+          "family": "Geoff"
+        },
+        {
+          "given": null,
+          "family": "He"
+        },
+        {
+          "given": null,
+          "family": "Xiaodong"
+        },
+        {
+          "given": "Jason",
+          "family": "Williams"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "The Journal of Machine Learning Research",
+      "container_title": "The Journal of Machine Learning Research",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "John",
+          "family": "Duchi"
+        },
+        {
+          "given": null,
+          "family": "Hazan"
+        },
+        {
+          "given": null,
+          "family": "Elad"
+        },
+        {
+          "given": "Yoram",
+          "family": "Singer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Generating sequences with recurrent neural networks",
+      "container_title": "Generating sequences with recurrent neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1308.0850"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Acoustics, Speech and Signal Processing (ICASSP)",
+      "container_title": "Acoustics, Speech and Signal Processing (ICASSP)",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Graves"
+        },
+        {
+          "given": "Mohamed",
+          "family": null
+        },
+        {
+          "given": "Abdel-Rahman",
+          "family": "Hinton"
+        },
+        {
+          "given": "Geoffrey",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G E",
+          "family": "Hinton"
+        },
+        {
+          "given": "R R",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Signal Processing Magazine",
+      "container_title": "Signal Processing Magazine",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        },
+        {
+          "given": null,
+          "family": "Deng"
+        },
+        {
+          "given": null,
+          "family": "Li"
+        },
+        {
+          "given": null,
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Dong"
+        },
+        {
+          "given": "George E",
+          "family": "Dahl"
+        },
+        {
+          "given": "Mohamed",
+          "family": "Abdel-Rahman"
+        },
+        {
+          "given": null,
+          "family": "Jaitly"
+        },
+        {
+          "given": null,
+          "family": "Navdeep"
+        },
+        {
+          "given": null,
+          "family": "Senior"
+        },
+        {
+          "given": null,
+          "family": "Andrew"
+        },
+        {
+          "given": null,
+          "family": "Vanhoucke"
+        },
+        {
+          "given": null,
+          "family": "Vincent"
+        },
+        {
+          "given": null,
+          "family": "Nguyen"
+        },
+        {
+          "given": null,
+          "family": "Patrick"
+        },
+        {
+          "given": "Tara N",
+          "family": "Sainath"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+      "container_title": "Improving neural networks by preventing co-adaptation of feature detectors",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1207.0580"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        },
+        {
+          "given": null,
+          "family": "Srivastava"
+        },
+        {
+          "given": null,
+          "family": "Nitish"
+        },
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": null,
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": "R",
+          "family": "Ruslan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "The 2nd International Conference on Learning Representations (ICLR)",
+      "container_title": "The 2nd International Conference on Learning Representations (ICLR)",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Diederik P",
+          "family": "Kingma"
+        },
+        {
+          "given": "Max",
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies",
+      "container_title": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andrew L",
+          "family": "Maas"
+        },
+        {
+          "given": "Raymond E",
+          "family": "Daly"
+        },
+        {
+          "given": null,
+          "family": "Pham"
+        },
+        {
+          "given": "T",
+          "family": "Peter"
+        },
+        {
+          "given": "Dan",
+          "family": "Huang"
+        },
+        {
+          "given": null,
+          "family": "Ng"
+        },
+        {
+          "given": "Y",
+          "family": "Andrew"
+        },
+        {
+          "given": "Christopher",
+          "family": "Potts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Eric",
+          "family": "Moulines"
+        },
+        {
+          "given": "Francis R",
+          "family": "Bach"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Revisiting natural gradient for deep networks",
+      "container_title": "Revisiting natural gradient for deep networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1301.3584"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "SIAM Journal on Control and Optimization",
+      "container_title": "SIAM Journal on Control and Optimization",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Boris T",
+          "family": "Polyak"
+        },
+        {
+          "given": null,
+          "family": "Juditsky"
+        },
+        {
+          "given": "B",
+          "family": "Anatoli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
+      "container_title": "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nicolas L",
+          "family": "Roux"
+        },
+        {
+          "given": "Andrew W",
+          "family": "Fitzgibbon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Efficient estimations from a slowly convergent robbins-monro process",
+      "container_title": "Efficient estimations from a slowly convergent robbins-monro process",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Ruppert"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "No more pesky learning rates",
+      "container_title": "No more pesky learning rates",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1206.1106"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tom",
+          "family": "Schaul"
+        },
+        {
+          "given": "Sixin",
+          "family": "Zhang"
+        },
+        {
+          "given": "Yann",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of the 31st International Conference on Machine Learning (ICML-14)",
+      "container_title": "Proceedings of the 31st International Conference on Machine Learning (ICML-14)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Sohl-Dickstein"
+        },
+        {
+          "given": null,
+          "family": "Jascha"
+        },
+        {
+          "given": "Ben",
+          "family": "Poole"
+        },
+        {
+          "given": null,
+          "family": "Ganguli"
+        },
+        {
+          "given": null,
+          "family": "Surya"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Proceedings of the 30th International Conference on Machine Learning (ICML-13)",
+      "container_title": "Proceedings of the 30th International Conference on Machine Learning (ICML-13)",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Martens"
+        },
+        {
+          "given": null,
+          "family": "James"
+        },
+        {
+          "given": "George",
+          "family": "Dahl"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "COURSERA: Neural Networks for Machine Learning",
+      "container_title": "COURSERA: Neural Networks for Machine Learning",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Tieleman"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Proceedings of the 30th International Conference on Machine Learning (ICML-13)",
+      "container_title": "Proceedings of the 30th International Conference on Machine Learning (ICML-13)",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sida",
+          "family": "Wang"
+        },
+        {
+          "given": "Christopher",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "An adaptive learning rate method",
+      "container_title": "An adaptive learning rate method",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1212.5701"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Matthew D",
+          "family": "Zeiler"
+        },
+        {
+          "given": null,
+          "family": "Adadelta"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Online convex programming and generalized infinitesimal gradient ascent",
+      "container_title": "Online convex programming and generalized infinitesimal gradient ascent",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Martin",
+          "family": "Zinkevich"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

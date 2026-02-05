@@ -1,0 +1,16 @@
+{
+  "refined_question": "What causes instability and collapse in reinforcement learning (RL) agents after policy updates, and how can training sensitivity to learning rate be mitigated in RL?",
+  "intent": "Understand the factors contributing to training instability and sensitivity to hyperparameters in reinforcement learning, specifically in the context of policy updates and learning rate selection",
+  "constraints": [
+    "limited to reinforcement learning",
+    "focus on policy update instability",
+    "sensitive to learning rate",
+    "training stability"
+  ],
+  "excluded_topics": [
+    "switching to larger pre-trained models",
+    "fine-tuning large pre-trained models",
+    "scaling parameter count as primary solution"
+  ],
+  "search_hint": "reinforcement learning, policy updates, training instability, learning rate sensitivity, RL stability, policy gradient methods, Q-learning, actor-critic methods, deep reinforcement learning, hyperparameter tuning"
+}

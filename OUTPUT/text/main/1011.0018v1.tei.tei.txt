@@ -1,0 +1,108 @@
+# Vibrational properties of graphene fluoride and graphane
+
+**Published:** 25 October 2018
+
+## Abstract
+
+The vibrational properties of graphene fluoride and graphane are studied using ab initio
+calculations. We find that both sp 3 bonded derivatives of graphene have different phonon dispersion
+relations and phonon density of states as expected from the different masses associated with the
+attached atoms fluorine and hydrogen, respectively. These differences manifest themselves in the
+predicted temperature behavior of the constant-volume specific heat of both compounds.
+
+The chemical modification of graphene 1 is being the focus of increasing interest.
+[2][3][4][5][6][7][8] Radicals such as oxygen, hydrogen, or fluorine atoms can be adsorbed on the
+surface of graphene. The adsorbed radicals can attach to the graphene layer in a random way, as is
+the case in graphene oxide (GO), 2 or they can form ordered patterns. The later is expected to be
+the case for hydrogen 9,10 and fluorine adsorbates. 11,12 The two-dimensional materials that form in
+those cases 9 have been named graphane 3,10 and graphene fluoride 4 (or fluorographene 6 ),
+respectively. Raman spectroscopy provides useful information, and it is being actively used, during
+the hydrogenation 3 and fluorination [4][5][6][7] process of graphene. Both graphane and graphene
+fluoride are expected to be wide band gap materials. 12 As the energies of the lasers used were
+lower than the band gap, there was no signature of Raman activity from fully hydrogenated or fully
+fluorinated regions in those experiments, 3,[5][6][7] and the Raman peaks were associated with
+graphene. The main features in the Raman spectra of pristine graphene is the appearance of the G and
+2D bands, which appear around 1580 cm -1 and 2680 cm -1 , respectively. 3,13 The G-band is
+associated with the doubly degenerate E 2g phonon mode of graphene, while the 2D mode (also called
+G') originates from a second-order process, involving two phonons near the K point without the
+presence of any kind of disorder or defect. 13 On the other hand, the presence of defects in the
+sample (such as adatoms in partially hydrogenated or fluorinated samples) activates additional peaks
+in the Raman spectra of graphene. This is the case of the D, D', and D+D' peaks that appear at 1350
+cm -1 , 1620 cm -1 , and 2950 cm -1 , respectively. 3,5 These Raman peaks originate from double-
+resonance processes at the K point in the presence of defects. As the D, D and D+D' peaks involve
+phonon modes from graphene, they appear at the same frequena) Electronic mail:
+hartwin.peelaers@ua.ac.be; Present address: Materials Department, University of California, Santa
+Barbara, CA 93106-5050, USA b) Electronic mail: alexande@cab.cnea.gov.ar c) Electronic mail:
+francois.peeters@ua.ac.be cies in partially hydrogenated 3 or partially fluorinated samples. 5 The D
+and G peaks of graphene provide valuable information on the density of defects. These peaks tend to
+disappear in the limit of almost fully covered samples as was recently found in graphene fluoride
+6,7 but not in previous experiments on graphane 3 or graphite fluorides. 14,15 The first report on
+Raman signatures of multi-layer graphene regions that are fully covered with fluorine atoms was
+presented in Ref. 8. By using a UV laser with an energy of 5.08 eV, two Raman active modes were
+detected at 1270 cm -1 and 1343 cm -1 , which are absent for lower laser energies. An infrared
+active mode was also reported at 1204 cm -1 . These modes were correlated with DFT calculations of
+the phonon frequencies of graphene fluoride at the Γ point. 8 In this letter, by using first-
+principles calculations, we investigate the phonon dispersion and the phonon density of states of
+graphene fluoride and graphane. This information can be useful for the interpretation of future
+experiments on infrared, Raman, and neutron-diffraction spectra of these novel two-dimensional
+compounds, as well as in the study of a wide variety of other physical properties such as specific
+heat, thermal expansion, heat conduction, and electron-phonon interaction. All reported results are
+obtained with the ABINIT code, 18 using a plane wave basis and Troullier-Martins pseudopotentials.
+16 An energy cutoff of 40 Ha was used. A 30 Bohr layer of vacuum was used to separate the
+graphane/fluorographene sheet from its periodical images in order to avoid unphysical interactions.
+The Brillouin Zone was sampled using a 30x30x1 Monkhorst-Pack grid 17 for the electronic structure.
+Both considered systems are fully relaxed such that all forces are smaller than 5 × 10 -5
+Hartree/Bohr and all stresses smaller than 5 × 10 -7 Hartree/Bohr 3 . The dynamical properties are
+calculated within the density-functional perturbation theory 19 (DFPT), as this allows us to
+calculate arbitrarily phonon frequencies without requiring the use of a supercell. Figure 1 shows
+the calculated phonon dispersion relation for the chair conformation of graphane, as this is the
+energetically most favourable crystal configuration. 12 The dots indicate the directly calculated
+frequencies, while the solid line is obtained by using a Fourier based interpolation of the
+interatomic force constants obtained on a 10x10x1 grid of q-points. As can be seen, the agreement
+between both calculations is very good. The absence of any imaginary frequency indicates that the
+chair conformation is stable. It is apparent that the phonons of graphane can be divided into low-,
+intermediate-, and high-frequency groups of phonons. The right-hand side of the figure shows the
+corresponding density of states (DOS), obtained with the interpolated frequency values. The blue
+dotted line is the DOS projected on the C atoms, and the red dashed line is the projection on the H
+atoms. From the projected phonon DOS, one can immediately identify the high-frequency modes as
+dominantly H modes, as can be expected from the C-H stretching modes. The acoustic modes are
+dominantly C modes while the intermediate-frequency group of phonons have significant contributions
+from both types of atoms.
+
+A similar approach can be applied to fluorographene, resulting in the phonon dispersion relation
+(left) and projected phonon DOS (right) shown in Fig. 2. In the projected DOS, the blue dotted line
+is the projected DOS on the C atoms, and the green dashed line is the projection on the F atoms.
+From the dispersion we found that also the chair conformation of fluorographene is stable. There are
+substantial differences in the phonon spectra and DOS of graphane and fluorographene. The latter
+does not show clearly separated groups of phonons. The high-frequency modes are also lower in
+frequency in com- parison with similar modes in graphane because F is heavier than H. In this case,
+the dominant contribution to the acoustic modes comes from the F atoms while the high-frequency
+modes around 1200 cm -1 have a clear C character. This behavior is the opposite from the one in
+graphane because the mass of C atoms is in between the mass of F and H atoms. The 12 phonon modes of
+the chair conformation of graphane and graphene fluoride, which has the P-3m1 symmetry (space group
+164), belong to 4 irreducible representations. The frequency of the different phonon modes at three
+high-symmetry points of the Brillouin Zone (Γ, K, and M ) are summarized in Table I. E g and A 1g
+are Raman active modes while E u and A 2u are infrared active modes. Our theoretical values of the A
+1g and the two-fold degenerate E g modes of graphene fluoride at the Γ point, 1244 cm -1 and 1312 cm
+-1 are in good agreement with the two Raman active modes found experimentally in Ref. 8 at 1270 cm
+-1 and 1345 cm -1 , respectively. The same agreement is observed between the infrared active mode A
+2u at 1219 cm -1 and the report of an infrared active mode at 1204 cm -1 in Ref. 8.
+
+Using the phonon DOS we can also calculate the constant-volume specific heat of both materials. This
+is achieved using the expressions described in Ref. 20. One should keep in mind that we work within
+the harmonic approximation, so the differences with experimental values will become larger for
+higher temperatures. The hydrogenation of graphene was found to be reversible at 700 K in Ref. 3
+while the fluorination of graphene could be reverted at 870 K in Ref. 4. The calculated values of C
+v are shown in Fig. 3 where we only report the behavior in the region of stability of each compound.
+The specific heat of graphane is larger than the one for fluorographene, as can be expected
+considering that the classical limit of the specific heat is given by the Dulong-Petit law and is
+equal to 3R/M , where R is the ideal gas constant and M the molar mass. Because the molar mass of
+fluorographene is larger than that of graphane, the value of the specific heat will be smaller at
+high temperature. To our knowledge there are no experimental measurements yet to compare with. The
+specific heat of graphene at high-temperature [see Fig. 24 of Ref. 21] is in between the specific
+heat of graphene fluoride and graphane as expected from the Dulong-Petit law. In summary, the
+experimental determination of the phonon dispersion relations of graphane and fluorographene can be
+very useful in the characterization of these materials. It is worth noting, that both graphene
+derivatives are wide band gap materials. This allows to clearly discriminate, for example, the Raman
+activity originated in fully-fluorinated and fully-hydrogenated regions during the synthesis of both
+compounds by using a laser with appropriate energies.

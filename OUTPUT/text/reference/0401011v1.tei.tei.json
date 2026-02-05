@@ -1,0 +1,571 @@
+{
+  "paper_id": "6C0192CD4C2D6F14AF0E75466867A0F5",
+  "title": "Speed-Up of DNA Melting Algorithm with Complete Nearest Neighbor Properties",
+  "arxiv_id": null,
+  "authors": [
+    {
+      "given": "Eivind",
+      "family": "Tøstesen"
+    },
+    {
+      "given": "Fang",
+      "family": "Liu"
+    },
+    {
+      "given": "Tor-Kristian",
+      "family": "Jenssen"
+    },
+    {
+      "given": "Eivind",
+      "family": "Hovig"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Nucleic Acids Res",
+      "container_title": "Nucleic Acids Res",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Steger"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "",
+      "container_title": "",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Yeramian"
+        },
+        {
+          "given": null,
+          "family": "Gene"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J C",
+          "family": "Venter"
+        },
+        {
+          "given": "M D",
+          "family": "Adams"
+        },
+        {
+          "given": "E W",
+          "family": "Myers"
+        },
+        {
+          "given": "P W",
+          "family": "Li"
+        },
+        {
+          "given": "R J",
+          "family": "Mural"
+        },
+        {
+          "given": "G G",
+          "family": "Sutton"
+        },
+        {
+          "given": "H O",
+          "family": "Smith"
+        },
+        {
+          "given": "M",
+          "family": "Yandell"
+        },
+        {
+          "given": "C A",
+          "family": "Evans"
+        },
+        {
+          "given": "R A",
+          "family": "Holt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2001",
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Methods Enzymol",
+      "container_title": "Methods Enzymol",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K J",
+          "family": "Breslauer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proc Natl Acad Sci",
+      "container_title": "Proc Natl Acad Sci",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Santalucia"
+        },
+        {
+          "given": null,
+          "family": "Jr"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Biopolymers",
+      "container_title": "Biopolymers",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Owczarzy"
+        },
+        {
+          "given": "P M",
+          "family": "Vallone"
+        },
+        {
+          "given": "F J",
+          "family": "Gallo"
+        },
+        {
+          "given": "T M",
+          "family": "Paner"
+        },
+        {
+          "given": "M J",
+          "family": "Lane"
+        },
+        {
+          "given": "A S",
+          "family": "Benight"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Theory of helix-coil transitions in biopolymers",
+      "container_title": "Theory of helix-coil transitions in biopolymers",
+      "year": "1970",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Poland"
+        },
+        {
+          "given": "H A",
+          "family": "Scheraga"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Bull Math Biol",
+      "container_title": "Bull Math Biol",
+      "year": "1984",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Zuker"
+        },
+        {
+          "given": "D",
+          "family": "Sankoff"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Adv Math Suppl Stud",
+      "container_title": "Adv Math Suppl Stud",
+      "year": "1978",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M S",
+          "family": "Waterman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "J. S. Biopolymers",
+      "container_title": "J. S. Biopolymers",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Mccaskill"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "J Chem Phys",
+      "container_title": "J Chem Phys",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Zhang"
+        },
+        {
+          "given": "S.-J",
+          "family": "Chen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Phys Rev",
+      "container_title": "Phys Rev",
+      "year": "1941",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H A",
+          "family": "Kramers"
+        },
+        {
+          "given": "G H",
+          "family": "Wannier"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys Rev 1944",
+      "container_title": "Phys Rev 1944",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Onsager"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "J Chem Phys",
+      "container_title": "J Chem Phys",
+      "year": "1959",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B H",
+          "family": "Zimm"
+        },
+        {
+          "given": "J K",
+          "family": "Bragg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Commun Math Phys",
+      "container_title": "Commun Math Phys",
+      "year": "1969",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F J",
+          "family": "Dyson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "J Chem Phys",
+      "container_title": "J Chem Phys",
+      "year": "1966",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Poland"
+        },
+        {
+          "given": "H A",
+          "family": "Scheraga"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "J Chem Phys",
+      "container_title": "J Chem Phys",
+      "year": "1966",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M E",
+          "family": "Fisher"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Scaling concepts in polymer physics",
+      "container_title": "Scaling concepts in polymer physics",
+      "year": "1979",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P G",
+          "family": "De Gennes"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phys Rev Lett",
+      "container_title": "Phys Rev Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Carlon"
+        },
+        {
+          "given": "E",
+          "family": "Orlandini"
+        },
+        {
+          "given": "A L",
+          "family": "Stella"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Biopolymers",
+      "container_title": "Biopolymers",
+      "year": "1974",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Poland"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Biopolymers",
+      "container_title": "Biopolymers",
+      "year": "1977",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Fixman"
+        },
+        {
+          "given": "J J",
+          "family": "Freire"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Bioinformatics",
+      "container_title": "Bioinformatics",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R D",
+          "family": "Blake"
+        },
+        {
+          "given": "J W",
+          "family": "Bizzaro"
+        },
+        {
+          "given": "J D",
+          "family": "Blake"
+        },
+        {
+          "given": "G R",
+          "family": "Day"
+        },
+        {
+          "given": "S G",
+          "family": "Delcourt"
+        },
+        {
+          "given": "J",
+          "family": "Knowles"
+        },
+        {
+          "given": "K A",
+          "family": "Marx"
+        },
+        {
+          "given": "J",
+          "family": "Santalucia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Biopolymers",
+      "container_title": "Biopolymers",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Yeramian"
+        },
+        {
+          "given": "F",
+          "family": "Schaeffer"
+        },
+        {
+          "given": "B",
+          "family": "Caudron"
+        },
+        {
+          "given": "P",
+          "family": "Claverie"
+        },
+        {
+          "given": "H",
+          "family": "Buc"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "J Chem Phys",
+      "container_title": "J Chem Phys",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S.-J",
+          "family": "Chen"
+        },
+        {
+          "given": "K A",
+          "family": "Dill"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Biopolymers",
+      "container_title": "Biopolymers",
+      "year": "1981",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Gotoh"
+        },
+        {
+          "given": "Y",
+          "family": "Tagashira"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Phys Rep",
+      "container_title": "Phys Rep",
+      "year": "1985",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R M",
+          "family": "Wartell"
+        },
+        {
+          "given": "A S",
+          "family": "Benight"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Nucl Acid Res",
+      "container_title": "Nucl Acid Res",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R D",
+          "family": "Blake"
+        },
+        {
+          "given": "S G",
+          "family": "Delcourt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Biopolymers",
+      "container_title": "Biopolymers",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D M",
+          "family": "Gray"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Biopolymers",
+      "container_title": "Biopolymers",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D M",
+          "family": "Gray"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

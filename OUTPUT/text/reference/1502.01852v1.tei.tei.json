@@ -1,0 +1,1020 @@
+{
+  "paper_id": "6CB79ADEB9CC20817095166181286619",
+  "title": "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification",
+  "arxiv_id": "arXiv:1502.01852v1[cs.CV]",
+  "authors": [
+    {
+      "given": "Kaiming",
+      "family": "He"
+    },
+    {
+      "given": "Xiangyu",
+      "family": "Zhang"
+    },
+    {
+      "given": "Shaoqing",
+      "family": "Ren"
+    },
+    {
+      "given": "Jian",
+      "family": "Sun"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Learning activation functions to improve deep neural networks",
+      "container_title": "Learning activation functions to improve deep neural networks",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.6830"
+        }
+      ],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Agostinelli"
+        },
+        {
+          "given": "M",
+          "family": "Hoffman"
+        },
+        {
+          "given": "P",
+          "family": "Sadowski"
+        },
+        {
+          "given": "P",
+          "family": "Baldi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "BMVC",
+      "container_title": "BMVC",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Chatfield"
+        },
+        {
+          "given": "K",
+          "family": "Simonyan"
+        },
+        {
+          "given": "A",
+          "family": "Vedaldi"
+        },
+        {
+          "given": "A",
+          "family": "Zisserman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Ciresan"
+        },
+        {
+          "given": "U",
+          "family": "Meier"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Deng"
+        },
+        {
+          "given": "W",
+          "family": "Dong"
+        },
+        {
+          "given": "R",
+          "family": "Socher"
+        },
+        {
+          "given": "L.-J",
+          "family": "Li"
+        },
+        {
+          "given": "K",
+          "family": "Li"
+        },
+        {
+          "given": "L",
+          "family": "Fei-Fei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Understanding deep architectures using a recursive convolutional network",
+      "container_title": "Understanding deep architectures using a recursive convolutional network",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.1847"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Eigen"
+        },
+        {
+          "given": "J",
+          "family": "Rolfe"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "The Pascal Visual Object Classes (VOC) Challenge. IJCV",
+      "container_title": "The Pascal Visual Object Classes (VOC) Challenge. IJCV",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Everingham"
+        },
+        {
+          "given": "L",
+          "family": "Van Gool"
+        },
+        {
+          "given": "C K",
+          "family": "Williams"
+        },
+        {
+          "given": "J",
+          "family": "Winn"
+        },
+        {
+          "given": "A",
+          "family": "Zisserman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "International Conference on Artificial Intelligence and Statistics",
+      "container_title": "International Conference on Artificial Intelligence and Statistics",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Glorot"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Proceedings of the 14th International Conference on Artificial Intelligence and Statistics",
+      "container_title": "Proceedings of the 14th International Conference on Artificial Intelligence and Statistics",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Glorot"
+        },
+        {
+          "given": "A",
+          "family": "Bordes"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "",
+      "container_title": "",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1302.4389"
+        }
+      ],
+      "authors": [
+        {
+          "given": "I J",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "D",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "M",
+          "family": "Mirza"
+        },
+        {
+          "given": "A",
+          "family": "Courville"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Convolutional neural networks at constrained time cost",
+      "container_title": "Convolutional neural networks at constrained time cost",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.1710"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Spatial pyramid pooling in deep convolutional networks for visual recognition",
+      "container_title": "Spatial pyramid pooling in deep convolutional networks for visual recognition",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1406.4729v2"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+      "container_title": "Improving neural networks by preventing co-adaptation of feature detectors",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1207.0580"
+        }
+      ],
+      "authors": [
+        {
+          "given": "G E",
+          "family": "Hinton"
+        },
+        {
+          "given": "N",
+          "family": "Srivastava"
+        },
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "R R",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Some improvements on deep convolutional neural network based image classification",
+      "container_title": "Some improvements on deep convolutional neural network based image classification",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.5402"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A G",
+          "family": "Howard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Convolutional architecture for fast feature embedding",
+      "container_title": "Convolutional architecture for fast feature embedding",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1408.5093"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Jia"
+        },
+        {
+          "given": "E",
+          "family": "Shelhamer"
+        },
+        {
+          "given": "J",
+          "family": "Donahue"
+        },
+        {
+          "given": "S",
+          "family": "Karayev"
+        },
+        {
+          "given": "J",
+          "family": "Long"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        },
+        {
+          "given": "S",
+          "family": "Guadarrama"
+        },
+        {
+          "given": "T",
+          "family": "Darrell"
+        },
+        {
+          "given": null,
+          "family": "Caffe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "One weird trick for parallelizing convolutional neural networks",
+      "container_title": "One weird trick for parallelizing convolutional neural networks",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1404.5997"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Backpropagation applied to handwritten zip code recognition",
+      "container_title": "Backpropagation applied to handwritten zip code recognition",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "B",
+          "family": "Boser"
+        },
+        {
+          "given": "J S",
+          "family": "Denker"
+        },
+        {
+          "given": "D",
+          "family": "Henderson"
+        },
+        {
+          "given": "R E",
+          "family": "Howard"
+        },
+        {
+          "given": "W",
+          "family": "Hubbard"
+        },
+        {
+          "given": "L D",
+          "family": "Jackel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Deeplysupervised nets",
+      "container_title": "Deeplysupervised nets",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.5185"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C.-Y",
+          "family": "Lee"
+        },
+        {
+          "given": "S",
+          "family": "Xie"
+        },
+        {
+          "given": "P",
+          "family": "Gallagher"
+        },
+        {
+          "given": "Z",
+          "family": "Zhang"
+        },
+        {
+          "given": "Z",
+          "family": "Tu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Network in network",
+      "container_title": "Network in network",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.4400"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Lin"
+        },
+        {
+          "given": "Q",
+          "family": "Chen"
+        },
+        {
+          "given": "S",
+          "family": "Yan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A L",
+          "family": "Maas"
+        },
+        {
+          "given": "A Y",
+          "family": "Hannun"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Nair"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Imagenet large scale visual recognition challenge",
+      "container_title": "Imagenet large scale visual recognition challenge",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.0575"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Russakovsky"
+        },
+        {
+          "given": "J",
+          "family": "Deng"
+        },
+        {
+          "given": "H",
+          "family": "Su"
+        },
+        {
+          "given": "J",
+          "family": "Krause"
+        },
+        {
+          "given": "S",
+          "family": "Satheesh"
+        },
+        {
+          "given": "S",
+          "family": "Ma"
+        },
+        {
+          "given": "Z",
+          "family": "Huang"
+        },
+        {
+          "given": "A",
+          "family": "Karpathy"
+        },
+        {
+          "given": "A",
+          "family": "Khosla"
+        },
+        {
+          "given": "M",
+          "family": "Bernstein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+      "container_title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.6120"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A M",
+          "family": "Saxe"
+        },
+        {
+          "given": "J L",
+          "family": "Mcclelland"
+        },
+        {
+          "given": "S",
+          "family": "Ganguli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Overfeat: Integrated recognition, localization and detection using convolutional networks",
+      "container_title": "Overfeat: Integrated recognition, localization and detection using convolutional networks",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Sermanet"
+        },
+        {
+          "given": "D",
+          "family": "Eigen"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "M",
+          "family": "Mathieu"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Very deep convolutional networks for large-scale image recognition",
+      "container_title": "Very deep convolutional networks for large-scale image recognition",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.1556"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Simonyan"
+        },
+        {
+          "given": "A",
+          "family": "Zisserman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "The Journal of Machine Learning Research",
+      "container_title": "The Journal of Machine Learning Research",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Srivastava"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        },
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "R",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R K",
+          "family": "Srivastava"
+        },
+        {
+          "given": "J",
+          "family": "Masci"
+        },
+        {
+          "given": "S",
+          "family": "Kazerounian"
+        },
+        {
+          "given": "F",
+          "family": "Gomez"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Sun"
+        },
+        {
+          "given": "Y",
+          "family": "Chen"
+        },
+        {
+          "given": "X",
+          "family": "Wang"
+        },
+        {
+          "given": "X",
+          "family": "Tang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Going deeper with convolutions",
+      "container_title": "Going deeper with convolutions",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.4842"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "W",
+          "family": "Liu"
+        },
+        {
+          "given": "Y",
+          "family": "Jia"
+        },
+        {
+          "given": "P",
+          "family": "Sermanet"
+        },
+        {
+          "given": "S",
+          "family": "Reed"
+        },
+        {
+          "given": "D",
+          "family": "Anguelov"
+        },
+        {
+          "given": "D",
+          "family": "Erhan"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "A",
+          "family": "Rabinovich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Taigman"
+        },
+        {
+          "given": "M",
+          "family": "Yang"
+        },
+        {
+          "given": "M",
+          "family": "Ranzato"
+        },
+        {
+          "given": "L",
+          "family": "Wolf"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Wan"
+        },
+        {
+          "given": "M",
+          "family": "Zeiler"
+        },
+        {
+          "given": "S",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y L",
+          "family": "Cun"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Deep image: Scaling up image recognition",
+      "container_title": "Deep image: Scaling up image recognition",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1501.02876"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Wu"
+        },
+        {
+          "given": "S",
+          "family": "Yan"
+        },
+        {
+          "given": "Y",
+          "family": "Shan"
+        },
+        {
+          "given": "Q",
+          "family": "Dang"
+        },
+        {
+          "given": "G",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M D",
+          "family": "Zeiler"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M D",
+          "family": "Zeiler"
+        },
+        {
+          "given": "M",
+          "family": "Ranzato"
+        },
+        {
+          "given": "R",
+          "family": "Monga"
+        },
+        {
+          "given": "M",
+          "family": "Mao"
+        },
+        {
+          "given": "K",
+          "family": "Yang"
+        },
+        {
+          "given": "Q V",
+          "family": "Le"
+        },
+        {
+          "given": "P",
+          "family": "Nguyen"
+        },
+        {
+          "given": "A",
+          "family": "Senior"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "J",
+          "family": "Dean"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

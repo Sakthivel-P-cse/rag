@@ -1,0 +1,119 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "primary causes of training instability in reinforcement learning agents after policy updates",
+    "effective mitigation of learning rate sensitivity in PPO and Adam algorithms"
+  ],
+  "next_question": "What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in PPO and Adam algorithms to improve training stability?",
+  "accept": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei",
+      "rationale": "provides insight into the effect of learning rate on optimization"
+    }
+  ],
+  "reject": [
+    {
+      "chunk_id": "1412.6980v9.tei.tei_chunk-5",
+      "paper_id": "1412.6980v9.tei.tei",
+      "reason": "does not directly address training instability or learning rate sensitivity in reinforcement learning"
+    }
+  ],
+  "search_hint": "reinforcement learning, training instability, policy updates, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability, policy gradient methods, advantage functions, stochastic gradient ascent",
+  "iteration": 3,
+  "accepted_chunks": [
+    {
+      "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+      "paper_id": "1707.06347v2.tei.tei"
+    },
+    {
+      "chunk_id": "1502.05477v5.tei.tei_chunk-3",
+      "paper_id": "1502.05477v5.tei.tei"
+    },
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei"
+    }
+  ],
+  "accepted_chunk_ids": [
+    "1502.05477v5.tei.tei_chunk-3",
+    "1602.07868v3.tei.tei_chunk-5",
+    "1707.06347v2.tei.tei_chunk-1"
+  ],
+  "accepted_paper_ids": [
+    "1502.05477v5.tei.tei",
+    "1602.07868v3.tei.tei",
+    "1707.06347v2.tei.tei"
+  ],
+  "rejected_chunk_ids": [
+    "1412.6980v9.tei.tei_chunk-11",
+    "1412.6980v9.tei.tei_chunk-5",
+    "1502.05477v5.tei.tei_chunk-16",
+    "1502.05477v5.tei.tei_chunk-4",
+    "1707.06347v2.tei.tei_chunk-6"
+  ],
+  "rejected_paper_ids": [],
+  "accepted_this_round": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei"
+    }
+  ],
+  "rejected_this_round": [
+    {
+      "chunk_id": "1412.6980v9.tei.tei_chunk-5",
+      "paper_id": "1412.6980v9.tei.tei",
+      "reason": "does not directly address training instability or learning rate sensitivity in reinforcement learning"
+    }
+  ],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "The primary causes of training instability in reinforcement learning agents after policy updates are not explicitly mentioned in the provided evidence.",
+      "Proximal policy optimization (PPO) is proposed as a new family of policy gradient methods for reinforcement learning, which can alternate between sampling data and optimizing a surrogate objective function.",
+      "PPO has some benefits of trust region policy optimization (TRPO), but is simpler to implement, more general, and has better sample complexity empirically.",
+      "The evidence does not provide information on how to effectively mitigate learning rate sensitivity in PPO and Adam algorithms."
+    ],
+    "evidence_citations": [
+      {
+        "paper_id": "1707.06347v2.tei.tei",
+        "chunk_id": "1707.06347v2.tei.tei_chunk-1",
+        "supports": "0"
+      },
+      {
+        "paper_id": "1502.05477v5.tei.tei",
+        "chunk_id": "1502.05477v5.tei.tei_chunk-3",
+        "supports": "0"
+      }
+    ]
+  },
+  "_debug": {
+    "retrieval_query": "What are the primary causes of training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be effectively mitigated in PPO and Adam algorithms?\n\nSearch hints: reinforcement learning, policy updates, training instability, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability, policy gradient methods, advantage functions",
+    "candidates": [
+      {
+        "paper_id": "1602.07868v3.tei.tei",
+        "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+        "retr_score": 0.3797102
+      },
+      {
+        "paper_id": "1412.6980v9.tei.tei",
+        "chunk_id": "1412.6980v9.tei.tei_chunk-5",
+        "retr_score": 0.3658891
+      }
+    ],
+    "excluded_chunk_ids": [
+      "1412.6980v9.tei.tei_chunk-11",
+      "1502.05477v5.tei.tei_chunk-16",
+      "1502.05477v5.tei.tei_chunk-3",
+      "1502.05477v5.tei.tei_chunk-4",
+      "1707.06347v2.tei.tei_chunk-1",
+      "1707.06347v2.tei.tei_chunk-6"
+    ],
+    "excluded_paper_ids": [
+      "1502.05477v5.tei.tei",
+      "1707.06347v2.tei.tei"
+    ],
+    "raw_llm_output_first_2000_chars": "{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"primary causes of training instability in reinforcement learning agents after policy updates\", \"effective mitigation of learning rate sensitivity in PPO and Adam algorithms\"],\n  \"next_question\": \"What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in PPO and Adam algorithms to improve training stability?\",\n  \"accept\": [{\"chunk_id\": \"1602.07868v3.tei.tei_chunk-5\", \"paper_id\": \"1602.07868v3.tei.tei\", \"rationale\": \"provides insight into the effect of learning rate on optimization\"}],\n  \"reject\": [{\"chunk_id\": \"1412.6980v9.tei.tei_chunk-5\", \"paper_id\": \"1412.6980v9.tei.tei\", \"reason\": \"does not directly address training instability or learning rate sensitivity in reinforcement learning\"}],\n  \"search_hint\": \"reinforcement learning, training instability, policy updates, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability, policy gradient methods, advantage functions, stochastic gradient ascent\"\n}"
+  }
+}

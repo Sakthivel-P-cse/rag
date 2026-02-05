@@ -1,0 +1,109 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251224_141740_934470.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): I’m training a deep neural network and I’m seeing very unstable gradients in the first few epochs. The loss oscillates a lot and sometimes diverges. I want a principled way to stabilize training witho
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251224_141749_757976.json
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251224_141740_934470.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=3 top_k_candidates=5
+[judge] refined_question: What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[judge] search_hint: gradient stabilization, loss regularization, early stopping, learning rate scheduling, batch normalization, gradient clipping, weight decay, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation
+[retrieve] Query (first 200 chars): What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?  Search hints: gradient stabilization, l
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1602.07868v3.tei.tei chunk_id=1602.07868v3.tei.tei_chunk-5 retr_score=0.4200 section=Gradients :: The rate of increase will depend on the the variance of the weight gradient. If our gradients are noisy, c will be high and the norm of v will quickly increase,...
+[judge] cand#2: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-5 retr_score=0.4077 section=Towards Reducing Internal Covariate Shift :: Thus, the combination of the update to b and subsequent change in normalization led to no change in the output of the layer nor, consequently, the loss. As the ...
+[judge] cand#3: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-13 retr_score=0.3924 section=ImageNet classification :: In our experiments, we evaluated several modifications of Inception with Batch Normalization. In all cases, Batch Normalization was applied to the input of each...
+[judge] cand#4: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-3 retr_score=0.3913 section=Introduction :: Fixed distribution of inputs to a sub-network would have positive consequences for the layers outside the subnetwork, as well. Consider a layer with a sigmoid a...
+[judge] cand#5: paper_id=1502.03167v3.tei.tei chunk_id=1502.03167v3.tei.tei_chunk-9 retr_score=0.3906 section=Training and Inference with Batch-Normalized Networks :: Modify each layer in N tr BN with input x (k) to take y (k) instead 5: end for 6: Train N tr BN to optimize the parameters Θ ∪ {γ (k) , β (k) } K // For clarity...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["methods to stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs"],   "next_question": "What techniques can be applied to deep neural networks to mitigate unstable gradients and loss divergence during early training epochs without altering the network architecture?",   "accept": [     {"chunk_id": "1602.07868v3.tei.tei_chunk-5", "paper_id": "1602.07868v3.tei.tei", "rationale": "Discusses gradient stabilization"},     {"chunk_id": "1502.
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251224_142213_697131.json
+[judge] satisfied=False
+[judge] Accepted this iter: 5 | Rejected this iter: 0 | Total accepted: 5 | Total rejected: 0
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): What techniques can be applied to deep neural networks to mitigate unstable gradients and loss divergence during early training epochs without altering the network architecture?  Search hints: deep le
+[judge] search_hint: deep learning, neural network training, unstable gradients, loss oscillation, gradient stabilization, batch normalization, weight normalization, learning rate scheduling, optimization algorithms
+[retrieve] Query (first 200 chars): What techniques can be applied to deep neural networks to mitigate unstable gradients and loss divergence during early training epochs without altering the network architecture?  Search hints: deep le
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1412.6980v9.tei.tei chunk_id=1412.6980v9.tei.tei_chunk-11 retr_score=0.4265 section=EXPERIMENT: BIAS-CORRECTION TERM :: In Figure 4, values β 2 close to 1 indeed lead to instabilities in training when no bias correction term was present, especially at first few epochs of the trai...
+[judge] cand#2: paper_id=1412.6980v9.tei.tei chunk_id=1412.6980v9.tei.tei_chunk-7 retr_score=0.3993 section=RELATED WORK :: RMSProp: An optimization method closely related to Adam is RMSProp (Tieleman & Hinton, 2012). A version with momentum has sometimes been used (Graves, 2013). Th...
+[judge] cand#3: paper_id=1510.01378v1.tei.tei chunk_id=1510.01378v1.tei.tei_chunk-4 retr_score=0.3988 section=Recurrent Neural Networks :: In vanilla RNNs, the activation function φ is usually a sigmoid function, such as the hyperbolic tangent. Training such networks is known to be particularly dif...
+[judge] cand#4: paper_id=1312.6120v3.tei.tei chunk_id=1312.6120v3.tei.tei_chunk-1 retr_score=0.3965 section=None :: **Published:** 19 Feb 2014  Despite the widespread practical success of deep learning methods, our theoretical understanding of the dynamics of learning in deep...
+[judge] cand#5: paper_id=1607.06450v1.tei.tei chunk_id=1607.06450v1.tei.tei_chunk-1 retr_score=0.3858 section=Abstract :: Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the training time is to normalize the activities of the neurons....
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["techniques to mitigate unstable gradients and loss divergence in deep neural network training without altering the network architecture"],   "next_question": "What specific methods can be applied to stabilize gradients and prevent loss divergence during the early epochs of deep neural network training, without modifying the existing architecture?",   "accept": [     {"chunk_id": "1412.6980v9.tei.tei_chunk-11", "paper_id": "1412.6980v9.tei.tei", "rationale": "Discusses the importance of bias-correction term in Adam optimizer to
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251224_142319_471450.json
+[judge] satisfied=False
+[judge] Accepted this iter: 2 | Rejected this iter: 2 | Total accepted: 7 | Total rejected: 2
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): What specific methods can be applied to stabilize gradients and prevent loss divergence during the early epochs of deep neural network training, without modifying the existing architecture?  Search hi
+[judge] search_hint: deep learning, neural network training, unstable gradients, loss divergence, gradient stabilization, batch normalization, layer normalization, optimization algorithms, recurrent neural networks
+[retrieve] Query (first 200 chars): What specific methods can be applied to stabilize gradients and prevent loss divergence during the early epochs of deep neural network training, without modifying the existing architecture?  Search hi
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1510.01378v1.tei.tei chunk_id=1510.01378v1.tei.tei_chunk-2 retr_score=0.3698 section=Introduction :: Another way to reduce training times is through a better conditioned optimization procedure. Standardizing or whitening of input data has long been known to imp...
+[judge] cand#2: paper_id=1603.09025v5.tei.tei chunk_id=1603.09025v5.tei.tei_chunk-2 retr_score=0.3653 section=INTRODUCTION :: Batch normalization (Ioffe & Szegedy, 2015) is a recently proposed technique for controlling the distributions of feed-forward neural network activations, there...
+[judge] cand#3: paper_id=1510.01378v1.tei.tei chunk_id=1510.01378v1.tei.tei_chunk-3 retr_score=0.3638 section=Batch Normalization :: where m is the size of the mini-batch. Using these statistics, we can standardize each feature as follows  where is a small positive constant to improve numeric...
+[judge] cand#4: paper_id=1512.02595v1.tei.tei chunk_id=1512.02595v1.tei.tei_chunk-10 retr_score=0.3595 section=Batch Normalization for Deep RNNs :: The terms E and Var are the empirical mean and variance over a minibatch. The bias b of the layer is dropped since its effect is cancelled by mean removal. The ...
+[judge] cand#5: paper_id=1811.08883v1.tei.tei chunk_id=1811.08883v1.tei.tei_chunk-5 retr_score=0.3589 section=3. Methodology :: Our goal is to ablate the role of ImageNet pretraining via controlled experiments that can be done without ImageNet pre-training. Given this goal, architectural...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["stabilization methods for deep neural networks without modifying architecture"],   "next_question": "What specific techniques can be applied to stabilize gradients and prevent loss divergence in deep neural networks during early epochs without altering the existing architecture?",   "accept": [     {"chunk_id": "1510.01378v1.tei.tei_chunk-2", "paper_id": "1510.01378v1.tei.tei", "rationale": "Discusses normalization for improving convergence in neural networks"},     {"chunk_id": "1603.09025v5.tei.tei_chunk-2", "paper_id": 
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251224_142355_113621.json
+[judge] satisfied=False
+[judge] Accepted this iter: 5 | Rejected this iter: 0 | Total accepted: 12 | Total rejected: 2
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What specific techniques can be applied to stabilize gradients and prevent loss divergence in deep neural networks during early epochs without altering the existing architecture?
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What gradient stabilization techniques are effective in deep neural networks during early training phases?
+[retrieve] Query (first 200 chars): What gradient stabilization techniques are effective in deep neural networks during early training phases?  Search hints: gradient clipping, gradient normalization, weight regularization, early stoppi
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How do different optimization algorithms impact gradient stability in deep neural networks?
+[retrieve] Query (first 200 chars): How do different optimization algorithms impact gradient stability in deep neural networks?  Search hints: SGD, Adam, RMSProp, optimizer convergence, learning rate scheduling
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What are the effects of batch normalization and other normalization techniques on gradient stability in deep neural networks?
+[retrieve] Query (first 200 chars): What are the effects of batch normalization and other normalization techniques on gradient stability in deep neural networks?  Search hints: batch normalization, layer normalization, instance normaliz
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 12 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251224_142657_647109.json

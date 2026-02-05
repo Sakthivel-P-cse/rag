@@ -1,0 +1,385 @@
+# A stabilized Kuramoto-Sivashinsky system
+
+**Published:** April 26, 2024
+
+## Abstract
+
+A model consisting of a mixed Kuramoto -Sivashinsky -Korteweg -de Vries equation, linearly coupled
+to an extra linear dissipative equation, is proposed. The model applies to the description of
+surface waves on multilayered liquid films. The extra equation makes its possible to stabilize the
+zero solution in the model, thus opening way to the existence of stable solitary pulses (SPs). By
+means of the perturbation theory, treating dissipation and instability-generating gain in the model
+(but not the linear coupling between the two waves) as small perturbations, and making use of the
+balance equation for the net momentum, we demonstrate that the perturbations may select two steady-
+state solitons from their continuous family existing in the absence of the dissipation and gain. In
+this case, the selected pulse with the larger value of the amplitude is expected to be stable,
+provided that the zero solution is stable. The prediction is completely confirmed by direct
+simulations. If the integration domain is not very large, some pulses are stable even when the zero
+background is unstable. An explanation to the latter finding is proposed. Furthermore, stable bound
+states of two and three pulses are found numerically.
+
+## 1 Introduction
+
+The Kuramoto -Sivashinsky (KS) equation is a well-known model of onedimensional turbulence, which
+was derived in various physical contexts, including chemical-reaction waves [1], propagation of
+combustion fronts in gases [2], surface waves in a film of a viscous liquid flowing along an
+inclined plane [3], patterns in thermal convection [4], rapid solidification [5], and others. It has
+the form
+
+where α > 0 and γ > 0 are coefficients accounting for the long-wave instability (gain) and short-
+wave dissipation, respectively. A generalized form of the KS equation contains a linear dispersive
+term borrowed from the Korteweg -de Vries (KdV) equation,
+
+(
+
+As well as the KS equation proper, the generalized equation ( 2) applies to the description of
+surface waves on flowing liquid films [6], and it also serves as a general model which allows one to
+study various nonlinear dissipative waves [7]- [10]. In particular, a subject of considerable
+interest was the study of solitarypulse (SP) solutions to both the KS equation [11] and Eq. ( 2)
+[8,10]. By means of numerical methods, it is possible to find a vast family of SP solutions to Eqs.
+
+(1) and ( 2) in the form u(x, t) = u(x -st) with a constant velocity s. However, it is obvious that
+all these solutions are unstable in an infinitely long system, as the zero solution, into which SP
+goes over at |x -st| → ∞, is unstable in both equations.
+
+It is an issue of a principal interest to find a physically relevant model which combines the
+dissipative and dispersive features, and simultaneously supports stable SPs. It appears that the
+simplest possibility to construct such a model is to couple Eq. (2) to an extra linear stabilizing
+equation, arriving at a system
+
+where the dissipative parameter (effective diffusion coefficient) Γ > 0 accounts for the
+stabilization (see below), and c is a group-velocity mismatch between the two wave modes. The
+coupling parameters ǫ 1 and ǫ 2 must have the same sign (otherwise the coupling gives rise to an
+instability), while their magnitudes may be different. However, it is always possible to make them
+equal, ǫ 1 = ǫ 2 ≡ ǫ, by means of an obvious rescaling of u and v. Then, using the remaining scaling
+invariance of the equations, it is possible to set ǫ ≡ 1. Thus, we will be dealing with a system
+containing four irreducible parameters,
+
+Note that the system conserves two "masses",
+
+The system of equations ( 3) and ( 4) can find their natural physical realization as a model
+describing coupled surface and interface waves in a two-layered flowing liquid film, cf. the similar
+interpretation of the single equation (1) or Eq.
+
+(2) mentioned above. In particular, the linear coupling via the first derivatives is the same as in
+known models of coupled internal waves propagating in multilayered fluids [12]. Then, the linear
+dissipative equation ( 4) implies that the substrate layer is essentially more viscous than the
+upper one. In fact, the additional equation ( 6) may also be nonlinear, but it can be checked that
+inclusion of the nonlinear term vv x into this equation does not produce any conspicuous difference,
+therefore we focus on the simplest model ( 5), (6), which provides for the stabilization of SPs.
+
+The system of equations ( 5) and ( 6) is qualitatively similar to a system of linearly coupled
+Ginzburg-Landau (GL) equations describing propagation of localized pulses in an fiber-optic core
+equipped with distributed gain, which is linearly coupled to an extra lossy core that provides for
+the stability of the pulses [13,14,15] (such double-core systems have recently become available to
+experimental studies, and they have very promising features for applications to optical
+communications, see a short overview in Ref. [16]). The most fundamental version of this GL system
+is that in which the extra stabilizing equation is also linear, cf. Eq. ( 6); in that case, SP
+solutions can be found in an exact analytical form, and they are stable in a certain parametric
+region [14].
+
+In this work, we will find stable SPs in the system (5), ( 6), which appears to be the first example
+of stable pulses in a model of the KS type. In section 2, we analyze the stability of the zero
+solution, which, as it was mentioned above, is a necessary condition for the stability of SPs in the
+infinitely long system. In section 3, an analytical perturbation theory for the pulses is developed,
+which is based on treating the gain and dissipation constants α, γ, and Γ in Eqs. ( 5) and ( 6) as
+small parameters (while the group-velocity mismatch c need not be small). In the zero-order
+approximation, α = γ = Γ = 0, Eqs. ( 5) and ( 6) have a one-parameter family of exact soliton
+solutions. Using the known approach based on the balance equation for the momentum [7], we
+demonstrate that the combination of the perturbation terms in Eqs. ( 5) and ( 6) may select one or
+two stationary pulses out of the continuous family existing in the zero-order approximation. As is
+known [13], the existence of two different SP solutions is a necessary condition for the stability
+of one of them, the second pulse (the one with smaller amplitude) being unstable, as it plays the
+role of a separatrix between attraction domain of the zero solution and stable pulse.
+
+In section 4, we present results of direct numerical simulations of the full system (5), (6), which
+demonstrate that stable SPs exist indeed. In fact, simulations sometimes produce stable pulses even
+in the case when the zero solution is not stable. This stability extension may be explained by the
+finite size of the simulation domain. Moreover, stable bound states (BSs) of two and three pulses
+are found numerically too.
+
+## 2 The stability of the zero solution
+
+As it was explained above, it is necessary to investigate the stability of the trivial solution, u =
+v = 0, before the consideration of pulses. To this end, we substitute into the linearized equations
+( 5) and ( 6) a perturbation in the form u ∼ exp (ikx + λt), v ∼ exp (ikx + λt), where k is an
+arbitrary real wave number of the perturbation, and λ is the corresponding instability growth rate,
+which leads to a dispersion equation,
+
+The stability condition states that both solutions of the quadratic equation ( 8) must satisfy the
+inequality Re [λ(k)] ≤ 0 at all the real values of k.
+
+For k → 0, solutions to Eq. ( 8) can be found in the form of an expansion
+
+where λ 1 = -c ± √ c 2 + 4 /2, and
+
+the sign ± being the same in λ 1 and λ 2 . As λ 1 is always real, at the first order the expansion
+(9) implies neutral stability. The expression (10) yields a necessary condition for the stability of
+the zero solution at the second order of the expansion, Re λ 2 ≤ 0, which can be cast into a form
+
+In the particular case c = 0, the condition (11) amounts to Γ > α, which has a simple meaning: the
+stabilizing diffusion coefficient in Eq. ( 6) must be larger than the instability-driving "anti-
+diffusion" (gain) coefficient in Eq. ( 5). A very similar necessary stability condition is known in
+the above-mentioned system of coupled GL equation describing a dual-core optical fiber with one
+active and one passive cores [13,14].
+
+Comprehensive analysis of the zero-solution stability was performed by means of numerical solution
+of the dispersion equation (8). It was found that the full stability condition does not amount to
+the inequality (11) (i.e., it may happen that Re [λ(k)] is negative at small k, but it takes
+positive values in some interval of finite values of k). Numerically found stability borders in the
+plane of the parameters (α, Γ) for a fixed value γ = 0.05 of the short-wave stabilization parameter
+in Eq. ( 5) and two different values of the group-velocity mismatch, c = 0 and c = -1, are shown by
+dashed curves in stability diagrams for the pulses displayed in Figs. 1 and2. In both cases, the
+zero solution is stable to the left of the stability border. Note that, for small α and Γ, the zero-
+solution stability region is indeed determined by Eq. ( 11), but at larger values of α and Γ there
+appear additional stability restrictions.
+
+## 3 The perturbation theory for solitary pulses
+
+At the zeroth order, setting γ = Γ = α = 0 in Eqs. ( 5) and ( 6), but keeping an arbitrary value of
+c, we arrive at a conservative system consisting of the KdV equation coupled to an extra linear one,
+
+Equations ( 12) have a family of exact two-component soliton solutions,
+
+where η is an arbitrary parameter which determines the soliton's amplitude and width, and the
+velocity s takes two different values for given η,
+
+It will be more convenient to use, as a parameter of the soliton family, not the amplitude η, but
+rather the relative velocity,
+
+in terms of which the amplitude is given by an expression obtained from Eq. ( 14),
+
+The range of meaningful values of δ is restricted by the condition η 2 > 0.
+
+We have checked by direct simulations of Eqs. ( 12) that all the soliton solutions (13) are stable
+within the framework of the unperturbed equations (12). On the other hand, simulations also clearly
+demonstrate that collisions between solitons having different velocities are inelastic (although not
+strongly inelastic, see a typical example in Fig. 3), hence the conservative system (12), unlike the
+KdV equation proper, is not an exactly integrable one. The nonintegrability of the system (12) has
+also been confirmed by analysis of its symmetries performed by G. Burde (unpublished).
+
+The next step is to restore the small dissipative and gain perturbations, getting back from Eqs.
+(12) to Eqs. ( 5) and (6). To this end, we notice that the unperturbed equations (12) conserve not
+only the masses (7) but also the net momentum,
+
+Following the work [7], in the first approximation of the perturbation theory the evolution of the
+soliton may be described by means of the balance equation for the momentum. Indeed, a consequence of
+Eqs. ( 5) and ( 6) is the following exact evolution equation for the net momentum in the presence of
+the perturbations:
+
+Steady-state SPs are selected by the condition dP/dt = 0. The right-hand side of Eq. ( 18) can be
+explicitly calculated in the approximation in which u and v are substituted by the expressions (13).
+After a straightforward algebra, the equation dP/dt = 0 can be cast into the form of a cubic
+equation for the relative velocity δ of the unperturbed soliton (13),
+
+Roots of Eq. ( 19) select SPs that may exist as steady states within the framework of the
+perturbation theory. Note that, besides the obvious condition that physical roots for δ must be real
+(they may be both positive and negative), they must also satisfy a condition that, after the
+substitution into Eq. ( 16), they must produce η2 > 0. Generally speaking, there may exist up to
+three physical roots of Eq. ( 19); however, in a vast parametric area considered, we have never
+encountered a case when Eq. ( 19) would indeed have three physical roots, while the existence of two
+physical solutions is quite possible, see below. As it was mentioned in the Introduction, one may
+expect that SP may be stable if precisely two different pulses exist, then the one with the larger
+amplitude η 2 has a chance to be stable, while the pulse with the smaller amplitude is always
+unstable [13,14]. Indeed, if there is a stable SP, we are dealing with a bistable system, as the
+parameters are chosen so that the zero solution is also stable, see the previous section. In a
+bistable system, there should exist a separatrix, i.e., a border between attraction domains of two
+stable solutions, the separatrix itself being an unstable stationary solution. In the situation with
+two different stationary SP solutions predicted by the perturbation theory, the one with the smaller
+amplitude and larger width is a natural candidate to the role of the unstable separatrix solution,
+while its counterpart with the larger amplitude and smaller width may be stable (generally speaking,
+it may be stable in a part of the parametric region where this situation takes place [13,14]).
+
+Equation ( 19) may be simplified in the case c = 0, if we additionally assume that both renormalized
+parameters α and Γ are large (in fact, we are interested in the case when Γ ∼ α3 ≫ 1). Then, the
+term -5δ may be neglected in Eq. ( 19), so that it takes the form
+
+In the case c = 0, the condition η 2 > 0 following from Eq. ( 16) also takes a simple form: a
+physical root is that which belongs to either of the two intervals,
+
+With regard to the assumption that Γ and α are large, it is easy to see that the simplified equation
+(20) always has a real root in the region δ > 1, which is unphysical according to Eq. (21). Two
+physical roots δ < -1 exist under the condition
+
+Note that this condition does not contradict the necessary condition (11) of the stability of the
+zero solution, which in the present case (c = 0) takes the form Γ > α. Indeed, the latter inequality
+is compatible with (22), provided that α > √ 3 (15/14) ≈ 1. 856, which is correct, as we are here
+dealing with the case when α is large. However, the inequality ( 22) is not necessarily compatible
+with the full stability condition for the zero solution, see Fig. 1.
+
+In the general case, it is easy to solve Eq. ( 19) numerically. Then, selecting a parametric region
+in which there are exactly two physical solutions (which, as it was explained above, is a necessary
+condition for the existence of a stable SP), one may identify a narrower region in which this
+condition holds and, simultaneously, the zero solution is stable. Stable pulses may exist only
+inside that region where both necessary stability conditions overlap, and direct simulations show
+that all the pulses belonging to the region are stable indeed, at least in case displayed in Fig. 1,
+see details below.
+
+The so defined regions in the parametric plane (α, Γ), in which stable SPs are expected, are
+displayed, for γ = 0.05, in Figs. 1 and2 for c = 0 and c = -1, respectively. The condition of the
+existence of exactly two different physical solutions for the pulses holds to the right of the
+continuous curve in these figures [note that the part of the curve corresponding to sufficiently
+large values of Γ is well approximated by the analytical expression (22) obtained above]. At the
+points belonging to the continuous curve, the two physical solutions merge and disappear via a
+typical tangent (saddle-node) bifurcation.
+
+The same analysis performed for values of the short-wavelength-dissipation parameter γ different
+from the value 0.05, for which the results are presented in Figs. 1 and2, shows that variation of γ
+produces little change in terms of the expected SP stability region (generally, the size of the
+region increases with γ). As for the effect of the group-velocity mismatch c, we have found that the
+stability region quickly shrinks with the increase of c when c is positive, and there is no
+stability region at c > c cr , where c cr is slightly larger than 0.3. In that case, the areas in
+which, respectively, the zero solution is stable, and there are two different stationary SPs, do not
+overlap. To illustrate this point, a very narrow stability region in the (α, Γ) plane for c = 0.3 is
+shown in Fig. 4.
+
+## 4 Numerical simulations of the solitary pulses
+
+As it was said above, it is necessary to directly check whether stable SPs indeed exist in the
+region where the stability is expected. To this end, Eqs. ( 5), (6) with periodic boundary
+conditions (b.c.) were integrated by means of an implicit Fourier spectral method [19], the time
+step being, typically, 0.01 and 0.02. (a description of the method is given in the appendix). The
+initial conditions were taken as suggested by the perturbation theory, i.e., in the form (13), but
+with arbitrary values of the amplitude, in order to check whether strongly perturbed pulses relax to
+stable ones, i.e., whether the stable pulses are attractors.
+
+Results are displayed in Fig. 1 by means of the symbols x and o, standing for unstable and stable
+solitons, respectively (it may happen that, near the border with the unstable SPs, some pulses which
+appear to be stable are subject to a very weak instability which does not manifest itself within the
+integration time limits). As is seen, the pulses are indeed stable everywhere inside the expected
+stability region. Moreover, all the stable pulses were found to be strong attractors. For instance,
+in the case α = 0.1, Γ = 0.15, the initial pulses definitely relaxed to a single stationary SP if
+their initial amplitude A 0 exceeded 1.7. In particular, starting with A 0 = 3 and A 0 = 12 at t =
+0, the pulse attained the value of the amplitude, respectively, A = 6.91 and A = 7.18 at t = 400.
+The analytical prediction for the amplitude of the steady-state pulse (13) (the one with the larger
+value of the amplitude) is, at the same values of the parameters, A anal ≡ 12η 2 ≈ 6.45, so that a
+discrepancy with the numerical results is less than 10%. On the other hand, if the initial amplitude
+was too small, e.g., A 0 = 0.75, the pulse decayed into zero, which is natural too, as the zero
+solution has its own attraction basin. Note that for the second (smaller) steady-state pulse, which
+is expected to play the role of the separatrix between the attraction basins of the stable pulse and
+zero solution, the perturbation theory predicts, in the same case, the amplitude A anal ≈ 2.15, so
+it seems quite natural that the initial pulses with A 0 = 3 and A 0 = 0.75 relax, respectively, to
+the stable pulse and to zero.
+
+Figure 1 shows that the numerically found upper border of the stablepulse region is quite close to
+the border of the existence region for the steadystate pulses, as predicted by the perturbation
+theory. Unlike this, the numerically identified stability region extends far below the analytically
+found border of the zero-solution instability. For instance, it was found that, at α = 0.15 and Γ =
+0.2, when the zero solution is unstable against perturbations with finite wavenumbers k, the fastest
+growing perturbation corresponding to k = k max ≈ 1.3, a fairly stable pulse with the amplitude A =
+11.75 was found in the simulations, the pulse's amplitude predicted by the perturbation theory being
+A anal ≈ 11.61 in this case. Moreover, we ran simulations in which the most dangerous perturbation
+with the above-mentioned wavenumber k = 1.3 and a rather large amplitude, A pert = 1, was
+deliberately added to the pulse in the initial configuration. Instead of growing and destroying the
+pulse, the perturbation was suppressed by the pulse, which remained stable indefinitely long (Fig.
+5).
+
+A cause of this extended stability can be understood. A similar feature was reported, for a
+generalized asymmetric (with respect to the reflection x → -x) cubic-quintic GL equation with
+periodic b.c., which has moving-pulse solutions, in Ref. [17]. An explanation was that the moving
+pulse, traveling across the integration domain, periodically passes each point and suppresses the
+perturbation at a rate which exceeds the perturbation growth rate (see also Ref. [10], where stable
+pulses were observed in the KS -KdV equation; in that work, an explanation was that the moving pulse
+was able to escape growing perturbation wave packets). It seems very plausible that a similar
+"sweeping" mechanism explains the anomalous pulse stability in the present model. Indeed, when we
+repeated the simulations for the same values of the parameters but in a spatial domain four times as
+large (i.e., the corresponding sweeping rate is four times as small), the pulse demonstrated the
+expected instability, even without any specially added perturbation seed, see Fig. 6.
+
+Similar to a result reported for a system of linearly coupled Ginzburg-Landau (GL) equations in Ref.
+[18], bound states (BSs) with two or more peaks can be found in the present model, in addition to
+single SPs. To this end, we took an initial configuration constructed as a set of two or more
+identical exact solutions of the unperturbed system (12) with a certain separation between them. The
+simulations have shown that BSs featuring two or more peaks of equal amplitudes indeed develop and
+propagate stably. These results for the two-peak and three-peak BSs are illustrated by Figs. 7 and8,
+respectively. We have also checked that, even if the amplitudes of the initial pulses and
+separations between them are changed, the same BS consisting of equidistant equal-amplitude peaks
+finally develops, i.e., the BSs are fairly robust dynamical objects. In this connection, it is
+relevant to mention that, in the above-mentioned coupled GL equations, only two-pulse BSs are
+completely stable, while BSs of three pulses are split by perturbations breaking their symmetry
+[18].
+
+## 5 Conclusion
+
+In this work, we have introduced a model based on the Kuramoto -Sivashinsky -Korteweg -de Vries
+equation,which is linearly coupled to an extra linear dissipative equation. The model can be applied
+to the description of coupled surface and interface waves on flowing multilayered liquid films. The
+additional linear equation makes its possible to stabilize the zero solution, which opens way to the
+existence of stable solitary pulses. Treating the dissipation and gain in the model (but not the
+linear coupling between the two wave modes) as small perturbations, and making use of the balance
+equation for the net momentum, we have found that the condition of the balance between the gain and
+dissipation may select two steady-state solitons from their continuous family existing in the
+absence of the dissipation and gain (the family was found in an exact analytical form). When the
+zero solution is stable and, simultaneously, two SPs are picked up by the balance equation for the
+momentum, the pulse with the larger value of the amplitude is expected to be stable in the
+infinitely long system, while the other pulse must be unstable, playing the role of a separatrix
+between attraction domains of the stable pulse and zero solution. These predictions have been
+completely confirmed by direct simulations. Moreover, if the integration domain is not very large
+(and periodic boundary conditions are imposed), some pulses are stable even when the zero background
+is unstable. An explanation to the latter feature, based on the concept of periodic suppression of
+the perturbations by the running pulse, is proposed. Furthermore, stable bound states of two and
+three identical pulses have been found numerically. An interesting issue, which is left for further
+work, is a possibility of formation of stable periodic arrays of the pulses. Note that periodic
+pulse arrays in the KS -KdV equation were studied in Refs. [8,9].
+
+Lastly, it is worthy to note that, since we have found stable pulses in the model including the
+dispersion term, i.e., u xxx in Eq. ( 3), a natural question is if the presence of this term is a
+necessary condition for the existence of stable pulses. Our preliminary numerical study demonstrates
+that there is a finite critical minimum value of the coefficient in front of the dispersive term (if
+all the other parameters of the system are fixed) which is indeed necessary for the existence of
+stable pulses. For instance, in a typical case considered in this work, with c = 0, α = 0.1, γ =
+0.05, and Γ = 0.15, this minimum value was found to be roughly 0.5.
+
+A plausible qualitative explanation for this effect (which will be considered in detail elsewhere)
+is that, although the dispersion does not directly affect the saturation mechanism stabilizing the
+pulses, it can inhibit mode coupling as an effective impedance, which will lead to attaining the
+necessary saturation at a higher amplitude of the pulse. Therefore, the amplitude of pulses becomes
+larger as the dispersion increases, while the pulse widths, directly determined by the dissipation,
+remain almost constant. This trend to the formation of pulses with higher amplitudes in the presence
+of strong dispersion is a feasible cause for the existence of stable pulses.
+
+We employ the fast Fourier transform (FFT) to carry out the DFT and its inverse in the numerical
+form, therefore N must be taken equal to a powers of 2.
+
+The Fourier transform converts Eqs. ( 5), ( 6) into
+
+where
+
+For the time integration of Eqs. ( 25) and ( 26) , the Crank-Nicolson scheme is used, which leads to
+a nonlinear system
+
+To solve this nonlinear system, the following iteration procedure is employed:
+
+Here r = 0, 1, • • • , R -1, where R is the iteration number in each time step. In practice, the
+number of the Fourier modes was taken to be 256 or 512, the typical time step was 0.01 and 0.02, and
+the iteration was run twice in each time step.
+
+## Figure Captions
+
+Fig. 1. The stability region for solitary pulses in the parametric plane (α,Γ) of the system (5), (
+6) for γ = 0.05 and c = 0. The zero solution is stable to the left of the dashed curve, and Eq. (
+19) produces two physical solutions to the right of the continuous curve. The symbols x and o mark
+points at which direct simulations show, respectively, that the solitary pulse is unstable or
+stable. Fig. 2. The expected stability region for the solitary pulses in the parametric plane (α,Γ)
+for γ = 0.05 and c = -1. The continuous and dashed curves have the same meaning as in Fig. 1. Fig.
+3. A typical result of an inelastic collision between two stable solitons with different velocities,
+simulated within the framework of the zero-order conservative system (12) with c = 0: (a) t = 0, (b)
+t = 0, (c) t = 40, (d) t = 40, the initial velocities of the two solitons are s 1 = 4.236 and s 2 =
+2.414. Fig. 4. The expected nearly vanishing stability region for the solitary pulses in the
+parametric plane (α,Γ) for γ = 0.05 and c = 0.3. The continuous and dashed curves have the same
+meaning as in Fig. 1. Fig. 5. Suppression of the initially imposed large perturbation which is the
+fastest growing instability mode in the infinite system by the traveling pulse in the case α = 0.15,
+Γ = 0.2, γ = 0.05, and c = 0, in the spatial domain of the length L = 128 with periodic boundary
+conditions. The perturbation is taken as u pert = v pert = a 0 cos(k max x) with a 0 = 1 and k max =
+1.3. The panels (a) and (b) show the initial configurations of the fields, and (c) and (d) are their
+shapes produced by the direct simulations by the moment t = 420. Fig. 6. The instability of the
+pulse at the same values of parameters and for the same time interval as in Fig. 5, but in the
+spatial domain of the length four times as large, L = 512, without any specially imposed initial
+perturbation.
+
+---
+## Footnotes
+
+[2] α
+
+[3] . (22)

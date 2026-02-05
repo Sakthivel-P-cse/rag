@@ -1,0 +1,405 @@
+{
+  "paper_id": "7BDBA5163CDF7CAC2388555976BF5F90",
+  "title": "Enhanced hard X-ray emission from femtosecond laser irradiated microdroplets",
+  "arxiv_id": "arXiv:physics/0401024v3[physics.plasm-ph]",
+  "authors": [
+    {
+      "given": "M",
+      "family": "Anand"
+    },
+    {
+      "given": "A S",
+      "family": "Sandhu"
+    },
+    {
+      "given": "S",
+      "family": "Kahaly"
+    },
+    {
+      "given": "G",
+      "family": "Ravindra Kumar"
+    },
+    {
+      "given": "M",
+      "family": "Krishnamurthy"
+    },
+    {
+      "given": "P",
+      "family": "Gibbon"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R F",
+          "family": "Service"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B A",
+          "family": "Remington"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Ditmire"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Cowan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "App. Phys. Lett",
+      "container_title": "App. Phys. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Fritzler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Schnürer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P P",
+          "family": "Rajeev"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Kulcsar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Phys. Rep",
+      "container_title": "Phys. Rep",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V P",
+          "family": "Krainov"
+        },
+        {
+          "given": "M B",
+          "family": "Smirnov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mc Pherson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Opt. Comm",
+      "container_title": "Opt. Comm",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Rymell"
+        },
+        {
+          "given": "H M",
+          "family": "Hertz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Proc. SPIE",
+      "container_title": "Proc. SPIE",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Constantinescu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "J. Phys. B",
+      "container_title": "J. Phys. B",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Donnelly"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "App. Phys. A",
+      "container_title": "App. Phys. A",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Parra"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "App. Phys. B",
+      "container_title": "App. Phys. B",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H C",
+          "family": "Wu"
+        },
+        {
+          "given": "W",
+          "family": "Yu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "App. Phys. B",
+      "container_title": "App. Phys. B",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Anand"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Chem. Phys. Lett",
+      "container_title": "Chem. Phys. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Anand"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "J.Phys.B",
+      "container_title": "J.Phys.B",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Ravindrakumar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A S",
+          "family": "Sandhu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Favre"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Canada",
+      "container_title": "Canada",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C F",
+          "family": "Bohren"
+        },
+        {
+          "given": "D R",
+          "family": "Huffman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Matlab functions for Mie scattering and Absorption",
+      "container_title": "Matlab functions for Mie scattering and Absorption",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Matzler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Proc. SPIE 1229",
+      "container_title": "Proc. SPIE 1229",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Rosen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Bastiani"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Gibbon"
+        },
+        {
+          "given": "A R",
+          "family": "Bell"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "The BOPS code is available online at",
+      "container_title": "The BOPS code is available online at",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Gibbon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Phys. Plasmas",
+      "container_title": "Phys. Plasmas",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E E",
+          "family": "Fill"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

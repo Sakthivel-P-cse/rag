@@ -1,0 +1,1118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MULTI-TASK SEQUENCE TO SEQUENCE LEARNING</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2016-03-01">1 Mar 2016</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Minh-Thang</forename><surname>Luong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Quoc</forename><forename type="middle">V</forename><surname>Le</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+							<email>ilyasu@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+							<email>vinyals@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lukasz</forename><surname>Kaiser</surname></persName>
+							<email>lukaszkaiser@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MULTI-TASK SEQUENCE TO SEQUENCE LEARNING</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2016-03-01">1 Mar 2016</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A80D20977BCBC5760F54EB3C855DDA85</idno>
+					<idno type="arXiv">arXiv:1511.06114v4[cs.LG]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>Sequence to sequence learning has recently emerged as a new paradigm in supervised learning. To date, most of its applications focused on only one task and not much work explored this framework for multiple tasks. This paper examines three multi-task learning (MTL) settings for sequence to sequence models: (a) the oneto-many setting -where the encoder is shared between several tasks such as machine translation and syntactic parsing, (b) the many-to-one setting -useful when only the decoder can be shared, as in the case of translation and image caption generation, and (c) the many-to-many setting -where multiple encoders and decoders are shared, which is the case with unsupervised objectives and translation. Our results show that training on a small amount of parsing and image caption data can improve the translation quality between English and German by up to 1.5 BLEU points over strong single-task baselines on the WMT benchmarks. Furthermore, we have established a new state-of-the-art result in constituent parsing with 93.0 F 1 . Lastly, we reveal interesting properties of the two unsupervised learning objectives, autoencoder and skip-thought, in the MTL context: autoencoder helps less in terms of perplexities but more on BLEU scores compared to skip-thought.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>We thank <rs type="person">Chris Manning</rs> for helpful feedback on the paper and members of the <rs type="institution">Google Brain team</rs> for thoughtful discussions and insights.</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A framework for learning predictive structures from multiple tasks and unlabeled data</title>
+		<author>
+			<persName><forename type="first">Rie</forename><surname>Ando</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kubota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tong</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">JMLR</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1817" to="1853" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Multi-task feature learning</title>
+		<author>
+			<persName><forename type="first">Andreas</forename><surname>Argyriou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Theodoros</forename><surname>Evgeniou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Massimiliano</forename><surname>Pontil</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Neural machine translation by jointly learning to align and translate</title>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICLR</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Findings of the 2015 workshop on statistical machine translation</title>
+		<author>
+			<persName><surname>Bojar</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ondřej</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chatterjee</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rajen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Federmann</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Christian</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Haddow</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Huck</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Matthias</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hokamp</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chris</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Koehn</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Philipp</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Logacheva</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Varvara</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Monz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Christof</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Negri</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Matteo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Post</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Matt</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Scarton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Carolina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucia</forename><surname>Specia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Turchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">WMT</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Multitask learning</title>
+		<author>
+			<persName><forename type="first">Rich</forename><surname>Caruana</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Machine Learning</title>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="41" to="75" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Learning phrase representations using RNN encoder-decoder for statistical machine translation</title>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Van Merrienboer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bart</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Caglar</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fethi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Holger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Semi-supervised sequence learning</title>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">M</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">DeCAF: A deep convolutional activation feature for generic visual recognition</title>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Donahue</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yangqing</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oriol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Judy</forename><surname>Hoffman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Tzeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Trevor</forename><surname>Darrell</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Multi-task learning for multiple language translation</title>
+		<author>
+			<persName><forename type="first">Daxiang</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hua</surname></persName>
+		</author>
+		<author>
+			<persName><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dianhai</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haifeng</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Regularized multi-task learning</title>
+		<author>
+			<persName><forename type="first">Theodoros</forename><surname>Evgeniou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Massimiliano</forename><surname>Pontil</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">SIGKDD</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<author>
+			<persName><forename type="first">Caglar</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Firat</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Orhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kelvin</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kyunghyun</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Barrault</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Loic</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Huei-Chi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fethi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Holger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1503.03535</idno>
+		<title level="m">On using monolingual corpora in neural machine translation</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Multilingual acoustic models using distributed deep neural networks</title>
+		<author>
+			<persName><forename type="first">Georg</forename><surname>Heigold</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Patrick</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ranzato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Devin</forename><surname>Marc'aurelio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthieu</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In ICASSP</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">Sepp</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jürgen</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Cross-language knowledge transfer using multilingual deep neural network with shared hidden layers</title>
+		<author>
+			<persName><forename type="first">Jui-</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ting</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jinyu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifan</forename><surname>Gong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICASSP</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">On using very large target vocabulary for neural machine translation</title>
+		<author>
+			<persName><forename type="first">Sébastien</forename><surname>Jean</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kyunghyun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roland</forename><surname>Memisevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Montreal neural machine translation systems for WMT'15</title>
+		<author>
+			<persName><forename type="first">Sébastien</forename><surname>Jean</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Firat</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Orhan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kyunghyun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roland</forename><surname>Memisevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">WMT</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Exploring the limits of language modeling</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jozefowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Shazeer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1602.02410</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Recurrent continuous translation models</title>
+		<author>
+			<persName><forename type="first">Nal</forename><surname>Kalchbrenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Skip-thought vectors</title>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yukun</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ruslan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">S</forename><surname>Zemel</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Torralba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Antonio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raquel</forename><surname>Urtasun</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fidler</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sanja</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Learning task grouping and overlap in multi-task learning</title>
+		<author>
+			<persName><forename type="first">Abhishek</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iii</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hal</forename><surname>Daumé</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Representation learning using multi-task deep neural networks for semantic classification and information retrieval</title>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jianfeng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Xiaodong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Duh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ye-Yi</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NAACL</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Stanford neural machine translation systems for spoken language domain</title>
+		<author>
+			<persName><forename type="first">Minh-Thang And</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IWSLT</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Effective approaches to attentionbased neural machine translation</title>
+		<author>
+			<persName><forename type="first">Minh</forename><forename type="middle">-</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Thang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pham</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hieu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Addressing the rare word problem in neural machine translation</title>
+		<author>
+			<persName><forename type="first">Minh</forename><forename type="middle">-</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Thang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ilya</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oriol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wojciech</forename><surname>Zaremba</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Building a large annotated corpus of english: The penn treebank</title>
+		<author>
+			<persName><forename type="first">Mitchell</forename><forename type="middle">P</forename><surname>Marcus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mary</forename><surname>Marcinkiewicz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beatrice</forename><surname>Santorini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="313" to="330" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Bleu: a method for automatic evaluation of machine translation</title>
+		<author>
+			<persName><forename type="first">Kishore</forename><surname>Papineni</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Roukos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ward</forename><surname>Salim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Todd</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL</title>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Dropout improves recurrent neural networks for handwriting recognition</title>
+		<author>
+			<persName><surname>Pham</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bluche</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Théodore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Kermorvant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jérôme</forename><surname>Louradour</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Frontiers in Handwriting Recognition (ICFHR), 2014 14th International Conference on</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="285" to="290" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Sequence to sequence learning with neural networks</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oriol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Is learning the n-th thing any easier than learning the first?</title>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Thrun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Grammar as a foreign language</title>
+		<author>
+			<persName><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oriol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lukasz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Koo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Terry</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Petrov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Slav</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ilya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Show and tell: A neural image caption generator</title>
+		<author>
+			<persName><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oriol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Toshev</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Samy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dumitru</forename><surname>Erhan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CVPR</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Show, attend and tell: Neural image caption generation with visual attention</title>
+		<author>
+			<persName><forename type="first">Kelvin</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jimmy</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ryan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kyunghyun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><forename type="middle">C</forename><surname>Courville</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ruslan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">S</forename><surname>Zemel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

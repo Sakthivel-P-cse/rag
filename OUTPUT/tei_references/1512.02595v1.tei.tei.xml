@@ -1,0 +1,1856 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Deep Speech 2: End-to-End Speech Recognition in English and Mandarin</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2015-12-08">8 Dec 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Baidu</forename><surname>Research -Silicon Valley</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Lab</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dario</forename><surname>Amodei</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rishita</forename><surname>Anubhai</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Eric</forename><surname>Battenberg</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Carl</forename><surname>Case</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jared</forename><surname>Casper</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bryan</forename><surname>Catanzaro</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jingdong</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mike</forename><surname>Chrzanowski</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Adam</forename><surname>Coates</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Greg</forename><surname>Diamos</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Erich</forename><surname>Elsen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jesse</forename><surname>Engel</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Linxi</forename><surname>Fan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Christopher</forename><surname>Fougner</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tony</forename><surname>Han</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Awni</forename><surname>Hannun</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Billy</forename><surname>Jun</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Patrick</forename><surname>Legresley</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Libby</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sharan</forename><surname>Narang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Ng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sherjil</forename><surname>Ozair</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ryan</forename><surname>Prenger</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jonathan</forename><surname>Raiman</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sanjeev</forename><surname>Satheesh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Seetapun</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shubho</forename><surname>Sengupta</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiqian</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chong</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Xiao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dani</forename><surname>Yogatama</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenyao</forename><surname>Zhu</surname></persName>
+						</author>
+						<title level="a" type="main">Deep Speech 2: End-to-End Speech Recognition in English and Mandarin</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-12-08">8 Dec 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7BD1E2C12782917A4211A3BF569BBA05</idno>
+					<idno type="arXiv">arXiv:1512.02595v1[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>We show that an end-to-end deep learning approach can be used to recognize either English or Mandarin Chinese speech-two vastly different languages. Because it replaces entire pipelines of hand-engineered components with neural networks, end-to-end learning allows us to handle a diverse variety of speech including noisy environments, accents and different languages. Key to our approach is our application of HPC techniques, resulting in a 7x speedup over our previous system <ref type="bibr" target="#b25">[26]</ref>. Because of this efficiency, experiments that previously took weeks now run in days. This enables us to iterate more quickly to identify superior architectures and algorithms. As a result, in several cases, our system is competitive with the transcription of human workers when benchmarked on standard datasets. Finally, using a technique called Batch Dispatch with GPUs in the data center, we show that our system can be inexpensively deployed in an online setting, delivering low latency when serving users at scale.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We are grateful to Baidu's speech technology group for help with data preparation and useful conversations. We would like to thank <rs type="person">Scott Gray</rs>, <rs type="person">Amir Khosrowshahi</rs> and all of <rs type="person">Nervana Systems</rs> for their excellent matrix multiply routines and useful discussions. We would also like to thank <rs type="person">Natalia Gimelshein</rs> of <rs type="institution">NVIDIA</rs> for useful discussions and thoughts on implementing our fast deployment matrix multiply.</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Applying convolutional neural networks concepts to hybrid nn-hmm model for speech recognition</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Abdel-Hamid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>-R. Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Penn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICASSP</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Neural machine translation by jointly learning to align and translate</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICLR</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">End-to-end attention-based large vocabulary speech recognition</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chorowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Serdyuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brakel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno>abs/1508.04395</idno>
+		<ptr target="http://arxiv.org/abs/1508.04395" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The third 'CHiME' speech separation and recognition challenge: Dataset, task and baselines</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Barker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Marxer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ricard</forename><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Watanabe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Submitted to IEEE 2015 Automatic Speech Recognition and Understanding Workshop</title>
+		<imprint>
+			<publisher>ASRU</publisher>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baxter</surname></persName>
+		</author>
+		<ptr target="https://nvlabs.github.io/moderngpu/" />
+		<title level="m">Modern GPU</title>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Curriculum learning</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Louradour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Collobert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Connectionist Speech Recognition: A Hybrid Approach</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bourlard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Morgan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1993">1993</date>
+			<publisher>Kluwer Academic Publishers</publisher>
+			<pubPlace>Norwell, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">W</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Listen</surname></persName>
+		</author>
+		<idno>spell. abs/1508.01211</idno>
+		<ptr target="http://arxiv.org/abs/1508.01211" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chetlur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Woolley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vandermersch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shelhamer</surname></persName>
+		</author>
+		<title level="m">Efficient primitives for deep learning</title>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Project adam: Building an efficient and scalable deep learning training system</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chilimbi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Suzue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Apacible</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kalyanaraman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">USENIX Symposium on Operating Systems Design and Implementation</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Learning phrase representations using rnn encoder-decoder for statistical machine translation</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Van Merrienboer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">End-to-end continuous speech recognition using attention-based recurrent nn: First</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chorowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno>results. abs/1412.1602</idno>
+		<ptr target="http://arxiv.org/abs/1412.1602" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The Fisher corpus: a resource for the next generations of speech-totext</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Walker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">LREC</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="69" to="71" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Text detection and character recognition in scene images with unsupervised feature learning</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Carpenter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Case</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Satheesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Suresh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Document Analysis and Recognition</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Deep learning with COTS HPC</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Huval</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Catanzaro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Large vocabulary continuous speech recognition with context-dependent DBN-HMMs</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICASSP</title>
+		<meeting>ICASSP</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Context-dependent pre-trained deep neural networks for large vocabulary speech recognition</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Acero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Audio, Speech, and Language Processing</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Large scale distributed deep networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Monga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Devin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ranzato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 25</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Size matters: An empirical study of neural network training for large vocabulary continuous speech recognition</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ellis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Morgan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In ICASSP</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1013" to="1016" />
+			<date type="published" when="1999">1999</date>
+			<publisher>IEEE</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Elsen</surname></persName>
+		</author>
+		<ptr target="http://svail.github.io/rnn_perf" />
+		<title level="m">Optimizing RNN performance</title>
+		<imprint>
+			<date type="published" when="2015-11-24">2015-11-24</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Support vector machines for noise robust ASR</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J F</forename><surname>Gales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ragni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Aldamarki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gautier</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="205" to="2010" />
+		</imprint>
+		<respStmt>
+			<orgName>ASRU</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Connectionist temporal classification: Labelling unsegmented sequence data with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gomez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="page" from="369" to="376" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Towards end-to-end speech recognition with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jaitly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Speech recognition with deep recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>-R. Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In ICASSP</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Long short-term memory recurrent neural network architectures for large scale acoustic modeling</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Sak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Beaufays</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>Interspeech</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Deep speech: Scaling up end-to-end speech recognition</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hannun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Case</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Casper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Diamos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Elsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Prenger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Satheesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sengupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<idno>1412.5567</idno>
+		<ptr target="http://arxiv.org/abs/1412.5567" />
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">First-pass large vocabulary continuous speech recognition using bi-directional recurrent DNNs</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Hannun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Maas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jurafsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<idno>abs/1408.2873</idno>
+		<ptr target="http://arxiv.org/abs/1408.2873" />
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Scalable modified Kneser-Ney language model estimation</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Heafield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Pouzyrevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Koehn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 51st Annual Meeting of the Association for Computational Linguistics<address><addrLine>Sofia, Bulgaria</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">8</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Deep neural networks for acoustic modeling in speech recognition</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sainath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kingsbury</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Signal Processing Magazine</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="82" to="97" />
+			<date type="published" when="2012-11">November. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Vocal tract length perturbation (VTLP) improves speech recognition</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML Workshop on Deep Learning for Audio, Speech, and Language Processing</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">An empirical exploration of recurrent network architectures</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jozefowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zaremba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">A big data approach to acoustic model training corpus selection</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kapralova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Alex</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Weinstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Siohan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>Interspeech</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">A fast storage allocator</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Knowlton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Commun. ACM</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="623" to="624" />
+			<date type="published" when="1965-10">Oct. 1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Audio augmentation for speech recognition</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Peddinti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Povey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Khudanpur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Interspeech</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Imagenet classification with deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1106" to="1114" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">Batch normalized recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Laurent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pereyra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brakel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno>abs/1510.01378</idno>
+		<ptr target="http://arxiv.org/abs/1510.01378" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Building high-level features using large scale unsupervised learning</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ranzato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Monga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Devin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Learning methods for generic object recognition with invariance to pose and lighting</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bottou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computer Vision and Pattern Recognition</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="97" to="104" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Lexicon-free conversational speech recognition with neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jurafsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NAACL</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">EESEN: End-to-end speech recognition using deep rnn models and wfst-based decoding</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Miao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gowayyed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Metz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ASRU</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Acoustic modeling using deep belief networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Audio, Speech, and Language Processing</title>
+		<imprint>
+			<biblScope unit="issue">99</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title level="m" type="main">Application of pretrained deep neural networks to large vocabulary speech recognition</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S N</forename><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vanhoucke</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>Interspeech</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Context-dependent deep neural networks for commercial mandarin speech recognition applications</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Hu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">APSIPA</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Librispeech: an asr corpus based on public domain audio books</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Panayotov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Povey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Khudanpur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICASSP</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">On the difficulty of training recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno>abs/1211.5063</idno>
+		<ptr target="http://arxiv.org/abs/1211.5063" />
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Bandwidth optimal all-reduce algorithms for clusters of workstations</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Patarasuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yuan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Parallel Distrib. Comput</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="117" to="124" />
+			<date type="published" when="2009-02">Feb. 2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Large-scale deep unsupervised learning using graphics processors</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Raina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Madhavan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">26th International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Connectionist probability estimators in HMM speech recognition</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Renals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bourlard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Franco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Speech and Audio Processing</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="161" to="174" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title level="m" type="main">The use of recurrent neural networks in continuous speech recognition</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hochberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Renals</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="page" from="253" to="258" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Convolutional, long short-term memory, fully connected deep neural networks</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sainath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICASSP</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Deep convolutional neural networks for LVCSR</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Sainath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahman Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kingsbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ramabhadran</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICASSP</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<title level="m" type="main">Fast and accurate recurrent neural network acoustic models for speech recognition</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Beaufays</surname></persName>
+		</author>
+		<idno>abs/1507.06947</idno>
+		<ptr target="http://arxiv.org/abs/1507.06947" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Sequence discriminative distributed training of long shortterm memory recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Heigold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mcdermott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Monga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In Interspeech</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">A fast data collection and augmentation procedure for object recognition</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sapp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saxena</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AAAI Twenty-Third Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Bidirectional recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">K</forename><surname>Paliwal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Signal Processing</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2673" to="2681" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Conversational speech transcription using context-dependent deep neural networks</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Seide</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In Interspeech</title>
+		<imprint>
+			<biblScope unit="page" from="437" to="440" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<title level="m" type="main">Search by voice in mandarin chinese</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jansche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Moreno</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>Interspeech</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Joint training of convolutional and non-convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Soltau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Saon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sainath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In ICASSP</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">On the importance of momentum and initialization in deep learning</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">30th International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<title level="m" type="main">Sequence to sequence learning with neural networks</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">V</forename><surname>Le</surname></persName>
+		</author>
+		<ptr target="http://arxiv.org/abs/1409.3215" />
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<monogr>
+		<title level="m" type="main">Batch normalization: Accelerating deep network training by reducing internal covariate</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Szegedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ioffe</surname></persName>
+		</author>
+		<idno>shift. abs/1502.03167</idno>
+		<ptr target="http://arxiv.org/abs/1502.03167" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Szegedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sermanet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Anguelov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Erhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>Going deeper with convolutions</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<title level="m" type="main">Optimization of collective communication operations in mpich. International Journal of High Performance Computing Applications</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Thakur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rabenseifner</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="49" to="66" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title level="m" type="main">Sequence-discriminative training of deep neural networks</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Vesely</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ghoshal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Burget</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Povey</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>Interspeech</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Phoneme recognition using time-delay neural networks,â Ȃİ acoustics speech and signal processing</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Waibel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hanazawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shikano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Acoustics, Speech and Signal Processing</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="328" to="339" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">An efficient gradient-based algorithm for online training of recurrent network trajectories</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Peng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="490" to="501" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">The ntt chime-3 system: Advances in speech enhancement and recognition for mobile multi-microphone devices</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yoshioka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Delcroix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ogawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kinoshita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Fabian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Espi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Higuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Araki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nakatani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE ASRU</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<title level="m" type="main">Learning to execute</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zaremba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<idno>. abs/1410.4615</idno>
+		<ptr target="http://arxiv.org/abs/1410.4615" />
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

@@ -1,0 +1,452 @@
+{
+  "paper_id": "617EA499F245D3A1424A0D3AC5CF064B",
+  "title": "Soliton control in modulated optically-induced photonic lattices",
+  "arxiv_id": "arXiv:physics/0506079v2[physics.optics]",
+  "authors": [
+    {
+      "given": "Ivan L",
+      "family": "Garanovich"
+    },
+    {
+      "given": "Andrey A",
+      "family": "Sukhorukov"
+    },
+    {
+      "given": "Yuri S",
+      "family": "Kivshar"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Confined Electrons and Photons",
+      "container_title": "Confined Electrons and Photons",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P J",
+          "family": "St"
+        },
+        {
+          "given": "T A",
+          "family": "Russell"
+        },
+        {
+          "given": "F D",
+          "family": "Birks"
+        },
+        {
+          "given": null,
+          "family": "Lloyd Lucas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Optical Solitons: From Fibers to Photonic Crystals",
+      "container_title": "Optical Solitons: From Fibers to Photonic Crystals",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Yu"
+        },
+        {
+          "given": "G P",
+          "family": "Kivshar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Phys. Rev. E",
+      "container_title": "Phys. Rev. E",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N K",
+          "family": "Efremidis"
+        },
+        {
+          "given": "S",
+          "family": "Sears"
+        },
+        {
+          "given": "D N",
+          "family": "Christodoulides"
+        },
+        {
+          "given": "J W",
+          "family": "Fleischer"
+        },
+        {
+          "given": "M",
+          "family": "Segev"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J W",
+          "family": "Fleischer"
+        },
+        {
+          "given": "T",
+          "family": "Carmon"
+        },
+        {
+          "given": "M",
+          "family": "Segev"
+        },
+        {
+          "given": "N K",
+          "family": "Efremidis"
+        },
+        {
+          "given": "D N",
+          "family": "Christodoulides"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Nature (London)",
+      "container_title": "Nature (London)",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J W",
+          "family": "Fleischer"
+        },
+        {
+          "given": "M",
+          "family": "Segev"
+        },
+        {
+          "given": "N K",
+          "family": "Efremidis"
+        },
+        {
+          "given": "D N",
+          "family": "Christodoulides"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Opt. Lett",
+      "container_title": "Opt. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Neshev"
+        },
+        {
+          "given": "E",
+          "family": "Ostrovskaya"
+        },
+        {
+          "given": "Y",
+          "family": "Kivshar"
+        },
+        {
+          "given": "W",
+          "family": "Krolikowski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Nature (London)",
+      "container_title": "Nature (London)",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D N",
+          "family": "Christodoulides"
+        },
+        {
+          "given": "F",
+          "family": "Lederer"
+        },
+        {
+          "given": "Y",
+          "family": "Silberberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A A",
+          "family": "Sukhorukov"
+        },
+        {
+          "given": "D",
+          "family": "Neshev"
+        },
+        {
+          "given": "W",
+          "family": "Krolikowski"
+        },
+        {
+          "given": "Yu S",
+          "family": "Kivshar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Neshev"
+        },
+        {
+          "given": "A A",
+          "family": "Sukhorukov"
+        },
+        {
+          "given": "B",
+          "family": "Hanna"
+        },
+        {
+          "given": "W",
+          "family": "Krolikowski"
+        },
+        {
+          "given": "Yu S",
+          "family": "Kivshar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Tunable positive and negative refraction in optically-induced photonic lattices",
+      "container_title": "Tunable positive and negative refraction in optically-induced photonic lattices",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C R",
+          "family": "Rosberg"
+        },
+        {
+          "given": "D N",
+          "family": "Neshev"
+        },
+        {
+          "given": "A A",
+          "family": "Sukhorukov"
+        },
+        {
+          "given": "Yu S",
+          "family": "Kivshar"
+        },
+        {
+          "given": "W",
+          "family": "Krolikowski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Opt. Lett",
+      "container_title": "Opt. Lett",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y V",
+          "family": "Kartashov"
+        },
+        {
+          "given": "L",
+          "family": "Torner"
+        },
+        {
+          "given": "D N",
+          "family": "Christodoulides"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H S",
+          "family": "Eisenberg"
+        },
+        {
+          "given": "Y",
+          "family": "Silberberg"
+        },
+        {
+          "given": "R",
+          "family": "Morandotti"
+        },
+        {
+          "given": "J S",
+          "family": "Aitchison"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M J",
+          "family": "Ablowitz"
+        },
+        {
+          "given": "Z H",
+          "family": "Musslimani"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "J. Opt. Soc. Am. B",
+      "container_title": "J. Opt. Soc. Am. B",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "U",
+          "family": "Peschel"
+        },
+        {
+          "given": "F",
+          "family": "Lederer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Opt. Lett",
+      "container_title": "Opt. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A A",
+          "family": "Sukhorukov"
+        },
+        {
+          "given": "Yu S",
+          "family": "Kivshar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Morandotti"
+        },
+        {
+          "given": "U",
+          "family": "Peschel"
+        },
+        {
+          "given": "J S",
+          "family": "Aitchison"
+        },
+        {
+          "given": "H S",
+          "family": "Eisenberg"
+        },
+        {
+          "given": "Y",
+          "family": "Silberberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Maritn"
+        },
+        {
+          "given": "E D",
+          "family": "Eugenieva"
+        },
+        {
+          "given": "Z",
+          "family": "Chen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Mandelik"
+        },
+        {
+          "given": "H S",
+          "family": "Eisenberg"
+        },
+        {
+          "given": "Y",
+          "family": "Silberberg"
+        },
+        {
+          "given": "R",
+          "family": "Morandotti"
+        },
+        {
+          "given": "J S",
+          "family": "Aitchison"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

@@ -1,0 +1,1616 @@
+{
+  "paper_id": "02B089930CEF33F594CCE63F40F8C2DF",
+  "title": "Theano: A Python framework for fast computation of mathematical expressions (The Theano Development Team) *",
+  "arxiv_id": "arXiv:1605.02688v1[cs.SC]",
+  "authors": [
+    {
+      "given": "Rami",
+      "family": "Al-Rfou"
+    },
+    {
+      "given": "Guillaume",
+      "family": "Alain"
+    },
+    {
+      "given": "Amjad",
+      "family": "Almahairi"
+    },
+    {
+      "given": "Christof",
+      "family": "Angermueller"
+    },
+    {
+      "given": "Dzmitry",
+      "family": "Bahdanau"
+    },
+    {
+      "given": "Nicolas",
+      "family": "Ballas"
+    },
+    {
+      "given": "Frédéric",
+      "family": "Bastien"
+    },
+    {
+      "given": "Justin",
+      "family": "Bayer"
+    },
+    {
+      "given": "Anatoly",
+      "family": "Belikov"
+    },
+    {
+      "given": "Alexander",
+      "family": "Belopolsky"
+    },
+    {
+      "given": "Yoshua",
+      "family": "Bengio"
+    },
+    {
+      "given": "Arnaud",
+      "family": "Bergeron"
+    },
+    {
+      "given": "James",
+      "family": "Bergstra"
+    },
+    {
+      "given": "Valentin",
+      "family": "Bisson"
+    },
+    {
+      "given": "Josh Bleecher",
+      "family": "Snyder"
+    },
+    {
+      "given": "Nicolas",
+      "family": "Bouchard"
+    },
+    {
+      "given": "Nicolas",
+      "family": "Boulanger-Lewandowski"
+    },
+    {
+      "given": "Xavier",
+      "family": "Bouthillier"
+    },
+    {
+      "given": "Alexandre",
+      "family": "De Brébisson"
+    },
+    {
+      "given": "Olivier",
+      "family": "Breuleux"
+    },
+    {
+      "given": "Pierre-Luc",
+      "family": "Carrier"
+    },
+    {
+      "given": "Kyunghyun",
+      "family": "Cho"
+    },
+    {
+      "given": "Jan",
+      "family": "Chorowski"
+    },
+    {
+      "given": "Paul",
+      "family": "Christiano"
+    },
+    {
+      "given": "Tim",
+      "family": "Cooijmans"
+    },
+    {
+      "given": "Marc-Alexandre",
+      "family": "Côté"
+    },
+    {
+      "given": "Myriam",
+      "family": "Côté"
+    },
+    {
+      "given": "Aaron",
+      "family": "Courville"
+    },
+    {
+      "given": "Yann N",
+      "family": "Dauphin"
+    },
+    {
+      "given": "Olivier",
+      "family": "Delalleau"
+    },
+    {
+      "given": "Julien",
+      "family": "Demouth"
+    },
+    {
+      "given": "Guillaume",
+      "family": "Desjardins"
+    },
+    {
+      "given": "Sander",
+      "family": "Dieleman"
+    },
+    {
+      "given": "Laurent",
+      "family": "Dinh"
+    },
+    {
+      "given": "Mélanie",
+      "family": "Ducoffe"
+    },
+    {
+      "given": "Vincent",
+      "family": "Dumoulin"
+    },
+    {
+      "given": "Samira Ebrahimi",
+      "family": "Kahou"
+    },
+    {
+      "given": "Dumitru",
+      "family": "Erhan"
+    },
+    {
+      "given": "Ziye",
+      "family": "Fan"
+    },
+    {
+      "given": "Orhan",
+      "family": "Firat"
+    },
+    {
+      "given": "Mathieu",
+      "family": "Germain"
+    },
+    {
+      "given": "Xavier",
+      "family": "Glorot"
+    },
+    {
+      "given": "Ian",
+      "family": "Goodfellow"
+    },
+    {
+      "given": "Matt",
+      "family": "Graham"
+    },
+    {
+      "given": "Caglar",
+      "family": "Gulcehre"
+    },
+    {
+      "given": "Philippe",
+      "family": "Hamel"
+    },
+    {
+      "given": "Iban",
+      "family": "Harlouchet"
+    },
+    {
+      "given": "Jean-Philippe",
+      "family": "Heng"
+    },
+    {
+      "given": "Balázs",
+      "family": "Hidasi"
+    },
+    {
+      "given": "Sina",
+      "family": "Honari"
+    },
+    {
+      "given": "Arjun",
+      "family": "Jain"
+    },
+    {
+      "given": "Sébastien",
+      "family": "Jean"
+    },
+    {
+      "given": "Kai",
+      "family": "Jia"
+    },
+    {
+      "given": "Mikhail",
+      "family": "Korobov"
+    },
+    {
+      "given": "Vivek",
+      "family": "Kulkarni"
+    },
+    {
+      "given": "Alex",
+      "family": "Lamb"
+    },
+    {
+      "given": "Pascal",
+      "family": "Lamblin"
+    },
+    {
+      "given": "Eric",
+      "family": "Larsen"
+    },
+    {
+      "given": "César",
+      "family": "Laurent"
+    },
+    {
+      "given": "Sean",
+      "family": "Lee"
+    },
+    {
+      "given": "Simon",
+      "family": "Lefrancois"
+    },
+    {
+      "given": "Simon",
+      "family": "Lemieux"
+    },
+    {
+      "given": "Nicholas",
+      "family": "Léonard"
+    },
+    {
+      "given": "Zhouhan",
+      "family": "Lin"
+    },
+    {
+      "given": "Jesse A",
+      "family": "Livezey"
+    },
+    {
+      "given": "Cory",
+      "family": "Lorenz"
+    },
+    {
+      "given": "Jeremiah",
+      "family": "Lowin"
+    },
+    {
+      "given": "Qianli",
+      "family": "Ma"
+    },
+    {
+      "given": "Pierre-Antoine",
+      "family": "Manzagol"
+    },
+    {
+      "given": "Olivier",
+      "family": "Mastropietro"
+    },
+    {
+      "given": "Robert T",
+      "family": "Mcgibbon"
+    },
+    {
+      "given": "Roland",
+      "family": "Memisevic"
+    },
+    {
+      "given": "Bart",
+      "family": "Van Merriënboer"
+    },
+    {
+      "given": "Vincent",
+      "family": "Michalski"
+    },
+    {
+      "given": "Mehdi",
+      "family": "Mirza"
+    },
+    {
+      "given": "Alberto",
+      "family": "Orlandi"
+    },
+    {
+      "given": "Christopher",
+      "family": "Pal"
+    },
+    {
+      "given": "Razvan",
+      "family": "Pascanu"
+    },
+    {
+      "given": "Mohammad",
+      "family": "Pezeshki"
+    },
+    {
+      "given": "Colin",
+      "family": "Raffel"
+    },
+    {
+      "given": "Daniel",
+      "family": "Renshaw"
+    },
+    {
+      "given": "Matthew",
+      "family": "Rocklin"
+    },
+    {
+      "given": "Adriana",
+      "family": "Romero"
+    },
+    {
+      "given": "Markus",
+      "family": "Roth"
+    },
+    {
+      "given": "Peter",
+      "family": "Sadowski"
+    },
+    {
+      "given": "John",
+      "family": "Salvatier"
+    },
+    {
+      "given": "Franc ¸ois",
+      "family": "Savard"
+    },
+    {
+      "given": "Jan",
+      "family": "Schlüter"
+    },
+    {
+      "given": "John",
+      "family": "Schulman"
+    },
+    {
+      "given": "Gabriel",
+      "family": "Schwartz"
+    },
+    {
+      "given": "Iulian Vlad",
+      "family": "Serban"
+    },
+    {
+      "given": "Dmitriy",
+      "family": "Serdyuk"
+    },
+    {
+      "given": "Samira",
+      "family": "Shabanian"
+    },
+    {
+      "given": "Étienne",
+      "family": "Simon"
+    },
+    {
+      "given": "Sigurd",
+      "family": "Spieckermann"
+    },
+    {
+      "given": "S Ramana",
+      "family": "Subramanyam"
+    },
+    {
+      "given": "Jakub",
+      "family": "Sygnowski"
+    },
+    {
+      "given": "Jérémie",
+      "family": "Tanguay"
+    },
+    {
+      "given": "Gijs",
+      "family": "Van Tulder"
+    },
+    {
+      "given": "Joseph",
+      "family": "Turian"
+    },
+    {
+      "given": "Sebastian",
+      "family": "Urban"
+    },
+    {
+      "given": "Pascal",
+      "family": "Vincent"
+    },
+    {
+      "given": "Francesco",
+      "family": "Visin"
+    },
+    {
+      "given": "Harm",
+      "family": "De Vries"
+    },
+    {
+      "given": "David",
+      "family": "Warde-Farley"
+    },
+    {
+      "given": "Dustin J",
+      "family": "Webb"
+    },
+    {
+      "given": "Matthew",
+      "family": "Willson"
+    },
+    {
+      "given": "Kelvin",
+      "family": "Xu"
+    },
+    {
+      "given": "Lijun",
+      "family": "Xue"
+    },
+    {
+      "given": "Li",
+      "family": "Yao"
+    },
+    {
+      "given": "Saizheng",
+      "family": "Zhang"
+    },
+    {
+      "given": "Ying",
+      "family": "Zhang"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Proceedings of the Python for Scientific Computing Conference (SciPy)",
+      "container_title": "Proceedings of the Python for Scientific Computing Conference (SciPy)",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "James",
+          "family": "Bergstra"
+        },
+        {
+          "given": "Olivier",
+          "family": "Breuleux"
+        },
+        {
+          "given": "Frédéric",
+          "family": "Bastien"
+        },
+        {
+          "given": "Pascal",
+          "family": "Lamblin"
+        },
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Guillaume",
+          "family": "Desjardins"
+        },
+        {
+          "given": "Joseph",
+          "family": "Turian"
+        },
+        {
+          "given": "David",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Big Learning Workshop, NIPS",
+      "container_title": "Big Learning Workshop, NIPS",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "James",
+          "family": "Bergstra"
+        },
+        {
+          "given": "Frédéric",
+          "family": "Bastien"
+        },
+        {
+          "given": "Olivier",
+          "family": "Breuleux"
+        },
+        {
+          "given": "Pascal",
+          "family": "Lamblin"
+        },
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Olivier",
+          "family": "Delalleau"
+        },
+        {
+          "given": "Guillaume",
+          "family": "Desjardins"
+        },
+        {
+          "given": "David",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "Ian J",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "Arnaud",
+          "family": "Bergeron"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Deep Learning and Unsupervised Feature Learning Workshop",
+      "container_title": "Deep Learning and Unsupervised Feature Learning Workshop",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Frédéric",
+          "family": "Bastien"
+        },
+        {
+          "given": "Pascal",
+          "family": "Lamblin"
+        },
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "James",
+          "family": "Bergstra"
+        },
+        {
+          "given": "Ian J",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "Arnaud",
+          "family": "Bergeron"
+        },
+        {
+          "given": "Nicolas",
+          "family": "Bouchard"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Big Learning Workshop, NIPS",
+      "container_title": "Big Learning Workshop, NIPS",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ronan",
+          "family": "Collobert"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        },
+        {
+          "given": "Clément",
+          "family": "Farabet"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "TensorFlow: Large-scale machine learning on heterogeneous systems",
+      "container_title": "TensorFlow: Large-scale machine learning on heterogeneous systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Martín",
+          "family": "Abadi"
+        },
+        {
+          "given": "Ashish",
+          "family": "Agarwal"
+        },
+        {
+          "given": "Paul",
+          "family": "Barham"
+        },
+        {
+          "given": "Eugene",
+          "family": "Brevdo"
+        },
+        {
+          "given": "Zhifeng",
+          "family": "Chen"
+        },
+        {
+          "given": "Craig",
+          "family": "Citro"
+        },
+        {
+          "given": "Greg S",
+          "family": "Corrado"
+        },
+        {
+          "given": "Andy",
+          "family": "Davis"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Dean"
+        },
+        {
+          "given": "Matthieu",
+          "family": "Devin"
+        },
+        {
+          "given": "Sanjay",
+          "family": "Ghemawat"
+        },
+        {
+          "given": "Ian",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "Andrew",
+          "family": "Harp"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Irving"
+        },
+        {
+          "given": "Michael",
+          "family": "Isard"
+        },
+        {
+          "given": "Yangqing",
+          "family": "Jia"
+        },
+        {
+          "given": "Rafal",
+          "family": "Jozefowicz"
+        },
+        {
+          "given": "Lukasz",
+          "family": "Kaiser"
+        },
+        {
+          "given": "Manjunath",
+          "family": "Kudlur"
+        },
+        {
+          "given": "Josh",
+          "family": "Levenberg"
+        },
+        {
+          "given": "Dan",
+          "family": "Mané"
+        },
+        {
+          "given": "Rajat",
+          "family": "Monga"
+        },
+        {
+          "given": "Sherry",
+          "family": "Moore"
+        },
+        {
+          "given": "Derek",
+          "family": "Murray"
+        },
+        {
+          "given": "Chris",
+          "family": "Olah"
+        },
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": "Jonathon",
+          "family": "Shlens"
+        },
+        {
+          "given": "Benoit",
+          "family": "Steiner"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Kunal",
+          "family": "Talwar"
+        },
+        {
+          "given": "Paul",
+          "family": "Tucker"
+        },
+        {
+          "given": "Vincent",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "Vijay",
+          "family": "Vasudevan"
+        },
+        {
+          "given": "Fernanda",
+          "family": "Viégas"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Pete",
+          "family": "Warden"
+        },
+        {
+          "given": "Martin",
+          "family": "Wattenberg"
+        },
+        {
+          "given": "Martin",
+          "family": "Wicke"
+        },
+        {
+          "given": "Yuan",
+          "family": "Yu"
+        },
+        {
+          "given": "Xiaoqiang",
+          "family": "Zheng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Computing in Science and Eng",
+      "container_title": "Computing in Science and Eng",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Stefan",
+          "family": "Van Der Walt"
+        },
+        {
+          "given": "S Chris",
+          "family": "Colbert"
+        },
+        {
+          "given": "Gael",
+          "family": "Varoquaux"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "SciPy: Open source scientific tools for Python",
+      "container_title": "SciPy: Open source scientific tools for Python",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Eric",
+          "family": "Jones"
+        },
+        {
+          "given": "Travis",
+          "family": "Oliphant"
+        },
+        {
+          "given": "Pearu",
+          "family": "Peterson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Pylearn2: A machine learning research library",
+      "container_title": "Pylearn2: A machine learning research library",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1308.4214"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ian J",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "David",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "Pascal",
+          "family": "Lamblin"
+        },
+        {
+          "given": "Mehdi",
+          "family": "Vincent Dumoulin"
+        },
+        {
+          "given": "Razvan",
+          "family": "Mirza"
+        },
+        {
+          "given": "James",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Frédéric",
+          "family": "Bergstra"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bastien"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Blocks and Fuel: Frameworks for deep learning",
+      "container_title": "Blocks and Fuel: Frameworks for deep learning",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1506.00619"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Dzmitry",
+          "family": "Van Merriënboer"
+        },
+        {
+          "given": null,
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Dmitriy",
+          "family": "Vincent Dumoulin"
+        },
+        {
+          "given": "David",
+          "family": "Serdyuk"
+        },
+        {
+          "given": "Jan",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Chorowski"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Hendrik Weideman, takacsg84, peterderivaz, Jon, instagibbs, Dr. Kashif Rasul, CongLiu, Britefury, and Jonas Degrave",
+      "container_title": "Hendrik Weideman, takacsg84, peterderivaz, Jon, instagibbs, Dr. Kashif Rasul, CongLiu, Britefury, and Jonas Degrave",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jan",
+          "family": "Sander Dieleman"
+        },
+        {
+          "given": "Colin",
+          "family": "Schlüter"
+        },
+        {
+          "given": "Eben",
+          "family": "Raffel"
+        },
+        {
+          "given": "Søren Kaae",
+          "family": "Olson"
+        },
+        {
+          "given": "Daniel",
+          "family": "Sønderby"
+        },
+        {
+          "given": "Daniel",
+          "family": "Nouri"
+        },
+        {
+          "given": "Martin",
+          "family": "Maturana"
+        },
+        {
+          "given": "Eric",
+          "family": "Thoma"
+        },
+        {
+          "given": "Jack",
+          "family": "Battenberg"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Kelly"
+        },
+        {
+          "given": "Michael",
+          "family": "De Fauw"
+        },
+        {
+          "given": null,
+          "family": "Heilman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Franc ¸ois Chollet",
+      "container_title": "Franc ¸ois Chollet",
+      "year": "2015",
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b11",
+      "title": "PeerJ Computer Science",
+      "container_title": "PeerJ Computer Science",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "John",
+          "family": "Salvatier"
+        },
+        {
+          "given": "Thomas V",
+          "family": "Wiecki"
+        },
+        {
+          "given": "Christopher",
+          "family": "Fonnesbeck"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Annual Review of Computer Science",
+      "container_title": "Annual Review of Computer Science",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David E",
+          "family": "Arvind"
+        },
+        {
+          "given": null,
+          "family": "Culler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Barak"
+        },
+        {
+          "given": null,
+          "family": "Pearlmutter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "MXNet: A flexible and efficient machine learning library for heterogeneous distributed systems",
+      "container_title": "MXNet: A flexible and efficient machine learning library for heterogeneous distributed systems",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1512.01274"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tianqi",
+          "family": "Chen"
+        },
+        {
+          "given": "Mu",
+          "family": "Li"
+        },
+        {
+          "given": "Yutian",
+          "family": "Li"
+        },
+        {
+          "given": "Min",
+          "family": "Lin"
+        },
+        {
+          "given": "Naiyan",
+          "family": "Wang"
+        },
+        {
+          "given": "Minjie",
+          "family": "Wang"
+        },
+        {
+          "given": "Tianjun",
+          "family": "Xiao"
+        },
+        {
+          "given": "Bing",
+          "family": "Xu"
+        },
+        {
+          "given": "Chiyuan",
+          "family": "Zhang"
+        },
+        {
+          "given": "Zheng",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Caffe: Convolutional architecture for fast feature embedding",
+      "container_title": "Caffe: Convolutional architecture for fast feature embedding",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1408.5093"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yangqing",
+          "family": "Jia"
+        },
+        {
+          "given": "Evan",
+          "family": "Shelhamer"
+        },
+        {
+          "given": "Jeff",
+          "family": "Donahue"
+        },
+        {
+          "given": "Sergey",
+          "family": "Karayev"
+        },
+        {
+          "given": "Jonathan",
+          "family": "Long"
+        },
+        {
+          "given": "Ross",
+          "family": "Girshick"
+        },
+        {
+          "given": "Sergio",
+          "family": "Guadarrama"
+        },
+        {
+          "given": "Trevor",
+          "family": "Darrell"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Workshop on Machine Learning Systems (LearningSys)",
+      "container_title": "Workshop on Machine Learning Systems (LearningSys)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Seiya",
+          "family": "Tokui"
+        },
+        {
+          "given": "Kenta",
+          "family": "Oono"
+        },
+        {
+          "given": "Shohei",
+          "family": "Hido"
+        },
+        {
+          "given": "Justin",
+          "family": "Clayton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "A guide to convolution arithmetic for deep learning",
+      "container_title": "A guide to convolution arithmetic for deep learning",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1603.07285"
+        }
+      ],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Dumoulin"
+        },
+        {
+          "given": "F",
+          "family": "Visin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "cuDNN: Efficient primitives for deep learning",
+      "container_title": "cuDNN: Efficient primitives for deep learning",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1410.0759"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Sharan",
+          "family": "Chetlur"
+        },
+        {
+          "given": "Cliff",
+          "family": "Woolley"
+        },
+        {
+          "given": "Philippe",
+          "family": "Vandermersch"
+        },
+        {
+          "given": "Jonathan",
+          "family": "Cohen"
+        },
+        {
+          "given": "John",
+          "family": "Tran"
+        },
+        {
+          "given": "Bryan",
+          "family": "Catanzaro"
+        },
+        {
+          "given": "Evan",
+          "family": "Shelhamer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Big Learning Workshop, NIPS",
+      "container_title": "Big Learning Workshop, NIPS",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Frédéric",
+          "family": "Bastien"
+        },
+        {
+          "given": "Arnaud",
+          "family": "Bergeron"
+        },
+        {
+          "given": "Andreas",
+          "family": "Klöckner"
+        },
+        {
+          "given": "Pascal",
+          "family": "Vincent"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jeffrey",
+          "family": "Dean"
+        },
+        {
+          "given": "Greg",
+          "family": "Corrado"
+        },
+        {
+          "given": "Rajat",
+          "family": "Monga"
+        },
+        {
+          "given": "Kai",
+          "family": "Chen"
+        },
+        {
+          "given": "Matthieu",
+          "family": "Devin"
+        },
+        {
+          "given": "Mark",
+          "family": "Mao"
+        },
+        {
+          "given": "Marc'aurelio",
+          "family": "Ranzato"
+        },
+        {
+          "given": "Andrew",
+          "family": "Senior"
+        },
+        {
+          "given": "Paul",
+          "family": "Tucker"
+        },
+        {
+          "given": "Ke",
+          "family": "Yang"
+        },
+        {
+          "given": "Quoc V",
+          "family": "Le"
+        },
+        {
+          "given": "Andrew Y",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sixin",
+          "family": "Zhang"
+        },
+        {
+          "given": "Anna E",
+          "family": "Choromanska"
+        },
+        {
+          "given": "Yann",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "One weird trick for parallelizing convolutional neural networks",
+      "container_title": "One weird trick for parallelizing convolutional neural networks",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1404.5997"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "OverFeat: Integrated recognition, localization and detection using convolutional networks",
+      "container_title": "OverFeat: Integrated recognition, localization and detection using convolutional networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1312.6229"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Pierre",
+          "family": "Sermanet"
+        },
+        {
+          "given": "David",
+          "family": "Eigen"
+        },
+        {
+          "given": "Xiang",
+          "family": "Zhang"
+        },
+        {
+          "given": "Michaël",
+          "family": "Mathieu"
+        },
+        {
+          "given": "Rob",
+          "family": "Fergus"
+        },
+        {
+          "given": "Yann",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Very deep convolutional networks for large-scale image recognition",
+      "container_title": "Very deep convolutional networks for large-scale image recognition",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1409.1556"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Karen",
+          "family": "Simonyan"
+        },
+        {
+          "given": "Andrew",
+          "family": "Zisserman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Computer Vision and Pattern Recognition (CVPR",
+      "container_title": "Computer Vision and Pattern Recognition (CVPR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Christian",
+          "family": "Szegedy"
+        },
+        {
+          "given": "Wei",
+          "family": "Liu"
+        },
+        {
+          "given": "Yangqing",
+          "family": "Jia"
+        },
+        {
+          "given": "Pierre",
+          "family": "Sermanet"
+        },
+        {
+          "given": "Scott",
+          "family": "Reed"
+        },
+        {
+          "given": "Dragomir",
+          "family": "Anguelov"
+        },
+        {
+          "given": "Dumitru",
+          "family": "Erhan"
+        },
+        {
+          "given": "Vincent",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "Andrew",
+          "family": "Rabinovich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Recurrent neural network regularization",
+      "container_title": "Recurrent neural network regularization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1409.2329"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "IEEE International Conference on",
+      "container_title": "IEEE International Conference on",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Li",
+          "family": "Yao"
+        },
+        {
+          "given": "Atousa",
+          "family": "Torabi"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Nicolas",
+          "family": "Ballas"
+        },
+        {
+          "given": "Christopher",
+          "family": "Pal"
+        },
+        {
+          "given": "Hugo",
+          "family": "Larochelle"
+        },
+        {
+          "given": "Aaron",
+          "family": "Courville"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Virtualizing Deep Neural Networks for Memory-Efficient Neural Network Design",
+      "container_title": "Virtualizing Deep Neural Networks for Memory-Efficient Neural Network Design",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1602.08124"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Minsoo",
+          "family": "Rhu"
+        },
+        {
+          "given": "Natalia",
+          "family": "Gimelshein"
+        },
+        {
+          "given": "Jason",
+          "family": "Clemons"
+        },
+        {
+          "given": "Arslan",
+          "family": "Zulfiqar"
+        },
+        {
+          "given": "Stephen W",
+          "family": "Keckler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Training deep nets with sublinear memory cost",
+      "container_title": "Training deep nets with sublinear memory cost",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv e-prints abs/1604.06174"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tianqi",
+          "family": "Chen"
+        },
+        {
+          "given": "Bing",
+          "family": "Xu"
+        },
+        {
+          "given": "Chiyuan",
+          "family": "Zhang"
+        },
+        {
+          "given": "Carlos",
+          "family": "Guestrin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "SymPy Development Team, SymPy: Python library for symbolic mathematics",
+      "container_title": "SymPy Development Team, SymPy: Python library for symbolic mathematics",
+      "year": "2016",
+      "idnos": [],
+      "authors": []
+    }
+  ],
+  "chunks": []
+}

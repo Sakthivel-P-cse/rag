@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Metallic sulphur. "Electronic" mechanism of superconductivity?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="1999-08-31">31 Aug 1999</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Bogomolov</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Russian Academy of Sciences A.F. Ioffe Physicotechnical Institute St</orgName>
+								<address>
+									<settlement>Petersburg</settlement>
+									<country key="RU">Russia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Metallic sulphur. "Electronic" mechanism of superconductivity?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="1999-08-31">31 Aug 1999</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B81EEA82C6973D6C07C80B225D5B497B</idno>
+					<idno type="arXiv">arXiv:cond-mat/9908467v1[cond-mat.supr-con]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>It is shown that the rapid increase of the superconducting transition temperature T c of sulphur with increasing pressure above 93 GPa does not contradict with some hypothetical "electronic" mechanism of superconductivity with participation of the electron interaction energy fluctuations. Such "electronic" mechanism is supposed to be intrinsic property of the molecular condensates and corresponds to very high T c . The low T c of sulphur (10 -17)K is likely</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">V</forename><surname>Bogomolov</surname></persName>
+		</author>
+		<ptr target="http://xxx.lanl.gov/abs/cond-mat/9902353" />
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">V</forename><surname>Bogomolov</surname></persName>
+		</author>
+		<ptr target="http://xxx.lanl.gov/abs/cond-mat/9906005" />
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">Ê</forename><forename type="middle">À</forename><surname>Goettel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Eggert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">F</forename><surname>Silvera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Moss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page" from="665" to="668" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Struzkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hemley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timofeev</forename><forename type="middle">A</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nature</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1997-11-27">1997. 27 November</date>
+			<biblScope unit="volume">390</biblScope>
+			<biblScope unit="page" from="382" to="384" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Richardson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">W</forename><surname>Ashcroft</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="118" to="121" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Muller-Hartmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zittartz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="427" to="436" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Shimitsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Suhara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ikumo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Eremets</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Amaya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">393</biblScope>
+			<biblScope unit="page" from="767" to="769" />
+			<date type="published" when="1998-06-25">1998. 25 June</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

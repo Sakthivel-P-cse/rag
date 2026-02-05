@@ -1,0 +1,5415 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Retrieval-Augmented Generation for Large Language Models: A Survey</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2024-03-27">27 Mar 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yunfan</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Research Institute for Intelligent Autonomous Systems</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yun</forename><surname>Xiong</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">Shanghai Key Laboratory of Data Science</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Gao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">Shanghai Key Laboratory of Data Science</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kangxiang</forename><surname>Jia</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">Shanghai Key Laboratory of Data Science</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinliu</forename><surname>Pan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">Shanghai Key Laboratory of Data Science</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxi</forename><surname>Bi</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">College of Design and Innovation</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Dai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Research Institute for Intelligent Autonomous Systems</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiawei</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Research Institute for Intelligent Autonomous Systems</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Meng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">College of Design and Innovation</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haofen</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Research Institute for Intelligent Autonomous Systems</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">College of Design and Innovation</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Retrieval-Augmented Generation for Large Language Models: A Survey</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-03-27">27 Mar 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">16DF9323F053C7755ECEFB25C2B7A771</idno>
+					<idno type="arXiv">arXiv:2312.10997v5[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Large language model</term>
+					<term>retrieval-augmented generation</term>
+					<term>natural language processing</term>
+					<term>information retrieval</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domainspecific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-theart technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development 1 .</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="annex">
+<div><head>Dialog</head><p>Dialog Generation Wizard of Wikipedia (WoW) <ref type="bibr" target="#b136">[133]</ref> [13], <ref type="bibr" target="#b30">[27]</ref>, <ref type="bibr" target="#b37">[34]</ref>, <ref type="bibr" target="#b45">[42]</ref> Personal Dialog KBP <ref type="bibr" target="#b137">[134]</ref> [74], <ref type="bibr" target="#b138">[135]</ref> DuleMon <ref type="bibr" target="#b139">[136]</ref> [74] Task-oriented Dialog CamRest <ref type="bibr" target="#b140">[137]</ref> [78], [79] Recommendation Amazon(Toys,Sport,Beauty) <ref type="bibr" target="#b141">[138]</ref> [39], <ref type="bibr" target="#b43">[40]</ref> IE Event Argument Extraction WikiEvent <ref type="bibr" target="#b142">[139]</ref> [13], <ref type="bibr" target="#b30">[27]</ref>, <ref type="bibr" target="#b40">[37]</ref>, <ref type="bibr" target="#b45">[42]</ref> RAMS <ref type="bibr" target="#b143">[140]</ref> [36], [37] Relation Extraction T-REx <ref type="bibr" target="#b144">[141]</ref>,ZsRE <ref type="bibr" target="#b145">[142]</ref> [27], <ref type="bibr" target="#b54">[51]</ref> Reasoning Commonsense Reasoning HellaSwag <ref type="bibr" target="#b146">[143]</ref> [20], <ref type="bibr" target="#b69">[66]</ref> CoT Reasoning</p><p>CoT Reasoning <ref type="bibr" target="#b147">[144]</ref> [27] Complex Reasoning CSQA <ref type="bibr" target="#b148">[145]</ref> [55]</p><p>Others Language Understanding MMLU <ref type="bibr" target="#b149">[146]</ref> [7], <ref type="bibr" target="#b30">[27]</ref>, <ref type="bibr" target="#b31">[28]</ref>, <ref type="bibr" target="#b45">[42]</ref>, <ref type="bibr" target="#b46">[43]</ref>, <ref type="bibr" target="#b50">[47]</ref>, <ref type="bibr" target="#b75">[72]</ref> </p></div>
+<div><head>Language Modeling</head><p>WikiText-103 <ref type="bibr" target="#b150">[147]</ref> [5], <ref type="bibr" target="#b32">[29]</ref>, <ref type="bibr" target="#b67">[64]</ref>, <ref type="bibr" target="#b74">[71]</ref> StrategyQA <ref type="bibr" target="#b151">[148]</ref> [14], <ref type="bibr" target="#b27">[24]</ref>, <ref type="bibr" target="#b51">[48]</ref>, <ref type="bibr" target="#b54">[51]</ref>, <ref type="bibr" target="#b58">[55]</ref>, <ref type="bibr" target="#b61">[58]</ref> Fact Checking/Verification FEVER <ref type="bibr" target="#b152">[149]</ref> [4], <ref type="bibr" target="#b16">[13]</ref>, <ref type="bibr" target="#b30">[27]</ref>, <ref type="bibr" target="#b37">[34]</ref>, <ref type="bibr" target="#b45">[42]</ref>, <ref type="bibr" target="#b53">[50]</ref> PubHealth <ref type="bibr" target="#b153">[150]</ref> [25], [67] Text Generation Biography <ref type="bibr" target="#b154">[151]</ref> [67] Text Summarization WikiASP <ref type="bibr" target="#b155">[152]</ref> [24] XSum <ref type="bibr" target="#b156">[153]</ref> [17] Text Classification</p><p>VioLens <ref type="bibr" target="#b157">[154]</ref> [19] TREC <ref type="bibr" target="#b158">[155]</ref> [33] Sentiment SST-2 <ref type="bibr" target="#b159">[156]</ref> [20], <ref type="bibr" target="#b36">[33]</ref> </p></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">Multi-Hop</forename><surname>Hotpotqa</surname></persName>
+		</author>
+		<imprint />
+	</monogr>
+	<note>118] [23], [26], [31], [34], [47], [51], [61], [82] [7], [14], [22], [27], [59], [62], [69], [71], [91] 2WikiMultiHopQA [119] [14], [24], [48], [59], [61], [91] MuSiQue [120] [14], [51], [61], [91</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<idno>COVID-QA [127] [35], [46] CMB [128</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Multi-Choice QA QuALITY</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+		</imprint>
+	</monogr>
+	<note>MMCU Medical. 130] [60], [63] ARC [131] [25], [67</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Commonsenseqa</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">132</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">A</forename><surname>Graph</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Graphqa</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Large language models struggle to learn long-tail knowledge</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kandpal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Raffel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<publisher>PMLR</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page">707</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Siren's song in the ai ocean: A survey on hallucination in large language models</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.01219</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sinha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sharma</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.20158</idno>
+		<title level="m">Gar-meets-rag paradigm for zero-shot information retrieval</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Retrievalaugmented generation for knowledge-intensive nlp tasks</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Perez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Piktus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Petroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Karpukhin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Küttler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>-T. Yih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rocktäschel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="9459" to="9474" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Improving language models by retrieving from trillions of tokens</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Borgeaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mensch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hoffmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rutherford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Millican</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Van Den Driessche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-B</forename><surname>Lespiau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Damoc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Clark</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International conference on machine learning</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="2206" to="2240" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Training language models to follow instructions with human feedback</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ouyang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Almeida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wainwright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mishkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Slama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="27" to="730" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Query rewriting for retrieval-augmented large language models</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Duan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.14283</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Advanced rag techniques: an illustrated overview</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ilin</surname></persName>
+		</author>
+		<ptr target="https://pub.towardsai.net/advanced-rag-techniques-an-illustrated-overview-04" />
+		<imprint>
+			<date type="published" when="2023">193d8fec6, 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Large language model based long-tail query rewriting in taobao search</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.03758</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Take a step back: Evoking reasoning via abstraction in large language models</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-T</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Chi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">V</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.06117</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Precise zero-shot dense retrieval without relevance labels</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Callan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2212.10496</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Blagojevi</surname></persName>
+		</author>
+		<ptr target="https://towardsdatascience.com/enhancing-rag-pipelines-in-haystack-45" />
+		<imprint>
+			<date type="published" when="2023">14e2bc9f5, 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Generate rather than retrieve: Large language models are strong context generators</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Iter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sanyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2209.10063</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Shao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.15294</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2308.11761</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">Forget rag, the future is rag-fusion</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Raudaschl</surname></persName>
+		</author>
+		<ptr target="https://towardsdatascience.com/forget-rag-the-future-is-rag-fusion-1147298" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="volume">8</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Lift yourself up: Retrieval-augmented text generation with self memory</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.02437</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Training data is more valuable than you think: A simple and effective method by retrieving from training data</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zeng</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2203.08773</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">From classification to generation: Insights into crosslingual retrieval augmented icl</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.06595</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Uprise: Universal prompt retrieval for improving zero-shot evaluation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2303.08518</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Promptagator: Few-shot dense retrieval from 8 examples</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bakalov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Guu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">B</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-W</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2209.11755</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Recitation-augmented language models</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2210.01296</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Khattab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Santhanam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zaharia</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2212.14024</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Active retrieval augmented generation</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dwivedi-Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Callan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Neubig</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.06983</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Self-rag: Learning to retrieve, generate, and critique through self-reflection</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Asai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hajishirzi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.11511</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Bridging the preference gap between retrievers and llms</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bendersky</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.06954</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">V</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lomeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rodriguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Szilvasy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.01352</idno>
+		<title level="m">Ra-dit: Retrievalaugmented dual instruction tuning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Fine-tuning or retrieval? comparing knowledge injection in llms</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ovadia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brief</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mishaeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Elisha</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.05934</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Copy is all you need</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X.-L</forename><surname>Mao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Eleventh International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.06648</idno>
+		<title level="m">Dense x retrieval: What retrieval granularity should we use?</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Divide &amp; conquer for entailment-aware multi-hop evidence retrieval</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Surdeanu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.02616</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Diversify question generation with retrieval-augmented style transfer</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Gou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cam-Tu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.14503</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">Prompt-guided retrieval augmentation for non-knowledge-intensive tasks</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.17653</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Learning to filter context for retrieval-augmented generation</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Araki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Parvez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Neubig</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.08377</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">Retrieval-augmented data augmentation for low-resource domain tasks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Baek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Thorne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Hwang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.13482</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title level="m" type="main">Large language model is not a good few-shot information extractor, but a good reranker for hard samples</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2303.08559</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<title level="m" type="main">Retrieval-augmented generative question answering for event argument extraction</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ji</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2211.07067</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Learning to retrieve in-context examples for large language models</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.07164</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rajput</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Keshavan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Vu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Heldt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">Q</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Samost</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.05065</idno>
+		<title level="m">Recommender systems with generative retrieval</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Language models as semantic indexers</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.07815</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Context tuning for retrieval augmented generation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Anantha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bethi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vodianik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chappidi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.05708</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Few-shot learning with retrieval augmented language models</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Izacard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lomeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hosseini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Petroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dwivedi-Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Joulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Riedel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Grave</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2208.03299</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Raven: In-context learning with retrieval augmented encoderdecoder language models</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shoeybi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">-C</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2308.07922</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mcafee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shoeybi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kuchaiev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xiao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2304.06762</idno>
+		<title level="m">Shall we pretrain autoregressive language models with retrieval? a comprehensive study</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mcafee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shoeybi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.07713</idno>
+		<title level="m">Instructretro: Instruction tuning post retrieval-augmented pretraining</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Improving the domain adaptation of retrieval augmented generation (rag) models for open domain question answering</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Siriwardhana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weerasekera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kaluarachchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nanayakkara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1" to="17" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title level="m" type="main">Augmentation-adapted retriever improves generalization of language models as generic plug-in</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.17331</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title level="m" type="main">Making retrievalaugmented language models robust to irrelevant context</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yoran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wolfson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Berant</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.01558</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<title level="m" type="main">Understanding retrieval augmentation for long-form question answering</title>
+		<author>
+			<persName><forename type="first">H.-T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.12150</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<title level="m" type="main">Chain-of-note: Enhancing robustness in retrieval-augmented language models</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.09210</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-S</forename><surname>Chua</surname></persName>
+		</author>
+		<idno>abs/2304.14732</idno>
+	</analytic>
+	<monogr>
+		<title level="j">CoRR</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title level="m" type="main">Optimizing retrieval-augmented reader models via token elimination</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Berchansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Izsak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Caciularu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Dagan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wasserblat</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.13682</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<title level="m" type="main">Paperqa: Retrieval-augmented generative agent for scientific research</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lála</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>O'donoghue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shtedritski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Rodriques</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>White</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.07559</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cuconasu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Trappolini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Siciliano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Filice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Campagnano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Maarek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tonellotto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Silvestri</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.14887</idno>
+		<title level="m">The power of noise: Redefining retrieval for rag systems</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Iag: Induction-augmented generation framework for answering reasoning questions</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2023 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="1" to="14" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<title level="m" type="main">Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Thakur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bonifacio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ogundepo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kamalloo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Alfonso-Hermelo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rezagholizadeh</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.11361</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<title level="m" type="main">Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.14696</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<monogr>
+		<title level="m" type="main">Self-knowledge guided retrieval augmentation for large language models</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.05002</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<title level="m" type="main">Retrievalgeneration synergy augmented large language models</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Qin</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.05149</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<title level="m" type="main">Retrieval meets long context large language models</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mcafee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Subramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bakhturina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shoeybi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.03025</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title level="m" type="main">Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Trivedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Khot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sabharwal</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2212.10509</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<title level="m" type="main">Investigating the factual knowledge boundary of large language models with retrieval augmentation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-R</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.11019</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sarthi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Abdullah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tuli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Khanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Goldie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.18059</idno>
+		<title level="m">Raptor: Recursive abstractive processing for tree-organized retrieval</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<title level="m" type="main">In-context retrieval-augmented language models</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Levine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Dalmedigos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Muhlgay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shashua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Leyton-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shoham</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2302.00083</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Retrieve-andsample: Document-level event argument extraction via hybrid retrieval augmentation</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 61st Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Long Papers</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="293" to="306" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<monogr>
+		<title level="m" type="main">Zemi: Learning zero-shot semi-parametric language models from multiple tasks</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ji</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2210.00185</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<monogr>
+		<title level="m" type="main">Corrective retrieval augmented generation</title>
+		<author>
+			<persName><forename type="first">S.-Q</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-C</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z.-H</forename><surname>Ling</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.15884</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<monogr>
+		<title level="m" type="main">1-pager: One pass answer generation and evidence retrieval</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Soares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kwiatkowski</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.16568</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<monogr>
+		<title level="m" type="main">Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xiao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.18347</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title level="m" type="main">Open-source large language models are strong zero-shot query likelihood models for document ranking</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Koopman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zuccon</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.13243</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<monogr>
+		<title level="m" type="main">Recomp: Improving retrieval-augmented lms with compression and selective augmentation</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.04408</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<monogr>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yasunaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-T</forename><surname>Yih</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2301.12652</idno>
+		<title level="m">Replug: Retrieval-augmented black-box language models</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<monogr>
+		<title level="m" type="main">Enhancing llm intelligence with arm-rag: Auxiliary rationale memory for retrieval augmented generation</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Melz</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.04177</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<monogr>
+		<title level="m" type="main">Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-F</forename><surname>Wong</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.13256</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<monogr>
+		<title level="m" type="main">Augmented large language models with parametric knowledge guiding</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Geng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.04757</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<monogr>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.19912</idno>
+		<title level="m">Structureaware language model pretraining improves dense retrieval on structured data</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<monogr>
+		<title level="m" type="main">Knowledge graph-augmented language models for knowledge-grounded dialogue generation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Kwak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Baek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Hwang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.18846</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<monogr>
+		<title level="m" type="main">Retrievalgeneration alignment for end-to-end task-oriented dialogue system</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Quan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.08877</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<monogr>
+		<title level="m" type="main">Dual-feedback knowledge retrieval for task-oriented dialogue systems</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Quan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.14528</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<monogr>
+		<title level="m" type="main">Fabula: Intelligence report generation using retrieval-augmented narrative construction</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ranade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Joshi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.13848</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<monogr>
+		<title level="m" type="main">Think and retrieval: A hypothesis knowledge graph enhanced medical large language models</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.15883</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<monogr>
+		<title level="m" type="main">Knowledge-augmented language model verification</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Baek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Hwang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.12836</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-F</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Haffari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.01061</idno>
+		<title level="m">Reasoning on graphs: Faithful and interpretable large language model reasoning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<monogr>
+		<title level="m" type="main">G-retriever: Retrieval-augmented generation for textual graph understanding and question answering</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">V</forename><surname>Chawla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Laurent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Bresson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hooi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.07630</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<monogr>
+		<title level="m" type="main">Tablegpt: Towards unifying tables, nature language and commands into one gpt</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Su</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.08674</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Iseeq: Information seeking question generation using dynamic meta-information retrieval and knowledge graphs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gunaratna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Srinivasan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">680</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Large language models can be easily distracted by irrelevant context</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Misra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Scales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Chi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Schärli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<publisher>PMLR</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="31" to="210" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<monogr>
+		<title level="m" type="main">Evaluating the ideal chunk size for a rag system using llamaindex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Teja</surname></persName>
+		</author>
+		<ptr target="https://www.llamaindex.ai/blog/evaluating-the-ideal-chunk-size-for-a-rag-system-using-llamaindex" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>6207e5d3fec5</note>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<monogr>
+		<title level="m" type="main">Recursively split by character</title>
+		<author>
+			<persName><surname>Langchain</surname></persName>
+		</author>
+		<ptr target="https://python.langchain.com/docs/modules/dataconnection/documenttransformers/recursivetextsplitter" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<monogr>
+		<title level="m" type="main">Advanced rag 01: Small-tobig retrieval</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<ptr target="https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval" />
+		<imprint>
+			<date type="published" when="2023">172181b396d4, 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<monogr>
+		<title level="m" type="main">Knowledge graph prompting for multi-document question answering</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Lipka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Derr</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2308.11730</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<monogr>
+		<title level="m" type="main">Least-to-most prompting enables complex reasoning in large language models</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Schärli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Scales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Schuurmans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bousquet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Le</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2205.10625</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<monogr>
+		<title level="m" type="main">Chain-of-verification reduces hallucination in large language models</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dhuliawala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Komeili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Raileanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Celikyilmaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weston</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.11495</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<monogr>
+		<title level="m" type="main">Angle-optimized text embeddings</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.12871</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<monogr>
+		<title level="m" type="main">Voyage's embedding models</title>
+		<author>
+			<persName><surname>Voyageai</surname></persName>
+		</author>
+		<ptr target="https://docs.voyageai.com/embeddings/" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<monogr>
+		<title level="m" type="main">Flagembedding</title>
+		<author>
+			<persName><surname>Baai</surname></persName>
+		</author>
+		<ptr target="https://github.com/FlagOpen/FlagEmbedding" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<monogr>
+		<title level="m" type="main">Retrieve anything to augment large language models</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Dou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Nie</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.07554</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<monogr>
+		<title level="m" type="main">Lost in the middle: How language models use long contexts</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hewitt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Paranjape</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bevilacqua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Petroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.03172</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<monogr>
+		<title level="m" type="main">Chatrec: Towards interactive and explainable llms-augmented recommender system</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2303.14524</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b103">
+	<analytic>
+		<title level="a" type="main">Lingua: Addressing scenarios for live interpretation and automatic dubbing</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Richardson</surname></persName>
+		</author>
+		<ptr target="https://aclanthology.org/2022.amta-upg.14" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th Biennial Conference of the Association for Machine Translation in the Americas</title>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Campbell</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Larocca</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Marciano</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><surname>Savenkov</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Yanishevsky</surname></persName>
+		</editor>
+		<meeting>the 15th Biennial Conference of the Association for Machine Translation in the Americas<address><addrLine>Orlando, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2022-09">Sep. 2022</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="202" to="209" />
+		</imprint>
+	</monogr>
+	<note>Association for Machine Translation in the Americas</note>
+</biblStruct>
+
+<biblStruct xml:id="b104">
+	<monogr>
+		<title level="m" type="main">Longllmlingua: Accelerating and enhancing llms in long context scenarios via prompt compression</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Qiu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.06839</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b105">
+	<monogr>
+		<title level="m" type="main">Dense passage retrieval for open-domain question answering</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Karpukhin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Oguz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Edunov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-T</forename><surname>Yih</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2004.04906</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b106">
+	<analytic>
+		<title level="a" type="main">Large language model is not a good few-shot information extractor, but a good reranker for hard samples</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sun</surname></persName>
+		</author>
+		<idno>abs/2303.08559</idno>
+		<ptr target="https://api.semanticscholar.org/CorpusID" />
+	</analytic>
+	<monogr>
+		<title level="j">ArXiv</title>
+		<imprint>
+			<biblScope unit="page">257532405</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b107">
+	<monogr>
+		<title level="m" type="main">Chatlaw: Open-source legal large language model with integrated external knowledge bases</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2306.16092</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b108">
+	<monogr>
+		<title level="m" type="main">Making retrievalaugmented language models robust to irrelevant context</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yoran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wolfson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Berant</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.01558</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b109">
+	<monogr>
+		<title level="m" type="main">Chain of knowledge: A framework for grounding large language models with structured knowledge bases</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Chia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Joty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Poria</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.13269</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b110">
+	<monogr>
+		<title level="m" type="main">Auto-gpt for online decision making: Benchmarks and additional opinions</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>He</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2306.02224</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b111">
+	<monogr>
+		<title level="m" type="main">Toolformer: Language models can teach themselves to use tools</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dwivedi-Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Raileanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lomeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cancedda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Scialom</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2302.04761</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b112">
+	<monogr>
+		<title level="m" type="main">Graph-toolformer: To empower llms with graph reasoning ability via prompt augmented by chatgpt</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2304.11116</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b113">
+	<monogr>
+		<title level="m" type="main">Webgpt: Browserassisted question-answering with human feedback</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Balaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ouyang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hesse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kosaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Saunders</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2112.09332</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b114">
+	<analytic>
+		<title level="a" type="main">Natural questions: a benchmark for question answering research</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kwiatkowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Palomaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Redfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Parikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Alberti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Epstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Polosukhin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="453" to="466" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b115">
+	<monogr>
+		<title level="m" type="main">Exploring the integration strategies of retriever and large language models</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yavuz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Moorthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Joty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2308.12574</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b116">
+	<monogr>
+		<title level="m" type="main">Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Weld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1705.03551</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b117">
+	<monogr>
+		<title level="m" type="main">Squad: 100,000+ questions for machine comprehension of text</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rajpurkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lopyrev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1606.05250</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b118">
+	<analytic>
+		<title level="a" type="main">Semantic parsing on freebase from question-answer pairs</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Berant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Frostig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 conference on empirical methods in natural language processing</title>
+		<meeting>the 2013 conference on empirical methods in natural language processing</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="1533" to="1544" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b119">
+	<monogr>
+		<title level="m" type="main">When not to trust language models: Investigating effectiveness and limitations of parametric and non-parametric memories</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mallen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Asai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hajishirzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Khashabi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2212.10511</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b120">
+	<monogr>
+		<title level="m" type="main">Ms marco: A human-generated machine reading comprehension dataset</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rosenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tiwary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Majumder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b121">
+	<monogr>
+		<title level="m" type="main">Hotpotqa: A dataset for diverse, explainable multi-hop question answering</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">W</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1809.09600</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b122">
+	<monogr>
+		<title level="m" type="main">Constructing a multi-hop qa dataset for comprehensive evaluation of reasoning steps</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-K</forename><forename type="middle">D</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sugawara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aizawa</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2011.01060</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b123">
+	<analytic>
+		<title level="a" type="main">Musique: Multihop questions via single-hop question composition</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Trivedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Khot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sabharwal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="539" to="554" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b124">
+	<monogr>
+		<title level="m" type="main">Eli5: Long form question answering</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jernite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Perez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Grangier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Auli</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1907.09190</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b125">
+	<analytic>
+		<title level="a" type="main">The narrativeqa reading comprehension challenge</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kočiskỳ</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schwarz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Blunsom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Hermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Melis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Grefenstette</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="317" to="328" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b126">
+	<monogr>
+		<title level="m" type="main">A humaninspired reading agent with gist memory of very long contexts</title>
+		<author>
+			<persName><forename type="first">K.-H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Furuta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Canny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Fischer</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.09727</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b127">
+	<monogr>
+		<title level="m" type="main">Asqa: Factoid questions meet long-form answers</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Stelmakh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Dhingra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-W</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2204.06092</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b128">
+	<monogr>
+		<title level="m" type="main">Qmsum: A new benchmark for query-based multi-domain meeting summarization</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zaidi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mutuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Awadallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Celikyilmaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qiu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2104.05938</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b129">
+	<monogr>
+		<title level="m" type="main">A dataset of information-seeking questions and answers anchored in research papers</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dasigi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gardner</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2105.03011</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b130">
+	<analytic>
+		<title level="a" type="main">Covid-qa: A question answering dataset for covid-19</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Möller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Reina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jayakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pietsch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL 2020 Workshop on Natural Language Processing for COVID-19</title>
+		<imprint>
+			<publisher>NLP-COVID</publisher>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b131">
+	<monogr>
+		<title level="m" type="main">Cmb: A comprehensive medical benchmark in chinese</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2308.08833</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b132">
+	<monogr>
+		<title level="m" type="main">Measuring massive multitask chinese understanding</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zeng</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2304.12986</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b133">
+	<monogr>
+		<title level="m" type="main">Quality: Question answering with long input texts, yes</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Y</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Parrish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nangia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Phang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Padmakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>He</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2112.08608</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b134">
+	<monogr>
+		<title level="m" type="main">Think you have solved question answering? try arc, the ai2 reasoning challenge</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Cowhey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Etzioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Khot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sabharwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Schoenick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Tafjord</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1803.05457</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b135">
+	<monogr>
+		<title level="m" type="main">Commonsenseqa: A question answering challenge targeting commonsense knowledge</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Talmor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Herzig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Lourie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Berant</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1811.00937</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b136">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dinan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Auli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weston</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1811.01241</idno>
+		<title level="m">Wizard of wikipedia: Knowledge-powered conversational agents</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b137">
+	<monogr>
+		<title level="m" type="main">Large language models as source planner for personalized knowledge-grounded dialogue</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-C</forename><surname>Kwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-F</forename><surname>Wong</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.08840</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b138">
+	<monogr>
+		<title level="m" type="main">Large language models as source planner for personalized knowledge-grounded dialogue</title>
+		<idno type="arXiv">arXiv:2310.08840</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b139">
+	<monogr>
+		<title level="m" type="main">Long time no see! open-domain conversation with long-term persona memory</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Gou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z.-Y</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2203.05797</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b140">
+	<monogr>
+		<title level="m" type="main">Conditional generation and snapshot learning in neural dialogue systems</title>
+		<author>
+			<persName><forename type="first">T.-H</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gasic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mrksic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Rojas-Barahona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P.-H</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ultes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vandyke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Young</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1606.03352</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b141">
+	<analytic>
+		<title level="a" type="main">Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcauley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">proceedings of the 25th international conference on world wide web</title>
+		<meeting>the 25th international conference on world wide web</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="507" to="517" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b142">
+	<monogr>
+		<title level="m" type="main">Document-level event argument extraction by conditional generation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2104.05919</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b143">
+	<monogr>
+		<title level="m" type="main">Multisentence argument linking</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ebner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Culkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rawlins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Van Durme</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1911.03766</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b144">
+	<analytic>
+		<title level="a" type="main">T-rex: A large scale alignment of natural language with knowledge base triples</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Elsahar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vougiouklis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Remaci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gravier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Laforest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Simperl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)</title>
+		<meeting>the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b145">
+	<monogr>
+		<title level="m" type="main">Zero-shot relation extraction via reading comprehension</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Levy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1706.04115</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b146">
+	<monogr>
+		<title level="m" type="main">Hellaswag: Can a machine really finish your sentence?</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zellers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Holtzman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bisk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Farhadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1905.07830</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b147">
+	<monogr>
+		<title level="m" type="main">The cot collection: Improving zero-shot and few-shot learning of language models via chain-of-thought fine-tuning</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Joo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Seo</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.14045</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b148">
+	<analytic>
+		<title level="a" type="main">Complex sequential question answering: Towards learning to converse over linked question answer pairs with a knowledge graph</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pahuja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Khapra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sankaranarayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chandar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI conference on artificial intelligence</title>
+		<meeting>the AAAI conference on artificial intelligence</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">32</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b149">
+	<monogr>
+		<title level="m" type="main">Measuring massive multitask language understanding</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hendrycks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Burns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Basart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mazeika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Steinhardt</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2009.03300</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b150">
+	<monogr>
+		<title level="m" type="main">Pointer sentinel mixture models</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merity</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bradbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Socher</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1609.07843</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b151">
+	<analytic>
+		<title level="a" type="main">Did aristotle use a laptop? a question answering benchmark with implicit reasoning strategies</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Geva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Khashabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Segal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Khot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Berant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="346" to="361" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b152">
+	<monogr>
+		<title level="m" type="main">Fever: a large-scale dataset for fact extraction and verification</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Thorne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vlachos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Christodoulopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mittal</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1803.05355</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b153">
+	<monogr>
+		<title level="m" type="main">Explainable automated fact-checking for public health claims</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kotonya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Toni</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2010.09926</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b154">
+	<monogr>
+		<title level="m" type="main">Neural text generation from structured data with application to the biography domain</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lebret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Grangier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Auli</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.07771</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b155">
+	<analytic>
+		<title level="a" type="main">Wikiasp: A dataset for multi-domain aspect-based summarization</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Budania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ackerson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Neervannan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Neubig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="211" to="225" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b156">
+	<monogr>
+		<title level="m" type="main">Don't give me the details, just the summary! topic-aware convolutional neural networks for extreme summarization</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Narayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lapata</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1808.08745</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b157">
+	<analytic>
+		<title level="a" type="main">Vio-lens: A novel dataset of annotated social network posts leading to different forms of communal violence and its evaluation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Saha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Junaed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saleki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Rifat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rahouti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mohammed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Amin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the First Workshop on Bangla Language Processing</title>
+		<meeting>the First Workshop on Bangla Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="72" to="84" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b158">
+	<analytic>
+		<title level="a" type="main">Learning question classifiers</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Roth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">COLING 2002: The 19th International Conference on Computational Linguistics</title>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b159">
+	<analytic>
+		<title level="a" type="main">Recursive deep models for semantic compositionality over a sentiment treebank</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Perelygin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Potts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 conference on empirical methods in natural language processing</title>
+		<meeting>the 2013 conference on empirical methods in natural language processing</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="1631" to="1642" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b160">
+	<monogr>
+		<title level="m" type="main">Codesearchnet challenge: Evaluating the state of semantic code search</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Husain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gazit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Allamanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brockschmidt</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1909.09436</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b161">
+	<monogr>
+		<title level="m" type="main">Training verifiers to solve math word problems</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cobbe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kosaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bavarian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Plappert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tworek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nakano</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2110.14168</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b162">
+	<monogr>
+		<title level="m" type="main">The jrc-acquis: A multilingual aligned parallel corpus with 20+ languages</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Steinberger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Pouliquen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Widiger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ignat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Erjavec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tufis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Varga</surname></persName>
+		</author>
+		<idno>arXiv preprint cs/0609058</idno>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b163">
+	<monogr>
+		<title level="m" type="main">Ralle: A framework for developing and evaluating retrieval-augmented large language models</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Miyashita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tatsuno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Morioka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Torii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deguchi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2308.10633</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b164">
+	<monogr>
+		<title level="m" type="main">Building production-ready rag applications</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<ptr target="https://www.ai.engineer/summit/schedule/building-production-ready-rag-applications" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b165">
+	<monogr>
+		<title level="m" type="main">Evaluating rag part i: How to evaluate document retrieval</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nguyen</surname></persName>
+		</author>
+		<ptr target="https://www.deepset.ai/blog/rag-evaluation-retrieval" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b166">
+	<monogr>
+		<title level="m" type="main">Best practices for llm evaluation of rag applications</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Leng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Uhlenhuth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Polyzotis</surname></persName>
+		</author>
+		<ptr target="https://www.databricks.com/blog/LLM-auto-eval-best-practices-RAG" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b167">
+	<monogr>
+		<title level="m" type="main">Ragas: Automated evaluation of retrieval augmented generation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Es</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Espinosa-Anke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Schockaert</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.15217</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b168">
+	<monogr>
+		<title level="m" type="main">Ares: An automated evaluation framework for retrieval-augmented generation systems</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Saad-Falcon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Khattab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zaharia</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.09476</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b169">
+	<monogr>
+		<title level="m" type="main">A survey of techniques for maximizing llm performance</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Jarvis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Allard</surname></persName>
+		</author>
+		<ptr target="https://community.openai.com/t/openai-dev-day-2023-breakout-sessions/505213#a-survey-of-techniques-for-maximizing-llm-performance-2" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b170">
+	<monogr>
+		<title level="m" type="main">Benchmarking large language models in retrieval-augmented generation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.01431</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b171">
+	<monogr>
+		<title level="m" type="main">Recall: A benchmark for llms robustness against external counterfactual knowledge</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.08147</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b172">
+	<monogr>
+		<title level="m" type="main">Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.17043</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b173">
+	<monogr>
+		<title level="m" type="main">Retrieval meets long context large language models</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mcafee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Subramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bakhturina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shoeybi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.03025</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b174">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><surname>Packer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Patil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wooders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.08560</idno>
+		<title level="m">Memgpt: Towards llms as operating systems</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b175">
+	<monogr>
+		<title level="m" type="main">Efficient streaming language models with attention sinks</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.17453</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b176">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Patil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zaharia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Stoica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2403.10131</idno>
+		<title level="m">Raft: Adapting language model to domain specific rag</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b177">
+	<monogr>
+		<title level="m" type="main">Scaling laws for neural language models</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mccandlish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Henighan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">B</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Child</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Amodei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2001.08361</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b178">
+	<analytic>
+		<title level="a" type="main">Neurosymbolic language modeling with automaton-augmented retrieval</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sengupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Neubig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<publisher>PMLR</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="468" to="485" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b179">
+	<monogr>
+		<title level="m" type="main">Retrieval-augmented multimodal language modeling</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yasunaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aghajanyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-T</forename><surname>Yih</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2211.12561</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b180">
+	<monogr>
+		<title level="m" type="main">Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Savarese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hoi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2301.12597</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b181">
+	<monogr>
+		<title level="m" type="main">Visualize before you write: Imagination-guided open-ended text generation</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">E</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Eckstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2210.03765</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b182">
+	<monogr>
+		<title level="m" type="main">Generating synthetic speech from spokenvocab for speech translation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Haffar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shareghi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2210.08174</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b183">
+	<monogr>
+		<title level="m" type="main">Using external off-policy speech-to-text mappings in contextual end-to-end automated speech recognition</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ghosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rastrow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hoffmeister</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2301.02736</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b184">
+	<analytic>
+		<title level="a" type="main">Vid2seq: Large-scale pretraining of a visual language model for dense video captioning</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nagrani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Miech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pont-Tuset</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Laptev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sivic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Schmid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</title>
+		<meeting>the IEEE/CVF Conference on Computer Vision and Pattern Recognition</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="10" to="714" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b185">
+	<analytic>
+		<title level="a" type="main">Retrieval-based prompt selection for code-related few-shot learning</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nashid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sintaha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mesbah</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="2450" to="2462" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

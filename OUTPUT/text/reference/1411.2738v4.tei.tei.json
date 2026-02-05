@@ -1,0 +1,133 @@
+{
+  "paper_id": "9F82ECB927A2100B8664972686CD8685",
+  "title": "word2vec Parameter Learning Explained",
+  "arxiv_id": "arXiv:1411.2738v4[cs.CL]",
+  "authors": [
+    {
+      "given": "Xin",
+      "family": "Rong"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "word2vec explained: deriving mikolov et al.'s negativesampling word-embedding method",
+      "container_title": "word2vec explained: deriving mikolov et al.'s negativesampling word-embedding method",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1402.3722"
+        },
+        {
+          "type": "other",
+          "value": "arXiv: 1402.3722"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Goldberg"
+        },
+        {
+          "given": "O",
+          "family": "Levy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Efficient estimation of word representations in vector space",
+      "container_title": "Efficient estimation of word representations in vector space",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1301.3781"
+        }
+      ],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Mikolov"
+        },
+        {
+          "given": "K",
+          "family": "Chen"
+        },
+        {
+          "given": "G",
+          "family": "Corrado"
+        },
+        {
+          "given": "J",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Mikolov"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "K",
+          "family": "Chen"
+        },
+        {
+          "given": "G S",
+          "family": "Corrado"
+        },
+        {
+          "given": "J",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mnih"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "In AISTATS",
+      "container_title": "In AISTATS",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Morin"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

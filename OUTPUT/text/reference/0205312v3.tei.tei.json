@@ -1,0 +1,418 @@
+{
+  "paper_id": "9616A84AF811094ED2933F1880FD0279",
+  "title": "Observation of minority spin character of the new electron doped manganite La 0.7 Ce 0.3 MnO 3 from tunneling magnetoresistance",
+  "arxiv_id": "arXiv:cond-mat/0205312v3[cond-mat.str-el]",
+  "authors": [
+    {
+      "given": "C",
+      "family": "Mitra"
+    },
+    {
+      "given": "P",
+      "family": "Raychaudhuri"
+    },
+    {
+      "given": "K",
+      "family": "Dörr"
+    },
+    {
+      "given": "K.-H",
+      "family": "Müller"
+    },
+    {
+      "given": "L",
+      "family": "Schultz"
+    },
+    {
+      "given": "P M",
+      "family": "Oppeneer"
+    },
+    {
+      "given": "S",
+      "family": "Wirth"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Adv. Phys",
+      "container_title": "Adv. Phys",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Coey"
+        },
+        {
+          "given": "M",
+          "family": "Viret"
+        },
+        {
+          "given": "S",
+          "family": "Von Molnár"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Mandal"
+        },
+        {
+          "given": "S",
+          "family": "Das"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "J. Appl. Phys",
+      "container_title": "J. Appl. Phys",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Raychaudhuri"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "J. Appl. Phys",
+      "container_title": "J. Appl. Phys",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Mitra"
+        },
+        {
+          "given": "P",
+          "family": "Raychaudhuri"
+        },
+        {
+          "given": "J",
+          "family": "John"
+        },
+        {
+          "given": "S K",
+          "family": "Dhar"
+        },
+        {
+          "given": "A K",
+          "family": "Nigam"
+        },
+        {
+          "given": "R",
+          "family": "Pinto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "other",
+          "value": "cond-mat/0206137"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Mitra"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Appl. Phys. Lett",
+      "container_title": "Appl. Phys. Lett",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Mitra"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Tanaka"
+        },
+        {
+          "given": "J",
+          "family": "Zhang"
+        },
+        {
+          "given": "T",
+          "family": "Kawai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "J. Electron Spectrosc. Relat. Phenom",
+      "container_title": "J. Electron Spectrosc. Relat. Phenom",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B I",
+          "family": "Min"
+        },
+        {
+          "given": "S K",
+          "family": "Kwon"
+        },
+        {
+          "given": "B W",
+          "family": "Lee"
+        },
+        {
+          "given": "J.-S",
+          "family": "Kang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "J. Phys.: Condens. Matter",
+      "container_title": "J. Phys.: Condens. Matter",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J.-S",
+          "family": "Kang"
+        },
+        {
+          "given": "Y J",
+          "family": "Kim"
+        },
+        {
+          "given": "B W",
+          "family": "Lee"
+        },
+        {
+          "given": "C G",
+          "family": "Olson"
+        },
+        {
+          "given": "B I",
+          "family": "Min"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Gupta"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Appl. Phys. Lett",
+      "container_title": "Appl. Phys. Lett",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J Z",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Appl. Phys. Lett",
+      "container_title": "Appl. Phys. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Ghosh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Satpathy"
+        },
+        {
+          "given": "Z S",
+          "family": "Popovic"
+        },
+        {
+          "given": "F R",
+          "family": "Vukajlovic"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Okimoto"
+        },
+        {
+          "given": "T",
+          "family": "Katsufuji"
+        },
+        {
+          "given": "T",
+          "family": "Ishikawa"
+        },
+        {
+          "given": "T",
+          "family": "Arima"
+        },
+        {
+          "given": "Y",
+          "family": "Tokura"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Nadgorny"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Appl. Phys. Lett",
+      "container_title": "Appl. Phys. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D C",
+          "family": "Worledge"
+        },
+        {
+          "given": "T H",
+          "family": "Geballe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J.-H",
+          "family": "Park"
+        },
+        {
+          "given": "E",
+          "family": "Vescovo"
+        },
+        {
+          "given": "H.-J",
+          "family": "Kim"
+        },
+        {
+          "given": "C",
+          "family": "Kwon"
+        },
+        {
+          "given": "R",
+          "family": "Ramesh"
+        },
+        {
+          "given": "T",
+          "family": "Venkatesan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W E",
+          "family": "Pickett"
+        },
+        {
+          "given": "D J",
+          "family": "Singh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Rev. Mod. Phys",
+      "container_title": "Rev. Mod. Phys",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Imada"
+        },
+        {
+          "given": "A",
+          "family": "Fujimori"
+        },
+        {
+          "given": "Y",
+          "family": "Tokura"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

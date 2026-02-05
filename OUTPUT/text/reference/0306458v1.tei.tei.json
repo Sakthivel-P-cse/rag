@@ -1,0 +1,562 @@
+{
+  "paper_id": "835E3E2E0255F06C29FAB2C64899579C",
+  "title": "Lattice distortions, incommensurability, and stripes in the electronic model for high-T c cuprates",
+  "arxiv_id": "arXiv:cond-mat/0306458v1[cond-mat.str-el]",
+  "authors": [
+    {
+      "given": "Takashi",
+      "family": "Yanagisawa"
+    },
+    {
+      "given": "Mitake",
+      "family": "Miyazaki"
+    },
+    {
+      "given": "Shigeru",
+      "family": "Koikegami"
+    },
+    {
+      "given": "Soh",
+      "family": "Koike"
+    },
+    {
+      "given": "Kunihiko",
+      "family": "Yamaji"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Proc. of 22nd Int. Conf. Low Temperature Physics",
+      "container_title": "Proc. of 22nd Int. Conf. Low Temperature Physics",
+      "year": "1999",
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N E",
+          "family": "Bickers"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C.-H",
+          "family": "Pao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Monthoux"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Nakanishi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Physica C",
+      "container_title": "Physica C",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Yamaji"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Kondo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Koikegami"
+        },
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Physica B",
+      "container_title": "Physica B",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Yamaji"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Physica B",
+      "container_title": "Physica B",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J W",
+          "family": "Loram"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P W",
+          "family": "Anderson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys. Rev.B",
+      "container_title": "Phys. Rev.B",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Hao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J M",
+          "family": "Tranquada"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Suzuki"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Yamada"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Arai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Wakimoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Matsuda"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H A",
+          "family": "Mook"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Ichikawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y S",
+          "family": "Lee"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Kimura"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Fujita"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Fujita"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1984",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Machida"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Giamarchi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S I",
+          "family": "Matveenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "J. Phys. Condens. Matter",
+      "container_title": "J. Phys. Condens. Matter",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Himeda"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "J. Phys. Chem. Solids",
+      "container_title": "J. Phys. Chem. Solids",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yanagisawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "J. Phys. Chem. Solids",
+      "container_title": "J. Phys. Chem. Solids",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Miyazaki"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Physica C",
+      "container_title": "Physica C",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Eskes"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Suzuki"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Bianconi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "Electronic Structure and Properties of Solids",
+      "container_title": "Electronic Structure and Properties of Solids",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W A",
+          "family": "Harrison"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Migliori"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

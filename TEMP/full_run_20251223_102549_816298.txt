@@ -1,0 +1,112 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_102549_816298.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): My RL agent improves initially but then collapses after policy updates. Training is unstable and sensitive to learning rate.
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251223_102553_375034.json
+[retrieve] Query (first 200 chars): What causes instability and collapse in reinforcement learning (RL) agents after policy updates, and how can training sensitivity to learning rate be mitigated in RL?  Search hints: reinforcement lear
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_102549_816298.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=3
+[judge] refined_question: What causes instability and collapse in reinforcement learning (RL) agents after policy updates, and how can training sensitivity to learning rate be mitigated in RL?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): What causes instability and collapse in reinforcement learning (RL) agents after policy updates, and how can training sensitivity to learning rate be mitigated in RL?  Search hints: reinforcement lear
+[judge] search_hint: reinforcement learning, policy updates, training instability, learning rate sensitivity, RL stability, policy gradient methods, Q-learning, actor-critic methods, deep reinforcement learning, hyperparameter tuning
+[retrieve] Query (first 200 chars): What causes instability and collapse in reinforcement learning (RL) agents after policy updates, and how can training sensitivity to learning rate be mitigated in RL?  Search hints: reinforcement lear
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1707.06347v2.tei.tei chunk_id=1707.06347v2.tei.tei_chunk-6 retr_score=0.4389 section=Algorithm :: Each algorithm was run on all 7 environments, with 3 random seeds on each. We scored each run of the algorithm by computing the average total reward of the last...
+[judge] cand#2: paper_id=1707.06347v2.tei.tei chunk_id=1707.06347v2.tei.tei_chunk-1 retr_score=0.4311 section=None :: **Published:** 28 Aug 2017  We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interac...
+[judge] cand#3: paper_id=1412.6980v9.tei.tei chunk_id=1412.6980v9.tei.tei_chunk-11 retr_score=0.4292 section=EXPERIMENT: BIAS-CORRECTION TERM :: In Figure 4, values β 2 close to 1 indeed lead to instabilities in training when no bias correction term was present, especially at first few epochs of the trai...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["causes of instability and collapse in reinforcement learning agents after policy updates", "mitigating training sensitivity to learning rate in RL"],   "next_question": "What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in RL algorithms such as PPO and Adam?",   "accept": [{"chunk_id": "1707.06347v2.tei.tei_chunk-1", "paper_id": "1707.06347v2.tei.tei", "rationale": "introduces PPO algorithm and its benefits"}],
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251223_102841_052459.json
+[judge] satisfied=False
+[judge] Accepted this iter: 1 | Rejected this iter: 2 | Total accepted: 1 | Total rejected: 2
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in RL algorithms such as PPO and
+[judge] search_hint: reinforcement learning, policy updates, training instability, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability
+[retrieve] Query (first 200 chars): What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in RL algorithms such as PPO and
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1502.05477v5.tei.tei chunk_id=1502.05477v5.tei.tei_chunk-16 retr_score=0.4020 section=A Proof of Policy Improvement Bound :: This proof (of Theorem 1) uses techniques from the proof of Theorem 4.1 in (Kakade & Langford, 2002), adapting them to the more general setting considered in th...
+[judge] cand#2: paper_id=1502.05477v5.tei.tei chunk_id=1502.05477v5.tei.tei_chunk-3 retr_score=0.4010 section=Preliminaries :: We will use the following standard definitions of the stateaction value function Q π , the value function V π , and the advantage function A π :  , where a t ∼ ...
+[judge] cand#3: paper_id=1502.05477v5.tei.tei chunk_id=1502.05477v5.tei.tei_chunk-4 retr_score=0.3893 section=Preliminaries :: Equation ( 4) implies that a sufficiently small step π θ0 → π that improves L π θ old will also improve η, but does not give us any guidance on how big of a ste...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["key factors contributing to training instability in reinforcement learning agents after policy updates", "mitigating learning rate sensitivity in RL algorithms such as PPO and Adam"],   "next_question": "What are the primary causes of training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be effectively mitigated in PPO and Adam algorithms?",   "accept": [{"chunk_id": "1502.05477v5.tei.tei_chunk-3", "paper_id": "1502.05477v5.tei.tei", "rationale": "provides backgro
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251223_102946_146128.json
+[judge] satisfied=False
+[judge] Accepted this iter: 1 | Rejected this iter: 2 | Total accepted: 2 | Total rejected: 4
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): What are the primary causes of training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be effectively mitigated in PPO and Adam algorithms?  S
+[judge] search_hint: reinforcement learning, policy updates, training instability, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability, policy gradient methods, advantage functions
+[retrieve] Query (first 200 chars): What are the primary causes of training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be effectively mitigated in PPO and Adam algorithms?  S
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 2 chunks
+[judge] Retrieved 2 candidate chunks
+[judge] cand#1: paper_id=1602.07868v3.tei.tei chunk_id=1602.07868v3.tei.tei_chunk-5 retr_score=0.3797 section=Gradients :: The rate of increase will depend on the the variance of the weight gradient. If our gradients are noisy, c will be high and the norm of v will quickly increase,...
+[judge] cand#2: paper_id=1412.6980v9.tei.tei chunk_id=1412.6980v9.tei.tei_chunk-5 retr_score=0.3659 section=CONVERGENCE ANALYSIS :: We analyze the convergence of Adam using the online learning framework proposed in (Zinkevich, 2003). Given an arbitrary, unknown sequence of convex cost functi...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["primary causes of training instability in reinforcement learning agents after policy updates", "effective mitigation of learning rate sensitivity in PPO and Adam algorithms"],   "next_question": "What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in PPO and Adam algorithms to improve training stability?",   "accept": [{"chunk_id": "1602.07868v3.tei.tei_chunk-5", "paper_id": "1602.07868v3.tei.tei", "rationale": "
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251223_102958_800156.json
+[judge] satisfied=False
+[judge] Accepted this iter: 1 | Rejected this iter: 1 | Total accepted: 3 | Total rejected: 5
+
+[judge] ===== Iteration 4 =====
+[judge] retrieval_query (first 200 chars): What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in PPO and Adam algorithms to im
+[judge] search_hint: reinforcement learning, training instability, policy updates, learning rate sensitivity, PPO, Adam, proximal policy optimization, trust region policy optimization, deep reinforcement learning, hyperparameter tuning, algorithmic stability, policy gradient methods, advantage functions, stochastic gradient ascent
+[retrieve] Query (first 200 chars): What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in PPO and Adam algorithms to im
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 0 chunks
+[judge] No candidates retrieved; stopping.
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What are the key factors contributing to training instability in reinforcement learning agents after policy updates, and how can learning rate sensitivity be mitigated in PPO and Adam algorithms to im
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What are the primary causes of training instability in reinforcement learning agents after policy updates?
+[retrieve] Query (first 200 chars): What are the primary causes of training instability in reinforcement learning agents after policy updates?  Search hints: reinforcement learning, policy updates, training instability, convergence issu
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How does learning rate sensitivity impact training stability in PPO algorithms?
+[retrieve] Query (first 200 chars): How does learning rate sensitivity impact training stability in PPO algorithms?  Search hints: PPO, learning rate sensitivity, training stability, hyperparameter tuning
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What methods can be used to mitigate learning rate sensitivity in Adam algorithms to improve training stability?
+[retrieve] Query (first 200 chars): What methods can be used to mitigate learning rate sensitivity in Adam algorithms to improve training stability?  Search hints: Adam algorithm, learning rate sensitivity, mitigation strategies, traini
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 3 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251223_103149_012115.json

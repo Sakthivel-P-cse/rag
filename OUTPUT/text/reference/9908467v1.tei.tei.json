@@ -1,0 +1,157 @@
+{
+  "paper_id": "B81EEA82C6973D6C07C80B225D5B497B",
+  "title": "Metallic sulphur. \"Electronic\" mechanism of superconductivity?",
+  "arxiv_id": "arXiv:cond-mat/9908467v1[cond-mat.supr-con]",
+  "authors": [
+    {
+      "given": "V N",
+      "family": "Bogomolov"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Bogomolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Bogomolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ê À",
+          "family": "Goettel"
+        },
+        {
+          "given": "J H",
+          "family": "Eggert"
+        },
+        {
+          "given": "I F",
+          "family": "Silvera"
+        },
+        {
+          "given": "W C",
+          "family": "Moss"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "",
+      "container_title": "",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V V",
+          "family": "Struzkin"
+        },
+        {
+          "given": "R J",
+          "family": "Hemley"
+        },
+        {
+          "given": "H K",
+          "family": "Mao"
+        },
+        {
+          "given": "Timofeev A",
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Nature"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C F",
+          "family": "Richardson"
+        },
+        {
+          "given": "N W",
+          "family": "Ashcroft"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1971",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Muller-Hartmann"
+        },
+        {
+          "given": "J",
+          "family": "Zittartz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Shimitsu"
+        },
+        {
+          "given": "K",
+          "family": "Suhara"
+        },
+        {
+          "given": "M",
+          "family": "Ikumo"
+        },
+        {
+          "given": "M I",
+          "family": "Eremets"
+        },
+        {
+          "given": "K",
+          "family": "Amaya"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

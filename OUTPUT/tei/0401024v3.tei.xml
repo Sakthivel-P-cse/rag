@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Enhanced hard X-ray emission from femtosecond laser irradiated microdroplets</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2018-11-21">November 21, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">M</forename><surname>Anand</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Sandhu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">S</forename><surname>Kahaly</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">G</forename><surname>Ravindra Kumar</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><surname>Krishnamurthy</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">P</forename><surname>Gibbon</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Tata Institute of Fundamental Research</orgName>
+								<address>
+									<addrLine>1 Homi Bhabha Road</addrLine>
+									<postCode>400 005</postCode>
+									<settlement>Mumbai</settlement>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">John-von-Neumann Institute for Computing</orgName>
+								<orgName type="institution" key="instit2">ZAM</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Forschungszentrum Jülich</orgName>
+								<address>
+									<postCode>D-52425</postCode>
+									<settlement>Jülich</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Enhanced hard X-ray emission from femtosecond laser irradiated microdroplets</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-11-21">November 21, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7BDBA5163CDF7CAC2388555976BF5F90</idno>
+					<idno type="arXiv">arXiv:physics/0401024v3[physics.plasm-ph]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>numbers: 52.38.Ph</term>
+					<term>52.25.Os</term>
+					<term>79.20.Ds</term>
+					<term>52.50.Jm</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We make a comparative study of hard x-ray emission from 15 µm methanol microdroplets and a plain slab target of similar atomic composition at similar laser intensities. The hard X-ray yield from droplet plasmas is ≃ 35 times more than that obtained from solid plasmas. A prepulse that is about 10ns and about 5% of the main pulse is essential for hard x-ray generation from the droplets. A hot electron temperature of 36 keV is measured from the droplets at 8×10 14 W cm -2 ; three times higher intensity is needed to obtain similar hot electron temperature from solid plasmas with similar composition. We use 1D PIC simulation to obtain qualitative correlation to the experimental observations.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The physics of laser-plasma interactions has undergone a revolution in recent times.</p><p>Technological advances in lasers have opened the possibility of achieving intensities up to 10 21 W cm -2 <ref type="bibr" target="#b0">[1]</ref>. The non-perturbative physics of laser-matter interactions at these extreme intensities has brought forth many new concepts and applications <ref type="bibr" target="#b1">[2]</ref>. The hot dense plasma produced in such interaction has opened up novel schemes of pulsed neutron generation <ref type="bibr" target="#b2">[3]</ref>,</p><p>nuclear reactions <ref type="bibr" target="#b3">[4]</ref>table top acceleration <ref type="bibr" target="#b4">[5]</ref> and synchrotron radiation <ref type="bibr" target="#b5">[6]</ref>. Importantly, such plasmas are promising sources of ultrashort pulse radiation in EUV and x-ray regimes and increasing the efficiency of these sources is a major challenge. This obviously leads to the investigation of strategies to efficiently couple laser energy to the plasma. One such strategy has been the introduction of novel targets . Metallic nanoparticle-coated solids <ref type="bibr" target="#b6">[7]</ref> and 'velvet' targets <ref type="bibr" target="#b7">[8]</ref> have yielded enhanced x-ray emission in the moderate to very hard x-ray regime. Gaseous clusters, which are nanoparticles with solid-like local density have been shown to absorb 90% of the incident laser energy <ref type="bibr" target="#b8">[9]</ref>. Particle acceleration up to an MeV and efficient nuclear fusion at intensities as low as 10 16 W cm -2 has been observed from such cluster plasmas.</p><p>There are however some disadvantages in the use of gaseous clusters. A major one is the rather stringent limitation on the type of atomic or molecular species which can produce large clusters. For example, there is no simple way to generate large clusters with high-Z atoms like Pt. Besides, there is very little hard X-ray emission above 5 keV from clusters <ref type="bibr" target="#b9">[10]</ref>. In this context, we invite attention to liquid droplets as a promising alternative. They are relatively debris-less and couple the advantage of size confinement with the relative ease with which a droplet can be used to introduce any atomic/molecular system of interest.</p><p>Droplet targets have found application in EUV Lithography and X-ray microscopy <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b11">12]</ref>. The emphasis on droplet plasma studies has so far been mostly towards optimizing the EUV radiation at 13 nm due to applications towards lithography, though there have been some initial studies on hard x-ray radiation <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b14">15]</ref>. The study of very hard X-ray emission from droplets is certainly of major interest.</p><p>In this paper, we present measurements of hard x-ray emission (10-350 keV), from 15µm methanol droplets irradiated with 100 fs laser pulses with intensities up to 2×10 15 W cm -2 .</p><p>We find that a prepulse that arrives at about 10ns ahead of the main pulse is critically important to generate hard x-rays from liquid droplets at these intensities. For comparison, we measure hard X-ray emission from a solid plastic target (which has a similar atomic composition) under similar conditions. Though the prepulse brings about 17 fold enhancement in the x-ray yield at 3.7×10 15 W cm -2 from the plastic , we find that the size limited methanol droplet generates hard x-rays at much lower intensity and much more efficiently.</p><p>The hard x-ray yield at 1.5×10 15 W cm -2 is about 35 times larger than that from the plastic under similar conditions. We present 1D PIC simulation that qualitatively explain the experimental observation of enhanced x-ray generation in microdroplets.</p><p>The apparatus used in these experiments has been described elsewhere <ref type="bibr" target="#b15">[16]</ref> and here we present only the salient features. The microdroplet targets are generated by forcing methanol through a 10 µm capillary, which is modulated at 1 MHz using a piezo-crystal. The uniformly sized droplets were characterized by imaging of the droplet, and also by observing morphological dependent resonances (MDR) <ref type="bibr" target="#b16">[17]</ref>. The inset in figure <ref type="figure">1(a)</ref> shows the droplets along with the image of a 25 µm slit used for calibration. The droplets are produced inside a vacuum chamber maintained at 10 -5 Torr. We focus the 100fs pulses of 800nm light using a 30 cm planoconvex lens and achieve intensities up to 2 × 10 15 W cm -2 . A two-pulse setup is used to obtain a prepulse at about 10ns ahead of the main pulse and a pair of polarizers together with a half wave plate is used to control its intensity. Comparative experiments with solids are performed on an optically flat plastic by focusing p-polarized light at 45 • incident angle with a 20 cm lens to a spot size of 20 µm and achieve intensities up to 5× 10 15 W cm -2 .</p><p>We have carefully determined the intensity of light by measuring the pulse width using a second order autocorrelator (Femtochrome-103XL) and the beam waist (30µm)using the standard knife edge technique. We have established the accuracy of this method in the past by correlating the measured values with the well known appearance intensity of Xe q+ ions <ref type="bibr" target="#b17">[18]</ref>. We used plastic targets for comparison since their atomic composition is close to that of methanol. The target is scanned such that each laser pulse is incident at a fresh portion of the target <ref type="bibr" target="#b18">[19]</ref>. The x-ray detector in all experiments is a NaI(Tl) detector, appropriately time gated with the laser pulse and calibrated with standard radioactive sources.</p><p>In experiments with liquid droplets, there is no measurable hard x-ray yield at intensities less than 1.5×10 15 W cm -2 in the absence of a prepulse. In the regenerative amplifier, a prepulse can be generated by misalignment of the pockel cell. In initial experiments, we found that the hard x-ray generation was very sensitive to the extent of this prepulse, which is 10ns ahead of the main pulse. Once we established that a ns prepulse is essential for the intentional prepulse of desired intensity that arrives at the required time ahead of the main pulse. We find that while a prepulse that is 1-10 ps ahead does not significantly influence the x-ray emission from the droplets, a prepulse that is about 10ns ahead is essential to produce x-rays from the droplets. The x-ray yield increases steeply with the prepulse energy and saturates for a prepulse that is about 5% in intensity of the main pulse.</p><p>The x-ray emission spectrum obtained from 15µm methanol droplets at a prepulse intensity of about 5% is shown figure <ref type="figure">1(a</ref>). The solid line shows an exponential fit to the data assuming a Maxwellian distribution for the electrons in the plasma. In this fit we only considered energies larger than 50 keV so that corrections due to the transmission through the glass or aluminum housing of the detector are negligible. To avoid pile up, the count rate was kept less than 0.1 per pulse by restricting the solid angle of detection <ref type="bibr" target="#b15">[16]</ref>. The X-ray emission spectrum from the plastic at similar pre-pulse intensities is shown in figure <ref type="figure">1</ref>(b) at about three times larger main pulse intensity, as there was no measurable X-ray emission below 2 ×10 15 W cm -2 . Exponential fits to the data show that the hot electron temperature is about 40 keV for plastic while it is 36 keV in the case of methanol droplets at about three times less intensity.</p><p>A comparison between the relative integrated X-ray yields from both droplet plasma and plastic target, with a prepulse of about 1.5× 10 14 W cm -2 , is shown in figure <ref type="figure">2</ref>. The Xray yields from both the targets are measured in the range from 10-350 keV. Experiments on liquid drops with higher intensities are not possible with our present laser, as we are constrained to maintain a focal spot size of 30 µm to maintain the droplet close to the center of the focus, given the spatial jitter of a few microns in the jet. The prepulse enhances the x-ray generation in plastic but the enhancement from the methanol droplet is much larger.</p><p>The threshold for hard x-ray generation in droplets is a factor of two smaller, and at an intensity of about 2×10 15 W cm -2 the x-ray yield from droplets is at least 35 times larger than that obtained from the plastic.</p><p>How do we model the laser interaction with the droplet? In plasmas made of mesoscopic matter, both the geometry and the size are crucially important. A microdroplet is a spherical cavity that interacts with light very differently compared to a planar surface. On the droplet surface the angle of incidence would vary from 0 • to 90 • and accordingly the polarization would change from s to p, as we go from the center to the poles of the drop. Also a microdroplet, much larger than the wavelength of light, can focus the light inside the drop.</p><p>A major fraction of the prepulse (10 13 W cm -2 ) is known to enter the droplet and very little is lost in ionization on the surface. The light that enters is focused by the droplet and its intensity is enhanced by two orders of magnitude or more <ref type="bibr" target="#b19">[20]</ref>. For our droplet size, Lorentz-Mie calculations <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b21">22]</ref> show that a maximum intensity enhancement of nearly 150 times the incident light intensity is possible at a few spots inside the droplet close to its surface (Figure <ref type="figure">3</ref>).</p><p>Focusing of the prepulse in a liquid drop results in substantial ionization at many spots in and around the drop <ref type="bibr" target="#b19">[20]</ref> and leads to a large volume spherical plasma. Imaging experiments using the pump-probe technique show that the droplet plasma is of 30µm in diameter, when the main pulse is incident <ref type="bibr" target="#b15">[16]</ref>. So, the main pulse is incident on a large volume spherical plasma, that is close to the critical density in case of a droplet target.</p><p>Unraveling the dynamics of a spherical droplet plasma would require 3D PIC simulations, which are still too expensive to realistically model the present experimental conditions. However to gain useful insights into the differences between solid and droplet plasmas, we have carried out high-resolution 1D-PIC simulations with different density profiles that qualitatively mimic the expected density profiles from the droplet, at least in one dimension (see inset of Fig. <ref type="figure">4(a)</ref>). An upper limit for the plasma scale length created by the prepulse can be obtained from the isothermal model of Rosen <ref type="bibr" target="#b22">[23,</ref><ref type="bibr" target="#b23">24]</ref>. Assuming an absorbed flux of 2 × 10 13 W cm -2 for the prepulse, the plastic target would be initially heated to around 20 eV. One-dimensional expansion at the sound speed would then give L ∼ c s t ≃ 170µm after 10 ns. Plasma cooling and geometrical factors will reduce this somewhat, but we can nevertheless expect density profiles with L/λ &gt; 10. The droplets will expand even more due to their limited mass and the Mie-enhancements in prepulse intensity.</p><p>The simulations were performed using BOPS, a 1D2V PIC code exploiting the Lorentz boost technique to handle oblique-incidence interactions <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b25">26]</ref>. The unperturbed solid plasma profile is represented by a 6µm plasma slab with steep sides (L/λ &lt; 0.02). For the intensities used here (I &lt; 5 × 10 15 W cm -2 ) this was thick enough to prevent multiple reflection (and therefore additional heating) of hot electrons from the rear side of the target.</p><p>For the droplet an exponential density ramp was included on both sides with L/λ and the maximum density varied such that the total charge was the same as for the unexpanded slab. At these low intensities and long plasma lengths, a large number of particles (typically 20 million electrons and ions) were needed in order to generate a statistically significant number of hot electrons above 20 keV.</p><p>Although the simulated hot electron temperatures found in Fig. <ref type="figure">4a</ref>) are roughly a factor of 2 lower than those observed in the experiments, we find that the hot electron yield does show a qualitative correlation with the observations. Fig. <ref type="figure">4(b)</ref> shows the variation in the hot electron numbers with density scale length, showing a 5-fold increase in electrons above 20 keV and an onset of 'superhot' electrons (&gt; 50 keV) as the profile is stretched from an abrupt step to an extended corona. The general increase in hot electron temperature and number is due to the better matching of incidence angle (here fixed at 15 degrees) to the scale-length where resonance absorption is optimized. In the experiment these conditions are better reproduced for the droplets than the solid targets, where the laser was incident normally and at 45 o respectively, reducing the resonant coupling to the plasma in the latter case. At long scale-lengths (L/λ &gt;&gt; 1) there may also be a significant contribution from parametric instabilities in the extended underdense region, which appear to be responsible for the very hot electrons observed.</p><p>One has to keep in mind that these calculations have been performed with one dimensional density profiles and are only qualitatively indicative of the experimental measurements. The effects could be larger if the sphericity of the target were included.</p><p>Not only is the generation of hot electrons different in a spherical droplet, but escape of plasma electrons away from the target is different depending on the target geometry.</p><p>Recently it was shown that at any given distance away from the plasma source, the hot electron fraction is likely to be much larger from a spherical target compared to a plane solid slab <ref type="bibr" target="#b26">[27]</ref>. The experimental results presented here correlate well with this simple analytical model.</p><p>In summary, we have studied x-ray emission from intense laser irradiation of 15 µm methanol droplets in comparison with that from solids. Our results show that the yields from droplet plasmas are larger by a factor of 35. A prepulse 10ns ahead of the main pulse is essential for efficient hard x-ray generation from the droplets. The preplasma from a spherical droplet is arguably more extensive than from the plane slab target and is conducive to efficient hot electron generation via resonance absorption. This idea is supported by 1D PIC simulations that mimic the long scale-length droplet profile.</p><p>We thank D. Mathur, E. Springate, M. J. Vrakking, and J. Jha for suggestions,help and advice. Support from the DST(GOI) for our laser system is acknowledged.  </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 FIG. 3 :</head><label>13</label><figDesc>FIG.1: a). X-ray emission spectra obtained when 15µm methanol droplet are irradiated at 8×10 14 W cm -2 . The solid line shows the least square fit to the data assuming a Maxwellian distribution for the electrons of 36 keV temperature. The inset shows an image of the droplet stream along with the image of a precision 25 µm slit used for determining the size of the droplet. b) X-ray emission spectra obtained when a solid plastic target is irradiated with similar laser pulses at an intensities of 2 ×10 15 W cm -2 at 45 • to the normal using P-polarized light. The solid line shows the least square fit to the data assuming a Maxwellian distribution for electron of 40 keV temperature.</figDesc></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Service</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="page">154</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Remington</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page">1488</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ditmire</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">398</biblScope>
+			<biblScope unit="page">489</biblScope>
+			<date type="published" when="1999">1999</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Cowan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">903</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fritzler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page">3039</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schnürer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page">3236</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Rajeev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">115002</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kulcsar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">5149</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">P</forename><surname>Krainov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Smirnov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rep</title>
+		<imprint>
+			<biblScope unit="volume">370</biblScope>
+			<biblScope unit="page">237</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mc Pherson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">370</biblScope>
+			<biblScope unit="page">631</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Rymell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Hertz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Comm</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">105</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Constantinescu</surname></persName>
+		</author>
+		<title level="m">Proc. SPIE</title>
+		<meeting>SPIE</meeting>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">4146</biblScope>
+			<biblScope unit="page">101</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Donnelly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. B</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">313</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Parra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="317" to="323" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. B</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">687</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Anand</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. B</title>
+		<imprint/>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Anand</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">372</biblScope>
+			<biblScope unit="page">263</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ravindrakumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J.Phys.B</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">2981</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Sandhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">225002</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Favre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">35002</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Absorption and scattering of light by small particles</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Bohren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Huffman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Canada</title>
+		<imprint>
+			<date type="published" when="1983">1983</date>
+			<publisher>John Wiley &amp; Sons</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><surname>Matzler</surname></persName>
+		</author>
+		<ptr target="www.iapmw.unibe.ch/publications/pdffiles/201.pdf" />
+		<title level="m">Matlab functions for Mie scattering and Absorption</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rosen</surname></persName>
+		</author>
+		<title level="m">Proc. SPIE 1229</title>
+		<meeting>SPIE 1229</meeting>
+		<imprint>
+			<date type="published" when="1990">1990</date>
+			<biblScope unit="page">160</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bastiani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page">7179</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gibbon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Bell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">1535</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gibbon</surname></persName>
+		</author>
+		<ptr target="http://www.fz-juelich.de/zam/cams/plasma/BOPS/" />
+	</analytic>
+	<monogr>
+		<title level="m">The BOPS code is available online at</title>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">947</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Fill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Plasmas</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">52704</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

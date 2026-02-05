@@ -1,0 +1,769 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Trust Region Policy Optimization</title>
+				<funder ref="#_wJanYgs">
+					<orgName type="full">Office of Naval Research</orgName>
+				</funder>
+				<funder ref="#_UvnVkSx">
+					<orgName type="full">Army Research Office</orgName>
+				</funder>
+				<funder ref="#_bFTtZGn">
+					<orgName type="full">DARPA</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2017-04-20">20 Apr 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">John</forename><surname>Schulman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical Engineering and Computer Sciences</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Berkeley</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Philipp</forename><surname>Moritz</surname></persName>
+							<email>pcmoritz@eecs.berkeley.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical Engineering and Computer Sciences</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Berkeley</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Jordan</surname></persName>
+							<email>jordan@cs.berkeley.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical Engineering and Computer Sciences</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Berkeley</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Trust Region Policy Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2017-04-20">20 Apr 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C292499B9DB5C1255DAD434253E0761D</idno>
+					<idno type="arXiv">arXiv:1502.05477v5[cs.LG]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>We describe an iterative procedure for optimizing policies, with guaranteed monotonic improvement. By making several approximations to the theoretically-justified procedure, we develop a practical algorithm, called Trust Region Policy Optimization (TRPO). This algorithm is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. Our experiments demonstrate its robust performance on a wide variety of tasks: learning simulated robotic swimming, hopping, and walking gaits; and playing Atari games using images of the screen as input. Despite its approximations that deviate from the theory, TRPO tends to give monotonic improvement, with little tuning of hyperparameters.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">Emo Todorov</rs> and <rs type="person">Yuval Tassa</rs> for providing the MuJoCo simulator; <rs type="person">Bruno Scherrer</rs>, <rs type="person">Tom Erez</rs>, <rs type="person">Greg Wayne</rs>, and the anonymous ICML reviewers for insightful comments, and <rs type="person">Vitchyr Pong</rs> and <rs type="person">Shane Gu</rs> for pointing our errors in a previous version of the manuscript. This research was funded in part by the <rs type="funder">Office of Naval Research</rs> through a <rs type="grantName">Young Investigator Award</rs> and under grant number <rs type="grantNumber">N00014-11-1-0688</rs>, <rs type="funder">DARPA</rs> through a <rs type="grantName">Young Faculty Award</rs>, by the <rs type="funder">Army Research Office</rs> through the <rs type="programName">MAST program</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_wJanYgs">
+					<idno type="grant-number">N00014-11-1-0688</idno>
+					<orgName type="grant-name">Young Investigator Award</orgName>
+				</org>
+				<org type="funding" xml:id="_bFTtZGn">
+					<orgName type="grant-name">Young Faculty Award</orgName>
+				</org>
+				<org type="funding" xml:id="_UvnVkSx">
+					<orgName type="program" subtype="full">MAST program</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div><p>k of these Fisher-vector products per gradient, where k is the number of iterations of the conjugate gradient algorithm we perform. We found k = 10 to be quite effective, and using higher k did not result in faster policy improvement. Hence, a naïve implementation would spend more than 90% of the computational effort on these Fisher-vector products. However, we can greatly reduce this burden by subsampling the data for the computation of Fisher-vector product. Since the Fisher information matrix merely acts as a metric, it can be computed on a subset of the data without severely degrading the quality of the final step. Hence, we can compute it on 10% of the data, and the total cost of Hessian-vector products will be about the same as computing the gradient. With this optimization, the computation of a natural gradient step A -1 g does not incur a significant extra computational cost beyond computing the gradient g.</p></div>
+<div><head>D Approximating Factored Policies with Neural Networks</head><p>The policy, which is a conditional probability distribution π θ (a|s), can be parameterized with a neural network. This neural network maps (deterministically) from the state vector s to a vector µ, which specifies a distribution over action space. Then we can compute the likelihood p(a|µ) and sample a ∼ p(a|µ).</p><p>For our experiments with continuous state and action spaces, we used a Gaussian distribution, where the covariance matrix was diagonal and independent of the state. A neural network with several fully-connected (dense) layers maps from the input features to the mean of a Gaussian distribution. A separate set of parameters specifies the log standard deviation of each element. More concretely, the parameters include a set of weights and biases for the neural network computing the mean, {W i , b i } L i=1 , and a vector r (log standard deviation) with the same dimension as a. Then, the policy is defined by the normal distribution</p><p>For the experiments with discrete actions (Atari), we use a factored discrete action space, where each factor is parameterized as a categorical distribution. That is, the action consists of a tuple (a 1 , a 2 , . . . , a K ) of integers a k ∈ {1, 2, . . . , N k }, and each of these components is assumed to have a categorical distribution, which is specified by a vector µ k = [p 1 , p 2 , . . . , p N k ]. Hence, µ is defined to be the concatenation of the factors' parameters: µ = [µ 1 , µ 2 , . . . , µ K ] and has dimension dim µ = K k=1 N k . The components of µ are computed by taking applying a neural network to the input s and then applying the softmax operator to each slice, yielding normalized probabilities for each factor. </p></div>
+<div><head>E Experiment Parameters</head></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Bagnell</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Covariant policy search</title>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>IJCAI</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Bartlett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Baxter</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1106.0665</idno>
+		<title level="m">Infinite-horizon policy-gradient estimation</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Neuronlike adaptive elements that can solve difficult learning control problems</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Anderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Systems, Man and Cybernetics</title>
+		<imprint>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="834" to="846" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The arcade learning environment: An evaluation platform for general agents</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Bellemare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Naddaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Veness</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bowling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Artificial Intelligence Research</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="253" to="279" />
+			<date type="published" when="2013-06">jun 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Dynamic programming and optimal control</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bertsekas</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A survey on policy search for robotics</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Deisenroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Neumann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Peters</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Foundations and Trends in Robotics</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="1" to="142" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Approximate dynamic programming finally performs well in the game of Tetris</title>
+		<author>
+			<persName><surname>Gabillon</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Victor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Ghavamzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bruno</forename><surname>Scherrer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Fast biped walking with a reflexive controller and realtime policy searching</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Geng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Porr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wörgötter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems (NIPS)</title>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Deep learning for real-time atari game play using offline Monte-Carlo tree search planning</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="3338" to="3346" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Adapting arbitrary normal mutation distributions in evolution strategies: The covariance matrix adaptation</title>
+		<author>
+			<persName><forename type="first">Nikolaus</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andreas</forename><surname>Ostermeier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of IEEE International Conference on</title>
+		<meeting>IEEE International Conference on</meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="1996">1996. 1996</date>
+			<biblScope unit="page" from="312" to="317" />
+		</imprint>
+	</monogr>
+	<note>Evolutionary Computation</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A tutorial on MM algorithms</title>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">R</forename><surname>Hunter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Lange</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The American Statistician</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="30" to="37" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A natural policy gradient</title>
+		<author>
+			<persName><forename type="first">Sham</forename><surname>Kakade</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="1057" to="1063" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Approximately optimal approximate reinforcement learning</title>
+		<author>
+			<persName><forename type="first">Sham</forename><surname>Kakade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Langford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="267" to="274" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Reinforcement learning as classification: Leveraging modern classifiers</title>
+		<author>
+			<persName><forename type="first">Michail</forename><forename type="middle">G</forename><surname>Lagoudakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ronald</forename><surname>Parr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="424" to="431" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Markov chains and mixing times</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Levin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Peres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Wilmer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<publisher>American Mathematical Society</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Learning neural network policies with guided policy search under unknown dynamics</title>
+		<author>
+			<persName><forename type="first">Sergey</forename><surname>Levine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pieter</forename><surname>Abbeel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1071" to="1079" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Training deep and recurrent networks with hessian-free optimization</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Neural Networks: Tricks of the Trade</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="479" to="535" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mnih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kavukcuoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Silver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Antonoglou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wierstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Riedmiller</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1312.5602</idno>
+		<title level="m">Playing Atari with deep reinforcement learning</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Efficient methods in convex programming</title>
+		<author>
+			<persName><forename type="first">Arkadi</forename><surname>Nemirovski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">PEGASUS: A policy search method for large mdps and pomdps</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jordan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Uncertainty in artificial intelligence (UAI)</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Monte Carlo theory, methods and examples</title>
+		<author>
+			<persName><forename type="first">Art</forename><forename type="middle">B</forename><surname>Owen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Revisiting natural gradient for deep networks</title>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1301.3584</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Reinforcement learning of motor skills with policy gradients</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Schaal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="682" to="697" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Relative entropy policy search</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mülling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Altün</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AAAI Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Natural actor-critic</title>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Schaal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1180" to="1190" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Safe policy iteration</title>
+		<author>
+			<persName><forename type="first">Matteo</forename><surname>Pirotta</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Restelli</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Marcello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alessio</forename><surname>Pecorino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniele</forename><surname>Calandriello</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 30th International Conference on Machine Learning</title>
+		<meeting>The 30th International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="307" to="315" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Asymptopia: an exposition of statistical asymptotic theory</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Pollard</surname></persName>
+		</author>
+		<ptr target="http://www.stat.yale.edu/˜pollard/Books/Asymptopia" />
+		<imprint>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Learning tetris using the noisy cross-entropy method</title>
+		<author>
+			<persName><forename type="first">István</forename><surname>Szita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">András</forename><surname>Lörincz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="2936" to="2941" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Stochastic policy gradient reinforcement learning on a simple 3d biped</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tedrake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Seung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE/RSJ International Conference on Intelligent Robots and Systems</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">MuJoCo: A physics engine for model-based control</title>
+		<author>
+			<persName><surname>Todorov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Emanuel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Erez</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tassa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Intelligent Robots and Systems (IROS)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2012">2012. 2012</date>
+			<biblScope unit="page" from="5026" to="5033" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Optimal gait and form for animal locomotion</title>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Wampler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zoran</forename><surname>Popović</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In ACM Transactions on Graphics</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">60</biblScope>
+			<date type="published" when="2009">2009</date>
+			<publisher>ACM</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Numerical optimization</title>
+		<author>
+			<persName><forename type="first">Stephen</forename><forename type="middle">J</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jorge</forename><surname>Nocedal</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<publisher>Springer</publisher>
+			<biblScope unit="volume">2</biblScope>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

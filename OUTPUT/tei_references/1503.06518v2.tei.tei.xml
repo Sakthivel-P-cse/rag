@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">HARDY-STEKLOV OPERATORS AND EMBEDDING INEQUALITIES OF SOBOLEV TYPE</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2015-09-07">7 Sep 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Maria</forename><forename type="middle">G</forename><surname>Nasyrova</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Elena</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+						</author>
+						<title level="a" type="main">HARDY-STEKLOV OPERATORS AND EMBEDDING INEQUALITIES OF SOBOLEV TYPE</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-09-07">7 Sep 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DD290773905BE53BD46870EFAE18BFD0</idno>
+					<idno type="arXiv">arXiv:1503.06518v2[math.FA]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Weighted Sobolev space and Weighted Lebesgue space and Embedding and Integral operator and Hardy-Steklov operator and Boundedness 2010 MSC: 46E35</term>
+					<term>47B38</term>
+					<term>35A23</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>We characterize a weighted norm inequality which corresponds to the embedding of a class of absolutely continuous functions into the fractional order Sobolev space. The auxiliary result of the paper is of independent interest. It comprises of several types of necessary and sufficient conditions for the boundedness of the Hardy-Steklov operator (an integral operator with two variable boundaries of integration) in weighted Lebesgue spaces.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgments. The authors thank all the members of the seminar conducted weekly at the Laboratory of approximate methods and functional analysis in the Computing Center of FEB RAS in Khabarovsk for productive discussions and valuable remarks.</p></div>
+			</div>			<div type="annex">
+<div><p>If λq &lt; 1, then, by</p><p>1+z and in view of r/p + 1 = r/q,</p><p>.</p><p>If we suppose that</p><p>Now, under assumptions (3.25) and (3.27), we obtain that</p><p>It follows from (3.15) that the inequality (1.1) is fulfilled if B &lt; ∞, where</p><p>and if (1.1) holds with C &lt; ∞ then B &lt; ∞, where </p></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Boundary values of functions with finite Dirichlet integral</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Aronszajn</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1955">1955</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="77" to="94" />
+		</imprint>
+		<respStmt>
+			<orgName>Univ. of Kansas</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Techn. Report of</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">On weighted inequalities of Hardy type</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Batuev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Siberian Math. J</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="8" to="16" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Integral representation of functions and imbedding theorems</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">V</forename><surname>Besov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">P</forename><surname>Ilin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Nikolskii</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nauka</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<date type="published" when="1975">1975. 1979</date>
+			<publisher>Winston and Sons</publisher>
+			<pubPlace>Moscow</pubPlace>
+		</imprint>
+	</monogr>
+	<note>in Russian. English transl</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Generalized Hardy operators and normalizing measures</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sinnamon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Ineq. Appl</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="829" to="866" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Proprieta di alcune classi di funzioni in piu variabili</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gagliardo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ricerche Mat</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="102" to="137" />
+			<date type="published" when="1958">1958</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Espaces intermèdiaires entre espaces de Sobolev avec poids</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Grisvard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Scoula Norm. Sup. Pisa</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="373" to="386" />
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">The generalized Hardy operators with kernel and variable integral limits in Banach function spaces</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gogatishvili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Inequal. Appl</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1" to="16" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Weighted norm inequalities for convolution operators and links with the Weiss Conjecture</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Harper</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Evol. Equ</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="387" to="405" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Mapping properties of integral averaging operators</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Heinig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sinnamon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Studia Math</title>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page" from="157" to="177" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Boundary properties of functions from the spase W (l) p on domains with angular points</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Jakovlev</surname></persName>
+		</author>
+		<imprint>
+			<publisher>Dokl</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><surname>Akad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nauk SSSR</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="73" to="76" />
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">V</forename><surname>Kantorovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Akilov</surname></persName>
+		</author>
+		<title level="m">Functional Analysis in Normed Spaces</title>
+		<imprint>
+			<publisher>Pergamon Press</publisher>
+			<date type="published" when="1964">1964</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kufner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Maligranda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-E</forename><surname>Persson</surname></persName>
+		</author>
+		<title level="m">The Hardy inequality. About its history and some related results. Vydavatelsky' Servis, Plzeń</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kufner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-E</forename><surname>Persson</surname></persName>
+		</author>
+		<title level="m">Weighted inequalities of Hardy type</title>
+		<meeting><address><addrLine>River Edge, NJ</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Scientific Publishing Co., Inc</publisher>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Die Grundlehren der mathematischen Wissenschaften</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Lions</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Magenes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Non-homogeneous boundary value problems and applications</title>
+		<meeting><address><addrLine>Berlin Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="1972">1972</date>
+			<biblScope unit="volume">I</biblScope>
+			<biblScope unit="page">360</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Estimates for the approximation numbers of one class of integral operators I</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Lomakina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sib. Math. J</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="147" to="159" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Estimates for the approximation numbers of one class of integral operators II</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Lomakina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sib. Math. J</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="298" to="310" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Overdetermined weighted Hardy inequalities on semiaxis, 201-231. Function spaces and applications</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nasyrova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of Dehli Conference</title>
+		<meeting>Dehli Conference<address><addrLine>New Delhi</addrLine></address></meeting>
+		<imprint>
+			<publisher>Narosa Publishing House</publisher>
+			<date type="published" when="1997">1997. 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">On weighted Hardy inequalities on semiaxis for functions vanishing at the endpoints</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nasyrova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Stepanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. of Inequal. &amp; Appl</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="223" to="238" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">On maximal overdetermined Hardy's inequality of second order on a finite interval</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Nasyrova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Math. Bohemica</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="293" to="302" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Boundedness of integral operators from weighted Sobolev space to weighted Lebesgue space</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Oinarov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Complex Var. Elliptic Equ</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="1021" to="1038" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Longman Scientific &amp; Technical</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Opic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kufner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Pitman Research Notes in Mathematics Series</title>
+		<imprint>
+			<biblScope unit="volume">219</biblScope>
+			<date type="published" when="1990">1990</date>
+			<publisher>Longman House</publisher>
+			<pubPlace>Burnt Mill, Harlow, Essex, England</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Hardy-type Inequalities</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Weighted Estimates for the Riemann-Liouville Operators and Applications</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Prokhorov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Proceedings of Steklov Institute of Mathematics</title>
+		<imprint>
+			<biblScope unit="volume">243</biblScope>
+			<biblScope unit="page" from="289" to="312" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">The weighted Hardy inequality: new proofs and the case p=1</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sinnamon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. London Math. Soc</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="89" to="101" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Generalized Sobolev spaces and their applications to boundary value problems of partial differential equations</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Slobodeckij</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Leningrad. Gos. Ped. Inst. Ucep. Zap</title>
+		<imprint>
+			<biblScope unit="volume">197</biblScope>
+			<biblScope unit="page" from="54" to="112" />
+			<date type="published" when="1958">1958</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Weighted inequalities of Hardy type for Riemann-Liouville fractional integrals</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Siberian Math. J</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="513" to="522" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Weighted norm inequalities for integral operators and related topics</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Nonlinear analysis, function spaces and applications</title>
+		<meeting><address><addrLine>Prague</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1994">1994</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="139" to="175" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">On integral operators with variable limits of integration</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Steklov Inst. Math</title>
+		<imprint>
+			<biblScope unit="volume">232</biblScope>
+			<biblScope unit="page" from="290" to="309" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Hardy operator with variable limits on monotone functions</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Funct. Spaces Appl</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1" to="15" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">On the geometric mean operator with variable limits of integration</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Steklov Inst. Math</title>
+		<imprint>
+			<biblScope unit="volume">260</biblScope>
+			<biblScope unit="page" from="254" to="278" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Kernel operators with variable intervals of integration in Lebesgue spaces and applications</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Math. Ineq. Appl</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="449" to="510" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">On boundedness of a certain class of Hardy-Steklov type operators in Lebesgue spaces</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">D</forename><surname>Stepanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Banach J. Math. Anal</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="28" to="52" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Interpolation properties of ε-entropy and diameters. Geometric characteristics of imbedding for function spaces of Sobolev-Besov type</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Triebel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Mathematics of the USSR-Sbornik</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="23" to="37" />
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">On boundedness and compactness of a certain class of kernel operators</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Funct. Spaces Appl</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="67" to="107" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Estimates for Schatten-von Neumann norms of Hardy-Steklov operators</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Ushakova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Approx. Theory</title>
+		<imprint>
+			<biblScope unit="volume">173</biblScope>
+			<biblScope unit="page" from="158" to="176" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

@@ -1,0 +1,4 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_120410_927115.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): In a biological simulation, selfish behavior should dominate, but I still see cooperation emerging. Why doesn’t natural selection eliminate cooperative traits?

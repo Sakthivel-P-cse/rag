@@ -1,0 +1,194 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "insufficient evidence for NLP techniques to improve accuracy for rare words in morphologically rich languages with limited training data and small model sizes"
+  ],
+  "next_question": "What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, character-level embeddings, and efficient neural networks?",
+  "accept": [],
+  "reject": [
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-2",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-6",
+      "paper_id": "1510.01378v1.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1603.09025v5.tei.tei_chunk-8",
+      "paper_id": "1603.09025v5.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-8",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-1",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    }
+  ],
+  "rejected_paper_ids": [],
+  "search_hint": "morphologically rich languages, limited training data, small model sizes, subword modeling, character-level embeddings, efficient neural networks, rare word representation, low-resource languages, NLP for morphologically rich languages",
+  "iteration": 4,
+  "accepted_chunks": [
+    {
+      "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+      "paper_id": "1607.04606v2.tei.tei"
+    },
+    {
+      "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+      "paper_id": "1602.02410v2.tei.tei"
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-4",
+      "paper_id": "1508.07909v5.tei.tei"
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-1",
+      "paper_id": "1508.07909v5.tei.tei"
+    }
+  ],
+  "accepted_chunk_ids": [
+    "1508.07909v5.tei.tei_chunk-1",
+    "1508.07909v5.tei.tei_chunk-4",
+    "1602.02410v2.tei.tei_chunk-14",
+    "1607.04606v2.tei.tei_chunk-2"
+  ],
+  "accepted_paper_ids": [
+    "1508.07909v5.tei.tei",
+    "1602.02410v2.tei.tei",
+    "1607.04606v2.tei.tei"
+  ],
+  "rejected_chunk_ids": [
+    "1308.0850v5.tei.tei_chunk-6",
+    "1508.07909v5.tei.tei_chunk-12",
+    "1508.07909v5.tei.tei_chunk-5",
+    "1510.01378v1.tei.tei_chunk-6",
+    "1601.06733v7.tei.tei_chunk-9",
+    "1603.09025v5.tei.tei_chunk-8",
+    "1607.04606v2.tei.tei_chunk-12",
+    "1607.04606v2.tei.tei_chunk-13",
+    "1607.04606v2.tei.tei_chunk-3",
+    "1608.05859v3.tei.tei_chunk-1",
+    "1608.05859v3.tei.tei_chunk-2",
+    "1608.05859v3.tei.tei_chunk-7",
+    "1608.05859v3.tei.tei_chunk-8",
+    "1701.06538v1.tei.tei_chunk-10"
+  ],
+  "accepted_this_round": [],
+  "rejected_this_round": [
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-2",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-6",
+      "paper_id": "1510.01378v1.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1603.09025v5.tei.tei_chunk-8",
+      "paper_id": "1603.09025v5.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-8",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-1",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "not directly relevant to morphologically rich languages"
+    }
+  ],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "Using character-level information can improve vector representations for morphologically rich languages.",
+      "Representing words as the sum of character n-gram vectors can be an effective approach.",
+      "Character-level embeddings can reduce the number of parameters in the input layer and allow the model to consume arbitrary words.",
+      "Subword modeling can enable open-vocabulary translation by encoding rare and unknown words as sequences of subword units."
+    ],
+    "evidence_citations": [
+      {
+        "paper_id": "1607.04606v2.tei.tei",
+        "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+        "supports": "1"
+      },
+      {
+        "paper_id": "1602.02410v2.tei.tei",
+        "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+        "supports": "1"
+      },
+      {
+        "paper_id": "1508.07909v5.tei.tei",
+        "chunk_id": "1508.07909v5.tei.tei_chunk-1",
+        "supports": "1"
+      },
+      {
+        "paper_id": "1508.07909v5.tei.tei",
+        "chunk_id": "1508.07909v5.tei.tei_chunk-4",
+        "supports": "1"
+      }
+    ]
+  },
+  "_debug": {
+    "retrieval_query": "What NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling and character-level embeddings?\n\nSearch hints: subword modeling, character-level embeddings, morphological analysis, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages, language modeling, word embeddings, limited training data, small model sizes",
+    "candidates": [
+      {
+        "paper_id": "1608.05859v3.tei.tei",
+        "chunk_id": "1608.05859v3.tei.tei_chunk-2",
+        "retr_score": 0.44236797
+      },
+      {
+        "paper_id": "1510.01378v1.tei.tei",
+        "chunk_id": "1510.01378v1.tei.tei_chunk-6",
+        "retr_score": 0.4350388
+      },
+      {
+        "paper_id": "1603.09025v5.tei.tei",
+        "chunk_id": "1603.09025v5.tei.tei_chunk-8",
+        "retr_score": 0.43116975
+      },
+      {
+        "paper_id": "1608.05859v3.tei.tei",
+        "chunk_id": "1608.05859v3.tei.tei_chunk-8",
+        "retr_score": 0.42389655
+      },
+      {
+        "paper_id": "1608.05859v3.tei.tei",
+        "chunk_id": "1608.05859v3.tei.tei_chunk-1",
+        "retr_score": 0.3931722
+      }
+    ],
+    "excluded_chunk_ids": [
+      "1308.0850v5.tei.tei_chunk-6",
+      "1508.07909v5.tei.tei_chunk-1",
+      "1508.07909v5.tei.tei_chunk-12",
+      "1508.07909v5.tei.tei_chunk-4",
+      "1508.07909v5.tei.tei_chunk-5",
+      "1601.06733v7.tei.tei_chunk-9",
+      "1602.02410v2.tei.tei_chunk-14",
+      "1607.04606v2.tei.tei_chunk-12",
+      "1607.04606v2.tei.tei_chunk-13",
+      "1607.04606v2.tei.tei_chunk-2",
+      "1607.04606v2.tei.tei_chunk-3",
+      "1608.05859v3.tei.tei_chunk-7",
+      "1701.06538v1.tei.tei_chunk-10"
+    ],
+    "excluded_paper_ids": [
+      "1508.07909v5.tei.tei",
+      "1602.02410v2.tei.tei",
+      "1607.04606v2.tei.tei"
+    ],
+    "raw_llm_output_first_2000_chars": "```\n{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"insufficient evidence for NLP techniques to improve accuracy for rare words in morphologically rich languages with limited training data and small model sizes\"],\n  \"next_question\": \"What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, character-level embeddings, and efficient neural networks?\",\n  \"accept\": [],\n  \"reject\": [\n    {\"chunk_id\": \"1608.05859v3.tei.tei_chunk-2\", \"paper_id\": \"1608.05859v3.tei.tei\", \"reason\": \"not directly relevant to morphologically rich languages\"},\n    {\"chunk_id\": \"1510.01378v1.tei.tei_chunk-6\", \"paper_id\": \"1510.01378v1.tei.tei\", \"reason\": \"not directly relevant to morphologically rich languages\"},\n    {\"chunk_id\": \"1603.09025v5.tei.tei_chunk-8\", \"paper_id\": \"1603.09025v5.tei.tei\", \"reason\": \"not directly relevant to morphologically rich languages\"},\n    {\"chunk_id\": \"1608.05859v3.tei.tei_chunk-8\", \"paper_id\": \"1608.05859v3.tei.tei\", \"reason\": \"not directly relevant to morphologically rich languages\"},\n    {\"chunk_id\": \"1608.05859v3.tei.tei_chunk-1\", \"paper_id\": \"1608.05859v3.tei.tei\", \"reason\": \"not directly relevant to morphologically rich languages\"}\n  ],\n  \"rejected_paper_ids\": [],\n  \"search_hint\": \"morphologically rich languages, limited training data, small model sizes, subword modeling, character-level embeddings, efficient neural networks, rare word representation, low-resource languages, NLP for morphologically rich languages\"\n}\n```"
+  }
+}

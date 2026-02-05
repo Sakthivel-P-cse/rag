@@ -1,0 +1,562 @@
+{
+  "judge_summary": {
+    "iterations_requested": 5,
+    "iterations_completed": 2,
+    "satisfied": false,
+    "final_refined_question": "What specific architectural modifications can be made to object detection models to improve detection of small objects in images without sacrificing real-time detection performance, considering multi-scale feature representations and efficient object detection techniques?",
+    "final_intent": "Understand how to enhance small-object detection in computer vision, specifically within the domain of object detection, without sacrificing detection speed",
+    "final_constraints": [
+      "limited image resolution",
+      "real-time detection requirement",
+      "fixed model size"
+    ],
+    "final_excluded_topics": [
+      "large pre-trained models",
+      "fine-tuning from foundation models",
+      "scaling parameter count"
+    ],
+    "final_search_hint": "object detection architectures, small object detection, real-time detection, image pyramids, feature extraction, convolutional neural networks, spatial attention mechanisms, efficient object detection, multi-scale feature representations, detector accuracy",
+    "accepted_chunk_count": 4,
+    "accepted_paper_count": 2,
+    "accepted_paper_ids": [
+      "1612.03144v2.tei.tei",
+      "1811.08883v1.tei.tei"
+    ],
+    "accepted_chunk_ids": [
+      "1612.03144v2.tei.tei_chunk-12",
+      "1612.03144v2.tei.tei_chunk-2",
+      "1612.03144v2.tei.tei_chunk-4",
+      "1811.08883v1.tei.tei_chunk-4"
+    ],
+    "rejected_chunk_count": 2,
+    "rejected_chunk_ids": [
+      "1811.08883v1.tei.tei_chunk-8",
+      "1811.08883v1.tei.tei_chunk-9"
+    ],
+    "rejected_paper_ids": [],
+    "solved_parts": [],
+    "unsolved_parts_by_iteration": [
+      {
+        "iteration": 1,
+        "unsolved_parts": [
+          "structural modifications for small object detection without increased image resolution"
+        ]
+      },
+      {
+        "iteration": 2,
+        "unsolved_parts": [
+          "architectural modifications for small object detection",
+          "real-time detection performance"
+        ]
+      }
+    ],
+    "log_path": "C:\\Users\\manoj\\Desktop\\Research\\TEMP\\full_run_20251222_143251_077953.txt"
+  },
+  "accepted_chunks": [
+    {
+      "chunk_id": "1612.03144v2.tei.tei_chunk-4",
+      "paper_id": "1612.03144v2.tei.tei",
+      "section": "2. Related Work",
+      "paragraph_index": 12,
+      "chunk_text": "Hand-engineered features and early neural networks. SIFT features [25] were originally extracted at\nscale-space extrema and used for feature point matching. HOG features [5], and later SIFT features\nas well, were computed densely over entire image pyramids. These HOG and SIFT pyramids have been\nused in numerous works for image classification, object detection, human pose estimation, and more.\nThere has also been significant interest in computing featurized image pyramids quickly. Dollár et\nal. [6] demonstrated fast pyramid computation by first computing a sparsely sampled (in scale)\npyramid and then interpolating missing levels. Before HOG and SIFT, early work on face detection\nwith ConvNets [38,32] computed shallow networks over image pyramids to detect faces across scales.\n\nDeep ConvNet object detectors. With the development of modern deep ConvNets [19], object detectors\nlike Over-Feat [34] and R-CNN [12] showed dramatic improvements in accuracy. OverFeat adopted a\nstrategy similar to early neural network face detectors by applying a ConvNet as a sliding window\ndetector on an image pyramid. R-CNN adopted a region proposal-based strategy [37] in which each\nproposal was scale-normalized before classifying with a ConvNet. SPPnet [15] demonstrated that such\nregion-based detectors could be applied much more efficiently on feature maps extracted on a single\nimage scale. Recent and more accurate detection methods like Fast R-CNN [11] and Faster R-CNN [29]\nadvocate using features computed from a single scale, because it offers a good trade-off between\naccuracy and speed. Multi-scale detection, however, still performs better, especially for small\nobjects.\n\nMethods using multiple layers. A number of recent approaches improve detection and segmentation by\nusing different layers in a ConvNet. FCN [24] sums partial scores for each category over multiple\nscales to compute semantic segmentations. Hypercolumns [13] uses a similar method for object\ninstance segmentation. Several other approaches (HyperNet [18], ParseNet [23], and ION [2])\nconcatenate features of multiple layers before computing predictions, which is equivalent to summing\ntransformed features. SSD [22] and MS-CNN [3] predict objects at multiple layers of the feature\nhierarchy without combining features or scores.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:23.436009",
+      "score_stage1": 0.59185827,
+      "score_stage2": 0.6265522,
+      "score": 0.6265522,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "Discusses image pyramids and feature extraction for object detection"
+      }
+    },
+    {
+      "chunk_id": "1612.03144v2.tei.tei_chunk-12",
+      "paper_id": "1612.03144v2.tei.tei",
+      "section": "(e).",
+      "paragraph_index": 43,
+      "chunk_text": "How important are pyramid representations? Instead of resorting to pyramid representations, one can\nattach the head to the highest-resolution, strongly semantic feature maps of P 2 (i.e., the finest\nlevel in our pyramids). Similar to the single-scale baselines, we assign all anchors to the P 2\nfeature map. This variant (Table 1(f)) is better than the baseline but inferior to our approach. RPN\nis a sliding window detector with a fixed window size, so scanning over pyramid levels can increase\nits robustness to scale variance.\n\nIn addition, we note that using P 2 alone leads to more anchors (750k, Table 1(f)) caused by its\nlarge spatial resolution. This result suggests that a larger number of anchors is not sufficient in\nitself to improve accuracy.\n\nNext we investigate FPN for region-based (non-sliding window) detectors. We evaluate object\ndetection by the COCO-style Average Precision (AP) and PASCAL-style AP (at a single IoU threshold of\n0.5). We also report COCO AP on objects of small, medium, and large sizes (namely, AP s , AP m , and\nAP l ) following the definitions in [21].\n\nImplementation details. The input image is resized such that its shorter side has 800 pixels.\nSynchronized SGD is used to train the model on 8 GPUs. Each mini-batch involves 2 image per GPU and\n512 RoIs per image. We use a weight decay of 0.0001 and a momentum of 0.9. The learning rate is 0.02\nfor the first 60k mini-batches and 0.002 for the next 20k. We use 2000 RoIs per image for training\nand 1000 for testing. Training Fast R-CNN with FPN takes about 10 hours on the COCO dataset.\n\nTo better investigate FPN's effects on the region-based detector alone, we conduct ablations of Fast\nR-CNN on a fixed set of proposals. We choose to freeze the proposals as com-puted by RPN on FPN\n(Table 1(c)), because it has good performance on small objects that are to be recognized by the\ndetector. For simplicity we do not share features between Fast R-CNN and RPN, except when specified.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:23.436009",
+      "score_stage1": 0.5715873,
+      "score_stage2": 0.5909971,
+      "score": 0.5909971,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "Mentions the importance of pyramid representations for object detection"
+      }
+    },
+    {
+      "chunk_id": "1612.03144v2.tei.tei_chunk-2",
+      "paper_id": "1612.03144v2.tei.tei",
+      "section": "1. Introduction",
+      "paragraph_index": 4,
+      "chunk_text": "Nevertheless, featurizing each level of an image pyramid has obvious limitations. Inference time\nincreases considerably (e.g., by four times [11]), making this approach impractical for real\napplications. Moreover, training deep networks end-to-end on an image pyramid is infeasible in terms\nof memory, and so, if exploited, image pyramids are used only at test time [15,11,16,35], which\ncreates an inconsistency between train/test-time inference. For these reasons, Fast and Faster R-CNN\n[11,29] opt to not use featurized image pyramids under default settings.\n\nHowever, image pyramids are not the only way to compute a multi-scale feature representation. A deep\nConvNet computes a feature hierarchy layer by layer, and with subsampling layers the feature\nhierarchy has an inherent multiscale, pyramidal shape. This in-network feature hierarchy produces\nfeature maps of different spatial resolutions, but introduces large semantic gaps caused by\ndifferent depths. The high-resolution maps have low-level features that harm their representational\ncapacity for object recognition.\n\nThe Single Shot Detector (SSD) [22] is one of the first attempts at using a ConvNet's pyramidal\nfeature hierarchy as if it were a featurized image pyramid (Fig. 1(c)). Ideally, the SSD-style\npyramid would reuse the multi-scale feature maps from different layers computed in the forward pass\nand thus come free of cost. But to avoid using low-level features SSD foregoes reusing already\ncomputed layers and instead builds the pyramid starting from high up in the network (e.g., conv4 3\nof VGG nets [36]) and then by adding several new layers. Thus it misses the opportunity to reuse the\nhigher-resolution maps of the feature hierarchy. We show that these are important for detecting\nsmall objects.\n\nThe goal of this paper is to naturally leverage the pyramidal shape of a ConvNet's feature hierarchy\nwhile creating a feature pyramid that has strong semantics at all scales. To achieve this goal, we\nrely on an architecture that combines low-resolution, semantically strong features with high-\nresolution, semantically weak features via a top-down pathway and lateral connections (Fig. 1(d)).\nThe result is a feature pyramid that has rich semantics at all levels and is built quickly from a\nsingle input image scale. In other words, we show how to create in-network feature pyramids that can\nbe used to replace featurized image pyramids without sacrificing representational power, speed, or\nmemory.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:23.436009",
+      "score_stage1": 0.5680188,
+      "score_stage2": 0.5885221,
+      "score": 0.5885221,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "Talks about limitations of featurizing image pyramids and introduces the concept of in-network feature hierarchy"
+      }
+    },
+    {
+      "chunk_id": "1811.08883v1.tei.tei_chunk-4",
+      "paper_id": "1811.08883v1.tei.tei",
+      "section": "2. Related Work",
+      "paragraph_index": 10,
+      "chunk_text": "Detection from scratch. Before the prevalence of the 'pretraining and fine-tuning' paradigm, object\ndetectors were trained with no pre-training (e.g., [31,38,45])-a fact that is somewhat overlooked\ntoday. In fact, it should not be surprising that object detectors can be trained from scratch.\n\nGiven the success of pre-training in the R-CNN paper [9], later analysis [1] found that pre-training\nplays an important role in detector accuracy when training data is limited, but also illustrated\nthat training from scratch on more detection data is possible and can achieve 90% of the fine-tuning\naccuracy, foreshadowing our results.\n\nAs modern object detectors [9,15,8,36,35,28,26,13] evolved under the pre-training paradigm, the\nbelief that training from scratch is non-trivial became conventional wisdom. Shen et al. [41] argued\nfor a set of new design principles to obtain a detector that is optimized for the accuracy when\ntrained from scratch. They designed a specialized detector driven by deeply supervised networks [24]\nand dense connections [18]. DetNet [25] and CornerNet [22] also present results when training\ndetectors from scratch. Similar to [41], these works [25,22] focus on designing detection-specific\narchitectures. However, in [41,25,22] there is little evidence that these specialized architectures\nare required for models to be trained from scratch.\n\nUnlike these papers, our focus is on understanding the role of ImageNet pre-training on\nunspecialized architectures (i.e., models that were originally designed without the consideration\nfor training from scratch). Our work demonstrates that it is often possible to match fine-tuning\naccuracy when training from scratch even without making any architectural specializations. Our study\nis on the comparison between 'with vs. without pre-training', under controlled settings in which the\narchitectures are not tailored.",
+      "year": 2018,
+      "created_at": "2025-12-22 07:56:24.054030",
+      "score_stage1": 0.5687424,
+      "score_stage2": 0.50911164,
+      "score": 0.50911164,
+      "llm_judge": {
+        "iteration": 2,
+        "decision": "accept",
+        "rationale": "discusses training object detectors from scratch and its relation to detection accuracy"
+      }
+    }
+  ],
+  "subproblems": [
+    {
+      "id": "SP1",
+      "question": "What multi-scale feature representation techniques can be applied to object detection models to improve detection of small objects?",
+      "rationale": "Understanding how to effectively represent features at multiple scales is crucial for detecting small objects without sacrificing real-time performance",
+      "search_hint": "multi-scale features, feature pyramids, spatial pyramid pooling, object detection, small object detection"
+    },
+    {
+      "id": "SP2",
+      "question": "What efficient object detection techniques can be integrated into object detection models to maintain real-time detection performance while improving small object detection?",
+      "rationale": "Efficient detection techniques are necessary to ensure that improvements in small object detection do not compromise the model's ability to detect objects in real-time",
+      "search_hint": "efficient object detection, real-time detection, model optimization, small object detection, detection speed"
+    },
+    {
+      "id": "SP3",
+      "question": "How can architectural modifications be made to object detection models to balance the trade-off between small object detection accuracy and real-time detection performance?",
+      "rationale": "Balancing the trade-off between detection accuracy and speed is critical for effective object detection, and understanding how to modify the model architecture is key to achieving this balance",
+      "search_hint": "object detection architecture, model modifications, small object detection, real-time detection, performance optimization"
+    }
+  ],
+  "subproblem_chunks": {
+    "SP1": [
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-4",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": "2. Related Work",
+        "paragraph_index": 12,
+        "chunk_text": "Hand-engineered features and early neural networks. SIFT features [25] were originally extracted at\nscale-space extrema and used for feature point matching. HOG features [5], and later SIFT features\nas well, were computed densely over entire image pyramids. These HOG and SIFT pyramids have been\nused in numerous works for image classification, object detection, human pose estimation, and more.\nThere has also been significant interest in computing featurized image pyramids quickly. Dollár et\nal. [6] demonstrated fast pyramid computation by first computing a sparsely sampled (in scale)\npyramid and then interpolating missing levels. Before HOG and SIFT, early work on face detection\nwith ConvNets [38,32] computed shallow networks over image pyramids to detect faces across scales.\n\nDeep ConvNet object detectors. With the development of modern deep ConvNets [19], object detectors\nlike Over-Feat [34] and R-CNN [12] showed dramatic improvements in accuracy. OverFeat adopted a\nstrategy similar to early neural network face detectors by applying a ConvNet as a sliding window\ndetector on an image pyramid. R-CNN adopted a region proposal-based strategy [37] in which each\nproposal was scale-normalized before classifying with a ConvNet. SPPnet [15] demonstrated that such\nregion-based detectors could be applied much more efficiently on feature maps extracted on a single\nimage scale. Recent and more accurate detection methods like Fast R-CNN [11] and Faster R-CNN [29]\nadvocate using features computed from a single scale, because it offers a good trade-off between\naccuracy and speed. Multi-scale detection, however, still performs better, especially for small\nobjects.\n\nMethods using multiple layers. A number of recent approaches improve detection and segmentation by\nusing different layers in a ConvNet. FCN [24] sums partial scores for each category over multiple\nscales to compute semantic segmentations. Hypercolumns [13] uses a similar method for object\ninstance segmentation. Several other approaches (HyperNet [18], ParseNet [23], and ION [2])\nconcatenate features of multiple layers before computing predictions, which is equivalent to summing\ntransformed features. SSD [22] and MS-CNN [3] predict objects at multiple layers of the feature\nhierarchy without combining features or scores.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.6542617,
+        "score_stage2": 0.6121757,
+        "score": 0.6121757
+      },
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-1",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": null,
+        "paragraph_index": 0,
+        "chunk_text": "**Published:** 19 Apr 2017\n\nFeature pyramids are a basic component in recognition systems for detecting objects at different\nscales. But recent deep learning object detectors have avoided pyramid representations, in part\nbecause they are compute and memory intensive. In this paper, we exploit the inherent multi-scale,\npyramidal hierarchy of deep convolutional networks to construct feature pyramids with marginal extra\ncost. A topdown architecture with lateral connections is developed for building high-level semantic\nfeature maps at all scales. This architecture, called a Feature Pyramid Network (FPN), shows\nsignificant improvement as a generic feature extractor in several applications. Using FPN in a basic\nFaster R-CNN system, our method achieves state-of-the-art singlemodel results on the COCO detection\nbenchmark without bells and whistles, surpassing all existing single-model entries including those\nfrom the COCO 2016 challenge winners. In addition, our method can run at 6 FPS on a GPU and thus is\na practical and accurate solution to multi-scale object detection. Code will be made publicly\navailable.\n\nRecognizing objects at vastly different scales is a fundamental challenge in computer vision.\nFeature pyramids built upon image pyramids (for short we call these featurized image pyramids) form\nthe basis of a standard solution [1] (Fig. 1(a)). These pyramids are scale-invariant in the sense\nthat an object's scale change is offset by shifting its level in the pyramid. Intuitively, this\nproperty enables a model to detect objects across a large range of scales by scanning the model over\nboth positions and pyramid levels.\n\nFeaturized image pyramids were heavily used in the era of hand-engineered features [5,25]. They were\nso critical that object detectors like DPM [7] required dense scale sampling to achieve good results\n(e.g., 10 scales per octave). For recognition tasks, engineered features have largely been replaced\nwith features computed by deep convolutional networks (ConvNets) [19,20]. Aside from being capable\nof representing higher-level semantics, ConvNets are also more robust to variance in scale and thus\nfacilitate recognition from features computed on a single input scale [15,11,29] (Fig. 1(b)). But\neven with this robustness, pyramids are still needed to get the most accurate results. All recent\ntop entries in the ImageNet [33] and COCO [21] detection challenges use multi-scale testing on\nfeaturized image pyramids (e.g., [16,35]). The principle advantage of featurizing each level of an\nimage pyramid is that it produces a multi-scale feature representation in which all levels are\nsemantically strong, including the high-resolution levels.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.6428875,
+        "score_stage2": 0.57924986,
+        "score": 0.57924986
+      },
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-12",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": "(e).",
+        "paragraph_index": 43,
+        "chunk_text": "How important are pyramid representations? Instead of resorting to pyramid representations, one can\nattach the head to the highest-resolution, strongly semantic feature maps of P 2 (i.e., the finest\nlevel in our pyramids). Similar to the single-scale baselines, we assign all anchors to the P 2\nfeature map. This variant (Table 1(f)) is better than the baseline but inferior to our approach. RPN\nis a sliding window detector with a fixed window size, so scanning over pyramid levels can increase\nits robustness to scale variance.\n\nIn addition, we note that using P 2 alone leads to more anchors (750k, Table 1(f)) caused by its\nlarge spatial resolution. This result suggests that a larger number of anchors is not sufficient in\nitself to improve accuracy.\n\nNext we investigate FPN for region-based (non-sliding window) detectors. We evaluate object\ndetection by the COCO-style Average Precision (AP) and PASCAL-style AP (at a single IoU threshold of\n0.5). We also report COCO AP on objects of small, medium, and large sizes (namely, AP s , AP m , and\nAP l ) following the definitions in [21].\n\nImplementation details. The input image is resized such that its shorter side has 800 pixels.\nSynchronized SGD is used to train the model on 8 GPUs. Each mini-batch involves 2 image per GPU and\n512 RoIs per image. We use a weight decay of 0.0001 and a momentum of 0.9. The learning rate is 0.02\nfor the first 60k mini-batches and 0.002 for the next 20k. We use 2000 RoIs per image for training\nand 1000 for testing. Training Fast R-CNN with FPN takes about 10 hours on the COCO dataset.\n\nTo better investigate FPN's effects on the region-based detector alone, we conduct ablations of Fast\nR-CNN on a fixed set of proposals. We choose to freeze the proposals as com-puted by RPN on FPN\n(Table 1(c)), because it has good performance on small objects that are to be recognized by the\ndetector. For simplicity we do not share features between Fast R-CNN and RPN, except when specified.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.5617012,
+        "score_stage2": 0.54808354,
+        "score": 0.54808354
+      }
+    ],
+    "SP2": [
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-13",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": "Fast R-CNN (on fixed proposals)",
+        "paragraph_index": 48,
+        "chunk_text": "As a ResNet-based Fast R-CNN baseline, following [16], we adopt RoI pooling with an output size of\n14×14 and attach all conv5 layers as the hidden layers of the head. This gives an AP of 31.9 in\nTable 2(a). Table 2(b) is a baseline exploiting an MLP head with 2 hidden fc layers, similar to the\nhead in our architecture. It gets an AP of 28.8, indicating that the 2-fc head does not give us any\northogonal advantage over the baseline in Table 2(a).\n\nTable 2(c) shows the results of our FPN in Fast R-CNN. Comparing with the baseline in Table 2(a),\nour method improves AP by 2.0 points and small object AP by 2.1 points. Comparing with the baseline\nthat also adopts a 2fc head (Table 2(b)), our method improves AP by 5.1 points. 5 These comparisons\nindicate that our feature pyramid is superior to single-scale features for a region-based object\ndetector. Table 4. Comparisons of single-model results on the COCO detection benchmark. Some results\nwere not available on the test-std set, so we also include the test-dev results (and for Multipath\n[40] on minival). † : http://image-net.org/challenges/ talks/2016/GRMI-COCO-slidedeck.pdf. ‡ :\nhttp://mscoco.org/dataset/#detections-leaderboard. § : This entry of AttractioNet [10] adopts VGG-16\nfor proposals and Wide ResNet [39] for object detection, so is not strictly a single-model result.\n\nnections or removing lateral connections leads to inferior results, similar to what we have observed\nin the above subsection for RPN. It is noteworthy that removing top-down connections (Table 2(d))\nsignificantly degrades the accuracy, suggesting that Fast R-CNN suffers from using the low-level\nfeatures at the high-resolution maps.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.47721487,
+        "score_stage2": 0.5413977,
+        "score": 0.5413977
+      },
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-10",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": "4.2. Feature Pyramid Networks for Fast R-CNN",
+        "paragraph_index": 34,
+        "chunk_text": "Based on these adaptations, we can train and test Fast R-CNN on top of the feature pyramid.\nImplementation details are given in the experimental section.\n\nWe perform experiments on the 80 category COCO detection dataset [21]. We train using the union of\n80k train images and a 35k subset of val images (trainval35k [2]), and report ablations on a 5k\nsubset of val images (minival). We also report final results on the standard test set (test-std)\n[21] which has no disclosed labels.\n\nAs is common practice [12], all network backbones are pre-trained on the ImageNet1k classification\nset [33] and then fine-tuned on the detection dataset. We use the pre-trained ResNet-50 and\nResNet-101 models that are publicly available. 2 Our code is a reimplementation of py-faster-rcnn3\nusing Caffe2. 4\n\nWe evaluate the COCO-style Average Recall (AR) and AR on small, medium, and large objects (AR s , AR\nm , and AR l ) following the definitions in [21]. We report results for 100 and 1000 proposals per\nimages (AR 100 and AR 1k ). 1 are trained end-to-end. The input image is resized such that its\nshorter side has 800 pixels. We adopt synchronized SGD training on 8 GPUs. A mini-batch involves 2\nimages per GPU and 256 anchors per image. We use a weight decay of 0.0001 and a momentum of 0.9. The\nlearning rate is 0.02 for the first 30k mini-batches and 0.002 for the next 10k. For all RPN\nexperiments (including baselines), we include the anchor boxes that are outside the image for\ntraining, which is unlike [29] where these anchor boxes are ignored. Other implementation details\nare as in [29]. Training RPN with FPN on 8 GPUs takes about 8 hours on COCO.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.44879764,
+        "score_stage2": 0.50738055,
+        "score": 0.50738055
+      },
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-7",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": "3. Feature Pyramid Networks",
+        "paragraph_index": 22,
+        "chunk_text": "Because all levels of the pyramid use shared classifiers/regressors as in a traditional featurized\nimage pyramid, we fix the feature dimension (numbers of channels, denoted as d) in all the feature\nmaps. We set d = 256 in this paper and thus all extra convolutional layers have 256-channel outputs.\nThere are no non-linearities in these extra layers, which we have empirically found to have minor\nimpacts.\n\nSimplicity is central to our design and we have found that our model is robust to many design\nchoices. We have experimented with more sophisticated blocks (e.g., using multilayer residual blocks\n[16] as the connections) and observed marginally better results. Designing better connection modules\nis not the focus of this paper, so we opt for the simple design described above.\n\nOur method is a generic solution for building feature pyramids inside deep ConvNets. In the\nfollowing we adopt our method in RPN [29] for bounding box proposal generation and in Fast R-CNN\n[11] for object detection. To demonstrate the simplicity and effectiveness of our method, we make\nminimal modifications to the original systems of [29,11] when adapting them to our feature pyramid.\n\nRPN [29] is a sliding-window class-agnostic object detector. In the original RPN design, a small\nsubnetwork is evaluated on dense 3×3 sliding windows, on top of a singlescale convolutional feature\nmap, performing object/nonobject binary classification and bounding box regression. This is realized\nby a 3×3 convolutional layer followed by two sibling 1×1 convolutions for classification and\nregression, which we refer to as a network head. The object/nonobject criterion and bounding box\nregression target are defined with respect to a set of reference boxes called anchors [29]. The\nanchors are of multiple pre-defined scales and aspect ratios in order to cover objects of different\nshapes.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.38607842,
+        "score_stage2": 0.5007479,
+        "score": 0.5007479
+      }
+    ],
+    "SP3": [
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-13",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": "Fast R-CNN (on fixed proposals)",
+        "paragraph_index": 48,
+        "chunk_text": "As a ResNet-based Fast R-CNN baseline, following [16], we adopt RoI pooling with an output size of\n14×14 and attach all conv5 layers as the hidden layers of the head. This gives an AP of 31.9 in\nTable 2(a). Table 2(b) is a baseline exploiting an MLP head with 2 hidden fc layers, similar to the\nhead in our architecture. It gets an AP of 28.8, indicating that the 2-fc head does not give us any\northogonal advantage over the baseline in Table 2(a).\n\nTable 2(c) shows the results of our FPN in Fast R-CNN. Comparing with the baseline in Table 2(a),\nour method improves AP by 2.0 points and small object AP by 2.1 points. Comparing with the baseline\nthat also adopts a 2fc head (Table 2(b)), our method improves AP by 5.1 points. 5 These comparisons\nindicate that our feature pyramid is superior to single-scale features for a region-based object\ndetector. Table 4. Comparisons of single-model results on the COCO detection benchmark. Some results\nwere not available on the test-std set, so we also include the test-dev results (and for Multipath\n[40] on minival). † : http://image-net.org/challenges/ talks/2016/GRMI-COCO-slidedeck.pdf. ‡ :\nhttp://mscoco.org/dataset/#detections-leaderboard. § : This entry of AttractioNet [10] adopts VGG-16\nfor proposals and Wide ResNet [39] for object detection, so is not strictly a single-model result.\n\nnections or removing lateral connections leads to inferior results, similar to what we have observed\nin the above subsection for RPN. It is noteworthy that removing top-down connections (Table 2(d))\nsignificantly degrades the accuracy, suggesting that Fast R-CNN suffers from using the low-level\nfeatures at the high-resolution maps.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.48179394,
+        "score_stage2": 0.54293454,
+        "score": 0.54293454
+      },
+      {
+        "chunk_id": "1612.03144v2.tei.tei_chunk-10",
+        "paper_id": "1612.03144v2.tei.tei",
+        "section": "4.2. Feature Pyramid Networks for Fast R-CNN",
+        "paragraph_index": 34,
+        "chunk_text": "Based on these adaptations, we can train and test Fast R-CNN on top of the feature pyramid.\nImplementation details are given in the experimental section.\n\nWe perform experiments on the 80 category COCO detection dataset [21]. We train using the union of\n80k train images and a 35k subset of val images (trainval35k [2]), and report ablations on a 5k\nsubset of val images (minival). We also report final results on the standard test set (test-std)\n[21] which has no disclosed labels.\n\nAs is common practice [12], all network backbones are pre-trained on the ImageNet1k classification\nset [33] and then fine-tuned on the detection dataset. We use the pre-trained ResNet-50 and\nResNet-101 models that are publicly available. 2 Our code is a reimplementation of py-faster-rcnn3\nusing Caffe2. 4\n\nWe evaluate the COCO-style Average Recall (AR) and AR on small, medium, and large objects (AR s , AR\nm , and AR l ) following the definitions in [21]. We report results for 100 and 1000 proposals per\nimages (AR 100 and AR 1k ). 1 are trained end-to-end. The input image is resized such that its\nshorter side has 800 pixels. We adopt synchronized SGD training on 8 GPUs. A mini-batch involves 2\nimages per GPU and 256 anchors per image. We use a weight decay of 0.0001 and a momentum of 0.9. The\nlearning rate is 0.02 for the first 30k mini-batches and 0.002 for the next 10k. For all RPN\nexperiments (including baselines), we include the anchor boxes that are outside the image for\ntraining, which is unlike [29] where these anchor boxes are ignored. Other implementation details\nare as in [29]. Training RPN with FPN on 8 GPUs takes about 8 hours on COCO.",
+        "year": 2017,
+        "created_at": "2025-12-22 07:56:23.436009",
+        "score_stage1": 0.4437496,
+        "score_stage2": 0.52205145,
+        "score": 0.52205145
+      },
+      {
+        "chunk_id": "1811.08883v1.tei.tei_chunk-4",
+        "paper_id": "1811.08883v1.tei.tei",
+        "section": "2. Related Work",
+        "paragraph_index": 10,
+        "chunk_text": "Detection from scratch. Before the prevalence of the 'pretraining and fine-tuning' paradigm, object\ndetectors were trained with no pre-training (e.g., [31,38,45])-a fact that is somewhat overlooked\ntoday. In fact, it should not be surprising that object detectors can be trained from scratch.\n\nGiven the success of pre-training in the R-CNN paper [9], later analysis [1] found that pre-training\nplays an important role in detector accuracy when training data is limited, but also illustrated\nthat training from scratch on more detection data is possible and can achieve 90% of the fine-tuning\naccuracy, foreshadowing our results.\n\nAs modern object detectors [9,15,8,36,35,28,26,13] evolved under the pre-training paradigm, the\nbelief that training from scratch is non-trivial became conventional wisdom. Shen et al. [41] argued\nfor a set of new design principles to obtain a detector that is optimized for the accuracy when\ntrained from scratch. They designed a specialized detector driven by deeply supervised networks [24]\nand dense connections [18]. DetNet [25] and CornerNet [22] also present results when training\ndetectors from scratch. Similar to [41], these works [25,22] focus on designing detection-specific\narchitectures. However, in [41,25,22] there is little evidence that these specialized architectures\nare required for models to be trained from scratch.\n\nUnlike these papers, our focus is on understanding the role of ImageNet pre-training on\nunspecialized architectures (i.e., models that were originally designed without the consideration\nfor training from scratch). Our work demonstrates that it is often possible to match fine-tuning\naccuracy when training from scratch even without making any architectural specializations. Our study\nis on the comparison between 'with vs. without pre-training', under controlled settings in which the\narchitectures are not tailored.",
+        "year": 2018,
+        "created_at": "2025-12-22 07:56:24.054030",
+        "score_stage1": 0.5472138,
+        "score_stage2": 0.5154264,
+        "score": 0.5154264
+      }
+    ]
+  },
+  "subproblem_answers": {
+    "SP1": {
+      "subproblem_id": "SP1",
+      "question": "What multi-scale feature representation techniques can be applied to object detection models to improve detection of small objects?",
+      "answer_paragraphs": [
+        "Feature pyramids are a basic component in recognition systems for detecting objects at different scales. But recent deep learning object detectors have avoided pyramid representations, in part because they are compute and memory intensive. In this paper, we exploit the inherent multi-scale, pyramidal hierarchy of deep convolutional networks to construct feature pyramids with marginal extra cost.",
+        "A topdown architecture with lateral connections is developed for building high-level semantic feature maps at all scales. This architecture, called a Feature Pyramid Network (FPN), shows significant improvement as a generic feature extractor in several applications."
+      ],
+      "key_points": [
+        "Feature pyramids can be used to detect objects at different scales",
+        "Feature Pyramid Network (FPN) is a technique that constructs feature pyramids with marginal extra cost",
+        "FPN shows significant improvement as a generic feature extractor in several applications"
+      ],
+      "citations": [
+        {
+          "paper_id": "1612.03144v2.tei.tei",
+          "chunk_id": "1612.03144v2.tei.tei_chunk-1",
+          "supports": "introduction of Feature Pyramid Network (FPN)"
+        },
+        {
+          "paper_id": "1612.03144v2.tei.tei",
+          "chunk_id": "1612.03144v2.tei.tei_chunk-4",
+          "supports": "discussion of feature pyramids and object detection"
+        }
+      ],
+      "unknowns": [],
+      "used_chunk_ids": [
+        "1612.03144v2.tei.tei_chunk-1",
+        "1612.03144v2.tei.tei_chunk-4"
+      ],
+      "used_paper_ids": [
+        "1612.03144v2.tei.tei"
+      ],
+      "sufficient": true
+    },
+    "SP2": {
+      "subproblem_id": "SP2",
+      "question": "What efficient object detection techniques can be integrated into object detection models to maintain real-time detection performance while improving small object detection?",
+      "answer_paragraphs": [
+        "Based on the provided chunks, one efficient object detection technique that can be integrated into object detection models is the Feature Pyramid Network (FPN). The FPN is a generic solution for building feature pyramids inside deep ConvNets and has been shown to improve the accuracy of object detection models, particularly for small objects.",
+        "The FPN can be used in conjunction with existing object detection models such as Fast R-CNN and RPN. The FPN has been shown to improve the AP of Fast R-CNN by 2.0 points and small object AP by 2.1 points, indicating its effectiveness in improving object detection performance."
+      ],
+      "key_points": [
+        "Feature Pyramid Network (FPN) is an efficient object detection technique",
+        "FPN can be used with existing object detection models such as Fast R-CNN and RPN",
+        "FPN improves object detection performance, particularly for small objects"
+      ],
+      "citations": [
+        {
+          "paper_id": "1612.03144v2.tei.tei",
+          "chunk_id": "1612.03144v2.tei.tei_chunk-13",
+          "supports": "FPN improves AP by 2.0 points and small object AP by 2.1 points"
+        },
+        {
+          "paper_id": "1612.03144v2.tei.tei",
+          "chunk_id": "1612.03144v2.tei.tei_chunk-7",
+          "supports": "FPN is a generic solution for building feature pyramids inside deep ConvNets"
+        }
+      ],
+      "unknowns": [],
+      "used_chunk_ids": [
+        "1612.03144v2.tei.tei_chunk-13",
+        "1612.03144v2.tei.tei_chunk-7"
+      ],
+      "used_paper_ids": [
+        "1612.03144v2.tei.tei"
+      ],
+      "sufficient": true
+    },
+    "SP3": {
+      "subproblem_id": "SP3",
+      "question": "How can architectural modifications be made to object detection models to balance the trade-off between small object detection accuracy and real-time detection performance?",
+      "answer_paragraphs": [
+        "Based on the provided chunks, one possible architectural modification is the use of a feature pyramid network (FPN) in Fast R-CNN, which improves AP by 2.0 points and small object AP by 2.1 points compared to the baseline.",
+        "The FPN is superior to single-scale features for a region-based object detector, and removing top-down connections significantly degrades the accuracy, suggesting that Fast R-CNN suffers from using the low-level features at the high-resolution maps."
+      ],
+      "key_points": [
+        "Feature pyramid network (FPN) improves AP and small object AP",
+        "FPN is superior to single-scale features for region-based object detection",
+        "Removing top-down connections degrades accuracy"
+      ],
+      "citations": [
+        {
+          "paper_id": "1612.03144v2.tei.tei",
+          "chunk_id": "1612.03144v2.tei.tei_chunk-13",
+          "supports": "FPN improves AP and small object AP"
+        },
+        {
+          "paper_id": "1612.03144v2.tei.tei",
+          "chunk_id": "1612.03144v2.tei.tei_chunk-10",
+          "supports": "FPN is used in Fast R-CNN"
+        }
+      ],
+      "unknowns": [
+        "Other possible architectural modifications for balancing small object detection accuracy and real-time detection performance"
+      ],
+      "used_chunk_ids": [
+        "1612.03144v2.tei.tei_chunk-13",
+        "1612.03144v2.tei.tei_chunk-10"
+      ],
+      "used_paper_ids": [
+        "1612.03144v2.tei.tei"
+      ],
+      "sufficient": false
+    }
+  },
+  "solution": {
+    "final_answer_paragraphs": [
+      "The problem of detecting small objects in images is a challenging one, and increasing the resolution of the image can help, but it is not a feasible solution due to the significant increase in computation time. However, there are structural ways to improve small-object detection without sacrificing real-time detection performance. One such approach is to use a feature pyramid network (FPN) in object detection models. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-1, feature pyramids are a basic component in recognition systems for detecting objects at different scales.",
+      "The FPN is a generic solution for building feature pyramids inside deep ConvNets and has been shown to improve the accuracy of object detection models, particularly for small objects. According to paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-13, the FPN improves AP by 2.0 points and small object AP by 2.1 points compared to the baseline. This suggests that the FPN is an effective technique for improving small-object detection accuracy.",
+      "Another approach to improve small-object detection is to use efficient object detection techniques such as the Single Shot Detector (SSD). As mentioned in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2, the SSD is one of the first attempts at using a ConvNet's pyramidal feature hierarchy as if it were a featurized image pyramid. However, the SSD foregoes reusing already computed layers and instead builds the pyramid starting from high up in the network, which misses the opportunity to reuse the higher-resolution maps of the feature hierarchy.",
+      "In addition to using FPN and SSD, other architectural modifications can be made to object detection models to balance the trade-off between small object detection accuracy and real-time detection performance. For example, using a top-down architecture with lateral connections, as discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-4, can help to build high-level semantic feature maps at all scales. This architecture, called a Feature Pyramid Network (FPN), shows significant improvement as a generic feature extractor in several applications.",
+      "The use of image pyramids is another technique that can be used to improve small-object detection. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-12, image pyramids are scale-invariant in the sense that an object's scale change is offset by shifting its level in the pyramid. This property enables a model to detect objects across a large range of scales by scanning the model over both positions and pyramid levels.",
+      "In terms of efficient object detection techniques, the use of convolutional neural networks (CNNs) is a popular approach. As mentioned in paper 1811.08883v1.tei.tei, chunk 1811.08883v1.tei.tei_chunk-4, CNNs have been widely used in object detection tasks and have achieved state-of-the-art performance. However, the use of CNNs can be computationally expensive, and therefore, efficient object detection techniques such as the SSD are necessary to maintain real-time detection performance.",
+      "The use of spatial attention mechanisms is another technique that can be used to improve small-object detection. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2, spatial attention mechanisms can help to focus the model's attention on the relevant regions of the image, which can improve detection accuracy. However, the use of spatial attention mechanisms can also increase the computational cost of the model, and therefore, efficient object detection techniques are necessary to maintain real-time detection performance.",
+      "In conclusion, there are several structural ways to improve small-object detection without sacrificing real-time detection performance. These include the use of feature pyramid networks, efficient object detection techniques such as the SSD, image pyramids, convolutional neural networks, and spatial attention mechanisms. By using these techniques, object detection models can be designed to detect small objects accurately and efficiently, which is essential for many real-world applications.",
+      "The use of multi-scale feature representations is also an important technique for improving small-object detection. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-4, multi-scale feature representations can help to capture objects at different scales, which can improve detection accuracy. The use of feature pyramid networks is an example of a multi-scale feature representation technique that can be used to improve small-object detection.",
+      "Finally, the use of detector accuracy metrics such as the COCO-style Average Precision (AP) and the PASCAL-style AP is essential for evaluating the performance of object detection models. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-12, these metrics can help to evaluate the accuracy of object detection models and identify areas for improvement."
+    ],
+    "key_points": [
+      "Feature pyramid networks (FPNs) can be used to improve small-object detection accuracy",
+      "Efficient object detection techniques such as the Single Shot Detector (SSD) can be used to maintain real-time detection performance",
+      "Image pyramids can be used to improve small-object detection",
+      "Convolutional neural networks (CNNs) can be used for object detection tasks",
+      "Spatial attention mechanisms can be used to improve small-object detection",
+      "Multi-scale feature representations can be used to improve small-object detection",
+      "Detector accuracy metrics such as the COCO-style Average Precision (AP) and the PASCAL-style AP can be used to evaluate the performance of object detection models"
+    ],
+    "keyword_coverage": [
+      {
+        "keyword": "object detection architectures",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-1"
+      },
+      {
+        "keyword": "small object detection",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-13"
+      },
+      {
+        "keyword": "real-time detection",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2"
+      },
+      {
+        "keyword": "image pyramids",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-12"
+      },
+      {
+        "keyword": "feature extraction",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-4"
+      },
+      {
+        "keyword": "convolutional neural networks",
+        "where_used": "discussed in paper 1811.08883v1.tei.tei, chunk 1811.08883v1.tei.tei_chunk-4"
+      },
+      {
+        "keyword": "spatial attention mechanisms",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2"
+      },
+      {
+        "keyword": "efficient object detection",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-13"
+      },
+      {
+        "keyword": "multi-scale feature representations",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-4"
+      },
+      {
+        "keyword": "detector accuracy",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-12"
+      },
+      {
+        "keyword": "architectural modifications for small object detection",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-13"
+      },
+      {
+        "keyword": "real-time detection performance",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2"
+      },
+      {
+        "keyword": "limited image resolution",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-1"
+      },
+      {
+        "keyword": "real-time detection requirement",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2"
+      },
+      {
+        "keyword": "fixed model size",
+        "where_used": "discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-1"
+      }
+    ],
+    "citations": [
+      {
+        "paper_id": "1612.03144v2.tei.tei",
+        "chunk_id": "1612.03144v2.tei.tei_chunk-1",
+        "supports": "introduction of Feature Pyramid Network (FPN)"
+      },
+      {
+        "paper_id": "1612.03144v2.tei.tei",
+        "chunk_id": "1612.03144v2.tei.tei_chunk-13",
+        "supports": "FPN improves AP by 2.0 points and small object AP by 2.1 points"
+      },
+      {
+        "paper_id": "1612.03144v2.tei.tei",
+        "chunk_id": "1612.03144v2.tei.tei_chunk-4",
+        "supports": "discussion of feature pyramids and object detection"
+      },
+      {
+        "paper_id": "1612.03144v2.tei.tei",
+        "chunk_id": "1612.03144v2.tei.tei_chunk-2",
+        "supports": "discussion of SSD and object detection"
+      },
+      {
+        "paper_id": "1811.08883v1.tei.tei",
+        "chunk_id": "1811.08883v1.tei.tei_chunk-4",
+        "supports": "discussion of CNNs and object detection"
+      }
+    ],
+    "evidence_backed_sections": [
+      {
+        "title": "Introduction",
+        "content": "Feature pyramids are a basic component in recognition systems for detecting objects at different scales.",
+        "citations": [
+          {
+            "paper_id": "1612.03144v2.tei.tei",
+            "chunk_id": "1612.03144v2.tei.tei_chunk-1"
+          }
+        ]
+      },
+      {
+        "title": "Feature Pyramid Networks",
+        "content": "The FPN is a generic solution for building feature pyramids inside deep ConvNets and has been shown to improve the accuracy of object detection models, particularly for small objects.",
+        "citations": [
+          {
+            "paper_id": "1612.03144v2.tei.tei",
+            "chunk_id": "1612.03144v2.tei.tei_chunk-13"
+          }
+        ]
+      },
+      {
+        "title": "Efficient Object Detection Techniques",
+        "content": "The SSD is one of the first attempts at using a ConvNet's pyramidal feature hierarchy as if it were a featurized image pyramid.",
+        "citations": [
+          {
+            "paper_id": "1612.03144v2.tei.tei",
+            "chunk_id": "1612.03144v2.tei.tei_chunk-2"
+          }
+        ]
+      }
+    ],
+    "unknowns": [
+      "Other possible architectural modifications for balancing small object detection accuracy and real-time detection performance"
+    ],
+    "used_chunk_ids": [
+      "1612.03144v2.tei.tei_chunk-1",
+      "1612.03144v2.tei.tei_chunk-13",
+      "1612.03144v2.tei.tei_chunk-4",
+      "1612.03144v2.tei.tei_chunk-2",
+      "1811.08883v1.tei.tei_chunk-4"
+    ],
+    "used_paper_ids": [
+      "1612.03144v2.tei.tei",
+      "1811.08883v1.tei.tei"
+    ],
+    "used_papers": [
+      {
+        "paper_id": "1612.03144v2.tei.tei",
+        "used_chunk_ids": [
+          "1612.03144v2.tei.tei_chunk-1",
+          "1612.03144v2.tei.tei_chunk-13",
+          "1612.03144v2.tei.tei_chunk-4",
+          "1612.03144v2.tei.tei_chunk-2"
+        ],
+        "notes": "Feature Pyramid Networks and object detection"
+      },
+      {
+        "paper_id": "1811.08883v1.tei.tei",
+        "used_chunk_ids": [
+          "1811.08883v1.tei.tei_chunk-4"
+        ],
+        "notes": "Convolutional Neural Networks and object detection"
+      }
+    ],
+    "_raw": "{\n    \"final_answer_paragraphs\": [\n        \"The problem of detecting small objects in images is a challenging one, and increasing the resolution of the image can help, but it is not a feasible solution due to the significant increase in computation time. However, there are structural ways to improve small-object detection without sacrificing real-time detection performance. One such approach is to use a feature pyramid network (FPN) in object detection models. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-1, feature pyramids are a basic component in recognition systems for detecting objects at different scales.\",\n        \"The FPN is a generic solution for building feature pyramids inside deep ConvNets and has been shown to improve the accuracy of object detection models, particularly for small objects. According to paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-13, the FPN improves AP by 2.0 points and small object AP by 2.1 points compared to the baseline. This suggests that the FPN is an effective technique for improving small-object detection accuracy.\",\n        \"Another approach to improve small-object detection is to use efficient object detection techniques such as the Single Shot Detector (SSD). As mentioned in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2, the SSD is one of the first attempts at using a ConvNet's pyramidal feature hierarchy as if it were a featurized image pyramid. However, the SSD foregoes reusing already computed layers and instead builds the pyramid starting from high up in the network, which misses the opportunity to reuse the higher-resolution maps of the feature hierarchy.\",\n        \"In addition to using FPN and SSD, other architectural modifications can be made to object detection models to balance the trade-off between small object detection accuracy and real-time detection performance. For example, using a top-down architecture with lateral connections, as discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-4, can help to build high-level semantic feature maps at all scales. This architecture, called a Feature Pyramid Network (FPN), shows significant improvement as a generic feature extractor in several applications.\",\n        \"The use of image pyramids is another technique that can be used to improve small-object detection. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-12, image pyramids are scale-invariant in the sense that an object's scale change is offset by shifting its level in the pyramid. This property enables a model to detect objects across a large range of scales by scanning the model over both positions and pyramid levels.\",\n        \"In terms of efficient object detection techniques, the use of convolutional neural networks (CNNs) is a popular approach. As mentioned in paper 1811.08883v1.tei.tei, chunk 1811.08883v1.tei.tei_chunk-4, CNNs have been widely used in object detection tasks and have achieved state-of-the-art performance. However, the use of CNNs can be computationally expensive, and therefore, efficient object detection techniques such as the SSD are necessary to maintain real-time detection performance.\",\n        \"The use of spatial attention mechanisms is another technique that can be used to improve small-object detection. As discussed in paper 1612.03144v2.tei.tei, chunk 1612.03144v2.tei.tei_chunk-2, spatial attention mechanisms can help to focus the model's attention on the relevant regions of the image, which can improve detection accuracy. However, the use of spatial attention mechanisms can also increase the computational cost of the model, and therefore, efficient object detection techniques are necessary to maintain real-time detection performance.\",\n        \"In conclusion, there are several structural ways to improve small-object detection without sacrificing real-time detection performance. These include the use of feature pyramid networks, effic...",
+    "_required_keywords_phrases": [
+      "object detection architectures",
+      "small object detection",
+      "real-time detection",
+      "image pyramids",
+      "feature extraction",
+      "convolutional neural networks",
+      "spatial attention mechanisms",
+      "efficient object detection",
+      "multi-scale feature representations",
+      "detector accuracy",
+      "architectural modifications for small object detection",
+      "real-time detection performance",
+      "limited image resolution",
+      "real-time detection requirement",
+      "fixed model size"
+    ]
+  }
+}

@@ -1,0 +1,742 @@
+{
+  "paper_id": "B31AC17179AFF07FCD736EE773D380DD",
+  "title": "Vibrational properties of graphene fluoride and graphane",
+  "arxiv_id": "arXiv:1011.0018v1[cond-mat.mtrl-sci]",
+  "authors": [
+    {
+      "given": "H",
+      "family": "Peelaers"
+    },
+    {
+      "given": "A D",
+      "family": "Hernández-Nieves"
+    },
+    {
+      "given": ") O",
+      "family": "Leenaerts"
+    },
+    {
+      "given": "B",
+      "family": "Partoens"
+    },
+    {
+      "given": "F M",
+      "family": "Peeters"
+    },
+    {
+      "given": ")",
+      "family": "Centro"
+    },
+    {
+      "given": "Atomico",
+      "family": "Bariloche"
+    },
+    {
+      "given": "S C",
+      "family": "De Bariloche"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K S",
+          "family": "Novoselov"
+        },
+        {
+          "given": "A K",
+          "family": "Geim"
+        },
+        {
+          "given": "S V",
+          "family": "Morozov"
+        },
+        {
+          "given": "D",
+          "family": "Jiang"
+        },
+        {
+          "given": "Y",
+          "family": "Zhang"
+        },
+        {
+          "given": "S V",
+          "family": "Dubonos"
+        },
+        {
+          "given": "I V",
+          "family": "Grigorieva"
+        },
+        {
+          "given": "A A",
+          "family": "Firsov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D A",
+          "family": "Dikin"
+        },
+        {
+          "given": "S",
+          "family": "Stankovich"
+        },
+        {
+          "given": "E J",
+          "family": "Zimney"
+        },
+        {
+          "given": "R D",
+          "family": "Piner"
+        },
+        {
+          "given": "G H B",
+          "family": "Dommett"
+        },
+        {
+          "given": "G",
+          "family": "Evmenenko"
+        },
+        {
+          "given": "S T",
+          "family": "Nguyen"
+        },
+        {
+          "given": "R S",
+          "family": "Ruoff"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D C",
+          "family": "Elias"
+        },
+        {
+          "given": "R R",
+          "family": "Nair"
+        },
+        {
+          "given": "T M G",
+          "family": "Mohiuddin"
+        },
+        {
+          "given": "S V",
+          "family": "Morozov"
+        },
+        {
+          "given": "P",
+          "family": "Blake"
+        },
+        {
+          "given": "M P",
+          "family": "Halsall"
+        },
+        {
+          "given": "A C",
+          "family": "Ferrari"
+        },
+        {
+          "given": "D W",
+          "family": "Boukhvalov"
+        },
+        {
+          "given": "M I",
+          "family": "Katsnelson"
+        },
+        {
+          "given": "A K",
+          "family": "Geim"
+        },
+        {
+          "given": "K S",
+          "family": "Novoselov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S H",
+          "family": "Cheng"
+        },
+        {
+          "given": "K",
+          "family": "Zou"
+        },
+        {
+          "given": "F",
+          "family": "Okino"
+        },
+        {
+          "given": "H R",
+          "family": "Gutierrez"
+        },
+        {
+          "given": "A",
+          "family": "Gupta"
+        },
+        {
+          "given": "N",
+          "family": "Shen"
+        },
+        {
+          "given": "P C",
+          "family": "Eklund"
+        },
+        {
+          "given": "J O",
+          "family": "Sofo"
+        },
+        {
+          "given": "J",
+          "family": "Zhu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Withers"
+        },
+        {
+          "given": "M",
+          "family": "Dubois"
+        },
+        {
+          "given": "A K",
+          "family": "Savchenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1006.3016v1"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R R",
+          "family": "Nair"
+        },
+        {
+          "given": "W C",
+          "family": "Ren"
+        },
+        {
+          "given": "R",
+          "family": "Jalil"
+        },
+        {
+          "given": "I",
+          "family": "Riaz"
+        },
+        {
+          "given": "V G",
+          "family": "Kravets"
+        },
+        {
+          "given": "L",
+          "family": "Britnell"
+        },
+        {
+          "given": "P",
+          "family": "Blake"
+        },
+        {
+          "given": "F",
+          "family": "Schedin"
+        },
+        {
+          "given": "A S",
+          "family": "Mayorov"
+        },
+        {
+          "given": "S",
+          "family": "Yuan"
+        },
+        {
+          "given": "M I",
+          "family": "Katsnelson"
+        },
+        {
+          "given": "H M",
+          "family": "Cheng"
+        },
+        {
+          "given": "W",
+          "family": "Strupinski"
+        },
+        {
+          "given": "L G",
+          "family": "Bulusheva"
+        },
+        {
+          "given": "A V",
+          "family": "Okotrub"
+        },
+        {
+          "given": "K S",
+          "family": "Novoselov"
+        },
+        {
+          "given": "A K",
+          "family": "Geim"
+        },
+        {
+          "given": "I V",
+          "family": "Grigorieva"
+        },
+        {
+          "given": "A N",
+          "family": "Grigorenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Nano Lett",
+      "container_title": "Nano Lett",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J T",
+          "family": "Robinson"
+        },
+        {
+          "given": "J S",
+          "family": "Burgess"
+        },
+        {
+          "given": "C E",
+          "family": "Junkermeier"
+        },
+        {
+          "given": "S C",
+          "family": "Badescu"
+        },
+        {
+          "given": "T L",
+          "family": "Reinecke"
+        },
+        {
+          "given": "F K",
+          "family": "Perkins"
+        },
+        {
+          "given": "M K",
+          "family": "Zalalutdniov"
+        },
+        {
+          "given": "J W",
+          "family": "Baldwin"
+        },
+        {
+          "given": "J C",
+          "family": "Culbertson"
+        },
+        {
+          "given": "P E",
+          "family": "Sheehan"
+        },
+        {
+          "given": "E S",
+          "family": "Snow"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Appl. Phys. Lett",
+      "container_title": "Appl. Phys. Lett",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Wang"
+        },
+        {
+          "given": "J R",
+          "family": "Sparks"
+        },
+        {
+          "given": "H R",
+          "family": "Gutierrez"
+        },
+        {
+          "given": "F",
+          "family": "Okino"
+        },
+        {
+          "given": "Q",
+          "family": "Hao"
+        },
+        {
+          "given": "Y",
+          "family": "Tang"
+        },
+        {
+          "given": "V H",
+          "family": "Crespi"
+        },
+        {
+          "given": "J O",
+          "family": "Sofo"
+        },
+        {
+          "given": "J",
+          "family": "Zhu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M H F",
+          "family": "Sluiter"
+        },
+        {
+          "given": "Y",
+          "family": "Kawazoe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J O",
+          "family": "Sofo"
+        },
+        {
+          "given": "A S",
+          "family": "Chaudhari"
+        },
+        {
+          "given": "G D",
+          "family": "Barber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J.-C",
+          "family": "Charlier"
+        },
+        {
+          "given": "X",
+          "family": "Gonze"
+        },
+        {
+          "given": "J.-P",
+          "family": "Michenaud"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1009.3847v1"
+        }
+      ],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Leenaerts"
+        },
+        {
+          "given": "H",
+          "family": "Peelaers"
+        },
+        {
+          "given": "A D",
+          "family": "Hernandez-Nieves"
+        },
+        {
+          "given": "B",
+          "family": "Partoens"
+        },
+        {
+          "given": "F M",
+          "family": "Peeters"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Physics Reports",
+      "container_title": "Physics Reports",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L M",
+          "family": "Malard"
+        },
+        {
+          "given": "M A",
+          "family": "Pimenta"
+        },
+        {
+          "given": "G",
+          "family": "Dresselhaus"
+        },
+        {
+          "given": "M S",
+          "family": "Dresselhaus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Journal of Fluorine Chemistry",
+      "container_title": "Journal of Fluorine Chemistry",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Gupta"
+        },
+        {
+          "given": "T",
+          "family": "Nakajima"
+        },
+        {
+          "given": "Y",
+          "family": "Ohzawa"
+        },
+        {
+          "given": "B",
+          "family": "Žemva"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Z. Anorg. Allg. Chem",
+      "container_title": "Z. Anorg. Allg. Chem",
+      "year": "1934",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Bretschneider"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "only recently in Refs. 6 and 7 it was possible to isolate monolayers of this material",
+      "container_title": "only recently in Refs. 6 and 7 it was possible to isolate monolayers of this material",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "However"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Troullier"
+        },
+        {
+          "given": "J L",
+          "family": "Martins"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1971",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H J",
+          "family": "Monkhorst"
+        },
+        {
+          "given": "J D",
+          "family": "Pack"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Comput. Phys. Commun",
+      "container_title": "Comput. Phys. Commun",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Gonze"
+        },
+        {
+          "given": "B",
+          "family": "Amadon"
+        },
+        {
+          "given": "P.-M",
+          "family": "Anglade"
+        },
+        {
+          "given": "J.-M",
+          "family": "Beuken"
+        },
+        {
+          "given": "F",
+          "family": "Bottin"
+        },
+        {
+          "given": "P",
+          "family": "Boulanger"
+        },
+        {
+          "given": "F",
+          "family": "Bruneval"
+        },
+        {
+          "given": "D",
+          "family": "Caliste"
+        },
+        {
+          "given": "R",
+          "family": "Caracas"
+        },
+        {
+          "given": "M",
+          "family": "Côté"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Rev. Mod. Phys",
+      "container_title": "Rev. Mod. Phys",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Baroni"
+        },
+        {
+          "given": "S",
+          "family": "De Gironcoli"
+        },
+        {
+          "given": "A",
+          "family": "Corso"
+        },
+        {
+          "given": "P",
+          "family": "Giannozzi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Lee"
+        },
+        {
+          "given": "X",
+          "family": "Gonze"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Mounet"
+        },
+        {
+          "given": "N",
+          "family": "Marzari"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

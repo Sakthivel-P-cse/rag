@@ -1,0 +1,1227 @@
+{
+  "paper_id": "B498D144082A10C204E8A27C69BB0914",
+  "title": "Invariant Risk Minimization",
+  "arxiv_id": "arXiv:1907.02893v3[stat.ML]",
+  "authors": [
+    {
+      "given": "Martin",
+      "family": "Arjovsky"
+    },
+    {
+      "given": "Léon",
+      "family": "Bottou"
+    },
+    {
+      "given": "Ishaan",
+      "family": "Gulrajani"
+    },
+    {
+      "given": "David",
+      "family": "Lopez-Paz"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Oxford Economic Papers",
+      "container_title": "Oxford Economic Papers",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "John",
+          "family": "Aldrich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "AAAI",
+      "container_title": "AAAI",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "James",
+          "family": "Andrew"
+        },
+        {
+          "given": "Bagnell",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Benign Overfitting in Linear Regression",
+      "container_title": "Benign Overfitting in Linear Regression",
+      "year": "2019",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Peter"
+        },
+        {
+          "given": "Philip M",
+          "family": "Bartlett"
+        },
+        {
+          "given": "Gábor",
+          "family": "Long"
+        },
+        {
+          "given": "Alexander",
+          "family": "Lugosi"
+        },
+        {
+          "given": null,
+          "family": "Tsigler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sara",
+          "family": "Beery"
+        },
+        {
+          "given": "Grant",
+          "family": "Van Horn"
+        },
+        {
+          "given": "Pietro",
+          "family": "Perona"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Shai",
+          "family": "Ben-David"
+        },
+        {
+          "given": "John",
+          "family": "Blitzer"
+        },
+        {
+          "given": "Koby",
+          "family": "Crammer"
+        },
+        {
+          "given": "Fernando",
+          "family": "Pereira"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Robust optimization",
+      "container_title": "Robust optimization",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Aharon",
+          "family": "Ben-Tal"
+        },
+        {
+          "given": "Laurent El",
+          "family": "Ghaoui"
+        },
+        {
+          "given": "Arkadi",
+          "family": "Nemirovski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "A metatransfer objective for learning to disentangle causal mechanisms",
+      "container_title": "A metatransfer objective for learning to disentangle causal mechanisms",
+      "year": "2019",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "arXiv"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Tristan",
+          "family": "Deleu"
+        },
+        {
+          "given": "Nasim",
+          "family": "Rahaman"
+        },
+        {
+          "given": "Rosemary",
+          "family": "Ke"
+        },
+        {
+          "given": "Sébastien",
+          "family": "Lachapelle"
+        },
+        {
+          "given": "Olexa",
+          "family": "Bilaniuk"
+        },
+        {
+          "given": "Anirudh",
+          "family": "Goyal"
+        },
+        {
+          "given": "Christopher",
+          "family": "Pal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "ICPR",
+      "container_title": "ICPR",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Léon",
+          "family": "Bottou"
+        },
+        {
+          "given": "Corinna",
+          "family": "Cortes"
+        },
+        {
+          "given": "John S",
+          "family": "Denker"
+        },
+        {
+          "given": "Harris",
+          "family": "Drucker"
+        },
+        {
+          "given": "Isabelle",
+          "family": "Guyon"
+        },
+        {
+          "given": "Lawrence D",
+          "family": "Jackel"
+        },
+        {
+          "given": "Yann",
+          "family": "Le Cun"
+        },
+        {
+          "given": "Urs A",
+          "family": "Muller"
+        },
+        {
+          "given": "Eduard",
+          "family": "Säckinger"
+        },
+        {
+          "given": "Patrice",
+          "family": "Simard"
+        },
+        {
+          "given": "Vladimir",
+          "family": "Vapnik"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2019",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Wieland",
+          "family": "Brendel"
+        },
+        {
+          "given": "Matthias",
+          "family": "Bethge"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "TPAMI",
+      "container_title": "TPAMI",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Joan",
+          "family": "Bruna"
+        },
+        {
+          "given": "Stephane",
+          "family": "Mallat"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "The Annals of Statistics",
+      "container_title": "The Annals of Statistics",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Joan",
+          "family": "Bruna"
+        },
+        {
+          "given": "Stephane",
+          "family": "Mallat"
+        },
+        {
+          "given": "Emmanuel",
+          "family": "Bacry"
+        },
+        {
+          "given": "Jean-Franois",
+          "family": "Muzy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Philosophy of Science",
+      "container_title": "Philosophy of Science",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nancy",
+          "family": "Cartwright"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Causal invariance an essential constraint for creating a causal representation of the world. The Oxford handbook of causal reasoning",
+      "container_title": "Causal invariance an essential constraint for creating a causal representation of the world. The Oxford handbook of causal reasoning",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Patricia W",
+          "family": "Cheng"
+        },
+        {
+          "given": "Hongjing",
+          "family": "Lu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "NAACL",
+      "container_title": "NAACL",
+      "year": "2019",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jacob",
+          "family": "Devlin"
+        },
+        {
+          "given": "Ming-Wei",
+          "family": "Chang"
+        },
+        {
+          "given": "Kenton",
+          "family": "Lee"
+        },
+        {
+          "given": "Kristina",
+          "family": "Toutanova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "arXiv",
+      "container_title": "arXiv",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "John",
+          "family": "Duchi"
+        },
+        {
+          "given": "Peter",
+          "family": "Glynn"
+        },
+        {
+          "given": "Hongseok",
+          "family": "Namkoong"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "JMLR",
+      "container_title": "JMLR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yaroslav",
+          "family": "Ganin"
+        },
+        {
+          "given": "Evgeniya",
+          "family": "Ustinova"
+        },
+        {
+          "given": "Hana",
+          "family": "Ajakan"
+        },
+        {
+          "given": "Pascal",
+          "family": "Germain"
+        },
+        {
+          "given": "Hugo",
+          "family": "Larochelle"
+        },
+        {
+          "given": "François",
+          "family": "Laviolette"
+        },
+        {
+          "given": "Mario",
+          "family": "March"
+        },
+        {
+          "given": "Victor",
+          "family": "Lempitsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2019",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Robert",
+          "family": "Geirhos"
+        },
+        {
+          "given": "Patricia",
+          "family": "Rubisch"
+        },
+        {
+          "given": "Claudio",
+          "family": "Michaelis"
+        },
+        {
+          "given": "Matthias",
+          "family": "Bethge"
+        },
+        {
+          "given": "Felix A",
+          "family": "Wichmann"
+        },
+        {
+          "given": "Wieland",
+          "family": "Brendel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Amiremad",
+          "family": "Ghassami"
+        },
+        {
+          "given": "Saber",
+          "family": "Salehkaleybar"
+        },
+        {
+          "given": "Negar",
+          "family": "Kiyavash"
+        },
+        {
+          "given": "Kun",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "NIST Special Database 19: Handprinted forms and characters database",
+      "container_title": "NIST Special Database 19: Handprinted forms and characters database",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Patrick J",
+          "family": "Grother"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Econometrica: Journal of the Econometric Society",
+      "container_title": "Econometrica: Journal of the Econometric Society",
+      "year": "1944",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Trygve",
+          "family": "Haavelmo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "arXiv",
+      "container_title": "arXiv",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Christina",
+          "family": "Heinze"
+        },
+        {
+          "given": "-Deml",
+          "family": null
+        },
+        {
+          "given": "Nicolai",
+          "family": "Meinshausen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Journal of Causal Inference",
+      "container_title": "Journal of Causal Inference",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Christina",
+          "family": "Heinze-Deml"
+        },
+        {
+          "given": "Jonas",
+          "family": "Peters"
+        },
+        {
+          "given": "Nicolai",
+          "family": "Meinshausen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Allan",
+          "family": "Jabri"
+        },
+        {
+          "given": "Armand",
+          "family": "Joulin"
+        },
+        {
+          "given": "Laurens",
+          "family": "Van Der Maaten"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "AISTATS",
+      "container_title": "AISTATS",
+      "year": "2019",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Fredrik"
+        },
+        {
+          "given": "David A",
+          "family": "Johansson"
+        },
+        {
+          "given": "Rajesh",
+          "family": "Sontag"
+        },
+        {
+          "given": null,
+          "family": "Ranganath"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "arXiv",
+      "container_title": "arXiv",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Niki",
+          "family": "Kilbertus"
+        },
+        {
+          "given": "Giambattista",
+          "family": "Parascandolo"
+        },
+        {
+          "given": "Bernhard",
+          "family": "Schölkopf"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "SIGKDD",
+      "container_title": "SIGKDD",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kun",
+          "family": "Kuang"
+        },
+        {
+          "given": "Peng",
+          "family": "Cui"
+        },
+        {
+          "given": "Susan",
+          "family": "Athey"
+        },
+        {
+          "given": "Ruoxuan",
+          "family": "Xiong"
+        },
+        {
+          "given": "Bo",
+          "family": "Li"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Behavioral and brain sciences",
+      "container_title": "Behavioral and brain sciences",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Brenden"
+        },
+        {
+          "given": null,
+          "family": "Lake"
+        },
+        {
+          "given": "D",
+          "family": "Tomer"
+        },
+        {
+          "given": "Joshua B",
+          "family": "Ullman"
+        },
+        {
+          "given": "Samuel J",
+          "family": "Tenenbaum"
+        },
+        {
+          "given": null,
+          "family": "Gershman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Introduction to Smooth Manifolds",
+      "container_title": "Introduction to Smooth Manifolds",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "James M",
+          "family": "Lee"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "",
+      "container_title": "",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Lewis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ya",
+          "family": "Li"
+        },
+        {
+          "given": "Xinmei",
+          "family": "Tian"
+        },
+        {
+          "given": "Mingming",
+          "family": "Gong"
+        },
+        {
+          "given": "Yajing",
+          "family": "Liu"
+        },
+        {
+          "given": "Tongliang",
+          "family": "Liu"
+        },
+        {
+          "given": "Kun",
+          "family": "Zhang"
+        },
+        {
+          "given": "Dacheng",
+          "family": "Tao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "From dependence to causation",
+      "container_title": "From dependence to causation",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Lopez-Paz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Lopez-Paz"
+        },
+        {
+          "given": "Robert",
+          "family": "Nishihara"
+        },
+        {
+          "given": "Soumith",
+          "family": "Chintala"
+        },
+        {
+          "given": "Bernhard",
+          "family": "Scholkopf"
+        },
+        {
+          "given": "Léon",
+          "family": "Bottou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Gilles",
+          "family": "Louppe"
+        },
+        {
+          "given": "Michael",
+          "family": "Kagan"
+        },
+        {
+          "given": "Kyle",
+          "family": "Cranmer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sara",
+          "family": "Magliacane"
+        },
+        {
+          "given": "Tom",
+          "family": "Thijs Van Ommen"
+        },
+        {
+          "given": "Stephan",
+          "family": "Claassen"
+        },
+        {
+          "given": "Philip",
+          "family": "Bongers"
+        },
+        {
+          "given": "Joris M",
+          "family": "Versteeg"
+        },
+        {
+          "given": null,
+          "family": "Mooij"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "arXiv",
+      "container_title": "arXiv",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Gary",
+          "family": "Marcus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Data Science Workshop (DSW)",
+      "container_title": "Data Science Workshop (DSW)",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nicolai",
+          "family": "Meinshausen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "The Annals of Statistics",
+      "container_title": "The Annals of Statistics",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nicolai",
+          "family": "Meinshausen"
+        },
+        {
+          "given": "Peter",
+          "family": "Bühlmann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "Philosophy of Science",
+      "container_title": "Philosophy of Science",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sandra D",
+          "family": "Mitchell"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Causality: Models, Reasoning, and Inference",
+      "container_title": "Causality: Models, Reasoning, and Inference",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Judea",
+          "family": "Pearl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "JRSS B",
+      "container_title": "JRSS B",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jonas",
+          "family": "Peters"
+        },
+        {
+          "given": "Peter",
+          "family": "Bühlmann"
+        },
+        {
+          "given": "Nicolai",
+          "family": "Meinshausen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "Elements of causal inference: foundations and learning algorithms",
+      "container_title": "Elements of causal inference: foundations and learning algorithms",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jonas",
+          "family": "Peters"
+        },
+        {
+          "given": "Dominik",
+          "family": "Janzing"
+        },
+        {
+          "given": "Bernhard",
+          "family": "Schölkopf"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "Incompleteness, non locality and realism. a prolegomenon to the philosophy of quantum mechanics",
+      "container_title": "Incompleteness, non locality and realism. a prolegomenon to the philosophy of quantum mechanics",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Michael",
+          "family": "Redhead"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "JMLR",
+      "container_title": "JMLR",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mateo",
+          "family": "Rojas-Carulla"
+        },
+        {
+          "given": "Bernhard",
+          "family": "Schölkopf"
+        },
+        {
+          "given": "Richard",
+          "family": "Turner"
+        },
+        {
+          "given": "Jonas",
+          "family": "Peters"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "Journal of educational Psychology",
+      "container_title": "Journal of educational Psychology",
+      "year": "1974",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Donald B",
+          "family": "Rubin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bernhard",
+          "family": "Schölkopf"
+        },
+        {
+          "given": "Dominik",
+          "family": "Janzing"
+        },
+        {
+          "given": "Jonas",
+          "family": "Peters"
+        },
+        {
+          "given": "Eleni",
+          "family": "Sgouritsa"
+        },
+        {
+          "given": "Joris",
+          "family": "Zhang"
+        },
+        {
+          "given": null,
+          "family": "Mooij"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Aman",
+          "family": "Sinha"
+        },
+        {
+          "given": "Hongseok",
+          "family": "Namkoong"
+        },
+        {
+          "given": "John",
+          "family": "Duchi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "Causal necessity: a pragmatic investigation of the necessity of laws",
+      "container_title": "Causal necessity: a pragmatic investigation of the necessity of laws",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Brian",
+          "family": "Skyrms"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "IEEE Transactions on Multimedia",
+      "container_title": "IEEE Transactions on Multimedia",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bob L",
+          "family": "Sturm"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Antonio",
+          "family": "Torralba"
+        },
+        {
+          "given": "Alexei",
+          "family": "Efros"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Vladimir",
+          "family": "Vapnik"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b50",
+      "title": "Statistical Learning Theory",
+      "container_title": "Statistical Learning Theory",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Vladimir N",
+          "family": "Vapnik"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b51",
+      "title": "Do we still need models or just more data and compute?",
+      "container_title": "Do we still need models or just more data and compute?",
+      "year": "2019",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Max",
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b52",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Ashia"
+        },
+        {
+          "given": "Rebecca",
+          "family": "Wilson"
+        },
+        {
+          "given": "Mitchell",
+          "family": "Roelofs"
+        },
+        {
+          "given": "Nati",
+          "family": "Stern"
+        },
+        {
+          "given": "Benjamin",
+          "family": "Srebro"
+        },
+        {
+          "given": null,
+          "family": "Recht"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b53",
+      "title": "Making things happen: A theory of causal explanation",
+      "container_title": "Making things happen: A theory of causal explanation",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "James",
+          "family": "Woodward"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b54",
+      "title": "Journal of agricultural research",
+      "container_title": "Journal of agricultural research",
+      "year": "1921",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sewall",
+          "family": "Wright"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b55",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Chiyuan",
+          "family": "Zhang"
+        },
+        {
+          "given": "Samy",
+          "family": "Bengio"
+        },
+        {
+          "given": "Moritz",
+          "family": "Hardt"
+        },
+        {
+          "given": "Benjamin",
+          "family": "Recht"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

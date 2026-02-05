@@ -1,0 +1,1100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Enriching Word Vectors with Subword Information</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2017-06-19">19 Jun 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Piotr</forename><surname>Bojanowski</surname></persName>
+							<email>bojanowski@fb.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Facebook AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Edouard</forename><surname>Grave</surname></persName>
+							<email>egrave@fb.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Facebook AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Armand</forename><surname>Joulin</surname></persName>
+							<email>ajoulin@fb.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Facebook AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+							<email>tmikolov@fb.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Facebook AI Research</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Enriching Word Vectors with Subword Information</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2017-06-19">19 Jun 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FA5907905D6D9309189B245E0317CC69</idno>
+					<idno type="arXiv">arXiv:1607.04606v2[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>Continuous word representations, trained on large unlabeled corpora are useful for many natural language processing tasks. Popular models that learn such representations ignore the morphology of words, by assigning a distinct vector to each word. This is a limitation, especially for languages with large vocabularies and many rare words. In this paper, we propose a new approach based on the skipgram model, where each word is represented as a bag of character n-grams. A vector representation is associated to each character n-gram; words being represented as the sum of these representations. Our method is fast, allowing to train models on large corpora quickly and allows us to compute word representations for words that did not appear in the training data. We evaluate our word representations on nine different languages, both on word similarity and analogy tasks. By comparing to recently proposed morphological word representations, we show that our vectors achieve state-of-the-art performance on these tasks.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">Marco Baroni</rs>, <rs type="person">Hinrich Schütze</rs> and the anonymous reviewers for their insightful comments.</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Factored neural language models</title>
+		<author>
+			<persName><forename type="first">Andrei</forename><surname>Alexandrescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Katrin</forename><surname>Kirchhoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. NAACL</title>
+		<meeting>NAACL</meeting>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Improved transition-based parsing by modeling characters instead of words with LSTMs</title>
+		<author>
+			<persName><forename type="first">Miguel</forename><surname>Ballesteros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. EMNLP</title>
+		<meeting>EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Distributional memory: A general framework for corpus-based semantics</title>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alessandro</forename><surname>Lenci</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="673" to="721" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<author>
+			<persName><forename type="first">Giacomo</forename><surname>Berardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrea</forename><surname>Esuli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diego</forename><surname>Marcheggiani</surname></persName>
+		</author>
+		<title level="m">Word embeddings go to Italy: a comparison of models and training datasets. Italian Information Retrieval Workshop</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Alternative structures for character-level RNNs</title>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Bojanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Armand</forename><surname>Joulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomáš</forename><surname>Mikolov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICLR</title>
+		<meeting>ICLR</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Compositional morphology for word representations and language modelling</title>
+		<author>
+			<persName><forename type="first">Jan</forename><forename type="middle">A</forename><surname>Botha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICML</title>
+		<meeting>ICML</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Joint learning of character and word embeddings</title>
+		<author>
+			<persName><forename type="first">Xinxiong</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiyuan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maosong</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Huanbo</forename><surname>Luan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IJCAI</title>
+		<meeting>IJCAI</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">A unified architecture for natural language processing: Deep neural networks with multitask learning</title>
+		<author>
+			<persName><forename type="first">Grzegorz</forename><surname>Chrupała</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ACL. Ronan Collobert and Jason Weston</title>
+		<meeting>ACL. Ronan Collobert and Jason Weston</meeting>
+		<imprint>
+			<date type="published" when="2008">2014. 2008</date>
+		</imprint>
+	</monogr>
+	<note>Proc. ICML</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Morphological word-embeddings</title>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Cotterell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hinrich</forename><surname>Schütze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. NAACL</title>
+		<meeting>NAACL</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">KNET: A general framework for learning word embedding using morphological knowledge</title>
+		<author>
+			<persName><forename type="first">Qing</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bin</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiang</forename><surname>Bian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siyu</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanjun</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tie-Yan</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Transactions on Information Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">25</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Indexing by latent semantic analysis</title>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Deerwester</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Susan</forename><forename type="middle">T</forename><surname>Dumais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">W</forename><surname>Furnas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">K</forename><surname>Landauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Harshman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Society for Information Science</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="391" to="407" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Deep convolutional neural networks for sentiment analysis of short texts</title>
+		<author>
+			<persName><forename type="first">Cicero</forename><surname>Nogueira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dos</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maira</forename><surname>Gatti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. COLING</title>
+		<meeting>COLING</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Learning character-level representations for part-ofspeech tagging</title>
+		<author>
+			<persName><forename type="first">Cicero</forename><surname>Nogueira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dos</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bianca</forename><surname>Zadrozny</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICML</title>
+		<meeting>ICML</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Placing search in context: The concept revisited</title>
+		<author>
+			<persName><forename type="first">Lev</forename><surname>Finkelstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evgeniy</forename><surname>Gabrilovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yossi</forename><surname>Matias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ehud</forename><surname>Rivlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zach</forename><surname>Solan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gadi</forename><surname>Wolfman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eytan</forename><surname>Ruppin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. WWW</title>
+		<meeting>WWW</meeting>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Generating sequences with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1308.0850</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Using the structure of a conceptual network in computing semantic relatedness</title>
+		<author>
+			<persName><forename type="first">Iryna</forename><surname>Gurevych</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IJCNLP</title>
+		<meeting>IJCNLP</meeting>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Zellig</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Distributional structure. Word</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="146" to="162" />
+			<date type="published" when="1954">1954</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Cross-lingual semantic relatedness using encyclopedic knowledge</title>
+		<author>
+			<persName><forename type="first">Samer</forename><surname>Hassan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rada</forename><surname>Mihalcea</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. EMNLP</title>
+		<meeting>EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Comparison of semantic similarity for different languages using the google n-gram corpus and second-order co-occurrence measures</title>
+		<author>
+			<persName><forename type="first">Colette</forename><surname>Joubarne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Inkpen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Canadian Conference on Artificial Intelligence</title>
+		<meeting>Canadian Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Character-aware neural language models</title>
+		<author>
+			<persName><forename type="first">Yoon</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yacine</forename><surname>Jernite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sontag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">M</forename><surname>Rush</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. AAAI</title>
+		<meeting>AAAI</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Multilingual reliability and "semantic" structure of continuous word spaces</title>
+		<author>
+			<persName><forename type="first">Maximilian</forename><surname>Köper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Scheible</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sabine</forename><surname>Schulte Im Walde</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IWCS</title>
+		<meeting>IWCS</meeting>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Compositionally derived representations of morphologically complex words in distributional semantics</title>
+		<author>
+			<persName><forename type="first">Angeliki</forename><surname>Lazaridou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Marelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roberto</forename><surname>Zamparelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Baroni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ACL</title>
+		<meeting>ACL</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Finding function in form: Compositional character models for open vocabulary word representation</title>
+		<author>
+			<persName><forename type="first">Wang</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><forename type="middle">W</forename><surname>Black</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isabel</forename><surname>Trancoso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ramon</forename><surname>Fermandez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silvio</forename><surname>Amir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luis</forename><surname>Marujo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiago</forename><surname>Luis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. EMNLP</title>
+		<meeting>EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Producing high-dimensional semantic spaces from lexical cooccurrence</title>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Lund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Curt</forename><surname>Burgess</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behavior Research Methods, Instruments, &amp; Computers</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="203" to="208" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Achieving open vocabulary neural machine translation with hybrid word-character models</title>
+		<author>
+			<persName><forename type="first">Minh-Thang</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ACL</title>
+		<meeting>ACL</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Better word representations with recursive neural networks for morphology</title>
+		<author>
+			<persName><forename type="first">Thang</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. CoNLL</title>
+		<meeting>CoNLL</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Subword language modeling with neural networks</title>
+		<author>
+			<persName><forename type="first">Tomáš</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anoop</forename><surname>Deoras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hai-Son</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Kombrink</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012-01">Jan Černocký. 2012</date>
+		</imprint>
+		<respStmt>
+			<orgName>Faculty of Information Technology, Brno University of Technology</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tomáš</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><forename type="middle">D</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1301.3781</idno>
+		<title level="m">Efficient estimation of word representations in vector space</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Distributed representations of words and phrases and their compositionality</title>
+		<author>
+			<persName><forename type="first">Tomáš</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Dean</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>In Adv. NIPS</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Human and machine judgements for russian semantic relatedness</title>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Panchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dmitry</forename><surname>Ustalov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nikolay</forename><surname>Arefyev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Denis</forename><surname>Paperno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Natalia</forename><surname>Konstantinova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Natalia</forename><surname>Loukachevitch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Biemann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. AIST</title>
+		<meeting>AIST</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Co-learning of word representations and morpheme representations</title>
+		<author>
+			<persName><forename type="first">Siyu</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qing</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiang</forename><surname>Bian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bin</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tie-Yan</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. COLING</title>
+		<meeting>COLING</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Hogwild: A lock-free approach to parallelizing stochastic gradient descent</title>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Recht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Re</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Feng</forename><surname>Niu</surname></persName>
+		</author>
+		<editor>Adv. NIPS</editor>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Neurocomputing: Foundations of research. chapter Learning Representations by Backpropagating Errors</title>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">E</forename><surname>Rumelhart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ronald</forename><forename type="middle">J</forename><surname>Williams</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<publisher>MIT Press</publisher>
+			<biblScope unit="page" from="696" to="699" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Morphology-based and sub-word language modeling for turkish speech recognition</title>
+		<author>
+			<persName><forename type="first">Haşim</forename><surname>Sak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Murat</forename><surname>Saraclar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tunga</forename><surname>Gungör</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICASSP</title>
+		<meeting>ICASSP</meeting>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Dimensions of meaning</title>
+		<author>
+			<persName><forename type="first">Hinrich</forename><surname>Schütze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IEEE Conference on Supercomputing</title>
+		<meeting>IEEE Conference on Supercomputing</meeting>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Neural machine translation of rare words with subword units</title>
+		<author>
+			<persName><forename type="first">Hinrich</forename><surname>Schütze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ACL</title>
+		<editor>
+			<persName><forename type="middle">Nips</forename><surname>Adv</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Barry</forename><surname>Rico Sennrich</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Alexandra</forename><surname>Haddow</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Birch</surname></persName>
+		</editor>
+		<meeting>ACL</meeting>
+		<imprint>
+			<date type="published" when="1993">1993. 2016</date>
+		</imprint>
+	</monogr>
+	<note>Word space</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<author>
+			<persName><forename type="first">Cyrus</forename><surname>Shaoul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Westbury</surname></persName>
+		</author>
+		<title level="m">The Westbury lab Wikipedia corpus</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Unsupervised morphology induction using word embeddings</title>
+		<author>
+			<persName><forename type="first">Radu</forename><surname>Soricut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Franz</forename><surname>Och</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. NAACL</title>
+		<meeting>NAACL</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">The proof and measurement of association between two things</title>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Spearman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The American Journal of Psychology</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="72" to="101" />
+			<date type="published" when="1904">1904</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Letter n-gram-based input encoding for continuous space language models</title>
+		<author>
+			<persName><forename type="first">Henning</forename><surname>Sperr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Niehues</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Waibel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. of the Workshop on Continuous Vector Space Models and their Compositionality at ACL</title>
+		<meeting>of the Workshop on Continuous Vector Space Models and their Compositionality at ACL</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Generating text with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Martens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICML</title>
+		<meeting>ICML</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">New word analogy corpus for exploring embeddings of Czech words</title>
+		<author>
+			<persName><forename type="first">Lukáš</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomáš</forename><surname>Brychcin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. CICLING</title>
+		<meeting>CICLING</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">From frequency to meaning: Vector space models of semantics</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Peter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Turney</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pantel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Artificial Intelligence Research</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="141" to="188" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Automatically creating datasets for measures of semantic relatedness</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Wieting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohit</forename><surname>Bansal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Gimpel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karen</forename><surname>Livescu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. EMNLP. Torsten Zesch and Iryna Gurevych</title>
+		<meeting>EMNLP. Torsten Zesch and Iryna Gurevych</meeting>
+		<imprint>
+			<date type="published" when="2006">2016. 2006</date>
+		</imprint>
+	</monogr>
+	<note>Proc. Workshop on Linguistic Distances</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Character-level convolutional networks for text classification</title>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junbo</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+		<editor>Adv. NIPS</editor>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

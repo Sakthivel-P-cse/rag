@@ -1,0 +1,557 @@
+{
+  "paper_id": "DD290773905BE53BD46870EFAE18BFD0",
+  "title": "HARDY-STEKLOV OPERATORS AND EMBEDDING INEQUALITIES OF SOBOLEV TYPE",
+  "arxiv_id": "arXiv:1503.06518v2[math.FA]",
+  "authors": [
+    {
+      "given": "Maria G",
+      "family": "Nasyrova"
+    },
+    {
+      "given": "Elena P",
+      "family": "Ushakova"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Boundary values of functions with finite Dirichlet integral",
+      "container_title": "Boundary values of functions with finite Dirichlet integral",
+      "year": "1955",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Aronszajn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Siberian Math. J",
+      "container_title": "Siberian Math. J",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E N",
+          "family": "Batuev"
+        },
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Nauka",
+      "container_title": "Nauka",
+      "year": "1975",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O V",
+          "family": "Besov"
+        },
+        {
+          "given": "V P",
+          "family": "Ilin"
+        },
+        {
+          "given": "S M",
+          "family": "Nikolskii"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "J. Ineq. Appl",
+      "container_title": "J. Ineq. Appl",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Chen"
+        },
+        {
+          "given": "G",
+          "family": "Sinnamon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Ricerche Mat",
+      "container_title": "Ricerche Mat",
+      "year": "1958",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Gagliardo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Ann. Scoula Norm. Sup. Pisa",
+      "container_title": "Ann. Scoula Norm. Sup. Pisa",
+      "year": "1969",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Grisvard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "J. Inequal. Appl",
+      "container_title": "J. Inequal. Appl",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Gogatishvili"
+        },
+        {
+          "given": "J",
+          "family": "Lang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "J. Evol. Equ",
+      "container_title": "J. Evol. Equ",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Harper"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Studia Math",
+      "container_title": "Studia Math",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H P",
+          "family": "Heinig"
+        },
+        {
+          "given": "G",
+          "family": "Sinnamon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Boundary properties of functions from the spase W (l) p on domains with angular points",
+      "container_title": "Boundary properties of functions from the spase W (l) p on domains with angular points",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G N",
+          "family": "Jakovlev"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Nauk SSSR",
+      "container_title": "Nauk SSSR",
+      "year": "1961",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Akad"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Functional Analysis in Normed Spaces",
+      "container_title": "Functional Analysis in Normed Spaces",
+      "year": "1964",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L V",
+          "family": "Kantorovich"
+        },
+        {
+          "given": "G P",
+          "family": "Akilov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "The Hardy inequality. About its history and some related results. Vydavatelsky' Servis, Plzeń",
+      "container_title": "The Hardy inequality. About its history and some related results. Vydavatelsky' Servis, Plzeń",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Kufner"
+        },
+        {
+          "given": "L",
+          "family": "Maligranda"
+        },
+        {
+          "given": "L.-E",
+          "family": "Persson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Weighted inequalities of Hardy type",
+      "container_title": "Weighted inequalities of Hardy type",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Kufner"
+        },
+        {
+          "given": "L.-E",
+          "family": "Persson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Non-homogeneous boundary value problems and applications",
+      "container_title": "Non-homogeneous boundary value problems and applications",
+      "year": "1972",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J L",
+          "family": "Lions"
+        },
+        {
+          "given": "E",
+          "family": "Magenes"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Sib. Math. J",
+      "container_title": "Sib. Math. J",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E N",
+          "family": "Lomakina"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Sib. Math. J",
+      "container_title": "Sib. Math. J",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E N",
+          "family": "Lomakina"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of Dehli Conference",
+      "container_title": "Proceedings of Dehli Conference",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Nasyrova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "J. of Inequal. & Appl",
+      "container_title": "J. of Inequal. & Appl",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Nasyrova"
+        },
+        {
+          "given": "V",
+          "family": "Stepanov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Math. Bohemica",
+      "container_title": "Math. Bohemica",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M G",
+          "family": "Nasyrova"
+        },
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Complex Var. Elliptic Equ",
+      "container_title": "Complex Var. Elliptic Equ",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Oinarov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Pitman Research Notes in Mathematics Series",
+      "container_title": "Pitman Research Notes in Mathematics Series",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Opic"
+        },
+        {
+          "given": "A",
+          "family": "Kufner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Proceedings of Steklov Institute of Mathematics",
+      "container_title": "Proceedings of Steklov Institute of Mathematics",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D V",
+          "family": "Prokhorov"
+        },
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "J. London Math. Soc",
+      "container_title": "J. London Math. Soc",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Sinnamon"
+        },
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Leningrad. Gos. Ped. Inst. Ucep. Zap",
+      "container_title": "Leningrad. Gos. Ped. Inst. Ucep. Zap",
+      "year": "1958",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L N",
+          "family": "Slobodeckij"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Siberian Math. J",
+      "container_title": "Siberian Math. J",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Nonlinear analysis, function spaces and applications",
+      "container_title": "Nonlinear analysis, function spaces and applications",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Proc. Steklov Inst. Math",
+      "container_title": "Proc. Steklov Inst. Math",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        },
+        {
+          "given": "E P",
+          "family": "Ushakova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "J. Funct. Spaces Appl",
+      "container_title": "J. Funct. Spaces Appl",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        },
+        {
+          "given": "E P",
+          "family": "Ushakova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Proc. Steklov Inst. Math",
+      "container_title": "Proc. Steklov Inst. Math",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        },
+        {
+          "given": "E P",
+          "family": "Ushakova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Math. Ineq. Appl",
+      "container_title": "Math. Ineq. Appl",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        },
+        {
+          "given": "E P",
+          "family": "Ushakova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Banach J. Math. Anal",
+      "container_title": "Banach J. Math. Anal",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V D",
+          "family": "Stepanov"
+        },
+        {
+          "given": "E P",
+          "family": "Ushakova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Mathematics of the USSR-Sbornik",
+      "container_title": "Mathematics of the USSR-Sbornik",
+      "year": "1975",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Triebel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "J. Funct. Spaces Appl",
+      "container_title": "J. Funct. Spaces Appl",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E P",
+          "family": "Ushakova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "J. Approx. Theory",
+      "container_title": "J. Approx. Theory",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E P",
+          "family": "Ushakova"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

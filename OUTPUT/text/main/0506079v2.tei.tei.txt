@@ -1,0 +1,168 @@
+# Soliton control in modulated optically-induced photonic lattices
+
+**Published:** 31 Jul 2005
+
+## Abstract
+
+We discuss soliton control in reconfigurable optically-induced photonic lattices created by three
+interfering beams. We reveal novel dynamical regimes for strongly localized solitons, including
+binary switching and soliton revivals through resonant wave mixing.
+
+## 1. Introduction
+
+The study of nonlinear light propagation in periodic photonic lattices has attracted a strong
+interest due to many possibilities of the light control offered by an interplay between the effects
+of nonlinearity and periodicity. In particular, a periodic modulation of the refractive index
+modifies substantially both the linear spectrum and wave diffraction [1] and, consequently, strongly
+affects the nonlinear propagation and localization of light in the form of optical solitons [2].
+
+Recent theoretical and experimental studies have demonstrated nonlinear localization of light in the
+optically-induced photonic lattices where the refractive index is modulated periodically in the
+transverse direction by an interference pattern of plane waves that illuminate a photorefractive
+crystal with a strong electro-optic anisotropy [3][4][5][6]. When the lattice-forming waves are
+polarized orthogonally to the c-axis of the photorefractive crystal, the periodic interference
+pattern propagates in the diffraction-free linear regime, thus creating a refractive-index
+modulation similar to that in weakly coupled waveguide array structures [7]. Such optically-induced
+one-dimensional photonic lattices have been employed to demonstrate many fundamental concepts of the
+linear and nonlinear light propagation in periodic photonic systems, including the generation of
+lattice [4,6,17] and spatial gap solitons in defocusing [4,5] and self-focusing [9] regimes, Bragg
+scattering and Bloch-wave steering [8], tunable negative refraction [10], etc.
+
+In this work, we study the soliton propagation in dynamic optical lattices and identify novel
+effects associated with the optically-induced refractive index modulation in the longitudinal
+direction. Such lattices can be created by several interfering beams, which are inclined at
+different angles with respect to the crystal. In particular, we consider modulated photonic
+lattices, created in a photorefractive nonlinear medium by three interfering beams, as shown in the
+examples presented in Figs. 1(a-c). Here z is the propagation coordinate and beams experience one-
+dimensional diffraction only along the x direction.
+
+We note that propagation of broad solitons in such lattices was discussed recently [11] under the
+conditions when weak longitudinal modulation acts on solitons as an effective potential. In
+contrast, we show that the behavior of strongly localized solitons is dramatically different,
+resulting in, for example, resonant soliton revivals for the lattice of Fig. 1(a), or a sharp binary
+switching transition for deep asymmetric lattice modulations [Figs. 1(b,c)]. These results are not
+related to the effect of diffraction management earlier discussed in Ref. [12], and they were not
+reported in any of the earlier studies of the modulated discrete systems [13,14].
+
+## 2. Binary soliton steering
+
+Propagation of an optical beam in an one-dimensional optically-induced lattice can be described by a
+parabolic equation for the normalized beam envelope E(x, z),
+
+where x and z are the transverse and propagation coordinates normalized to the characteristic values
+x s and z s , respectively, D = z s λ /(4πn 0 x 2 s ) is the beam diffraction coefficient, n 0 is
+the average refractive index of the medium, and λ is the wavelength in vacuum. The induced change of
+the refractive index in a photorefractive crystal is [3,4,6,8]: -γ(
+
+, where I b is the constant dark irradiance, I p (x, z) is the interference pattern which induces
+modulations of the refractive index, and γ is a nonlinear coefficient proportional to the applied DC
+field. In the numerical simulations presented below we use the parameters which are typical for the
+experimental conditions with optically-induced lattices created in photorefractive crystals [8]:
+
+45, and the transverse period of the lattice in the absence of modulation is d = 15µm.
+
+Photorefractive crystals exhibit a very strong electro-optic anisotropy, e.g. in SBN:75 the electro-
+optic coefficient for extraordinary polarized waves is more than 20 times higher than the electro-
+optic coefficient for ordinary polarized waves [5]. Thus, the lattice-writing beams polarized
+orthogonal to the c-axis of the crystal satisfy the same evolution Eq. ( 1), but without the last
+term which almost vanishes since the effective nonlinear coefficient is very small [3], while
+extraordinary polarized beam will experience a highly nonlinear evolution. Then, each of the broad
+lattice beams propagates independently, and it can be presented as a linear planewave solution in
+the form E lattice = A exp(iβ z + ik x x), where k x is the transverse wavenumber proportional to
+the inclination angle, and the propagation constant β = -Dk 2
+
+x defines the longitudinal wavevector component k z . The value of diffraction coefficient D can be
+controlled by varying the wavelength of lattice beams, and also depends on the crystal anisotropy.
+We will analyze in detail the case when the effective diffraction coefficients for the probe and
+lattice beams are the same, which also allows us to perform a comparison with the results of Ref.
+[11]. Specifically, we consider a lattice induced by three interfering waves [11]: (i) two waves
+with equal amplitudes A 12 and opposite inclination angles, with the corresponding wavenumbers k 12x
+and -k 12x , and (ii) an additional third wave with amplitude A 3 and wavenumber k 3x . Then, the
+optical lattice is defined through the wave interference pattern
+
+where
+
+(
+
+It follows that additional beam (with k 3x = k 12x ) always leads to the lattice modulation both in
+the transverse and longitudinal directions. We show examples of modulated lattices in Figs. 1(ac)
+corresponding to the same wave amplitudes but different inclinations of the third beam (defined by k
+3x ) as indicated in the insets. We see that for k 3x = 0 [Fig. 1(a)] the lattice profile in the
+transverse cross-section becomes double-periodic corresponding to an alternating sequence of deeper
+and shallower potential wells resembling a binary superlattice [15], however its configuration is
+periodically inverted due to modulations in the longitudinal direction along z. On the other hand,
+when k 3x ≃ k 12x , the lattice is slowly modulated in both spatial directions and the left-right
+reflection symmetry is removed [11], see Figs. First, we consider the soliton dynamics in asymmetric
+lattices with k 3x ≃ k 12x , and demonstrate the possibility of binary steering of strongly
+localized solitons, where the soliton propagates in one of two allowed directions when the amplitude
+A 3 is in one of the two stable regions. The origin of this soliton switching effect is
+fundamentally different from dragging of broad solitons reported earlier [11] which is almost
+directly proportional to the third beam amplitude A 3 .
+
+We perform numerical modelling of Eq. ( 1) to study generation of a strongly localized lattice
+soliton by an input Gaussian beam, E in = A in exp -[(xx 0 )/w] 2 + ik 0x (xx 0 ) which is incident
+on the crystal at normal angle (i.e. k 0x = 0) and has extra-ordinary linear polarization. When the
+amplitude of the third wave A 3 is relatively small, the generated soliton starts moving between the
+neighboring lattice sites, as shown in the animation. As the amplitude A 3 of the modulating beam
+increases, at certain point strongly localized soliton becomes locked at a particular lattice site,
+and it propagates straight along the lattice [see Fig. 2(a) and Fig. 3(a)], similar to the case of
+homogeneous structures without longitudinal modulation [16]. We find that this is the first stable
+propagation regime which is not sensitive to small variations of the input angle and position [see
+Figs. 3(b,c)].
+
+When the amplitude A 3 grows further, this leads not only to the increase in the modulation depth of
+the refractive index, but also to the rotation of the lattice high-index sites. This rotation causes
+the change in the topology of the modulated optical lattice and in some interval of the modulation
+depth there exists no continuous connectivity between the high-index lattice sites (see animation in
+Fig. 2). In this regime the soliton propagation can become highly irregular resembling a regime of
+random walks, and the soliton can even be completely destroyed by the lattice modulation.
+
+At a certain value of A 3 , the rotation of the lattice sites experience saturation, the
+connectivity between the sites reappear (but now it is diagonal in contrast to the first stable
+region where it was vertical), and the soliton starts to move across the lattice propagating in the
+direction determined by the angles of the lattice waves and independent of the value of the
+modulation amplitude A 3 [see Fig. 2(b) and Fig. 3(a)]. This is the second stable propagation regime
+not sensitive to small variations in the input conditions [see Figs. We can summarize that such
+binary soliton steering occurs due to the substantial change in the geometry of the optical lattice,
+where the connectivity between high-index lattice sites changes from vertical to diagonal through a
+disconnected state when we increase the amplitude of the third modulating wave, as illustrated by an
+animation in Fig. 2. Additionally, this binary soliton steering is found to be insensitive to large
+variations of the soliton amplitude [see Fig. 4(a)], and the tilt of the soliton increases almost
+linearly with the difference between the angles of the modulating and lattice-forming beams [see
+Fig. 4(b)]. Such a behavior is completely different from the dynamics of broad solitons in weakly
+modulated lattices [11], which feel only spatially averaged, smoothed lattice potential. In
+contrast, behavior of strongly localized solitons is dominated by the fine geometrical structure of
+the lattice.
+
+## 3. Soliton revivals
+
+Next, we analyze the soliton dynamics in symmetric modulated lattices when k 3x = 0, as shown in
+Fig. 1(a). According to the basic principles of holography, a beam which is incident on the lattice
+at the normal angle (with k 0x = 0) will excite resonantly the waves corresponding to other lattice-
+writing beams with the transverse wavenumbers ±k 12x , which will then be converted back to the
+original wave. Numerical simulations indeed demonstrate that the spectrum of lowamplitude beam is
+modulated periodically as it spreads due to linear diffraction, see Fig. 5(a). However, even for a
+weak lattice modulation, the beam dynamics is dramatically modified at higher amplitudes, and we
+observe a sequence of soliton revivals, as shown in Fig. 5(b). We identify three regimes of the
+soliton propagation: (i) self-focusing of the beam which spatial spectrum is centered around the
+point κ x = 0, (ii) transformation of the modes from κ x = 0 to larger spatial frequencies, (iii)
+the spectrum conversion back to the region around the point κ x = 0, and again a periodic repetition
+of this three-stage process. We note that the period of the soliton revivals does not coincide with
+the period of the lattice modulation underlying a key difference with the case of the familiar
+diffraction-managed solitons [13]. In our case, there exists a continuous coupling and
+transformation between the modes of the periodic lattice. More detailed analysis of these results,
+and discussions of their connection to the effects of soliton internal modes [14] or formation of
+multi-band breathers [18] will be presented in a separate study.
+
+## 4. Conclusions
+
+We have demonstrated novel effects for the soliton propagation in modulated dynamic optically-
+induced photonic lattices created by three interfering beams. We have shown the possibility of
+binary switching for strongly localized solitons where the soliton can propagate in one of two
+allowed directions when the amplitude of the control beam is below or above a threshold associated
+with the transformation of the lattice geometry and a respective change in the connectivity between
+lattice sites. Each of these regimes is stable with respect to the system parameters, in contrast to
+earlier considered steering of broad beams directly proportional to the control wave amplitude. We
+have also demonstrated novel regimes in the soliton dynamics under the conditions of resonant wave
+mixing in a conservative system observed as a series of periodic soliton revivals, which are not
+associated with the effect of diffraction management.

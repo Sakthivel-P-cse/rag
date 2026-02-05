@@ -1,0 +1,754 @@
+{
+  "paper_id": "3A137345FDF754AA3CC9173DD6D334AC",
+  "title": "",
+  "arxiv_id": "arXiv:1610.02357v3[cs.CV]",
+  "authors": [],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Abadi"
+        },
+        {
+          "given": "A",
+          "family": "Agarwal"
+        },
+        {
+          "given": "P",
+          "family": "Barham"
+        },
+        {
+          "given": "E",
+          "family": "Brevdo"
+        },
+        {
+          "given": "Z",
+          "family": "Chen"
+        },
+        {
+          "given": "C",
+          "family": "Citro"
+        },
+        {
+          "given": "G S",
+          "family": "Corrado"
+        },
+        {
+          "given": "A",
+          "family": "Davis"
+        },
+        {
+          "given": "J",
+          "family": "Dean"
+        },
+        {
+          "given": "M",
+          "family": "Devin"
+        },
+        {
+          "given": "S",
+          "family": "Ghemawat"
+        },
+        {
+          "given": "I",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "A",
+          "family": "Harp"
+        },
+        {
+          "given": "G",
+          "family": "Irving"
+        },
+        {
+          "given": "M",
+          "family": "Isard"
+        },
+        {
+          "given": "Y",
+          "family": "Jia"
+        },
+        {
+          "given": "R",
+          "family": "Jozefowicz"
+        },
+        {
+          "given": "L",
+          "family": "Kaiser"
+        },
+        {
+          "given": "M",
+          "family": "Kudlur"
+        },
+        {
+          "given": "J",
+          "family": "Levenberg"
+        },
+        {
+          "given": "D",
+          "family": "Mané"
+        },
+        {
+          "given": "R",
+          "family": "Monga"
+        },
+        {
+          "given": "S",
+          "family": "Moore"
+        },
+        {
+          "given": "D",
+          "family": "Murray"
+        },
+        {
+          "given": "C",
+          "family": "Olah"
+        },
+        {
+          "given": "M",
+          "family": "Schuster"
+        },
+        {
+          "given": "J",
+          "family": "Shlens"
+        },
+        {
+          "given": "B",
+          "family": "Steiner"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "K",
+          "family": "Talwar"
+        },
+        {
+          "given": "P",
+          "family": "Tucker"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "V",
+          "family": "Vasudevan"
+        },
+        {
+          "given": "F",
+          "family": "Viégas"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "P",
+          "family": "Warden"
+        },
+        {
+          "given": "M",
+          "family": "Wattenberg"
+        },
+        {
+          "given": "M",
+          "family": "Wicke"
+        },
+        {
+          "given": "Y",
+          "family": "Yu"
+        },
+        {
+          "given": "X",
+          "family": "Zheng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "",
+      "container_title": "",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Chollet"
+        },
+        {
+          "given": null,
+          "family": "Keras"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Fast and accurate deep network learning by exponential linear units (elus)",
+      "container_title": "Fast and accurate deep network learning by exponential linear units (elus)",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.07289"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D.-A",
+          "family": "Clevert"
+        },
+        {
+          "given": "T",
+          "family": "Unterthiner"
+        },
+        {
+          "given": "S",
+          "family": "Hochreiter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Deep residual learning for image recognition",
+      "container_title": "Deep residual learning for image recognition",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1512.03385"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Distilling the knowledge in a neural network",
+      "container_title": "Distilling the knowledge in a neural network",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Hinton"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "J",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Mobilenets: Efficient convolutional neural networks for mobile vision applications",
+      "container_title": "Mobilenets: Efficient convolutional neural networks for mobile vision applications",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Howard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Proceedings of The 32nd International Conference on Machine Learning",
+      "container_title": "Proceedings of The 32nd International Conference on Machine Learning",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Ioffe"
+        },
+        {
+          "given": "C",
+          "family": "Szegedy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Flattened convolutional neural networks for feedforward acceleration",
+      "container_title": "Flattened convolutional neural networks for feedforward acceleration",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.5474"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Jin"
+        },
+        {
+          "given": "A",
+          "family": "Dundar"
+        },
+        {
+          "given": "E",
+          "family": "Culurciello"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Neural networks: the statistical mechanics perspective",
+      "container_title": "Neural networks: the statistical mechanics perspective",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "L",
+          "family": "Jackel"
+        },
+        {
+          "given": "L",
+          "family": "Bottou"
+        },
+        {
+          "given": "C",
+          "family": "Cortes"
+        },
+        {
+          "given": "J S",
+          "family": "Denker"
+        },
+        {
+          "given": "H",
+          "family": "Drucker"
+        },
+        {
+          "given": "I",
+          "family": "Guyon"
+        },
+        {
+          "given": "U",
+          "family": "Muller"
+        },
+        {
+          "given": "E",
+          "family": "Sackinger"
+        },
+        {
+          "given": "P",
+          "family": "Simard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Network in network",
+      "container_title": "Network in network",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.4400"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Lin"
+        },
+        {
+          "given": "Q",
+          "family": "Chen"
+        },
+        {
+          "given": "S",
+          "family": "Yan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "International Conference on Artificial Neural Networks (ICANN 2012)",
+      "container_title": "International Conference on Artificial Neural Networks (ICANN 2012)",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Mamalet"
+        },
+        {
+          "given": "C",
+          "family": "Garcia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "SIAM J. Control Optim",
+      "container_title": "SIAM J. Control Optim",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B T",
+          "family": "Polyak"
+        },
+        {
+          "given": "A B",
+          "family": "Juditsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Imagenet large scale visual recognition challenge",
+      "container_title": "Imagenet large scale visual recognition challenge",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Russakovsky"
+        },
+        {
+          "given": "J",
+          "family": "Deng"
+        },
+        {
+          "given": "H",
+          "family": "Su"
+        },
+        {
+          "given": "J",
+          "family": "Krause"
+        },
+        {
+          "given": "S",
+          "family": "Satheesh"
+        },
+        {
+          "given": "S",
+          "family": "Ma"
+        },
+        {
+          "given": "Z",
+          "family": "Huang"
+        },
+        {
+          "given": "A",
+          "family": "Karpathy"
+        },
+        {
+          "given": "A",
+          "family": "Khosla"
+        },
+        {
+          "given": "M",
+          "family": "Bernstein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Rigid-motion scattering for image classification",
+      "container_title": "Rigid-motion scattering for image classification",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Sifre"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "2013 IEEE Conference on Computer Vision and Pattern Recognition",
+      "container_title": "2013 IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Sifre"
+        },
+        {
+          "given": "S",
+          "family": "Mallat"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Tf-slim",
+      "container_title": "Tf-slim",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Silberman"
+        },
+        {
+          "given": "S",
+          "family": "Guadarrama"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Very deep convolutional networks for large-scale image recognition",
+      "container_title": "Very deep convolutional networks for large-scale image recognition",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.1556"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Simonyan"
+        },
+        {
+          "given": "A",
+          "family": "Zisserman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Inception-v4, inception-resnet and the impact of residual connections on learning",
+      "container_title": "Inception-v4, inception-resnet and the impact of residual connections on learning",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1602.07261"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "S",
+          "family": "Ioffe"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "container_title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "W",
+          "family": "Liu"
+        },
+        {
+          "given": "Y",
+          "family": "Jia"
+        },
+        {
+          "given": "P",
+          "family": "Sermanet"
+        },
+        {
+          "given": "S",
+          "family": "Reed"
+        },
+        {
+          "given": "D",
+          "family": "Anguelov"
+        },
+        {
+          "given": "D",
+          "family": "Erhan"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "A",
+          "family": "Rabinovich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Rethinking the inception architecture for computer vision",
+      "container_title": "Rethinking the inception architecture for computer vision",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1512.00567"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "S",
+          "family": "Ioffe"
+        },
+        {
+          "given": "J",
+          "family": "Shlens"
+        },
+        {
+          "given": "Z",
+          "family": "Wojna"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "COURSERA: Neural Networks for Machine Learning",
+      "container_title": "COURSERA: Neural Networks for Machine Learning",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Tieleman"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Factorized convolutional neural networks",
+      "container_title": "Factorized convolutional neural networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1608.04337"
+        }
+      ],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Wang"
+        },
+        {
+          "given": "B",
+          "family": "Liu"
+        },
+        {
+          "given": "H",
+          "family": "Foroosh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Computer Vision-ECCV 2014",
+      "container_title": "Computer Vision-ECCV 2014",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M D",
+          "family": "Zeiler"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

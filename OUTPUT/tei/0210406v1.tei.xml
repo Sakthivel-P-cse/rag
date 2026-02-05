@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Landau levels in the case of two degenerate coupled bands: kagomé lattice tight-binding spectrum</title>
+				<funder ref="#_fgCwYek">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+				<funder ref="#_QDDyAEv #_5HgYBg3 #_vQ34N4q">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2018-11-09">November 9, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Princeton University</orgName>
+								<address>
+									<postCode>08544</postCode>
+									<settlement>Princeton</settlement>
+									<region>NJ</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vincent</forename><surname>Pelletier</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Princeton University</orgName>
+								<address>
+									<postCode>08544</postCode>
+									<settlement>Princeton</settlement>
+									<region>NJ</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Paul</forename><forename type="middle">M</forename><surname>Chaikin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Princeton University</orgName>
+								<address>
+									<postCode>08544</postCode>
+									<settlement>Princeton</settlement>
+									<region>NJ</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><forename type="middle">A</forename><surname>Huse</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Princeton University</orgName>
+								<address>
+									<postCode>08544</postCode>
+									<settlement>Princeton</settlement>
+									<region>NJ</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Landau levels in the case of two degenerate coupled bands: kagomé lattice tight-binding spectrum</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-11-09">November 9, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">36F1E00299C714D1037BA4EFE59ED4D8</idno>
+					<idno type="arXiv">arXiv:cond-mat/0210406v1[cond-mat.supr-con]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The spectrum of charged particles hopping on a kagomé lattice in a uniform transverse magnetic field shows an unusual set of Landau levels at low field. They are unusual in two respects: the lowest Landau levels are paramagnetic so their energies decrease linearly with increasing field magnitude, and the spacings between the levels are not equal. These features are shown to follow from the degeneracy of the energy bands in zero magnetic field. We give a general discussion of Landau levels in the case of two degenerate bands, and show how the kagomé lattice tight-binding model includes one special case of this more general problem. We also discuss the consequences of this for the behavior of the critical temperature of a kagomé grid superconducting wire network, which is the experimental system that originally motivated this work.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The behavior of electrons in a two-dimensional periodic structure immersed in an external magnetic field has been a subject of special interest over the past two decades ever since Hofstadter's graphical solution for square lattice <ref type="bibr" target="#b0">1</ref> . The competition between the periodic potential imposed by the lattice structure and the length scale provided by the magnetic field leads to frustration in the system and to intricate, detailed, and self-similar features for the subband spectrum of single-particle eigenenergies. The magnetic-field-induced frustration in two-dimensional structures has also been a subject of active experimental study using superconducting wire networks <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3</ref> , as the linearized Ginzburg-Landau equation for the superconductor and the Schrodinger equation for the tight-binding electron wavefunction in these lattices share the same form <ref type="bibr" target="#b3">4</ref> . The investigation of a variety of structures, such as the triangular lattice <ref type="bibr" target="#b4">5</ref> , the honeycomb lattice <ref type="bibr" target="#b5">6</ref> , and recently the T 3 or dice lattice <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> , has revealed the richness and the beauty of physics in these systems.</p><p>In this paper, we present our study of the Landau subband spectrum of the kagomé lattice, whose distinguishing degenerate ground state has attracted extensive attention over the last decade. The kagomé lattice is a two-dimensional lattice of corner-sharing triangles (Fig. <ref type="figure">1(a)</ref>). The nearest-neighbor-coupled Heisenberg antiferromagnet system on a kagomé lattice has been shown to have an infinite number of classical ground states, which give rise to a zero temperature extensive entropy <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10</ref> . However this degeneracy may be partially lifted by quantum or thermal fluctuations <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> . This so-called order from disorder mechanism <ref type="bibr" target="#b13">14</ref> selects the states with the largest fluctuations (thus the highest entropy or the lowest zeropoint energy), which often are more ordered states.</p><p>Experimentally, kagomé systems have been previously studied in the context of adsorbed <ref type="bibr" target="#b2">3</ref> He on graphite at millikelvin temperature <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16</ref> , and the layered oxide SrCr 8-x Ga 4+x O 19 <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b16">17</ref> . Our recent experimental studies <ref type="bibr" target="#b17">18</ref> of nearly perfect kagomé structures using superconducting wire networks show interesting and complex phase boundaries between the normal and superconducting states, which agree well with Y.L. Lin and F. Nori's mean-field calculation based on quantum interference <ref type="bibr" target="#b19">19</ref> . This work shows that a frustrated ground state exists at a magnetic field of one half of a flux quantum per triangular plaquette.</p><p>The lowest energy states of a charged particle in a nondegenerate band become Landau levels when a small magnetic field B is added. The energies of these Landau levels increase linearly in |B|; the currents in these states are diamagnetic. The consequence of this for the critical temperature T c of a periodic superconducting grid is a local maximum in T c at certain rational values of the magnetic flux per unit cell (including, of course, zero magnetic field), with T c decreasing linearly in the magnitude of the change of the field away from these special values, as has been observed in experiments on various types of wire grids and Josephson-junction arrays. For the frustrated kagomé grid, on the other hand, there are two bands of lowest energy states, and the currents in the resulting lowest Landau level of the tight-binding model are instead paramagnetic and the state's energy decreases linearly in |B|. This results in a minimum in T c vs. field at the frustrating value of one-half of a flux quantum per triangular plaquette, as is seen experimentally in the kagomé superconducting grids at this frustrating value of the applied field.</p><p>Thus from the specific kagomé lattice tight-binding model, we are led to consider the general case of Landau levels in a small magnetic field with two degenerate bands. In this paper we examine this more general problem first, and then show how the kagomé lattice spectrum reduces to a special case, which can be readily solved analytically. We have also obtained extensive numerical results for the kagomé tight-binding spectrum, which agree well with our analytic results. We conclude with a discussion of the kagomé grid superconducting wire networks that motivated this work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. TWO-BAND LANDAU LEVELS</head><p>Here we will explore a generalization of the usual Landau levels for a charged particle moving in two dimensions in a uniform magnetic field. The new case we consider is where the particle in zero field has two bands that are degenerate at zero momentum. This is the case in the kagomé lattice tight-binding model.</p><p>What are the "rules" we will use to generalize the usual one-band case? The particle is moving in two dimensions. We look in the continuum limit of low momentum p, so only look at the energy to order p 2 . At this order in p, the spectrum of the particle's states in zero magnetic field (B = 0) is assumed to be isotropic in momentum space, reflecting an underlying system that has at least three-fold rotational symmetry. The system is timereversal invariant for B = 0 and the spectrum depends only on |B|, not on the sign of B. (Because the motion is two-dimensional, only the normal component of the magnetic field enters.)</p><p>For a single band, the only Hamiltonian that satisfies all these constraints is the usual</p><formula xml:id="formula_0">H = Π 2 /(2m * ), where Π = p - q c A (1.1)</formula><p>is the gauge-invariant momentum. In a small uniform magnetic field, this gives the usual spectrum of equally-spaced Landau levels E n = ω c (n + 1 2 ), with ω c = |qB|/(m * c). The currents are diamagnetic for these standard Landau levels.</p><p>If instead we have two bands that are degenerate at p = 0 for B = 0, then in addition to the momentum, the single-particle states are labelled by a band index, which may be treated as a spin-1/2. The general Hamiltonian in this case consists of Hermitian 2 × 2 (Pauli) matrices operating on the band index and Hermitian quadratic combinations of Π x and Π y . In addition to the zero-angular momentum combination Π 2 that is allowed in the one-band case, there are two Hermitian operators quadratic in Π with angular momentum two: Π x Π y + Π y Π x and Π 2</p><p>x -Π 2 y , as well as the magnetic field itself, which is proportional to the operator combination i(Π x Π y -Π y Π x ).</p><p>We have a number of constraints that restrict our choice of Hamiltonian; let us first look at the simpler case of B = 0. The general Hermitian Hamiltonian that is quadratic in p is</p><formula xml:id="formula_1">H = 3 i=0 σ i E i (p) ,<label>(1.2)</label></formula><p>where the σ i are the Pauli matrices, with σ 0 the identity matrix, and the E i are real quadratic functions of p. This is readily diagonalized, with the resulting eigenenergies</p><formula xml:id="formula_2">E ± (p) = E 0 ± E 2 1 + E 2 2 + E 2 3 . (1.3)</formula><p>Our restriction that the B = 0 spectrum is rotationally invariant then dictates that E 0 (p) = d 0 p 2 and</p><formula xml:id="formula_3">E 2 1 + E 2 2 + E 2 3 = d 2 2 p 4 ,<label>(1.4)</label></formula><p>with d 0 , d 2 real constants. Another way of writing the Hamiltonian which explicitly breaks it into its parts with orbital angular momentum quantum numbers m o = 0, ±2 is</p><formula xml:id="formula_4">H = d 0 σ 0 p 2 + z • σp 2 + (x -iy) • σ(p x + ip y ) 2 + (x + iy) • σ(p x -ip y ) 2 ,<label>(1.5)</label></formula><p>where x, y and z are real 3-vectors in the space spanned by the 3 Pauli matrices, σ 1 , σ 2 , σ 3 . Eq.(1.4) requires that these three vectors form a mutually orthogonal triad, with x and y being of equal magnitude. Thus we may choose the basis for the band index so that this triad x, y and z are parallel to the 1, 2 and 3 axes, respectively. This leaves a three real parameter family of B = 0 two-band Hamiltonians:</p><formula xml:id="formula_5">H = d 0 σ 0 p 2 + d 3 σ 3 p 2 + d 1 (σ -(p x + ip y ) 2 + σ + (p x -ip y ) 2 ) ,<label>(1.6)</label></formula><p>where σ ± = (σ 1 ± iσ 2 )/2 are the usual raising and lowering operators. The spectrum is rotationally invariant, as we required:</p><formula xml:id="formula_6">E ± (p) = p 2 (d 0 ± d 2 1 + d 2 3 ) .<label>(1.7)</label></formula><p>An important observation about this Hamiltonian Eq.(1.6) is that it conserves a total angular momentum, provided that we define the particles in the bands to have an "internal" angular momentum whose quantum number m i = ±1 is the eigenvalue of σ 3 in this basis. [We will see below that such an "internal" angular momentum m i = ±1 within each unit cell does indeed exist for the low-energy, low-momentum states of the kagomé lattice tight-binding model.] The operators σ ± then raise/lower the internal angular momentum by 2 quanta, while (p x ± ip y ) 2 raise/lower the orbital angular momentum by the same amount. Note that the operators (p x ± ip y ) are not simply the usual orbital angular momentum raising and lowering operators L ± ; in addition to changing the orbital angular moentum they also change the radial wavefunctions. If neither band has negative energy states at B = 0, so the ground state is at E = 0, this corresponds to d 0 ≥ d 2 1 + d 2 3 ≥ 0. Now when we add the uniform magnetic field, the momentum operator p becomes the gauge-invariant combination Π = p -q c A. For B = 0 the two components of Π are noncommuting variables with a c-number commutator proportional to the magnetic field:</p><formula xml:id="formula_7">[Π x , Π y ] = i qB c .<label>(1.8)</label></formula><p>Thus we can make harmonic-oscillator-type raising and lowering operators a † and a such that</p><formula xml:id="formula_8">Π x = |qB| 2c (a † + a) (1.9)</formula><p>and</p><formula xml:id="formula_9">Π y = isign(qB) |qB| 2c (a † -a) .</formula><p>(1.10)</p><p>Since the magnetic field itself is quadratic in Π (Eq.(1.8)), a term linear in B may also be added to the Hamiltonian. This term may not contain the identity Pauli matrix, or it will generate a spectrum that is not invariant under inverting B, but it is otherwise unrestricted. Thus we end up with the general two-band Hamiltonian satisfying all our "rules":</p><formula xml:id="formula_10">H = (d 0 σ 0 + d 3 σ 3 )Π 2 + d 1 (σ -(Π x + iΠ y ) 2 + σ + (Π x -iΠ y ) 2 ) + Bb • σ ,<label>(1.11)</label></formula><p>where b is a real 3-vector. At this point let us note that the current density operator for this Hamiltonian</p><formula xml:id="formula_11">J = -c ∂H ∂A (1.12)</formula><p>contains, in additional to conventional-looking terms, a term proportional to d 1 that is offdiagonal in the band index and linear in the gauge-invariant momentum Π. It is this term that allows Landau levels involving both bands to exhibit paramagnetic currents. These currents arise from an "interference" between the amplitude in one band and the gradient of the amplitude in the other.</p><p>The transformation between the Π operators and the raising and lowering operators a and a † is singular at B = 0, so it is simplest to just consider one sign of qB at a time. In fact it is for qB &lt; 0 that the raising and lowering operators a and a † also raise and lower the orbital angular momentum, so let's do that case. Since we are motivated by superconductors we will take B &gt; 0 and q = -e * = -2e &lt; 0. This yields</p><formula xml:id="formula_12">H = B[ e * c (d 0 σ 0 + d 3 σ 3 )(2a † a + 1) + 2 e * d 1 c (σ -(a † ) 2 + σ + a 2 ) + b • σ] . (1.13)</formula><p>When the 1 or 2 components of b are nonzero, this introduces terms that flip the band index without changing the orbital angular momentum, so do not conserve total angular momentum. We have not found a closed-form solution for this general case, but for the kagomé lattice problem we are considering, these terms are not present. In this case, b 1 = b 2 = 0, the total angular momentum is conserved. The orbital angular momentum quantum number m o is also the eigenvalue of the number operator a † a and is restricted to be nonnegative for the case qB &lt; 0 that we are now considering. Thus for total angular momentum m of 0 or -1, there is just one state, with internal angular momentum quantum number m i = -1 and The resulting Landau levels are in general not equally spaced in energy, and even when there are no negative energy states at B = 0, some of the Landau levels may be at negative energy for B = 0, and thus paramagnetic. Now will look at the kagomé tight-binding model, and show that in the low-momentum limit it realizes this two-band Hamiltonian in the simple case of d 0 = d 1 &gt; 0, d 3 = 0, and b = 0.</p><formula xml:id="formula_13">m o = m + 1. For m i + m o = m &gt; 0,</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. KAGOM É TIGHT-BINDING SPECTRUM IN ZERO FIELD</head><p>The kagomé lattice is a two dimensional periodic array of corner-sharing triangles with three sites per unit cell. As illustrated in Fig. <ref type="figure">1</ref>(a), a is the triangle edge length, A,B and C denote the three sites in a unit cell . The unit cell can be taken as a rhombus of side 2a with angles 2π 3 and π 3 at its vertices. In the reciprocal space k = (k x , k y ), the first Brillouin zone is a hexagon with a side length of 2π 3a . Some points on the edge of the first Brillouin zone are shown in Fig. <ref type="figure">1</ref></p><formula xml:id="formula_14">(b): F ( π √ 3a , 0) and G( π √ 3a , π 3a )</formula><p>, and H(0, 2π 3a ). We first consider the tight-binding model for a particle making nearest-neighbor hops on the kagomé lattice in zero magnetic field. The hopping matrix element is t &gt; 0. This problem is readily diagonalized. Since there are three sites per unit cell, there are three bands of simultaneous eigenstates of the tight-binding Hamiltonian and the crystal momentum:</p><formula xml:id="formula_15">ǫ 1 (k) = ǫ 0 -2t, ǫ 2,3 (k) = ǫ 0 + t ± t 1 + 4 cos 2 (k y a) + 4 cos(k y a) cos( √ 3k x a) 1/2 , (2.1)</formula><p>where ǫ 0 is the on-site energy of the orbitals. For simplicity, let us set t = 1 and ǫ 0 = 0. The spectrum of the second two bands (ǫ 2 , ǫ 3 ) ranges over the interval [-2, +4] and the edges of this interval are reached for k = 0. Close to k = 0, these two bands are parabolic with an isotropic effective mass. This effective mass is negative m * = -2 /(2ta 2 ) at the top of the upper band at ǫ = 4. These two dispersive bands also touch at "Dirac points" at all the corners of the first Brillouin zone (such as G and H in Fig. <ref type="figure">1</ref></p><formula xml:id="formula_16">(b)), at energy ǫ 2 = ǫ 3 = 1.</formula><p>The first band is completely non-dispersive at energy ǫ 1 = -2. Thus the ground state of this particle is highly degenerate. Note also that the bottom of the lower dispersive band is also degenerate with this flat band at k = 0. Thus here at k = 0 and ǫ = -2 we have two degenerate bands of precisely the type discussed in the previous section of this paper. Since one band is flat, we have</p><formula xml:id="formula_17">d 0 = d 2 1 + d 2 3</formula><p>, in the notation of the previous section. The dispersive band, to quadratic order in the momentum, has energy ǫ(k) -ǫ(0) = tk 2 a 2 , so we have</p><formula xml:id="formula_18">d 0 = d 2 1 + d 2 3 = ta 2 /(2 2</formula><p>). Some of the degenerate ground states with ǫ = -2 in zero magnetic field are shown in Fig. <ref type="figure">2</ref>. Fig. <ref type="figure">2</ref>(a) and (b) show the states at the Brillouin zone corners, while Fig. <ref type="figure">2(c)</ref> and<ref type="figure">(d)</ref> show the two degenerate states at the zone center with k = 0. For small magnetic field, the lowest Landau levels are composed of linear combinations of smooth envelopes times these latter two k = 0 states. The two states shown are the eigenstates of the band operator σ 3 . By looking at their wavefunctions within a unit cell (one triangle) we can see that σ 3 does indeed measure an "internal" angular momentum that has the two possible values m i = ±1 in this case, as anticipated above.</p><p>We can further anticipate the results of applying a magnetic field by considering just these states. In the absence of coupling between the bands (i.e., for d 1 = 0), the states at the bottom of the bands are Landau quantized in the standard fashion, and their energy thus increases linearly with |B|. On the other hand, the degeneracy between the bands is split by the matrix element of the perturbation (d 1 ) that couples them. In the present case this perturbation is also linearly proportional to |B|. Thus whether the lowest-energy states increase or decrease in energy depends on the relative magnitudes of the coupling matrix element and the effective band masses. In terms of currents, a charged particle (here, a Cooper pair) in a given one-band Landau level has a quantized diamagnetic dipole moment that is independent of field. Its energy in a field thus increases with |B|. For this specific kagomé lattice case, the wavefunctions within one unit cell also have currents and dipole moments as in figure <ref type="figure">2 c</ref> and<ref type="figure">d</ref>. When these degenerate states are coupled by the perturbation they are admixed and this can produce paramagnetic currents. The sum of this and the Landau diamagnetic current can be either diamagnetic or paramagnetic for the lowest-energy state depending on the relative strength of the parameters. In this case we find net paramagnetism in the ground states.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. SPECTRUM IN A MAGNETIC FIELD</head><p>In the presence of a magnetic field B, the hopping term of the tight-binding Hamiltonian is modified by phase factors from the vector potential A, <ref type="bibr" target="#b21">20</ref> , i.e., t → te iγ ij , where γ ij is the phase factor between sites i and j:</p><formula xml:id="formula_19">γ ij = 2π Φ 0 j i A • dl ,<label>(3.1)</label></formula><p>where Φ 0 = hc/e * is the flux quantum. The (tight-binding) Schrödinger equation in a magnetic field is thus the finite-difference equation:</p><formula xml:id="formula_20">ǫφ i = t j e iγ ij φ j ,<label>(3.2)</label></formula><p>where the sum is over all the nearest neighbors of site i. It is convenient to measure the magnetic field in units of the flux quantum per elementary triangular plaquette of the kagomé lattice. The flux through one triangle is Φ = √ 3 4 Ba 2 . Thus the "filling ratio", namely the fraction of a flux quantum through each triangle is</p><formula xml:id="formula_21">f = Φ Φ 0 = √ 3 4</formula><p>Be * a 2 hc .</p><p>(3.</p><p>3)</p><p>The flux through an elementary hexagon is six times this, 6f Φ 0 , while the total flux through a unit cell of the kagomé lattice is 8f Φ 0 . When f is a rational number that can be written as 8f = k/n, where k and n are integers with no common factors, the total flux through n unit cells of the kagomé lattice is an integer multiple of Φ 0 . Then with this magnetic field, a gauge can be chosen so that the Hamiltonian has a discrete translational invariance with a unit cell containing n unit cells of the kagomé lattice, and thus 3n sites. The spectrum of the Hamiltonian then consists of 3n bands. These can be obtained numerically for any such rational f (for n not too large); an implementation of this is detailed in Yi Xiao's Ph.D. thesis. <ref type="bibr" target="#b22">21</ref> The resulting spectrum, namely the kagomé version of "Hofstadter's butterfly", is shown in Fig. <ref type="figure" target="#fig_2">3</ref>.</p><p>The spectrum has various symmetries: It is only the flux modulo the flux quantum that affects the spectrum, so if f is changed to f + j with j any integer, the spectrum is unchanged. The spectrum is also unchanged on changing f to -f , because if ψ is an eigenstate with energy ǫ for field f , then its complex conjugate ψ * is an eigenstate with the same energy ǫ for field -f . These two symmetries are not special to the kagomé lattice. The third symmetry is that if f is changed to f + 1 2 , this is the same as changing t to -t, so the spectrum is inverted. Thus the highest energy states for field near f = <ref type="bibr" target="#b0">1</ref> 2 are equivalent to the lowest energy states near zero field. We will look at the behavior near zero field, but because of this last symmetry, what we find also applies near f = 1 2 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. LANDAU LEVELS IN THE KAGOM É LATTICE NEAR ZERO FIELD</head><p>For small magnetic field, the spectrum of the kagomé lattice tight-binding Hamiltonian shows standard equally-spaced Landau levels near the top of the bands, as shown in Fig. <ref type="figure" target="#fig_3">4</ref>. Here there is just the one band in zero field, with negative effective mass m * = -2 /(2ta 2 ). The resulting Landau levels, to linear order in the field, should therefore have energy</p><formula xml:id="formula_22">ǫ = t(4 - 16π √ 3 |f |(n + 1 2 )) .<label>(4.1)</label></formula><p>The numerical results for this portion of the spectrum are shown in Fig. <ref type="figure" target="#fig_3">4</ref> for f ≥ 1 120 . The first few Landau levels are clearly seen, and the asymptotic slopes at small f given by Eq.(4.1) are shown for comparison for the first 5 Landau levels. At these values of f the fit is not wonderful, but it does seem to be improving with decreasing f , as it should.</p><p>More interesting is the bottom of the zero-field spectrum, where there are two degenerate bands. This results in non-standard Landau levels when the field is turned on, as discussed above. An expanded view of this part of the spectrum is shown in Fig. <ref type="figure">5</ref>. It shows some Landau levels whose energies are increasing linearly with field, as is normal, but these levels are not equally-spaced. In addition there are many states whose energies decrease as the field is increased. These latter states are the unusual feature we focus on here. Note that because of the symmetry of the spectrum discussed above, the same features appear at the top of the spectrum near the frustrating value of the magnetic field of f = 1/2.</p><p>In the one-band case, knowing the effective mass in zero field and the charge is enough to determine the Landau level spectrum to linear order in the magnetic field. For the two-band case, on the other hand, (eq. 1.11) there is possibly the Bb • σ term, which vanishes at zero field, so to determine the values of the three parameters making up b for the kagomé tight-binding model, we cannot rely only on our knowledge of the zero-field spectrum. So we will now treat the low-momentum behavior to lowest order in the field. What we will find is that b = 0 and d 3 = 0.</p><p>The unit cell of the kagomé lattice contains 3 sites around a triangle. We choose a set of 3 basis states within this unit cell that respect as much as possible the three-fold rotational symmetry of this system about the center of the triangle. The wavefunction of a state is a complex number defined at each lattice point, but only its gauge-invariant properties are physical. These are the magnitude of the wavefunction, and the gauge-invariant phase differences between adjacent lattice points. For any wavefunction defined at the corners of the triangle in one unit cell, the total guage-invariant phase difference added up stepping the three steps around the triangle is 2π(f + m i ), where m i is an integer. Note m i measures the state's "internal" angular momentum. The gauge-invariant phase difference between two adjacent lattice points is only well-defined modulo 2π, so let us restrict it to lie in the interval [-π, π]. Thus the three of these phase differences added up must be in the range [-3π, 3π], and for the small fields f we consider here, this means the total guage-invariant phase difference around the triangle has to be near one of the three values: -2π, 0, or 2π and m i is either -1, 0 or 1. The basis states we will use are those where the guage-invariant phase differences are the same along all edges of the triangle, being 2π(f + m i )/3, while the amplitudes are identical at all three points. In the limit of small momentum and zero field, the upper band near energy 4t is made out of the m i = 0 states while the lower bands near energy -2t are made out of the two m i = ±1 states.</p><p>We take the tight-binding Hamiltonian and rewrite it in terms of these new basis states. This step is done in a specific Landau gauge. We then take the low-field, low-momentum limit, assuming that the (complex scalar) amplitudes of each of the basis states vary little between adjacent unit cells, so a gradient expansion can be made. The resulting three-band Hamiltonian can be written in gauge-invariant form as the matrix</p><formula xml:id="formula_23">H = t    -2 + Π 2 + B 2 -i √ 3(Π x -iΠ y ) (Π x -iΠ y ) 2 i √ 3(Π x + iΠ y ) 4 -2Π 2 i √ 3(Π x -iΠ y ) (Π x + iΠ y ) 2 -i √ 3(Π x + iΠ y ) -2 + Π 2 -B 2    ,<label>(4.2)</label></formula><p>in units where a = = 1 and Φ 0 = 2π and where the rows/columns refer to m i = +1, 0, -1 in that order. Here we have gone to the orders in Π and B that contribute to the spectrum to linear order in |B| and quadratic order in Π. Note that this continuum three-band Hamiltonian conserves total angular momentum. To reduce this to the two-band Hamiltonian for the lowest bands only, we treat the coupling to the upper band in second-order perturbation theory. This eliminates the terms linear in B in the diagonal operators in the above matrix, and the two band Hamiltonian is precisely of the form expected (1.11) with b = 0, d 3 = 0 and</p><formula xml:id="formula_24">d 0 = d 1 = ta 2 /(2 2</formula><p>). Finally, the Hamiltonian to this order is simply</p><formula xml:id="formula_25">H = t[-2 + 4πf √ 3 [σ 0 (2a † a + 1) + 2(σ -(a † ) 2 + σ + a 2 )]<label>(4.3)</label></formula><p>for f &gt; 0. This Hamiltonian conserves total angular momentum m = m o +m i . The resulting Landau level spectrum to linear order in the magnetic field is</p><formula xml:id="formula_26">ǫ ± = t(-2 + 8π √ 3 |f |(m + 1 2 ± √ m 2 + m + 1)) .<label>(4.4)</label></formula><p>For m = -1 and m = 0 there is only the one state with m i = -1, because m o cannot be negative. (There are no states with m &lt; -1.) These states' energies are given by the plus sign in the above equation; they are the two lowest standard one-band Landau levels made out of only the m i = -1 band. Since they are standard one-band Landau levels, they show diamagnetic currents. For m &gt; 0, on the other hand, both bands enter and the eigenstates are linear combinations of the (m+1)th Landau level in the m i = -1 band and the (m-1)th Landau level in the m i = 1 band. The interaction between the two bands shifts the energies strongly, with the lower energy state being pushed to below energy -2t. The lowest energy state of all is the lower energy (minus sign in the above equation for ǫ ± ) state with m = 1, which is at energy</p><formula xml:id="formula_27">ǫ min = -t(2 + 8π|f |(1 - √ 3 2 )) ∼ = -t(2 + 3.37|f |) .<label>(4.5)</label></formula><p>This state is a linear combination of the lowest Landau level (m o = 0) in the m i = 1 band and the third Landau level (m o = 2) in the m i = -1 band. And it is the interference between these two bands that allows this state to be paramagnetic, so its energy decreases with increasing |B|. The straight lines in Fig. <ref type="figure">5</ref> correspond to the lowest few of the upper (+ in Eq. 4.4) set of Landau levels. As f is decreased, the numerically obtained bands fit well to these expected Landau levels. A more detailed plot of the lower bands below ǫ = -2t is shown in Fig. <ref type="figure">6</ref>, in which this range of the spectrum is calculated for filling ratio from f = 1/16 down to f = 1/256. For a rational filling ratio f = 1/8n, where n is an integer, these lower bands consist of n -1 subbands. Counting the states, we find that in the limit of small magnetic field 1/3 of all the states are in this set of bands below ǫ = -2t, corresponding to the number of states in the flat ǫ = -2t band at zero field. The lowest few Landau levels are also indicated by the straight lines in Fig. <ref type="figure">6</ref>, and again the numerically obtained bands fit well to these as f is reduced.</p><p>To examine the very lowest Landau level in more detail, we carried out further numerical calculation of the bottom edge of the spectrum to f as low as 1/840. These results are shown in Fig. <ref type="figure">7</ref> on log-log scales. The straight line corresponds to the small f behavior, = 3.37f , derived above. As can be seen, it gives an excellent fit to the numerical results in this low field limit.</p><p>This behavior in the kagomé lattice is certainly different from the low field Landau levels of most other periodic lattices <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> , where the ground state energy increases as the magnetic field is turned on. In the case of the kagomé latice, the presence of two degenerate bands in zero field allows these unusual Landau levels to occur.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. APPLICATION TO SUPERCONDUCTING WIRE NETWORKS</head><p>The network equation for the mean-field phase boundary of a superconducting wire network, derived from linearized Ginzburg-Landau equation, has the same form as that of the tight-binding Schrodinger equation in the same geometry <ref type="bibr" target="#b3">4</ref> . For a periodic network with equal bond length a, the superconducting network equation be can expressed as</p><formula xml:id="formula_28">z cos a ξ • ψ i = j ψ j e -iγ ij (5.1)</formula><p>where ψ i is the order parameter at site i, ξ is the superconducting coherence length, z is the coordination number of the lattice, and the sum is over all nearest-neighbor sites of i.</p><p>Compared to the tight binding equation of Eq.(3.2), the correspondence between the two system is given by</p><formula xml:id="formula_29">ǫ t ⇐⇒ z cos a ξ .<label>(5.2)</label></formula><p>The superconducting transition temperature of the network in a magnetic field is given by the upper edge (for t &gt; 0) of the tight-binding spectrum. For the kagomé lattice, z = 4. The upper edge of the kagomé tight-binding spectrum is plotted in Fig. <ref type="figure" target="#fig_5">8</ref>.</p><p>For the phase boundary at the lower field limit (small f ), our previous discussion of the low field Landau levels near ǫ = 4 implies a linear relationship between the transition temperature and the magnetic field</p><formula xml:id="formula_30">∆T c (f ) ∼ ( a ξ ) 2 ∼ |f |,<label>(5.3)</label></formula><p>where ∆T c (f ) = T c (0) -T c (f ) is the suppression of the critical temperature from its zero field value.</p><p>As shown in Fig. <ref type="figure" target="#fig_5">8</ref>, strong maxima or minima in the superconducting phase boundary appear at magnetic fields f = p/8 for each integer p, which correspond to p magnetic flux quanta through each unit cell. At each of these fields, the tight-binding model is equivalent to a model in zero magnetic field with the hopping matrix elements within each unit cell being complex. Since there are three sites per unit cell, in each case there are three bands in the spectrum. When the magnetic field is changed slightly to f = p 8 + ∆f , the small added magnetic field (of either sign) splits these bands into Landau levels, just like near f = 0. For all of these fields, except the special case f = 1/2, the upper edge of the spectrum is a state at crystal momentum zero in a nondegenerate band. Thus changes in the magnetic field produce conventional Landau levels like near f = 0. This causes the upper edge of the spectrum to decrease linearly in |∆f |, resulting in a local maximum in the superconductor's transition temperature vs. field at those fields. The appearance of a local minimum in T c at f = 1/2 is due to the special degeneracy in the highest band that occurs due to the magnetic frustration at that field, resulting in Landau levels whose energy moves linearly away from the band center as the field is changed from this special value, as discussed above.</p><p>A local minimum in T c vs. field also occurs at f = 1/2 in the so-called T 3 or dice lattice <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> , but for quite different reasons from the kagomé lattice case. The dice lattice is the dual to the kagomé lattice. Its elementary plaquettes are all rhombuses, and f is the number of flux quanta passing through each such rhombic plaquette. Like the kagomé lattice, the dice lattice has three sites per unit cell. At f = 1/2 in this dice lattice, the spectrum consists of three dispersionless (infinite mass) bands <ref type="bibr" target="#b6">7</ref> , with no degeneracy between the bands. For the dice lattice, the linear dependence of the upper edge of the spectrum on field near f = 1/2 arises not from the formation of Landau levels, but from an "orbital Zeeman effect". States with nonzero net magnetic moments of either sign and localized to just a few lattice sites can be formed out of the highest energy states at f = 1/2. The magnetic moments are due to currents circulating around the plaquettes and cause these states to have energies that depend linearly on the magnetic field. Although the kagomé latice spectrum also has such a dispersionless band at f = 1/2, the localized states that can be made from this band in the kagomé case have no net magnetic moment and thus no such orbital Zeeman effect.     </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc>on the other hand, there are two states, with m i = ±1. If b 1 = b 2 = 0 so that m is conserved, the Hamiltonian then reduces to a simple 2×2 matrix.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 1 . 3 2 3 2FIG. 2 .</head><label>1332</label><figDesc>FIGURES</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 3 .</head><label>3</label><figDesc>FIG.3. Spectrum of the kagomé lattice tight-binding model in a uniform magnetic field. Here and in the following figures the energy is in units of t. The filling ratio f is the fraction of a magnetic flux quantum passing through each elementary triangle of the kagomé lattice.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIG. 4 .</head><label>4</label><figDesc>FIG.4. Energy spectrum for Landau levels near ǫ = 4t. The small f behavior of the levels corresponding to n = 0, 1, 2, 3, 4 are indicated here as solid lines.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIG. 5 .FIG. 6 .FIG. 7 .</head><label>567</label><figDesc>FIG.5. Lower subband structure close to ǫ = -2t. The calculated small f behavior of some of the Landau levels are indicated by the straight lines here.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 8 .</head><label>8</label><figDesc>FIG.8. Upper edge of the kagomé lattice tight-binding spectrum for t &gt; 0. The mean-field transition temperature T c of a kagomé wire-grid superconductor is linearly related to ǫ, so T c has a minimum at filling ratio f = 1/2.</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>We thank <rs type="person">Duncan Haldane</rs>, <rs type="person">Mark J. Higgins</rs>, <rs type="person">Shobo Bhattacharya</rs>, <rs type="person">Kyungwha Park</rs>, <rs type="person">Marc Schreiber</rs>, <rs type="person">Yeong-Lieh Lin</rs> and <rs type="person">Franco Nori</rs> for helpful discussions. This work was supported by <rs type="funder">NSF</rs> Grants No. <rs type="grantNumber">DMR 98-09483</rs> , <rs type="grantNumber">98-02468</rs>, <rs type="grantNumber">99-76576</rs> and <rs type="grantNumber">02-13706</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_fgCwYek">
+					<idno type="grant-number">DMR 98-09483</idno>
+				</org>
+				<org type="funding" xml:id="_QDDyAEv">
+					<idno type="grant-number">98-02468</idno>
+				</org>
+				<org type="funding" xml:id="_5HgYBg3">
+					<idno type="grant-number">99-76576</idno>
+				</org>
+				<org type="funding" xml:id="_vQ34N4q">
+					<idno type="grant-number">02-13706</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Hofstadter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">2239</biblScope>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Pannetier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chaussy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. (Paris)</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page">853</biblScope>
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Coherence in superconducting networks</title>
+		<author>
+			<persName><surname>See</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica 152B</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Mooij</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">G</forename><forename type="middle">B J</forename><surname>Schön</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Alexander</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">1541</biblScope>
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Claro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Wannier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">6068</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Physique</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page">1345</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vidal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mosseri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Douçot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">5888</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Pannetier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Abilio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Serret</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Th</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fournier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Butaud</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vidal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica C</title>
+		<imprint>
+			<biblScope unit="volume">352</biblScope>
+			<biblScope unit="page">411</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Elser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">2405</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ritchey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Coleman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">15342</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Chalker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C W</forename><surname>Holdsworth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Shender</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">855</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Huse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Rutenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page">7536</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Reimers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Berlinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page">9539</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Villian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bidaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Carton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Conte</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">1263</biblScope>
+			<date type="published" when="1980">1980</date>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Greywall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Busch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">1868</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Greywall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Busch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">2788</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">For a brief review of this work, see A. P. Ramirez</title>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">5952</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Higgins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhattacharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Chaikin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sethuraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bojko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Spencer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page">R894</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Huse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Chaikin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Higgins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhattacharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Spencer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">214503</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y.-L</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Nori</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page">15953</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint/>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Peierls</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Phys</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page">763</biblScope>
+			<date type="published" when="1933">1933</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Princeton</forename><surname>Univ</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Physics Dept. Ph.D. thesis</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

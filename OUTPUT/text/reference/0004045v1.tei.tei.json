@@ -1,0 +1,383 @@
+{
+  "paper_id": "75B2B943D9B0356B6798EA3E91759519",
+  "title": "Valence Bond Ground States in Quantum Antiferromagnets and Quadratic Algebras",
+  "arxiv_id": "arXiv:cond-mat/0004045v1[cond-mat.stat-mech]",
+  "authors": [
+    {
+      "given": "F C",
+      "family": "Alcaraz"
+    },
+    {
+      "given": "V",
+      "family": "Rittenberg"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Physics Reports",
+      "container_title": "Physics Reports",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Derrida"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "J. Phys. A",
+      "container_title": "J. Phys. A",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F C",
+          "family": "Alcaraz"
+        },
+        {
+          "given": "S",
+          "family": "Dasmahapatra"
+        },
+        {
+          "given": "V",
+          "family": "Rittenberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Commun. Math. Phys",
+      "container_title": "Commun. Math. Phys",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Affleck"
+        },
+        {
+          "given": "T",
+          "family": "Kennedy"
+        },
+        {
+          "given": "E H",
+          "family": "Lieb"
+        },
+        {
+          "given": "H",
+          "family": "Tasaki"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D P",
+          "family": "Arovas"
+        },
+        {
+          "given": "A",
+          "family": "Auerbach"
+        },
+        {
+          "given": "F D M",
+          "family": "Haldane"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Commun. Math. Phys",
+      "container_title": "Commun. Math. Phys",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Fannes"
+        },
+        {
+          "given": "B",
+          "family": "Nachtergaele"
+        },
+        {
+          "given": "R F",
+          "family": "Werner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Europhys. Lett",
+      "container_title": "Europhys. Lett",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Kluemper"
+        },
+        {
+          "given": "A",
+          "family": "Schadschneider"
+        },
+        {
+          "given": "J",
+          "family": "Zittarz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Ostlund"
+        },
+        {
+          "given": "S",
+          "family": "Rommer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "other",
+          "value": "cond-mat/9802150"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J M",
+          "family": "Roman"
+        },
+        {
+          "given": "G",
+          "family": "Sierra"
+        },
+        {
+          "given": "J",
+          "family": "Dukelsky"
+        },
+        {
+          "given": "M A",
+          "family": "Martin-Delgado"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Leningrad. Math. J",
+      "container_title": "Leningrad. Math. J",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Yu"
+        },
+        {
+          "given": "L A",
+          "family": "Reshetikhin"
+        },
+        {
+          "given": "L D",
+          "family": "Takhtadzyan"
+        },
+        {
+          "given": null,
+          "family": "Faddeev"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "J. Phys. A",
+      "container_title": "J. Phys. A",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M T",
+          "family": "Batchelor"
+        },
+        {
+          "given": "L",
+          "family": "Mezincescu"
+        },
+        {
+          "given": "R I",
+          "family": "Nepomechie"
+        },
+        {
+          "given": "V",
+          "family": "Rittenberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Int. J. Mod. Phys. B",
+      "container_title": "Int. J. Mod. Phys. B",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Schlottmann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "A. A. Ovchinnikov, Mod. Phys. Lett",
+      "container_title": "A. A. Ovchinnikov, Mod. Phys. Lett",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F C",
+          "family": "Alcaraz"
+        },
+        {
+          "given": "R Z",
+          "family": "Bariev"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Dagotto"
+        },
+        {
+          "given": "T M",
+          "family": "Rice"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Statistical Models, Yang-Baxter Equations and Related Topics",
+      "container_title": "Statistical Models, Yang-Baxter Equations and Related Topics",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G M",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "J. Phys. A",
+      "container_title": "J. Phys. A",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Krebs"
+        },
+        {
+          "given": "S",
+          "family": "Sandow"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "other",
+          "value": "cond-mat/9910452"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Krebs"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "J. Phys. A",
+      "container_title": "J. Phys. A",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Arndt"
+        },
+        {
+          "given": "V",
+          "family": "Rittenberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Scheunert"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Allen"
+        },
+        {
+          "given": "F",
+          "family": "Essler"
+        },
+        {
+          "given": "A",
+          "family": "Nersesyan"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

@@ -1,0 +1,395 @@
+{
+  "paper_id": "44E39CB0165B1C352C6462E80D391ABD",
+  "title": "Magnetization plateaus in antiferromagnetic-(ferromagnetic) n polymerized S = 1/2 XXZ chains",
+  "arxiv_id": "arXiv:cond-mat/0005544v1[cond-mat.stat-mech]",
+  "authors": [
+    {
+      "given": "Wei",
+      "family": "Chen"
+    },
+    {
+      "given": "Kazuo",
+      "family": "Hida"
+    },
+    {
+      "given": "B C",
+      "family": "Sanctuary"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Oshikawa"
+        },
+        {
+          "given": "M",
+          "family": "Yamanaka"
+        },
+        {
+          "given": "I",
+          "family": "Affleck"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Hida"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Solid State Commun",
+      "container_title": "Solid State Commun",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Okamoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Tonegawa"
+        },
+        {
+          "given": "T",
+          "family": "Nakao"
+        },
+        {
+          "given": "M",
+          "family": "Kaburagi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Phys. Lett. A",
+      "container_title": "Phys. Lett. A",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Totsuka"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Totsuka"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Sakai"
+        },
+        {
+          "given": "M",
+          "family": "Takahashi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "J. Phys. Jpn",
+      "container_title": "J. Phys. Jpn",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Nakano"
+        },
+        {
+          "given": "M",
+          "family": "Takahashi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "J. Phys. Condens. Matter",
+      "container_title": "J. Phys. Condens. Matter",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Kitazawa"
+        },
+        {
+          "given": "K",
+          "family": "Okamoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "J. Phys. A: Gen",
+      "container_title": "J. Phys. A: Gen",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Okamoto"
+        },
+        {
+          "given": "A",
+          "family": "Kitazawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [
+        {
+          "type": "other",
+          "value": "cond-mat/9907481"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Okamoto"
+        },
+        {
+          "given": "A",
+          "family": "Kitazawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Physica",
+      "container_title": "Physica",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Narumi"
+        },
+        {
+          "given": "M",
+          "family": "Hagiwara"
+        },
+        {
+          "given": "R",
+          "family": "Sato"
+        },
+        {
+          "given": "K",
+          "family": "Kindo"
+        },
+        {
+          "given": "H",
+          "family": "Nakano"
+        },
+        {
+          "given": "M",
+          "family": "Takahashi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Shiramura"
+        },
+        {
+          "given": "K",
+          "family": "Takatsu"
+        },
+        {
+          "given": "B",
+          "family": "Kurniawan"
+        },
+        {
+          "given": "H",
+          "family": "Tanaka"
+        },
+        {
+          "given": "H",
+          "family": "Uekusa"
+        },
+        {
+          "given": "Y",
+          "family": "Ohashi"
+        },
+        {
+          "given": "K",
+          "family": "Takizawa"
+        },
+        {
+          "given": "H",
+          "family": "Mitamura"
+        },
+        {
+          "given": "T",
+          "family": "Goto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys.Rev. B",
+      "container_title": "Phys.Rev. B",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Hida"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "J. Phys. Jpn",
+      "container_title": "J. Phys. Jpn",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Hida"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "J. Phys. Jpn",
+      "container_title": "J. Phys. Jpn",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Hida"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "J. Math. Phys",
+      "container_title": "J. Math. Phys",
+      "year": "1955",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Shanks"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "J. Phys. A: Math. Gen",
+      "container_title": "J. Phys. A: Math. Gen",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Nomura"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "J. Phys. A.: Math. Gen",
+      "container_title": "J. Phys. A.: Math. Gen",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Nomura"
+        },
+        {
+          "given": "A",
+          "family": "Kitazawa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "J. Phys. Soc. Jpn",
+      "container_title": "J. Phys. Soc. Jpn",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Ajiro"
+        },
+        {
+          "given": "T",
+          "family": "Asano"
+        },
+        {
+          "given": "T",
+          "family": "Inami"
+        },
+        {
+          "given": "H",
+          "family": "Aruga-Katori"
+        },
+        {
+          "given": "T",
+          "family": "Goto"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

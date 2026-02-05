@@ -1,0 +1,653 @@
+{
+  "paper_id": "757DEEAE8F765E0C7A56BA971647F4AA",
+  "title": "Batch Normalized Recurrent Neural Networks",
+  "arxiv_id": "arXiv:1510.01378v1[stat.ML]",
+  "authors": [
+    {
+      "given": "César",
+      "family": "Laurent"
+    },
+    {
+      "given": "Gabriel",
+      "family": "Pereyra"
+    },
+    {
+      "given": "Ying",
+      "family": "Zhang"
+    },
+    {
+      "given": "Yoshua",
+      "family": "Bengio"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Batch normalization: Accelerating deep network training by reducing internal covariate shift",
+      "container_title": "Batch normalization: Accelerating deep network training by reducing internal covariate shift",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1502.03167"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Sergey",
+          "family": "Ioffe"
+        },
+        {
+          "given": "Christian",
+          "family": "Szegedy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Acoustics, Speech and Signal Processing (ICASSP)",
+      "container_title": "Acoustics, Speech and Signal Processing (ICASSP)",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alan",
+          "family": "Graves"
+        },
+        {
+          "given": "Abdel-Rahman",
+          "family": "Mohamed"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Quoc",
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Neural machine translation by jointly learning to align and translate",
+      "container_title": "Neural machine translation by jointly learning to align and translate",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.0473"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Statistical language models based on neural networks",
+      "container_title": "Statistical language models based on neural networks",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomáš",
+          "family": "Mikolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Scaling recurrent neural network language models",
+      "container_title": "Scaling recurrent neural network language models",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1502.00512"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Will",
+          "family": "Williams"
+        },
+        {
+          "given": "Niranjani",
+          "family": "Prasad"
+        },
+        {
+          "given": "David",
+          "family": "Mrva"
+        },
+        {
+          "given": "Tom",
+          "family": "Ash"
+        },
+        {
+          "given": "Tony",
+          "family": "Robinson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Deepspeech: Scaling up end-to-end speech recognition",
+      "container_title": "Deepspeech: Scaling up end-to-end speech recognition",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.5567"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Awni",
+          "family": "Hannun"
+        },
+        {
+          "given": "Carl",
+          "family": "Case"
+        },
+        {
+          "given": "Jared",
+          "family": "Casper"
+        },
+        {
+          "given": "Bryan",
+          "family": "Catanzaro"
+        },
+        {
+          "given": "Greg",
+          "family": "Diamos"
+        },
+        {
+          "given": "Erich",
+          "family": "Elsen"
+        },
+        {
+          "given": "Ryan",
+          "family": "Prenger"
+        },
+        {
+          "given": "Sanjeev",
+          "family": "Satheesh"
+        },
+        {
+          "given": "Shubho",
+          "family": "Sengupta"
+        },
+        {
+          "given": "Adam",
+          "family": "Coates"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Efficient backprop",
+      "container_title": "Efficient backprop",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Léon",
+          "family": "Yann A Lecun"
+        },
+        {
+          "given": "Genevieve B",
+          "family": "Bottou"
+        },
+        {
+          "given": "Klaus-Robert",
+          "family": "Orr"
+        },
+        {
+          "given": null,
+          "family": "Müller"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Natural neural networks",
+      "container_title": "Natural neural networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1507.00210"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Guillaume",
+          "family": "Desjardins"
+        },
+        {
+          "given": "Karen",
+          "family": "Simonyan"
+        },
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "International Journal of Computer Vision",
+      "container_title": "International Journal of Computer Vision",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Olga",
+          "family": "Russakovsky"
+        },
+        {
+          "given": "Jia",
+          "family": "Deng"
+        },
+        {
+          "given": "Hao",
+          "family": "Su"
+        },
+        {
+          "given": "Jonathan",
+          "family": "Krause"
+        },
+        {
+          "given": "Sanjeev",
+          "family": "Satheesh"
+        },
+        {
+          "given": "Sean",
+          "family": "Ma"
+        },
+        {
+          "given": "Zhiheng",
+          "family": "Huang"
+        },
+        {
+          "given": "Andrej",
+          "family": "Karpathy"
+        },
+        {
+          "given": "Aditya",
+          "family": "Khosla"
+        },
+        {
+          "given": "Michael",
+          "family": "Bernstein"
+        },
+        {
+          "given": "Alexander C",
+          "family": "Berg"
+        },
+        {
+          "given": "Li",
+          "family": "Fei-Fei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "IEEE Transactions on",
+      "container_title": "IEEE Transactions on",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": "Kuldip K",
+          "family": "Paliwal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "How to construct deep recurrent neural networks",
+      "container_title": "How to construct deep recurrent neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.6026"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Caglar",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "On the difficulty of training recurrent neural networks",
+      "container_title": "On the difficulty of training recurrent neural networks",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1211.5063"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "The Journal of Machine Learning Research",
+      "container_title": "The Journal of Machine Learning Research",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nicol N",
+          "family": "Felix A Gers"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schraudolph"
+        },
+        {
+          "given": null,
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "The Journal of Machine Learning Research",
+      "container_title": "The Journal of Machine Learning Research",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nitish",
+          "family": "Srivastava"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        },
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Ruslan",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Recurrent neural network regularization",
+      "container_title": "Recurrent neural network regularization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.2329"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Deep Learning and Unsupervised Feature Learning NIPS 2012 Workshop",
+      "container_title": "Deep Learning and Unsupervised Feature Learning NIPS 2012 Workshop",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Frédéric",
+          "family": "Bastien"
+        },
+        {
+          "given": "Pascal",
+          "family": "Lamblin"
+        },
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "James",
+          "family": "Bergstra"
+        },
+        {
+          "given": "Ian J",
+          "family": "Goodfellow"
+        },
+        {
+          "given": "Arnaud",
+          "family": "Bergeron"
+        },
+        {
+          "given": "Nicolas",
+          "family": "Bouchard"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Blocks and Fuel: Frameworks for deep learning",
+      "container_title": "Blocks and Fuel: Frameworks for deep learning",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Van Merriënboer"
+        },
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "V",
+          "family": "Dumoulin"
+        },
+        {
+          "given": "D",
+          "family": "Serdyuk"
+        },
+        {
+          "given": "D",
+          "family": "Warde-Farley"
+        },
+        {
+          "given": "J",
+          "family": "Chorowski"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Proceedings of the workshop on Speech and Natural Language",
+      "container_title": "Proceedings of the workshop on Speech and Natural Language",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Douglas"
+        },
+        {
+          "given": "Janet M",
+          "family": "Paul"
+        },
+        {
+          "given": null,
+          "family": "Baker"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Automatic Speech Recognition and Understanding (ASRU)",
+      "container_title": "Automatic Speech Recognition and Understanding (ASRU)",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alan",
+          "family": "Graves"
+        },
+        {
+          "given": "Navdeep",
+          "family": "Jaitly"
+        },
+        {
+          "given": "Abdel-Rahman",
+          "family": "Mohamed"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "International conference on artificial intelligence and statistics",
+      "container_title": "International conference on artificial intelligence and statistics",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Xavier",
+          "family": "Glorot"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Computational linguistics",
+      "container_title": "Computational linguistics",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mary",
+          "family": "Mitchell P Marcus"
+        },
+        {
+          "given": "Ann",
+          "family": "Marcinkiewicz"
+        },
+        {
+          "given": "Beatrice",
+          "family": "Santorini"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

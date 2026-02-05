@@ -1,0 +1,565 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Enhanced hard X-ray emission from femtosecond laser irradiated microdroplets</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2018-11-21">November 21, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">M</forename><surname>Anand</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Sandhu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">S</forename><surname>Kahaly</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">G</forename><surname>Ravindra Kumar</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><surname>Krishnamurthy</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">P</forename><surname>Gibbon</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Tata Institute of Fundamental Research</orgName>
+								<address>
+									<addrLine>1 Homi Bhabha Road</addrLine>
+									<postCode>400 005</postCode>
+									<settlement>Mumbai</settlement>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">John-von-Neumann Institute for Computing</orgName>
+								<orgName type="institution" key="instit2">ZAM</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Forschungszentrum Jülich</orgName>
+								<address>
+									<postCode>D-52425</postCode>
+									<settlement>Jülich</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Enhanced hard X-ray emission from femtosecond laser irradiated microdroplets</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-11-21">November 21, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7BDBA5163CDF7CAC2388555976BF5F90</idno>
+					<idno type="arXiv">arXiv:physics/0401024v3[physics.plasm-ph]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>numbers: 52.38.Ph</term>
+					<term>52.25.Os</term>
+					<term>79.20.Ds</term>
+					<term>52.50.Jm</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>We make a comparative study of hard x-ray emission from 15 µm methanol microdroplets and a plain slab target of similar atomic composition at similar laser intensities. The hard X-ray yield from droplet plasmas is ≃ 35 times more than that obtained from solid plasmas. A prepulse that is about 10ns and about 5% of the main pulse is essential for hard x-ray generation from the droplets. A hot electron temperature of 36 keV is measured from the droplets at 8×10 14 W cm -2 ; three times higher intensity is needed to obtain similar hot electron temperature from solid plasmas with similar composition. We use 1D PIC simulation to obtain qualitative correlation to the experimental observations.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Service</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="page">154</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Remington</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page">1488</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Ditmire</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">398</biblScope>
+			<biblScope unit="page">489</biblScope>
+			<date type="published" when="1999">1999</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Cowan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">903</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Fritzler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page">3039</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Schnürer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page">3236</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Rajeev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">115002</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">G</forename><surname>Kulcsar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">5149</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">P</forename><surname>Krainov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Smirnov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rep</title>
+		<imprint>
+			<biblScope unit="volume">370</biblScope>
+			<biblScope unit="page">237</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Mc Pherson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">370</biblScope>
+			<biblScope unit="page">631</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><surname>Rymell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Hertz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Comm</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">105</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Constantinescu</surname></persName>
+		</author>
+		<title level="m">Proc. SPIE</title>
+		<meeting>SPIE</meeting>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">4146</biblScope>
+			<biblScope unit="page">101</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Donnelly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. B</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">313</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Parra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="317" to="323" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. B</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">687</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Anand</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">App. Phys. B</title>
+		<imprint />
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Anand</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">372</biblScope>
+			<biblScope unit="page">263</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">G</forename><surname>Ravindrakumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J.Phys.B</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">2981</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Sandhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">225002</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Favre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">35002</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Absorption and scattering of light by small particles</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Bohren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Huffman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Canada</title>
+		<imprint>
+			<date type="published" when="1983">1983</date>
+			<publisher>John Wiley &amp; Sons</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><surname>Matzler</surname></persName>
+		</author>
+		<ptr target="www.iapmw.unibe.ch/publications/pdffiles/201.pdf" />
+		<title level="m">Matlab functions for Mie scattering and Absorption</title>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rosen</surname></persName>
+		</author>
+		<title level="m">Proc. SPIE 1229</title>
+		<meeting>SPIE 1229</meeting>
+		<imprint>
+			<date type="published" when="1990">1990</date>
+			<biblScope unit="page">160</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Bastiani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page">7179</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Gibbon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Bell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">1535</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gibbon</surname></persName>
+		</author>
+		<ptr target="http://www.fz-juelich.de/zam/cams/plasma/BOPS/" />
+	</analytic>
+	<monogr>
+		<title level="m">The BOPS code is available online at</title>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">947</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Fill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Plasmas</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">52704</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

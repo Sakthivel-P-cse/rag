@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Proper motions of young stars in Chamaeleon II. New kinematical candidate members of Chamaeleon I and II</title>
+				<funder ref="#_dkc3WgR">
+					<orgName type="full">Spanish MICINN</orgName>
+				</funder>
+				<funder ref="#_DwcGWFh">
+					<orgName type="full">Marie Curie Actions of the European Commission</orgName>
+				</funder>
+				<funder ref="#_FEGYrKf #_E9J6wqt">
+					<orgName type="full">Spanish government</orgName>
+				</funder>
+				<funder ref="#_XaCtEMY">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_NQZ5DC2 #_rDGjVRB">
+					<orgName type="full">Madrid regional government</orgName>
+				</funder>
+				<funder ref="#_8ArqUzh">
+					<orgName type="full">Spanish MEC</orgName>
+				</funder>
+				<funder ref="#_UKVUvpE">
+					<orgName type="full">Ramón y Cajal Fellowship Program</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2013-07-12">12 Jul 2013</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Belén</forename><surname>López Martí</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Francisco</forename><surname>Jiménez-Esteban</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Spanish Virtual Observatory</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Suffolk University</orgName>
+								<address>
+									<addrLine>C/ Valle de la Viña 3</addrLine>
+									<postCode>E-28003</postCode>
+									<settlement>Madrid Campus, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amelia</forename><surname>Bayo</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">European Southern Observatory</orgName>
+								<address>
+									<addrLine>Alonso de Córdova 3107</addrLine>
+									<settlement>Vitacura, Santiago</settlement>
+									<country key="CL">Chile</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Max-Planck-Institut für Astronomie</orgName>
+								<address>
+									<addrLine>Königstuhl 17</addrLine>
+									<postCode>D-69117</postCode>
+									<settlement>Heidelberg</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Barrado</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Calar Alto Observatory</orgName>
+								<orgName type="institution">Centro Astronómico Hispano-Alemán</orgName>
+								<address>
+									<addrLine>C/ Jesús Durbán Remón 2-2</addrLine>
+									<postCode>E-04004</postCode>
+									<settlement>Almería</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enrique</forename><surname>Solano</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Spanish Virtual Observatory</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hervé</forename><surname>Bouy</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carlos</forename><surname>Rodrigo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Spanish Virtual Observatory</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Proper motions of young stars in Chamaeleon II. New kinematical candidate members of Chamaeleon I and II</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2013-07-12">12 Jul 2013</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">974294972A96FA4380B8FB185CD7B4C2</idno>
+					<idno type="arXiv">arXiv:1307.3414v1[astro-ph.SR]</idno>
+					<note type="submission">Received; accepted</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>stars:low-mass</term>
+					<term>brown dwarfsstars: formationstars: pre-main sequencestars: luminosity function</term>
+					<term>mass function astronomical database: miscellaneousvirtual observatory tools</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Context. The Chamaeleon star-forming region has been extensively studied in the last decades. However, most studies have been confined to the densest parts of the clouds. In a previous paper, we analysed the kinematical properties of the spectroscopically confirmed population of the Chamaeleon I and II clouds. Aims. We want to search for new kinematical candidate members to the Chamaeleon I and II moving groups, extending the studied area beyond the clouds, and to characterize these new populations using available information from public databases and catalogues. We also want to check if the populations of the moving groups are confined to the present dark clouds. Methods. Kinematic candidate members were initially selected on the basis of proper motions and colours using the Fourth US Naval Observatory CCD Astrograph Catalog (UCAC4). The SEDs of the objects were constructed using photometry retrieved from the Virtual Observatory and other resources, and fitted to models of stellar photospheres to derive effective temperatures, gravity values, and luminosities. Masses and ages were estimated by comparison with theoretical evolutionary tracks in a Hertzprung-Russell diagram. Objects with ages 20 Myr were selected as probable members of the moving groups. Results. We have identified 51 and 14 candidate members to the Chamaeleon I and II moving groups, respectively, of which 17 and 1, respectively, are classified as probable young stars according to the SED analysis. Another object in Chamaeleon I located slightly above the 1 Myr isochrone is classified as a possible young star. All these objects are diskless stars with masses in the range 0.3 M/M 1.4 and ages consistent with those reported for the corresponding confirmed members. They tend to be located at the boundaries of or outside the dark clouds, preferably to the north-east and south-east in the case of Chamaeleon I, and to the north-east in the case of Chamaeleon II. Conclusions. The kinematical population of Chamaeleon I and II could be larger and spread over a larger area of the sky than suggested by previous studies. However, the results of this study should be confirmed with spectroscopic data and more precise kinematic information.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>The Chamaeleon complex is composed of three dark clouds, named Chamaeleon I, II, and III <ref type="bibr" target="#b38">(Schwartz 1977)</ref>, lying at distances in the range 115-215 pc. Chamaeleon I (Cha I), the oldest of the three (∼2 Myr) contains more than 300 known young stars (for the latest census, see <ref type="bibr" target="#b29">Luhman 2008)</ref>, while more than 60 stars have been identified in Chamaeleon II (Cha II; 1 Myr; <ref type="bibr" target="#b42">Spezzi et al. 2007</ref><ref type="bibr" target="#b41">Spezzi et al. , 2008;;</ref><ref type="bibr">Alcalá et al. 2008, and references therein)</ref>. No young star population has been identified so far in Chamaeleon III (Cha III).</p><p>Most studies of the stellar and substellar population in Chamaeleon have focused on the densest areas of the clouds and on the search for indications of youth such as infrared excesses, prominent Hα emission, or accretion signatures in the object spectra (e.g. <ref type="bibr" target="#b34">Prusti et al. 1991;</ref><ref type="bibr">López Martí et al. 2004</ref><ref type="bibr" target="#b15">, 2005;</ref><ref type="bibr" target="#b6">Barrado y Navascués &amp; Jayawardhana 2004;</ref><ref type="bibr" target="#b31">Luhman et al. 2004;</ref><ref type="bibr" target="#b28">Luhman 2007;</ref><ref type="bibr" target="#b42">Spezzi et al. 2007;</ref><ref type="bibr" target="#b3">Alcalá et al. 2008</ref>). To assess the diskless component of the population, X-ray surveys have been carried out (e.g. <ref type="bibr" target="#b16">Feigelson et al. 1993;</ref><ref type="bibr" target="#b0">Alcalá et al. 2000;</ref><ref type="bibr" target="#b43">Stelzer et al. 2004</ref>). Thus, both the class II (with disk) and class III (diskless) populations have been identified in the core regions.</p><p>The areas outside the main cloud cores have not been studied as much. In the 1990s, the ROSAT All Sky Survey (RASS) unveiled a dispersed population of young X-ray emitting stars towards the Chamaeleon area, but not confined to the dark clouds <ref type="bibr" target="#b2">(Alcalá et al. 1995</ref><ref type="bibr" target="#b1">(Alcalá et al. , 1997))</ref>. Later kinematical studies based on radial velocity <ref type="bibr" target="#b14">(Covino et al. 1997</ref>) and proper motion measurements <ref type="bibr" target="#b18">(Frink et al. 1998)</ref> showed that the sample included objects belonging to different kinematical populations, located at different distances, from 60 to about 200 pc, corresponding to the Cha I cloud, the foreground Chamaeleontis ( Cha) cluster, and an undetermined field population. Further interlopers from  <ref type="table" target="#tab_0">1</ref>.</p><p>the Cha cluster were later identified in the Chamaeleon sky area (e.g. <ref type="bibr" target="#b33">Mamajek et al. 1999;</ref><ref type="bibr" target="#b17">Feigelson et al. 2003;</ref><ref type="bibr">Luhman 2004;</ref><ref type="bibr">Luhman &amp; Muench 2008)</ref>.</p><p>In a previous paper (López <ref type="bibr">Martí et al. 2013, hereafter</ref> Paper I), we used proper motions from the Third US Naval Observatory CCD Astrograph Catalog (UCAC3; <ref type="bibr" target="#b46">Zacharias et al. 2010)</ref> to study the moving groups seen towards the Chamaeleon sky area. We showed that the UCAC3 proper motions from the previously-known candidate members of the associations are precise enough to clearly distinguish the Cha I and II populations from those of the foreground Cha and η Chamaeleontis (η Cha) clusters. Our study allowed us to identify a few interlopers among our compiled samples of confirmed young stars in each association, and to provide further information on the membership of other candidates from the literature without spectroscopic confirmation of youth. In addition, our results suggested that the stars in Cha I and II may constitute two different moving groups, which questions the physical relation between the clouds. This paper is a continuation of the work presented in Paper I, and reports on a search for new candidate members of the Chamaeleon clouds based on UCAC proper motions and colours, and taking advantage of Virtual Observatory (VO)<ref type="foot" target="#foot_0">1</ref> tools and protocols. Since UCAC is an all-sky catalogue, this approach allows us to explore a larger sky area than most of the previous searches reported in the literature.</p><p>The study presented here was initially performed on UCAC3 data. However, during the publication process of Paper I, the fourth and last release of the UCAC catalogue (UCAC4) had become available <ref type="bibr" target="#b47">(Zacharias et al. 2013)</ref>. The UCAC4 catalogue is an improved version of UCAC3, based on the same pixel reductions. Improvements over UCAC3 include bug fixes, correction of systematic errors, the inclusion of the brightest stars from the Hipparcos, Tycho-2, and FK6 catalogues, and the use of APASS photometry in the Johnson B and V bands and the Sloan g , r , and i bands. It is thus a cleaner catalogue than UCAC3, but with very similar accuracy and coverage. We checked this by constructing the UCAC4 vector-point diagram for the confirmed members of the four associations, and comparing it with the UCAC3 diagram presented in Paper I (Fig. <ref type="figure" target="#fig_0">1</ref> in that work). The main difference between the two diagrams is that the objects detached from the moving groups in the UCAC3 vector-point di-agram, that were shown to have incorrect or dubious proper motion measurements, are missing from the UCAC4 diagram. Thus, the main conclusions from Paper I are not altered when UCAC4 data are used instead of UCAC3. On the other hand, our comparison of both catalogues revealed a problem with the zeropoints of the SuperCosmos R and I photometry included in UCAC3, which made this photometry internally inconsistent. Since our candidate selection is based on colours as well as on proper motions (see Sect. 2.1), we decided to use the latest version of the catalogue (UCAC4) and the more reliable APASS photometry included there for this part of our study. We note that no photometry from UCAC3 was used in the analysis of the confirmed members presented in Paper I, and so this problem does not compromise the conclusions from that work. To perform a search of new candidate members of Cha I and II, we first retrieved all objects in the UCAC4 catalogue within three degrees from the center of each cloud as given by SIMBAD (see Table <ref type="table" target="#tab_0">1</ref>). This radius value was chosen to maximize the search areas while avoiding spatial overlapping between them; in this way, we prevented the same source from being assigned to both clouds, as there is some overlapping in proper motion between the Cha I and Cha II moving groups. Then, we defined two boxes in the vector point diagram covering each of the moving groups (see Fig. <ref type="figure" target="#fig_0">1</ref>); the box limits were set to 1σ from the mean values obtained in Paper I for each group. These selection criteria are summarized in Table <ref type="table" target="#tab_0">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">New candidate members of the</head><p>This step provided 3175 objects around Cha I and 3831objects around Cha II. Since the proper motion of a given star depends not only on its space motion tangential to the sky, but also on its distance, the retrieved lists include not only Chamaeleon members, but also foreground and background stars. Because the distance and radial velocities of virtually all sources are unknown, to purge the selection from contaminants we made use of the photometric information provided by UCAC4 (namely the Sloan r and i magnitudes from APASS, and the nearinfrared JHK s magnitudes from 2MASS), as this photometric set is available for all our objects.We constructed several colourcolour and colour-magnitude diagrams that have been shown to be useful tools to identify members of a given young association (see Fig. <ref type="figure" target="#fig_2">2</ref>). The location of the confirmed members in these diagrams served as a guide to identify new candidates. Only those objects whose location in all diagrams agreed with that of the confirmed members were selected. Objects brighter than V ∼ 10.5 were discarded, as they are probably saturated in APASS according to the catalogue description. <ref type="foot" target="#foot_1">2</ref> We note that no assumptions based on theoretical models were used for the selection. The APASS catalogue is complete down to r ∼ 15.5 mag and i ∼ 15 mag, which sets the completeness limit of this study.</p><p>The final lists contained 51 objects in Cha I and 14 in Cha II, which are listed in Table <ref type="table" target="#tab_3">2</ref>. <ref type="foot" target="#foot_2">3</ref> Figure <ref type="figure" target="#fig_0">1</ref> shows their locations in the vector point diagram compared to those of the moving groups related to both clouds. Owing to the characteristics of the UCAC4 catalogue, we expect the selected sample to be biased towards low-extincted and relatively evolved sources, because those objects in early stages of formation and evolution, or affected by high extinction, are very faint or undetectable in the optical. Furthermore, the lowest-mass component of both associations is missing, as these objects are too faint to be included in UCAC4. Objects with very strong Hα emission may also be missed by our selection criteria, as such sources may appear bluer than expected for their age and spectral type in the diagrams of Fig. <ref type="figure" target="#fig_2">2</ref>. Examples of such objects can be seen among the confirmed members of Cha II (right panels).</p><p>The close distance and low Galactic latitude of the Chamaeleon clouds make us expect that contamination from both foreground and background objects is relatively low. However, because most of our studied area around each cloud is affected by virtually no extinction (see <ref type="bibr">Sect. 3.2)</ref>, this contamination should be higher than observed within the cloud cores alone, where the cloud material itself blocks most of the background population. The number of unrelated objects selected as candidate members in photometric surveys of nearby starforming regions has been shown to be between 25% and 75% of the selection, depending on the location of the region within the Galaxy and the deepness of the survey. If proper motion information is available, such objects are almost completely eliminated, as shown in Paper I and in our study of the Lupus clouds <ref type="bibr" target="#b27">(López Martí et al. 2011;</ref><ref type="bibr" target="#b13">Comerón et al. 2013)</ref>.</p><p>In order to estimate the contamination within our samples, we performed several simulations of the Galaxy region in three degrees around the position of Cha I and II using the Besanc ¸on Galaxy Model <ref type="bibr" target="#b35">(Robin &amp; Crezé 1986;</ref><ref type="bibr" target="#b36">Robin et al. 2003)</ref>. The simulations took the errors in photometry and proper motions into consideration. We repeated the selection process described in this section using the synthetic photometry and proper motions from the simulated catalogues, obtaining the number of objects expected to fulfill our criteria if no cluster were present in the direction of the Chamaeleon clouds. The resulting samples included between one and three objects in the Cha I area and between zero and one in the Cha II area, which would represent only up to 6% and 7%, respectively, of our candidate sample for each association. This result again suggests that the combination of astrometric and photometric information is very effective in reducing the contamination in searches for new members of star forming regions.</p><p>However, it must be noted that these simulations only took into account the astrometric errors derived from the photometric errors of the souces. Source confusion or centroiding problems may lead to incorrect estimations of the proper motions, effectively increasing the amount of contamination in our samples. Although the UCAC4 flags allow us to get rid of most of the sources with uncertain or incorrect proper motions, some of these objects may still be included in our selected samples. Unfortunately, it is not easy to estimate the amount of this contamination. Because these problems are most likely to happen in the bright and faint end of the UCAC4 magnitude range, we expect it to be relatively high, given the number of objects with r magnitudes larger than 14. On the other hand, we may also miss members of the Cha I and II moving groups owing to incorrectly estimated proper motions in UCAC4 that place them outside the boundaries of our selection boxes in Fig. <ref type="figure" target="#fig_2">2</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">SIMBAD objects</head><p>To look for additional information about our selected objects, we checked whether any of our new candidates were known to SIMBAD.</p><p>This was the case for seventeen stars from the Cha I list and four from the Cha II list, representing neartly one third (about 33% and 28.5%, respectively) of the total samples. These objects are listed in Table <ref type="table">3</ref>, along with their reported proper motions, radial velocities and spectral types, if available.</p><p>Nearly all the stars in Table <ref type="table">3</ref> have reported proper motions in the Tycho-2 catalogue <ref type="bibr" target="#b21">(Høg et al. 2000)</ref>, which are statistically compatible with the UCAC4 measurements within 3σ. Even so, the Tycho-2 proper motions place all but three objects outside the corresponding selection box defined in Table <ref type="table" target="#tab_0">1</ref>. The exceptions are ChaI-PM-5 (TYC 9418-388-1), ChaI-PM-38 (2MASS J11475667-7536316), and ChaII-PM-12 (TYC 9413-205-1), for which the Tycho-2 proper motions are still within the selection box in the vector-point diagram. It must be noted, however, that the Tycho-2 measurements are less precise than those of UCAC4 for most of the stars listed in Table <ref type="table">3</ref>, owing to the lower number of epochs used to compute the proper motion, and because nearly all the sources are fainter than the complete- ness limit of the Tycho-2 survey (V ∼ 11 mag). Therefore, we decided to keep these objects in the subsequent analysis.</p><p>For one star, namely ChaI-PM-13 (2MASS J110593816-782421), there is also a radial velocity measurement available from the RAVE survey <ref type="bibr" target="#b39">(Siebert et al. 2011)</ref>, which is slightly lower than the mean for Cha I stars reported in Paper I, a further suggestion that this is likely to be a contamination object.</p><p>Three SIMBAD sources, namely 2MASS J11120518-7712408 , IRAS 12348-7634 (ChaII-PM-9), and CR Mus (ChaII-PM-18) do not have reported Tycho-2 proper motions or RAVE radial velocities. The third object is a known Mira variable, and hence a sure contaminant.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">SED analysis</head><p>To further purge our candidate lists of likely contaminants, and to learn more about the nature of our objects, we compiled all the photometry available for them in the Virtual Observatory and in other public archives. With these data, we constructed the spectral energy distributions (SEDs), which were analysed to derive their fundamental parameters using the latest version of the VO SED Analyzer tool 4 (VOSA; <ref type="bibr" target="#b9">Bayo et al. 2008</ref><ref type="bibr" target="#b8">Bayo et al. , 2013))</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Photometry compilation and observed SEDs</head><p>Most of the multiwavelength photometry was retrieved with VOSA from a number of public databases available through the Virtual Observatory. These data include optical photometry from Tycho-2 (B and V bands; <ref type="bibr" target="#b21">Høg et al. 2000)</ref> and DENIS (I band; DENIS Consortium 2005), near-infrared JHK s photometry from 2MASS <ref type="bibr" target="#b40">(Skrutskie et al. 2006)</ref>, and mid-infrared photometry from AKARI and WISE <ref type="bibr" target="#b22">(Ishihara et al. 2010;</ref><ref type="bibr" target="#b15">Cutri &amp; et al. 2012)</ref>. For the Cha II candidates, we also retrieved the IRAC and MIPS photometry (from 3.6 to 24 µm) from the "Cores to Disks" (c2d) Spitzer legacy program <ref type="bibr" target="#b3">(Alcalá et al. 2008)</ref>, also available through VOSA.</p><p>Additional Spitzer/IRAC photometry for a few Cha I candidates was obtained after retrieving and processing all available observations from the IRSA database <ref type="bibr">(programs 6, 36, 37, 139, 173, and 30574)</ref>. We retrieved the corresponding BCD images and associated ancillary products from the public archive and processed them following standard procedures with the recommended MOPEX software <ref type="bibr" target="#b32">(Makovoz &amp; Marleau 2005)</ref>. The IRAC observations were obtained with various exposure times (0.6 s, 12 s, 30 s, and 100 s) and the final sensitivity depends on the coverage and observation history. We processed each set independently to cover the widest dynamic range. The procedure within MOPEX includes overlap correction, resampling, interpolation (to have an output pixel scale of 0. 6), and outlier rejection. The individual frames were then median-combined with Swarp <ref type="bibr" target="#b10">(Bertin et al. 2002)</ref> using the rms maps produced by MOPEX as weight maps. The resulting photometric catalogues were cross-matched with our list of Cha I kinematical candidate members.</p><p>4 http://svo2.cab.inta-csic.es/svo/theory/vosa/ The compiled multiwavelength photometry (also including the BVg r i APASS photometry from UCAC4) for all the objects is summarized in Table <ref type="table">4</ref>. <ref type="foot" target="#foot_3">5</ref> The data were used to construct the observed SED for each object, which was then visually inspected to check the consistency of the photometric datapoints and to examine its shape. Most of the candidates display curves suggesting they are bare (diskless) photospheres. This impression is confirmed by VOSA, as the tool does not detect any infrared excess for most of the objects. Some sources (e.g. ChaI-PM-48) could have a little excess at the longest wavelengths ( 8 µm), usually associated with the presence of evolved disks. We discuss these objects later in Sect. 3.3.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Extinction maps</head><p>We followed the adaptive grid method developed by <ref type="bibr">Cambrésy et al. (1997)</ref> to derive extinction maps for the sky areas around the Cha I and II clouds where our new candidates are located. This method is based on the voids induced by star forming regions in the uniform distribution of background stars, clearly observable with all-sky surveys. We used 2MASS as the parent catalogue, and we had a control field at a similar Galactic latitude to model the background population. The average pixel size of the maps is 1.5 , although it varies depending on the extinction itself, as the grid of coordinates is built according to the local density of sources. Comparison with maps of the same regions by other authors <ref type="bibr">(Cambrésy et al. 1997;</ref><ref type="bibr" target="#b23">Kainulainen et al. 2009)</ref> shows very good agreement for areas with A V ≤ 12 mag. As mentioned earlier, UCAC4 is based on optical catalogues, and so we are not likely to find candidates in these very heavily extincted areas. Further details on the adaptive grid method are given in <ref type="bibr" target="#b8">Bayo et al. (2013)</ref>.</p><p>We show our extinction maps in Figs. <ref type="figure" target="#fig_3">3</ref> and<ref type="figure" target="#fig_4">4</ref>, where we have also plotted the projected spatial locations of the confirmed members and of our new candidates. Because our candidates are mostly located outside the dark clouds, extinction towards them is expected to very low. We used the information from the maps to derive extinction estimates (A grid V ) along the line of sight towards the location of each of our candidates, which are listed in Table <ref type="table" target="#tab_3">2</ref>. The extinction values have an estimated error of 0.05 mag, derived from variations in the control field; therefore, when a zero value is indicated, it is implied that A grid V 0.05 mag. With very few exceptions, our candidates are not affected by extinction according to our extinction maps. Only a few objects are located in areas of low-to-moderate extinction, the highest value corresponding to ChaII-PM-1 (A grid V = 2.81 mag). It is important to note that the adaptive grid method provides an estimate of the total extinction in a given direction. Thus, in an area of high extinction such as the dark cloud cores, A grid V can be assumed to be the true A V of the star only if it is located behind the cloud (for a detailed discussion, see <ref type="bibr" target="#b8">Bayo et al. 2013</ref>). If it is placed before or within the cloud, the amount of dust will be lower and the star will be less extincted than suggested  by the maps. On the other hand, some intrinsic extinction may be present in young stellar objects surrounded by large amounts of circumstellar material, but this does not seem to be the case for the vast majority of our candidates, as they are diskless according to their SEDs (see Sect. 3.1 above). Thus, without information on the individual distance, the A grid V value should be regarded as an upper limit to the real extinction affecting a particular object, and the true A V may in principle have any value between 0 and A grid V .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">SED fitting</head><p>The SEDs were fitted to theoretical models in order to estimate effective temperatures, luminosities, and surface gravities for the candidates, testing the parameter space summarized in Table <ref type="table">5</ref>.</p><p>The input for the fits included the object name, the coordinates, the user-provided and VO photometry, and a distance value.</p><p>Since we do not have parallax measurements for our objects, the distance was set to the reported mean distances to the clouds: 160 ± 15 pc in the case of Cha I and 178 ± 18 pc for Cha II <ref type="bibr" target="#b44">(Whittet et al. 1997)</ref>. In addition, the information from the extinction maps was used to set the ranges of visual extinction (A V ) to be tested by the procedure. Because most of our objects are V /20, the VOSA default step when the extinction is not set to a fixed value by the user.</p><p>The BT-Settl models <ref type="bibr" target="#b4">(Allard &amp; Homeier 2012)</ref> were used to test the range of effective temperatures between 4500 K and the minimum effective temperature expected for our candidates, should they be young stars located at the distance of the dark clouds. This minimum temperature corresponds to a very lowmass star with I-band magnitude in the lower limit of our candidate lists (∼16.5 mag) at the distance of each cloud, and was estimated to be about 2700 K and 2800 K for Cha I and II, respectively, using the <ref type="bibr" target="#b5">Baraffe et al. (1998)</ref> evolutionary tracks. We assumed in this estimation that the objects are not older than 50 Myr, and that they are not extincted. The temperature of 4500 K, on the other hand, is the predicted temperature for TiO formation in the atmospheres of low-mass stars. <ref type="bibr" target="#b4">Allard &amp; Homeier (2012)</ref> claim that the BT-Settl models have a better treatment of the oxygen abundance than any previous models and, therefore, they provide better approximations below 4500 K. The Kurucz models <ref type="bibr" target="#b11">(Castelli et al. 1997)</ref> were used to test the range between this temperature and 50000 K, the maximum value provided by this grid. For the few objects having best-fitting temperatures of precisely 4500 K, we checked that the results using both models were consistent; because the Kurucz models usually provided better fits (according to the χ2 statistics, see below), the best-fitting model from this grid was kept as best fit in those cases.</p><p>A range of gravities was tested to account for the possibility that the stars have a variety of ages and evolutionary stages;  <ref type="table">4</ref>. however, the results depended very weakly on the gravity values. Only solar metallicity was considered, in agreement with the results by <ref type="bibr" target="#b37">Santos et al. (2008)</ref> for some previously known Cha I members.</p><p>Because most of the stars do not have infrared excesses, the number of datapoints to fit was relatively high (typically 12 to 15). If an excess was detected, the affected datapoints were not considered in the fitting process. Because the possible excesses all started at relatively long wavelengths, the number of datapoints left was always enough to perform the fit.</p><p>The goodness of the fits was measured by two different statistics: reduced χ 2 minimization ( χ2 ) and Bayesian probability analysis of the model parameters (for details, see <ref type="bibr" target="#b9">Bayo et al. 2008</ref><ref type="bibr" target="#b8">Bayo et al. , 2013))</ref>. Because several models provided good approximations to a given SED with only very small differences in the χ2 values, the information from the Bayesian analysis helped us to choose the most appropriate model by selecting the one whose parameter values had the greatest probability. This model was usually (but not always) the one with the lowest χ2 .</p><p>For a few objects, the T e f f value with maximum probability is namely in the boundary of the considered range, with the probability distribution monotonically increasing toward this value. This may happen if the actual most probable temperature value is out of the tested range (such as a T e f f lower than 4500 K in the case of the Kurucz models), because the closest value is chosen by the algorithm in this case. Therefore, the results of the Bayesian analysis are not trustworthy in these cases, and we had to rely only on the χ2 values to decide on the goodness of the fits.</p><p>The process provides very good approximations to the SEDs, with χ2 10, for 35% of the Cha I sample and 14% of the Cha II sample (18 and 2 objects, respectively). We checked that the best-fitting values were the ones with highest Bayesian probabilities, and that the T e f f had probability &gt; 0.5 (see also discussion in <ref type="bibr" target="#b8">Bayo et al. 2013</ref>). The fits that did not fulfill these criteria were considered bad, and the objects were not further considered.</p><p>The best-fitting results for our candidates are summarized in Table <ref type="table">6</ref>, where both the value of the χ2 and the Bayesian probabilities are indicated.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">Mass and age estimations</head><p>The best-fitting effective temperatures and bolometric luminosities allowed us to place the objects with good fits in the Hertzprung-Russell diagram (Fig. <ref type="figure" target="#fig_6">5</ref>). This way, it was possible to derive masses and ages for those candidates and to identify the likely members of the Cha I and II clouds using theoretical evolutionary tracks. We used the <ref type="bibr" target="#b5">Baraffe et al. (1998)</ref> set of isochrones for this analysis. The luminosities, masses, and ages derived in this way are summarized in Tables 6. According to our estimations, the objects for which this exercise was possible are not older than 20 Myr and have masses between 0.3 and 1.3M , supporting that they are likely young, low-mass stars. Given the estimated errors in log L and T e f f (about 0.1 dex and 100 K in average, respectively), we estimate that the errors in age are about 1, 2 and 5 Myr for objects younger than 5, 10 and 20 Myr, respectively, and that the errors in mass are of about 0.1M . We caution, however, that the errors in log L and T e f f do not take stellar variability or multiplicity into account, so the actual errors may be higher, and thus they may be largely responsible for the age scatter we obtain. The effect of multiplicity and variability in the VOSA results are discussed in detail in <ref type="bibr" target="#b7">Bayo et al. (2011)</ref> and <ref type="bibr" target="#b8">Bayo et al. (2013)</ref>, respectively.</p><p>For two of our candidates, namely ChaI-PM-4 and ChaII-PM-14, it was not possible to derive mass and age values, as the SED fitting results place them above the 1 Myr isochrone in the Hertzprung-Russell diagram. While this location is usually interpreted as an indication of a very young age, we think it unlikely in these cases, as neither of the objects possesses a thick disk according to the SED analysis. In the case of ChaI-PM-4, given its location close to the 1 Myr isochrone in Fig. <ref type="figure" target="#fig_6">5</ref>, the errors in T e f f and log L still leave open the possibility that it is a young member of the Cha I moving group. We note, however, that this object has reported Tycho-2 proper motions completely discrepant from the UCAC4 values, which would be in disagreement with membership to the Cha I moving group.</p><p>Object ChaII-PM-14, on the other hand, is seen so much above the 1 Myr isochrone that it looks much more likely to be a misplacement owing to an incorrect distance estimate. In addition, its best-fitting effective temperature is 2800 K, namely on the lowest boundary of the interval tested with VOSA for the Cha II candidates, with an estimated Bayesian probability of 100%. As discussed in Sect. 3.3, this may be an indication that the true effective temperature of this object is actually beyond this boundary value, which is in complete disagreement with ChaII-PM-14 belonging to the Cha II moving group. Taken all together, these results suggest a low probability of ChaII-PM-14 being a young star.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Final candidate lists</head><p>After the results of the SED analysis described above, we classify as probable members of the moving groups (labelled "m") in Table <ref type="table">6</ref>) those stars with reliable fits and derived ages younger than about 100 Myr. This way, from 51 objects reported in Sect. 2.1, we identify 17 probable members of the Cha I moving group. Following the discussion from the previous Section, ChaI-PM-4 is considered a possible member (label "m?"). The rest of objects from the Cha I candidate sample remain unclassified owing to unreliable fits and insufficient or contradictory additional information (label "nc").</p><p>In the Cha II sample, only one star (ChaII-PM-11) out of the 14 objects selected in Sect. 2.1 is classified as a probable member. The other source with a good fit, ChaII-PM-14, is rejected as a probable non-member (label "nm"). Following the discussion from Sect. 2.2, also ChaII-PM-18 is rejected as a probable non-member. The remaining 11 sources are not classified.</p><p>With these figures, the number of identified contaminants (non-members) is null in the Cha I sample and amounts to about 14% of the Cha II sample. The former figure is lower, and the latter figure is higher than expected from the simulations described in Sect. 2.1. However, because more than 60% of our candidates could not be classified with the SED analysis, the true contamination may be higher in both clouds.</p><p>The final (probable and possible) candidate members are marked with solid symbols in the vector-point diagram of Fig. <ref type="figure" target="#fig_0">1</ref>. In Table <ref type="table" target="#tab_2">7</ref>, we show the arithmetic and weighted mean proper motions of the probable member samples. The table also lists the corresponding means for the confirmed members of both moving groups; they have been recalculated using UCAC4 data, but are compatible (although slightly higher) with the values given in Paper I.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Properties of the new candidate members</head><p>We now discuss the properies of our new candidate members of Cha I and II, and compare them to the spectroscopic members confirmed in Paper I (73 and 22 objects from the Cha I and II moving groups, respectively). We remark that the member samples do not include all the known objects in the dark clouds, but only those optically detected and with available proper motions in UCAC; hence, they are expected to be biased towards relatively evolved and massive objects, and towards low extinctions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Spatial position</head><p>Figure <ref type="figure" target="#fig_3">3</ref> shows the projected location on our extinction map of the confirmed members and our new candidate members to the Cha I moving group. While the confirmed members tend to cluster within the cloud cores, most of the Cha I candidates are seen spread around the dark cloud, mostly to the north and east. This distribution may be partially caused by the fact that the south and west of our surveyed area are more extincted than the north and east. Even so, it is interesting to note that this is the direction towards the Galactic plane and towards the Musca filament and the Southern Coalsack, two regions to which the Chamaeleon cloud complex has been related <ref type="bibr" target="#b24">(King et al. 1979)</ref>.</p><p>Most of our new candidates are sharing locations with known members at the outskirts of the cloud, or seem to bridge the gap between the cloud population and a few known dispersed members to the north and south-east. Most of our new probable members (that is, those objects with fits considered reliable and derived physical parameters consistent with young stars) are located in these two groupings. The south-eastern group is particularly interesting, as it is located halfway to the dark cloudlet [DB2002b] G300. <ref type="bibr">23-16.89</ref>, in an area where many of the Chamaleontis cluster members are found. Interestingly, the only confirmed Cha I member in the south-east group, RXJ1158.5-7913, is seen projected toward this small cloudlet, and detached from any other confirmed Cha I members; nevertheless, the object was shown in Paper I to have kinematic properties that are in much better agreement with membership to the Cha I moving group than to the Cha group. This membership would be reinforced if our new candidates are confirmed as young low-mass stars. This would in turn strengthen the idea that the [DB2002b] G300.23-16.89 cloud is related to the Chamaeleon complex, or at least to the Cha I cloud, as previously suggested in the literature <ref type="bibr" target="#b44">(Whittet et al. 1997)</ref>.</p><p>The spatial distribution of the Cha II members and candidate members is shown in Fig. <ref type="figure" target="#fig_4">4</ref>. Most of our new candidates are located to the north-east of the dark cloud. Again, as in the case of Cha I, this is the direction towards the Galactic plane and the Musca and Southern Coalsack regions, but also the lessextincted area in the surveyed region around the dark cloud. Only a few objects (ChaII-PM-6, ChaII-PM-7, ChaII-PM-8, and to some extent also ChaII-PM-10) are located in the same areas as the confirmed members of the moving group. The only proba- ble member in the sample is also seen not far from the confirmed members, to the north-east of the northern dark cloud core.</p><p>Interestingly, three Cha II candidates, namely ChaII-PM-1, ChaII-PM-2, and ChaII-PM-3, are seen to the south of the Cha II dark cloud, in or near the dark cloud [DB2002b] G303.11-16.08 that seems to bridge Cha II and III. Cha III itself lies outside our search area.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Proper motions</head><p>Figure <ref type="figure" target="#fig_0">1</ref> shows the locations of our new candidate members to the Cha I and Cha II moving groups in the vector-point diagram.</p><p>In the Cha I group, the objects tend to cluster in the right half of the selection box depicted in that diagram. However, when only the probable members (objects with good fits) are considered, this trend is no longer evident. This is confirmed by the left panel of Fig. <ref type="figure" target="#fig_7">6</ref>, which shows the proper motion histograms for the confirmed and probable members. As shown in Table <ref type="table" target="#tab_2">7</ref>, the mean values of the candidate sample ((-18.8 ± 2.8, 2.3 ± 2.0) mas/yr) are fully consistent with the means for the confirmed Cha I members.</p><p>Also our new candidate members to the Cha II moving group tend to be located to the right half of the selection box in the vector point diagram, while one third of the box to the left is devoid of objects. The only probable member in the Cha II sample is located in the lower central part of the box. The values listed in Table <ref type="table" target="#tab_2">7</ref> confirm that this source has proper motion values similar to the means for the kinematical cloud members.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.">Physical properties</head><p>Figure <ref type="figure" target="#fig_8">7</ref> shows a comparison between the physical parameters derived from the SED fitting for our new candidate members and the confirmed members of the Cha I moving group. To achieve a homogeneous comparison, the SEDs of the confirmed members were constructed using the photometric data provided in Paper I, and fitted to model photospheres as described in Sect. 3.3. The best-fitting result was selected in each case, regardless of the χ2 value, provided that the parameters were in good agreement with the known spectroscopic properties of the objects. In the final sample, the fits all had χ2 &lt; 100 and, in most cases, Bayesian probabilities larger than 50% for the derived T e f f and A V values.</p><p>The best-fitting results and physical parameters for the Cha I kinematical members are summarized in Table <ref type="table">8</ref>. We remark that this table includes only those objects with enough datapoints to perform a fit. Hence, the sample of confirmed Cha I members with derived physical parameters is far from complete: it includes only 39 stars. Furthermore, masses and ages were estimated for only 24 objects of this sample, as the rest of sources lie above the 1 Myr isochrone in the Hertzprung-Russell diagram. Similarly, the candidate sample includes only those objects classified as probable members in the histograms of the lower panels, while the possible member ChaI-PM-4 is also considered in the histograms of the upper panels.</p><p>The effective temperature distributions for the new members and the confirmed members are shown in the upper-left panel of Fig. <ref type="figure" target="#fig_8">7</ref>. Despite covering a broad range of effective temperature reaching the A-type domain ( <ref type="formula">2700</ref>T e f f 10000), Mtype stars dominate the confirmed member sample, with only 25% of K-type or earlier stars. The temperature range spanned by the candidate sample (3400 T e f f 4200) is much narrower than that covered by the confirmed member sample, and it seems to have a deficit of both early-type and M-type objects. Except for one source that is cooler (namely ChaI-PM-48), the candidates have effective temperatures between 3900 and 4200 K, corresponding to mid-K spectral types. In agreement with these temperature distributions, the objects in the candidate sample also span a much narrower luminosity range than the confirmed members, as seen in the upper-right panel of Fig. <ref type="figure" target="#fig_8">7</ref>. However, both luminosity distributions peak around log L/L ∼ -0.5.</p><p>The tail of bright, hot stars seen in the confirmed member distributions is formed by relatively massive stars (compared with the candidate sample) lying above the youngest isochrone in the Hertzprung-Russell diagram, and hence very young and in a relatively early evolutionary stage according to their SED shapes. If these objects are not considered and we restrict our analysis to M-and K-type objects, the temperature and luminosity distributions of confirmed members and candidates are quite similar, although a trend towards slightly hotter effective temperatures and accordingly brighter luminosities is seen in the new candidates.</p><p>The corresponding mass and age distributions are shown in the lower panels of Fig. <ref type="figure" target="#fig_8">7</ref>. No masses and ages could be derived for the objects placed above the 1 Myr isochrone in the Hertzprung-Russell diagram, including the hottest and most luminous members discussed above. Therefore, the mass distribution of the Cha I members does not match their effective temperature distribution, and is not expected to be representative of the whole cloud population. However, this is not a critical issue for our new members, because it affects only one object (ChaI-PM-4). The lower-left panel of Fig. <ref type="figure" target="#fig_8">7</ref> shows that the new probable members span a similar range in masses to the confirmed members for which this parameter could be estimated, but it tends to objects with higher masses, in agreement with the average higher effective temperatures. The lower-right panel of Fig. <ref type="figure" target="#fig_8">7</ref> shows that both samples have similar age distributions, as expected if they belong to the same population.</p><p>The physical parameters for the confirmed members of the Cha II moving group were derived in the same way as explained above for the Cha I members, and compared to the parameter values for the only new probable member, ChaII-PM-11. Of the 22 kinematic members identified in Paper I, we were able to obtain physical parameters for 14 stars, which are summarized in Table <ref type="table">8</ref>. Masses were estimated for nine of these objects, while ages could be derived for eight sources. The rest of confirmed members lie above the 1 Myr isochrone in the Hertzprung-Russell diagram, and thus no masses or ages could be derived for them.</p><p>The physical parameters of the new probable member suggest that it is comparable to the lowest-mass (thus, coolest and lowest-luminosity) objects in the member sample. We note, however, that lower mass objects are known in Cha II, but fall below the UCAC sensitivity and are thus excluded from our statistics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Summary and conclusions</head><p>Based on proper motion and photometric information, we have identified 51 and 14 kinematic candidate members to the Cha I and II moving groups, respectively, in an area of three degrees around each cloud. The SED analysis suggests that seventeen objects from the Cha I sample and one from the Cha II sample are likely young stars, and thus probable members of the moving groups. Another object from the Cha I sample is located slightly above the 1 Myr isochrone in the Hertzprung-Russell diagram, and is classified as a possible member to the Cha I moving group. The nature of the remaining candidates is more uncertain.</p><p>Our new probable members span a mass range 0.3 M/M 1.4, and their physical properties are very similar to those of the confirmed members of both clouds included in UCAC. Thus, our results suggest that the stellar population associated to the current Cha I cloud may be larger and more widespread than previously thought. In Cha II, this is more uncertain, because only one object has been classified as a probable member. Similar off-cloud populations have been reported in other nearby low-mass star forming regions, like e.g. the Lupus clouds <ref type="bibr" target="#b12">(Comerón et al. 2009</ref><ref type="bibr" target="#b13">(Comerón et al. , 2013))</ref>.</p><p>To find the answers to the questions raised by this work, spectroscopic confirmation of the nature of our new candidate members is needed, along with more accurate proper motions and more consistent age estimates. The Gaia mission of the European Space Agency, complemented with ongoing and future spectroscopic surveys, will provide this information with unprecedented precision for most of the stars in the sample studied here, allowing a much better understanding of the properties of the stellar population and the star formation history in the Chamaeleon clouds.</p><p>Belén López Martí et al.: New kinematical candidate members of Chamaeleon catalogue service, both operated at the CDS (Strasbourg, France). We used the VO-compliant tools Aladin, developed at the CDS, and TOPCAT, currently developed within the AstroGrid project.</p><p>In addition, this publication makes use of data products from the Two Micron All Sky Survey (2MASS), which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the US National Aeronautics and Space Administration and National Science Foundation; and from the Wide-field Infrared Survey Explorer (WISE), which is a joint project of the University of California, Los Angeles, and the Jet Propulsion Laboratory/California Institute of Technology, funded by the US National Aeronautics and Space Administration.  a T=Tycho-2 <ref type="bibr" target="#b21">(Høg et al. 2000)</ref>; R=RAVE <ref type="bibr" target="#b39">(Siebert et al. 2011)</ref> b bkg=reported background object <ref type="bibr" target="#b17">(Feigelson et al. 2003;</ref><ref type="bibr" target="#b31">Luhman et al. 2004)</ref> Belén </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Vector point diagram for our kinematic candidate members of Chamaeleon I and II (red circles and blue squares, respectively). The objects initially selected in Sect. 2 on the basis of proper motions and colours are marked with open symbols, and the final candidates from the refined selection based on the SED analysis from Sect. 3 are shown with solid symbols. The ellipses indicate the approximate location of the kinematical groups identified in Paper I. The boxes show the limits in proper motion for new candidate members defined in Table1.</figDesc><graphic coords="2,42.11,56.06,521.57,368.58" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc>Using UCAC3 data, in Paper I we identified four moving groups (i.e. groups of stars clustered around a given location in the proper motion diagram) toward the Chamaeleon sky area, corresponding to the stellar populations of the Cha I and II clouds and of the foreground and η Cha clusters (see Fig.1in that work). In this paper, we will focus only on the moving groups corresponding to the dark clouds (Cha I and II), whose approximate locations are indicated by ellipses in Fig.1.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Colour-colour and colour-magnitude diagrams used to select new candidate members of Cha I and II (blue squares) from the list of objects with compatible proper motions seen towards the same area of the sky (black dots). Only those objects that are located in all diagrams in the same area as most of the confirmed members (red circles) are selected. To help the eye, the thick dashed red lines indicate the approximate selection areas. See Sect. 2.1 for details.</figDesc><graphic coords="4,47.78,56.06,510.23,496.35" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Extinction map of the Cha I cloud created with the adaptive grid method described in Sect. 3.2. The kinematic members identified in Paper I are overplotted as red circles. The objects finally selected as probable and possible members of the moving groups after the SED analysis are marked as blue squares and diamonds, respectively, and the rest of kinematical candidates selected on the basis of proper motions and colours are indicated as blue stars (see Sect. 4 for details).</figDesc><graphic coords="6,42.11,56.06,521.58,490.53" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Same as Fig. 3 for the Cha II cloud.</figDesc><graphic coords="7,42.11,56.06,521.60,486.46" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc>Belén López Martí et al.: New kinematical candidate members of Chamaeleon Table 5. Input parameter spaces for the SED Allard &amp; Homeier (2012); Castelli et al. (1997) b T min =2700 K for Cha I and 2800 K for Cha II (see text). c Individual A grid V values given in Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Hertzprung-Russell diagram for our candidate members of Cha I and II with good fits, compared to the isochrones and mass tracks from Baraffe et al. (1998) (solid black lines and dashed red lines, respectively). The plotted isochrones correspond to ages of 1, 5, 10, 20, 50 Myr and 5 Gyr (from top to bottom), and the mass tracks to 1.2, 1, 0.5, 0.2, and 0.1M (from left to right). The cross in the bottom-left corner of the diagram indicates the typical error.</figDesc><graphic coords="8,308.88,56.06,286.85,202.71" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. Total proper motion distribution of the new candidate members (blue hashed histogram) and the confirmed members from Paper I (red line histogram) for the Cha I moving group.</figDesc><graphic coords="10,42.11,56.06,260.78,184.29" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. Distributions of the physical parameters obtained from the SED fitting for our new candidate members of the Cha I moving group (blue hashed histogram), compared to that of the confirmed members from Paper I (red line histogram). We note that the samples are biased towards relatively evolved, low-extincted objects.</figDesc><graphic coords="11,42.11,56.06,521.57,368.58" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Astrometric selection criteria for new candidate members</figDesc><table><row><cell cols="2">Cloud α (J2000) δ (J2000) Radius</cell><cell>µ α cos δ</cell><cell>µ δ</cell></row><row><cell cols="2">hh mm ss dd mm ss (deg)</cell><cell>(mas/yr)</cell><cell>(mas/yr)</cell></row><row><cell>Cha I 11 06 48 -77 18 00</cell><cell>3.0</cell><cell cols="2">-24.3 : -14.7 -2.2 : 5.6</cell></row><row><cell>Cha II 12 54 00 -77 12 00</cell><cell>3.0</cell><cell>-33.</cell></row></table><note><p>2 : -16.0 -11.5 : -1.9</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc>Belén López Martí et al.: New kinematical candidate members of Chamaeleon</figDesc><table /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 7 .</head><label>7</label><figDesc>UCAC4 mean and weighted mean proper motions for the confirmed and probable members of the Cha I and II moving groups</figDesc><table><row><cell>Group</cell><cell cols="2">Arithmetic means</cell><cell></cell><cell cols="2">Weighted means</cell></row><row><cell></cell><cell>&lt; µ α cos δ &gt;</cell><cell>&lt; µ δ &gt;</cell><cell>&lt; µ &gt;</cell><cell>&lt; µ α cos δ &gt;</cell><cell>&lt; µ δ &gt;</cell><cell>&lt; µ &gt;</cell></row><row><cell></cell><cell>(mas/yr)</cell><cell>(mas/yr)</cell><cell>(mas/yr)</cell><cell>(mas/yr)</cell><cell>(mas/yr)</cell><cell>(mas/yr)</cell></row><row><cell cols="2">Cha I confirmed members -19.2 ± 1.8</cell><cell cols="3">+1.5 ± 2.1 19.4 ± 1.7 -19.2 ± 0.2</cell><cell cols="2">+1.7 ± 0.3 19.60 ± 0.15</cell></row><row><cell>Cha I probable members</cell><cell>-18.8 ± 2.8</cell><cell cols="3">+2.3 ± 2.0 19.0 ± 2.9 -19.0 ± 0.3</cell><cell cols="2">+2.5 ± 0.3 19.5 ± 0.3</cell></row><row><cell cols="2">Cha II confirmed members -21.6 ± 3.7</cell><cell cols="3">-7.0 ± 2.8 22.9 ± 3.6 -21.0 ± 0.7</cell><cell cols="2">-7.1 ± 0.8 22.4 ± 0.9</cell></row><row><cell>Cha II probable member a</cell><cell>-23.0 ± 4.6</cell><cell cols="3">-8.2 ± 4.5 24.4 ± 5.8 -23.0 ± 4.6</cell><cell cols="2">-8.2 ± 4.5 24.4 ± 5.8</cell></row><row><cell>Notes.</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row></table><note><p><p>a </p>The individual measurements are given in this case.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 2 .</head><label>2</label><figDesc>Kinematical candidate members to the Cha I and II moving groups Object Belén López Martí et al.: New kinematical candidate members of Chamaeleon</figDesc><table><row><cell cols="2">A grid V (mag)</cell><cell></cell><cell>0.24</cell><cell>0.41</cell><cell>0.00</cell><cell>0.17</cell><cell></cell></row><row><cell>UCAC4 α δ µ α cos δ µ δ B V g r i J H K s</cell><cell>(hh mm ss) (dd mm ss) (mas/yr) (mas/yr) (mag) (mag) (mag) (mag) (mag) (mag) (mag) (mag)</cell><cell>Cha I moving group</cell><cell>051-009778 11 24 19.03 -79 51 48.7 -23.9±1.2 1.4±1.1 13.09 11.67 12.37 11.15 10.56 8.97±0.02 8.22±0.05 8.05±0.03</cell><cell>052-010029 11 38 34.93 -79 47 33.1 -23.3±2.9 4.4±2.5 14.21 12.69 13.44 12.13 11.53 9.89±0.02 9.14±0.03 8.95±0.02</cell><cell>054-010728 11 36 28.16 -79 22 20.2 -16.0±2.9 0.7±1.4 13.21 11.88 12.51 11.41 10.95 9.49±0.02 8.82±0.05 8.65±0.02</cell><cell>054-010966 11 47 39.05 -79 13 57.6 -15.2±1.3 1.6±1.6 12.69 11.17 11.91 10.62 10.04 8.29±0.02 7.57±0.03 7.33±0.02</cell><cell>055-010397 11 19 35.35 -79 11 25.4 -17.0±0.8 0.7±1.0 12.23 10.59 11.38 10.11 9.20 7.43±0.03 6.59±0.03 6.35±0.02</cell></row><row><cell></cell><cell></cell><cell></cell><cell>ChaI-PM-1</cell><cell>ChaI-PM-2</cell><cell>ChaI-PM-3</cell><cell>ChaI-PM-4</cell><cell>ChaI-PM-5</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 2 .</head><label>2</label><figDesc></figDesc><table /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head></head><label></label><figDesc>López Martí et al.: New kinematical candidate members of Chamaeleon, Online Material p 1 piled photometry for Cha I and II candidate members.</figDesc><table><row><cell>Name</cell><cell>Filter a</cell><cell>λ e f f</cell><cell>Flux</cell><cell>Flux error b</cell></row><row><cell></cell><cell></cell><cell>(Å)</cell><cell>(erg/cm 2 /s/Å)</cell><cell>(erg/cm 2 /s/Å)</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>The VO is a project designed to provide the astronomical community with the data access and the research tools necessary to enable the exploration of the digital, multi-wavelength universe resident in the astronomical data archives. http://www.ivoa.net</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>http://www.aavso.org/apass</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>Obviously, the original samples also included most of the confirmed members, which were not included in this selection.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_3"><p>Available online.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements. This work was funded by the <rs type="funder">Spanish MICINN</rs> through grant Consolider-<rs type="grantNumber">CSD2006-00070</rs>. It also benefited from funding from the <rs type="funder">Spanish government</rs> through grants <rs type="grantNumber">AYA2008-02156</rs>, <rs type="grantNumber">AYA2010-21161-C02-02</rs>, and <rs type="grantNumber">AYA2012-38897-C01-01</rs>, and from the <rs type="funder">Madrid regional government</rs> through grant <rs type="grantNumber">PRICIT-S2009ESP-1496</rs>. A. B. was co-funded under the <rs type="funder">Marie Curie Actions of the European Commission</rs> (<rs type="programName">FP7-COFUND</rs>). H. B. is funded by the <rs type="funder">Ramón y Cajal Fellowship Program</rs> under grant number <rs type="grantNumber">RYC-2009-04497</rs>. B. L. M. also thanks support from the <rs type="funder">Spanish government</rs> through project <rs type="grantNumber">AYA2011-30147-C03-03</rs>.</p><p>This publication makes use of VOSA, developed under the <rs type="institution">Spanish Virtual Observatory</rs> project supported from the <rs type="funder">Spanish MEC</rs> through grant <rs type="grantNumber">AYA2008-02156</rs>. It greatly benefited from the use of the SIMBAD database and VIZIER</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_dkc3WgR">
+					<idno type="grant-number">CSD2006-00070</idno>
+				</org>
+				<org type="funding" xml:id="_FEGYrKf">
+					<idno type="grant-number">AYA2008-02156</idno>
+				</org>
+				<org type="funding" xml:id="_XaCtEMY">
+					<idno type="grant-number">AYA2010-21161-C02-02</idno>
+				</org>
+				<org type="funding" xml:id="_NQZ5DC2">
+					<idno type="grant-number">AYA2012-38897-C01-01</idno>
+				</org>
+				<org type="funding" xml:id="_rDGjVRB">
+					<idno type="grant-number">PRICIT-S2009ESP-1496</idno>
+				</org>
+				<org type="funding" xml:id="_DwcGWFh">
+					<orgName type="program" subtype="full">FP7-COFUND</orgName>
+				</org>
+				<org type="funding" xml:id="_UKVUvpE">
+					<idno type="grant-number">RYC-2009-04497</idno>
+				</org>
+				<org type="funding" xml:id="_E9J6wqt">
+					<idno type="grant-number">AYA2011-30147-C03-03</idno>
+				</org>
+				<org type="funding" xml:id="_8ArqUzh">
+					<idno type="grant-number">AYA2008-02156</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0" />			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Sterzik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">355</biblScope>
+			<biblScope unit="page">629</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Krautter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">319</biblScope>
+			<biblScope unit="page">184</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Krautter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H M M</forename><surname>Schmitt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">109</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chapman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">676</biblScope>
+			<biblScope unit="page">427</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Allard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Homeier</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Baraffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chabrier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Allard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Hauschildt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">337</biblScope>
+			<biblScope unit="page">403</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado Y Navascués</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jayawardhana</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">615</biblScope>
+			<biblScope unit="page">840</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Stauffer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">536</biblScope>
+			<biblScope unit="page">63</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rodrigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>submitted</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rodrigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado Y Navascués</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">492</biblScope>
+			<biblScope unit="page">277</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bertin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mellier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Radovich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Astronomical Society of the Pacific Conference Series</title>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Bohlender</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Durand</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Handley</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">-+</forename><surname>Cambrésy</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="1997">2002. 1997</date>
+			<biblScope unit="volume">281</biblScope>
+			<biblScope unit="page" from="324" to="L325" />
+		</imprint>
+	</monogr>
+	<note>Astronomical Data Analysis Software and Systems XI</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Castelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gratton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Kurucz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">318</biblScope>
+			<biblScope unit="page">841</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Comerón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">500</biblScope>
+			<biblScope unit="page">1045</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Comerón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Merín</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page">86</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Allain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">328</biblScope>
+			<biblScope unit="page">187</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">VizieR Online Data Catalog, 2311, 0 DENIS Consortium</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Cutri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">VizieR Online Data Catalog</title>
+		<imprint>
+			<date type="published" when="2005">2012. 2005</date>
+			<biblScope unit="volume">2263</biblScope>
+			<biblScope unit="page">0</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Feigelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Casanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Montmerle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Guibert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page">623</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Feigelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Lawson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Garmire</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">599</biblScope>
+			<biblScope unit="page">1207</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Frink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Brandner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">338</biblScope>
+			<biblScope unit="page">442</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hauck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mermilliod</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;AS</title>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page">431</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Infrared astronomical satellite (IRAS) catalogs and atlases</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Helou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Walker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The small scale structure catalog</title>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<biblScope unit="volume">7</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Høg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fabricius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Makarov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">355</biblScope>
+			<biblScope unit="page">27</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ishihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Onaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kataza</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">514</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kainulainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Beuther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Henning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Plume</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">508</biblScope>
+			<biblScope unit="page">35</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N R</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Tritton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">188</biblScope>
+			<biblScope unit="page">719</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Eislöffel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mundt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">444</biblScope>
+			<biblScope unit="page">175</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Eislöffel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Scholz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mundt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page">555</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jiménez-Esteban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<editor>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">529</biblScope>
+			<biblScope unit="page">816</biblScope>
+			<date type="published" when="2004">2013. 2011. 2004</date>
+		</imprint>
+	</monogr>
+	<note>ApJ</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJS</title>
+		<imprint>
+			<biblScope unit="volume">173</biblScope>
+			<biblScope unit="page">104</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+		<title level="m">Handbook of Star Forming Regions</title>
+		<editor>
+			<persName><forename type="first">The</forename><surname>Southern</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Sky</forename></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Ed</forename><forename type="middle">B</forename><surname>Reipurth</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">II</biblScope>
+			<biblScope unit="page">169</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Muench</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">684</biblScope>
+			<biblScope unit="page">654</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Peterson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Megeath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">617</biblScope>
+			<biblScope unit="page">565</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Makovoz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Marleau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PASP</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page">1113</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Mamajek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Lawson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Feigelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">516</biblScope>
+			<biblScope unit="page">77</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Prusti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">O</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C B</forename><surname>Whittet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Laureijs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="page">303</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Robin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crezé</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page">71</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Robin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reylé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Derrière</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Picaud</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page">523</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>James</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">480</biblScope>
+			<biblScope unit="page">889</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Schwartz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJS</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">161</biblScope>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siebert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E K</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siviero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page">187</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Skrutskie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Cutri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stiening</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page">1163</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">680</biblScope>
+			<biblScope unit="page">1295</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Frasca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gandolfi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">470</biblScope>
+			<biblScope unit="page">281</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Stelzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Micela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Neuhäuser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">423</biblScope>
+			<biblScope unit="page">1029</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C B</forename><surname>Whittet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Prusti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A P</forename><surname>Franco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page">1194</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R M</forename><surname>Eisenhardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Mainzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page">1868</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zacharias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Finch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Girard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page">2184</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zacharias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Finch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Girard</surname></persName>
+		</author>
+		<idno>44 0.71 ChaI-PM-6 055-010573 11 26 35.10 -79 03 26.7 -19.6±1.6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">145</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-51 077-015492 11 03 49.69 -74</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<idno>PM-1 050-011288 12 47 25.39 -80 08 01.5 -19.0±2.1 -10.7±4.6 17.67 15.80 16.74 14.89 13.75 11.21±0.02 10.47±0.02 10.14±0.02</idno>
+		<title level="m">Cha II moving group ChaII</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-3 054-010728 TYC 9419-427-1 -16.0±2.9</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-4 054-010966 TYC 9419-338-1 -15.2±1.3</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-5 055-010397 TYC 9418-388-1 -17.0±0.8</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-6 055-010573 TYC 9419-571-1 -19.6±1.6</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-13 059-010308 2MASS J10593816-7822421 -21.6±1.1</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-20 064-010772 2MASS J11120518-7712408 -15.1±1.5 -2.2±1.7 ChaI-PM-24 067-011535 TYC 9410-196-1 -14.9±1.2</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-26 067-013090 TYC 9411-1199-1 -19.1±3.0</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-27 068-011668 TYC 9397-1013-1 -21.0±1.5</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-35 071-015400 2MASS J11484956-7557548 -16.5±1.0</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-38 072-015687 2MASS J11475667-7536316 -17.5±1.1</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-39 073-015115 TYC 9410-603-1 -23.0±1.1</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-41 073-015916 2MASS J11323348-7535011 -18.8±1.0</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">-</forename><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-50 076-016843 2MASS J11281458-7453084 -21.7±1.6 -0.4±1.1 -29.2±3.1 -0.8±3.0</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-51 077-015492 TYC 9224-2496-1 -18.3±1.8</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-55 078-018479 TYC 9237-1121-1 -15.2±1.2</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<idno>PM-9 066-014936 IRAS 12348-7634 -24.9±2.3 -5.8±2.3</idno>
+		<title level="m">T Chamaeleon II candidates ChaII</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">-</forename><surname>Chaii</surname></persName>
+		</author>
+		<idno>PM-14 073-021942 IRAS 13191-7515 -18.0±1.9 -9.0±1.0 -19.7±2.1 -10.8±2.0</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 TYCHO/TYCHO.B 4280.0 3.7725337614949E-14 8.443355761978E-15 ChaI-PM-1 Generic/Johnson.B 4378.1 3.6617001607623E-14 1.0117651446222E-15</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 TYCHO/TYCHO.V 5340.0 8.5480686453463E-14 8.266715283399E-15 ChaI-PM-1 Generic/Johnson.V 5466.1 7.7129282183686E-14 7.1038694155794E-16</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 SLOAN/SDSS.r 6122.3 1.0060360371168E-13 9.265934328653E-16</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 SLOAN/SDSS.i 7439.5 1.1753320341011E-13 5.4126040422267E-15</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 DENIS/DENIS.I 7862.1 1.0792666849298E-13 6.9582894642363E-15</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 2MASS/2MASS.J 12350.0 8.0947895646707E-14 1.7893384111233E-15</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title level="m" type="main">a References: Johnson, Sloan: UCAC4</title>
+		<author>
+			<persName><forename type="first">;</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zacharias</forename><surname>Apass</surname></persName>
+		</author>
+		<idno>PM-1 2MASS/2MASS.H 16620.0 5.8267972939798E-14 2.4686721723789E-15 ...</idno>
+		<editor>Wright et al.</editor>
+		<imprint>
+			<date type="published" when="1998">2013. 2000. 1998. 2005. 2006. 2010. 2008</date>
+			<publisher>Spitzer: Alcalá et al</publisher>
+			<pubPlace>Stromgren; MASS</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<monogr>
+		<title level="m" type="main">IRAS: Helou &amp; Walker (1988) b A null error value indicates a flux upper limit</title>
+		<author>
+			<persName><forename type="first">&amp;</forename><surname>Luhman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename><surname>Muench</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ishihara</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008. 2010</date>
+		</imprint>
+	</monogr>
+	<note>unpublished AKARI</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

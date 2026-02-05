@@ -1,0 +1,299 @@
+13 Dec 2006 Sungho Hong shhong@u.washington.edu Department of Physiology and Biophysics University of Washington 98195 Seattle WA Blaise Agüera Y Arcas blaisea@microsoft.com Program in Applied and Computational Mathematics Princeton University 08544 Princeton New Jersey Adrienne L Fairhall fairhall@u.washington.edu Department of Physiology and Biophysics University of Washington 98195 Seattle WA Single neuron computation: from dynamical system to feature detector 13 Dec 2006 115C66679E3F64BDD5292E68EDD8804A arXiv:q-bio/0612025v1[q-bio.NC] GROBID - A machine learning software for extracting information from scholarly documents White noise methods are a powerful tool for characterizing the computation performed by neural systems. These methods allow one to identify the feature or features that a neural system extracts from a complex input, and to determine how these features are combined to drive the system's spiking response. These methods have also been applied to characterize the input/output relations of single neurons driven by synaptic inputs, simulated by direct current injection. To interpret the results of white noise analysis of single neurons, we would like to understand how the obtained feature space of a single neuron maps onto the biophysical properties of the membrane, in particular the dynamics of ion channels. Here, through analysis of a simple dynamical model neuron, we draw explicit connections between the output of a white noise analysis and the underlying dynamical system. We find that under certain assumptions, the form of the relevant features is well defined by the parameters of the dynamical system. Further, we show that under some conditions, the feature space is spanned by the spike-triggered average and its successive order time derivatives.
+
+A primary goal of sensory neurophysiology is to understand how stimuli from the natural environment are encoded in the spiking output of neurons. A useful tool for performing this characterization is white noise analysis [Marmarelis and Marmarelis, 1974 , Wiener, 1958 , Rieke et al., 1997 ], whereby a system is stimulated with a randomly varying broadband signal and the relevant features driving the system are determined by correlating output spikes with the signal. Extensions of this analysis to second order have been used to find multiple stimulus features to which the system is sensitive [de Ruyter van Steveninck and Bialek, 1988 , Brenner et al., 2000 , Bialek and de Ruyter van Steveninck, 2005] . Recently, these methods have been applied to characterize the computation performed by a single neuron on its current inputs [Agüera y Arcas et al., 2003 , Agüera y Arcas and Fairhall, 2003 , Slee et al., 2005] .
+
+Due to detailed knowledge of the dynamics of ion channels, it is possible to build dynamical models of current flow in neurons that accurately reproduce the voltage response of single neurons to current (or conductance) inputs. White noise analysis provides us with the capacity to reduce this complex set of dynamical equations to a simple functional model with concrete components: linear feature selection followed by a nonlinear decision function generating spikes. This procedure is compelling as it provides a clear intuition about the form of the changes in the stimulus to which the system is sensitive, and how the system combines these features in the decision to fire. White noise methods have given insight into coding properties at the systems level, in visual [Brenner et al., 2000 , Fairhall et al., 2006 , Touryan et al., 2002 , Rust et al., 2005 , Horwitz et al., 2005] and somatosensory [Petersen, 2003 , Maravall et al., 2006] cortex. More recently, these methods have also been applied to characterize neural coding in single auditory [Slee et al., 2005] , central [Powers et al., 2005] and model [Agüera y Arcas et al., 2003, Agüera y Arcas and Fairhall, 2003] neurons. However, mostly missing from these analyses is a clear link between the obtained stimulus features and the biophysical properties of the circuit or neuron. This issue is particularly well-posed for single neurons under stimulation by direct somatic current injection, where the biophysical parameters of the soma must dominate the neuron's computation. Thus, given the power of white noise methods, the questions that we wish to address here are: how does the dynamical system governing neural behavior map to the neuron's functional characterization derived using white noise analysis? How are the features determined by the neuron's biophysical properties?
+
+Neural dynamics are typically described by conductance-based models which describe the temporal evolution of the voltage V due to an input current I and the variable ionic conductances of ion channels:
+
+where C is the membrane capacitance. Each conductance type i has a reversal potential E i , where the conductances g i corresponding to different ion channels may be voltage dependent through the dynamics of the corresponding activation and inactivation gating variables ξ i and φ i :
+
+where ḡi are constants, and the functions f ξ and f φ are affine in ξ and φ respectively, but not in V . The exponents p i and q i are usually taken to be integers, and describe the cooperativity of molecules required to gate the ion channel. This set of equations is highly nonlinear due to this cooperativity and the voltage dependence of the conductances. While ultimately we would like to understand systems of many dynamical variables, we will begin by analyzing a simplified spiking system, the FitzHugh-Nagumo (FN) neural model [Fitzhugh, 1961 , Nagumo et al., 1962] . The FitzHugh-Nagumo system is cubic in V , the lowest order nonlinearity supporting spike-like behavior, and is defined by:
+
+where V is voltage, W is a generic inactivation variable with linear recovery dynamics, I is the input current and a, b, c and ψ are parameters, ψ ≪ 1. The nullclines of the system are the curves along which dV /dt = 0 (the V nullcline, a cubic) and dW/dt = 0 (the W nullcline, a straight line). Fig 1a shows the nullclines for zero input I on the phase plane. Trajectories have been traced forward and backward in time through a randomly chosen set of initial conditions. The unique intersection of the nullclines is the stable fixed point. Elsewhere in the plane, trajectories always spiral counterclockwise, but qualitatively there are two kinds of orbits, ultimately both converging to the stable fixed point. Subthreshold orbits make only small excursions; however, for trajectories starting either with low inactivation (roughly W &lt; -.45) or high voltage (for example, V &gt; 0), the system makes a large excursion around the right branch of the V nullcline, corresponding to a spike, before settling back to the fixed point. Although we will generally be considering a time-varying input I(t), we will make heavy use of the I = 0 phase plane: one can regard this as representing the instantaneous flow if the input current is switched off. For I = 0, one can define a separation of spiking initial conditions from subthreshold conditions, marked in light vs. dark gray in Fig 1a . This separation of behavior can be thought of as a threshold. Typically the threshold for spiking is taken to be a threshold in voltage only, but this phase plane picture demonstrates that one should really consider the threshold to depend on both V and the hidden inactivation variable(s). One can approximate this "dynamical" threshold by considering a minimal spiking trajectory. There is no absolute distinction between spiking and subspiking trajectories in type II neurons [Gerstner and Kistler, 2002] such as Hodgkin-Huxley and FitzHugh-Nagumo, so this choice is necessarily somewhat arbitrary. Starting with a point on the phase plane at the end of the spike plateau, one can eliminate time from the dynamical equations, solving parametrically for the curve passing through this point. Here, we obtained one such curve by numerically solving the equations from the local maximum of the cubic nullcline, given by
+
+One of the issues we will explore in this paper is the relationship between the geometry of the threshold in the multidimensional space of the dynamical variables and the measurements one makes in white noise analysis.
+
+Our approach will be based on the functional perturbation expansion method, which we will briefly review here. The simplest such expansion is known as the Volterra series [Volterra, 1930 , Marmarelis and Marmarelis, 1974 , Marmarelis, 2004] , where the functional y(t) = y[I(t)] is expanded as
+
+where the kernels h i are called Volterra kernels. One problem with Volterra analysis is that the successive order kernels are not independent. For example, h 2 contains a constant component ∼ dt 1 h 2 (t 1 , t 1 ).
+
+Wiener analysis [Wiener, 1958 , Rieke et al., 1997 ] avoids this issue. In this framework, I(t) is assumed to be zero mean Gaussian white noise satisfying
+
+Under Wiener analysis, y[I(t)] is expanded as
+
+In the Wiener expansion, each kernel is independent from the others, since at each order, one subtracts out the lower order components. Therefore, the kernels g i can be easily obtained by measuring the correlation functions between y(t) and I(t). For example,
+
+and so on. The correlation method can be used to determine the relationship between Wiener and Volterra kernels. From Eq (8),
+
+and so on. Wiener analysis has been successfully used to determine the relevant feature space for neural systems by reverse correlation of the spiking output with white noise input. For this application, the output is taken to be the sequence of spike times, ρ(t) = i δ(t -t i ). Let us define the stimulus s as a linear transformation of the current input I(t):
+
+where f i are some set of independent linear filters. The goal is to determine how a single spike is generated by I, reduced to a vector s comprising projections along the relevant dimensions f i . We need to compute the probability of spiking as a function of the input, P (spike|s):
+
+where G(s) is the input/output function relating ρ(t) to the time-varying stimulus s(t), and we have separated out the scale factor P (spike) proportional to the mean firing rate. In principle, since the equations of motion are deterministic, P (spike|s) is a Boolean function. However, as we will be approximating s by a finite dimensional truncation, and will be solving for P itself in successive orders, the result will no longer be Boolean.
+
+We can compute P (spike|s) using Bayes' theorem [Rieke et al., 1997] ,
+
+This shows that the Wiener kernels of G(s) are the moments of P (s|spike), which can be easily measured.
+
+In this paper, we will focus on the first two moments 1 of this distribution. The first moment is the spiketriggered average (STA), s(t):
+
+where the average • i over the spike occurrence times {t i } is replaced with an average over the spiketriggering ensemble. When the neuron has multiple characteristic features, the STA may contain little information about them since it only points in a single direction which is a certain linear combination of relevant features. The second order kernel, however, can give such information. This kernel is related to the spike-triggered covariance (STC) matrix C, which we will define as
+
+g 2 (t, t ′ ) is the second order Wiener kernel of G(s). When a functional F [s] depends on Gaussian noise s,
+
+. Thus, we can expand g 2 [Bialek and de Ruyter van Steveninck, 2005] :
+
+where Eq. (9) introduces the linear filters which define the components of s.
+
+Therefore, unless the modified Hessian Ĥij =
+
+∂ ∂sj G has null directions 2 , the STC is spanned by the relevant feature space {f i }. Diagonalizing the STC and extracting the eigenvectors with largest absolute eigenvalue will determine the leading dimensions spanning the feature space [Brenner et al., 2000 , Agüera y Arcas et al., 2003 , Bialek and de Ruyter van Steveninck, 2005] . Eigenmodes appearing with negative eigenvalue correspond to stimulus directions in which the variance of the spikeconditional distribution is reduced relative to the stimulus prior distribution; eigenmodes with positive eigenvalues are directions with increased variance. Such cases may arise if the spike-conditional distribution is bimodal in some direction, or if the spike-conditional distribution forms a ring around the origin; phaseinvariant (complex) cells are an example [Simoncelli et al., 2004 , Rust et al., 2005 , Fairhall et al., 2006 , Petersen, 2003 , Maravall et al., 2006] .
+
+In this paper, we work with a multidimensional space of dynamical variables, as in Eq. (1-6), for which we obtain the Volterra series. When we denote them with y i , the Wiener kernels for G(y i ) can be expanded as
+
+where g n [y i ] is a nth Wiener kernel of y i and dots represent higher order terms than quadratic. Here we note that g n [y i ] is generated by the infinite series of Volterra kernels. Moreover, we will see later that the Volterra kernels at each order can be constructed from the set of first order kernels.
+
+In the previous section, we discussed the application of white noise methods to experimental data where the output of the system is measured as the firing times of spikes. With access to the entire dynamical system, one could attempt to model the relationship between the input I(t) and the output voltage V (t), including both subthreshold and spiking behavior. As we have discussed, neurons are highly nonlinear. Perturbative expansions such as Wiener/Volterra series generally are unable to capture the nonlinearities of spike generation with few terms. However, a very successful and highly influential approach to the modeling of neural systems has been to separate a linear filtering stage from an explicit nonlinearity capturing the very sharp voltage increase of the spike [Victor and Shapley, 1980 , Gerstner and Kistler, 2002 , Kistler et al., 1997 , Berry II and Meister, 1999] . This is known as a cascade model, and in various forms is the theoretical basis for many of the simple neuron models in use, including the integrate-and-fire neuron [Gerstner and Kistler, 2002, Agüera y Arcas and Fairhall, 2003] , the Spike Response Model [Gerstner and Kistler, 2002] , generalized integrate-and-fire models [Paninski et al., 2004] and cascade models of retinal ganglion cells [Victor and Shapley, 1980 , Victor and Shapley, 1979 , Keat et al., 2001 , Pillow et al., 2005] . The success of these models suggests that a breakdown of the dynamical system into its linear component and a threshold is a useful approximation to examine. In our analysis of the dynamical system, we will take the approach of experimental work, where the output is reduced to a sequence of spike times. Our goal here is to derive the form of the multidimensional linear stage that arises directly from the equations of motion, and to examine the consequences of thresholds of various forms. We will begin by walking through some simple linearized systems analysis and make clear the connection with the cascade model picture. Rewriting Eqs. (1-4) in the following simple form,
+
+we assume that they have a fixed-point solution y k (t) = y (0) k when I(t) = 0. Now the linear approximation of the system around the fixed point is given by 3
+
+where
+
+The linear filters are the kernels of Eq (17), ǫ (1) = D -1 . They satisfy
+
+(1)
+
+giving the linear filter form for the system's evolution:
+
+where ǫ
+
+(1) k = ǫ
+
+(1) k0 . Eq (18) can be solved by diagonalizing the Jacobian matrix J km . Let's consider the following diagonalization with eigenvalues λ α ,
+
+Here we employ the notation that indices in the diagonalized basis are Greek letters. Therefore, Eq (18) can be written in the new basis as
+
+where the first order kernels ǫ(1) in this basis are ǫ(1)
+
+where H(t) is the Heaviside step function and arises from causality. The eigenvalues λ α can be real or complex. The sign of the real part of the eigenvalues is determined by the stability properties of the fixed point at y (0) . For a neural system this fixed point should be attracting, so all eigenvalues have negative real part and thus eigenvectors decay as t → ∞. This underscores that there are only a limited number of forms that the linear filters can take: decaying exponentials or damped oscillations. We note the following facts. First of all, in general, an n-dimensional system will have n independent first order kernels, except when the Jacobian has a degenerate spectrum. Further, the linear kernels can be generated from a "master kernel"
+
+and its time derivatives up to nth order. To show this, from the expression of the derivative of a master kernel
+
+up to additive singular terms coming from the derivatives of H(t). T kα is a Wronskian matrix of exponentials at t = 0. The determinant of T kα is the Vandermonde determinant det(T kα ) = α&gt;β (λ α -λ β ), which cannot vanish by definition [Gradshteyn and Ryzhik, 2000] . This means that the master kernel and its derivatives can be transformed to e λαt 's in a non-singular way. Therefore, we conclude that all first order kernels can be expressed in terms of a master kernel and its time derivatives. Frequently the first order kernel is non-zero at t = 0, so that the time derivative of the filter also includes a delta function at t = 0. We will see the appearance of this singular component in the white noise analysis.
+
+To recover the filters corresponding to the dynamical variables, one must invert the diagonalizing operation, Eq. ( 20 ) to obtain linear combinations of the eigenmodes:
+
+where the coefficients c α derive from the components of the Jacobian. Thus the filters of the linear system are sums of exponentials, either purely real or with an imaginary component. To the extent that subthreshold dynamics are well approximated by the linearized system, this shows clearly why one might expect to find both integrate-and-fire-like neurons, with filters having purely real associated eigenvalues, and oscillate-andfire neurons [Izhekevich, 2001, Hutcheon and Yarom, 2000] with a corresponding eigenvalue having nonzero imaginary part. In terms of the linear system, the possible set of filters or feature space of the system is dual with the dynamical variables which define the system. The subset of features that are relevant to a spike occurring are those that contribute to crossing the internal state over "threshold". The properties outlined above have an interesting implication for white noise analysis in the case that the system is well described by subthreshold linearity. As we will see in the next section, the STA is typically a linear combination over the relevant features and their derivatives. If the STA has components onto all the true features, as it typically will, one can derive the basis for the feature space from the STA and its successive order time derivatives, as has been empirically observed [Rieke, 1991] .
+
+The higher order approximations to the system can also be expressed in terms of first order kernels. For example, the second order approximation is given by the following equation:
+
+whose solution is y
+
+In this way, all of the higher order kernels can be obtained by outer products of first order kernels. The detailed computation is summarized in appendix A.
+
+In this section, we will assume that the higher order nonlinearity of the system is well captured by a threshold. Since voltage is generally the only observed variable, "the threshold" is often taken to be a threshold on the voltage. The imposition of a threshold on the voltage alone has been applied even to neural models such as FN and the Hodgkin-Huxley model system, where there is no difficulty in defining a threshold in V and the "hidden" dynamical variables of W (FN) or m, n, and h (HH). Here we will consider the implications of considering the threshold to apply in multiple dimensions. Before we discuss the validity of the threshold approximation for a FN neuron, we will illustrate the results from applying white noise analysis to models with a variety of threshold structures acting on subthreshold linear dynamics given by the linearized FN system. Previous work has treated simple one-dimensional linear/nonlinear models, in which a spike is defined when the output of a single linear filter f on a random current input crosses a threshold. One can show [DeWeese, 1995] [Meister, M., private communication] that covariance analysis on this model finds two modes, the filter f and its time derivative, f ′ . The derivative mode is a result of the criterion defining the spike only on the upward crossing of the threshold:
+
+Thus the variance of projections onto f ′ is also reduced with respect to the prior. Covariance analysis has also been performed [Fairhall et al., 2006 ] on more realistic models in which an exponentially decaying afterhyperpolarization is added to the voltage following a spike [Gerstner and Kistler, 2002, Keat et al., 2001] .
+
+This makes the threshold-crossing model more realistic, but the manipulation does not alter the (f, f ′ ) eigenmode structure unless the timescale of the AHP is short enough that spiking occurs many times during the superthreshold fluctuation, which destroys the correlation with positive f ′ .
+
+Here we will assume that the system evolves according to linear subthreshold dynamics. We treat five cases. In the first three, the threshold is linear, but in different components of the 2D space; in the last two, the threshold is a nontrivial 2-dimensional structure. The thresholds used are:
+
+1. a traditional threshold in V only 2. a threshold in W only 3. a threshold on a linear combination of V and W 4. the union of two piecewise linear segments in V and W , i.e. a logical 'or' on 1 and 2 5. a curved threshold on a smooth, nonlinear function of V and W .
+
+From the discussion in §2, the linear space in which the n-dimensional system operates is defined by the n filter inversions of the dynamical system, Eq. ( 19 ). The effect of the threshold is to select as relevant from those n dimensions the subspace defined by the filter directions that have a nonzero projection onto the threshold. Thus we would predict that for the linear threshold, we will find two relevant modes, the primary direction f which is normal to the direction of the threshold, and f ′ , its time derivative. For a threshold in a single dimension, V or W only, f should recover the V or W filter respectively, and the corresponding time derivative. For a threshold that is a linear combination of V and W , f should be a linear combination of the V and W filters. The distribution of trajectories is simply a linear transformation of the original Gaussian stimulus distribution. Any linear threshold in this plane will produce negative eigenmodes, as the set of points selected by the threshold must have decreased variance with respect to this prior.
+
+When the threshold is not linear in V and W , we expect to find two primary filters f 1 and f 2 which will be some linear combination of the V and W filters, and in principle, the time derivatives. However, the number of modes will be less than or equal to n + 1 because, as we have shown, the time derivatives span the same space as the linear variables themselves. (Note that the +1 accounts for the singular component of the time derivative, δ(t), arising from discontinuity of the filters at t = 0.) Furthermore, a threshold which is not linear may produce a spike-conditional distribution with a direction in which the variance is actually increased with respect to the prior; such a direction will appear with a positive eigenvalue.
+
+Fig 2b shows the thresholds that we applied to the FN first order linear dynamics. The results of the covariance analysis are shown in Figs 2c and d . Fig 2c shows the covariance eigenvalue spectra for all five cases. The significant eigenvalues are empty circles beyond the error level denoted by the shaded box. 4 In the cases with thresholds on V only, on W only, and linear in both V and W , only two modes are obtained. With 2D thresholds, cases 4 and 5, three eigenmodes appear. Fig 2d shows the corresponding modes. We see that the V threshold picks out ǫ
+
+W , and the (V, W )-linear threshold leads to a linear combination of these filters. In the latter two cases, the eigenmodes are a linear combination of ǫ
+
+V , itself a linear combination of the V and W kernels and δ(t). Fig 2d also shows the projection of spike triggered stimuli onto two of the distinguished eigenvectors. In the first three cases, the linearity of the threshold is manifested in the 2D plane as a single elliptic cluster, while the non-linear threshold cases show richer structure.
+
+Recall that the filters are generated by linear combinations of a master filter and its time derivatives. This implies that our multidimensional threshold structure has a natural interpretation as a dynamical threshold, 4 Significance of eigenvalues can be evaluated as follows. Let N be the number of spikes and d the dimension of each sampled stimulus. To estimate the finite size/dimension error, we choose N d-dimensional stimuli at random [Rust et al., 2005] . In this case, the covariance matrix C in Eq. ( 14 ) is filled with d(d + 1)/2 random numbers drawn from a normal distribution N (0, σ 2 p 2/N ) in the large N limit. When d ≫ 1, the eigenvalues of this matrix follow Wigner's semicircle law, and their distribution is bounded by ±2 √ 2σ 2 p d/N , which is the error level [Mehta, 1991] . When the stimulus has small correlation, the semicircle is not a good approximation of the eigenvalue distribution, but change in the upper and lower bounds rarely exceeds an order of magnitude, which can be checked by numerical simulation.
+
+depending not only on the voltage V , but also on ∂ t V , ∂ t 2 V , and so on [Azouz and Gray, 2000 ]. We will show how well this approximation fits for the Hodgkin-Huxley model in the final section.
+
+An advantage of the simple models introduced in the previous section is that they can be treated analytically. From Eq. ( 11 ), we have G(s) = P (spike|s) P (s) P (spike) = P (spike|s) P (s) Ds P (spike|s) P (s) ,
+
+where Ds = ds 1 ds 2 • • • . Instead of directly computing G(s), we characterize it by a moment generating function,
+
+We define an n-dimensional first order system, given by dynamical variables y k and the corresponding linear filters ǫ k as in Eq. ( 16 ). We assume that the stimulus is a Gaussian white noise current I(t) with zero mean and variance σ 2 . Thus as before,
+
+We denote a random segment of the current stimulus I(τ ), τ ≤ t as an infinite-dimensional 5 vector s. Any sample of y is therefore a functional of the random variable s, y[s]; for simplicity we will simply write y.
+
+Spiking is determined by crossing a threshold θ(y) = 0 in the phase space from below. Then,
+
+The Heaviside function H(•) ensures that spiking only occurs on a threshold crossing from below, and the weight factor ẏ • ∇ y θ(y) is a geometric factor accounting for the flux at the threshold. The filters ǫ k are not necessarily normalized or orthogonal to each other, and it is convenient to define the orthonormal basis {f µ } which spans the same space as {ǫ k }. Then there will be a linear transformation T µk
+
+and so we define a new coordinate system z µ ≡ T µk y k .
+
+As s is uniform Gaussian, the orthonormally transformed variable z is also uniform Gaussian with variance σ 2 . Now we can separate the stimulus into two components: its projection into the subspace spanned by the {f µ } and the orthogonal component. We will denote the corresponding directions of j as j = j + j ⊥ , where
+
+The moment generating function can then be separated as W
+
+5 In practice, any application to data requires discretization in time. We use the convention that a function f (t) is discretized as ft = f (t) √ ∆t where ∆t is the time step. This implies
+
+• f and thus the vector f obtained by discretizing f (t) has a vector norm corresponding to the L 2 norm.
+
+where s ⊥ are the components of s orthogonal to the plane spanned by z, and
+
+where R = T JT -1 is the Jacobian matrix of the linear system, Eq. ( 16 ), in the {f µ } basis, and we use żµ = T µk ẏk = T µk J kl y l = (T JT -1 ) µν z ν .
+
+As previously discussed, the closure under time differentiation of the space spanned by the first order kernels is assured by ż, as in Eq. ( 41 ) in the appendix. Note that our separation of W [j] depends on this particular property. For a fixed spike time t, restricting ourselves to the region where τ &lt; t, W ⊥ [j] becomes a static integral. Thus Eq. ( 28 ) shows clearly how the properties of this model emerge. P (spike|s) is just given by a threshold with a weight function w(z) up to some linear transformations. Therefore, for example, the linear threshold case reduces to the one dimensional case. Since ∇ z θ(z) is a constant vector, every computation reduces to a one dimensional integral in this direction and the corresponding filter is a linear combination of f µ s, as we have observed in Fig 2d . Furthermore, a variety of structures may be generated depending on how trajectories cross the threshold.
+
+From Eqs ( 28 ) and ( 27 ), we can derive the analytic forms of the first and second order moments:
+
+and
+
+Note that we have assumed a prior based on the distribution of randomly driven trajectories of the linear system. This takes no account of perturbations of this distribution due to flux from the system's return from a spike. This assumption is equivalent to assuming that the last spike is in the distant past, so that memory of that perturbation has vanished. In this paper we will consider only this "isolated spike" case. We will return to this point in the discussion.
+
+Through Eqs. ( 29 ) and (30), this model captures an explicit dependence of the white noise outcome on the stimulus statistics, in particular, the variance σ 2 . While the subthreshold dynamics are linear, the dependence on σ is nonlinear due to the threshold shape and the weight function w(z). We discuss two examples below.
+
+We first consider a linear threshold. Through a suitable linear transformation, this case simply reduces to a filter-and-fire model with a single filter, say f 0 , and a fixed threshold z 0 = θ f . Now the distribution of threshold crossing points is constrained by z 0 = θ f and ż0 &gt; 0. As we mentioned in the previous section, ż0 lies in the originally defined feature space, and is given by another single filter, which we denote by f 1 . In other words, when the normalized ḟ0 is denoted by f ′ 0 , we can choose f 1 = f ′ 0 by a suitable orthogonal linear transformation. Thus, our system depends on two filters, which are depicted schematically in Fig 3a .
+
+The STA is the centroid of the distribution of threshold crossing points. Eq. ( 29 ) reproduces a previously known result [Meister, M., private communication] [Fairhall et al., 2006] ,
+
+With high variance σ ≫ θ f , the STA is dominated by f 1 . In the feature space, with increasing variance the threshold stays the same, but a larger portion of it is crossed by trajectories driven by the larger variance ensemble, as can be seen in Fig 3a .
+
+When the threshold is curved, the σ dependence is considerably more complicated. We will consider an extreme but analytically tractable version of this case to illustrate the point: let the curved threshold be approximated by two linear ones imposed at θ f and θ g in the f 0 and g 0 directions respectively, as in Fig 3b . In this case, one segment of the threshold imposes a dependence on the filters f 0 and its (normalized) derivative, f 1 , while the other selects g 0 and g 1 = ġ0 / ġ0 . The space of relevant features is still two dimensional, or three including the δ-function, since g 0 and g 1 are linear combinations of f 0 , f 1 and possibly also δ(t).
+
+Now the STA of this system is
+
+where
+
+ǫ 1 (τ ) as in Eq. ( 31 ). Note that as in Fig 3b , the STA does not lie on the threshold. As for a variety of experimental examples such as complex cells [Touryan et al., 2002] , neurons of rat barrel cortex [Petersen, 2003] , and some retinal ganglion cells [Fairhall et al., 2006] , the spike-triggered stimuli are poorly represented by their first order statistics, the STA. Also, the coefficients of STA f,g depend exponentially on θ f,g and σ. Thus, the system shows a nonlinear dependence on the stimulus variance.
+
+In the previous section, we considered neuron models composed of linear filters derived from the FN neuron, and some choices of imposed thresholds. However, when we consider the full FN neuron, the threshold arises from the structure of the FN equations ( 5 )-( 6 ). Here we discuss the importance of the threshold identification for reverse correlation analysis.
+
+The problem of the identification of a threshold arises immediately upon attempting a reverse correlation analysis; spike times are often defined by the threshold crossing of the voltage. Here also, we can impose an arbitrary threshold in V to identify each spike. The STA obtained using this scheme is displayed in Fig 5a . It is clear that it cannot be well described by the first order kernels. However, this does not mean breakdown of the analysis; rather, it underscores the point that the STA or any other single spike quantities should be computed using the "correct" threshold that we take to be the dynamical threshold discussed in §1.
+
+Fig 5b compares the spike triggered stimuli in the fixed V and dynamical threshold cases. While the peaks of the stimuli are spread out in time in the fixed V threshold case, for the dynamical threshold the peaks lie in a narrow band around the spike time. As we can see from Fig 1, the spiking trajectories cross the dynamical threshold before crossing the V threshold, and this timing difference, ∆t, depends on W . Additionally, since the system is driven by Gaussian white noise, the variability increases with the timing difference, inducing a point spread function on the STA. Hence, each spike triggered stimulus is contaminated by this temporal jitter, and estimated filters are distorted. As mentioned in §1.1, the FN neuron does not have a clear-cut dynamical threshold; the threshold was chosen to some degree arbitrarily, and this will induce some error in the estimation of filters. However, Fig 6a shows the improvement in the STA computed using the dynamical threshold. Figs 5c and d show the point spread distribution -the distribution of values of ∆t -and how it is correlated with W . This situation is similar to that discussed in [Aldworth et al., 2005] , where it was noted that temporal or spatial jitter can blur the estimation of filters and receptor fields. There, a blind deconvolution algorithm was used to "dejitter" and realign the spike-triggered stimuli, which dramatically sharpened the estimate of the spike-triggering stimulus. In a real system, jitter may indeed be due at least partly to noise, but it is also possible that a component of such jitter is deterministic and due to variability in the point of dynamical threshold crossing, as in the FN case. Blind deconvolution may then be viewed as an empirical approach to recovering a dynamical threshold based on spike times originally recorded using a voltage threshold. It is interesting to note that estimated jitter in such a case is correlated with projection onto the STA derivative. 6
+
+In this section, we discuss the covariance analysis of the full FN system and compare the result with the same analysis of the first and second order approximation.
+
+We identified ∼ 2 × 10 6 spikes first using a voltage threshold, and then backtraced each trajectory to the point where it crosses the dynamical threshold shown in Fig 1 . The trajectory might cross the threshold multiple times before spiking due to the noisy input. In this case, we used the first crossing point after the trajectory diverges from that of the second order approximation. This is based on the assumption that the second order is a sufficiently good approximation of the system in the subthreshold regime. For both the first and second order system, crossing of the dynamical threshold is used to identify spikes. Right after a spike, we imposed a post-spike inhibitory period equal to about a "spike width", as empirically determined from the full system.
+
+The results are shown in Fig 6 and 7 . Fig 6a shows that the STA of the first order approximation is quite similar to that of the full system, and the second order STA is even closer. From the covariance analysis, we see that the FN neuron, like the HH model [Agüera y Arcas et al., 2003] , has one dominant negative and one dominant positive eigenvalue. However, the results from the covariance analysis of the three systems differ considerably. The second order and the full system both show a relatively large number of significant eigenvalues. This is due to the contribution of the second g 2 [V ] and g 2 [W ] (and higher order) kernels in Eq (15). However, these are relatively suppressed compared to the first order modes. Further, the spectrum derived from the second order system, Fig 6b, has no positive significant eigenvalue.
+
+Fig 6c provides more detailed information. The first order case is just as we have seen previously, with three modes which are well described by linear combinations of the linear kernels. In the second order case, v 1 and v 2 are comparable to those of the first order. v 3 , which is not approximated by the first order kernels, must arise from the second order kernels. In this regard, the full system is well matched with the second order approximation. There also, v 3 is comparable to that in the second order, and v 1,2 are derived from the linear kernels. However, the full system also has a positive mode, v + , from the linear kernels, which resembles the first order rather than the second.
+
+The geometry of the spike-triggering stimulus projections is shown in Fig 7a . The first order, not surprisingly, recapitulates the curved threshold case in Fig 2d . However, the second order is more like the (V, W )-linear threshold case, while again the full system resembles the curved in Fig 2d . A possible explanation for this is that each system probes different parts of the dynamical threshold. Fig 7b marks the density of threshold crossing points for each model. In contrast to the first order and the full system, which access a large section of the threshold with non-trivial curvature, the second order only probes a small and almost linear section. This is the reason for the lack of a positive eigenvalue. As in the toy models in §2, the contributions of the relevant dimensions are determined not only by local information (filters) but also by the global structure of a multidimensional or dynamical threshold.
+
+In this section, we apply the same analysis to a two-dimensional model which is more nonlinear and more realistic than the FN model.
+
+Abbott and Kepler [Abbott and Kepler, 1990 ] developed a two dimensional reduction of the Hodgkin-Huxley model, based upon the observation that there is a separation of timescales between the faster m and the slower n and h variables. m is then replaced with its asymptotic value at the membrane voltage V , while n and h are controlled by another voltage variable U . The equations of the Abbott-Kepler (AK) model are of the form
+
+where f (V, U ) and g(V, U ) are nonlinear functions in V and U . Their derivation is briefly sketched in appendix C, and we refer to the original paper [Abbott and Kepler, 1990] for further detail. The nullcline for U is given by g(V, U ) = 0, which is satisfied by V = U . The V nullcline, f (V, U ) = 0, is more complicated and obtained numerically. The two nullclines intersect at a fixed point V = U = -65mV.
+
+Fig 8a shows the phase plane of this model with zero input current. Like Fig 1, the threshold structure, which can be obtained numerically, is visible. Due to the strong nonlinearity, spiking trajectories are welldefined on the phase plane and the threshold has less ambiguity than for the FN model. Again, we try to identify the dynamics of the system in the subthreshold regime with the first order approximation. Unlike a FN neuron, the Jacobian of this system has complex eigenvalues λ ± = -0.2118 ± i0.4035ms -1 , and therefore the first order kernels ǫ Before we carry out covariance analysis on this model, we examine the effect of a dynamical threshold, as in section 3. Fig 9a shows the spike triggering stimuli aligned both with a fixed threshold in V , chosen as V = -40mV to unambiguously select spiking trajectories, and the dynamical threshold. The typical time shift is of order ≤ 1ms; the overall STA only suffers from a slight time/phase shift when the V threshold is used. However, in the small time scale of ≤ 1ms, there is discrepancy from the dynamical threshold case, which is characterized by a large delta-function component at the spike time. Both STAs are well approximated by linear combinations of ǫ
+
+(1)
+
+V,U , up to a small deformation around -15ms due to the effects of multiple spikes.
+
+Fig 10 shows the results from covariance analysis carried out with ∼ 2 × 10 6 spikes for Gaussian white noise stimuli with various variances. For comparison with previous results, we selected three eigenmodes corresponding to the leading two negative and the largest positive eigenvalues. We find that they are reasonably well approximated by linear combinations of ǫ (1) V,U in most cases, although they are sometimes affected by a δ-function at t = 0 and a large multi-spike effect at high variances. The multi-spike effect can be eliminated by considering only the isolated spikes when the spike rate is low [Agüera y Arcas and Fairhall, 2003] . At higher variances isolated spikes are rare and there is a stronger influence of oscillating "silence modes" [Agüera y Arcas et al., 2003] . As in the FN neuron case, we identify modes other than those in Fig 10c as "nonlinear modes".
+
+We compare results at different variances with our discussion in §2.4. Some features of variance dependence are shared with the toy model in §2.4: the eigenvalue spectrum drifts and the corresponding modes rotate among themselves. However, the Abbott-Kepler modes also exhibit more complicated behavior. Fig 11 shows projections of spike triggered stimuli onto two distinguished eigenvectors v 1,+ and corresponding threshold crossing points. At low variance, the system crosses mostly one side of the threshold while the projections trace out the curvature of the threshold segment. As the variance increases, some crossing points begin to appear on the left side of the threshold. However, this does not overcome the expansion of a crossing point distribution on the right side, and the modes corresponding to this direction dominate. At high variance, there are many crossing points on both sides, reflected in the bimodal distribution of the projections, previously seen in the toy models. Thus this is another example of how the results of reverse correlation analysis are affected both by the filter properties and by the interaction of the stimulus ensemble with the threshold geometry.
+
+So far, we have discussed only two dimensional dynamical models. We began with some artificial toy models with purely linear subthreshold dynamics, and proceeded to the minimal FitzHugh-Nagumo spiking model. We applied the lessons learned there to the more nonlinear Abbott-Kepler model. We will conclude with a partial analysis of the higher dimensional Hodgkin-Huxley model.
+
+Higher dimensional systems require nontrivial extensions of the methodology we have used with two dimensional systems. First, it is much harder to use the phase portrait to find a dynamical threshold, which could now be a multi-dimensional hypersurface rather than a curve. If we do not align the spike triggered stimuli according to the dynamical threshold, the obtained filters may include a distribution of time delays. For example, the reverse correlation analysis may result in broadened filters,
+
+where p σ (τ ) is a point spread function, depending on the input variance σ 2 , as in Fig 5c . 7 However, we can still gain some insights from fµ . If p(t) has a narrow support, say less than a millisecond, it has negligible effects for larger time windows. It is also possible that some consequences of our analysis will still apply to fµ with only a few reasonable assumptions. For example, if p σ is of limited temporal extent, then the derivatives of fµ can be simply
+
+Therefore, as we discussed in §2, the linear modes among { fµ } should still be (approximately) closed under time differentiation.
+
+To demonstrate this, we use the four dimensional Hodgkin-Huxley model, and the following strategy: we select the linear modes out of the significant filters from covariance analysis. Now, since the STA is approximately their linear combination, the time derivatives of the STA should be written in terms of the linear combinations as well if they are closed under time differentiation. Fig 12 shows that this holds. In the low variance case, Fig 12a , the three linear modes chosen provide good fits to the time derivatives of the STA. The high variance case, Fig 12b , is affected by multi-spike effects and a filtering artifact, but it is also well fitted. Therefore, we can conclude that the time derivatives of the STA span the same space as three linear modes. One might expect a fourth linear mode due to the dimensionality of the model, but this is not as significant as the others; this agrees with previous covariance analysis that the HH model can be well described as a quasi-three dimensional system [Agüera y Arcas et al., 2003] .
+
+We note that it is not clear whether the linear modes in the two cases span the same feature space. This is difficult to ascertain since the point spread function can in principle depend on the stimulus variance. In Fig 12c , we see that while v 1 of the high variance case can be fitted by the linear modes of the low variance, the other modes show a small deviation even around 5ms. This might indicate an interesting variance dependence as in §2.4, but we will not pursue this issue in this paper.
+
+Here we have investigated the meaning or interpretation of the features derived from the spike-triggered covariance method applied to two simple neuron models, the FitzHugh-Nagumo model, the minimal spiking neuron model, and the Abbott-Kepler model, a more faithful two-dimensional reduction of the Hodgkin-Huxley system. The power of white noise analysis is that it provides a data-driven method to reduce a high dimensional dynamical system to a functional model which captures the essential computation of the system in terms familiar to systems neuroscience: a receptive field which filters the stimulus, and a threshold function over the filtered stimulus. Our goal here was to analyze the output of a white noise analysis in terms of what it can reveal and how it depends upon the underlying dynamical system. In this, our approach is distinct from the elegant work of [Huys et al., 2006] where responses to white noise stimuli are used to fit the parameters of a conductance-based model.
+
+Dealing with simple two-dimensional systems, our observations of spiking dynamics in the phase plane motivated the following reduced model: dynamics in the phase plane are approximated by the perturbative expansion, in particular the linear approximation, and the system's nonlinearity is captured by a spiking threshold, determined for zero input, that extends through multiple dimensions. This model is a generalization of a basic filter-and-fire model to multiple dimensions, and extends it in two significant ways. One is the identification of the filters with the dynamical variables of the system; the other is the generalization of the concept of the threshold.
+
+The simplified model with linear dynamics and a multidimensional curved threshold was treated both analytically and phenomenologically, using numerical simulation and reverse correlation (covariance) analysis of spike triggered stimuli. This led to several insights, some of which are related to existing observations. First, for this case the feature space derived from covariance analysis is spanned by the linear kernels. Since the set of kernels is closed under time differentiation, the same feature space can be also spanned by a generic linear combination of the kernels, such as the spike triggered average and its n time derivatives. However, not every kernel contributes as a relevant feature. The threshold structure plays a role of selecting the relevant ones from the kernels: for example, a linear threshold selects a single filter and its time derivative. In general, a threshold spanning a d dimensional subspace will select d + 1 features from among linear combinations of the kernels. We show further for this model that the distribution of spike triggered stimuli in the covariance feature space corresponds to that of threshold crossing points, up to a suitable linear transformation.
+
+We also used this model to illustrate the effects of the interaction of the threshold nonlinearity with the stimulus ensemble. We show that a complex threshold geometry leads to a nontrivial variance dependence of the eigenmodes and eigenvalues of covariance analysis, and even more so, the spike-triggered average. In the linearized subthreshold model, the subspace of eigenmodes is not changed, but the spike-triggering ensemble may rotate through this subspace, leading to a variance-dependent spike-triggered average. This is one example of stimulus variance dependence in a nonlinear, non-adapting system [Yu and Lee, 2003, Borst et al., 2005] . We show this effect in the analysis of the Abbott-Kepler model neuron.
+
+The identification of a curved or dynamical threshold raises an issue in reverse correlation analysis regarding the determination of spike time. For the FitzHugh-Nagumo and Abbott-Kepler models, we compared two cases: when spike times are identified using a threshold in voltage, and when the spike times are found using the crossing of an identified curve that leads to spiking for zero current input. Surprisingly, the spike triggered averages showed remarkable differences. For a voltage threshold, the time delay from the earlier threshold crossing point blurs the estimated filters. It is shown that using the dynamical threshold leads to a better fitting of the estimated filters by the system's linear kernels, as well as improving the sharpness and substantially altering the shape of the STA.
+
+In all of our discussion here, we have concentrated on the subthreshold dynamics bringing the system to the point of threshold. We do not analyze, and our simplified models do not accommodate, the dynamics of the system immediately after a spike. In the phase plane picture, spiking reinjects the system into the subthreshold regime in a nonrandom way, affecting the subsequent probability flux to threshold, analogous to the one-dimensional reset of the integrate-and-fire neuron treated in [Paninski et al., 2003] . In our approach, we have assumed that the system has remained below threshold for long enough that its location in the subthreshold space has been randomized by the driving current. This corresponds to an analysis of isolated spikes only, a simplification we have used before [Agüera y Arcas et al., 2003] and employed here for the covariance analysis. A number of works have treated this issue explicitly with a variety of methods: treating the interspike interval as the primary symbol [de Ruyter van Steveninck and Bialek, 1988, Rieke et al., 1997] , solv-ing for the interspike interaction using the interspike intervals [Pillow and Simoncelli, 2003] , simultaneously solving for the linear kernel over stimulus history and spike history using the autoregressive moving average [Powers et al., 2005 , Truccolo et al., 2005] and fitting parameters of an explicit model for the effective postspike current [Kistler et al., 1997 , Keat et al., 2001 , Paninski et al., 2004 , Pillow et al., 2005] . While the simplification we have used here allows us to find direct connections between the covariance modes without the confound of the interspike interaction [Agüera y Arcas et al., 2003, Agüera y Arcas and Fairhall, 2003] , it is clearly not a complete model for spiking responses. A first step toward a more complete spiking model may be to consider the perturbed subthreshold distributions induced by the influx of trajectories following spikes. This is in effect a mean field approximation, taking into account the overall spike rate for a given stimulus ensemble. Further steps could be taken by introducing a return map deterministically relating the point of threshold crossing to a point of return into the subthreshold domain. The integrate-and-fire model is the most trivial implementation of such a return map; an equivalent map in multiple dimensions would reintroduce all spike trajectories into the subthreshold domain at an identified point (this is V = 0 for integrate-and-fire). Such a many-to-one map implies that the neuron's state is completely reset by a spike, which is incorrect for neurons with slow conductances that modulate spike afterpotentials. An less degenerate map seems more appropriate for such cases. Another important step is the addition of these slow conductances. Using our formalism, such conductances may be representable simply as additional dimensions of threshold curvature with corresponding longer-timescale stimulus filters.
+
+White noise analysis allows the derivation of intuitive functional models for neural computation: what does the neuron compute? In this paper we have drawn concrete correspondences between the components of these functional models and parameters of the underlying dynamical system.
+
+Let's consider an n-dimensional dynamical system, perturbed by an external input I(t) as Eq (15). For convenience, we introduce a dimensionless expansion parameter η, with which we will expand the equation. More precisely, Eq (15) becomes
+
+We also have the perturbation expansion of y k as
+
+By plugging Eq (38) into Eq (37), we obtain
+
+By comparing two sides order by order, we obtain a series of equations satisfied by the perturbative expansion at each order as
+
+, which is Eq (16),
+
+which is Eq (23), and so on. These equations can be solved recursively by using a kernel ǫ (1) = D -1 which therefore satisfies
+
+Now the solution of the first order can be written as
+
+where ǫ
+
+(1)
+
+k0 . Also from Eq (39),
+
+which is Eq (24). Since this procedure can be carried out to higher orders, the higher order kernels are outer products of the linear kernels.
+
+In addition, the first order kernels are related to each other by simple time differentiation. To show this, let's rewrite Eq (18) as follows
+
+Now the derivatives can be computed as
+
+This shows that the non-singular part of the first order kernels can be obtained by the linear combination of the derivatives of other kernels.
+
+B A linear model from the FitzHugh-Nagumo system
+
+Here we derive the linearization of the FitzHugh-Nagumo model, beginning with Eqs. ( 5 ) and ( 6 ). The fixed point can be obtained by simultaneously solving the nullcline equations. We denote it by (V 0 , W 0 ), and we expand the system around this point. First, the Jacobian is
+
+, and this defines a linear system (1)
+
+V + c W ǫ
+
+(1)
+
+W . The kernels are normalized excluding the δ-function component. The coefficients (c V , c W ) are displayed above each plot and the gray line is a fitted function. For each case we show the projection of spike-triggered current histories onto either the leading two negative modes, v 1 and v 2 , or v 1 and v + , depending on the threshold.
+
+Note that the zeroth order kernel is simply g 0 = 1.
+
+Since s(t)s(t ′ ) is only rank one, there are only two possibilities leading to null directions. The first is when ∂ i ∂ j G has null directions, in which case it is excluded (for our purposes) by definition. The second case is when ∂ i ∂ j G has an eigenvector s(t) with an eigenvalue ||s(t)|| 2 , which does not happen generically.
+
+From here on, we use the Einstein summation convention, e. g. C km dm ≡ P m C km dm.
+
+This correlation arises because the STA derivative is the linear approximation to time translation of the STA. Hence, if a current history aligns with the STA better under a small time translation or jitter, it will have a projection onto the STA derivative proportional to that jitter. In Sect. 2 of this paper it was demonstrated that the STA and its derivatives are, up to a linear transformation, the filters associated with the dynamical variables of the linearized system. Therefore there is a relationship between blind deconvolution to optimize fit to an STA and estimation of a dynamical threshold based on the "hidden" (non-V ) dynamical variables.
+
+In fact, it can be much more complicated than this. Since the time delay depends on the location of threshold crossing in a phase space, additional temporal correlations are introduced. Therefore, each filter may have a different point spread function, or filters may depend upon the time delay structure in a complicated way. We will discuss here only the simplest case.
+
+where f ± (V ) = (F ′ (V ) ± bψ)/2. As in Eq. ( 20 ), J is diagonalized by a matrix U ,
+
+From Eq. ( 22 ), we obtain the first order kernels which solve the linear system ǫ
+
+(1)
+
+where S(t) = (e κ+t -e κ-t )/(κ + -κ -). ǫ
+
+(1) V,W (t) with our choice of parameters is drawn in Fig 2a .
+
+In this section, we show the derivation of a two-dimensional neuron model used in §5. For further details, we refer to the original paper [Abbott and Kepler, 1990] .
+
+We begin with a Hodgkin-Huxley equation, which is defined by Eq. ( 1 ) and the following parameters:
+
+Now, the key observation is that τ m is much smaller than τ n,h while τ h and τ n are mutually comparable. Therefore, m can be approximated by its value at equilibrium, m(V ), and h and n can be represented by the same equilibrium voltage, U . In other words,
+
+Using this, we obtain Eq. ( 33 ) as
+
+An equation for U , Eq. ( 34 ), is obtained by requiring that time dependence of the active current F due to h and n in the Hodgkin-Huxley model is mimicked by h(U ) and n(U ). This implies
+
+Again, we approximate Eq. ( 45 ) in the same way,
+
+Plugging this in Eq. ( 47 ), we can solve for dU/dt as a function of V and U , which we denoted by g(V, U ) in Eq. (34) as g(V, U ) = ḡNa (V -E N a ) m(V ) 3 ( h(V ) -h(U ))/τ h (V ) + 4ḡ K (V -E K )n(U ) 3 (n(V ) -n(U ))/τ n (V ) ḡNa (V -E N a ) m(V ) 3h′ (U ) + 4ḡ K (V -E K )n(U ) 3 n′ (U ) .

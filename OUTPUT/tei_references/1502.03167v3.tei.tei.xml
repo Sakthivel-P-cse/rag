@@ -1,0 +1,740 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2015-03-02">2 Mar 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Sergey</forename><surname>Ioffe</surname></persName>
+							<email>sioffe@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Christian Szegedy Google Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-03-02">2 Mar 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A2BB24E6E150514DDE5219593359E2BB</idno>
+					<idno type="arXiv">arXiv:1502.03167v3[cs.LG]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>Training Deep Neural Networks is complicated by the fact that the distribution of each layer's inputs changes during training, as the parameters of the previous layers change. This slows down the training by requiring lower learning rates and careful parameter initialization, and makes it notoriously hard to train models with saturating nonlinearities. We refer to this phenomenon as internal covariate shift, and address the problem by normalizing layer inputs. Our method draws its strength from making normalization a part of the model architecture and performing the normalization for each training mini-batch. Batch Normalization allows us to use much higher learning rates and be less careful about initialization. It also acts as a regularizer, in some cases eliminating the need for Dropout. Applied to a state-of-the-art image classification model, Batch Normalization achieves the same accuracy with 14 times fewer training steps, and beats the original model by a significant margin. Using an ensemble of batchnormalized networks, we improve upon the best published result on ImageNet classification: reaching 4.9% top-5 validation error (and 4.8% test error), exceeding the accuracy of human raters.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="annex">
+<div><head>Appendix</head></div>
+<div><head>Variant of the Inception Model Used</head><p>Figure <ref type="figure">5</ref> documents the changes that were performed compared to the architecture with respect to the GoogleNet archictecture. For the interpretation of this table, please consult <ref type="bibr" target="#b20">(Szegedy et al., 2014)</ref>. The notable architecture changes compared to the GoogLeNet model include:</p><p>• The 5×5 convolutional layers are replaced by two consecutive 3×3 convolutional layers. This increases the maximum depth of the network by 9 </p></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Understanding the difficulty of training deep feedforward neural networks</title>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Glorot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of AISTATS 2010</title>
+		<meeting>AISTATS 2010</meeting>
+		<imprint>
+			<date type="published" when="2010-05">May 2010</date>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="249" to="256" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Large scale distributed deep networks</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Monga</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rajat</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kai</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Devin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Matthieu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><forename type="middle">Z</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ranzato</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Marc'aurelio</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Andrew</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Paul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ke</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Desjardins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Koray</forename><surname>Kavukcuoglu</surname></persName>
+		</author>
+		<title level="m">Natural neural networks</title>
+		<imprint />
+	</monogr>
+	<note>unpublished</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Adaptive subgradient methods for online learning and stochastic optimization</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Duchi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hazan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Elad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoram</forename><surname>Singer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mach. Learn. Res</title>
+		<idno type="ISSN">1532-4435</idno>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="2121" to="2159" />
+			<date type="published" when="2011-07">July 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Knowledge matters: Importance of prior information for optimization</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gülc ¸ehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno>CoRR, abs/1301.4083</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015-02">February 2015</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Independent component analysis: Algorithms and applications</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hyvärinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Oja</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Netw</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">4-5</biblScope>
+			<biblScope unit="page" from="411" to="430" />
+			<date type="published" when="2000-05">May 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">A literature survey on domain adaptation of statistical classifiers</title>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Jiang</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Gradient-based learning applied to document recognition</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bottou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haffner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the IEEE</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2278" to="2324" />
+			<date type="published" when="1998-11">November 1998a</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Efficient backprop</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bottou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Orr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Muller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Neural Networks: Tricks of the trade</title>
+		<editor>
+			<persName><forename type="first">G</forename><surname>Orr</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><surname>Muller</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Nonlinear image representation using divisive normalization</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Simoncelli</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/CVPR.2008.4587821</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Computer Vision and Pattern Recognition</title>
+		<meeting>Computer Vision and Pattern Recognition</meeting>
+		<imprint>
+			<date type="published" when="2008">Jun 23-28 2008</date>
+			<biblScope unit="page" from="1" to="8" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Rectified linear units improve restricted boltzmann machines</title>
+		<author>
+			<persName><forename type="first">Vinod</forename><surname>Nair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<publisher>Omnipress</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="807" to="814" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">On the difficulty of training recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 30th International Conference on Machine Learning, ICML 2013</title>
+		<meeting>the 30th International Conference on Machine Learning, ICML 2013<address><addrLine>Atlanta, GA, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2013-06">June 2013. 2013</date>
+			<biblScope unit="page" from="1310" to="1318" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Sanjeev. Parallel training of deep neural networks with natural gradient and parameter averaging</title>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Povey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaohui</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Khudanpur</surname></persName>
+		</author>
+		<idno>CoRR, abs/1410.7455</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Deep learning made easier by linear transformations in perceptrons</title>
+		<author>
+			<persName><forename type="first">Tapani</forename><surname>Raiko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harri</forename><surname>Valpola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Artificial Intelligence and Statistics (AISTATS)</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="924" to="932" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">Olga</forename><surname>Russakovsky</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Krause</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Satheesh</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sanjeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sean</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhiheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrej</forename><surname>Karpathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Khosla</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bernstein</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Michael</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">C</forename><surname>Berg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Fei-Fei</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>ImageNet Large Scale Visual Recognition Challenge</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Exact solutions to the nonlinear dynamics of learning in deep linear neural networks</title>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">M</forename><surname>Saxe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">L</forename><surname>Mcclelland</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ganguli</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Surya</surname></persName>
+		</author>
+		<idno>CoRR, abs/1312.6120</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Improving predictive inference under covariate shift by weighting the log-likelihood function</title>
+		<author>
+			<persName><forename type="first">Hidetoshi</forename><surname>Shimodaira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Statistical Planning and Inference</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="227" to="244" />
+			<date type="published" when="2000-10">October 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Dropout: A simple way to prevent neural networks from overfitting</title>
+		<author>
+			<persName><forename type="first">Nitish</forename><surname>Srivastava</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ilya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruslan</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mach. Learn. Res</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1929" to="1958" />
+			<date type="published" when="2014-01">January 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">On the importance of initialization and momentum in deep learning</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Martens</surname></persName>
+		</author>
+		<author>
+			<persName><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1139" to="1147" />
+		</imprint>
+	</monogr>
+	<note>JMLR.org</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Andrew. Going deeper with convolutions</title>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Szegedy</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yangqing</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sermanet</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pierre</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anguelov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dragomir</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Erhan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dumitru</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rabinovich</forename><surname>Vincent</surname></persName>
+		</author>
+		<idno>CoRR, abs/1409.4842</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A convergence analysis of log-linear training</title>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Wiesler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hermann</forename><surname>Ney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 24</title>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Shawe-Taylor</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Zemel</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Bartlett</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">F</forename><forename type="middle">C N</forename><surname>Pereira</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Granada, Spain</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011-12">December 2011</date>
+			<biblScope unit="page" from="657" to="665" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Mean-normalized stochastic gradient for large-scale deep learning</title>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Wiesler</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Richard</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ralf</forename><surname>Schlüter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hermann</forename><surname>Ney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE International Conference on Acoustics, Speech, and Signal Processing</title>
+		<meeting><address><addrLine>Florence, Italy</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014-05">May 2014</date>
+			<biblScope unit="page" from="180" to="184" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Deep image: Scaling up image recognition</title>
+		<author>
+			<persName><forename type="first">Ren</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Shengen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Shan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qingqing</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gang</forename><surname>Sun</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

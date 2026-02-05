@@ -1,0 +1,15 @@
+{
+  "refined_question": "What structural modifications can improve the detection of small objects in images without relying on increased image resolution?",
+  "intent": "Understand how to enhance small-object detection in computer vision, specifically within the domain of object detection, without sacrificing detection speed",
+  "constraints": [
+    "limited image resolution",
+    "real-time detection requirement",
+    "fixed model size"
+  ],
+  "excluded_topics": [
+    "large pre-trained models",
+    "fine-tuning from foundation models",
+    "scaling parameter count"
+  ],
+  "search_hint": "small object detection, structural modifications, feature pyramid networks, spatial attention mechanisms, efficient object detection, real-time detection, model pruning, knowledge distillation"
+}

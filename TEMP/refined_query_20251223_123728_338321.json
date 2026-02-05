@@ -1,0 +1,15 @@
+{
+  "refined_question": "What methods improve NLP model performance on rare words and morphologically rich languages without relying on large pre-trained models?",
+  "intent": "Understand techniques to enhance NLP model accuracy for rare words and morphologically rich languages within the domain of natural language processing, focusing on small to medium model sizes",
+  "constraints": [
+    "small model size",
+    "limited resources",
+    "no large pre-trained models"
+  ],
+  "excluded_topics": [
+    "fine-tuning large pre-trained models",
+    "transfer learning from foundation models",
+    "scaling parameter count"
+  ],
+  "search_hint": "morphological analysis, subword modeling, character-level embeddings, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages"
+}

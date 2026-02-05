@@ -1,0 +1,324 @@
+{
+  "paper_id": "8828A8EE6A8A1EEECD1962CEA43B1BA1",
+  "title": "Examination of self interaction correction methods for Na clusters",
+  "arxiv_id": "arXiv:cond-mat/9906230v1",
+  "authors": [
+    {
+      "given": "K",
+      "family": "Yoshizaki"
+    },
+    {
+      "given": "A",
+      "family": "Ono"
+    },
+    {
+      "given": "N",
+      "family": "Takigawa"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Phys. Rev. A",
+      "container_title": "Phys. Rev. A",
+      "year": "1965",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Kohn"
+        },
+        {
+          "given": "L J",
+          "family": "Sham"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Chem. Phys. Lett",
+      "container_title": "Chem. Phys. Lett",
+      "year": "1979",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J P",
+          "family": "Perdew"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1981",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J P",
+          "family": "Perdew"
+        },
+        {
+          "given": "A",
+          "family": "Zunger"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J G",
+          "family": "Harrison"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "J. Phys. B",
+      "container_title": "J. Phys. B",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J G",
+          "family": "Harrison"
+        },
+        {
+          "given": "R A",
+          "family": "Heaton"
+        },
+        {
+          "given": "C C",
+          "family": "Lin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1972",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M R",
+          "family": "Pederson"
+        },
+        {
+          "given": "R A",
+          "family": "Heaton"
+        },
+        {
+          "given": "C C",
+          "family": "Lin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R A",
+          "family": "Heaton"
+        },
+        {
+          "given": "M R",
+          "family": "Pederson"
+        },
+        {
+          "given": "C C",
+          "family": "Lin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R A",
+          "family": "Heaton"
+        },
+        {
+          "given": "J G",
+          "family": "Harrison"
+        },
+        {
+          "given": "C C",
+          "family": "Lin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J G",
+          "family": "Harrison"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Rev. A",
+      "container_title": "Phys. Rev. A",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Madjet"
+        },
+        {
+          "given": "C",
+          "family": "Guet"
+        },
+        {
+          "given": "W R",
+          "family": "Johnson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Solid State Commun",
+      "container_title": "Solid State Commun",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B N",
+          "family": "Onwuagba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J M",
+          "family": "Pacheco"
+        },
+        {
+          "given": "W",
+          "family": "Ekardt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Phys. Rev. A",
+      "container_title": "Phys. Rev. A",
+      "year": "1976",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J D",
+          "family": "Talman"
+        },
+        {
+          "given": "W F",
+          "family": "Shadwick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys. Rev. A",
+      "container_title": "Phys. Rev. A",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "J B",
+          "family": "Krieger"
+        },
+        {
+          "given": "G J",
+          "family": "Iafrate"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J P",
+          "family": "Perdew"
+        },
+        {
+          "given": "W",
+          "family": "Yue"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Phys. Rev. A",
+      "container_title": "Phys. Rev. A",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A D",
+          "family": "Becke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J P",
+          "family": "Perdew"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Computational Physics as a New Frontier in Condensed Matter Research",
+      "container_title": "Computational Physics as a New Frontier in Condensed Matter Research",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Ishii"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

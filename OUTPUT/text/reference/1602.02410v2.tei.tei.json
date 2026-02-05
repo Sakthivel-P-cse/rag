@@ -1,0 +1,1793 @@
+{
+  "paper_id": "1BC245A880F9DFA34A18995A1B10BE70",
+  "title": "Exploring the Limits of Language Modeling",
+  "arxiv_id": "arXiv:1602.02410v2[cs.CL]",
+  "authors": [
+    {
+      "given": "Rafal",
+      "family": "Jozefowicz"
+    },
+    {
+      "given": "Mike",
+      "family": "Schuster"
+    },
+    {
+      "given": "Noam",
+      "family": "Shazeer"
+    },
+    {
+      "given": "Yonghui",
+      "family": "Wu"
+    },
+    {
+      "given": "Google",
+      "family": "Brain"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "TensorFlow: Large-scale machine learning on heterogeneous systems",
+      "container_title": "TensorFlow: Large-scale machine learning on heterogeneous systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Martín",
+          "family": "Abadi"
+        },
+        {
+          "given": "Ashish",
+          "family": "Agarwal"
+        },
+        {
+          "given": null,
+          "family": "Barham"
+        },
+        {
+          "given": null,
+          "family": "Paul"
+        },
+        {
+          "given": null,
+          "family": "Brevdo"
+        },
+        {
+          "given": null,
+          "family": "Eugene"
+        },
+        {
+          "given": null,
+          "family": "Chen"
+        },
+        {
+          "given": null,
+          "family": "Zhifeng"
+        },
+        {
+          "given": null,
+          "family": "Citro"
+        },
+        {
+          "given": null,
+          "family": "Craig"
+        },
+        {
+          "given": "Greg S",
+          "family": "Corrado"
+        },
+        {
+          "given": "Andy",
+          "family": "Davis"
+        },
+        {
+          "given": null,
+          "family": "Dean"
+        },
+        {
+          "given": "Devin",
+          "family": "Jeffrey"
+        },
+        {
+          "given": null,
+          "family": "Matthieu"
+        },
+        {
+          "given": null,
+          "family": "Ghemawat"
+        },
+        {
+          "given": null,
+          "family": "Sanjay"
+        },
+        {
+          "given": "Ian",
+          "family": "Goodfellow"
+        },
+        {
+          "given": null,
+          "family": "Harp"
+        },
+        {
+          "given": null,
+          "family": "Andrew"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Irving"
+        },
+        {
+          "given": null,
+          "family": "Isard"
+        },
+        {
+          "given": null,
+          "family": "Michael"
+        },
+        {
+          "given": null,
+          "family": "Jia"
+        },
+        {
+          "given": null,
+          "family": "Yangqing"
+        },
+        {
+          "given": null,
+          "family": "Jozefowicz"
+        },
+        {
+          "given": null,
+          "family": "Rafal"
+        },
+        {
+          "given": null,
+          "family": "Kaiser"
+        },
+        {
+          "given": null,
+          "family": "Lukasz"
+        },
+        {
+          "given": null,
+          "family": "Kudlur"
+        },
+        {
+          "given": null,
+          "family": "Manjunath"
+        },
+        {
+          "given": null,
+          "family": "Levenberg"
+        },
+        {
+          "given": null,
+          "family": "Josh"
+        },
+        {
+          "given": null,
+          "family": "Mané"
+        },
+        {
+          "given": null,
+          "family": "Dan"
+        },
+        {
+          "given": null,
+          "family": "Monga"
+        },
+        {
+          "given": null,
+          "family": "Rajat"
+        },
+        {
+          "given": null,
+          "family": "Moore"
+        },
+        {
+          "given": null,
+          "family": "Sherry"
+        },
+        {
+          "given": "Derek",
+          "family": "Murray"
+        },
+        {
+          "given": null,
+          "family": "Olah"
+        },
+        {
+          "given": null,
+          "family": "Chris"
+        },
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": "Jonathon",
+          "family": "Shlens"
+        },
+        {
+          "given": null,
+          "family": "Steiner"
+        },
+        {
+          "given": null,
+          "family": "Benoit"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": null,
+          "family": "Talwar"
+        },
+        {
+          "given": null,
+          "family": "Kunal"
+        },
+        {
+          "given": null,
+          "family": "Tucker"
+        },
+        {
+          "given": null,
+          "family": "Paul"
+        },
+        {
+          "given": null,
+          "family": "Vanhoucke"
+        },
+        {
+          "given": null,
+          "family": "Vincent"
+        },
+        {
+          "given": null,
+          "family": "Vasudevan"
+        },
+        {
+          "given": null,
+          "family": "Vijay"
+        },
+        {
+          "given": null,
+          "family": "Viégas"
+        },
+        {
+          "given": null,
+          "family": "Fernanda"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": "Pete",
+          "family": "Warden"
+        },
+        {
+          "given": null,
+          "family": "Wattenberg"
+        },
+        {
+          "given": null,
+          "family": "Martin"
+        },
+        {
+          "given": null,
+          "family": "Wicke"
+        },
+        {
+          "given": "Yu",
+          "family": "Martin"
+        },
+        {
+          "given": null,
+          "family": "Yuan"
+        },
+        {
+          "given": "Xiaoqiang",
+          "family": "Zheng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Proceedings of the NAACL-HLT 2012 Workshop: Will We Ever Really Replace the N-gram Model? On the Future of Language Modeling for HLT",
+      "container_title": "Proceedings of the NAACL-HLT 2012 Workshop: Will We Ever Really Replace the N-gram Model? On the Future of Language Modeling for HLT",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ebru",
+          "family": "Arisoy"
+        },
+        {
+          "given": "Tara N",
+          "family": "Sainath"
+        },
+        {
+          "given": "Brian",
+          "family": "Kingsbury"
+        },
+        {
+          "given": null,
+          "family": "Ramabhadran"
+        },
+        {
+          "given": null,
+          "family": "Bhuvana"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Improved transition-based parsing by modeling characters instead of words with lstms",
+      "container_title": "Improved transition-based parsing by modeling characters instead of words with lstms",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1508.00657"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Miguel",
+          "family": "Ballesteros"
+        },
+        {
+          "given": "Chris",
+          "family": "Dyer"
+        },
+        {
+          "given": "Noah A",
+          "family": "Smith"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "IEEE Transactions on",
+      "container_title": "IEEE Transactions on",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Jean-Sébastien",
+          "family": "Senécal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "AISTATS",
+      "container_title": "AISTATS",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Senécal"
+        },
+        {
+          "given": null,
+          "family": "Jean-Sébastien"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Innovations in Machine Learning",
+      "container_title": "Innovations in Machine Learning",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Schwenk"
+        },
+        {
+          "given": null,
+          "family": "Holger"
+        },
+        {
+          "given": null,
+          "family": "Senécal"
+        },
+        {
+          "given": null,
+          "family": "Jean-Sébastien"
+        },
+        {
+          "given": "Fréderic",
+          "family": "Morin"
+        },
+        {
+          "given": "Jean-Luc",
+          "family": "Gauvain"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "One billion word benchmark for measuring progress in statistical language modeling",
+      "container_title": "One billion word benchmark for measuring progress in statistical language modeling",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.3005"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ciprian",
+          "family": "Chelba"
+        },
+        {
+          "given": null,
+          "family": "Mikolov"
+        },
+        {
+          "given": null,
+          "family": "Tomas"
+        },
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": null,
+          "family": "Ge"
+        },
+        {
+          "given": null,
+          "family": "Qi"
+        },
+        {
+          "given": null,
+          "family": "Brants"
+        },
+        {
+          "given": null,
+          "family": "Thorsten"
+        },
+        {
+          "given": "Phillipp",
+          "family": "Koehn"
+        },
+        {
+          "given": "Tony",
+          "family": "Robinson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Learning phrase representations using rnn encoder-decoder for statistical machine translation",
+      "container_title": "Learning phrase representations using rnn encoder-decoder for statistical machine translation",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1406.1078"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Van",
+          "family": "Merriënboer"
+        },
+        {
+          "given": null,
+          "family": "Bart"
+        },
+        {
+          "given": null,
+          "family": "Gulcehre"
+        },
+        {
+          "given": null,
+          "family": "Caglar"
+        },
+        {
+          "given": null,
+          "family": "Bahdanau"
+        },
+        {
+          "given": null,
+          "family": "Dzmitry"
+        },
+        {
+          "given": null,
+          "family": "Bougares"
+        },
+        {
+          "given": null,
+          "family": "Fethi"
+        },
+        {
+          "given": null,
+          "family": "Schwenk"
+        },
+        {
+          "given": null,
+          "family": "Holger"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Computer Vision and Pattern Recognition",
+      "container_title": "Computer Vision and Pattern Recognition",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jia",
+          "family": "Deng"
+        },
+        {
+          "given": null,
+          "family": "Dong"
+        },
+        {
+          "given": null,
+          "family": "Wei"
+        },
+        {
+          "given": null,
+          "family": "Socher"
+        },
+        {
+          "given": null,
+          "family": "Richard"
+        },
+        {
+          "given": "Li-Jia",
+          "family": "Li"
+        },
+        {
+          "given": "Kai",
+          "family": "Li"
+        },
+        {
+          "given": "Li",
+          "family": "Fei-Fei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Katja",
+          "family": "Filippova"
+        },
+        {
+          "given": null,
+          "family": "Alfonseca"
+        },
+        {
+          "given": null,
+          "family": "Enrique"
+        },
+        {
+          "given": "Carlos A",
+          "family": "Colmenares"
+        },
+        {
+          "given": "Lukasz",
+          "family": "Kaiser"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Felix A",
+          "family": "Gers"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        },
+        {
+          "given": "Fred",
+          "family": "Cummins"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Multilingual language processing from bytes",
+      "container_title": "Multilingual language processing from bytes",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1512.00103"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Dan",
+          "family": "Gillick"
+        },
+        {
+          "given": null,
+          "family": "Brunk"
+        },
+        {
+          "given": null,
+          "family": "Cliff"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": "Amarnag",
+          "family": "Subramanya"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Generating sequences with recurrent neural networks",
+      "container_title": "Generating sequences with recurrent neural networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1308.0850"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Neural Networks",
+      "container_title": "Neural Networks",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Graves"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "International Conference on Artificial Intelligence and Statistics",
+      "container_title": "International Conference on Artificial Intelligence and Statistics",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Michael",
+          "family": "Gutmann"
+        },
+        {
+          "given": "Aapo",
+          "family": "Hyvärinen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Blackout: Speeding up recurrent neural network language models with very large vocabularies",
+      "container_title": "Blackout: Speeding up recurrent neural network language models with very large vocabularies",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1511.06909"
+        }
+      ],
+      "authors": [
+        {
+          "given": null,
+          "family": "Ji"
+        },
+        {
+          "given": null,
+          "family": "Shihao"
+        },
+        {
+          "given": "S V N",
+          "family": "Vishwanathan"
+        },
+        {
+          "given": null,
+          "family": "Satish"
+        },
+        {
+          "given": null,
+          "family": "Nadathur"
+        },
+        {
+          "given": "Michael J",
+          "family": "Anderson"
+        },
+        {
+          "given": "Pradeep",
+          "family": "Dubey"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Document context language models",
+      "container_title": "Document context language models",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.03962"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yangfeng",
+          "family": "Ji"
+        },
+        {
+          "given": "Trevor",
+          "family": "Cohn"
+        },
+        {
+          "given": null,
+          "family": "Kong"
+        },
+        {
+          "given": null,
+          "family": "Lingpeng"
+        },
+        {
+          "given": "Chris",
+          "family": "Dyer"
+        },
+        {
+          "given": "Jacob",
+          "family": "Eisenstein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Proceedings of the 32nd International Conference on Machine Learning (ICML-15)",
+      "container_title": "Proceedings of the 32nd International Conference on Machine Learning (ICML-15)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Rafal",
+          "family": "Jozefowicz"
+        },
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "A convolutional neural network for modelling sentences",
+      "container_title": "A convolutional neural network for modelling sentences",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1404.2188"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "Edward",
+          "family": "Grefenstette"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Character-aware neural language models",
+      "container_title": "Character-aware neural language models",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1508.06615"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yoon",
+          "family": "Kim"
+        },
+        {
+          "given": null,
+          "family": "Jernite"
+        },
+        {
+          "given": null,
+          "family": "Yacine"
+        },
+        {
+          "given": "David",
+          "family": "Sontag"
+        },
+        {
+          "given": "Alexander M",
+          "family": "Rush"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Acoustics, Speech, and Signal Processing",
+      "container_title": "Acoustics, Speech, and Signal Processing",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Reinhard",
+          "family": "Kneser"
+        },
+        {
+          "given": "Hermann",
+          "family": "Ney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Le",
+          "family": "Cun"
+        },
+        {
+          "given": null,
+          "family": "Boser"
+        },
+        {
+          "given": "John S",
+          "family": "Denker"
+        },
+        {
+          "given": "D",
+          "family": "Henderson"
+        },
+        {
+          "given": "Richard E",
+          "family": "Howard"
+        },
+        {
+          "given": "W",
+          "family": "Hubbard"
+        },
+        {
+          "given": "Lawrence D",
+          "family": "Jackel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Finding function in form: Compositional character models for open vocabulary word representation",
+      "container_title": "Finding function in form: Compositional character models for open vocabulary word representation",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1508.02096"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Wang",
+          "family": "Ling"
+        },
+        {
+          "given": null,
+          "family": "Luís"
+        },
+        {
+          "given": null,
+          "family": "Tiago"
+        },
+        {
+          "given": null,
+          "family": "Marujo"
+        },
+        {
+          "given": null,
+          "family": "Luís"
+        },
+        {
+          "given": "Ramón",
+          "family": "Astudillo"
+        },
+        {
+          "given": null,
+          "family": "Fernandez"
+        },
+        {
+          "given": null,
+          "family": "Amir"
+        },
+        {
+          "given": null,
+          "family": "Silvio"
+        },
+        {
+          "given": "Chris",
+          "family": "Dyer"
+        },
+        {
+          "given": "Alan W",
+          "family": "Black"
+        },
+        {
+          "given": "Isabel",
+          "family": "Trancoso"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Addressing the rare word problem in neural machine translation",
+      "container_title": "Addressing the rare word problem in neural machine translation",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1410.8206"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Minh -",
+          "family": "Luong"
+        },
+        {
+          "given": null,
+          "family": "Thang"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Computational linguistics",
+      "container_title": "Computational linguistics",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mitchell P",
+          "family": "Marcus"
+        },
+        {
+          "given": "Mary",
+          "family": "Marcinkiewicz"
+        },
+        {
+          "given": null,
+          "family": "Ann"
+        },
+        {
+          "given": "Beatrice",
+          "family": "Santorini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Statistical language models based on neural networks. Presentation at Google, Mountain View",
+      "container_title": "Statistical language models based on neural networks. Presentation at Google, Mountain View",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomáš",
+          "family": "Mikolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "SLT",
+      "container_title": "SLT",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Zweig"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "In INTERSPEECH",
+      "container_title": "In INTERSPEECH",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": null,
+          "family": "Karafiát"
+        },
+        {
+          "given": null,
+          "family": "Martin"
+        },
+        {
+          "given": null,
+          "family": "Burget"
+        },
+        {
+          "given": null,
+          "family": "Lukas"
+        },
+        {
+          "given": "Jan",
+          "family": "Cernockỳ"
+        },
+        {
+          "given": null,
+          "family": "Khudanpur"
+        },
+        {
+          "given": null,
+          "family": "Sanjeev"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "INTERSPEECH, number s 1",
+      "container_title": "INTERSPEECH, number s 1",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": null,
+          "family": "Deoras"
+        },
+        {
+          "given": null,
+          "family": "Anoop"
+        },
+        {
+          "given": null,
+          "family": "Kombrink"
+        },
+        {
+          "given": null,
+          "family": "Stefan"
+        },
+        {
+          "given": "Lukas",
+          "family": "Burget"
+        },
+        {
+          "given": "Jan",
+          "family": "Cernockỳ"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andriy",
+          "family": "Mnih"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andriy",
+          "family": "Mnih"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Aistats",
+      "container_title": "Aistats",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Frederic",
+          "family": "Morin"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "On the difficulty of training recurrent neural networks",
+      "container_title": "On the difficulty of training recurrent neural networks",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1211.5063"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "A neural attention model for abstractive sentence summarization",
+      "container_title": "A neural attention model for abstractive sentence summarization",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1509.00685"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Alexander M",
+          "family": "Rush"
+        },
+        {
+          "given": null,
+          "family": "Chopra"
+        },
+        {
+          "given": null,
+          "family": "Sumit"
+        },
+        {
+          "given": "Jason",
+          "family": "Weston"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "INTER-SPEECH",
+      "container_title": "INTER-SPEECH",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Sak"
+        },
+        {
+          "given": null,
+          "family": "Hasim"
+        },
+        {
+          "given": null,
+          "family": "Senior"
+        },
+        {
+          "given": "W",
+          "family": "Andrew"
+        },
+        {
+          "given": "Franc",
+          "family": "Beaufays"
+        },
+        {
+          "given": null,
+          "family": "¸oise"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "IEEE Transactions on",
+      "container_title": "IEEE Transactions on",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": null,
+          "family": "Paliwal"
+        },
+        {
+          "given": "K",
+          "family": "Kuldip"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Proceedings of the NAACL-HLT 2012 Workshop: Will We Ever Really Replace the N-gram Model? On the Future of Language Modeling for HLT",
+      "container_title": "Proceedings of the NAACL-HLT 2012 Workshop: Will We Ever Really Replace the N-gram Model? On the Future of Language Modeling for HLT",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Holger",
+          "family": "Schwenk"
+        },
+        {
+          "given": "Anthony",
+          "family": "Rousseau"
+        },
+        {
+          "given": "Mohammed",
+          "family": "Attik"
+        },
+        {
+          "given": null,
+          "family": "Large"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "Hierarchical neural network generative models for movie dialogues",
+      "container_title": "Hierarchical neural network generative models for movie dialogues",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1507.04808"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Iulian",
+          "family": "Serban"
+        },
+        {
+          "given": null,
+          "family": "Vlad"
+        },
+        {
+          "given": "Alessandro",
+          "family": "Sordoni"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Yoshua"
+        },
+        {
+          "given": "Aaron C",
+          "family": "Courville"
+        },
+        {
+          "given": "Joelle",
+          "family": "Pineau"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "Sparse non-negative matrix language modeling for skipgrams",
+      "container_title": "Sparse non-negative matrix language modeling for skipgrams",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Noam",
+          "family": "Shazeer"
+        },
+        {
+          "given": null,
+          "family": "Pelemans"
+        },
+        {
+          "given": null,
+          "family": "Joris"
+        },
+        {
+          "given": "Ciprian",
+          "family": "Chelba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "Improving neural networks with dropout",
+      "container_title": "Improving neural networks with dropout",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nitish",
+          "family": "Srivastava"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "Unsupervised learning of video representations using lstms",
+      "container_title": "Unsupervised learning of video representations using lstms",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1502.04681"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Nitish",
+          "family": "Srivastava"
+        },
+        {
+          "given": "Elman",
+          "family": "Mansimov"
+        },
+        {
+          "given": "Ruslan",
+          "family": "Salakhutdinov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Rupesh K",
+          "family": "Srivastava"
+        },
+        {
+          "given": "Klaus",
+          "family": "Greff"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "Proceedings of the 28th International Conference on Machine Learning (ICML-11)",
+      "container_title": "Proceedings of the 28th International Conference on Machine Learning (ICML-11)",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "James",
+          "family": "Martens"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "Decoding with large-scale neural language models improves translation",
+      "container_title": "Decoding with large-scale neural language models improves translation",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ashish",
+          "family": "Vaswani"
+        },
+        {
+          "given": null,
+          "family": "Zhao"
+        },
+        {
+          "given": null,
+          "family": "Yinggong"
+        },
+        {
+          "given": null,
+          "family": "Fossum"
+        },
+        {
+          "given": null,
+          "family": "Victoria"
+        },
+        {
+          "given": "David",
+          "family": "Chiang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Pascal",
+          "family": "Vincent"
+        },
+        {
+          "given": "Alexandre",
+          "family": "De Brébisson"
+        },
+        {
+          "given": "Xavier",
+          "family": "Bouthillier"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "A neural conversational model",
+      "container_title": "A neural conversational model",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1506.05869"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Quoc",
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "Larger-context language modelling",
+      "container_title": "Larger-context language modelling",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.03729"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tian",
+          "family": "Wang"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b50",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ronald J",
+          "family": "Williams"
+        },
+        {
+          "given": "Jing",
+          "family": "Peng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b51",
+      "title": "Acoustics, Speech and Signal Processing (ICASSP), 2015 IEEE International Conference on",
+      "container_title": "Acoustics, Speech and Signal Processing (ICASSP), 2015 IEEE International Conference on",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Will",
+          "family": "Williams"
+        },
+        {
+          "given": null,
+          "family": "Prasad"
+        },
+        {
+          "given": null,
+          "family": "Niranjani"
+        },
+        {
+          "given": null,
+          "family": "Mrva"
+        },
+        {
+          "given": "Ash",
+          "family": "David"
+        },
+        {
+          "given": "Tom",
+          "family": "Robinson"
+        },
+        {
+          "given": "Tony",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b52",
+      "title": "Recurrent neural network regularization",
+      "container_title": "Recurrent neural network regularization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.2329"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

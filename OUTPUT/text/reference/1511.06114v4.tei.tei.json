@@ -1,0 +1,1176 @@
+{
+  "paper_id": "A80D20977BCBC5760F54EB3C855DDA85",
+  "title": "MULTI-TASK SEQUENCE TO SEQUENCE LEARNING",
+  "arxiv_id": "arXiv:1511.06114v4[cs.LG]",
+  "authors": [
+    {
+      "given": "Minh-Thang",
+      "family": "Luong"
+    },
+    {
+      "given": "Quoc V",
+      "family": "Le"
+    },
+    {
+      "given": "Ilya",
+      "family": "Sutskever"
+    },
+    {
+      "given": "Oriol",
+      "family": "Vinyals"
+    },
+    {
+      "given": "Lukasz",
+      "family": "Kaiser"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "JMLR",
+      "container_title": "JMLR",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Rie",
+          "family": "Ando"
+        },
+        {
+          "given": null,
+          "family": "Kubota"
+        },
+        {
+          "given": "Tong",
+          "family": "Zhang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andreas",
+          "family": "Argyriou"
+        },
+        {
+          "given": "Theodoros",
+          "family": "Evgeniou"
+        },
+        {
+          "given": "Massimiliano",
+          "family": "Pontil"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "WMT",
+      "container_title": "WMT",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Bojar"
+        },
+        {
+          "given": null,
+          "family": "Ondřej"
+        },
+        {
+          "given": null,
+          "family": "Chatterjee"
+        },
+        {
+          "given": null,
+          "family": "Rajen"
+        },
+        {
+          "given": null,
+          "family": "Federmann"
+        },
+        {
+          "given": null,
+          "family": "Christian"
+        },
+        {
+          "given": null,
+          "family": "Haddow"
+        },
+        {
+          "given": null,
+          "family": "Barry"
+        },
+        {
+          "given": null,
+          "family": "Huck"
+        },
+        {
+          "given": null,
+          "family": "Matthias"
+        },
+        {
+          "given": null,
+          "family": "Hokamp"
+        },
+        {
+          "given": null,
+          "family": "Chris"
+        },
+        {
+          "given": null,
+          "family": "Koehn"
+        },
+        {
+          "given": null,
+          "family": "Philipp"
+        },
+        {
+          "given": null,
+          "family": "Logacheva"
+        },
+        {
+          "given": null,
+          "family": "Varvara"
+        },
+        {
+          "given": null,
+          "family": "Monz"
+        },
+        {
+          "given": null,
+          "family": "Christof"
+        },
+        {
+          "given": null,
+          "family": "Negri"
+        },
+        {
+          "given": null,
+          "family": "Matteo"
+        },
+        {
+          "given": null,
+          "family": "Post"
+        },
+        {
+          "given": null,
+          "family": "Matt"
+        },
+        {
+          "given": null,
+          "family": "Scarton"
+        },
+        {
+          "given": null,
+          "family": "Carolina"
+        },
+        {
+          "given": "Lucia",
+          "family": "Specia"
+        },
+        {
+          "given": "Marco",
+          "family": "Turchi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Machine Learning",
+      "container_title": "Machine Learning",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Rich",
+          "family": "Caruana"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": null,
+          "family": "Van Merrienboer"
+        },
+        {
+          "given": null,
+          "family": "Bart"
+        },
+        {
+          "given": null,
+          "family": "Gulcehre"
+        },
+        {
+          "given": null,
+          "family": "Caglar"
+        },
+        {
+          "given": null,
+          "family": "Bougares"
+        },
+        {
+          "given": null,
+          "family": "Fethi"
+        },
+        {
+          "given": null,
+          "family": "Schwenk"
+        },
+        {
+          "given": null,
+          "family": "Holger"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andrew M",
+          "family": "Dai"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "DeCAF: A deep convolutional activation feature for generic visual recognition",
+      "container_title": "DeCAF: A deep convolutional activation feature for generic visual recognition",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jeff",
+          "family": "Donahue"
+        },
+        {
+          "given": null,
+          "family": "Jia"
+        },
+        {
+          "given": null,
+          "family": "Yangqing"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": "Judy",
+          "family": "Hoffman"
+        },
+        {
+          "given": null,
+          "family": "Zhang"
+        },
+        {
+          "given": null,
+          "family": "Ning"
+        },
+        {
+          "given": "Eric",
+          "family": "Tzeng"
+        },
+        {
+          "given": "Trevor",
+          "family": "Darrell"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "ACL",
+      "container_title": "ACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Daxiang",
+          "family": "Dong"
+        },
+        {
+          "given": null,
+          "family": "Wu"
+        },
+        {
+          "given": null,
+          "family": "Hua"
+        },
+        {
+          "given": null,
+          "family": "He"
+        },
+        {
+          "given": "Yu",
+          "family": "Wei"
+        },
+        {
+          "given": "Dianhai",
+          "family": "Wang"
+        },
+        {
+          "given": "Haifeng",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "SIGKDD",
+      "container_title": "SIGKDD",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Theodoros",
+          "family": "Evgeniou"
+        },
+        {
+          "given": "Massimiliano",
+          "family": "Pontil"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "On using monolingual corpora in neural machine translation",
+      "container_title": "On using monolingual corpora in neural machine translation",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1503.03535"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Caglar",
+          "family": "Gulcehre"
+        },
+        {
+          "given": null,
+          "family": "Firat"
+        },
+        {
+          "given": null,
+          "family": "Orhan"
+        },
+        {
+          "given": "Kelvin",
+          "family": "Xu"
+        },
+        {
+          "given": null,
+          "family": "Cho"
+        },
+        {
+          "given": null,
+          "family": "Kyunghyun"
+        },
+        {
+          "given": null,
+          "family": "Barrault"
+        },
+        {
+          "given": null,
+          "family": "Loic"
+        },
+        {
+          "given": null,
+          "family": "Lin"
+        },
+        {
+          "given": null,
+          "family": "Huei-Chi"
+        },
+        {
+          "given": null,
+          "family": "Bougares"
+        },
+        {
+          "given": null,
+          "family": "Fethi"
+        },
+        {
+          "given": null,
+          "family": "Schwenk"
+        },
+        {
+          "given": null,
+          "family": "Holger"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "In ICASSP",
+      "container_title": "In ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Georg",
+          "family": "Heigold"
+        },
+        {
+          "given": null,
+          "family": "Vanhoucke"
+        },
+        {
+          "given": null,
+          "family": "Vincent"
+        },
+        {
+          "given": "Alan",
+          "family": "Senior"
+        },
+        {
+          "given": null,
+          "family": "Nguyen"
+        },
+        {
+          "given": null,
+          "family": "Patrick"
+        },
+        {
+          "given": null,
+          "family": "Ranzato"
+        },
+        {
+          "given": "Devin",
+          "family": "Marc'aurelio"
+        },
+        {
+          "given": "Matthieu",
+          "family": "Dean"
+        },
+        {
+          "given": "Jeffrey",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jui-",
+          "family": "Huang"
+        },
+        {
+          "given": null,
+          "family": "Ting"
+        },
+        {
+          "given": null,
+          "family": "Li"
+        },
+        {
+          "given": null,
+          "family": "Jinyu"
+        },
+        {
+          "given": null,
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Dong"
+        },
+        {
+          "given": "Li",
+          "family": "Deng"
+        },
+        {
+          "given": "Yifan",
+          "family": "Gong"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "ACL",
+      "container_title": "ACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sébastien",
+          "family": "Jean"
+        },
+        {
+          "given": null,
+          "family": "Cho"
+        },
+        {
+          "given": null,
+          "family": "Kyunghyun"
+        },
+        {
+          "given": "Roland",
+          "family": "Memisevic"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "WMT",
+      "container_title": "WMT",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sébastien",
+          "family": "Jean"
+        },
+        {
+          "given": null,
+          "family": "Firat"
+        },
+        {
+          "given": null,
+          "family": "Orhan"
+        },
+        {
+          "given": null,
+          "family": "Cho"
+        },
+        {
+          "given": null,
+          "family": "Kyunghyun"
+        },
+        {
+          "given": "Roland",
+          "family": "Memisevic"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Exploring the limits of language modeling",
+      "container_title": "Exploring the limits of language modeling",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1602.02410"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Jozefowicz"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "M",
+          "family": "Schuster"
+        },
+        {
+          "given": "N",
+          "family": "Shazeer"
+        },
+        {
+          "given": "Y",
+          "family": "Wu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ryan",
+          "family": "Kiros"
+        },
+        {
+          "given": null,
+          "family": "Zhu"
+        },
+        {
+          "given": null,
+          "family": "Yukun"
+        },
+        {
+          "given": null,
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": null,
+          "family": "Ruslan"
+        },
+        {
+          "given": "Richard S",
+          "family": "Zemel"
+        },
+        {
+          "given": null,
+          "family": "Torralba"
+        },
+        {
+          "given": null,
+          "family": "Antonio"
+        },
+        {
+          "given": "Raquel",
+          "family": "Urtasun"
+        },
+        {
+          "given": null,
+          "family": "Fidler"
+        },
+        {
+          "given": null,
+          "family": "Sanja"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Abhishek",
+          "family": "Kumar"
+        },
+        {
+          "given": "Iii",
+          "family": null
+        },
+        {
+          "given": "Hal",
+          "family": "Daumé"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "NAACL",
+      "container_title": "NAACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Xiaodong",
+          "family": "Liu"
+        },
+        {
+          "given": null,
+          "family": "Gao"
+        },
+        {
+          "given": null,
+          "family": "Jianfeng"
+        },
+        {
+          "given": null,
+          "family": "He"
+        },
+        {
+          "given": null,
+          "family": "Xiaodong"
+        },
+        {
+          "given": null,
+          "family": "Deng"
+        },
+        {
+          "given": null,
+          "family": "Li"
+        },
+        {
+          "given": "Kevin",
+          "family": "Duh"
+        },
+        {
+          "given": "Ye-Yi",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "IWSLT",
+      "container_title": "IWSLT",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Minh-Thang And",
+          "family": "Luong"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Minh -",
+          "family": "Luong"
+        },
+        {
+          "given": null,
+          "family": "Thang"
+        },
+        {
+          "given": null,
+          "family": "Pham"
+        },
+        {
+          "given": null,
+          "family": "Hieu"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "ACL",
+      "container_title": "ACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Minh -",
+          "family": "Luong"
+        },
+        {
+          "given": null,
+          "family": "Thang"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Computational Linguistics",
+      "container_title": "Computational Linguistics",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mitchell P",
+          "family": "Marcus"
+        },
+        {
+          "given": "Mary",
+          "family": "Marcinkiewicz"
+        },
+        {
+          "given": null,
+          "family": "Ann"
+        },
+        {
+          "given": "Beatrice",
+          "family": "Santorini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "ACL",
+      "container_title": "ACL",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kishore",
+          "family": "Papineni"
+        },
+        {
+          "given": null,
+          "family": "Roukos"
+        },
+        {
+          "given": "Ward",
+          "family": "Salim"
+        },
+        {
+          "given": "Todd",
+          "family": "Zhu"
+        },
+        {
+          "given": "Wei",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Frontiers in Handwriting Recognition (ICFHR), 2014 14th International Conference on",
+      "container_title": "Frontiers in Handwriting Recognition (ICFHR), 2014 14th International Conference on",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Pham"
+        },
+        {
+          "given": null,
+          "family": "Vu"
+        },
+        {
+          "given": null,
+          "family": "Bluche"
+        },
+        {
+          "given": null,
+          "family": "Théodore"
+        },
+        {
+          "given": "Christopher",
+          "family": "Kermorvant"
+        },
+        {
+          "given": "Jérôme",
+          "family": "Louradour"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sebastian",
+          "family": "Thrun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Kaiser"
+        },
+        {
+          "given": null,
+          "family": "Lukasz"
+        },
+        {
+          "given": null,
+          "family": "Koo"
+        },
+        {
+          "given": null,
+          "family": "Terry"
+        },
+        {
+          "given": null,
+          "family": "Petrov"
+        },
+        {
+          "given": null,
+          "family": "Slav"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Toshev"
+        },
+        {
+          "given": null,
+          "family": "Alexander"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Samy"
+        },
+        {
+          "given": "Dumitru",
+          "family": "Erhan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kelvin",
+          "family": "Xu"
+        },
+        {
+          "given": null,
+          "family": "Ba"
+        },
+        {
+          "given": null,
+          "family": "Jimmy"
+        },
+        {
+          "given": null,
+          "family": "Kiros"
+        },
+        {
+          "given": null,
+          "family": "Ryan"
+        },
+        {
+          "given": null,
+          "family": "Cho"
+        },
+        {
+          "given": null,
+          "family": "Kyunghyun"
+        },
+        {
+          "given": "Aaron C",
+          "family": "Courville"
+        },
+        {
+          "given": null,
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": null,
+          "family": "Ruslan"
+        },
+        {
+          "given": "Richard S",
+          "family": "Zemel"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

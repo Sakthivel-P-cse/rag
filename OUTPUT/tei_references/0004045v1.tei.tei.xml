@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Valence Bond Ground States in Quantum Antiferromagnets and Quadratic Algebras</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2000-04-04">4 Apr 2000</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Alcaraz</surname></persName>
+							<email>alcaraz@power.ufscar.br</email>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Física</orgName>
+								<orgName type="institution">Universidade Federal de São Carlos</orgName>
+								<address>
+									<postCode>13565-905</postCode>
+									<settlement>São Carlos</settlement>
+									<region>SP</region>
+									<country key="BR">Brazil</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">V</forename><surname>Rittenberg</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Physikalisches Institut</orgName>
+								<orgName type="institution">Universität Bonn Nußallee 12</orgName>
+								<address>
+									<postCode>D -5300</postCode>
+									<settlement>Bonn 1</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Valence Bond Ground States in Quantum Antiferromagnets and Quadratic Algebras</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2000-04-04">4 Apr 2000</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">75B2B943D9B0356B6798EA3E91759519</idno>
+					<idno type="arXiv">arXiv:cond-mat/0004045v1[cond-mat.stat-mech]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>The wave functions corresponding to the zero energy eigenvalue of a onedimensional quantum chain Hamiltonian can be written in a simple way using quadratic algebras. Hamiltonians describing stochastic processes have stationary states given by such wave functions and various quadratic algebras were found and applied to several diffusions processes. We show that similar methods can also be applied for equilibrium processes. As an example, for a class of q-deformed O(N ) symmetric antiferromagnetic quantum chains, we give the zero energy wave functions for periodic boundary conditions corresponding to momenta zero and π. We also consider free and various non-diagonal boundary conditions and give the corresponding wave functions.</p><p>All correlation lengths are derived.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+			<div type="annex">
+<div><p>and act with C (N +2) on them using the relation (82). We obtain:</p><p>Two of the wave functions (95) for i = 3 and 4 are therefore eigenfunctions of C (N +2)   corresponding to the same eigenvalue -Λ. One obtains also the two other eigenvalues:</p><p>q , where we have used the notation (33). The eigenfunctions corresponding to the eigenvalues Ω ± are:</p><p>).</p><p>(98)</p><p>Using the eigenvalues and eigenfunctions (94) for N = 2 and the recurrence relations (96)-( <ref type="formula">97</ref>) and (98) one can get all the eigenvalues and eigenfunctions of C (N ) for any even N.</p><p>The eigenvalues are</p><p>with a degeneracy</p><p>For q = 1 one recovers the spectrum given by S z (N ) ( see equation ( <ref type="formula">90</ref>)). Notice that the similarity transformations used here are even matrices (see Sec.3.2), therefore the supertrace operation define by eq.(48) stays valid.</p></div>
+<div><head>b) N=2n+1</head><p>where</p><p>It is also interesting to rewrite (A.2) in terms of spin-1 2 creation and annihilation fermion operators on the lattice. This is done by making the following correspondence between the basis |α &gt; j , α = 1, 2, 3, 4, in (A.2), at each lattice point j, and the Fock representation</p><p>Using this fermionic basis the Hamiltonian density (A.2) is given by</p><p>3 n k,+ n k+1,-n k+1,+ + V</p><p>3 n k,-n k+1,-n k+1,+ + V where where S k = 1 2 σ k , and σ = (σ x , σ y , σ z ) are the spin-1 2 Pauli matrices.</p></div>			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>Derrida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Reports</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="page">65</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Alcaraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dasmahapatra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rittenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">845</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">I</forename><surname>Affleck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Lieb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tasaki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Commun. Math. Phys</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page">477</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Arovas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Auerbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D M</forename><surname>Haldane</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">531</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Fannes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Nachtergaele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Werner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Commun. Math. Phys</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page">443</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Kluemper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schadschneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zittarz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Europhys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page">955</biblScope>
+			<date type="published" when="1991">1992. 1993. 1991</date>
+		</imprint>
+	</monogr>
+	<note>J. Phys. A</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Ostlund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rommer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page">2164</biblScope>
+			<date type="published" when="1995">1995. 1997</date>
+		</imprint>
+	</monogr>
+	<note>Phys. Rev. B</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Roman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sierra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dukelsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Martin-Delgado</surname></persName>
+		</author>
+		<idno>cond-mat/9802150</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">N</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Reshetikhin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Takhtadzyan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Faddeev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Leningrad. Math. J</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">193</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Batchelor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mezincescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Nepomechie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rittenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page">141</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Schlottmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Mod. Phys. B</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">355</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Alcaraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Z</forename><surname>Bariev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A. A. Ovchinnikov, Mod. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">1397</biblScope>
+			<date type="published" when="1993">1999. 1993</date>
+		</imprint>
+	</monogr>
+	<note>J. Phys. A</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Dagotto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Rice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">271</biblScope>
+			<biblScope unit="page">618</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename></persName>
+		</author>
+		<title level="m">Statistical Models, Yang-Baxter Equations and Related Topics</title>
+		<editor>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Ge</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">F</forename><forename type="middle">Y</forename><surname>Wu</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Singapore</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Scientific</publisher>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Krebs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sandow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">3165</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Krebs</surname></persName>
+		</author>
+		<idno>cond-mat/9910452</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Arndt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rittenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">833</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Scheunert</surname></persName>
+		</author>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><surname>Allen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Essler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nersesyan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page">8871</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

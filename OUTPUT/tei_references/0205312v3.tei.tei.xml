@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Observation of minority spin character of the new electron doped manganite La 0.7 Ce 0.3 MnO 3 from tunneling magnetoresistance</title>
+				<funder ref="#_vdV6u4P">
+					<orgName type="full">DFG</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Leverhulme Trust</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2018-10-23">October 23, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">C</forename><surname>Mitra</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Max Planck Institute for Chemical Physics of Solids</orgName>
+								<address>
+									<addrLine>Nöthnitzer Str. 40</addrLine>
+									<postCode>01187</postCode>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institut für Festkörper und Werkstofforschung Dresden</orgName>
+								<address>
+									<addrLine>Helmholtzstrasse 20</addrLine>
+									<postCode>01069</postCode>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">P</forename><surname>Raychaudhuri</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">School of Physics and Astronomy</orgName>
+								<orgName type="institution">University of Birmingham</orgName>
+								<address>
+									<addrLine>Edgbaston</addrLine>
+									<postCode>B15 2TT</postCode>
+									<settlement>Birmingham</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">K</forename><surname>Dörr</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Institut für Festkörper und Werkstofforschung Dresden</orgName>
+								<address>
+									<addrLine>Helmholtzstrasse 20</addrLine>
+									<postCode>01069</postCode>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">K.-H</forename><surname>Müller</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Institut für Festkörper und Werkstofforschung Dresden</orgName>
+								<address>
+									<addrLine>Helmholtzstrasse 20</addrLine>
+									<postCode>01069</postCode>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">L</forename><surname>Schultz</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Institut für Festkörper und Werkstofforschung Dresden</orgName>
+								<address>
+									<addrLine>Helmholtzstrasse 20</addrLine>
+									<postCode>01069</postCode>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Oppeneer</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Institut für Festkörper und Werkstofforschung Dresden</orgName>
+								<address>
+									<addrLine>Helmholtzstrasse 20</addrLine>
+									<postCode>01069</postCode>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">S</forename><surname>Wirth</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Max Planck Institute for Chemical Physics of Solids</orgName>
+								<address>
+									<addrLine>Nöthnitzer Str. 40</addrLine>
+									<postCode>01187</postCode>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Observation of minority spin character of the new electron doped manganite La 0.7 Ce 0.3 MnO 3 from tunneling magnetoresistance</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-10-23">October 23, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9616A84AF811094ED2933F1880FD0279</idno>
+					<idno type="arXiv">arXiv:cond-mat/0205312v3[cond-mat.str-el]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>numbers: 75.70.-i</term>
+					<term>75.30.Vn</term>
+					<term>73.40.Gk</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>We report the magnetotransport characteristics of a trilayer ferromagnetic tunnel junction build of an electron doped manganite (La0.7Ce0.3MnO3) and a hole doped manganite (La0.7Ca0.3MnO3). At low temperatures the junction exhibits a large positive tunneling magnetoresistance (TMR), irrespective of the bias voltage. At intermediate temperatures below TC the sign of the TMR is dependent on the bias voltage across the junction. The magnetoresistive characteristics of the junction strongly suggest that La0.7Ce0.3MnO3 is a minority spin carrier ferromagnet with a high degree of spin polarization, i.e. a transport half metal.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><p>The authors would like to acknowledge <rs type="person">Andy Mackenzie</rs>, <rs type="person">F. Steglich</rs>, <rs type="person">S.K. Dhar</rs> and <rs type="person">R. Pinto</rs> for helpful discussions and encouragement. P.R. and C.M. thank the <rs type="funder">Leverhulme Trust</rs> and <rs type="funder">DFG</rs> (Grant No. <rs type="grantNumber">SFB 422</rs>), respectively, for financial support.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_vdV6u4P">
+					<idno type="grant-number">SFB 422</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><surname>Coey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Viret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Von Molnár</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Phys</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page">167</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Mandal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Das</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page">15073</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Raychaudhuri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page">5718</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Mitra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Raychaudhuri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Dhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Nigam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pinto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">524</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Mitra</surname></persName>
+		</author>
+		<idno>cond-mat/0206137</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Mitra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page">2408</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">H</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kawai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">27204</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Kang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electron Spectrosc. Relat. Phenom</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">801</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Olson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Min</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">3779</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Gupta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page">R15629</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">3266</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Ghosh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page">689</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Satpathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">S</forename><surname>Popovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Vukajlovic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">960</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">Y</forename><surname>Okimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Katsufuji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Arima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tokura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page">4206</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>Nadgorny</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">184433</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Worledge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Geballe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">900</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vescovo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Venkatesan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">392</biblScope>
+			<biblScope unit="page">794</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Pickett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Singh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page">1146</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Imada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fujimori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tokura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev. Mod. Phys</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">1039</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

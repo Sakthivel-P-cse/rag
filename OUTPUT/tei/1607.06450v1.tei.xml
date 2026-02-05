@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Layer Normalization</title>
+				<funder>
+					<orgName type="full">Google</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">CFI</orgName>
+				</funder>
+				<funder ref="#_ssUGEXA">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">NSERC</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jimmy</forename><surname>Lei Ba</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jamie</forename><forename type="middle">Ryan</forename><surname>Kiros</surname></persName>
+							<email>rkiros@cs.toronto.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+							<email>hinton@cs.toronto.edu</email>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">University of Toronto</orgName>
+								<orgName type="institution" key="instit2">Google Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Layer Normalization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D0265A0E18BA685167FF8C67E376278A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the training time is to normalize the activities of the neurons. A recently introduced technique called batch normalization uses the distribution of the summed input to a neuron over a mini-batch of training cases to compute a mean and variance which are then used to normalize the summed input to that neuron on each training case. This significantly reduces the training time in feedforward neural networks. However, the effect of batch normalization is dependent on the mini-batch size and it is not obvious how to apply it to recurrent neural networks. In this paper, we transpose batch normalization into layer normalization by computing the mean and variance used for normalization from all of the summed inputs to the neurons in a layer on a single training case. Like batch normalization, we also give each neuron its own adaptive bias and gain which are applied after the normalization but before the non-linearity. Unlike batch normalization, layer normalization performs exactly the same computation at training and test times. It is also straightforward to apply to recurrent neural networks by computing the normalization statistics separately at each time step. Layer normalization is very effective at stabilizing the hidden state dynamics in recurrent networks. Empirically, we show that layer normalization can substantially reduce the training time compared with previously published techniques.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Deep neural networks trained with some version of Stochastic Gradient Descent have been shown to substantially outperform previous approaches on various supervised learning tasks in computer vision <ref type="bibr" target="#b0">[Krizhevsky et al., 2012]</ref> and speech processing <ref type="bibr" target="#b1">[Hinton et al., 2012]</ref>. But state-of-the-art deep neural networks often require many days of training. It is possible to speed-up the learning by computing gradients for different subsets of the training cases on different machines or splitting the neural network itself over many machines <ref type="bibr" target="#b2">[Dean et al., 2012]</ref>, but this can require a lot of communication and complex software. It also tends to lead to rapidly diminishing returns as the degree of parallelization increases. An orthogonal approach is to modify the computations performed in the forward pass of the neural net to make learning easier. Recently, batch normalization <ref type="bibr" target="#b3">[Ioffe and Szegedy, 2015]</ref> has been proposed to reduce training time by including additional normalization stages in deep neural networks. The normalization standardizes each summed input using its mean and its standard deviation across the training data. Feedforward neural networks trained using batch normalization converge faster even with simple SGD. In addition to training time improvement, the stochasticity from the batch statistics serves as a regularizer during training.</p><p>Despite its simplicity, batch normalization requires running averages of the summed input statistics. In feed-forward networks with fixed depth, it is straightforward to store the statistics separately for each hidden layer. However, the summed inputs to the recurrent neurons in a recurrent neural network (RNN) often vary with the length of the sequence so applying batch normalization to RNNs appears to require different statistics for different time-steps. Furthermore, batch normaliza-tion cannot be applied to online learning tasks or to extremely large distributed models where the minibatches have to be small. This paper introduces layer normalization, a simple normalization method to improve the training speed for various neural network models. Unlike batch normalization, the proposed method directly estimates the normalization statistics from the summed inputs to the neurons within a hidden layer so the normalization does not introduce any new dependencies between training cases. We show that layer normalization works well for RNNs and improves both the training time and the generalization performance of several existing RNN models.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Background</head><p>A feed-forward neural network is a non-linear mapping from a input pattern x to an output vector y. Consider the l th hidden layer in a deep feed-forward, neural network, and let a l be the vector representation of the summed inputs to the neurons in that layer. The summed inputs are computed through a linear projection with the weight matrix W l and the bottom-up inputs h l given as follows:</p><formula xml:id="formula_0">a l i = w l i h l h l+1 i = f (a l i + b l i )<label>(1)</label></formula><p>where f (•) is an element-wise non-linear function and w l i is the incoming weights to the i th hidden units and b l i is the scalar bias parameter. The parameters in the neural network are learnt using gradient-based optimization algorithms with the gradients being computed by back-propagation.</p><p>One of the challenges of deep learning is that the gradients with respect to the weights in one layer are highly dependent on the outputs of the neurons in the previous layer especially if these outputs change in a highly correlated way. Batch normalization <ref type="bibr" target="#b3">[Ioffe and Szegedy, 2015]</ref> was proposed to reduce such undesirable "covariate shift". The method normalizes the summed inputs to each hidden unit over the training cases. Specifically, for the i th summed input in the l th layer, the batch normalization method rescales the summed inputs according to their variances under the distribution of the data</p><formula xml:id="formula_1">āl i = g l i σ l i a l i -µ l i µ l i = E x∼P (x) a l i σ l i = E x∼P (x) a l i -µ l i 2 (2)</formula><p>where āl i is normalized summed inputs to the i th hidden unit in the l th layer and g i is a gain parameter scaling the normalized activation before the non-linear activation function. Note the expectation is under the whole training data distribution. It is typically impractical to compute the expectations in Eq. ( <ref type="formula">2</ref>) exactly, since it would require forward passes through the whole training dataset with the current set of weights. Instead, µ and σ are estimated using the empirical samples from the current mini-batch. This puts constraints on the size of a mini-batch and it is hard to apply to recurrent neural networks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Layer normalization</head><p>We now consider the layer normalization method which is designed to overcome the drawbacks of batch normalization.</p><p>Notice that changes in the output of one layer will tend to cause highly correlated changes in the summed inputs to the next layer, especially with ReLU units whose outputs can change by a lot. This suggests the "covariate shift" problem can be reduced by fixing the mean and the variance of the summed inputs within each layer. We, thus, compute the layer normalization statistics over all the hidden units in the same layer as follows:</p><formula xml:id="formula_2">µ l = 1 H H i=1 a l i σ l = 1 H H i=1 a l i -µ l 2 (3)</formula><p>where H denotes the number of hidden units in a layer. The difference between Eq. ( <ref type="formula">2</ref>) and Eq. ( <ref type="formula">3</ref>) is that under layer normalization, all the hidden units in a layer share the same normalization terms µ and σ, but different training cases have different normalization terms. Unlike batch normalization, layer normaliztion does not impose any constraint on the size of a mini-batch and it can be used in the pure online regime with batch size 1.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Layer normalized recurrent neural networks</head><p>The recent sequence to sequence models <ref type="bibr" target="#b4">[Sutskever et al., 2014]</ref> utilize compact recurrent neural networks to solve sequential prediction problems in natural language processing. It is common among the NLP tasks to have different sentence lengths for different training cases. This is easy to deal with in an RNN because the same weights are used at every time-step. But when we apply batch normalization to an RNN in the obvious way, we need to to compute and store separate statistics for each time step in a sequence. This is problematic if a test sequence is longer than any of the training sequences. Layer normalization does not have such problem because its normalization terms depend only on the summed inputs to a layer at the current time-step. It also has only one set of gain and bias parameters shared over all time-steps.</p><p>In a standard RNN, the summed inputs in the recurrent layer are computed from the current input x t and previous vector of hidden states h t-1 which are computed as a t = W hh h t-1 + W xh x t . The layer normalized recurrent layer re-centers and re-scales its activations using the extra normalization terms similar to Eq. ( <ref type="formula">3</ref>):</p><formula xml:id="formula_3">h t = f g σ t a t -µ t + b µ t = 1 H H i=1 a t i σ t = 1 H H i=1 (a t i -µ t ) 2 (4)</formula><p>where W hh is the recurrent hidden to hidden weights and W xh are the bottom up input to hidden weights. is the element-wise multiplication between two vectors. b and g are defined as the bias and gain parameters of the same dimension as h t .</p><p>In a standard RNN, there is a tendency for the average magnitude of the summed inputs to the recurrent units to either grow or shrink at every time-step, leading to exploding or vanishing gradients. In a layer normalized RNN, the normalization terms make it invariant to re-scaling all of the summed inputs to a layer, which results in much more stable hidden-to-hidden dynamics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Related work</head><p>Batch normalization has been previously extended to recurrent neural networks <ref type="bibr" target="#b5">[Laurent et al., 2015</ref><ref type="bibr" target="#b6">, Amodei et al., 2015</ref><ref type="bibr" target="#b7">, Cooijmans et al., 2016]</ref>. The previous work <ref type="bibr" target="#b7">[Cooijmans et al., 2016]</ref> suggests the best performance of recurrent batch normalization is obtained by keeping independent normalization statistics for each time-step. The authors show that initializing the gain parameter in the recurrent batch normalization layer to 0.1 makes significant difference in the final performance of the model. Our work is also related to weight normalization <ref type="bibr" target="#b8">[Salimans and Kingma, 2016]</ref>. In weight normalization, instead of the variance, the L2 norm of the incoming weights is used to normalize the summed inputs to a neuron. Applying either weight normalization or batch normalization using expected statistics is equivalent to have a different parameterization of the original feed-forward neural network. Re-parameterization in the ReLU network was studied in the Pathnormalized SGD <ref type="bibr" target="#b9">[Neyshabur et al., 2015]</ref>. Our proposed layer normalization method, however, is not a re-parameterization of the original neural network. The layer normalized model, thus, has different invariance properties than the other methods, that we will study in the following section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Analysis</head><p>In this section, we investigate the invariance properties of different normalization schemes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Invariance under weights and data transformations</head><p>The proposed layer normalization is related to batch normalization and weight normalization. Although, their normalization scalars are computed differently, these methods can be summarized as normalizing the summed inputs a i to a neuron through the two scalars µ and σ. They also learn an adaptive bias b and gain g for each neuron after the normalization.</p><formula xml:id="formula_4">h i = f ( g i σ i (a i -µ i ) + b i )<label>(5)</label></formula><p>Note that for layer normalization and batch normalization, µ and σ is computed according to Eq. 2 and 3. In weight normalization, µ is 0, and σ = w 2 .</p><p>Table <ref type="table">1</ref>: Invariance properties under the normalization methods.</p><p>Table <ref type="table">1</ref> highlights the following invariance results for three normalization methods.</p><p>Weight re-scaling and re-centering: First, observe that under batch normalization and weight normalization, any re-scaling to the incoming weights w i of a single neuron has no effect on the normalized summed inputs to a neuron. To be precise, under batch and weight normalization, if the weight vector is scaled by δ, the two scalar µ and σ will also be scaled by δ. The normalized summed inputs stays the same before and after scaling. So the batch and weight normalization are invariant to the re-scaling of the weights. Layer normalization, on the other hand, is not invariant to the individual scaling of the single weight vectors. Instead, layer normalization is invariant to scaling of the entire weight matrix and invariant to a shift to all of the incoming weights in the weight matrix. Let there be two sets of model parameters θ, θ whose weight matrices W and W differ by a scaling factor δ and all of the incoming weights in W are also shifted by a constant vector γ, that is W = δW + 1γ . Under layer normalization, the two models effectively compute the same output:</p><formula xml:id="formula_5">h =f ( g σ (W x -µ ) + b) = f ( g σ (δW + 1γ )x -µ + b) =f ( g σ (W x -µ) + b) = h.<label>(6)</label></formula><p>Notice that if normalization is only applied to the input before the weights, the model will not be invariant to re-scaling and re-centering of the weights.</p><p>Data re-scaling and re-centering: We can show that all the normalization methods are invariant to re-scaling the dataset by verifying that the summed inputs of neurons stays constant under the changes. Furthermore, layer normalization is invariant to re-scaling of individual training cases, because the normalization scalars µ and σ in Eq. ( <ref type="formula">3</ref>) only depend on the current input data. Let x be a new data point obtained by re-scaling x by δ. Then we have,</p><formula xml:id="formula_6">h i =f ( g i σ w i x -µ + b i ) = f ( g i δσ δw i x -δµ + b i ) = h i .<label>(7)</label></formula><p>It is easy to see re-scaling individual data points does not change the model's prediction under layer normalization. Similar to the re-centering of the weight matrix in layer normalization, we can also show that batch normalization is invariant to re-centering of the dataset.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Geometry of parameter space during learning</head><p>We have investigated the invariance of the model's prediction under re-centering and re-scaling of the parameters. Learning, however, can behave very differently under different parameterizations, even though the models express the same underlying function. In this section, we analyze learning behavior through the geometry and the manifold of the parameter space. We show that the normalization scalar σ can implicitly reduce learning rate and makes learning more stable.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.1">Riemannian metric</head><p>The learnable parameters in a statistical model form a smooth manifold that consists of all possible input-output relations of the model. For models whose output is a probability distribution, a natural way to measure the separation of two points on this manifold is the Kullback-Leibler divergence between their model output distributions. Under the KL divergence metric, the parameter space is a Riemannian manifold.</p><p>The curvature of a Riemannian manifold is entirely captured by its Riemannian metric, whose quadratic form is denoted as ds 2 . That is the infinitesimal distance in the tangent space at a point in the parameter space. Intuitively, it measures the changes in the model output from the parameter space along a tangent direction. The Riemannian metric under KL was previously studied <ref type="bibr" target="#b10">[Amari, 1998]</ref> and was shown to be well approximated under second order Taylor expansion using the Fisher information matrix:</p><formula xml:id="formula_7">ds 2 = D KL P (y | x; θ) P (y | x; θ + δ) ≈ 1 2 δ F (θ)δ,<label>(8)</label></formula><formula xml:id="formula_8">F (θ) = E x∼P (x),y∼P (y | x) ∂ log P (y | x; θ) ∂θ ∂ log P (y | x; θ) ∂θ ,<label>(9)</label></formula><p>where, δ is a small change to the parameters. The Riemannian metric above presents a geometric view of parameter spaces. The following analysis of the Riemannian metric provides some insight into how normalization methods could help in training neural networks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.2">The geometry of normalized generalized linear models</head><p>We focus our geometric analysis on the generalized linear model. The results from the following analysis can be easily applied to understand deep neural networks with block-diagonal approximation to the Fisher information matrix, where each block corresponds to the parameters for a single neuron.</p><p>A generalized linear model (GLM) can be regarded as parameterizing an output distribution from the exponential family using a weight vector w and bias scalar b. To be consistent with the previous sections, the log likelihood of the GLM can be written using the summed inputs a as the following:</p><formula xml:id="formula_9">log P (y | x; w, b) = (a + b)y -η(a + b) φ + c(y, φ),<label>(10)</label></formula><formula xml:id="formula_10">E[y | x] = f (a + b) = f (w x + b), Var[y | x] = φf (a + b),<label>(11)</label></formula><p>where, f (•) is the transfer function that is the analog of the non-linearity in neural networks, f (•) is the derivative of the transfer function, η(•) is a real valued function and c(•) is the log partition function. φ is a constant that scales the output variance. Assume a H-dimensional output vector</p><formula xml:id="formula_11">y = [y 1 , y 2 , • • • , y H ] is modeled using H independent GLMs and log P (y | x; W, b) = H i=1 log P (y i | x; w i , b i ).</formula><p>Let W be the weight matrix whose rows are the weight vectors of the individual GLMs, b denote the bias vector of length H and vec(•) denote the Kronecker vector operator. The Fisher information matrix for the multi-dimensional GLM with respect to its parameters</p><formula xml:id="formula_12">θ = [w 1 , b 1 , • • • , w H , b H ] = vec([W, b]</formula><p>) is simply the expected Kronecker product of the data features and the output covariance matrix:</p><formula xml:id="formula_13">F (θ) = E x∼P (x) Cov[y | x] φ 2 ⊗ xx x x 1 . (<label>12</label></formula><formula xml:id="formula_14">)</formula><p>We obtain normalized GLMs by applying the normalization methods to the summed inputs a in the original model through µ and σ. Without loss of generality, we denote F as the Fisher information matrix under the normalized multi-dimensional GLM with the additional gain parameters θ = vec([W, b, g] ):</p><formula xml:id="formula_15">F (θ) =     F11 • • • F1H . . . . . . . . . FH1 • • • FHH     , Fij = E x∼P (x)     Cov[y i , y j | x] φ 2     gigj σiσj χ i χ j χ i gi σi χ i gi(aj -µj ) σiσj χ j gj σj 1 aj -µj σj χ j gj (ai-µi) σiσj ai-µi σi (ai-µi)(aj -µj ) σiσj        <label>(13)</label></formula><formula xml:id="formula_16">χ i = x - ∂µ i ∂w i - a i -µ i σ i ∂σ i ∂w i . (<label>14</label></formula><formula xml:id="formula_17">)</formula><p>Implicit learning rate reduction through the growth of the weight vector: Notice that, comparing to standard GLM, the block Fij along the weight vector w i direction is scaled by the gain parameters and the normalization scalar σ i . If the norm of the weight vector w i grows twice as large, even though the model's output remains the same, the Fisher information matrix will be different. The curvature along the w i direction will change by a factor of 1 2 because the σ i will also be twice as large. As a result, for the same parameter update in the normalized model, the norm of the weight vector effectively controls the learning rate for the weight vector. During learning, it is harder to change the orientation of the weight vector with large norm. The normalization methods, therefore, Figure <ref type="figure">1</ref>: Recall@K curves using order-embeddings with and without layer normalization.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MSCOCO Caption Retrieval</head><p>Image Retrieval Model R@1 R@5 R@10 Mean r R@1 R@5 R@10 Mean r Sym <ref type="bibr" target="#b11">[Vendrov et al., 2016]</ref> 45.4 88.7 5.8 36.3 85.8 9.0 OE <ref type="bibr" target="#b11">[Vendrov et al., 2016]</ref> 46.7 88.9 5.7 37.9 85.9 Table 2: Average results across 5 test splits for caption and image retrieval. R@K is Recall@K (high is good). Mean r is the mean rank (low is good). Sym corresponds to the symmetric baseline while OE indicates order-embeddings.</p><p>have an implicit "early stopping" effect on the weight vectors and help to stabilize learning towards convergence.</p><p>Learning the magnitude of incoming weights: In normalized models, the magnitude of the incoming weights is explicitly parameterized by the gain parameters. We compare how the model output changes between updating the gain parameters in the normalized GLM and updating the magnitude of the equivalent weights under original parameterization during learning. The direction along the gain parameters in F captures the geometry for the magnitude of the incoming weights. We show that Riemannian metric along the magnitude of the incoming weights for the standard GLM is scaled by the norm of its input, whereas learning the gain parameters for the batch normalized and layer normalized models depends only on the magnitude of the prediction error. Learning the magnitude of incoming weights in the normalized model is therefore, more robust to the scaling of the input and its parameters than in the standard model. See Appendix for detailed derivations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Experimental results</head><p>We perform experiments with layer normalization on 6 tasks, with a focus on recurrent neural networks: image-sentence ranking, question-answering, contextual language modelling, generative modelling, handwriting sequence generation and MNIST classification. Unless otherwise noted, the default initialization of layer normalization is to set the adaptive gains to 1 and the biases to 0 in the experiments.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.1">Order embeddings of images and language</head><p>In this experiment, we apply layer normalization to the recently proposed order-embeddings model of <ref type="bibr" target="#b11">Vendrov et al. [2016]</ref> for learning a joint embedding space of images and sentences. We follow the same experimental protocol as <ref type="bibr" target="#b11">Vendrov et al. [2016]</ref> and modify their publicly available code to incorporate layer normalization<ref type="foot" target="#foot_0">1</ref> which utilizes <ref type="bibr" target="#b12">Theano [Team et al., 2016]</ref>. Images and sentences from the Microsoft COCO dataset <ref type="bibr" target="#b13">[Lin et al., 2014]</ref> are embedded into a common vector space, where a GRU <ref type="bibr" target="#b14">[Cho et al., 2014]</ref> is used to encode sentences and the outputs of a pre-trained VGG ConvNet <ref type="bibr" target="#b15">[Simonyan and Zisserman, 2015]</ref> (10-crop) are used to encode images. The orderembedding model represents images and sentences as a 2-level partial ordering and replaces the cosine similarity scoring function used in <ref type="bibr" target="#b16">Kiros et al. [2014]</ref> with an asymmetric one. We trained two models: the baseline order-embedding model as well as the same model with layer normalization applied to the GRU. After every 300 iterations, we compute Recall@K (R@K) values on a held out validation set and save the model whenever R@K improves. The best performing models are then evaluated on 5 separate test sets, each containing 1000 images and 5000 captions, for which the mean results are reported. Both models use Adam <ref type="bibr" target="#b17">[Kingma and Ba, 2014]</ref> with the same initial hyperparameters and both models are trained using the same architectural choices as used in <ref type="bibr" target="#b11">Vendrov et al. [2016]</ref>. We refer the reader to the appendix for a description of how layer normalization is applied to GRU.</p><p>Figure <ref type="figure">1</ref> illustrates the validation curves of the models, with and without layer normalization. We plot R@1, R@5 and R@10 for the image retrieval task. We observe that layer normalization offers a per-iteration speedup across all metrics and converges to its best validation model in 60% of the time it takes the baseline model to do so. In Table <ref type="table">2</ref>, the test set results are reported from which we observe that layer normalization also results in improved generalization over the original model. The results we report are state-of-the-art for RNN embedding models, with only the structure-preserving model of <ref type="bibr" target="#b18">Wang et al. [2016]</ref> reporting better results on this task. However, they evaluate under different conditions (1 test set instead of the mean over 5) and are thus not directly comparable.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.2">Teaching machines to read and comprehend</head><p>In order to compare layer normalization to the recently proposed recurrent batch normalization <ref type="bibr" target="#b7">[Cooijmans et al., 2016]</ref>, we train an unidirectional attentive reader model on the CNN corpus both introduced by Hermann et al. <ref type="bibr">[2015]</ref>. This is a question-answering task where a query description about a passage must be answered by filling in a blank. The data is anonymized such that entities are given randomized tokens to prevent degenerate solutions, which are consistently permuted during training and evaluation. We follow the same experimental protocol as <ref type="bibr" target="#b7">Cooijmans et al. [2016]</ref> and modify their public code to incorporate layer normalization<ref type="foot" target="#foot_1">2</ref> which uses <ref type="bibr" target="#b12">Theano [Team et al., 2016]</ref>. We obtained the pre-processed dataset used by <ref type="bibr" target="#b7">Cooijmans et al. [2016]</ref> which differs from the original experiments of Hermann et al. <ref type="bibr">[2015]</ref> in that each passage is limited to 4 sentences. In <ref type="bibr" target="#b7">Cooijmans et al. [2016]</ref>, two variants of recurrent batch normalization are used: one where BN is only applied to the LSTM while the other applies BN everywhere throughout the model. In our experiment, we only apply layer normalization within the LSTM.</p><p>The results of this experiment are shown in Figure <ref type="figure" target="#fig_1">2</ref>. We observe that layer normalization not only trains faster but converges to a better validation result over both the baseline and BN variants. In <ref type="bibr" target="#b7">Cooijmans et al. [2016]</ref>, it is argued that the scale parameter in BN must be carefully chosen and is set to 0.1 in their experiments. We experimented with layer normalization for both 1.0 and 0.1 scale initialization and found that the former model performed significantly better. This demonstrates that layer normalization is not sensitive to the initial scale in the same way that recurrent BN is.<ref type="foot" target="#foot_2">3</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.3">Skip-thought vectors</head><p>Skip-thoughts <ref type="bibr" target="#b20">[Kiros et al., 2015]</ref> is a generalization of the skip-gram model <ref type="bibr" target="#b21">[Mikolov et al., 2013]</ref> for learning unsupervised distributed sentence representations. Given contiguous text, a sentence is  <ref type="bibr" target="#b20">[Kiros et al., 2015]</ref>. Plots with error use 10-fold cross validation. Best seen in color. encoded with a encoder RNN and decoder RNNs are used to predict the surrounding sentences. <ref type="bibr" target="#b20">Kiros et al. [2015]</ref> showed that this model could produce generic sentence representations that perform well on several tasks without being fine-tuned. However, training this model is timeconsuming, requiring several days of training in order to produce meaningful results.</p><p>In this experiment we determine to what effect layer normalization can speed up training. Using the publicly available code of <ref type="bibr" target="#b20">Kiros et al. [2015]</ref> <ref type="foot" target="#foot_3">4</ref> , we train two models on the BookCorpus dataset <ref type="bibr" target="#b22">[Zhu et al., 2015]</ref>: one with and one without layer normalization. These experiments are performed with <ref type="bibr" target="#b12">Theano [Team et al., 2016]</ref>. We adhere to the experimental setup used in <ref type="bibr" target="#b20">Kiros et al. [2015]</ref>, training a 2400-dimensional sentence encoder with the same hyperparameters. Given the size of the states used, it is conceivable layer normalization would produce slower per-iteration updates than without. However, we found that provided CNMeM<ref type="foot" target="#foot_4">5</ref> is used, there was no significant difference between the two models. We checkpoint both models after every 50,000 iterations and evaluate their performance on five tasks: semantic-relatedness (SICK) <ref type="bibr" target="#b23">[Marelli et al., 2014]</ref>, movie review sentiment (MR) <ref type="bibr" target="#b24">[Pang and Lee, 2005]</ref>, customer product reviews (CR) <ref type="bibr" target="#b25">[Hu and Liu, 2004]</ref>, subjectivity/objectivity classification (SUBJ) <ref type="bibr" target="#b26">[Pang and Lee, 2004]</ref> and opinion polarity (MPQA) <ref type="bibr" target="#b27">[Wiebe et al., 2005]</ref>. We plot the performance of both models for each checkpoint on all tasks to determine whether the performance rate can be improved with LN.</p><p>The experimental results are illustrated in Figure <ref type="figure" target="#fig_2">3</ref>. We observe that applying layer normalization results both in speedup over the baseline as well as better final results after 1M iterations are performed as shown in Table <ref type="table" target="#tab_1">3</ref>. We also let the model with layer normalization train for a total of a month, resulting in further performance gains across all but one task. We note that the performance We also experimented with the generative modeling on the MNIST dataset. Deep Recurrent Attention Writer (DRAW) <ref type="bibr" target="#b28">[Gregor et al., 2015]</ref> has previously achieved the state-of-theart performance on modeling the distribution of MNIST digits. The model uses a differential attention mechanism and a recurrent neural network to sequentially generate pieces of an image. We evaluate the effect of layer normalization on a DRAW model using 64 glimpses and 256 LSTM hidden units. The model is trained with the default setting of Adam <ref type="bibr" target="#b17">[Kingma and Ba, 2014]</ref> optimizer and the minibatch size of 128. Previous publications on binarized MNIST have used various training protocols to generate their datasets. In this experiment, we used the fixed binarization from <ref type="bibr" target="#b29">Larochelle and Murray [2011]</ref>. The dataset has been split into 50,000 training, 10,000 validation and 10,000 test images.</p><p>Figure <ref type="figure">4</ref> shows the test variational bound for the first 100 epoch. It highlights the speedup benefit of applying layer normalization that the layer normalized DRAW converges almost twice as fast than the baseline model. After 200 epoches, the baseline model converges to a variational log likelihood of 82.36 nats on the test data and the layer normalization model obtains 82.09 nats.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.5">Handwriting sequence generation</head><p>The previous experiments mostly examine RNNs on NLP tasks whose lengths are in the range of 10 to 40. To show the effectiveness of layer normalization on longer sequences, we performed handwriting generation tasks using the IAM Online Handwriting Database <ref type="bibr" target="#b30">[Liwicki and Bunke, 2005]</ref>. IAM-OnDB consists of handwritten lines collected from 221 different writers. When given the input character string, the goal is to predict a sequence of x and y pen co-ordinates of the corresponding handwriting line on the whiteboard. There are, in total, 12179 handwriting line sequences. The input string is typically more than 25 characters and the average handwriting line has a length around 700.</p><p>We used the same model architecture as in Section (5.2) of <ref type="bibr" target="#b31">Graves [2013]</ref>. The model architecture consists of three hidden layers of 400 LSTM cells, which produce 20 bivariate Gaussian mixture components at the output layer, and a size 3 input layer. The character sequence was encoded with one-hot vectors, and hence the window vectors were size 57. A mixture of 10 Gaussian functions was used for the window parameters, requiring a size 30 parameter vector. The total number of weights was increased to approximately 3.7M. The model is trained using mini-batches of size 8 and the Adam <ref type="bibr" target="#b17">[Kingma and Ba, 2014]</ref> optimizer.</p><p>The combination of small mini-batch size and very long sequences makes it important to have very stable hidden dynamics. Figure <ref type="figure">5</ref> shows that layer normalization converges to a comparable log likelihood as the baseline model but is much faster. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.6">Permutation invariant MNIST</head><p>In addition to RNNs, we investigated layer normalization in feed-forward networks. We show how layer normalization compares with batch normalization on the well-studied permutation invariant MNIST classification problem. From the previous analysis, layer normalization is invariant to input re-scaling which is desirable for the internal hidden layers. But this is unnecessary for the logit outputs where the prediction confidence is determined by the scale of the logits. We only apply layer normalization to the fully-connected hidden layers that excludes the last softmax layer.</p><p>All the models were trained using 55000 training data points and the Adam <ref type="bibr" target="#b17">[Kingma and Ba, 2014]</ref> optimizer. For the smaller batch-size, the variance term for batch normalization is computed using the unbiased estimator. The experimental results from Figure <ref type="figure" target="#fig_4">6</ref> highlight that layer normalization is robust to the batch-sizes and exhibits a faster training convergence comparing to batch normalization that is applied to all layers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.7">Convolutional Networks</head><p>We have also experimented with convolutional neural networks. In our preliminary experiments, we observed that layer normalization offers a speedup over the baseline model without normalization, but batch normalization outperforms the other methods. With fully connected layers, all the hidden units in a layer tend to make similar contributions to the final prediction and re-centering and rescaling the summed inputs to a layer works well. However, the assumption of similar contributions is no longer true for convolutional neural networks. The large number of the hidden units whose receptive fields lie near the boundary of the image are rarely turned on and thus have very different statistics from the rest of the hidden units within the same layer. We think further research is needed to make layer normalization work well in ConvNets.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7">Conclusion</head><p>In this paper, we introduced layer normalization to speed-up the training of neural networks. We provided a theoretical analysis that compared the invariance properties of layer normalization with batch normalization and weight normalization. We showed that layer normalization is invariant to per training-case feature shifting and scaling.</p><p>Empirically, we showed that recurrent neural networks benefit the most from the proposed method especially for long sequences and small mini-batches.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material Application of layer normalization to each experiment</head><p>This section describes how layer normalization is applied to each of the papers' experiments. For notation convenience, we define layer normalization as a function mapping LN : R D → R D with two set of adaptive parameters, gains α and biases β:</p><formula xml:id="formula_18">LN (z; α, β) = (z -µ) σ α + β,<label>(15)</label></formula><formula xml:id="formula_19">µ = 1 D D i=1 z i , σ = 1 D D i=1 (z i -µ) 2 ,<label>(16)</label></formula><p>where, z i is the i th element of the vector z.</p><p>Teaching machines to read and comprehend and handwriting sequence generation</p><p>The basic LSTM equations used for these experiment are given by:</p><formula xml:id="formula_20">   f t i t o t g t    = W h h t-1 + W x x t + b (17) c t = σ(f t ) c t-1 + σ(i t ) tanh(g t ) (18) h t = σ(o t ) tanh(c t )<label>(19)</label></formula><p>The version that incorporates layer normalization is modified as follows:</p><formula xml:id="formula_21">   f t i t o t g t    = LN (W h h t-1 ; α 1 , β 1 ) + LN (W x x t ; α 2 , β 2 ) + b (20) c t = σ(f t ) c t-1 + σ(i t ) tanh(g t ) (21) h t = σ(o t ) tanh(LN (c t ; α 3 , β 3 ))<label>(22)</label></formula><p>where α i , β i are the additive and multiplicative parameters, respectively. Each α i is initialized to a vector of zeros and each β i is initialized to a vector of ones.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Order embeddings and skip-thoughts</head><p>These experiments utilize a variant of gated recurrent unit which is defined as follows: </p><formula xml:id="formula_22">z t r t = W h h t-1 + W x x t<label>(</label></formula><p>h t = (1 -σ(z t ))h t-1 + σ(z t ) ĥt (28) just as before, α i is initialized to a vector of zeros and each β i is initialized to a vector of ones.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modeling binarized MNIST using DRAW</head><p>The layer norm is only applied to the output of the LSTM hidden states in this experiment:</p><p>The version that incorporates layer normalization is modified as follows:   </p><formula xml:id="formula_24">f t i t o t g t    = W h h t-1 + W x x t + b<label>(29)</label></formula><p>c t = σ(f t ) c t-1 + σ(i t ) tanh(g t ) (30) h t = σ(o t ) tanh(LN (c t ; α, β))</p><p>(31) where α, β are the additive and multiplicative parameters, respectively. α is initialized to a vector of zeros and β is initialized to a vector of ones.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Learning the magnitude of incoming weights</head><p>We now compare how gradient descent updates changing magnitude of the equivalent weights between the normalized GLM and original parameterization. The magnitude of the weights are explicitly parameterized using the gain parameter in the normalized model. Assume there is a gradient update that changes norm of the weight vectors by δ g . We can project the gradient updates to the weight vector for the normal GLM. The KL metric, ie how much the gradient update changes the model prediction, for the normalized model depends only on the magnitude of the prediction error. Specifically, under batch normalization:</p><formula xml:id="formula_25">ds 2 = 1 2 vec([0, 0, δ g ] ) F (vec([W, b, g] ) vec([0, 0, δ g ] ) = 1 2 δ g E x∼P (x) Cov[y | x] φ 2 δ g .<label>(32)</label></formula><p>Under layer normalization: Cov(y H , y 1 | x) (a H -µ)(a1-µ)</p><formula xml:id="formula_26">σ 2 • • • Cov(y H , y H | x) (a H -µ) 2 σ 2     δ g<label>(33)</label></formula><p>Under weight normalization: Whereas, the KL metric in the standard GLM is related to its activities a i = w i x, that is depended on both its current weights and input data. We project the gradient updates to the gain parameter δ g i of the i th neuron to its weight vector as δ gi wi wi 2 in the standard GLM model: Cov(y i , y j | x) a i a j w i 2 w j 2 (35)</p><formula xml:id="formula_27">ds 2 = 1 2 vec([0, 0, δ g ] ) F (vec([W, b, g] ) vec([0, 0, δ g ] ) = 1 2 δ g 1 φ 2 E x∼P (x)      Cov(y 1 , y 1 | x) a 2 1 w1 2 2 • • • Cov(y 1 , y H | x)</formula><p>The batch normalized and layer normalized models are therefore more robust to the scaling of the input and its parameters than the standard model.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: Validation curves for the attentive reader model. BN results are taken from<ref type="bibr" target="#b7">[Cooijmans et al., 2016]</ref>.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc>Figure3: Performance of skip-thought vectors with and without layer normalization on downstream tasks as a function of training iterations. The original lines are the reported results in<ref type="bibr" target="#b20">[Kiros et al., 2015]</ref>. Plots with error use 10-fold cross validation. Best seen in color.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 5 :Figure 4 :</head><label>54</label><figDesc>Figure5: Handwriting sequence generation model negative log likelihood with and without layer normalization. The models are trained with mini-batch size of 8 and sequence length of 500, differences between the original reported results and ours are likely due to the fact that the publicly available code does not condition at each timestep of the decoder, where the original model does.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 :</head><label>6</label><figDesc>Figure 6: Permutation invariant MNIST 784-1000-1000-10 model negative log likelihood and test error with layer normalization and batch normalization. (Left) The models are trained with batchsize of 128. (Right) The models are trained with batch-size of 4.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc>δ g ] ) F (vec([W, b, g] ) vec([0, 0, δ g ] ) Cov(y 1 , y H | x) (a1-µ)(a H -µ)   </figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 3 :</head><label>3</label><figDesc></figDesc><table><row><cell>Method</cell><cell cols="4">SICK(r) SICK(ρ) SICK(MSE) MR</cell><cell cols="3">CR SUBJ MPQA</cell></row><row><cell>Original [Kiros et al., 2015]</cell><cell>0.848</cell><cell>0.778</cell><cell>0.287</cell><cell cols="2">75.5 79.3</cell><cell>92.1</cell><cell>86.9</cell></row><row><cell>Ours</cell><cell>0.842</cell><cell>0.767</cell><cell>0.298</cell><cell cols="2">77.3 81.8</cell><cell>92.6</cell><cell>87.9</cell></row><row><cell>Ours + LN</cell><cell>0.854</cell><cell>0.785</cell><cell>0.277</cell><cell cols="2">79.5 82.6</cell><cell>93.4</cell><cell>89.0</cell></row><row><cell>Ours + LN  †</cell><cell>0.858</cell><cell>0.788</cell><cell>0.270</cell><cell cols="2">79.4 83.1</cell><cell>93.7</cell><cell>89.3</cell></row></table><note><p>Skip-thoughts results. The first two evaluation columns indicate Pearson and Spearman correlation, the third is mean squared error and the remaining indicate classification accuracy. Higher is better for all evaluations except MSE. Our models were trained for 1M iterations with the exception of ( †) which was trained for 1 month (approximately 1.7M iterations)</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head></head><label></label><figDesc>23) ĥt = tanh(Wx t + σ(r t ) (Uh t-1 )) LN (W h h t-1 ; α 1 , β 1 ) + LN (W x x t ; α 2 , β 2 ) (26)</figDesc><table><row><cell></cell><cell></cell><cell>(24)</cell></row><row><cell></cell><cell>h t = (1 -σ(z t ))h t-1 + σ(z t ) ĥt</cell><cell>(25)</cell></row><row><cell cols="2">Layer normalization is applied as follows:</cell></row><row><cell>z t r t</cell><cell>=</cell></row></table><note><p>ĥt = tanh(LN (Wx t ; α 3 , β 3 ) + σ(r t ) LN (Uh t-1 ; α 4 , β 4 ))</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>https://github.com/ivendrov/order-embedding</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>https://github.com/cooijmanstim/Attentive_reader/tree/bn</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>We only produce results on the validation set, as in the case of<ref type="bibr" target="#b7">Cooijmans et al. [2016]</ref> </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_3"><p>https://github.com/ryankiros/skip-thoughts</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_4"><p>https://github.com/NVIDIA/cnmem</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This research was funded by grants from <rs type="funder">NSERC</rs>, <rs type="funder">CFI</rs>, and <rs type="funder">Google</rs>.</p></div>
+			</div>
+			<div type="funding">
+<div><p>Weight matrix Weight matrix Weight vector Dataset Dataset Single training case re-scaling re-centering re-scaling re-scaling re-centering re-scaling <rs type="grantName">Batch norm Invariant No Invariant Invariant Invariant No Weight norm Invariant No Invariant No No No Layer norm Invariant Invariant No Invariant No Invariant</rs></p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_ssUGEXA">
+					<orgName type="grant-name">Batch norm Invariant No Invariant Invariant Invariant No Weight norm Invariant No Invariant No No No Layer norm Invariant Invariant No Invariant No Invariant</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Imagenet classification with deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups</title>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dong</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abdel-Rahman</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Navdeep</forename><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vincent</forename><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tara</forename><forename type="middle">N</forename><surname>Sainath</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>IEEE</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Large scale distributed deep networks</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rajat</forename><surname>Monga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthieu</forename><surname>Devin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Tucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ke</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Quoc V Le</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Batch normalization: Accelerating deep network training by reducing internal covariate shift</title>
+		<author>
+			<persName><forename type="first">Sergey</forename><surname>Ioffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Szegedy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICML</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Sequence to sequence learning with neural networks</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quoc V</forename><surname>Le</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="3104" to="3112" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Batch normalized recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">César</forename><surname>Laurent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriel</forename><surname>Pereyra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philémon</forename><surname>Brakel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ying</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1510.01378</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Deep speech 2: End-to-end speech recognition in english and mandarin</title>
+		<author>
+			<persName><forename type="first">Dario</forename><surname>Amodei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rishita</forename><surname>Anubhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Battenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carl</forename><surname>Case</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jared</forename><surname>Casper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bryan</forename><surname>Catanzaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingdong</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Chrzanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Coates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Diamos</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1512.02595</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Cooijmans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Ballas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">César</forename><surname>Laurent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Courville</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.09025</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Recurrent batch normalization. arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Salimans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Diederik</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kingma</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1602.07868</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Path-sgd: Path-normalized optimization in deep neural networks</title>
+		<author>
+			<persName><forename type="first">Ruslan</forename><forename type="middle">R</forename><surname>Behnam Neyshabur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nati</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Srebro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="2413" to="2421" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Natural gradient works efficiently in learning</title>
+		<author>
+			<persName><forename type="first">Shun-Ichi</forename><surname>Amari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Order-embeddings of images and language</title>
+		<author>
+			<persName><forename type="first">Ivan</forename><surname>Vendrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Sanja Fidler, and Raquel Urtasun</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Theano: A python framework for fast computation of mathematical expressions</title>
+		<author>
+			<persName><forename type="first">The</forename><surname>Theano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Development</forename><surname>Team</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rami</forename><surname>Al-Rfou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Alain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amjad</forename><surname>Almahairi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christof</forename><surname>Angermueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Ballas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frédéric</forename><surname>Bastien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Bayer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anatoly</forename><surname>Belikov</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1605.02688</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tsung-Yi</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Maire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Serge</forename><surname>Belongie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Hays</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pietro</forename><surname>Perona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Deva</forename><surname>Ramanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Dollár</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lawrence</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zitnick</forename></persName>
+		</author>
+		<title level="m">Microsoft coco: Common objects in context. ECCV</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Learning phrase representations using rnn encoder-decoder for statistical machine translation</title>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bart</forename><surname>Van Merriënboer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caglar</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fethi</forename><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Holger</forename><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">EMNLP</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Very deep convolutional networks for large-scale image recognition</title>
+		<author>
+			<persName><forename type="first">Karen</forename><surname>Simonyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Zisserman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICLR</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Unifying visual-semantic embeddings with multimodal neural language models</title>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruslan</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">S</forename><surname>Zemel</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1411.2539</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Adam: a method for stochastic optimization</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Ba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.6980</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ICLR</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Learning deep structure-preserving image-text embeddings</title>
+		<author>
+			<persName><forename type="first">Liwei</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yin</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Svetlana</forename><surname>Lazebnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">CVPR</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Teaching machines to read and comprehend</title>
+		<author>
+			<persName><forename type="first">Karl</forename><surname>Moritz Hermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Kocisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Grefenstette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lasse</forename><surname>Espeholt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Will</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mustafa</forename><surname>Suleyman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Skip-thought vectors</title>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yukun</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ruslan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raquel</forename><surname>Zemel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antonio</forename><surname>Urtasun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanja</forename><surname>Torralba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fidler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Dean</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1301.3781</idno>
+		<title level="m">Efficient estimation of word representations in vector space</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Aligning books and movies: Towards story-like visual explanations by watching movies and reading books</title>
+		<author>
+			<persName><forename type="first">Yukun</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rich</forename><surname>Zemel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruslan</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raquel</forename><surname>Urtasun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antonio</forename><surname>Torralba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanja</forename><surname>Fidler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICCV</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Semeval-2014 task 1: Evaluation of compositional distributional semantic models on full sentences through semantic relatedness and textual entailment</title>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Marelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luisa</forename><surname>Bentivogli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raffaella</forename><surname>Bernardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Menini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roberto</forename><surname>Zamparelli</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>SemEval-2014</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Seeing stars: Exploiting class relationships for sentiment categorization with respect to rating scales</title>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lillian</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL</title>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="page" from="115" to="124" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Mining and summarizing customer reviews</title>
+		<author>
+			<persName><forename type="first">Minqing</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining</title>
+		<meeting>the tenth ACM SIGKDD international conference on Knowledge discovery and data mining</meeting>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A sentimental education: Sentiment analysis using subjectivity summarization based on minimum cuts</title>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lillian</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Annotating expressions of opinions and emotions in language. Language resources and evaluation</title>
+		<author>
+			<persName><forename type="first">Janyce</forename><surname>Wiebe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Theresa</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Claire</forename><surname>Cardie</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">DRAW: a recurrent neural network for image generation</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gregor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Danihelka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wierstra</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1502.04623</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">The neural autoregressive distribution estimator</title>
+		<author>
+			<persName><forename type="first">Hugo</forename><surname>Larochelle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iain</forename><surname>Murray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AISTATS</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">622</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Iam-ondb-an on-line english sentence database acquired from handwritten text on a whiteboard</title>
+		<author>
+			<persName><forename type="first">Marcus</forename><surname>Liwicki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Horst</forename><surname>Bunke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICDAR</title>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Generating sequences with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1308.0850</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

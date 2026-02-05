@@ -1,0 +1,157 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "techniques to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes"
+  ],
+  "next_question": "What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words?",
+  "accept": [],
+  "reject": [
+    {
+      "chunk_id": "1701.06538v1.tei.tei_chunk-10",
+      "paper_id": "1701.06538v1.tei.tei",
+      "reason": "not relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-12",
+      "paper_id": "1508.07909v5.tei.tei",
+      "reason": "focuses on translation tasks, not NLP model accuracy"
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-5",
+      "paper_id": "1508.07909v5.tei.tei",
+      "reason": "related work section, not directly relevant to the question"
+    },
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-7",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "evaluates embeddings, not directly relevant to the question"
+    },
+    {
+      "chunk_id": "1601.06733v7.tei.tei_chunk-9",
+      "paper_id": "1601.06733v7.tei.tei",
+      "reason": "focuses on language modeling, not morphologically rich languages"
+    }
+  ],
+  "rejected_paper_ids": [],
+  "search_hint": "morphological analysis, subword modeling, character-level embeddings, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages, language modeling, word embeddings, limited training data, small model sizes",
+  "iteration": 2,
+  "accepted_chunks": [
+    {
+      "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+      "paper_id": "1607.04606v2.tei.tei"
+    },
+    {
+      "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+      "paper_id": "1602.02410v2.tei.tei"
+    }
+  ],
+  "accepted_chunk_ids": [
+    "1602.02410v2.tei.tei_chunk-14",
+    "1607.04606v2.tei.tei_chunk-2"
+  ],
+  "accepted_paper_ids": [
+    "1602.02410v2.tei.tei",
+    "1607.04606v2.tei.tei"
+  ],
+  "rejected_chunk_ids": [
+    "1508.07909v5.tei.tei_chunk-12",
+    "1508.07909v5.tei.tei_chunk-5",
+    "1601.06733v7.tei.tei_chunk-9",
+    "1607.04606v2.tei.tei_chunk-12",
+    "1607.04606v2.tei.tei_chunk-13",
+    "1607.04606v2.tei.tei_chunk-3",
+    "1608.05859v3.tei.tei_chunk-7",
+    "1701.06538v1.tei.tei_chunk-10"
+  ],
+  "accepted_this_round": [],
+  "rejected_this_round": [
+    {
+      "chunk_id": "1701.06538v1.tei.tei_chunk-10",
+      "paper_id": "1701.06538v1.tei.tei",
+      "reason": "not relevant to morphologically rich languages"
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-12",
+      "paper_id": "1508.07909v5.tei.tei",
+      "reason": "focuses on translation tasks, not NLP model accuracy"
+    },
+    {
+      "chunk_id": "1508.07909v5.tei.tei_chunk-5",
+      "paper_id": "1508.07909v5.tei.tei",
+      "reason": "related work section, not directly relevant to the question"
+    },
+    {
+      "chunk_id": "1608.05859v3.tei.tei_chunk-7",
+      "paper_id": "1608.05859v3.tei.tei",
+      "reason": "evaluates embeddings, not directly relevant to the question"
+    },
+    {
+      "chunk_id": "1601.06733v7.tei.tei_chunk-9",
+      "paper_id": "1601.06733v7.tei.tei",
+      "reason": "focuses on language modeling, not morphologically rich languages"
+    }
+  ],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "Using character level information can improve vector representations for morphologically rich languages.",
+      "Representing words as the sum of character n-gram vectors can be an effective technique.",
+      "Replacing the embedding layer with a parametrized neural network that processes characters of a given word can allow the model to consume arbitrary words and is not restricted to a fixed vocabulary."
+    ],
+    "evidence_citations": [
+      {
+        "paper_id": "1607.04606v2.tei.tei",
+        "chunk_id": "1607.04606v2.tei.tei_chunk-2",
+        "supports": "1"
+      },
+      {
+        "paper_id": "1602.02410v2.tei.tei",
+        "chunk_id": "1602.02410v2.tei.tei_chunk-14",
+        "supports": "1"
+      }
+    ]
+  },
+  "_debug": {
+    "retrieval_query": "What specific techniques can be used to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes?\n\nSearch hints: morphological analysis, subword modeling, character-level embeddings, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages, language modeling, word embeddings",
+    "candidates": [
+      {
+        "paper_id": "1701.06538v1.tei.tei",
+        "chunk_id": "1701.06538v1.tei.tei_chunk-10",
+        "retr_score": 0.46779275
+      },
+      {
+        "paper_id": "1508.07909v5.tei.tei",
+        "chunk_id": "1508.07909v5.tei.tei_chunk-12",
+        "retr_score": 0.45015138
+      },
+      {
+        "paper_id": "1508.07909v5.tei.tei",
+        "chunk_id": "1508.07909v5.tei.tei_chunk-5",
+        "retr_score": 0.4448648
+      },
+      {
+        "paper_id": "1608.05859v3.tei.tei",
+        "chunk_id": "1608.05859v3.tei.tei_chunk-7",
+        "retr_score": 0.44148898
+      },
+      {
+        "paper_id": "1601.06733v7.tei.tei",
+        "chunk_id": "1601.06733v7.tei.tei_chunk-9",
+        "retr_score": 0.4345062
+      }
+    ],
+    "excluded_chunk_ids": [
+      "1602.02410v2.tei.tei_chunk-14",
+      "1607.04606v2.tei.tei_chunk-12",
+      "1607.04606v2.tei.tei_chunk-13",
+      "1607.04606v2.tei.tei_chunk-2",
+      "1607.04606v2.tei.tei_chunk-3"
+    ],
+    "excluded_paper_ids": [
+      "1602.02410v2.tei.tei",
+      "1607.04606v2.tei.tei"
+    ],
+    "raw_llm_output_first_2000_chars": "```\n{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"techniques to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes\"],\n  \"next_question\": \"What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words?\",\n  \"accept\": [],\n  \"reject\": [\n    {\"chunk_id\": \"1701.06538v1.tei.tei_chunk-10\", \"paper_id\": \"1701.06538v1.tei.tei\", \"reason\": \"not relevant to morphologically rich languages\"},\n    {\"chunk_id\": \"1508.07909v5.tei.tei_chunk-12\", \"paper_id\": \"1508.07909v5.tei.tei\", \"reason\": \"focuses on translation tasks, not NLP model accuracy\"},\n    {\"chunk_id\": \"1508.07909v5.tei.tei_chunk-5\", \"paper_id\": \"1508.07909v5.tei.tei\", \"reason\": \"related work section, not directly relevant to the question\"},\n    {\"chunk_id\": \"1608.05859v3.tei.tei_chunk-7\", \"paper_id\": \"1608.05859v3.tei.tei\", \"reason\": \"evaluates embeddings, not directly relevant to the question\"},\n    {\"chunk_id\": \"1601.06733v7.tei.tei_chunk-9\", \"paper_id\": \"1601.06733v7.tei.tei\", \"reason\": \"focuses on language modeling, not morphologically rich languages\"}\n  ],\n  \"rejected_paper_ids\": [],\n  \"search_hint\": \"morphological analysis, subword modeling, character-level embeddings, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages, language modeling, word embeddings, limited training data, small model sizes\"\n}\n```"
+  }
+}

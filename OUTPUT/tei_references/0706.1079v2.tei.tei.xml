@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CO-ORBITAL OLIGARCHY</title>
+				<funder>
+					<orgName type="full">European Research Council</orgName>
+					<orgName type="abbreviated">ERC</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2018-10-29">October 29, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Benjamin</forename><forename type="middle">F</forename><surname>Collins</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Re</forename><forename type="middle">'</forename><surname>Em Sari</surname></persName>
+						</author>
+						<title level="a" type="main">CO-ORBITAL OLIGARCHY</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-10-29">October 29, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B0E5B2FA301DEA67761423BE0A3C9B89</idno>
+					<idno type="arXiv">arXiv:0706.1079v2[astro-ph]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>planets and satellites</term>
+					<term>formation -solar system</term>
+					<term>formation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>We present a systematic examination of the changes in semi-major axis caused by the mutual interactions of a group of massive bodies orbiting a central star in the presence of eccentricity dissipation. For parameters relevant to the oligarchic stage of planet formation, dynamical friction keeps the typical eccentricities small and prevents orbit crossing. Interactions at impact parameters greater than several Hill radii cause the protoplanets to repel each other; if the impact parameter is instead much less than the Hill radius, the protoplanets shift slightly in semi-major axis but remain otherwise unperturbed. If the orbits of two or more protoplanets are separated by less than a Hill radius, they are each pushed towards an equilibrium spacing between their neighbors and can exist as a stable co-orbital system. In the shear-dominated oligarchic phase of planet formation we show that the feeding zones contain several oligarchs instead of only one. Growth of the protoplanets in the oligarchic phase drives the disk to an equilibrium configuration that depends on the mass ratio of protoplanets to planetesimals, Σ/σ. Early in the oligarchic phase, when Σ/σ is low, the spacing between rows of co-orbital oligarchs are about 5 Hill radii wide, rather than the 10 Hill radii cited in the literature. It is likely that at the end of oligarchy the average number of co-orbital oligarchs is greater than unity. In the outer solar system this raises the disk mass required to form the ice giants. In the inner solar system this lowers the mass of the final oligarchs and requires more giant impacts than previously estimated. This result provides additional evidence that Mars is not an untouched leftover from the oligarchic phase, but must be composed of several oligarchs assembled through giant impacts.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><p>We thank <rs type="person">Dave Stevenson</rs> for enlightening discussions. Insightful comments by our referee, <rs type="person">Eiichiro Kokubo</rs>, motivated significant improvements to this work. R.S. is a <rs type="person">Packard Fellow</rs> and an Alfred P. Sloan Fellow. This work was partially supported by the <rs type="funder">European Research Council (ERC)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Chambers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">152</biblScope>
+			<biblScope unit="page">205</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">132</biblScope>
+			<biblScope unit="page">1316</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Schlichting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sari</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv Astrophysics e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Cresswell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Nelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">450</biblScope>
+			<biblScope unit="page">833</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><surname>Dones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tremaine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">67</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Duncan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Quinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tremaine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">402</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">B</forename><surname>Ford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bridges</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">P</forename><surname>Pillinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ArXiv Astrophysics e-prints Franchi</title>
+		<imprint>
+			<date type="published" when="2001">2007. 2001. 2019</date>
+			<biblScope unit="volume">359</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Goldreich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lithwick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ARA&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">614</biblScope>
+			<biblScope unit="page">549</biblScope>
+			<date type="published" when="2004">2004. 2004b</date>
+		</imprint>
+	</monogr>
+	<note>ApJ</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Goldreich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tremaine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="page">425</biblScope>
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><surname>Goldreich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Tremaine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">227</biblScope>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Bottke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Carusi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Valsecchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page">98</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">Y</forename><surname>Greenzweig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Lissauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page">40</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Halliday</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kleine</surname></persName>
+		</author>
+		<title level="m">Meteorites and the Timing, Mechanisms, and Conditions of Terrestrial Planet Accretion and Early Differentiation (Meteorites and the Early Solar System II)</title>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="page" from="775" to="801" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Hayashi</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1981">1981</date>
+			<publisher>Progress of Theoretical Physics Supplement</publisher>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">35</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Kenyon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Bromley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page">1837</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Kokubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">666</biblScope>
+			<date type="published" when="1995">1995. 1998. 2002</date>
+		</imprint>
+	</monogr>
+	<note>ApJ</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">ArXiv Astrophysics e-prints Lissauer</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Levison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Morbidelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">249</biblScope>
+			<date type="published" when="1987">2007. 1987</date>
+		</imprint>
+	</monogr>
+	<note>J. J.</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Ozima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Podosek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Higuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q.-Z</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yamada</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">186</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Pahlevan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Stevenson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Earth and Planetary Science Letters</title>
+		<imprint>
+			<biblScope unit="volume">262</biblScope>
+			<biblScope unit="page">438</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Petit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Henon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">536</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Numerical recipes in C. The art of scientific computing</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Press</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Teukolsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Vetterling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Flannery</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1992">1992. 1992</date>
+			<publisher>Cambridge: University Press</publisher>
+		</imprint>
+	</monogr>
+	<note>nd ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Schlichting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Duncan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Levison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">161</biblScope>
+			<biblScope unit="page">431</biblScope>
+			<date type="published" when="2003">2006. 2003</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">ArXiv Astrophysics e-prints Thommes</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Ward</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Icarus</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">164</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Weidenschilling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Space Science Reviews</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page">53</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><surname>Wisdom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page">1122</biblScope>
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

@@ -1,0 +1,349 @@
+# Granular discorectangle in a thermalized bath of hard disks
+
+**Published:** 10 Aug 2004
+
+## Abstract
+
+By using the Enskog-Boltzmann approach, we study the steady-state dynamics of a granular
+discorectangle placed in a two-dimensional bath of thermalized hard disks. Hard core collisions are
+assumed elastic between disks and inelastic between the discorectangle and the disks, with a normal
+restitution coefficient α < 1. Assuming a Gaussian ansatz for the probability distribution
+functions, we obtain analytical expressions for the granular temperatures. We show the absence of
+equipartition and investigate both the role of the anisotropy of the discorectangle and of the
+relative ratio of the bath particles to the linear sizes of the discorectangle. In addition, we
+investigate a model of a discorectangle with two normal restitution coefficients for collisions
+along the straight and curved surfaces of the discorectangle. In this case one observes
+equipartition for a non trivial ratio of normal restitution coefficients.
+
+## I. INTRODUCTION
+
+Granular matter is characterized by the existence of dissipative forces between particles. In order
+to sustain a collective motion, it is necessary to provide energy continuously. When power supply is
+sufficiently copious, the assembly of granular particles attains a non equilibrium steady state
+(NESS) [1,2]. It is customary to define the granular temperature as the second moment of the
+velocity distribution. It is a source of both fascination and inconvenience that the well-know
+properties of temperatures characterizing thermal systems are not necessarily transferable to
+granular temperatures. In particular, recent work, both theoretical [2,3,4,5,6,7,8] and experimental
+[9,10], has shown that in a binary granular system the two species have different granular
+temperatures that are non-trivial functions of the microscopic parameters (mass, size, restitution
+coefficient,. . . ). Although the absence of equipartition is not surprising for a dissipative
+system sustained in a NESS, a more complete investigation is necessary since the granular
+temperatures play an important role in hydrodynamic descriptions of these systems (in particular the
+absence of equipartition in binary mixtures yields granular temperature gradients which enhance
+segregation [11]). In addition, the extension of the fluctutation-dissipation theorem is an
+important issue in the context of granular gases [12]. Other consequences of the absence of
+equipartition include the ability of a binary system to exhibit a segregation phenomena in a
+"Maxwell demon" experiment [13]. See also the homogeneous cooling state of a granular mixture [14]
+and the impurity problem [15].
+
+Most of the above-referenced studies examined assemblies of spherical particles. Yet, in reality,
+the particles composing granular systems are to some degree anisotropic and, in many cases, strongly
+so. Even if the particles are smooth, each collision results in some exchange and, possibly loss, of
+rotational kinetic energy. There are relatively few studies of these systems (but see for example,
+Refs. [16,17,18]) and fewer still that focus specifically on equipartition. Huthmann et al. [19]
+used kinetic theory to examine the free cooling of a system of granular needles in three dimensions
+and, more recently, two of the present authors studied a two-dimensional system composed of a single
+granular needle in a thermalized bath of point particles [20] in a NESS. For inelastic needle-point
+collisions, the rotational granular temperature is smaller than the translational one while both are
+less than the bath temperature. The validity of the theoretical predictions were confirmed by
+comparison with numerical simulations of the model. While this study provided useful insights,
+infinitesimal width of the particle is obviously an idealization.
+
+The objective of present article is to consider a more realistic system where both the tracer
+particle and bath particles are of finite extent. Specifically, we consider a discorectangle in a
+bath of thermalized hard disks. Fortunately, despite the increased complexity, it is still possible
+to obtain an analytic solution of the steady state kinetic equations. The principal difference
+between the discorectangle-disk and needle-point systems is that two kinds of collision are possible
+in the former compared to one in the latter. Specifically, a disk can collide with either the sides
+or the caps of the discorectangle. If each type of collision is characterized by different normal
+restitution coefficients we show that equipartition between the translational and rotational degrees
+of freedom can be obtained for specific values of these parameters. Consequently, for appropriate
+ranges of the restitution coefficients the translational granular temperature may be less than or
+greater than the rotational one.
+
+## II. MODEL AND COLLISION RULES
+
+We investigate a two-dimensional system consisting of a discorectangle of total length L + 2R,
+radius R and mass M with a moment of inertia I (The value of which is given in appendix A). The bath
+consists of disks of mass m and of radius r. The vector positions of the center of mass of the
+discorectangle and a disk particle are denoted by r 1 and r 2 , respectively. The orientation of the
+discorectangle is specified by a unit vector u 1 that points along the long axis. Let r 12 = r 1r 2
+and u ⊥ 1 denote a vector perpendicular to u 1 . A collision between a discorectangle and a disk can
+take place either on the linear part or on the circular parts of the former,
+
+if |λ| < L/2, and
+
+if R > |λ| -L/2 > 0, where u r denotes the unit vector of the collision axis. (see Fig. 1). The
+relative velocity of the point of contact V is given by
+
+where ω 1 denotes the angular time derivative and OC the vector from the center of the
+discorectangle to the point of impact.
+
+The pre-and post-collisional quantities (the latter are labeled with a prime) satisfy:
+
+• Angular momentum conservation with respect to the point of contact
+
+where k is a unit vector perpendicular to the plane.
+
+As a result of the collision, the relative velocity of the contacting points changes instantaneously
+according to the following relations:
+
+where α is the normal restitution coefficient and u ⊥ 1 and u 1 denote the unit vectors of the
+collision along the rectilinear part of the discorectangle. When the collision occurs on the
+circular parts of the discorectangle, the collision rules are given by
+
+where u r and u θ denote the unit vectors associated with the circular part of the discorectangle
+(See Fig 1b).
+
+The tangential restitution coefficient is set to one for the sake of simplicity. This choice is
+reflected in the form of Eqs. (7)(8)(9)
+
+FIG. 1: Geometry of the discorectangle and a disk in the plane: (a) Collision between the
+rectilinear part of the discorectangle and a disk, r12 denotes a vector joining the point labeled 2
+and the center of the discorectangle; u1 is a unit vector along the axis of the discorectangle, λ is
+the algebraic distance between the center of the discorectangle and the point of impact and u ⊥ 1 is
+a unit vector perpendicular to the axis of the discorectangle. (b) Collision between the circular
+part of the discorectangle and a disk. θ denotes the angle between the direction of the long axis of
+the discorectangle and the axis defined by the contact point and the center of the disk.ur and u θ
+are unit vectors normal and tangential to the surface at the point of contact, respectively.
+
+By combining Eqs. (3)-( 6) one obtains, after some algebra, the change of the discorectangle
+momentum ∆p = M (v ′ 1v 1 ) for a collision along the linear part ∆p.u ⊥ 1 = -
+
+for |λ| ≤ L/2 and at the two ends of the discorectangle ∆p.u r = -
+
+for R > |λ| -L/2 > 0 with cos(θ) = λ-L/2 R .
+
+## III. BOLTZMANN EQUATION
+
+Since we are interested in the homogeneous state, the distribution function f (v 1 , ω 1 ) of the
+discorectangle obeys
+
+where N is the total number of disks, f (v 1 , ω 1 , v 2 ) is the distribution function of the
+discorectangle and a disk, and T 12 is the collision operator between a discorectangle and a disk.
+
+Defining the granular temperatures as quadratic average of the appropriate velocity distribution,
+one has T T = M/2 v 2 and T R = I ω 2 for the translational and rotational granular temperatures,
+respectively (the angular brackets denote the average). By taking the second moment with respect of
+the velocity and of the angular velocity of Eq.( 12), one obtains
+
+In the stationary state the time derivatives of the lefthand side of these two equations are equal
+to zero.
+
+To build the collision operator between the discorectangle and a disk, T 12 , one must include the
+change in quantities (i.e. velocity and angular momentum) produced during the infinitesimal time
+interval of the collision. This operator is different from zero only if the two particles are in
+contact and if the particles were approaching just before the collision [21]. For a collision
+between a disk and the rectilinear part of the discorectangle, the explicit form of the operator
+given by
+
+where b 12 is an operator that changes post-collisional quantities to pre-collisional quantities and
+Θ(x) is the Heaviside function, and for a collision at two ends of the discorectangle
+
+where b 12 is an operator that converts pre-collisional to post-collisional quantities.
+
+The others terms of the collision operator correspond to the necessary conditions of contact Θ(L/2
+-|λ|)δ(|r 12 .u ⊥ 1 | -(r + R)), and approach Θ -
+
+, and approach Θ -d|r12.ur| dt in the second case.
+
+By taking the second moments of the distribution function of the discorectangle and after
+substitution of the collision operator (Eq.( 15)), one obtains explicitly for the translational
+kinetic energy
+
+A similar equation can be written for rotational kinetic energy. Since the impulse of the collision
+depends on the location of the impact, it is easy to show that the solution is not a Maxwell
+distribution function, a property already observed in the model of a needle and points [20].
+However, since the deviations from the Maxwell distribution are small, we use it as a trial
+function. That is we assume that
+
+where γ T and γ R are the ratios of the translational and rotational discorectangle temperatures to
+the bath temperature, respectively. In summary, in order to obtain the granular temperatures of the
+discorectangle, it is necessary to: (i) Calculate the change of translational and rotational energy
+occurring during a collision (ii) Perform an average over all degrees of freedom of the collision
+integral.
+
+## IV. CALCULATION AND RESULTS
+
+## A. Energy changes during a collision
+
+When a disk collides with the discorectangle, the change of the translational kinetic energy of the
+latter is given by
+
+for |λ| < L 2 , and
+
+and for R > |λ| -L/2 > 0,
+
+## B. Expressions of the granular temperatures
+
+After inserting Eq. ( 18) in Eq. ( 17) it is necessary to perform integrations over each variable in
+the corresponding equation for the rotational energy. Details of this rather technical task are
+given in the Appendix B. After some tedious calculation, one obtains the following set of equations
+FIG. 2: Ratio of the translational (full curve) γT and rotational γR (dashed curve) granular
+temperature to the temperature of the bath versus the normal restitution coefficient α for a system
+of a needle and a bath of points and a system of a needle and a bath of disks for c = 2/3 (a) and
+for c = 1/10. The curves corresponding to the needle-point system are always above those for the
+needle-disk system (b). The insets display the differences γT -γR versus α for the needle in the
+bath of disks (full curve) and the needle in the bath of points (dashed curve).
+
+where
+
+and
+
+and I np m and J np m are given by
+
+Explicit expressions for the integrals appearing in Eqs. ( 23) and ( 24) are given in Appendix C.
+Eq. ( 24) is an implicit equation for a that, for a given value of α, can be solved with standard
+numerical methods. b is then easily obtained by calculating the ratio of integrals of Eq. ( 23).
+Finally, from the values of a and b, γ T and γ R can be obtained from Eqs.( 26
+
+## )-(27).
+
+A first check is the elastic case, α = 1, for which one obtains a = b = 1 which gives γ T = 1 and,
+since a/b = γ R /γ T , γ R = 1 i.e., the temperatures of translational and rotational degrees of
+freedom are the same and correspond to the bath temperature, a property of an equilibrium system.
+
+In the limit R → 0 and r → 0, for which c → 1 corresponding to a needle in a bath of point
+particles, one recovers the results of Ref [20]. More interesting is the limit R → 0 with r
+remaining finite, i.e., a needle in a bath of disks. By using Eq.(28) one obtains that c = L/(L +
+2r). Since c < 1, unlike the simple needle-point system, there is a contribution resulting from
+collisions between bath particles and the needle's tips. This type of collision is dominant when the
+bath particles are larger than the longest size of the anisotropic particle.
+
+To illustrate the effect of this contribution, Figures 2a and b compare the system of a needle in a
+bath of point particles and the system of a needle in a bath of disks, the radius of disks r are
+equal to L/4 in Fig 2a andr
+
+It is noticeable that the translational and rotational temperatures of the latter system are smaller
+than those of the needle in a bath of points, an effect that becomes more pronounced when the radius
+of the disks becomes larger than the length of the needle. The difference γ T -γ R are shown in the
+insets for the needle and the bath of points and for the needle and the bath of disks. Note that the
+translational temperature is always larger than the rotational temperature and that the difference
+depends very weakly on the size of the radius of the bath. Additionally, the difference increases
+when the restitution coefficient decreases from 1 (elastic case), reaches a maximum for a value of α
+∼ 0.3 and decreases slightly when the restitution coefficient still decreases.
+
+Figure 3 shows the influence of the anisotropy of the tracer particle. The rotational temperature is
+still lower than the translational temperature what ever the elongation of the particles, but the
+effect is greater when the elongation is large. The two upper curves correspond the translational
+(full curve) and rotational (dashed curve) temperature of the discorectangle when L = R, the two
+intermediate curve to granular temperatures when L = 3R, and the two lower curves for a
+discorectangle with L = 10R.
+
+When the anisotropy of the discorectangle approaches zero, i.e. L/R → 0, c → 0, one can show by
+using Eqs.( 23)-( 24) that
+
+which is the the result of Martin and Piasecki [2] for a spherical tracer particle in a bath of
+spherical particles. Moreover, the limit L/R → 0 leads equipartition between the rotational and
+translational granular temperatures, a result which is different from a model of pure spherical
+particles where, in the absence of tangential friction, the particles cannot exchange rotational
+energy. In physical systems, the particles are never completely spherical and our model shows that
+if an infinitesimal amount of anisotropy is present, the translational and rotational temperatures
+are equal in the steady state. Although our analysis provides no quantitative information about the
+relaxation time to reach this NESS, it is certain to be very long in this limit of small anisotropy.
+
+## C. Influence of mass ratio
+
+We consider a homogeneous discorectangle of mass M in a bath of disks each of mass m for which M =
+m. When m/M → 0 one obtains, from Eqs.( 23)-( 24), that
+
+i.e., equipartition between the degrees of freedom of the tracer particle, but not between the bath
+and the tracer particle. This is, moreover, the same result for a needle in a bath of point
+particles. We conjecture that this result is general in the sense that we expect equipartition
+between the different degrees of freedom of the tracer particle in a bath of light particles,
+whatever the shape of the tracer particle and the dimension of the system. The behavior for finite
+values of the ratio m/M is shown in Fig. 4. The granular temperatures decrease when the ratio m/M
+increases, and the translational temperature remains higher than the rotational temperature for each
+value of α.
+
+## V. NON UNIFORM RESTITUTION COEFFICIENT
+
+In practice it may be difficult to construct a discorectangle for which the restitution coefficient
+is constant over the entire perimeter. It is clear, for example, that if the 6: Ratio of the
+translational (full curve) γT and rotational γR (dashed curve) granular temperature to the
+temperature of the bath versus the normal restitution coefficient α2 with a normal restitution
+coefficient α1 = 0.5 for a homogeneous discorectangle with M = m, L = 2R and R = r. Note that
+equipartition is recovered for a non-trivial value of α2 object is composed of a homogeneous
+viscoelastic material, collisions with the ends will be characterized by a smaller restitution
+coefficient than collisions with the linear part. This effect becomes more pronounced as the
+elongation (L/R) increases. Other possibilities exist for a non-homogeneous discorectangle composed
+of two or more materials. For example, a hard material may be used to construct the caps. In
+addition, the restitution coefficient could depend on the relative velocity of the point of impact
+[22], an effect that one neglects here as a first approximation.
+
+As a first approach to describe this possibility, we consider in this section a discorectangle where
+the restitution coefficient is equal to α 1 for a collision along the rectilinear part of the object
+and equal to α 2 for one along the circular part: see Fig. 5. Using the procedure outlined above one
+obtains the following set of closed equations
+
+Figure 6 shows the ratio of translational and rotational temperature of a discorectangle with R = r
+and L = 2R to the temperature of the bath as a function of the normal restitution coefficient α 2
+with a fixed α 1 = 0.5. One notes that the translational temperature becomes smaller than the
+rotational temperature for α 2 > 0.765. When the two curves cross, equipartition is recovered, but
+unlike the limiting cases discussed above of a discorectangle with a uniform restitution coefficient
+(light bath particles, infinitely small anisotropy), for a non-trivial value of restitution
+coefficient α 2 and, moreover, for larger values of α 2 the ratio of temperatures is inverted. One
+can determine in general when equipartition is recovered for a discorectangle with two restitution
+coefficients. Using the relation a = b (assumption of equipartition) and Eqs.( 33)-(34), one obtains
+two implicit equations with the three parameters α 1 , α 2 and a. A simple numerical procedure
+allows us to obtain the α 2 as a function of α 1 .
+
+Figure 7 shows the equipartition lines in the (α 1 , α 2 ) space. Above each line, corresponding to
+a given elongation of the rectangle, T R > T T while the reverse inequality applies to the region
+below the line. It is noticeable that as the elongation increases, the region of the (α 1 , α 2 )
+space where T R > T T decreases.
+
+Figure 8 shows the role of the size of the bath particles on the existence of equipartition of a
+discorectangle of length L = 8R. For small bath particles, only a small range of α 1 , ( between 0
+and ∼ 0.3) with a smaller range of α 2 ( between ∼ 0.89 and 1) allows equipartition for the tracer
+particle. For larger bath disks, all values of α 1 (between 0 and 1) are available with a smaller
+corresponding range of α 2 .
+
+## VI. CONCLUSION
+
+We have investigated the influence of the anisotropy of a tracer particle in a bath of thermalized
+disks in two dimensions. By using a mean-field approach, we have obtained analytical results for the
+rotational and translational temperatures. For a homogeneous discorectangle with a uniform normal
+restitution coefficient, the translational temperature is always higher than the rotational
+temperature, with the difference depending on the elongation of the tracer particle, the size of the
+bath particles and the mass ratio. At present, the exact dependence of the restitution coefficient
+on the position of the point of impact is unknown. It seems likely, however, that it is not constant
+along the perimeter. As a first approximation, we considered an extension of the model where it
+takes on two values, one for collisions with the linear part and another for collisions with the
+caps. In this case the difference between the translational and rotational granular temperatures can
+be either positive or negative depending on the values of the restitution coefficients and the other
+parameters. It is clearly possible to generalize the calculation to allow for a continuously varying
+restitution coefficient.
+
+It would also be interesting to investigate a system of a tracer particle with a small anisotropy
+where the tangential restitution coefficient has a non-trivial value (-1 < α T < 1) where the limits
+correspond to a perfectly rough and a perfectly smooth surface, respectively. The intermediate
+situation corresponds to some friction which is important in some granular systems.
+
+By substituting the density as a function of the total mass of the discorectangle.
+
+Two well-known limits are recovered
+
+For an inhomogeneous discorectangle, the moment of inertia depends on the mass distribution.
+However, it is possible to determine the lower and upper bounds for allowable values. A trivial
+lower bound of zero is obtained when the mass is concentrated at the center. Conversely, when the
+mass is distributed equally at the two extremities of the object (point masses of M/2 at a distance
+of L + R from the center on each side), one obtains
+
+which gives the upper bound for the moment of inertia.
+
+Since Eq. (B5) depends only on χ.u ⊥ 1 and ν.u ⊥ 1 , one can freely integrate over the direction of
+u 1 for the vectors χ and ν, and similarly for Eq.(B6). The integration over θ 1 can be easily
+performed. If we introduce the three dimensional vectors G u ⊥ 1 and s u ⊥ 1 with components:
+
+Respectively, one has introduces G ur and s ur vectors associated with collisions on the circular
+parts of the discorectangle by changing u ⊥ 1 in u r and λ by L 2 sin θ. By inserting Eq. ( 19) in
+Eq. (B7), the average energy loss can be rewritten as which finally leads to Eq. ( 23). The equation
+for rotational energy is derived following exactly the same procedure.
+
+## APPENDIX C: INTEGRALS
+
+The coupled equations ( 23)-(24) depend on the eight integrals I 01 1 (a, k), I 03 2 (a, k), I 11 1
+(a, k), I 13 2 (a, k) [23], J 01 1 (a, k), J 03 2 (a, k), J 11 1 (a, k), J 13 2 (a, k) which can be
+expressed in terms of transcendental and special functions. For completeness, we give below their
+expressions.

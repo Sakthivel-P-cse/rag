@@ -1,0 +1,955 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Neural Machine Translation of Rare Words with Subword Units</title>
+				<funder ref="#_XtzSYkD">
+					<orgName type="full">European Union</orgName>
+				</funder>
+				<funder ref="#_8vMwpwF">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2016-06-10">10 Jun 2016</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rico</forename><surname>Sennrich</surname></persName>
+							<email>rico.sennrich@ed.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">University of Edinburgh</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Barry</forename><surname>Haddow</surname></persName>
+							<email>bhaddow@inf.ed.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">University of Edinburgh</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexandra</forename><surname>Birch</surname></persName>
+							<email>a.birch@ed.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">University of Edinburgh</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Neural Machine Translation of Rare Words with Subword Units</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2016-06-10">10 Jun 2016</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4FA87B60B903026DF17DE8D58C12A036</idno>
+					<idno type="arXiv">arXiv:1508.07909v5[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>Neural machine translation (NMT) models typically operate with a fixed vocabulary, but translation is an open-vocabulary problem. Previous work addresses the translation of out-of-vocabulary words by backing off to a dictionary. In this paper, we introduce a simpler and more effective approach, making the NMT model capable of open-vocabulary translation by encoding rare and unknown words as sequences of subword units. This is based on the intuition that various word classes are translatable via smaller units than words, for instance names (via character copying or transliteration), compounds (via compositional translation), and cognates and loanwords (via phonological and morphological transformations). We discuss the suitability of different word segmentation techniques, including simple character ngram models and a segmentation based on the byte pair encoding compression algorithm, and empirically show that subword models improve over a back-off dictionary baseline for the WMT 15 translation tasks English→German and English→Russian by up to 1.1 and 1.3 BLEU, respectively.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">Maja Popović</rs> for her implementation of CHRF, with which we verified our reimplementation. The research presented in this publication was conducted in cooperation with Samsung Electronics Polska sp. z o.o. -<rs type="institution">Samsung R&amp;D Institute Poland</rs>. This project received funding from the <rs type="funder">European Union</rs>'s <rs type="programName">Horizon 2020 research and innovation programme</rs> under grant agreement <rs type="grantNumber">645452</rs> (<rs type="grantNumber">QT21</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_XtzSYkD">
+					<idno type="grant-number">645452</idno>
+					<orgName type="program" subtype="full">Horizon 2020 research and innovation programme</orgName>
+				</org>
+				<org type="funding" xml:id="_8vMwpwF">
+					<idno type="grant-number">QT21</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Neural Machine Translation by Jointly Learning to Align and Translate</title>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Learning Representations (ICLR)</title>
+		<meeting>the International Conference on Learning Representations (ICLR)</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Modeling outof-vocabulary words for robust speech recognition</title>
+		<author>
+			<persName><forename type="first">Issam</forename><surname>Bazzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">R</forename><surname>Glass</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Sixth International Conference on Spoken Language Processing</title>
+		<meeting><address><addrLine>Beijing, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2000">2000. 2000 / INTERSPEECH 2000</date>
+			<biblScope unit="page" from="401" to="404" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Compositional Morphology for Word Representations and Language Modelling</title>
+		<author>
+			<persName><forename type="first">Jan</forename><forename type="middle">A</forename><surname>Botha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 31st International Conference on Machine Learning (ICML)</title>
+		<meeting>the 31st International Conference on Machine Learning (ICML)<address><addrLine>Beijing, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Variable-Length Word Encodings for Neural Translation Models</title>
+		<author>
+			<persName><forename type="first">Rohan</forename><surname>Chitnis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Denero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation</title>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bart</forename><surname>Van Merrienboer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caglar</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fethi</forename><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Holger</forename><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)<address><addrLine>Doha, Qatar</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1724" to="1734" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Unsupervised Discovery of Morphemes</title>
+		<author>
+			<persName><forename type="first">Mathias</forename><surname>Creutz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krista</forename><surname>Lagus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ACL-02 Workshop on Morphological and Phonological Learning</title>
+		<meeting>the ACL-02 Workshop on Morphological and Phonological Learning</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="21" to="30" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Integrating an Unsupervised Transliteration Model into Statistical Machine Translation</title>
+		<author>
+			<persName><forename type="first">Nadir</forename><surname>Durrani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hassan</forename><surname>Sajjad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hieu</forename><surname>Hoang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 14th Conference of the European Chapter</title>
+		<meeting>the 14th Conference of the European Chapter<address><addrLine>Gothenburg, Sweden</addrLine></address></meeting>
+		<imprint>
+			<publisher>the Association for Computational Linguistics</publisher>
+			<date type="published" when="2014">2014. 2014</date>
+			<biblScope unit="page" from="148" to="153" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">A Simple, Fast, and Effective Reparameterization of IBM Model 2</title>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Victor</forename><surname>Chahuneau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>Georgia</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="644" to="648" />
+		</imprint>
+	</monogr>
+	<note>Atlanta. Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">A New Algorithm for Data Compression</title>
+		<author>
+			<persName><forename type="first">Philip</forename><surname>Gage</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">C Users J</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="23" to="38" />
+			<date type="published" when="1994-02">1994. February</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The Edinburgh/JHU Phrase-based Machine Translation Systems for WMT 2015</title>
+		<author>
+			<persName><forename type="first">Barry</forename><surname>Haddow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Huck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Birch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Tenth Workshop on Statistical Machine Translation</title>
+		<meeting>the Tenth Workshop on Statistical Machine Translation<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="126" to="133" />
+		</imprint>
+	</monogr>
+	<note>Nikolay Bogoychev, and Philipp Koehn</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">On Using Very Large Target Vocabulary for Neural Machine Translation</title>
+		<author>
+			<persName><forename type="first">Sébastien</forename><surname>Jean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roland</forename><surname>Memisevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing<address><addrLine>Beijing, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+		</imprint>
+	</monogr>
+	<note>Long Papers). Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Recurrent Continuous Translation Models</title>
+		<author>
+			<persName><forename type="first">Nal</forename><surname>Kalchbrenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2013 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Seattle</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Empirical Methods for Compound Splitting</title>
+		<author>
+			<persName><forename type="first">Yoon</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yacine</forename><surname>Jernite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sontag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">M</forename><surname>Rush</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EACL '03: Proceedings of the Tenth Conference on European Chapter of the Association for Computational Linguistics</title>
+		<meeting><address><addrLine>Budapest, Hungary</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2003">2015. 2003</date>
+			<biblScope unit="page" from="187" to="193" />
+		</imprint>
+	</monogr>
+	<note>Character-Aware Neural Language Models. CoRR, abs/1508.06615. Philipp Koehn and Kevin Knight</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Moses: Open Source Toolkit for Statistical Machine Translation</title>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hieu</forename><surname>Hoang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Birch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Callison-Burch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marcello</forename><surname>Federico</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicola</forename><surname>Bertoldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brooke</forename><surname>Cowan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wade</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christine</forename><surname>Moran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Zens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ondřej</forename><surname>Bojar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Constantin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evan</forename><surname>Herbst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ACL-2007 Demo and Poster Sessions</title>
+		<meeting>the ACL-2007 Demo and Poster Sessions<address><addrLine>Prague, Czech Republic</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="177" to="180" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Word hy-phen-a-tion by com-put-er</title>
+		<author>
+			<persName><forename type="first">Franklin</forename><forename type="middle">M</forename><surname>Liang</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1983">1983</date>
+			<publisher>Department of Linguistics</publisher>
+			<pubPlace>Stanford, CA</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Stanford University</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Ph.D. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Finding Function in Form: Compositional Character Models for Open Vocabulary Word Representation</title>
+		<author>
+			<persName><forename type="first">Wang</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><forename type="middle">W</forename><surname>Black</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isabel</forename><surname>Trancoso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ramon</forename><surname>Fermandez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silvio</forename><surname>Amir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luis</forename><surname>Marujo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiago</forename><surname>Luis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1520" to="1530" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">Wang</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isabel</forename><surname>Trancoso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><forename type="middle">W</forename><surname>Black</surname></persName>
+		</author>
+		<title level="m">Character-based Neural Machine Translation</title>
+		<imprint>
+			<date type="published" when="2015-11">2015. November</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Better Word Representations with Recursive Neural Networks for Morphology</title>
+		<author>
+			<persName><forename type="first">Thang</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Seventeenth Conference on Computational Natural Language Learning</title>
+		<meeting>the Seventeenth Conference on Computational Natural Language Learning<address><addrLine>Sofia, Bulgaria</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2013-08-08">2013. 2013. August 8-9, 2013</date>
+			<biblScope unit="page" from="104" to="113" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Manning. 2015a. Effective Approaches to Attentionbased Neural Machine Translation</title>
+		<author>
+			<persName><forename type="first">Thang</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hieu</forename><surname>Pham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<biblScope unit="page" from="1412" to="1421" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Addressing the Rare Word Problem in Neural Machine Translation</title>
+		<author>
+			<persName><forename type="first">Thang</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quoc</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wojciech</forename><surname>Zaremba</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing<address><addrLine>Beijing, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="11" to="19" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anoop</forename><surname>Deoras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hai-Son</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Kombrink</surname></persName>
+		</author>
+		<title level="m">Subword Language Modeling with Neural Networks</title>
+		<imprint>
+			<date type="published" when="2012-01">Jan Cernocký. 2012</date>
+		</imprint>
+	</monogr>
+	<note>Unpublished</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Machine Translation without Words through Substring Alignment</title>
+		<author>
+			<persName><forename type="first">Graham</forename><surname>Neubig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Taro</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shinsuke</forename><surname>Mori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatsuya</forename><surname>Kawahara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The 50th Annual Meeting of the Association for Computational Linguistics, Proceedings of the Conference</title>
+		<meeting><address><addrLine>Jeju Island</addrLine></address></meeting>
+		<imprint>
+			<publisher>Long Papers</publisher>
+			<date type="published" when="2012-07-08">2012. July 8-14, 2012</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="165" to="174" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Improving SMT quality with morpho-syntactic analysis</title>
+		<author>
+			<persName><forename type="first">Sonja</forename><surname>Nießen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hermann</forename><surname>Ney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">18th Int. Conf. on Computational Linguistics</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="page" from="1081" to="1085" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">On the difficulty of training recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 30th International Conference on Machine Learning, ICML 2013</title>
+		<meeting>the 30th International Conference on Machine Learning, ICML 2013<address><addrLine>Atlanta, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="1310" to="1318" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">chrF: character n-gram F-score for automatic MT evaluation</title>
+		<author>
+			<persName><forename type="first">Maja</forename><surname>Popović</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Tenth Workshop on Statistical Machine Translation</title>
+		<meeting>the Tenth Workshop on Statistical Machine Translation<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="392" to="395" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">A Joint Dependency Model of Morphological and Syntactic Structure for Statistical Machine Translation</title>
+		<author>
+			<persName><forename type="first">Rico</forename><surname>Sennrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Barry</forename><surname>Haddow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="2081" to="2087" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Unsupervised Multilingual Learning for Morphological Segmentation</title>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Snyder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Regina</forename><surname>Barzilay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ACL-08: HLT</title>
+		<meeting>ACL-08: HLT<address><addrLine>Columbus, Ohio</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="737" to="745" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Unsupervised Morphology Rivals Supervised Morphology for Arabic MT</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Stallard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Kayser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoong</forename><surname>Keok Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Regina</forename><surname>Barzilay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The 50th Annual Meeting of the Association for Computational Linguistics, Proceedings of the Conference</title>
+		<meeting><address><addrLine>Jeju Island</addrLine></address></meeting>
+		<imprint>
+			<publisher>Short Papers</publisher>
+			<date type="published" when="2012-07-08">2012. July 8-14, 2012</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="322" to="327" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Results of the WMT15 Metrics Shared Task</title>
+		<author>
+			<persName><forename type="first">Miloš</forename><surname>Stanojević</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amir</forename><surname>Kamran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ondřej</forename><surname>Bojar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Tenth Workshop on Statistical Machine Translation</title>
+		<meeting>the Tenth Workshop on Statistical Machine Translation<address><addrLine>Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="256" to="273" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Sequence to Sequence Learning with Neural Networks</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Le</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 27: Annual Conference on Neural Information Processing Systems</title>
+		<meeting><address><addrLine>Montreal, Quebec, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014. 2014</date>
+			<biblScope unit="page" from="3104" to="3112" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Character-based PSMT for Closely Related Languages</title>
+		<author>
+			<persName><forename type="first">Jörg</forename><surname>Tiedemann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 13th Annual Conference of the European Association for Machine Translation (EAMT'09)</title>
+		<meeting>13th Annual Conference of the European Association for Machine Translation (EAMT'09)</meeting>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="12" to="19" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Character-Based Pivot Translation for Under-Resourced Languages and Domains</title>
+		<author>
+			<persName><forename type="first">Jörg</forename><surname>Tiedemann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics</title>
+		<meeting>the 13th Conference of the European Chapter of the Association for Computational Linguistics<address><addrLine>Avignon, France</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="141" to="151" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Can We Translate Letters?</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Vilar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan-Thorsten</forename><surname>Peter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hermann</forename><surname>Ney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Second Workshop on Statistical Machine Translation</title>
+		<meeting><address><addrLine>Prague, Czech Republic</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="33" to="39" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Morphology-Aware Statistical Machine Translation Based on Morphs Induced in an Unsupervised Manner</title>
+		<author>
+			<persName><forename type="first">Sami</forename><surname>Virpioja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jaakko</forename><forename type="middle">J</forename><surname>Väyrynen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mathias</forename><surname>Creutz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Markus</forename><surname>Sadeniemi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Machine Translation Summit XI</title>
+		<meeting>the Machine Translation Summit XI<address><addrLine>Copenhagen, Denmark</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="491" to="498" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">ADADELTA: An Adaptive Learning Rate Method</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Matthew</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zeiler</surname></persName>
+		</author>
+		<idno>CoRR, abs/1212.5701</idno>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

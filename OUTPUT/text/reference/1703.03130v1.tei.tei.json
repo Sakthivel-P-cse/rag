@@ -1,0 +1,1022 @@
+{
+  "paper_id": "4D7C51EFB22A7D038A60CF9B8EF49EFE",
+  "title": "A STRUCTURED SELF-ATTENTIVE SENTENCE EMBEDDING",
+  "arxiv_id": "arXiv:1703.03130v1[cs.CL]",
+  "authors": [
+    {
+      "given": "Zhouhan",
+      "family": "Lin"
+    },
+    {
+      "given": "Minwei",
+      "family": "Feng"
+    },
+    {
+      "given": "Cicero",
+      "family": "Nogueira"
+    },
+    {
+      "given": "Mo",
+      "family": "Santos"
+    },
+    {
+      "given": "Bing",
+      "family": "Yu"
+    },
+    {
+      "given": "Bowen",
+      "family": "Xiang"
+    },
+    {
+      "given": "Yoshua",
+      "family": "Zhou"
+    },
+    {
+      "given": null,
+      "family": "Bengio"
+    },
+    {
+      "given": "Ibm",
+      "family": "Watson"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Réjean",
+          "family": "Ducharme"
+        },
+        {
+          "given": "Pascal",
+          "family": "Vincent"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "A large annotated corpus for learning natural language inference",
+      "container_title": "A large annotated corpus for learning natural language inference",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1508.05326"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Gabor",
+          "family": "Samuel R Bowman"
+        },
+        {
+          "given": "Christopher",
+          "family": "Angeli"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Potts"
+        },
+        {
+          "given": null,
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "A fast unified model for parsing and sentence understanding",
+      "container_title": "A fast unified model for parsing and sentence understanding",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.06021"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Jon",
+          "family": "Samuel R Bowman"
+        },
+        {
+          "given": "Abhinav",
+          "family": "Gauthier"
+        },
+        {
+          "given": "Raghav",
+          "family": "Rastogi"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Gupta"
+        },
+        {
+          "given": "Christopher",
+          "family": "Manning"
+        },
+        {
+          "given": null,
+          "family": "Potts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jianpeng",
+          "family": "Cheng"
+        },
+        {
+          "given": "Li",
+          "family": "Dong"
+        },
+        {
+          "given": "Mirella",
+          "family": "Lapata"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Empirical evaluation of gated recurrent neural networks on sequence modeling",
+      "container_title": "Empirical evaluation of gated recurrent neural networks on sequence modeling",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.3555"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Junyoung",
+          "family": "Chung"
+        },
+        {
+          "given": "Caglar",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers",
+      "container_title": "Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Santos",
+          "family": "Cicero"
+        },
+        {
+          "given": "Maira",
+          "family": "Gatti"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Attentive pooling networks",
+      "container_title": "Attentive pooling networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1602.03609"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ming",
+          "family": "Cicero Dos Santos"
+        },
+        {
+          "given": "Bing",
+          "family": "Tan"
+        },
+        {
+          "given": "Bowen",
+          "family": "Xiang"
+        },
+        {
+          "given": null,
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "2015 IEEE Workshop on Automatic Speech Recognition and Understanding",
+      "container_title": "2015 IEEE Workshop on Automatic Speech Recognition and Understanding",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Minwei",
+          "family": "Feng"
+        },
+        {
+          "given": "Bing",
+          "family": "Xiang"
+        },
+        {
+          "given": "Michael R",
+          "family": "Glass"
+        },
+        {
+          "given": "Lidan",
+          "family": "Wang"
+        },
+        {
+          "given": "Bowen",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+      "container_title": "Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Felix",
+          "family": "Hill"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Anna",
+          "family": "Korhonen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "A convolutional neural network for modelling sentences",
+      "container_title": "A convolutional neural network for modelling sentences",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1404.2188"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "Edward",
+          "family": "Grefenstette"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Convolutional neural networks for sentence classification",
+      "container_title": "Convolutional neural networks for sentence classification",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1408.5882"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yoon",
+          "family": "Kim"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ryan",
+          "family": "Kiros"
+        },
+        {
+          "given": "Yukun",
+          "family": "Zhu"
+        },
+        {
+          "given": "R",
+          "family": "Ruslan"
+        },
+        {
+          "given": "Richard",
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": "Raquel",
+          "family": "Zemel"
+        },
+        {
+          "given": "Antonio",
+          "family": "Urtasun"
+        },
+        {
+          "given": "Sanja",
+          "family": "Torralba"
+        },
+        {
+          "given": null,
+          "family": "Fidler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": "Tomas",
+          "family": "Le"
+        },
+        {
+          "given": null,
+          "family": "Mikolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Sequential short-text classification with recurrent and convolutional neural networks",
+      "container_title": "Sequential short-text classification with recurrent and convolutional neural networks",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.03827"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ji",
+          "family": "Young"
+        },
+        {
+          "given": "Lee",
+          "family": null
+        },
+        {
+          "given": "Franck",
+          "family": "Dernoncourt"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Dataset and neural recurrent sequence labeling model for open-domain factoid question answering",
+      "container_title": "Dataset and neural recurrent sequence labeling model for open-domain factoid question answering",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1607.06275"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Peng",
+          "family": "Li"
+        },
+        {
+          "given": "Wei",
+          "family": "Li"
+        },
+        {
+          "given": "Zhengyan",
+          "family": "He"
+        },
+        {
+          "given": "Xuguang",
+          "family": "Wang"
+        },
+        {
+          "given": "Ying",
+          "family": "Cao"
+        },
+        {
+          "given": "Jie",
+          "family": "Zhou"
+        },
+        {
+          "given": "Wei",
+          "family": "Xu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Wang",
+          "family": "Ling"
+        },
+        {
+          "given": "Lin",
+          "family": "Chu-Cheng"
+        },
+        {
+          "given": "Yulia",
+          "family": "Tsvetkov"
+        },
+        {
+          "given": "Silvio",
+          "family": "Amir"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Learning natural language inference using bidirectional LSTM model and inner-attention",
+      "container_title": "Learning natural language inference using bidirectional LSTM model and inner-attention",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1605.09090"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yang",
+          "family": "Liu"
+        },
+        {
+          "given": "Chengjie",
+          "family": "Sun"
+        },
+        {
+          "given": "Lei",
+          "family": "Lin"
+        },
+        {
+          "given": "Xiaolong",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Learning natural language inference using bidirectional lstm model and inner-attention",
+      "container_title": "Learning natural language inference using bidirectional lstm model and inner-attention",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1605.09090"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yang",
+          "family": "Liu"
+        },
+        {
+          "given": "Chengjie",
+          "family": "Sun"
+        },
+        {
+          "given": "Lei",
+          "family": "Lin"
+        },
+        {
+          "given": "Xiaolong",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+      "container_title": "Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mingbo",
+          "family": "Ma"
+        },
+        {
+          "given": "Liang",
+          "family": "Huang"
+        },
+        {
+          "given": "Bing",
+          "family": "Xiang"
+        },
+        {
+          "given": "Bowen",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Horia",
+          "family": "Margarit"
+        },
+        {
+          "given": "Raghav",
+          "family": "Subramaniam"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "IEEE transactions on pattern analysis and machine intelligence",
+      "container_title": "IEEE transactions on pattern analysis and machine intelligence",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Roland",
+          "family": "Memisevic"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Efficient estimation of word representations in vector space",
+      "container_title": "Efficient estimation of word representations in vector space",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1301.3781"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Kai",
+          "family": "Chen"
+        },
+        {
+          "given": "Greg",
+          "family": "Corrado"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Natural language inference by tree-based convolution and heuristic matching",
+      "container_title": "Natural language inference by tree-based convolution and heuristic matching",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1512.08422"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Lili",
+          "family": "Mou"
+        },
+        {
+          "given": "Rui",
+          "family": "Men"
+        },
+        {
+          "given": "Ge",
+          "family": "Li"
+        },
+        {
+          "given": "Yan",
+          "family": "Xu"
+        },
+        {
+          "given": "Lu",
+          "family": "Zhang"
+        },
+        {
+          "given": "Rui",
+          "family": "Yan"
+        },
+        {
+          "given": "Zhi",
+          "family": "Jin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Lili",
+          "family": "Mou"
+        },
+        {
+          "given": "Hao",
+          "family": "Peng"
+        },
+        {
+          "given": "Ge",
+          "family": "Li"
+        },
+        {
+          "given": "Yan",
+          "family": "Xu"
+        },
+        {
+          "given": "Lu",
+          "family": "Zhang"
+        },
+        {
+          "given": "Zhi",
+          "family": "Jin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Neural tree indexers for text understanding",
+      "container_title": "Neural tree indexers for text understanding",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1607.04492"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tsendsuren",
+          "family": "Munkhdalai"
+        },
+        {
+          "given": "Hong",
+          "family": "Yu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Neural semantic encoders",
+      "container_title": "Neural semantic encoders",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1607.04315"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Tsendsuren",
+          "family": "Munkhdalai"
+        },
+        {
+          "given": "Hong",
+          "family": "Yu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+      "container_title": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Hamid",
+          "family": "Palangi"
+        },
+        {
+          "given": "Li",
+          "family": "Deng"
+        },
+        {
+          "given": "Yelong",
+          "family": "Shen"
+        },
+        {
+          "given": "Jianfeng",
+          "family": "Gao"
+        },
+        {
+          "given": "Xiaodong",
+          "family": "He"
+        },
+        {
+          "given": "Jianshu",
+          "family": "Chen"
+        },
+        {
+          "given": "Xinying",
+          "family": "Song"
+        },
+        {
+          "given": "Rabab",
+          "family": "Ward"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Proceedings of EMNLP",
+      "container_title": "Proceedings of EMNLP",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Ankur"
+        },
+        {
+          "given": "Oscar",
+          "family": "Parikh"
+        },
+        {
+          "given": "Dipanjan",
+          "family": "Tackstrom"
+        },
+        {
+          "given": "Jakob",
+          "family": "Das"
+        },
+        {
+          "given": null,
+          "family": "Uszkoreit"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jeffrey",
+          "family": "Pennington"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Pennington"
+        },
+        {
+          "given": "Eric H",
+          "family": "Huang"
+        },
+        {
+          "given": "Andrew Y",
+          "family": "Ng"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Proceedings of the conference on empirical methods in natural language processing",
+      "container_title": "Proceedings of the conference on empirical methods in natural language processing",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Alex",
+          "family": "Perelygin"
+        },
+        {
+          "given": "Jean Y",
+          "family": "Wu"
+        },
+        {
+          "given": "Jason",
+          "family": "Chuang"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        },
+        {
+          "given": "Andrew Y",
+          "family": "Ng"
+        },
+        {
+          "given": "Christopher",
+          "family": "Potts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Proceedings of ACL",
+      "container_title": "Proceedings of ACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kai",
+          "family": "Sheng"
+        },
+        {
+          "given": "Tai",
+          "family": null
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Proceedings of ACL",
+      "container_title": "Proceedings of ACL",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ming",
+          "family": "Tan"
+        },
+        {
+          "given": "Bing",
+          "family": "Cicero Dos Santos"
+        },
+        {
+          "given": "Bowen",
+          "family": "Xiang"
+        },
+        {
+          "given": null,
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Theano: A {Python} framework for fast computation of mathematical expressions",
+      "container_title": "Theano: A {Python} framework for fast computation of mathematical expressions",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "abs/1605.0"
+        }
+      ],
+      "authors": []
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Sanja Fidler, and Raquel Urtasun. Order-embeddings of images and language",
+      "container_title": "Sanja Fidler, and Raquel Urtasun. Order-embeddings of images and language",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.06361"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ivan",
+          "family": "Vendrov"
+        },
+        {
+          "given": "Ryan",
+          "family": "Kiros"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Proceedings of the 2015 Conference of the North American Chapter",
+      "container_title": "Proceedings of the 2015 Conference of the North American Chapter",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Wenpeng",
+          "family": "Yin"
+        },
+        {
+          "given": "Hinrich",
+          "family": "Schütze"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

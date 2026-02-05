@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Generating Sequences With Recurrent Neural Networks</title>
+				<funder ref="#_fmVbVaE">
+					<orgName type="full">Canadian Institute for Advanced Research</orgName>
+				</funder>
+				<funder ref="#_xu6K5pQ">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2014-06-05">5 Jun 2014</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Alex</forename><surname>Graves</surname></persName>
+							<email>graves@cs.toronto.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Generating Sequences With Recurrent Neural Networks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2014-06-05">5 Jun 2014</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">373A6E78EA17118C4603A7E0330BAD33</idno>
+					<idno type="arXiv">arXiv:1308.0850v5[cs.NE]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>This paper shows how Long Short-term Memory recurrent neural networks can be used to generate complex sequences with long-range structure, simply by predicting one data point at a time. The approach is demonstrated for text (where the data are discrete) and online handwriting (where the data are real-valued). It is then extended to handwriting synthesis by allowing the network to condition its predictions on a text sequence. The resulting system is able to generate highly realistic cursive handwriting in a wide variety of styles.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>Thanks to <rs type="person">Yichuan Tang</rs>, <rs type="person">Ilya Sutskever</rs>, <rs type="person">Navdeep Jaitly</rs>, <rs type="person">Geoffrey Hinton</rs> and other colleagues at the <rs type="affiliation">University of Toronto</rs> for numerous useful comments and suggestions. This work was supported by a <rs type="grantName">Global Scholarship</rs> from the <rs type="funder">Canadian Institute for Advanced Research</rs>.</p></div>
+			</div>
+			<div type="funding">
+<div><p>[[<rs type="projectName">British-London Bridge]] *[[Anti-Talmot Touch/Tucker novice]] *[[List of cambridge capital]] *[[Elon Haven]] *[[USS ''Otaro Screamed Its'']] *[[Detroit Library]] *[[Belgium Sea]] *[[Tularan Bell|Turnbiller Squobil]] *[[Suntanal vocalist|Prosopyo]] *[[Winkenpea]] *[[Milenton Streat]] *[[Raiebin]] *[[Est Altar Macinton]] *[[Military mass missile|S3]] *[[Organization of the Asian American state district|umbali landmarks]] *[[ISO]] *[[NFL]] *[[American Anti-Capitalism|Major independent ITU-US singles]] *[[London (role-playing game)|Pre-Romanian Civil War]] *[[Yokukhav-Na-Un-Murantano Kaufmann -Sijone-Grafittsforbiel]] *[[Neao trolleyne and deadweight drug</rs>]] *[[B-45 BQ|B9]] -de red take painting is deployed larger than quanta submarine *[[Susconfiction of advocate]] *[[List of major swandarms]] *[[:Category:Italo sales towns entertained by the ICBMs of Skinner|Knighting 707 killed by capital]]</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_fmVbVaE">
+					<orgName type="grant-name">Global Scholarship</orgName>
+				</org>
+				<org type="funded-project" xml:id="_xu6K5pQ">
+					<orgName type="project" subtype="full">British-London Bridge]] *[[Anti-Talmot Touch/Tucker novice]] *[[List of cambridge capital]] *[[Elon Haven]] *[[USS ''Otaro Screamed Its'']] *[[Detroit Library]] *[[Belgium Sea]] *[[Tularan Bell|Turnbiller Squobil]] *[[Suntanal vocalist|Prosopyo]] *[[Winkenpea]] *[[Milenton Streat]] *[[Raiebin]] *[[Est Altar Macinton]] *[[Military mass missile|S3]] *[[Organization of the Asian American state district|umbali landmarks]] *[[ISO]] *[[NFL]] *[[American Anti-Capitalism|Major independent ITU-US singles]] *[[London (role-playing game)|Pre-Romanian Civil War]] *[[Yokukhav-Na-Un-Murantano Kaufmann -Sijone-Grafittsforbiel]] *[[Neao trolleyne and deadweight drug</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">nuanced annotations than just text, for example stylistic features, different forms of the same letter</title>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Learning long-term dependencies with gradient descent is difficult</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Simard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Frasconi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="157" to="166" />
+			<date type="published" when="1994-03">March 1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Mixture density networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bishop</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bishop</surname></persName>
+		</author>
+		<title level="m">Neural Networks for Pattern Recognition</title>
+		<imprint>
+			<publisher>Oxford University Press, Inc</publisher>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Modeling temporal dependencies in high-dimensional sequences: Application to polyphonic music generation and transcription</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Boulanger-Lewandowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vincent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-nine International Conference on Machine Learning (ICML'12)</title>
+		<meeting>the Twenty-nine International Conference on Machine Learning (ICML'12)</meeting>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Data compression using adaptive coding and partial string matching</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Cleary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Witten</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Communications</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="396" to="402" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">A first look at music composition using lstm recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Eck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+		<imprint />
+		<respStmt>
+			<orgName>IDSIA USI-SUPSI Instituto Dalle Molle</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Learning precise timing with LSTM recurrent networks</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Schraudolph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="115" to="143" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Practical variational inference for neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="2348" to="2356" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Sequence transduction with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML Representation Learning Worksop</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Speech recognition with deep recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICASSP</title>
+		<meeting>ICASSP</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Framewise phoneme classification with bidirectional LSTM and other neural network architectures</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="602" to="610" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Offline handwriting recognition with multidimensional recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">21</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">The Minimum Description Length Principle (Adaptive Computation and Machine Learning)</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Grünwald</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>The MIT Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">A Practical Guide to Training Restricted Boltzmann Machines</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Gradient Flow in Recurrent Nets: the Difficulty of Learning Long-term Dependencies</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Frasconi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">A Field Guide to Dynamical Recurrent Neural Networks</title>
+		<editor>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Kremer</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Kolen</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Long Short-Term Memory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">The Human Knowledge Compression Contest</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hutter</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">An analysis of noise in recurrent neural networks: convergence and generalization</title>
+		<author>
+			<persName><forename type="first">K.-C</forename><surname>Jim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Giles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Horne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1424" to="1438" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>Neural Networks</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">The tagged LOB corpus user's manual; Norwegian Computing Centre for the Humanities</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Johansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Atwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Garside</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Leech</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">A machine learning perspective on predictive coding with paq</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Knoll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>De Freitas</surname></persName>
+		</author>
+		<idno>CoRR, abs/1108.3298</idno>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">IAM-OnDB -an on-line English sentence database acquired from handwritten text on a whiteboard</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liwicki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bunke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 8th Int. Conf. on Document Analysis and Recognition</title>
+		<meeting>8th Int. Conf. on Document Analysis and Recognition</meeting>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="956" to="961" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Building a large annotated corpus of english: The penn treebank</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Marcus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Santorini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Marcinkiewicz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">COMPUTATIONAL LINGUISTICS</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="313" to="330" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Statistical Language Models based on Neural Networks</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mikolov</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+		<respStmt>
+			<orgName>Brno University of Technology</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">PhD thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Subword language modeling with neural networks</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Deoras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kombrink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cernocky</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Unpublished Manuscript</publisher>
+		</imprint>
+	</monogr>
+	<note type="report_type">Technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">A Scalable Hierarchical Distributed Language Model</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mnih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">21</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A fast and simple algorithm for training neural probabilistic language models</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mnih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">W</forename><surname>Teh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 29th International Conference on Machine Learning</title>
+		<meeting>the 29th International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="1751" to="1758" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Lowrank matrix factorization for deep neural network training with highdimensional output targets</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Sainath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kingsbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ramabhadran</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ICASSP</title>
+		<meeting>ICASSP</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Better generative models for sequential data problems: Bidirectional recurrent mixture density networks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schuster</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<publisher>The MIT Press</publisher>
+			<biblScope unit="page" from="589" to="595" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">The recurrent temporal restricted boltzmann machine</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Taylor</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="1601" to="1608" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Generating text with recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Factored conditional restricted boltzmann machines for modeling motion style</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 26th Annual International Conference on Machine Learning</title>
+		<meeting>26th Annual International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="1025" to="1032" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Lecture 6.5 -rmsprop: Divide the gradient by a running average of its recent magnitude</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tieleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Gradient-based learning algorithms for recurrent networks and their computational complexity</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zipser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Back-propagation: Theory, Architectures and Applications</title>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="page" from="433" to="486" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

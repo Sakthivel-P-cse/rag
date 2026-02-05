@@ -1,0 +1,112 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_140526_264497.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): I have a graph with very few labeled nodes. My model overfits badly when labels are scarce. I want to exploit structure better, but I don’t want to add more labels.
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251222_140532_180001.json
+[retrieve] Query (first 200 chars): How can graph neural networks effectively utilize graph structure to improve performance on node classification tasks with limited labeled nodes, without relying on additional labeling?  Search hints:
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_140526_264497.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=3
+[judge] refined_question: How can graph neural networks effectively utilize graph structure to improve performance on node classification tasks with limited labeled nodes, without relying on additional labeling?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): How can graph neural networks effectively utilize graph structure to improve performance on node classification tasks with limited labeled nodes, without relying on additional labeling?  Search hints:
+[judge] search_hint: graph neural networks, semi-supervised learning, SSL, graph structure, node classification, limited labels, overfitting mitigation, graph attention, graph convolutional networks, GCNs, graph autoencoders, GAEs, unsupervised graph learning
+[retrieve] Query (first 200 chars): How can graph neural networks effectively utilize graph structure to improve performance on node classification tasks with limited labeled nodes, without relying on additional labeling?  Search hints:
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1609.02907v4.tei.tei chunk_id=1609.02907v4.tei.tei_chunk-2 retr_score=0.6850 section=INTRODUCTION :: In this work, we encode the graph structure directly using a neural network model f (X, A) and train on a supervised target L 0 for all nodes with labels, there...
+[judge] cand#2: paper_id=1609.02907v4.tei.tei chunk_id=1609.02907v4.tei.tei_chunk-1 retr_score=0.6539 section=None :: **Published:** 22 Feb 2017  We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient variant of convol...
+[judge] cand#3: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-13 retr_score=0.6490 section=Background :: The works cited above are by no means an exhaustive list, but provide a representative crosssection of the breadth of domains for which graph neural networks ha...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["utilizing graph structure to improve performance on node classification tasks with limited labeled nodes"],   "next_question": "How can graph neural networks effectively leverage graph structure to enhance node classification performance with scarce labels?",   "accept": [     {"chunk_id": "1609.02907v4.tei.tei_chunk-2", "paper_id": "1609.02907v4.tei.tei", "rationale": "provides a method for utilizing graph structure in neural networks for node classification"},     {"chunk_id": "1609.02907v4.tei.tei_chunk-1", "paper_id": "160
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251222_140805_474756.json
+[judge] satisfied=False
+[judge] Accepted this iter: 2 | Rejected this iter: 1 | Total accepted: 2 | Total rejected: 1
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): How can graph neural networks effectively leverage graph structure to enhance node classification performance with scarce labels?  Search hints: graph neural networks, semi-supervised learning, graph 
+[judge] search_hint: graph neural networks, semi-supervised learning, graph structure, node classification, limited labels, overfitting mitigation, graph attention, graph convolutional networks, GCNs, graph autoencoders, GAEs, unsupervised graph learning, scalable approaches
+[retrieve] Query (first 200 chars): How can graph neural networks effectively leverage graph structure to enhance node classification performance with scarce labels?  Search hints: graph neural networks, semi-supervised learning, graph 
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1809.10341v2.tei.tei chunk_id=1809.10341v2.tei.tei_chunk-1 retr_score=0.7059 section=None :: **Published:** 21 Dec 2018  We present Deep Graph Infomax (DGI), a general approach for learning node representations within graph-structured data in an unsuper...
+[judge] cand#2: paper_id=1809.10341v2.tei.tei chunk_id=1809.10341v2.tei.tei_chunk-14 retr_score=0.6542 section=RESULTS :: Our results demonstrate strong performance being achieved across all five datasets. We particularly note that the DGI approach is competitive with the results r...
+[judge] cand#3: paper_id=1809.10341v2.tei.tei chunk_id=1809.10341v2.tei.tei_chunk-5 retr_score=0.6292 section=GRAPH-BASED UNSUPERVISED LEARNING :: Our objective is to learn an encoder, E :  for each node i. These representations may then be retrieved and used for downstream tasks, such as node classificati...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["effective methods to leverage graph structure for node classification with scarce labels"],   "next_question": "How can graph neural networks effectively utilize graph structure to improve node classification performance with limited labeled nodes?",   "accept": [     {"chunk_id": "1809.10341v2.tei.tei_chunk-1", "paper_id": "1809.10341v2.tei.tei", "rationale": "provides information on Deep Graph Infomax (DGI) for unsupervised learning on graph-structured data"},     {"chunk_id": "1809.10341v2.tei.tei_chunk-5", "paper_id": 
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251222_140832_793598.json
+[judge] satisfied=False
+[judge] Accepted this iter: 2 | Rejected this iter: 1 | Total accepted: 4 | Total rejected: 2
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): How can graph neural networks effectively utilize graph structure to improve node classification performance with limited labeled nodes?  Search hints: graph neural networks, semi-supervised learning,
+[judge] search_hint: graph neural networks, semi-supervised learning, graph structure, node classification, limited labels, overfitting mitigation, graph attention, graph convolutional networks, GCNs, graph autoencoders, GAEs, unsupervised graph learning, scalable approaches, Deep Graph Infomax, DGI
+[retrieve] Query (first 200 chars): How can graph neural networks effectively utilize graph structure to improve node classification performance with limited labeled nodes?  Search hints: graph neural networks, semi-supervised learning,
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 2 chunks
+[judge] Retrieved 2 candidate chunks
+[judge] cand#1: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-18 retr_score=0.5456 section=Flexible representations :: Graph networks support highly flexible graph representations in two ways: first, in terms of the representation of the attributes; and second, in terms of the s...
+[judge] cand#2: paper_id=1704.01212v2.tei.tei chunk_id=1704.01212v2.tei.tei_chunk-5 retr_score=0.5281 section=2. Message Passing Neural Networks :: , where σ is the sigmoid function, deg(v) is the degree of vertex v and H N t is a learned matrix for each time step t and vertex degree N . R has skip connecti...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["effective utilization of graph structure for node classification with limited labeled nodes"],   "next_question": "How can graph neural networks effectively leverage graph structure to improve node classification performance with scarce labels?",   "accept": [     {"chunk_id": "1806.01261v3.tei.tei_chunk-18", "paper_id": "1806.01261v3.tei.tei", "rationale": "discusses flexible graph representations"}   ],   "reject": [     {"chunk_id": "1704.01212v2.tei.tei_chunk-5", "paper_id": "1704.01212v2.tei.tei", "reason": "does not 
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251222_140908_525558.json
+[judge] satisfied=False
+[judge] Accepted this iter: 1 | Rejected this iter: 1 | Total accepted: 5 | Total rejected: 3
+
+[judge] ===== Iteration 4 =====
+[judge] retrieval_query (first 200 chars): How can graph neural networks effectively leverage graph structure to improve node classification performance with scarce labels?  Search hints: graph neural networks, semi-supervised learning, graph 
+[judge] search_hint: graph neural networks, semi-supervised learning, graph structure, node classification, limited labels, overfitting mitigation, graph attention, graph convolutional networks, GCNs, graph autoencoders, GAEs, unsupervised graph learning, scalable approaches, Deep Graph Infomax, DGI, flexible graph representations
+[retrieve] Query (first 200 chars): How can graph neural networks effectively leverage graph structure to improve node classification performance with scarce labels?  Search hints: graph neural networks, semi-supervised learning, graph 
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 0 chunks
+[judge] No candidates retrieved; stopping.
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): How can graph neural networks effectively leverage graph structure to improve node classification performance with scarce labels?
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What graph neural network architectures are most effective in leveraging graph structure for node classification?
+[retrieve] Query (first 200 chars): What graph neural network architectures are most effective in leveraging graph structure for node classification?  Search hints: graph neural networks, node classification, graph structure, architectu
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How do graph neural networks handle scarce labels in node classification tasks?
+[retrieve] Query (first 200 chars): How do graph neural networks handle scarce labels in node classification tasks?  Search hints: graph neural networks, scarce labels, node classification, semi-supervised learning, few-shot learning, l
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What techniques can be used to optimize graph neural network performance for node classification with scarce labels?
+[retrieve] Query (first 200 chars): What techniques can be used to optimize graph neural network performance for node classification with scarce labels?  Search hints: graph neural networks, optimization techniques, node classification,
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 5 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_141125_624558.json

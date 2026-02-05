@@ -1,0 +1,480 @@
+{
+  "paper_id": "9E0725FC34E41616C0FAAB684513E464",
+  "title": "Proximal Policy Optimization Algorithms",
+  "arxiv_id": "arXiv:1707.06347v2[cs.LG]",
+  "authors": [
+    {
+      "given": "John",
+      "family": "Schulman"
+    },
+    {
+      "given": "Filip",
+      "family": "Wolski"
+    },
+    {
+      "given": "Prafulla",
+      "family": "Dhariwal"
+    },
+    {
+      "given": "Alec",
+      "family": "Radford"
+    },
+    {
+      "given": "Oleg",
+      "family": "Klimov"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Twenty-Fourth International Joint Conference on Artificial Intelligence",
+      "container_title": "Twenty-Fourth International Joint Conference on Artificial Intelligence",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Bellemare"
+        },
+        {
+          "given": "Y",
+          "family": "Naddaf"
+        },
+        {
+          "given": "J",
+          "family": "Veness"
+        },
+        {
+          "given": "M",
+          "family": "Bowling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "OpenAI Gym",
+      "container_title": "OpenAI Gym",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1606.01540"
+        }
+      ],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Brockman"
+        },
+        {
+          "given": "V",
+          "family": "Cheung"
+        },
+        {
+          "given": "L",
+          "family": "Pettersson"
+        },
+        {
+          "given": "J",
+          "family": "Schneider"
+        },
+        {
+          "given": "J",
+          "family": "Schulman"
+        },
+        {
+          "given": "J",
+          "family": "Tang"
+        },
+        {
+          "given": "W",
+          "family": "Zaremba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
+      "container_title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1604.06778"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Duan"
+        },
+        {
+          "given": "X",
+          "family": "Chen"
+        },
+        {
+          "given": "R",
+          "family": "Houthooft"
+        },
+        {
+          "given": "J",
+          "family": "Schulman"
+        },
+        {
+          "given": "P",
+          "family": "Abbeel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Emergence of Locomotion Behaviours in Rich Environments",
+      "container_title": "Emergence of Locomotion Behaviours in Rich Environments",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1707.02286"
+        }
+      ],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Heess"
+        },
+        {
+          "given": "S",
+          "family": "Sriram"
+        },
+        {
+          "given": "J",
+          "family": "Lemmon"
+        },
+        {
+          "given": "J",
+          "family": "Merel"
+        },
+        {
+          "given": "G",
+          "family": "Wayne"
+        },
+        {
+          "given": "Y",
+          "family": "Tassa"
+        },
+        {
+          "given": "T",
+          "family": "Erez"
+        },
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "A",
+          "family": "Eslami"
+        },
+        {
+          "given": "M",
+          "family": "Riedmiller"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Kakade"
+        },
+        {
+          "given": "J",
+          "family": "Langford"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Adam: A method for stochastic optimization",
+      "container_title": "Adam: A method for stochastic optimization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.6980"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Kingma"
+        },
+        {
+          "given": "J",
+          "family": "Ba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Mnih"
+        },
+        {
+          "given": "K",
+          "family": "Kavukcuoglu"
+        },
+        {
+          "given": "D",
+          "family": "Silver"
+        },
+        {
+          "given": "A A",
+          "family": "Rusu"
+        },
+        {
+          "given": "J",
+          "family": "Veness"
+        },
+        {
+          "given": "M G",
+          "family": "Bellemare"
+        },
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "M",
+          "family": "Riedmiller"
+        },
+        {
+          "given": "A K",
+          "family": "Fidjeland"
+        },
+        {
+          "given": "G",
+          "family": "Ostrovski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Asynchronous methods for deep reinforcement learning",
+      "container_title": "Asynchronous methods for deep reinforcement learning",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1602.01783"
+        }
+      ],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Mnih"
+        },
+        {
+          "given": "A P",
+          "family": "Badia"
+        },
+        {
+          "given": "M",
+          "family": "Mirza"
+        },
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "T P",
+          "family": "Lillicrap"
+        },
+        {
+          "given": "T",
+          "family": "Harley"
+        },
+        {
+          "given": "D",
+          "family": "Silver"
+        },
+        {
+          "given": "K",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "High-dimensional continuous control using generalized advantage estimation",
+      "container_title": "High-dimensional continuous control using generalized advantage estimation",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1506.02438"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Schulman"
+        },
+        {
+          "given": "P",
+          "family": "Moritz"
+        },
+        {
+          "given": "S",
+          "family": "Levine"
+        },
+        {
+          "given": "M",
+          "family": "Jordan"
+        },
+        {
+          "given": "P",
+          "family": "Abbeel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Trust region policy optimization",
+      "container_title": "Trust region policy optimization",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1502.05477"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Schulman"
+        },
+        {
+          "given": "S",
+          "family": "Levine"
+        },
+        {
+          "given": "P",
+          "family": "Moritz"
+        },
+        {
+          "given": "M I",
+          "family": "Jordan"
+        },
+        {
+          "given": "P",
+          "family": "Abbeel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Szita"
+        },
+        {
+          "given": "A",
+          "family": "Lörincz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Intelligent Robots and Systems (IROS)",
+      "container_title": "Intelligent Robots and Systems (IROS)",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Todorov"
+        },
+        {
+          "given": "T",
+          "family": "Erez"
+        },
+        {
+          "given": "Y",
+          "family": "Tassa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Sample Efficient Actor-Critic with Experience Replay",
+      "container_title": "Sample Efficient Actor-Critic with Experience Replay",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1611.01224"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Wang"
+        },
+        {
+          "given": "V",
+          "family": "Bapst"
+        },
+        {
+          "given": "N",
+          "family": "Heess"
+        },
+        {
+          "given": "V",
+          "family": "Mnih"
+        },
+        {
+          "given": "R",
+          "family": "Munos"
+        },
+        {
+          "given": "K",
+          "family": "Kavukcuoglu"
+        },
+        {
+          "given": "N",
+          "family": "De Freitas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Machine learning",
+      "container_title": "Machine learning",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R J",
+          "family": "Williams"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

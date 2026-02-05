@@ -1,0 +1,644 @@
+{
+  "paper_id": "C101E633F318C7642532283ED3847420",
+  "title": "Ice XII in its second regime of metastability",
+  "arxiv_id": "arXiv:cond-mat/0002224v1[cond-mat.stat-mech]",
+  "authors": [
+    {
+      "given": "Michael Marek",
+      "family": "Koza"
+    },
+    {
+      "given": "Helmut",
+      "family": "Schober"
+    },
+    {
+      "given": "Thomas",
+      "family": "Hansen"
+    },
+    {
+      "given": "Albert",
+      "family": "Tölle"
+    },
+    {
+      "given": "Franz",
+      "family": "Fujara"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1984",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Mishima"
+        },
+        {
+          "given": "L D",
+          "family": "Calvert"
+        },
+        {
+          "given": "E",
+          "family": "Whalley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1985",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Mishima"
+        },
+        {
+          "given": "L D",
+          "family": "Calvert"
+        },
+        {
+          "given": "E",
+          "family": "Whalley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Mishima"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Lobban"
+        },
+        {
+          "given": "J L",
+          "family": "Finney"
+        },
+        {
+          "given": "W F",
+          "family": "Kuhs"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "O'keeffe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P H",
+          "family": "Poole"
+        },
+        {
+          "given": "T",
+          "family": "Grande"
+        },
+        {
+          "given": "C A",
+          "family": "Angell"
+        },
+        {
+          "given": "P F",
+          "family": "Mcmillan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Mishima"
+        },
+        {
+          "given": "H E",
+          "family": "Stanley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Mishima"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J S",
+          "family": "Tse"
+        },
+        {
+          "given": "D D",
+          "family": "Klug"
+        },
+        {
+          "given": "C A",
+          "family": "Tulk"
+        },
+        {
+          "given": "I",
+          "family": "Swainson"
+        },
+        {
+          "given": "E C",
+          "family": "Svensson"
+        },
+        {
+          "given": "C.-K",
+          "family": "Loong"
+        },
+        {
+          "given": "V",
+          "family": "Shpakov"
+        },
+        {
+          "given": "V R",
+          "family": "Belosludov"
+        },
+        {
+          "given": "R V",
+          "family": "Belosludov"
+        },
+        {
+          "given": "Y",
+          "family": "Kawazoe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Bosio"
+        },
+        {
+          "given": "G P",
+          "family": "Johari"
+        },
+        {
+          "given": "J",
+          "family": "Teixeira"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Bizid"
+        },
+        {
+          "given": "L",
+          "family": "Bosio"
+        },
+        {
+          "given": "A",
+          "family": "Defrain"
+        },
+        {
+          "given": "M",
+          "family": "Oumezzine"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M.-C",
+          "family": "Bellissent-Funel"
+        },
+        {
+          "given": "J",
+          "family": "Teixeira"
+        },
+        {
+          "given": "L",
+          "family": "Bosio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Koza"
+        },
+        {
+          "given": "H",
+          "family": "Schober"
+        },
+        {
+          "given": "A",
+          "family": "Tölle"
+        },
+        {
+          "given": "F",
+          "family": "Fujara"
+        },
+        {
+          "given": "T",
+          "family": "Hansen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "ILL Report No.ILL97KO10T, Report on the preparation and performance of time-of-flight experiments on the amorphous and polycrystalline solid D2O",
+      "container_title": "ILL Report No.ILL97KO10T, Report on the preparation and performance of time-of-flight experiments on the amorphous and polycrystalline solid D2O",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M M",
+          "family": "Koza"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Physica B",
+      "container_title": "Physica B",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Schober"
+        },
+        {
+          "given": "M",
+          "family": "Koza"
+        },
+        {
+          "given": "A",
+          "family": "Tölle"
+        },
+        {
+          "given": "F",
+          "family": "Fujara"
+        },
+        {
+          "given": "C A",
+          "family": "Angell"
+        },
+        {
+          "given": "R",
+          "family": "Böhmer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "The Yellow Book -Guide to neutron research facilities at the ILL",
+      "container_title": "The Yellow Book -Guide to neutron research facilities at the ILL",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H G",
+          "family": "Büttner"
+        },
+        {
+          "given": "E",
+          "family": "Lelievre-Berna"
+        },
+        {
+          "given": "F",
+          "family": "Pinet"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "J. Appl. Cryst",
+      "container_title": "J. Appl. Cryst",
+      "year": "1969",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H M",
+          "family": "Rietveld"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Profile Matching and Integrated Intensities Refinement of X-ray and/or Neutron Data",
+      "container_title": "Profile Matching and Integrated Intensities Refinement of X-ray and/or Neutron Data",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Rodriguez-Carvajal"
+        },
+        {
+          "given": "Rietveld",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "J. Appl. Cryst",
+      "container_title": "J. Appl. Cryst",
+      "year": "1981",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G S",
+          "family": "Pawley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "",
+      "container_title": "",
+      "year": "1968",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Kamb"
+        },
+        {
+          "given": "A",
+          "family": "Prakash"
+        },
+        {
+          "given": "Acta",
+          "family": "Cryst"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1971",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G P",
+          "family": "Arnold"
+        },
+        {
+          "given": "R G",
+          "family": "Wenzel"
+        },
+        {
+          "given": "S W",
+          "family": "Rabideau"
+        },
+        {
+          "given": "N G",
+          "family": "Nereson"
+        },
+        {
+          "given": "A L",
+          "family": "Bowman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1973",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S J",
+          "family": "La Placa"
+        },
+        {
+          "given": "W C",
+          "family": "Hamilton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J D",
+          "family": "Londono"
+        },
+        {
+          "given": "W F",
+          "family": "Kuhs"
+        },
+        {
+          "given": "J L",
+          "family": "Finney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "phys. stat. sol. (a)",
+      "container_title": "phys. stat. sol. (a)",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A K",
+          "family": "Garg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "C-1631",
+      "container_title": "C-1631",
+      "year": "1987",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W F",
+          "family": "Kuhs"
+        },
+        {
+          "given": "D V",
+          "family": "Bliss"
+        },
+        {
+          "given": "J L",
+          "family": "Finney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Acta Cryst",
+      "container_title": "Acta Cryst",
+      "year": "1967",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Kamb"
+        },
+        {
+          "given": "A",
+          "family": "Prakash"
+        },
+        {
+          "given": "K",
+          "family": "Knobler"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1972",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Engelhardt"
+        },
+        {
+          "given": "E",
+          "family": "Whalley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "J. Chem. Phys",
+      "container_title": "J. Chem. Phys",
+      "year": "1981",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Engelhardt"
+        },
+        {
+          "given": "B",
+          "family": "Kamb"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "J. Phys. Condens. Matter",
+      "container_title": "J. Phys. Condens. Matter",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V P",
+          "family": "Shpakov"
+        },
+        {
+          "given": "J S",
+          "family": "Tse"
+        },
+        {
+          "given": "V R",
+          "family": "Belosludov"
+        },
+        {
+          "given": "R V",
+          "family": "Belosludov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Sov. Phys. Uspekhi",
+      "container_title": "Sov. Phys. Uspekhi",
+      "year": "1968",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S B",
+          "family": "Kormer"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

@@ -1,0 +1,715 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Long Short-Term Memory-Networks for Machine Reading</title>
+				<funder ref="#_Fmy6Z7G">
+					<orgName type="full">European Research Council</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2016-09-20">20 Sep 2016</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jianpeng</forename><surname>Cheng</surname></persName>
+							<email>jianpeng.cheng@ed.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">University of Edinburgh</orgName>
+								<address>
+									<addrLine>10 Crichton Street</addrLine>
+									<postCode>EH8 9AB</postCode>
+									<settlement>Edinburgh</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Li</forename><surname>Dong</surname></persName>
+							<email>li.dong@ed.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">University of Edinburgh</orgName>
+								<address>
+									<addrLine>10 Crichton Street</addrLine>
+									<postCode>EH8 9AB</postCode>
+									<settlement>Edinburgh</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mirella</forename><surname>Lapata</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">University of Edinburgh</orgName>
+								<address>
+									<addrLine>10 Crichton Street</addrLine>
+									<postCode>EH8 9AB</postCode>
+									<settlement>Edinburgh</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Long Short-Term Memory-Networks for Machine Reading</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2016-09-20">20 Sep 2016</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BBEE8B1016BA215097F2B9CE8F181E0A</idno>
+					<idno type="arXiv">arXiv:1601.06733v7[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>In this paper we address the question of how to render sequence-level networks better at handling structured input. We propose a machine reading simulator which processes text incrementally from left to right and performs shallow reasoning with memory and attention. The reader extends the Long Short-Term Memory architecture with a memory network in place of a single memory cell. This enables adaptive memory usage during recurrence with neural attention, offering a way to weakly induce relations among tokens. The system is initially designed to process a single sequence but we also demonstrate how to integrate it with an encoder-decoder architecture. Experiments on language modeling, sentiment analysis, and natural language inference show that our model matches or outperforms the state of the art.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank members of the ILCC at the <rs type="institution">School of Informatics</rs> and the anonymous reviewers for helpful comments. The support of the <rs type="funder">European Research Council</rs> under award number <rs type="grantNumber">681760</rs> "<rs type="projectName">Translating Multiple Modalities into Text</rs>" is gratefully acknowledged.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_Fmy6Z7G">
+					<idno type="grant-number">681760</idno>
+					<orgName type="project" subtype="full">Translating Multiple Modalities into Text</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Learning long-term dependencies with gradient descent is difficult. Neural Networks</title>
+		<author>
+			<persName><forename type="first">Andreas</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 NAACL: HLT</title>
+		<editor>
+			<persName><forename type="first">Patrice</forename><surname>Bengio</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Paolo</forename><surname>Simard</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Frasconi</surname></persName>
+		</editor>
+		<meeting>the 2016 NAACL: HLT<address><addrLine>San Diego, California; Banff, Alberta</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1994">2016. 2016. 2014. 1994</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="157" to="166" />
+		</imprint>
+	</monogr>
+	<note>Neural machine translation by jointly learning to align and translate</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A large annotated corpus for learning natural language inference</title>
+		<author>
+			<persName><surname>Blunsom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 EMNLP</title>
+		<meeting>the 2015 EMNLP<address><addrLine>Baltimore, Maryland; Lisbon, Portugal</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014. 2014. 2015</date>
+			<biblScope unit="page" from="22" to="32" />
+		</imprint>
+	</monogr>
+	<note>Proceedings of the 52nd ACL</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A fast unified model for parsing and sentence understanding</title>
+		<author>
+			<persName><surname>Bowman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th ACL</title>
+		<meeting>the 54th ACL<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016. 2016</date>
+			<biblScope unit="page" from="1466" to="1477" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Learning phrase representations using RNN encoder-decoder for statistical machine translation</title>
+		<author>
+			<persName><surname>Cho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the PASCAL Challenges Workshop on Recognising Textual Entailment</title>
+		<meeting>the PASCAL Challenges Workshop on Recognising Textual Entailment<address><addrLine>Doha, Qatar; Lille, France; Peter Clark, Phil Harrison, and Niran; San Francisco, California</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2005">2014. 2014. 2015. 2015. jan Balasubramanian. 2013. 2005</date>
+			<biblScope unit="page" from="2067" to="2075" />
+		</imprint>
+	</monogr>
+	<note>Proceedings of the 3rd Workshop on Automated KB Construction</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Learning context-free grammars: Capabilities and limitations of a recurrent neural network with an external stack memory</title>
+		<author>
+			<persName><surname>Das</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 14th Annual Conference of the Cognitive Science Society</title>
+		<meeting>the 14th Annual Conference of the Cognitive Science Society</meeting>
+		<imprint>
+			<publisher>Morgan Kaufmann Publishers</publisher>
+			<date type="published" when="1992">1992. 1992</date>
+			<biblScope unit="page" from="791" to="795" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Transition-based dependency parsing with stack long short-term memory</title>
+		<author>
+			<persName><surname>Dyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 22nd IJCAI</title>
+		<meeting>the 22nd IJCAI<address><addrLine>Beijing, China; Barcelona, Spain</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011">2015. 2015. 2011</date>
+			<biblScope unit="page" from="3" to="10" />
+		</imprint>
+	</monogr>
+	<note>Proceedings of the 53rd ACL</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Identifying relations for open information extraction</title>
+		<author>
+			<persName><surname>Fader</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2011 EMNLP</title>
+		<meeting>the 2011 EMNLP<address><addrLine>Edinburgh, Scotland, UK</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1991">2011. 2011. 1991. 1991</date>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="725" to="745" />
+		</imprint>
+	</monogr>
+	<note>Recovery from misanalyses of garden-path sentences</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Insensitivity of the human sentence-processing system to hierarchical structure</title>
+		<author>
+			<persName><forename type="first">Bod</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefan</forename><forename type="middle">L</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rens</forename><surname>Bod</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pyschological Science</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="829" to="834" />
+			<date type="published" when="2011">2011. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Learning to transduce with unbounded memory</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1308.0850</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Generating sequences with recurrent neural networks</title>
+		<editor>
+			<persName><forename type="first">Edward</forename><surname>Grefenstette</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Karl</forename><forename type="middle">Moritz</forename><surname>Hermann</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Mustafa</forename><surname>Suleyman</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Phil</forename><surname>Blunsom</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="2013">2013. 2015</date>
+			<biblScope unit="page" from="1819" to="1827" />
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+	<note>Advances in Neural Information Processing Systems</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Teaching machines to read and comprehend</title>
+		<author>
+			<persName><surname>Hermann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+			<biblScope unit="page" from="1684" to="1692" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">Schmidhuber</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sepp</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jürgen</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780" />
+			<date type="published" when="1997">1997. 1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Deep recursive neural networks for compositionality in language</title>
+		<author>
+			<persName><forename type="first">Sepp</forename><surname>Hochreiter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<publisher>Ozan Irsoy and Claire Cardie</publisher>
+			<date type="published" when="1991">1991. 2014</date>
+			<biblScope unit="page" from="2096" to="2104" />
+		</imprint>
+		<respStmt>
+			<orgName>Technische Universität München</orgName>
+		</respStmt>
+	</monogr>
+	<note>Untersuchungen zu dynamischen neuronalen netzen. Diploma</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Corpus-based induction of syntactic structure: Models of dependency and constituency</title>
+		<author>
+			<persName><forename type="first">Yoon</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 ICLR, San Diego, California</title>
+		<meeting>the 2015 ICLR, San Diego, California<address><addrLine>Doha, Qatar; Barcelona, Spain</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2004">2014. 2015. 2004. 2004</date>
+			<biblScope unit="page" from="478" to="485" />
+		</imprint>
+	</monogr>
+	<note>Proceedings of the 42nd ACL</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Locality and parsing complexity</title>
+		<author>
+			<persName><forename type="first">Lars</forename><surname>Konieczny</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Psycholinguistics</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="627" to="645" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A clockwork RNN</title>
+		<author>
+			<persName><surname>Koutník</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 31st ICML</title>
+		<meeting>the 31st ICML<address><addrLine>Beijing, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014. 2014</date>
+			<biblScope unit="page" from="1863" to="1871" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Ask me anything: Dynamic memory networks for natural language processing</title>
+		<author>
+			<persName><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 33rd ICML</title>
+		<meeting>the 33rd ICML<address><addrLine>New York, NY</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Distributed representations of sentences and documents</title>
+		<author>
+			<persName><forename type="first">Le</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mikolov</forename><forename type="middle">;</forename><surname>Quoc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 31st ICML</title>
+		<meeting>the 31st ICML<address><addrLine>Beijing, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014. 2014</date>
+			<biblScope unit="page" from="1188" to="1196" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A deep memory-based architecture for sequence-to-sequence learning</title>
+		<author>
+			<persName><surname>Lei</surname></persName>
+		</author>
+		<idno>Mikolov et al.2015</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 11th Interspeech</title>
+		<meeting>11th Interspeech<address><addrLine>Lisbon, Portugal; San Juan, Puerto Rico; Makuhari, Japan; San Diego, California</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2010">2015. 2015. 2015. 2015. 2016. 2010. 2015</date>
+			<biblScope unit="page" from="1045" to="1048" />
+		</imprint>
+	</monogr>
+	<note>Proceedings of ICLR Workshop</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">On the difficulty of training recurrent neural networks</title>
+		<author>
+			<persName><surname>Pascanu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics</title>
+		<editor>
+			<persName><surname>Pennington</surname></persName>
+		</editor>
+		<meeting>the 48th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Atlanta, Georgia; Doha, Qatar; Uppsala</addrLine></address></meeting>
+		<imprint>
+			<publisher>Hoifung Poon and Pedro Domingos</publisher>
+			<date type="published" when="2010">2013. 2013. 2014. 2010</date>
+			<biblScope unit="page" from="296" to="305" />
+		</imprint>
+	</monogr>
+	<note>Proceedings of the 2014 EMNLP</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Eye movements in reading and information processing: 20 years of research</title>
+		<author>
+			<persName><forename type="first">Keith</forename><surname>Rayner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Bulletin</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="372" to="422" />
+			<date type="published" when="1998">1998</date>
+			<pubPlace>Edward</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Rocktäschel et al.2016] Tim Rocktäschel</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Andrew Ng, and Christopher Potts. 2013a. Recursive deep models for semantic compositionality over a sentiment treebank</title>
+		<author>
+			<persName><forename type="first">Karl</forename><forename type="middle">Moritz</forename><surname>Grefenstette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomáš</forename><surname>Hermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phil</forename><surname>Kočiskỳ</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename><surname>Blunsom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sumit</forename><surname>Rush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Chopra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">; Richard</forename><surname>Weston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">H</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Pennin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">Y</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jean</forename><surname>Perelygin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Manning ; Richard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jean</forename><forename type="middle">Y</forename><surname>Perelygin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">Y</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Potts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<meeting><address><addrLine>San Juan, Puerto Rico; Lisbon, Portugal; Seattle, Washington; Seattle, Washingtton</addrLine></address></meeting>
+		<imprint>
+			<publisher>Jason Weston</publisher>
+			<date type="published" when="2011">2016. 2015. 2011. 2013</date>
+			<biblScope unit="page" from="2431" to="2439" />
+		</imprint>
+	</monogr>
+	<note>Advances in Neural Information Processing Systems</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Improved semantic representations from tree-structured long short-term memory networks</title>
+		<author>
+			<persName><surname>Tai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd ACL</title>
+		<meeting>the 53rd ACL<address><addrLine>Beijing, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1995">2015. 2015. 1995</date>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="page" from="1632" to="1634" />
+		</imprint>
+	</monogr>
+	<note>Integration of visual and linguistic information in spoken language comprehension. Science</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Recurrent memory network for language modeling</title>
+		<author>
+			<persName><forename type="first">Tran</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th NAACL</title>
+		<meeting>the 15th NAACL<address><addrLine>San Diego, CA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Learning natural language inference with lstm</title>
+		<author>
+			<persName><forename type="first">Wang</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiang</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuohang</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Jiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 NAACL: HLT</title>
+		<meeting>the 2016 NAACL: HLT<address><addrLine>San Diego, California</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016. 2016</date>
+			<biblScope unit="page" from="1442" to="1451" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Dynamic memory networks for visual and textual question answering</title>
+		<author>
+			<persName><forename type="first">Weston</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 ICLR</title>
+		<editor>
+			<persName><forename type="first">Trevor</forename><surname>Cohn</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Katerina</forename><surname>Vylomova</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Kevin</forename><surname>Duh</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</editor>
+		<meeting>the 2015 ICLR<address><addrLine>San Diego, USA; New York, NY</addrLine></address></meeting>
+		<imprint>
+			<publisher>Kaisheng Yao</publisher>
+			<date type="published" when="2015">2015. 2015. 2016. 2015. 2015</date>
+		</imprint>
+	</monogr>
+	<note>Proceedings of the 33rd ICML</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<idno type="arXiv">arXiv:1508.03790</idno>
+		<idno>arXiv:1410.4615</idno>
+		<title level="m">Wojciech Zaremba and Ilya Sutskever. 2014. Learning to execute</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+	<note>Depth-gated recurrent neural networks</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

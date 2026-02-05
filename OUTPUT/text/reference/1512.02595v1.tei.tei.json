@@ -1,0 +1,1977 @@
+{
+  "paper_id": "7BD1E2C12782917A4211A3BF569BBA05",
+  "title": "Deep Speech 2: End-to-End Speech Recognition in English and Mandarin",
+  "arxiv_id": "arXiv:1512.02595v1[cs.CL]",
+  "authors": [
+    {
+      "given": "Baidu",
+      "family": "Research -Silicon Valley"
+    },
+    {
+      "given": "A I",
+      "family": "Lab"
+    },
+    {
+      "given": "Dario",
+      "family": "Amodei"
+    },
+    {
+      "given": "Rishita",
+      "family": "Anubhai"
+    },
+    {
+      "given": "Eric",
+      "family": "Battenberg"
+    },
+    {
+      "given": "Carl",
+      "family": "Case"
+    },
+    {
+      "given": "Jared",
+      "family": "Casper"
+    },
+    {
+      "given": "Bryan",
+      "family": "Catanzaro"
+    },
+    {
+      "given": "Jingdong",
+      "family": "Chen"
+    },
+    {
+      "given": "Mike",
+      "family": "Chrzanowski"
+    },
+    {
+      "given": "Adam",
+      "family": "Coates"
+    },
+    {
+      "given": "Greg",
+      "family": "Diamos"
+    },
+    {
+      "given": "Erich",
+      "family": "Elsen"
+    },
+    {
+      "given": "Jesse",
+      "family": "Engel"
+    },
+    {
+      "given": "Linxi",
+      "family": "Fan"
+    },
+    {
+      "given": "Christopher",
+      "family": "Fougner"
+    },
+    {
+      "given": "Tony",
+      "family": "Han"
+    },
+    {
+      "given": "Awni",
+      "family": "Hannun"
+    },
+    {
+      "given": "Billy",
+      "family": "Jun"
+    },
+    {
+      "given": "Patrick",
+      "family": "Legresley"
+    },
+    {
+      "given": "Libby",
+      "family": "Lin"
+    },
+    {
+      "given": "Sharan",
+      "family": "Narang"
+    },
+    {
+      "given": "Andrew",
+      "family": "Ng"
+    },
+    {
+      "given": "Sherjil",
+      "family": "Ozair"
+    },
+    {
+      "given": "Ryan",
+      "family": "Prenger"
+    },
+    {
+      "given": "Jonathan",
+      "family": "Raiman"
+    },
+    {
+      "given": "Sanjeev",
+      "family": "Satheesh"
+    },
+    {
+      "given": "David",
+      "family": "Seetapun"
+    },
+    {
+      "given": "Shubho",
+      "family": "Sengupta"
+    },
+    {
+      "given": "Yi",
+      "family": "Wang"
+    },
+    {
+      "given": "Zhiqian",
+      "family": "Wang"
+    },
+    {
+      "given": "Chong",
+      "family": "Wang"
+    },
+    {
+      "given": "Bo",
+      "family": "Xiao"
+    },
+    {
+      "given": "Dani",
+      "family": "Yogatama"
+    },
+    {
+      "given": "Jun",
+      "family": "Zhan"
+    },
+    {
+      "given": "Zhenyao",
+      "family": "Zhu"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Abdel-Hamid"
+        },
+        {
+          "given": "A",
+          "family": "-R. Mohamed"
+        },
+        {
+          "given": "H",
+          "family": "Jang"
+        },
+        {
+          "given": "G",
+          "family": "Penn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "End-to-end attention-based large vocabulary speech recognition",
+      "container_title": "End-to-end attention-based large vocabulary speech recognition",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "abs/1508.04395"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "J",
+          "family": "Chorowski"
+        },
+        {
+          "given": "D",
+          "family": "Serdyuk"
+        },
+        {
+          "given": "P",
+          "family": "Brakel"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Submitted to IEEE 2015 Automatic Speech Recognition and Understanding Workshop",
+      "container_title": "Submitted to IEEE 2015 Automatic Speech Recognition and Understanding Workshop",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Barker"
+        },
+        {
+          "given": "E",
+          "family": "Marxer"
+        },
+        {
+          "given": "Ricard",
+          "family": "Vincent"
+        },
+        {
+          "given": "S",
+          "family": "Watanabe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Modern GPU",
+      "container_title": "Modern GPU",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Baxter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "International Conference on Machine Learning",
+      "container_title": "International Conference on Machine Learning",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "J",
+          "family": "Louradour"
+        },
+        {
+          "given": "R",
+          "family": "Collobert"
+        },
+        {
+          "given": "J",
+          "family": "Weston"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Connectionist Speech Recognition: A Hybrid Approach",
+      "container_title": "Connectionist Speech Recognition: A Hybrid Approach",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Bourlard"
+        },
+        {
+          "given": "N",
+          "family": "Morgan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "",
+      "container_title": "",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "spell. abs/1508.01211"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Chan"
+        },
+        {
+          "given": "N",
+          "family": "Jaitly"
+        },
+        {
+          "given": "Q",
+          "family": "Le"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Listen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Efficient primitives for deep learning",
+      "container_title": "Efficient primitives for deep learning",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Chetlur"
+        },
+        {
+          "given": "C",
+          "family": "Woolley"
+        },
+        {
+          "given": "P",
+          "family": "Vandermersch"
+        },
+        {
+          "given": "J",
+          "family": "Cohen"
+        },
+        {
+          "given": "J",
+          "family": "Tran"
+        },
+        {
+          "given": "B",
+          "family": "Catanzaro"
+        },
+        {
+          "given": "E",
+          "family": "Shelhamer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "USENIX Symposium on Operating Systems Design and Implementation",
+      "container_title": "USENIX Symposium on Operating Systems Design and Implementation",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Chilimbi"
+        },
+        {
+          "given": "Y",
+          "family": "Suzue"
+        },
+        {
+          "given": "J",
+          "family": "Apacible"
+        },
+        {
+          "given": "K",
+          "family": "Kalyanaraman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "B",
+          "family": "Van Merrienboer"
+        },
+        {
+          "given": "C",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "F",
+          "family": "Bougares"
+        },
+        {
+          "given": "H",
+          "family": "Schwenk"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "End-to-end continuous speech recognition using attention-based recurrent nn: First",
+      "container_title": "End-to-end continuous speech recognition using attention-based recurrent nn: First",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "results. abs/1412.1602"
+        }
+      ],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Chorowski"
+        },
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "LREC",
+      "container_title": "LREC",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Cieri"
+        },
+        {
+          "given": "D",
+          "family": "Miller"
+        },
+        {
+          "given": "K",
+          "family": "Walker"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "International Conference on Document Analysis and Recognition",
+      "container_title": "International Conference on Document Analysis and Recognition",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Coates"
+        },
+        {
+          "given": "B",
+          "family": "Carpenter"
+        },
+        {
+          "given": "C",
+          "family": "Case"
+        },
+        {
+          "given": "S",
+          "family": "Satheesh"
+        },
+        {
+          "given": "B",
+          "family": "Suresh"
+        },
+        {
+          "given": "T",
+          "family": "Wang"
+        },
+        {
+          "given": "D J",
+          "family": "Wu"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "International Conference on Machine Learning",
+      "container_title": "International Conference on Machine Learning",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Coates"
+        },
+        {
+          "given": "B",
+          "family": "Huval"
+        },
+        {
+          "given": "T",
+          "family": "Wang"
+        },
+        {
+          "given": "D J",
+          "family": "Wu"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        },
+        {
+          "given": "B",
+          "family": "Catanzaro"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Proc. ICASSP",
+      "container_title": "Proc. ICASSP",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Dahl"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        },
+        {
+          "given": "L",
+          "family": "Deng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "IEEE Transactions on Audio, Speech, and Language Processing",
+      "container_title": "IEEE Transactions on Audio, Speech, and Language Processing",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Dahl"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        },
+        {
+          "given": "L",
+          "family": "Deng"
+        },
+        {
+          "given": "A",
+          "family": "Acero"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Advances in Neural Information Processing Systems 25",
+      "container_title": "Advances in Neural Information Processing Systems 25",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Dean"
+        },
+        {
+          "given": "G S",
+          "family": "Corrado"
+        },
+        {
+          "given": "R",
+          "family": "Monga"
+        },
+        {
+          "given": "K",
+          "family": "Chen"
+        },
+        {
+          "given": "M",
+          "family": "Devin"
+        },
+        {
+          "given": "Q",
+          "family": "Le"
+        },
+        {
+          "given": "M",
+          "family": "Mao"
+        },
+        {
+          "given": "M",
+          "family": "Ranzato"
+        },
+        {
+          "given": "A",
+          "family": "Senior"
+        },
+        {
+          "given": "P",
+          "family": "Tucker"
+        },
+        {
+          "given": "K",
+          "family": "Yang"
+        },
+        {
+          "given": "A",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "In ICASSP",
+      "container_title": "In ICASSP",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Ellis"
+        },
+        {
+          "given": "N",
+          "family": "Morgan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Optimizing RNN performance",
+      "container_title": "Optimizing RNN performance",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E",
+          "family": "Elsen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Support vector machines for noise robust ASR",
+      "container_title": "Support vector machines for noise robust ASR",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M J F",
+          "family": "Gales"
+        },
+        {
+          "given": "A",
+          "family": "Ragni"
+        },
+        {
+          "given": "H",
+          "family": "Aldamarki"
+        },
+        {
+          "given": "C",
+          "family": "Gautier"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "S",
+          "family": "Fernández"
+        },
+        {
+          "given": "F",
+          "family": "Gomez"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "N",
+          "family": "Jaitly"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "In ICASSP",
+      "container_title": "In ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "A",
+          "family": "-R. Mohamed"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Long short-term memory recurrent neural network architectures for large scale acoustic modeling",
+      "container_title": "Long short-term memory recurrent neural network architectures for large scale acoustic modeling",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H H",
+          "family": "Sak"
+        },
+        {
+          "given": "A",
+          "family": "Senior"
+        },
+        {
+          "given": "F",
+          "family": "Beaufays"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Deep speech: Scaling up end-to-end speech recognition",
+      "container_title": "Deep speech: Scaling up end-to-end speech recognition",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "1412.5567"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Hannun"
+        },
+        {
+          "given": "C",
+          "family": "Case"
+        },
+        {
+          "given": "J",
+          "family": "Casper"
+        },
+        {
+          "given": "B",
+          "family": "Catanzaro"
+        },
+        {
+          "given": "G",
+          "family": "Diamos"
+        },
+        {
+          "given": "E",
+          "family": "Elsen"
+        },
+        {
+          "given": "R",
+          "family": "Prenger"
+        },
+        {
+          "given": "S",
+          "family": "Satheesh"
+        },
+        {
+          "given": "S",
+          "family": "Sengupta"
+        },
+        {
+          "given": "A",
+          "family": "Coates"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "First-pass large vocabulary continuous speech recognition using bi-directional recurrent DNNs",
+      "container_title": "First-pass large vocabulary continuous speech recognition using bi-directional recurrent DNNs",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "abs/1408.2873"
+        }
+      ],
+      "authors": [
+        {
+          "given": "A Y",
+          "family": "Hannun"
+        },
+        {
+          "given": "A L",
+          "family": "Maas"
+        },
+        {
+          "given": "D",
+          "family": "Jurafsky"
+        },
+        {
+          "given": "A Y",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics",
+      "container_title": "Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Heafield"
+        },
+        {
+          "given": "I",
+          "family": "Pouzyrevsky"
+        },
+        {
+          "given": "J H",
+          "family": "Clark"
+        },
+        {
+          "given": "P",
+          "family": "Koehn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "IEEE Signal Processing Magazine",
+      "container_title": "IEEE Signal Processing Magazine",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Hinton"
+        },
+        {
+          "given": "L",
+          "family": "Deng"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        },
+        {
+          "given": "G",
+          "family": "Dahl"
+        },
+        {
+          "given": "A",
+          "family": "Mohamed"
+        },
+        {
+          "given": "N",
+          "family": "Jaitly"
+        },
+        {
+          "given": "A",
+          "family": "Senior"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "P",
+          "family": "Nguyen"
+        },
+        {
+          "given": "T",
+          "family": "Sainath"
+        },
+        {
+          "given": "B",
+          "family": "Kingsbury"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "ICML Workshop on Deep Learning for Audio, Speech, and Language Processing",
+      "container_title": "ICML Workshop on Deep Learning for Audio, Speech, and Language Processing",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Jaitly"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Jozefowicz"
+        },
+        {
+          "given": "W",
+          "family": "Zaremba"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "A big data approach to acoustic model training corpus selection",
+      "container_title": "A big data approach to acoustic model training corpus selection",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Kapralova"
+        },
+        {
+          "given": "J",
+          "family": "Alex"
+        },
+        {
+          "given": "E",
+          "family": "Weinstein"
+        },
+        {
+          "given": "P",
+          "family": "Moreno"
+        },
+        {
+          "given": "O",
+          "family": "Siohan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Commun. ACM",
+      "container_title": "Commun. ACM",
+      "year": "1965",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K C",
+          "family": "Knowlton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Interspeech",
+      "container_title": "Interspeech",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Ko"
+        },
+        {
+          "given": "V",
+          "family": "Peddinti"
+        },
+        {
+          "given": "D",
+          "family": "Povey"
+        },
+        {
+          "given": "S",
+          "family": "Khudanpur"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Batch normalized recurrent neural networks",
+      "container_title": "Batch normalized recurrent neural networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "abs/1510.01378"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Laurent"
+        },
+        {
+          "given": "G",
+          "family": "Pereyra"
+        },
+        {
+          "given": "P",
+          "family": "Brakel"
+        },
+        {
+          "given": "Y",
+          "family": "Zhang"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "International Conference on Machine Learning",
+      "container_title": "International Conference on Machine Learning",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Q",
+          "family": "Le"
+        },
+        {
+          "given": "M",
+          "family": "Ranzato"
+        },
+        {
+          "given": "R",
+          "family": "Monga"
+        },
+        {
+          "given": "M",
+          "family": "Devin"
+        },
+        {
+          "given": "K",
+          "family": "Chen"
+        },
+        {
+          "given": "G",
+          "family": "Corrado"
+        },
+        {
+          "given": "J",
+          "family": "Dean"
+        },
+        {
+          "given": "A",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Computer Vision and Pattern Recognition",
+      "container_title": "Computer Vision and Pattern Recognition",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "F J",
+          "family": "Huang"
+        },
+        {
+          "given": "L",
+          "family": "Bottou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "NAACL",
+      "container_title": "NAACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Maas"
+        },
+        {
+          "given": "Z",
+          "family": "Xie"
+        },
+        {
+          "given": "D",
+          "family": "Jurafsky"
+        },
+        {
+          "given": "A",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "ASRU",
+      "container_title": "ASRU",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Miao"
+        },
+        {
+          "given": "M",
+          "family": "Gowayyed"
+        },
+        {
+          "given": "F",
+          "family": "Metz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "IEEE Transactions on Audio, Speech, and Language Processing",
+      "container_title": "IEEE Transactions on Audio, Speech, and Language Processing",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mohamed"
+        },
+        {
+          "given": "G",
+          "family": "Dahl"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "Application of pretrained deep neural networks to large vocabulary speech recognition",
+      "container_title": "Application of pretrained deep neural networks to large vocabulary speech recognition",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A S N",
+          "family": "Jaitly"
+        },
+        {
+          "given": "P",
+          "family": "Nguyen"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "APSIPA",
+      "container_title": "APSIPA",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Niu"
+        },
+        {
+          "given": "L",
+          "family": "Xie"
+        },
+        {
+          "given": "L",
+          "family": "Jia"
+        },
+        {
+          "given": "N",
+          "family": "Hu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Panayotov"
+        },
+        {
+          "given": "G",
+          "family": "Chen"
+        },
+        {
+          "given": "D",
+          "family": "Povey"
+        },
+        {
+          "given": "S",
+          "family": "Khudanpur"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "On the difficulty of training recurrent neural networks",
+      "container_title": "On the difficulty of training recurrent neural networks",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "abs/1211.5063"
+        }
+      ],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Pascanu"
+        },
+        {
+          "given": "T",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "J. Parallel Distrib. Comput",
+      "container_title": "J. Parallel Distrib. Comput",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Patarasuk"
+        },
+        {
+          "given": "X",
+          "family": "Yuan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "26th International Conference on Machine Learning",
+      "container_title": "26th International Conference on Machine Learning",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Raina"
+        },
+        {
+          "given": "A",
+          "family": "Madhavan"
+        },
+        {
+          "given": "A",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "IEEE Transactions on Speech and Audio Processing",
+      "container_title": "IEEE Transactions on Speech and Audio Processing",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Renals"
+        },
+        {
+          "given": "N",
+          "family": "Morgan"
+        },
+        {
+          "given": "H",
+          "family": "Bourlard"
+        },
+        {
+          "given": "M",
+          "family": "Cohen"
+        },
+        {
+          "given": "H",
+          "family": "Franco"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "The use of recurrent neural networks in continuous speech recognition",
+      "container_title": "The use of recurrent neural networks in continuous speech recognition",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Robinson"
+        },
+        {
+          "given": "M",
+          "family": "Hochberg"
+        },
+        {
+          "given": "S",
+          "family": "Renals"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b50",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Sainath"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "A",
+          "family": "Senior"
+        },
+        {
+          "given": "H",
+          "family": "Sak"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b51",
+      "title": "ICASSP",
+      "container_title": "ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T N",
+          "family": "Sainath"
+        },
+        {
+          "given": "A",
+          "family": "Rahman Mohamed"
+        },
+        {
+          "given": "B",
+          "family": "Kingsbury"
+        },
+        {
+          "given": "B",
+          "family": "Ramabhadran"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b52",
+      "title": "Fast and accurate recurrent neural network acoustic models for speech recognition",
+      "container_title": "Fast and accurate recurrent neural network acoustic models for speech recognition",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "abs/1507.06947"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Sak"
+        },
+        {
+          "given": "A",
+          "family": "Senior"
+        },
+        {
+          "given": "K",
+          "family": "Rao"
+        },
+        {
+          "given": "F",
+          "family": "Beaufays"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b53",
+      "title": "In Interspeech",
+      "container_title": "In Interspeech",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Sak"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "G",
+          "family": "Heigold"
+        },
+        {
+          "given": "A",
+          "family": "Senior"
+        },
+        {
+          "given": "E",
+          "family": "Mcdermott"
+        },
+        {
+          "given": "R",
+          "family": "Monga"
+        },
+        {
+          "given": "M",
+          "family": "Mao"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b54",
+      "title": "AAAI Twenty-Third Conference on Artificial Intelligence",
+      "container_title": "AAAI Twenty-Third Conference on Artificial Intelligence",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Sapp"
+        },
+        {
+          "given": "A",
+          "family": "Saxena"
+        },
+        {
+          "given": "A",
+          "family": "Ng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b55",
+      "title": "IEEE Transactions on Signal Processing",
+      "container_title": "IEEE Transactions on Signal Processing",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Schuster"
+        },
+        {
+          "given": "K K",
+          "family": "Paliwal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b56",
+      "title": "In Interspeech",
+      "container_title": "In Interspeech",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Seide"
+        },
+        {
+          "given": "G",
+          "family": "Li"
+        },
+        {
+          "given": "D",
+          "family": "Yu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b57",
+      "title": "Search by voice in mandarin chinese",
+      "container_title": "Search by voice in mandarin chinese",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Shan"
+        },
+        {
+          "given": "G",
+          "family": "Wu"
+        },
+        {
+          "given": "Z",
+          "family": "Hu"
+        },
+        {
+          "given": "X",
+          "family": "Tang"
+        },
+        {
+          "given": "M",
+          "family": "Jansche"
+        },
+        {
+          "given": "P",
+          "family": "Moreno"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b58",
+      "title": "In ICASSP",
+      "container_title": "In ICASSP",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Soltau"
+        },
+        {
+          "given": "G",
+          "family": "Saon"
+        },
+        {
+          "given": "T",
+          "family": "Sainath"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b59",
+      "title": "30th International Conference on Machine Learning",
+      "container_title": "30th International Conference on Machine Learning",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "J",
+          "family": "Martens"
+        },
+        {
+          "given": "G",
+          "family": "Dahl"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b60",
+      "title": "Sequence to sequence learning with neural networks",
+      "container_title": "Sequence to sequence learning with neural networks",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "O",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Q V",
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b61",
+      "title": "Batch normalization: Accelerating deep network training by reducing internal covariate",
+      "container_title": "Batch normalization: Accelerating deep network training by reducing internal covariate",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "shift. abs/1502.03167"
+        }
+      ],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "S",
+          "family": "Ioffe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b62",
+      "title": "",
+      "container_title": "",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "W",
+          "family": "Liu"
+        },
+        {
+          "given": "Y",
+          "family": "Jia"
+        },
+        {
+          "given": "P",
+          "family": "Sermanet"
+        },
+        {
+          "given": "S",
+          "family": "Reed"
+        },
+        {
+          "given": "D",
+          "family": "Anguelov"
+        },
+        {
+          "given": "D",
+          "family": "Erhan"
+        },
+        {
+          "given": "V",
+          "family": "Vanhoucke"
+        },
+        {
+          "given": "A",
+          "family": "Rabinovich"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b63",
+      "title": "Optimization of collective communication operations in mpich. International Journal of High Performance Computing Applications",
+      "container_title": "Optimization of collective communication operations in mpich. International Journal of High Performance Computing Applications",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Thakur"
+        },
+        {
+          "given": "R",
+          "family": "Rabenseifner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b64",
+      "title": "Sequence-discriminative training of deep neural networks",
+      "container_title": "Sequence-discriminative training of deep neural networks",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Vesely"
+        },
+        {
+          "given": "A",
+          "family": "Ghoshal"
+        },
+        {
+          "given": "L",
+          "family": "Burget"
+        },
+        {
+          "given": "D",
+          "family": "Povey"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b65",
+      "title": "IEEE Transactions on Acoustics, Speech and Signal Processing",
+      "container_title": "IEEE Transactions on Acoustics, Speech and Signal Processing",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Waibel"
+        },
+        {
+          "given": "T",
+          "family": "Hanazawa"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        },
+        {
+          "given": "K",
+          "family": "Shikano"
+        },
+        {
+          "given": "K",
+          "family": "Lang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b66",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Williams"
+        },
+        {
+          "given": "J",
+          "family": "Peng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b67",
+      "title": "IEEE ASRU",
+      "container_title": "IEEE ASRU",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Yoshioka"
+        },
+        {
+          "given": "N",
+          "family": "Ito"
+        },
+        {
+          "given": "M",
+          "family": "Delcroix"
+        },
+        {
+          "given": "A",
+          "family": "Ogawa"
+        },
+        {
+          "given": "K",
+          "family": "Kinoshita"
+        },
+        {
+          "given": "M F C",
+          "family": "Yu"
+        },
+        {
+          "given": "W J",
+          "family": "Fabian"
+        },
+        {
+          "given": "M",
+          "family": "Espi"
+        },
+        {
+          "given": "T",
+          "family": "Higuchi"
+        },
+        {
+          "given": "S",
+          "family": "Araki"
+        },
+        {
+          "given": "T",
+          "family": "Nakatani"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b68",
+      "title": "Learning to execute",
+      "container_title": "Learning to execute",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "other",
+          "value": ". abs/1410.4615"
+        }
+      ],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Zaremba"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

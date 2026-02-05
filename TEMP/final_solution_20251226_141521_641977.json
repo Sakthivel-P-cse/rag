@@ -1,0 +1,645 @@
+{
+  "judge_summary": {
+    "iterations_requested": 5,
+    "iterations_completed": 5,
+    "satisfied": false,
+    "final_refined_question": "What stabilization methods can be applied to recurrent neural networks without modifying the architecture, considering techniques such as layer normalization, gradient clipping, and learning rate scheduling?",
+    "final_intent": "Understand techniques to mitigate unstable gradients and loss divergence during initial epochs of deep neural network training, within the domain of machine learning, specifically focusing on stabilization methods that do not involve redesigning the network architecture",
+    "final_constraints": [
+      "no architecture redesign",
+      "deep neural networks",
+      "initial epochs"
+    ],
+    "final_excluded_topics": [
+      "switching to larger pre-trained models",
+      "fine-tuning from large pre-trained models",
+      "scaling parameter count as primary solution"
+    ],
+    "final_search_hint": "deep neural network stabilization, recurrent neural networks, batch normalization, layer normalization, gradient clipping, learning rate scheduling, internal covariate shift, weight initialization, scaling, recurrent neural network training",
+    "accepted_chunk_count": 9,
+    "accepted_paper_count": 8,
+    "accepted_paper_ids": [
+      "1502.03167v3.tei.tei",
+      "1510.01378v1.tei.tei",
+      "1512.02595v1.tei.tei",
+      "1601.06733v7.tei.tei",
+      "1602.07868v3.tei.tei",
+      "1603.09025v5.tei.tei",
+      "1607.06450v1.tei.tei",
+      "1705.03122v3.tei.tei"
+    ],
+    "accepted_chunk_ids": [
+      "1502.03167v3.tei.tei_chunk-5",
+      "1502.03167v3.tei.tei_chunk-9",
+      "1510.01378v1.tei.tei_chunk-3",
+      "1512.02595v1.tei.tei_chunk-10",
+      "1601.06733v7.tei.tei_chunk-2",
+      "1602.07868v3.tei.tei_chunk-5",
+      "1603.09025v5.tei.tei_chunk-2",
+      "1607.06450v1.tei.tei_chunk-1",
+      "1705.03122v3.tei.tei_chunk-7"
+    ],
+    "rejected_chunk_count": 15,
+    "rejected_chunk_ids": [
+      "1308.0850v5.tei.tei_chunk-3",
+      "1412.6980v9.tei.tei_chunk-11",
+      "1502.01852v1.tei.tei_chunk-2",
+      "1502.01852v1.tei.tei_chunk-5",
+      "1502.03167v3.tei.tei_chunk-13",
+      "1502.03167v3.tei.tei_chunk-3",
+      "1510.01378v1.tei.tei_chunk-4",
+      "1512.02595v1.tei.tei_chunk-28",
+      "1602.02410v2.tei.tei_chunk-13",
+      "1610.10099v2.tei.tei_chunk-7",
+      "1610.10099v2.tei.tei_chunk-9",
+      "1701.06538v1.tei.tei_chunk-8",
+      "1705.04304v3.tei.tei_chunk-7",
+      "1806.01261v3.tei.tei_chunk-32",
+      "1811.08883v1.tei.tei_chunk-5"
+    ],
+    "rejected_paper_ids": [],
+    "solved_parts": [
+      "batch normalization can help reduce internal covariate shift",
+      "batch normalization can be applied to feed-forward neural networks"
+    ],
+    "unsolved_parts_by_iteration": [
+      {
+        "iteration": 1,
+        "unsolved_parts": [
+          "methods to stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs"
+        ]
+      },
+      {
+        "iteration": 2,
+        "unsolved_parts": [
+          "techniques to stabilize deep neural network training without modifying the architecture, specifically addressing unstable gradients and loss oscillation during initial epochs"
+        ]
+      },
+      {
+        "iteration": 3,
+        "unsolved_parts": [
+          "how to effectively apply batch normalization to recurrent neural networks",
+          "insufficient evidence for other methods to stabilize deep neural network training"
+        ]
+      },
+      {
+        "iteration": 4,
+        "unsolved_parts": [
+          "insufficient evidence for stabilization methods in recurrent architectures without modifying the architecture"
+        ]
+      },
+      {
+        "iteration": 5,
+        "unsolved_parts": [
+          "stabilization methods for recurrent neural networks without modifying the architecture",
+          "effectiveness of layer normalization, gradient clipping, and learning rate scheduling in deep neural networks"
+        ]
+      }
+    ],
+    "log_path": "C:\\Users\\manoj\\Desktop\\Research\\TEMP\\full_run_20251226_140844_083148.txt"
+  },
+  "accepted_chunks": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei",
+      "section": "Gradients",
+      "paragraph_index": 19,
+      "chunk_text": "The rate of increase will depend on the the variance of the weight gradient. If our gradients are\nnoisy, c will be high and the norm of v will quickly increase, which in turn will decrease the\nscaling factor g/||v||.\n\nIf the norm of the gradients is small, we get √ 1 + c 2 ≈ 1, and the norm of v will stop increasing.\nUsing this mechanism, the scaled gradient self-stabilizes its norm. This property does not strictly\nhold for optimizers that use separate learning rates for individual parameters, like Adam [12] which\nwe use in experiments, or when using momentum. However, qualitatively we still find the same effect\nto hold.\n\nEmpirically, we find that the ability to grow the norm ||v|| makes optimization of neural networks\nwith weight normalization very robust to the value of the learning rate: If the learning rate is too\nlarge, the norm of the unnormalized weights grows quickly until an appropriate effective learning\nrate is reached. Once the norm of the weights has grown large with respect to the norm of the\nupdates, the effective learning rate stabilizes. Neural networks with weight normalization therefore\nwork well with a much wider range of learning rates than when using the normal parameterization. It\nhas been observed that neural networks with batch normalization also have this property [11], which\ncan also be explained by this analysis.\n\nBy projecting the gradient away from the weight vector w, we also eliminate the noise in that\ndirection. If the covariance matrix of the gradient with respect to w is given by C, the covariance\nmatrix of the gradient in v is given by D = (g 2 /||v|| 2 )M w CM w . Empirically, we find that w is\noften (close to) a dominant eigenvector of the covariance matrix C: removing that eigenvector then\ngives a new covariance matrix D that is closer to the identity matrix, which may further speed up\nlearning.",
+      "year": 2016,
+      "created_at": "2025-12-22 07:56:22.941328",
+      "score_stage1": 0.5201374,
+      "score_stage2": 0.4250505,
+      "score": 0.4250505,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "discusses gradient stabilization"
+      }
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+      "paper_id": "1502.03167v3.tei.tei",
+      "section": "Towards Reducing Internal Covariate Shift",
+      "paragraph_index": 14,
+      "chunk_text": "Thus, the combination of the update to b and subsequent change in normalization led to no change in\nthe output of the layer nor, consequently, the loss. As the training continues, b will grow\nindefinitely while the loss remains fixed. This problem can get worse if the normalization not only\ncenters but also scales the activations. We have observed this empirically in initial experiments,\nwhere the model blows up when the normalization parameters are computed outside the gradient descent\nstep.\n\nThe issue with the above approach is that the gradient descent optimization does not take into\naccount the fact that the normalization takes place. To address this issue, we would like to ensure\nthat, for any parameter values, the network always produces activations with the desired\ndistribution. Doing so would allow the gradient of the loss with respect to the model parameters to\naccount for the normalization, and for its dependence on the model parameters Θ. Let again x be a\nlayer input, treated as a vector, and X be the set of these inputs over the training data set. The\nnormalization can then be written as a transformation x = Norm(x, X ) which depends not only on the\ngiven training example x but on all examples X -each of which depends on Θ if x is generated by\nanother layer. For backpropagation, we would need to compute the Jacobians ∂Norm(x, X ) ∂x and\n∂Norm(x, X ) ∂X ;\n\nignoring the latter term would lead to the explosion described above. Within this framework,\nwhitening the layer inputs is expensive, as it requires computing the covariance matrix Cov\n\nT and its inverse square root, to produce the whitened activations Cov\n\n), as well as the derivatives of these transforms for backpropagation. This motivates us to seek an\nalternative that performs input normalization in a way that is differentiable and does not require\nthe analysis of the entire training set after every parameter update. Some of the previous\napproaches (e.g. (Lyu & Simoncelli, 2008)) use statistics computed over a single training example,\nor, in the case of image networks, over different feature maps at a given location. However, this\nchanges the representation ability of a network by discarding the absolute scale of activations. We\nwant to a preserve the information in the network, by normalizing the activations in a training\nexample relative to the statistics of the entire training data.",
+      "year": 2015,
+      "created_at": "2025-12-22 07:56:22.385092",
+      "score_stage1": 0.45340294,
+      "score_stage2": 0.41127938,
+      "score": 0.41127938,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "addresses normalization and its impact on training"
+      }
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-9",
+      "paper_id": "1502.03167v3.tei.tei",
+      "section": "Training and Inference with Batch-Normalized Networks",
+      "paragraph_index": 36,
+      "chunk_text": "Modify each layer in N tr BN with input x (k) to take y (k) instead 5: end for 6: Train N tr BN to\noptimize the parameters Θ ∪ {γ (k) , β (k) } K // For clarity,\n\nB , etc.\n\n10:\n\nProcess multiple training mini-batches B, each of size m, and average over them:\n\n11:\n\nIn N inf BN , replace the transform\n\n12: end for Algorithm 2: Training a Batch-Normalized Network\n\nBatch Normalization can be applied to any set of activations in the network. Here, we focus on\ntransforms that consist of an affine transformation followed by an element-wise nonlinearity:\n\nwhere W and b are learned parameters of the model, and g(•) is the nonlinearity such as sigmoid or\nReLU. This formulation covers both fully-connected and convolutional layers. We add the BN transform\nimmediately before the nonlinearity, by normalizing x = W u + b. We could have also normalized the\nlayer inputs u, but since u is likely the output of another nonlinearity, the shape of its\ndistribution is likely to change during training, and constraining its first and second moments\nwould not eliminate the covariate shift. In contrast, W u + b is more likely to have a symmetric,\nnon-sparse distribution, that is \"more Gaussian\" (Hyvärinen & Oja, 2000); normalizing it is likely\nto produce activations with a stable distribution.\n\nNote that, since we normalize W u+b, the bias b can be ignored since its effect will be canceled by\nthe subsequent mean subtraction (the role of the bias is subsumed by β in Alg. 1). Thus, z = g(W u +\nb) is replaced with\n\nwhere the BN transform is applied independently to each dimension of x = W u, with a separate pair\nof learned parameters γ (k) , β (k) per dimension.",
+      "year": 2015,
+      "created_at": "2025-12-22 07:56:22.385092",
+      "score_stage1": 0.46400917,
+      "score_stage2": 0.39638254,
+      "score": 0.39638254,
+      "llm_judge": {
+        "iteration": 1,
+        "decision": "accept",
+        "rationale": "describes batch normalization technique"
+      }
+    },
+    {
+      "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+      "paper_id": "1607.06450v1.tei.tei",
+      "section": "Abstract",
+      "paragraph_index": 0,
+      "chunk_text": "Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the\ntraining time is to normalize the activities of the neurons. A recently introduced technique called\nbatch normalization uses the distribution of the summed input to a neuron over a mini-batch of\ntraining cases to compute a mean and variance which are then used to normalize the summed input to\nthat neuron on each training case. This significantly reduces the training time in feedforward\nneural networks. However, the effect of batch normalization is dependent on the mini-batch size and\nit is not obvious how to apply it to recurrent neural networks. In this paper, we transpose batch\nnormalization into layer normalization by computing the mean and variance used for normalization\nfrom all of the summed inputs to the neurons in a layer on a single training case. Like batch\nnormalization, we also give each neuron its own adaptive bias and gain which are applied after the\nnormalization but before the non-linearity. Unlike batch normalization, layer normalization performs\nexactly the same computation at training and test times. It is also straightforward to apply to\nrecurrent neural networks by computing the normalization statistics separately at each time step.\nLayer normalization is very effective at stabilizing the hidden state dynamics in recurrent\nnetworks. Empirically, we show that layer normalization can substantially reduce the training time\ncompared with previously published techniques.\n\nDeep neural networks trained with some version of Stochastic Gradient Descent have been shown to\nsubstantially outperform previous approaches on various supervised learning tasks in computer vision\n[Krizhevsky et al., 2012] and speech processing [Hinton et al., 2012]. But state-of-the-art deep\nneural networks often require many days of training. It is possible to speed-up the learning by\ncomputing gradients for different subsets of the training cases on different machines or splitting\nthe neural network itself over many machines [Dean et al., 2012], but this can require a lot of\ncommunication and complex software. It also tends to lead to rapidly diminishing returns as the\ndegree of parallelization increases. An orthogonal approach is to modify the computations performed\nin the forward pass of the neural net to make learning easier. Recently, batch normalization [Ioffe\nand Szegedy, 2015] has been proposed to reduce training time by including additional normalization\nstages in deep neural networks. The normalization standardizes each summed input using its mean and\nits standard deviation across the training data. Feedforward neural networks trained using batch\nnormalization converge faster even with simple SGD. In addition to training time improvement, the\nstochasticity from the batch statistics serves as a regularizer during training.",
+      "year": null,
+      "created_at": "2025-12-22 07:56:23.160669",
+      "score_stage1": 0.4250596,
+      "score_stage2": 0.38953355,
+      "score": 0.38953355,
+      "llm_judge": {
+        "iteration": 2,
+        "decision": "accept",
+        "rationale": "discusses layer normalization as a technique to stabilize hidden state dynamics in recurrent networks"
+      }
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-3",
+      "paper_id": "1510.01378v1.tei.tei",
+      "section": "Batch Normalization",
+      "paragraph_index": 6,
+      "chunk_text": "where m is the size of the mini-batch. Using these statistics, we can standardize each feature as\nfollows\n\nwhere is a small positive constant to improve numerical stability.\n\nHowever, standardizing the intermediate activations reduces the representational power of the layer.\n\nTo account for this, batch normalization introduces additional learnable parameters γ and β, which\nrespectively scale and shift the data, leading to a layer of the form\n\nBy setting γ k to σ k and β k to xk , the network can recover the original layer representation. So,\nfor a standard feedforward layer in a neural network\n\nwhere W is the weights matrix, b is the bias vector, x is the input of the layer and φ is an\narbitrary activation function, batch normalization is applied as follows\n\nNote that the bias vector has been removed, since its effect is cancelled by the standardization.\nSince the normalization is now part of the network, the back propagation procedure needs to be\nadapted to propagate gradients through the mean and variance computations as well.\n\nAt test time, we can't use the statistics of the mini-batch. Instead, we can estimate them by either\nforwarding several training mini-batches through the network and averaging their statistics, or by\nmaintaining a running average calculated over each mini-batch seen during training.\n\nRecurrent Neural Networks (RNNs) extend Neural Networks to sequential data. Given an input sequence\nof vectors (x 1 , . . . , x T ), they produce a sequence of hidden states (h 1 , . . . , h T ),\nwhich are computed at time step t as follows\n\nwhere W h is the recurrent weight matrix, W x is the input-to-hidden weight matrix, and φ is an\narbitrary activation function.\n\nIf we have access to the whole input sequence, we can use information not only from the past time\nsteps, but also from the future ones, allowing for bidirectional RNNs\n\nwhere [x : y] denotes the concatenation of x and y. Finally, we can stack RNNs by using h as the\ninput to another RNN, creating deeper architectures [13]",
+      "year": 2015,
+      "created_at": "2025-12-22 07:56:22.673788",
+      "score_stage1": 0.43987218,
+      "score_stage2": 0.35282916,
+      "score": 0.35282916,
+      "llm_judge": {
+        "iteration": 2,
+        "decision": "accept",
+        "rationale": "explains batch normalization and its application to feedforward layers"
+      }
+    },
+    {
+      "chunk_id": "1603.09025v5.tei.tei_chunk-2",
+      "paper_id": "1603.09025v5.tei.tei",
+      "section": "INTRODUCTION",
+      "paragraph_index": 4,
+      "chunk_text": "Batch normalization (Ioffe & Szegedy, 2015) is a recently proposed technique for controlling the\ndistributions of feed-forward neural network activations, thereby reducing internal covariate shift.\nIt involves standardizing the activations going into each layer, enforcing their means and variances\nto be invariant to changes in the parameters of the underlying layers. This effectively decouples\neach layer's parameters from those of other layers, leading to a better-conditioned optimization\nproblem. Indeed, deep neural networks trained with batch normalization converge significantly faster\nand generalize better.\n\nAlthough batch normalization has demonstrated significant training speed-ups and generalization\nbenefits in feed-forward networks, it is proven to be difficult to apply in recurrent architectures\n(Laurent et al., 2016;Amodei et al., 2015). It has found limited use in stacked RNNs, where the\nnormalization is applied \"vertically\", i.e. to the input of each RNN, but not \"horizontally\" between\ntimesteps. RNNs are deeper in the time direction, and as such batch normalization would be most\nbeneficial when applied horizontally. However, Laurent et al. (2016) hypothesized that applying\nbatch normalization in this way hurts training because of exploding gradients due to repeated\nrescaling.\n\nOur findings run counter to this hypothesis. We show that it is both possible and highly beneficial\nto apply batch normalization in the hidden-to-hidden transition of recurrent models. In particular,\nwe describe a reparameterization of LSTM (Section 3) that involves batch normalization and\ndemonstrate that it is easier to optimize and generalizes better. In addition, we empirically\nanalyze the gradient backpropagation and show that proper initialization of the batch normalization\nparameters is crucial to avoiding vanishing gradient (Section 4). We evaluate our proposal on\nseveral sequential problems and show (Section 5) that our LSTM reparameterization consistently\noutperforms the LSTM baseline across tasks, in terms of both time to convergence and performance.\nLiao & Poggio (2016) simultaneously investigated batch normalization in recurrent neural networks,\nalbeit only for very short sequences (10 steps). Ba et al. (2016) independently developed a variant\nof batch normalization that is also applicable to recurrent neural networks and delivers similar\nimprovements as our method.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:22.995412",
+      "score_stage1": 0.54009914,
+      "score_stage2": 0.3756863,
+      "score": 0.3756863,
+      "llm_judge": {
+        "iteration": 3,
+        "decision": "accept",
+        "rationale": "provides information on batch normalization in feed-forward networks and its limitations in recurrent architectures"
+      }
+    },
+    {
+      "chunk_id": "1512.02595v1.tei.tei_chunk-10",
+      "paper_id": "1512.02595v1.tei.tei",
+      "section": "Batch Normalization for Deep RNNs",
+      "paragraph_index": 32,
+      "chunk_text": "The terms E and Var are the empirical mean and variance over a minibatch. The bias b of the layer is\ndropped since its effect is cancelled by mean removal. The learnable parameters γ and β allow the\nlayer to scale and shift each hidden unit as desired. The constant is small and positive, and is\nincluded only for numerical stability. In our convolutional layers the mean and variance are\nestimated over all the temporal output units for a given convolutional filter on a minibatch. The\nBatchNorm transformation reduces internal covariate shift by insulating a given layer from\npotentially uninteresting changes in the mean and variance of the layer's input.\n\nWe consider two methods of extending BatchNorm to bidirectional RNNs [37]. A natural extension is to\ninsert a BatchNorm transformation immediately before every non-linearity. Equation 3 then becomes\n\nIn this case the mean and variance statistics are accumulated over a single time-step of the\nminibatch. The sequential dependence between time-steps prevents averaging over all time-steps. We\nfind that this technique does not lead to improvements in optimization. We also tried accumulating\nan average over successive time-steps, so later time-steps are normalized over all present and\nprevious timesteps. This also proved ineffective and greatly complicated backpropagation.\n\nWe find that sequence-wise normalization [37] overcomes these issues. The recurrent computation is\ngiven by\n\nFor each hidden unit, we compute the mean and variance statistics over all items in the minibatch\nover the length of the sequence. Figure 2 shows that deep networks converge faster with sequencewise\nnormalization. Table 1 shows that the performance improvement from sequence-wise normalization\nincreases with the depth of the network, with a 12% performance difference for the deepest network.\nWhen comparing depth, in order to control for model size we hold constant the total number of\nparameters and still see strong performance gains. We would expect to see even larger improvements\nfrom depth if we held constant the number of activations per layer and added layers. We also find\nthat BatchNorm harms generalization error for the shallowest network just as it converges slower for\nshallower networks.",
+      "year": 2015,
+      "created_at": "2025-12-22 07:56:22.780018",
+      "score_stage1": 0.4232583,
+      "score_stage2": 0.36203575,
+      "score": 0.36203575,
+      "llm_judge": {
+        "iteration": 3,
+        "decision": "accept",
+        "rationale": "discusses batch normalization for deep RNNs and its challenges"
+      }
+    },
+    {
+      "chunk_id": "1705.03122v3.tei.tei_chunk-7",
+      "paper_id": "1705.03122v3.tei.tei",
+      "section": "3.3. Multi-step Attention",
+      "paragraph_index": 25,
+      "chunk_text": "This makes it easier for the model to take into account which previous inputs have been attended to\nalready compared to recurrent nets where this information is in the recurrent state and needs to\nsurvive several non-linearities. Overall, our attention mechanism considers which words we\npreviously attended to (Yang et al., 2016) and performs multiple attention 'hops' per time step. In\nAppendix §C, we plot attention scores for a deep decoder and show that at different layers,\ndifferent portions of the source are attended to.\n\nOur convolutional architecture also allows to batch the attention computation across all elements of\na sequence compared to RNNs (Figure 1, middle). We batch the computations of each decoder layer\nindividually.\n\nWe stabilize learning through careful weight initialization ( §3.5) and by scaling parts of the\nnetwork to ensure that the variance throughout the network does not change dramatically. In\nparticular, we scale the output of residual blocks as well as the attention to preserve the variance\nof activations. We multiply the sum of the input and output of a residual block by √ 0.5 to halve\nthe variance of the sum. This assumes that both summands have the same variance which is not always\ntrue but effective in practice.\n\nThe conditional input c l i generated by the attention is a weighted sum of m vectors (2) and we\ncounteract a change in variance through scaling by m 1/m; we multiply by m to scale up the inputs to\ntheir original size, assuming the attention scores are uniformly distributed. This is generally not\nthe case but we found it to work well in practice.\n\nFor convolutional decoders with multiple attention, we scale the gradients for the encoder layers by\nthe number of attention mechanisms we use; we exclude source word embeddings. We found this to\nstabilize learning since the encoder received too much gradient otherwise.\n\nNormalizing activations when adding the output of different layers, e.g. residual connections,\nrequires careful weight initialization. The motivation for our initialization is the same as for the\nnormalization: maintain the variance of activations throughout the forward and backward passes. All\nembeddings are initialized from a normal distribution with mean 0 and standard deviation 0.1. For\nlayers whose output is not directly fed to a gated linear unit, we initialize weights from N (0, 1/n\nl ) where n l is the number of input connections to each neuron. This ensures that the variance of a\nnormally distributed input is retained.",
+      "year": 2017,
+      "created_at": "2025-12-22 07:56:23.717138",
+      "score_stage1": 0.5343672,
+      "score_stage2": 0.43900436,
+      "score": 0.43900436,
+      "llm_judge": {
+        "iteration": 4,
+        "decision": "accept",
+        "rationale": "discusses stabilization through weight initialization and scaling"
+      }
+    },
+    {
+      "chunk_id": "1601.06733v7.tei.tei_chunk-2",
+      "paper_id": "1601.06733v7.tei.tei",
+      "section": "Introduction",
+      "paragraph_index": 4,
+      "chunk_text": "Language modeling tools such as recurrent neural networks (RNN) bode well with human reading\nbehavior (Frank and Bod, 2011). RNNs treat each sentence as a sequence of words and recursively\ncompose each word with its previous memory, until the meaning of the whole sentence has been\nderived. In practice, however, sequence-level networks are met with at least three challenges. The\nfirst one concerns model training problems associated with vanishing and exploding gradients\n(Hochreiter, 1991;Bengio et al., 1994), which can be partially ameliorated with gated activation\nfunctions, such as the Long Short-Term Memory (LSTM) (Hochreiter and Schmidhuber, 1997), and\ngradient clipping (Pascanu et al., 2013). The second issue relates to memory compression problems.\nAs the input sequence gets compressed and blended into a single dense vector, suf-\n\nThe FBI is chasing a criminal on the run . The The FBI is chasing a criminal on the run . The The\nFBI FBI is chasing a criminal on the run . The The FBI FBI is is chasing a criminal on the run . The\nThe FBI FBI is is chasing chasing a criminal on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on on the the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on on the the run run .\n\nFigure 1: Illustration of our model while reading the sentence The FBI is chasing a criminal on the\nrun. Color red represents the current word being fixated, blue represents memories. Shading\nindicates the degree of memory activation. ficiently large memory capacity is required to store past\ninformation. As a result, the network generalizes poorly to long sequences while wasting memory on\nshorter ones. Finally, it should be acknowledged that sequence-level networks lack a mechanism for\nhandling the structure of the input. This imposes an inductive bias which is at odds with the fact\nthat language has inherent structure. In this paper, we develop a text processing system which\naddresses these limitations while maintaining the incremental, generative property of a recurrent\nlanguage model.",
+      "year": 2016,
+      "created_at": "2025-12-22 07:56:22.835680",
+      "score_stage1": 0.44494584,
+      "score_stage2": 0.38738775,
+      "score": 0.38738775,
+      "llm_judge": {
+        "iteration": 4,
+        "decision": "accept",
+        "rationale": "mentions gradient clipping as a solution to vanishing and exploding gradients"
+      }
+    }
+  ],
+  "subproblems": [
+    {
+      "id": "SP1",
+      "question": "What layer normalization techniques can be applied to recurrent neural networks without modifying the architecture?",
+      "rationale": "To identify specific layer normalization methods that can stabilize RNNs",
+      "search_hint": "layer normalization, recurrent neural networks, RNN stabilization, normalization techniques"
+    },
+    {
+      "id": "SP2",
+      "question": "How can gradient clipping and learning rate scheduling be used to stabilize recurrent neural networks?",
+      "rationale": "To understand the role of gradient clipping and learning rate scheduling in RNN stabilization",
+      "search_hint": "gradient clipping, learning rate scheduling, RNN stabilization, optimization techniques"
+    },
+    {
+      "id": "SP3",
+      "question": "What are the comparative effects of layer normalization, gradient clipping, and learning rate scheduling on the stability of recurrent neural networks?",
+      "rationale": "To compare the effectiveness of different stabilization methods for RNNs",
+      "search_hint": "RNN stability, layer normalization, gradient clipping, learning rate scheduling, comparative analysis"
+    }
+  ],
+  "subproblem_chunks": {
+    "SP1": [
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-4",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Layer normalized recurrent neural networks",
+        "paragraph_index": 11,
+        "chunk_text": "In a standard RNN, the summed inputs in the recurrent layer are computed from the current input x t\nand previous vector of hidden states h t-1 which are computed as a t = W hh h t-1 + W xh x t . The\nlayer normalized recurrent layer re-centers and re-scales its activations using the extra\nnormalization terms similar to Eq. ( 3):\n\nwhere W hh is the recurrent hidden to hidden weights and W xh are the bottom up input to hidden\nweights. is the element-wise multiplication between two vectors. b and g are defined as the bias and\ngain parameters of the same dimension as h t .\n\nIn a standard RNN, there is a tendency for the average magnitude of the summed inputs to the\nrecurrent units to either grow or shrink at every time-step, leading to exploding or vanishing\ngradients. In a layer normalized RNN, the normalization terms make it invariant to re-scaling all of\nthe summed inputs to a layer, which results in much more stable hidden-to-hidden dynamics.\n\nBatch normalization has been previously extended to recurrent neural networks [Laurent et al., 2015,\nAmodei et al., 2015, Cooijmans et al., 2016]. The previous work [Cooijmans et al., 2016] suggests\nthe best performance of recurrent batch normalization is obtained by keeping independent\nnormalization statistics for each time-step. The authors show that initializing the gain parameter\nin the recurrent batch normalization layer to 0.1 makes significant difference in the final\nperformance of the model. Our work is also related to weight normalization [Salimans and Kingma,\n2016]. In weight normalization, instead of the variance, the L2 norm of the incoming weights is used\nto normalize the summed inputs to a neuron. Applying either weight normalization or batch\nnormalization using expected statistics is equivalent to have a different parameterization of the\noriginal feed-forward neural network. Re-parameterization in the ReLU network was studied in the\nPathnormalized SGD [Neyshabur et al., 2015]. Our proposed layer normalization method, however, is\nnot a re-parameterization of the original neural network. The layer normalized model, thus, has\ndifferent invariance properties than the other methods, that we will study in the following section.",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.68382585,
+        "score_stage2": 0.6881059,
+        "score": 0.6881059
+      },
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-14",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Conclusion",
+        "paragraph_index": 54,
+        "chunk_text": "Empirically, we showed that recurrent neural networks benefit the most from the proposed method\nespecially for long sequences and small mini-batches.\n\nThis section describes how layer normalization is applied to each of the papers' experiments. For\nnotation convenience, we define layer normalization as a function mapping LN : R D → R D with two\nset of adaptive parameters, gains α and biases β:\n\nwhere, z i is the i th element of the vector z.\n\nTeaching machines to read and comprehend and handwriting sequence generation\n\nThe basic LSTM equations used for these experiment are given by:\n\nThe version that incorporates layer normalization is modified as follows:\n\nwhere α i , β i are the additive and multiplicative parameters, respectively. Each α i is\ninitialized to a vector of zeros and each β i is initialized to a vector of ones.\n\nThese experiments utilize a variant of gated recurrent unit which is defined as follows:\n\nh t = (1 -σ(z t ))h t-1 + σ(z t ) ĥt (28) just as before, α i is initialized to a vector of zeros\nand each β i is initialized to a vector of ones.\n\nThe layer norm is only applied to the output of the LSTM hidden states in this experiment:\n\nThe version that incorporates layer normalization is modified as follows:   \n\nc t = σ(f t ) c t-1 + σ(i t ) tanh(g t ) (30) h t = σ(o t ) tanh(LN (c t ; α, β))\n\n(31) where α, β are the additive and multiplicative parameters, respectively. α is initialized to a\nvector of zeros and β is initialized to a vector of ones.\n\nWe now compare how gradient descent updates changing magnitude of the equivalent weights between the\nnormalized GLM and original parameterization. The magnitude of the weights are explicitly\nparameterized using the gain parameter in the normalized model. Assume there is a gradient update\nthat changes norm of the weight vectors by δ g . We can project the gradient updates to the weight\nvector for the normal GLM. The KL metric, ie how much the gradient update changes the model\nprediction, for the normalized model depends only on the magnitude of the prediction error.\nSpecifically, under batch normalization:",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.6239278,
+        "score_stage2": 0.6374065,
+        "score": 0.6374065
+      },
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Abstract",
+        "paragraph_index": 0,
+        "chunk_text": "Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the\ntraining time is to normalize the activities of the neurons. A recently introduced technique called\nbatch normalization uses the distribution of the summed input to a neuron over a mini-batch of\ntraining cases to compute a mean and variance which are then used to normalize the summed input to\nthat neuron on each training case. This significantly reduces the training time in feedforward\nneural networks. However, the effect of batch normalization is dependent on the mini-batch size and\nit is not obvious how to apply it to recurrent neural networks. In this paper, we transpose batch\nnormalization into layer normalization by computing the mean and variance used for normalization\nfrom all of the summed inputs to the neurons in a layer on a single training case. Like batch\nnormalization, we also give each neuron its own adaptive bias and gain which are applied after the\nnormalization but before the non-linearity. Unlike batch normalization, layer normalization performs\nexactly the same computation at training and test times. It is also straightforward to apply to\nrecurrent neural networks by computing the normalization statistics separately at each time step.\nLayer normalization is very effective at stabilizing the hidden state dynamics in recurrent\nnetworks. Empirically, we show that layer normalization can substantially reduce the training time\ncompared with previously published techniques.\n\nDeep neural networks trained with some version of Stochastic Gradient Descent have been shown to\nsubstantially outperform previous approaches on various supervised learning tasks in computer vision\n[Krizhevsky et al., 2012] and speech processing [Hinton et al., 2012]. But state-of-the-art deep\nneural networks often require many days of training. It is possible to speed-up the learning by\ncomputing gradients for different subsets of the training cases on different machines or splitting\nthe neural network itself over many machines [Dean et al., 2012], but this can require a lot of\ncommunication and complex software. It also tends to lead to rapidly diminishing returns as the\ndegree of parallelization increases. An orthogonal approach is to modify the computations performed\nin the forward pass of the neural net to make learning easier. Recently, batch normalization [Ioffe\nand Szegedy, 2015] has been proposed to reduce training time by including additional normalization\nstages in deep neural networks. The normalization standardizes each summed input using its mean and\nits standard deviation across the training data. Feedforward neural networks trained using batch\nnormalization converge faster even with simple SGD. In addition to training time improvement, the\nstochasticity from the batch statistics serves as a regularizer during training.",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.73367965,
+        "score_stage2": 0.63646114,
+        "score": 0.63646114
+      }
+    ],
+    "SP2": [
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Abstract",
+        "paragraph_index": 0,
+        "chunk_text": "Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the\ntraining time is to normalize the activities of the neurons. A recently introduced technique called\nbatch normalization uses the distribution of the summed input to a neuron over a mini-batch of\ntraining cases to compute a mean and variance which are then used to normalize the summed input to\nthat neuron on each training case. This significantly reduces the training time in feedforward\nneural networks. However, the effect of batch normalization is dependent on the mini-batch size and\nit is not obvious how to apply it to recurrent neural networks. In this paper, we transpose batch\nnormalization into layer normalization by computing the mean and variance used for normalization\nfrom all of the summed inputs to the neurons in a layer on a single training case. Like batch\nnormalization, we also give each neuron its own adaptive bias and gain which are applied after the\nnormalization but before the non-linearity. Unlike batch normalization, layer normalization performs\nexactly the same computation at training and test times. It is also straightforward to apply to\nrecurrent neural networks by computing the normalization statistics separately at each time step.\nLayer normalization is very effective at stabilizing the hidden state dynamics in recurrent\nnetworks. Empirically, we show that layer normalization can substantially reduce the training time\ncompared with previously published techniques.\n\nDeep neural networks trained with some version of Stochastic Gradient Descent have been shown to\nsubstantially outperform previous approaches on various supervised learning tasks in computer vision\n[Krizhevsky et al., 2012] and speech processing [Hinton et al., 2012]. But state-of-the-art deep\nneural networks often require many days of training. It is possible to speed-up the learning by\ncomputing gradients for different subsets of the training cases on different machines or splitting\nthe neural network itself over many machines [Dean et al., 2012], but this can require a lot of\ncommunication and complex software. It also tends to lead to rapidly diminishing returns as the\ndegree of parallelization increases. An orthogonal approach is to modify the computations performed\nin the forward pass of the neural net to make learning easier. Recently, batch normalization [Ioffe\nand Szegedy, 2015] has been proposed to reduce training time by including additional normalization\nstages in deep neural networks. The normalization standardizes each summed input using its mean and\nits standard deviation across the training data. Feedforward neural networks trained using batch\nnormalization converge faster even with simple SGD. In addition to training time improvement, the\nstochasticity from the batch statistics serves as a regularizer during training.",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.42926282,
+        "score_stage2": 0.46474558,
+        "score": 0.46474558
+      },
+      {
+        "chunk_id": "1601.06733v7.tei.tei_chunk-2",
+        "paper_id": "1601.06733v7.tei.tei",
+        "section": "Introduction",
+        "paragraph_index": 4,
+        "chunk_text": "Language modeling tools such as recurrent neural networks (RNN) bode well with human reading\nbehavior (Frank and Bod, 2011). RNNs treat each sentence as a sequence of words and recursively\ncompose each word with its previous memory, until the meaning of the whole sentence has been\nderived. In practice, however, sequence-level networks are met with at least three challenges. The\nfirst one concerns model training problems associated with vanishing and exploding gradients\n(Hochreiter, 1991;Bengio et al., 1994), which can be partially ameliorated with gated activation\nfunctions, such as the Long Short-Term Memory (LSTM) (Hochreiter and Schmidhuber, 1997), and\ngradient clipping (Pascanu et al., 2013). The second issue relates to memory compression problems.\nAs the input sequence gets compressed and blended into a single dense vector, suf-\n\nThe FBI is chasing a criminal on the run . The The FBI is chasing a criminal on the run . The The\nFBI FBI is chasing a criminal on the run . The The FBI FBI is is chasing a criminal on the run . The\nThe FBI FBI is is chasing chasing a criminal on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on on the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on on the the run .\n\nThe The FBI FBI is is chasing chasing a a criminal criminal on on the the run run .\n\nFigure 1: Illustration of our model while reading the sentence The FBI is chasing a criminal on the\nrun. Color red represents the current word being fixated, blue represents memories. Shading\nindicates the degree of memory activation. ficiently large memory capacity is required to store past\ninformation. As a result, the network generalizes poorly to long sequences while wasting memory on\nshorter ones. Finally, it should be acknowledged that sequence-level networks lack a mechanism for\nhandling the structure of the input. This imposes an inductive bias which is at odds with the fact\nthat language has inherent structure. In this paper, we develop a text processing system which\naddresses these limitations while maintaining the incremental, generative property of a recurrent\nlanguage model.",
+        "year": 2016,
+        "created_at": "2025-12-22 07:56:22.835680",
+        "score_stage1": 0.4923526,
+        "score_stage2": 0.43334144,
+        "score": 0.43334144
+      },
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-4",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Layer normalized recurrent neural networks",
+        "paragraph_index": 11,
+        "chunk_text": "In a standard RNN, the summed inputs in the recurrent layer are computed from the current input x t\nand previous vector of hidden states h t-1 which are computed as a t = W hh h t-1 + W xh x t . The\nlayer normalized recurrent layer re-centers and re-scales its activations using the extra\nnormalization terms similar to Eq. ( 3):\n\nwhere W hh is the recurrent hidden to hidden weights and W xh are the bottom up input to hidden\nweights. is the element-wise multiplication between two vectors. b and g are defined as the bias and\ngain parameters of the same dimension as h t .\n\nIn a standard RNN, there is a tendency for the average magnitude of the summed inputs to the\nrecurrent units to either grow or shrink at every time-step, leading to exploding or vanishing\ngradients. In a layer normalized RNN, the normalization terms make it invariant to re-scaling all of\nthe summed inputs to a layer, which results in much more stable hidden-to-hidden dynamics.\n\nBatch normalization has been previously extended to recurrent neural networks [Laurent et al., 2015,\nAmodei et al., 2015, Cooijmans et al., 2016]. The previous work [Cooijmans et al., 2016] suggests\nthe best performance of recurrent batch normalization is obtained by keeping independent\nnormalization statistics for each time-step. The authors show that initializing the gain parameter\nin the recurrent batch normalization layer to 0.1 makes significant difference in the final\nperformance of the model. Our work is also related to weight normalization [Salimans and Kingma,\n2016]. In weight normalization, instead of the variance, the L2 norm of the incoming weights is used\nto normalize the summed inputs to a neuron. Applying either weight normalization or batch\nnormalization using expected statistics is equivalent to have a different parameterization of the\noriginal feed-forward neural network. Re-parameterization in the ReLU network was studied in the\nPathnormalized SGD [Neyshabur et al., 2015]. Our proposed layer normalization method, however, is\nnot a re-parameterization of the original neural network. The layer normalized model, thus, has\ndifferent invariance properties than the other methods, that we will study in the following section.",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.4598041,
+        "score_stage2": 0.42600694,
+        "score": 0.42600694
+      }
+    ],
+    "SP3": [
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-4",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Layer normalized recurrent neural networks",
+        "paragraph_index": 11,
+        "chunk_text": "In a standard RNN, the summed inputs in the recurrent layer are computed from the current input x t\nand previous vector of hidden states h t-1 which are computed as a t = W hh h t-1 + W xh x t . The\nlayer normalized recurrent layer re-centers and re-scales its activations using the extra\nnormalization terms similar to Eq. ( 3):\n\nwhere W hh is the recurrent hidden to hidden weights and W xh are the bottom up input to hidden\nweights. is the element-wise multiplication between two vectors. b and g are defined as the bias and\ngain parameters of the same dimension as h t .\n\nIn a standard RNN, there is a tendency for the average magnitude of the summed inputs to the\nrecurrent units to either grow or shrink at every time-step, leading to exploding or vanishing\ngradients. In a layer normalized RNN, the normalization terms make it invariant to re-scaling all of\nthe summed inputs to a layer, which results in much more stable hidden-to-hidden dynamics.\n\nBatch normalization has been previously extended to recurrent neural networks [Laurent et al., 2015,\nAmodei et al., 2015, Cooijmans et al., 2016]. The previous work [Cooijmans et al., 2016] suggests\nthe best performance of recurrent batch normalization is obtained by keeping independent\nnormalization statistics for each time-step. The authors show that initializing the gain parameter\nin the recurrent batch normalization layer to 0.1 makes significant difference in the final\nperformance of the model. Our work is also related to weight normalization [Salimans and Kingma,\n2016]. In weight normalization, instead of the variance, the L2 norm of the incoming weights is used\nto normalize the summed inputs to a neuron. Applying either weight normalization or batch\nnormalization using expected statistics is equivalent to have a different parameterization of the\noriginal feed-forward neural network. Re-parameterization in the ReLU network was studied in the\nPathnormalized SGD [Neyshabur et al., 2015]. Our proposed layer normalization method, however, is\nnot a re-parameterization of the original neural network. The layer normalized model, thus, has\ndifferent invariance properties than the other methods, that we will study in the following section.",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.62880206,
+        "score_stage2": 0.4940357,
+        "score": 0.4940357
+      },
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-3",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Background",
+        "paragraph_index": 6,
+        "chunk_text": "where āl i is normalized summed inputs to the i th hidden unit in the l th layer and g i is a gain\nparameter scaling the normalized activation before the non-linear activation function. Note the\nexpectation is under the whole training data distribution. It is typically impractical to compute\nthe expectations in Eq. ( 2) exactly, since it would require forward passes through the whole\ntraining dataset with the current set of weights. Instead, µ and σ are estimated using the empirical\nsamples from the current mini-batch. This puts constraints on the size of a mini-batch and it is\nhard to apply to recurrent neural networks.\n\nWe now consider the layer normalization method which is designed to overcome the drawbacks of batch\nnormalization.\n\nNotice that changes in the output of one layer will tend to cause highly correlated changes in the\nsummed inputs to the next layer, especially with ReLU units whose outputs can change by a lot. This\nsuggests the \"covariate shift\" problem can be reduced by fixing the mean and the variance of the\nsummed inputs within each layer. We, thus, compute the layer normalization statistics over all the\nhidden units in the same layer as follows:\n\nwhere H denotes the number of hidden units in a layer. The difference between Eq. ( 2) and Eq. ( 3)\nis that under layer normalization, all the hidden units in a layer share the same normalization\nterms µ and σ, but different training cases have different normalization terms. Unlike batch\nnormalization, layer normaliztion does not impose any constraint on the size of a mini-batch and it\ncan be used in the pure online regime with batch size 1.\n\nThe recent sequence to sequence models [Sutskever et al., 2014] utilize compact recurrent neural\nnetworks to solve sequential prediction problems in natural language processing. It is common among\nthe NLP tasks to have different sentence lengths for different training cases. This is easy to deal\nwith in an RNN because the same weights are used at every time-step. But when we apply batch\nnormalization to an RNN in the obvious way, we need to to compute and store separate statistics for\neach time step in a sequence. This is problematic if a test sequence is longer than any of the\ntraining sequences. Layer normalization does not have such problem because its normalization terms\ndepend only on the summed inputs to a layer at the current time-step. It also has only one set of\ngain and bias parameters shared over all time-steps.",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.5466828,
+        "score_stage2": 0.48896068,
+        "score": 0.48896068
+      },
+      {
+        "chunk_id": "1607.06450v1.tei.tei_chunk-14",
+        "paper_id": "1607.06450v1.tei.tei",
+        "section": "Conclusion",
+        "paragraph_index": 54,
+        "chunk_text": "Empirically, we showed that recurrent neural networks benefit the most from the proposed method\nespecially for long sequences and small mini-batches.\n\nThis section describes how layer normalization is applied to each of the papers' experiments. For\nnotation convenience, we define layer normalization as a function mapping LN : R D → R D with two\nset of adaptive parameters, gains α and biases β:\n\nwhere, z i is the i th element of the vector z.\n\nTeaching machines to read and comprehend and handwriting sequence generation\n\nThe basic LSTM equations used for these experiment are given by:\n\nThe version that incorporates layer normalization is modified as follows:\n\nwhere α i , β i are the additive and multiplicative parameters, respectively. Each α i is\ninitialized to a vector of zeros and each β i is initialized to a vector of ones.\n\nThese experiments utilize a variant of gated recurrent unit which is defined as follows:\n\nh t = (1 -σ(z t ))h t-1 + σ(z t ) ĥt (28) just as before, α i is initialized to a vector of zeros\nand each β i is initialized to a vector of ones.\n\nThe layer norm is only applied to the output of the LSTM hidden states in this experiment:\n\nThe version that incorporates layer normalization is modified as follows:   \n\nc t = σ(f t ) c t-1 + σ(i t ) tanh(g t ) (30) h t = σ(o t ) tanh(LN (c t ; α, β))\n\n(31) where α, β are the additive and multiplicative parameters, respectively. α is initialized to a\nvector of zeros and β is initialized to a vector of ones.\n\nWe now compare how gradient descent updates changing magnitude of the equivalent weights between the\nnormalized GLM and original parameterization. The magnitude of the weights are explicitly\nparameterized using the gain parameter in the normalized model. Assume there is a gradient update\nthat changes norm of the weight vectors by δ g . We can project the gradient updates to the weight\nvector for the normal GLM. The KL metric, ie how much the gradient update changes the model\nprediction, for the normalized model depends only on the magnitude of the prediction error.\nSpecifically, under batch normalization:",
+        "year": null,
+        "created_at": "2025-12-22 07:56:23.160669",
+        "score_stage1": 0.54699254,
+        "score_stage2": 0.4811889,
+        "score": 0.4811889
+      }
+    ]
+  },
+  "subproblem_answers": {
+    "SP1": {
+      "subproblem_id": "SP1",
+      "question": "What layer normalization techniques can be applied to recurrent neural networks without modifying the architecture?",
+      "answer_paragraphs": [
+        "In a standard RNN, the summed inputs in the recurrent layer are computed from the current input x t and previous vector of hidden states h t-1 which are computed as a t = W hh h t-1 + W xh x t . The layer normalized recurrent layer re-centers and re-scales its activations using the extra normalization terms similar to Eq. ( 3):",
+        "Batch normalization has been previously extended to recurrent neural networks [Laurent et al., 2015, Amodei et al., 2015, Cooijmans et al., 2016]. The previous work [Cooijmans et al., 2016] suggests the best performance of recurrent batch normalization is obtained by keeping independent normalization statistics for each time-step."
+      ],
+      "key_points": [
+        "Layer normalization can be applied to recurrent neural networks without modifying the architecture",
+        "Batch normalization has been extended to recurrent neural networks"
+      ],
+      "citations": [
+        {
+          "paper_id": "1607.06450v1.tei.tei",
+          "chunk_id": "1607.06450v1.tei.tei_chunk-4",
+          "supports": "Describes layer normalization in RNNs"
+        },
+        {
+          "paper_id": "1607.06450v1.tei.tei",
+          "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+          "supports": "Introduces layer normalization as an alternative to batch normalization"
+        }
+      ],
+      "unknowns": [],
+      "used_chunk_ids": [
+        "1607.06450v1.tei.tei_chunk-4",
+        "1607.06450v1.tei.tei_chunk-1"
+      ],
+      "used_paper_ids": [
+        "1607.06450v1.tei.tei"
+      ],
+      "sufficient": true
+    },
+    "SP2": {
+      "subproblem_id": "SP2",
+      "question": "How can gradient clipping and learning rate scheduling be used to stabilize recurrent neural networks?",
+      "answer_paragraphs": [],
+      "key_points": [
+        "Gradient clipping can partially ameliorate model training problems associated with vanishing and exploding gradients"
+      ],
+      "citations": [
+        {
+          "paper_id": "1601.06733v7.tei.tei",
+          "chunk_id": "1601.06733v7.tei.tei_chunk-2",
+          "supports": "Mentions gradient clipping as a solution to vanishing and exploding gradients"
+        }
+      ],
+      "unknowns": [
+        "How learning rate scheduling can be used to stabilize recurrent neural networks"
+      ],
+      "used_chunk_ids": [
+        "1601.06733v7.tei.tei_chunk-2"
+      ],
+      "used_paper_ids": [
+        "1601.06733v7.tei.tei"
+      ],
+      "sufficient": false
+    },
+    "SP3": {
+      "subproblem_id": "SP3",
+      "question": "What are the comparative effects of layer normalization, gradient clipping, and learning rate scheduling on the stability of recurrent neural networks?",
+      "answer_paragraphs": [],
+      "key_points": [
+        "Layer normalization makes the recurrent neural network invariant to re-scaling all of the summed inputs to a layer, resulting in more stable hidden-to-hidden dynamics."
+      ],
+      "citations": [
+        {
+          "paper_id": "1607.06450v1.tei.tei",
+          "chunk_id": "1607.06450v1.tei.tei_chunk-4",
+          "supports": "Layer normalization stabilizes RNNs"
+        }
+      ],
+      "unknowns": [
+        "comparative effects of gradient clipping and learning rate scheduling on the stability of recurrent neural networks"
+      ],
+      "used_chunk_ids": [
+        "1607.06450v1.tei.tei_chunk-4"
+      ],
+      "used_paper_ids": [
+        "1607.06450v1.tei.tei"
+      ],
+      "sufficient": false
+    }
+  },
+  "solution": {
+    "final_answer_paragraphs": [
+      "To stabilize training of deep neural networks without modifying the architecture, several techniques can be applied. One such technique is layer normalization, which can be used in recurrent neural networks (RNNs) to reduce internal covariate shift and stabilize hidden state dynamics.",
+      "Layer normalization involves computing the mean and variance of the summed inputs to the neurons in a layer on a single training case, and then using these statistics to normalize the inputs. This approach is different from batch normalization, which computes the mean and variance over a mini-batch of training cases.",
+      "Another technique that can be used to stabilize RNNs is gradient clipping, which involves limiting the magnitude of the gradients to prevent exploding gradients. However, the evidence provided does not fully explain how gradient clipping and learning rate scheduling can be used to stabilize RNNs.",
+      "The use of layer normalization in RNNs has been shown to be effective in stabilizing the hidden state dynamics and improving the performance of the network. This is because layer normalization makes the RNN invariant to re-scaling all of the summed inputs to a layer, resulting in more stable hidden-to-hidden dynamics.",
+      "In addition to layer normalization, other techniques such as weight normalization and batch normalization can also be used to stabilize deep neural networks. However, the evidence provided does not fully explain the comparative effects of these techniques on the stability of RNNs.",
+      "To apply layer normalization to RNNs, the normalization statistics can be computed separately at each time step. This approach is straightforward to implement and can be used in the pure online regime with batch size 1.",
+      "The evidence provided suggests that layer normalization can be used to stabilize RNNs without modifying the architecture. However, further research is needed to fully understand the effects of gradient clipping and learning rate scheduling on the stability of RNNs.",
+      "In conclusion, layer normalization is a technique that can be used to stabilize the training of deep neural networks without modifying the architecture. It involves computing the mean and variance of the summed inputs to the neurons in a layer on a single training case, and then using these statistics to normalize the inputs.",
+      "The use of layer normalization in RNNs has been shown to be effective in stabilizing the hidden state dynamics and improving the performance of the network. However, further research is needed to fully understand the comparative effects of different techniques on the stability of RNNs."
+    ],
+    "key_points": [
+      "Layer normalization can be used to stabilize the training of deep neural networks without modifying the architecture.",
+      "Layer normalization involves computing the mean and variance of the summed inputs to the neurons in a layer on a single training case.",
+      "Gradient clipping can be used to prevent exploding gradients in RNNs.",
+      "The evidence provided does not fully explain the comparative effects of layer normalization, gradient clipping, and learning rate scheduling on the stability of RNNs."
+    ],
+    "keyword_coverage": [
+      {
+        "keyword": "deep neural network stabilization",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "recurrent neural networks",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "batch normalization",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "layer normalization",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "gradient clipping",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "learning rate scheduling",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "internal covariate shift",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "weight initialization",
+        "where_used": "none"
+      },
+      {
+        "keyword": "scaling",
+        "where_used": "none"
+      },
+      {
+        "keyword": "recurrent neural network training",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "stabilization methods for recurrent neural networks without modifying the architecture",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "effectiveness of layer normalization, gradient clipping, and learning rate scheduling in deep neural networks",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "no architecture redesign",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "deep neural networks",
+        "where_used": "final answer paragraphs"
+      },
+      {
+        "keyword": "initial epochs",
+        "where_used": "none"
+      }
+    ],
+    "citations": [
+      {
+        "paper_id": "1607.06450v1.tei.tei",
+        "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+        "supports": "Introduces layer normalization as an alternative to batch normalization"
+      },
+      {
+        "paper_id": "1607.06450v1.tei.tei",
+        "chunk_id": "1607.06450v1.tei.tei_chunk-4",
+        "supports": "Describes layer normalization in RNNs"
+      },
+      {
+        "paper_id": "1601.06733v7.tei.tei",
+        "chunk_id": "1601.06733v7.tei.tei_chunk-2",
+        "supports": "Mentions gradient clipping as a solution to vanishing and exploding gradients"
+      }
+    ],
+    "evidence_backed_sections": [
+      {
+        "title": "Introduction to Layer Normalization",
+        "content": "Layer normalization is a technique that can be used to stabilize the training of deep neural networks without modifying the architecture.",
+        "citations": [
+          {
+            "paper_id": "1607.06450v1.tei.tei",
+            "chunk_id": "1607.06450v1.tei.tei_chunk-1"
+          }
+        ]
+      },
+      {
+        "title": "Layer Normalization in RNNs",
+        "content": "Layer normalization can be used in RNNs to reduce internal covariate shift and stabilize hidden state dynamics.",
+        "citations": [
+          {
+            "paper_id": "1607.06450v1.tei.tei",
+            "chunk_id": "1607.06450v1.tei.tei_chunk-4"
+          }
+        ]
+      }
+    ],
+    "unknowns": [
+      "The comparative effects of layer normalization, gradient clipping, and learning rate scheduling on the stability of RNNs.",
+      "The use of weight initialization and scaling in stabilizing deep neural networks."
+    ],
+    "used_chunk_ids": [
+      "1607.06450v1.tei.tei_chunk-1",
+      "1607.06450v1.tei.tei_chunk-4",
+      "1601.06733v7.tei.tei_chunk-2"
+    ],
+    "used_paper_ids": [
+      "1607.06450v1.tei.tei",
+      "1601.06733v7.tei.tei"
+    ],
+    "used_papers": [
+      {
+        "paper_id": "1607.06450v1.tei.tei",
+        "used_chunk_ids": [
+          "1607.06450v1.tei.tei_chunk-1",
+          "1607.06450v1.tei.tei_chunk-4"
+        ],
+        "notes": "Introduces layer normalization and describes its use in RNNs"
+      },
+      {
+        "paper_id": "1601.06733v7.tei.tei",
+        "used_chunk_ids": [
+          "1601.06733v7.tei.tei_chunk-2"
+        ],
+        "notes": "Mentions gradient clipping as a solution to vanishing and exploding gradients"
+      }
+    ],
+    "_raw": "Here is the final answer in the required JSON schema:\n\n```\n{\n    \"final_answer_paragraphs\": [\n        \"To stabilize training of deep neural networks without modifying the architecture, several techniques can be applied. One such technique is layer normalization, which can be used in recurrent neural networks (RNNs) to reduce internal covariate shift and stabilize hidden state dynamics.\",\n        \"Layer normalization involves computing the mean and variance of the summed inputs to the neurons in a layer on a single training case, and then using these statistics to normalize the inputs. This approach is different from batch normalization, which computes the mean and variance over a mini-batch of training cases.\",\n        \"Another technique that can be used to stabilize RNNs is gradient clipping, which involves limiting the magnitude of the gradients to prevent exploding gradients. However, the evidence provided does not fully explain how gradient clipping and learning rate scheduling can be used to stabilize RNNs.\",\n        \"The use of layer normalization in RNNs has been shown to be effective in stabilizing the hidden state dynamics and improving the performance of the network. This is because layer normalization makes the RNN invariant to re-scaling all of the summed inputs to a layer, resulting in more stable hidden-to-hidden dynamics.\",\n        \"In addition to layer normalization, other techniques such as weight normalization and batch normalization can also be used to stabilize deep neural networks. However, the evidence provided does not fully explain the comparative effects of these techniques on the stability of RNNs.\",\n        \"To apply layer normalization to RNNs, the normalization statistics can be computed separately at each time step. This approach is straightforward to implement and can be used in the pure online regime with batch size 1.\",\n        \"The evidence provided suggests that layer normalization can be used to stabilize RNNs without modifying the architecture. However, further research is needed to fully understand the effects of gradient clipping and learning rate scheduling on the stability of RNNs.\",\n        \"In conclusion, layer normalization is a technique that can be used to stabilize the training of deep neural networks without modifying the architecture. It involves computing the mean and variance of the summed inputs to the neurons in a layer on a single training case, and then using these statistics to normalize the inputs.\",\n        \"The use of layer normalization in RNNs has been shown to be effective in stabilizing the hidden state dynamics and improving the performance of the network. However, further research is needed to fully understand the comparative effects of different techniques on the stability of RNNs.\"\n    ],\n    \"key_points\": [\n        \"Layer normalization can be used to stabilize the training of deep neural networks without modifying the architecture.\",\n        \"Layer normalization involves computing the mean and variance of the summed inputs to the neurons in a layer on a single training case.\",\n        \"Gradient clipping can be used to prevent exploding gradients in RNNs.\",\n        \"The evidence provided does not fully explain the comparative effects of layer normalization, gradient clipping, and learning rate scheduling on the stability of RNNs.\"\n    ],\n    \"keyword_coverage\": [\n        {\"keyword\": \"deep neural network stabilization\", \"where_used\": \"final answer paragraphs\"},\n        {\"keyword\": \"recurrent neural networks\", \"where_used\": \"final answer paragraphs\"},\n        {\"keyword\": \"batch normalization\", \"where_used\": \"final answer paragraphs\"},\n        {\"keyword\": \"layer normalization\", \"where_used\": \"final answer paragraphs\"},\n        {\"keyword\": \"gradient clipping\", \"where_used\": \"final answer paragraphs\"},\n        {\"keyword\": \"learning rate scheduling\", \"where_used\": \"final answer paragraphs\"},\n        {\"keyword\": \"internal covariate shift\", \"where_used\": \"final answer ...",
+    "_required_keywords_phrases": [
+      "deep neural network stabilization",
+      "recurrent neural networks",
+      "batch normalization",
+      "layer normalization",
+      "gradient clipping",
+      "learning rate scheduling",
+      "internal covariate shift",
+      "weight initialization",
+      "scaling",
+      "recurrent neural network training",
+      "stabilization methods for recurrent neural networks without modifying the architecture",
+      "effectiveness of layer normalization, gradient clipping, and learning rate scheduling in deep neural networks",
+      "no architecture redesign",
+      "deep neural networks",
+      "initial epochs"
+    ]
+  }
+}

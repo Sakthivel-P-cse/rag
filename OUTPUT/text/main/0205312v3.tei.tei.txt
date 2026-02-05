@@ -1,0 +1,182 @@
+# Observation of minority spin character of the new electron doped manganite La 0.7 Ce 0.3 MnO 3 from tunneling magnetoresistance
+
+**Published:** October 23, 2018
+
+## Abstract
+
+We report the magnetotransport characteristics of a trilayer ferromagnetic tunnel junction build of
+an electron doped manganite (La0.7Ce0.3MnO3) and a hole doped manganite (La0.7Ca0.3MnO3). At low
+temperatures the junction exhibits a large positive tunneling magnetoresistance (TMR), irrespective
+of the bias voltage. At intermediate temperatures below TC the sign of the TMR is dependent on the
+bias voltage across the junction. The magnetoresistive characteristics of the junction strongly
+suggest that La0.7Ce0.3MnO3 is a minority spin carrier ferromagnet with a high degree of spin
+polarization, i.e. a transport half metal.
+
+There has been a lot of interest recently in the hole doped rare-earth manganites, where the rare-
+earth in the insulating parent compound is partially replaced by a divalent cation (such as Ca, Ba,
+Sr, Pb etc.) [1]. Around 30% hole doping most of these compounds such as La 0.7 Ca 0.3 MnO 3 , La
+0.7 Ba 0.3 MnO 3 have a half-metallic ferromagnetic ground state with a large magnetoresistance (MR)
+associated with the ferromagnetic transition temperature. Conversely, doping electrons by
+substituting the rare-earth atom by tetravalent Ce also drives the system into a ferromagnetic
+metallic ground state [2,3,4]. Unlike the hole doped compound where manganese is in a mixture of Mn
+3+ and Mn 4+ valence states the tetravalent Ce drives the compound in a mixture of Mn 3+ and Mn 2+
+valencies. The presence of Mn 2+ /Mn 3+ valencies induced by electron doping in La 0.7 Ce 0.3 MnO 3
+was confirmed recently [5]. There exists an inherent symmetry between Mn 4+ and Mn 2+ as both are
+non Jahn-Teller ions, whereas Mn 3+ is a Jahn-Teller ion. Moreover, La 0.7 Ca 0.3 MnO 3 and La 0.7
+Ce 0.3 MnO 3 both have a Curie temperature of T C ≈ 250 K.
+
+Beyond the phenomenon of colossal MR, novel properties arising from the interplay of spin, charge
+and orbital coupling and the competition of closely related energy scales make the manganites
+potential candidates for novel electronic devices. Devices exhibiting both large positive and
+negative MR have been fabricated by integrating doped manganites with other oxide ferromagnets. More
+recently rectifying characteristics could be demonstrated in La 0.7 Ce 0.3 MnO 3 /SrTiO 3 (STO)/La
+0.7 Ca 0.3 MnO 3 tunnel junctions [6] and Nb-STO/(La,Ba)MnO 3 junctions [7]. However, a detailed
+understanding of the spin dependent electronic structure of these materials is important to exploit
+the complete potential of these compounds.
+
+In this paper we report the magnetotransport properties of a La 0.7 Ce 0.3 MnO 3 /STO(≈ 50 Å)/La 0.7
+Ca 0.3 MnO 3 tunnel junction grown onto conducting 0.5% Nb doped SrTiO 3 (Nb-STO) single crystalline
+substrate through pulsed laser deposition, whose fabrication has been reported earlier [6]. The
+device structure is illustrated in the inset of Fig. 1(a). The Nb-STO substrate acts as a conducting
+underlayer allowing us to measure the transport properties of the tunnel junction with current
+perpendicular to plane (CPP) geometry. In contrast to the hole doped compounds not much work [8,9]
+could so far be done to understand the electronic structure of La 0.7 Ce 0.3 MnO 3 . A major
+experimental obstacle stems from the fact that La 0.7 Ce 0.3 MnO 3 has so far been synthesized in
+single phase only in thin film form through high-energy pulsed laser deposition [4]. This is a
+restriction on many of the conventional probes and calls for alternative ways to extract information
+regarding the spin polarized electronic structure in these materials. Towards this end we have used
+magnetotransport properties of tunnel junctions comprising of two ferromagnetic electrodes separated
+by a thin insulating tunnel barrier. Most importantly, we wanted to establish whether this electron
+doped ferromagnet has minority spin carriers (MISC) (where the magnetization is antiparallel to the
+spin) or majority spin carriers (MASC) (magnetization parallel to the spin) at the Fermi energy E F
+. The resistance across such a ferromagnetic tunnel junction (FTJ) depends on the relative
+orientation of the spins at E F in the two electrodes. In zero field the magnetizations of the two
+ferromagnetic electrodes in an ideal FTJ are predominantly antiparallel owing to magnetostatic
+interaction between the ferromagnetic layers with in-plane magnetization. With the application of a
+magnetic field the magnetizations become parallel. Thus, a tunnel junction where both electrodes are
+either MISC or MASC ferromagnets exhibits negative tunneling magnetoresistance (TMR). This is
+observed in manganite tunnel junctions of identical materials separated by a thin STO insulating
+barrier [10,11]. In contrast, for a tunnel junction with one MISC and one MASC ferromagnetic
+electrode the MR is positive. This has experimentally been observed in La 0.7 Sr 0.3 MnO 3 /STO/Fe 3
+O 4 tunnel junctions [12] showing large positive MR, where Fe 3 O 4 is a MISC halfmetallic
+ferrimagnet and La 0.7 Sr 0.3 MnO 3 is the MASC half-metallic ferromagnet. Here, we investigate the
+spin character of La 0.7 Ce 0.3 MnO 3 at E F from the magnetotransport properties of the tunnel
+junction using the MASC ferromagnet La 0.7 Ca 0.3 MnO 3 as a spin analyzer.
+
+Fig. 1(a) shows the magnetic field dependence of the current versus voltage (I -V ) curve across the
+tunnel junction measured in the CPP geometry at 300 K. We do not see a significant TMR, as expected,
+since at this temperature both La 0.7 Ce 0.3 MnO 3 and La 0.7 Ca 0.3 MnO 3 are paramagnetic
+semiconductors and the device behaves like a rectifying diode. However, in a field of 7.5 T the spin
+disorder scattering of a single layer is reduced, and the inplane MR is quite large [1]. Fig. 1(b)
+shows the magnetic field dependence of the tunneling I -V curve taken at 100 K, in zero field and in
+a field of 2 T. The magnetic field dependence of the I -V curves (both positive and negative bias)
+clearly shows a bias dependent MR, i.e., below a threshold bias voltage (or current), we find a
+negative MR and above this a positive MR prevails. The field dependence of the I-V curves taken at
+48 K [Fig. 1(c)] does not show any bias dependence, exhibiting a positive MR at all voltages. In
+order to rule out any significant influence of the Nb-STO/La 0.7 Ce 0.3 MnO 3 bottom junction on the
+results of the tunnel junction we also deposited single layers of La 0.7 Ce 0.3 MnO 3 (and La 0.7 Ca
+0.3 MnO 3 ) of identical thickness upon Nb-STO. As a main result, the MR of the Nb-STO/La 0.7 Ce 0.3
+MnO 3 bottom junction is several orders of magnitude smaller compared to that of the FTJ and is
+always negative. Moreover, the I -V curve of the former is highly asymmetric [inset Fig. 1(c)] down
+to the lowest temperature.
+
+First we concentrate on the I -V characteristics of the tunnel junction at the lowest temperature
+(48 K). Here, the positive TMR is intriguing. In hole doped manganites, three of the Mn-3d electrons
+form the localized t 2g band. The remaining electrons occupy the conducting e g band which is
+energetically higher than the t 2g in a (nearly) cubic crystal field. The crystal field splitting
+energy is estimated to be ∆ cf ≈ 1.8 eV [1]. The e g band splits further due to Jahn-Teller
+distortion into two subbands, e 1 g and e 2 g , which are separated by the Jahn-Teller splitting
+energy, δ JT ≈ 1.2 eV [1,13]. Jahn-Teller distortion also causes a splitting of the t 2g band by δ *
+JT . Moreover, Hund's rule coupling removes the spin degeneracy in the ferromagnetic state. The
+resulting separation of the spin-up (e g ↑) and spin-down (e g ↓) bands is denoted by U H whereas
+the separation of the t 2g ↑ and t 2g ↓ bands is labeled U * H . The Mn-3d spin dependent density of
+states (DOS) of La 0.7 Ca 0.3 MnO 3 at low temperature is sketched in Fig. 2(a). The bandwidth of
+the conducting e g sub-bands is of the order of 1 eV [1]. U H is estimated from band structure
+calculations to be of the order of 2 eV in the undoped compound-a value that may decrease with
+doping in the hole doped compound [14]. In hole doped manganites like La 0.7 Ca 0.3 MnO 3 , which
+have 0.7 electrons in the e g band, the conduction electrons predominantly occupy the lowest sub-
+band e 1 g ↑ and the hole doped manganite is consequently a MASC ferromagnet [Fig. 2(a)].
+
+In La 0.7 Ce 0.3 MnO 3 , there is clear evidence for electron doping on the Mn-site in single layer
+epitaxial films, e.g., from x-ray absorption spectroscopy [5]. Hence, the e 1 g ↑ sub-band is
+completely filled. For the remaining additional (doped) electrons two scenarios are possible: i)
+weak Hund's rule coupling U * H < ∆ cf +δ JT and ii) strong Hund's rule coupling U * H > ∆ cf + δ JT
+. In the first case, t 2g ↓ is energetically lower than e 2 g ↑ and the former will get partially
+filled [Fig. 2(b)]. The compound will be a MISC ferromagnet in an intermediate spin state. In the
+second case, the remaining electrons will occupy the e 2 g ↑ sub-band resulting in a MASC
+ferromagnet in high spin state [Fig. 2(c)]. The observation of a positive TMR in La 0.7 Ce 0.3 MnO 3
+/STO/La 0.7 Ca 0.3 MnO 3 at low temperature definitely favors the first scenario with antiparallel
+spins at E F for fields high enough to align the magnetizations within the two ferromagnetic layers
+[cf. Fig. 2(a) and(b)]. This result is supported by the known energy values given above if U * H ≈ U
+H is assumed. Band structure calculations [13] also predict the near-degeneracy of the energy
+positions of the e 2 g ↑ and the t 2g ↓ sub-bands. The minority spin character and the related
+intermediate spin state observed in La 0.7 Ce 0.3 MnO 3 are intriguing for several reasons. First,
+due to the usually large on-site Hund's rule coupling this is rarely observed in manganese compounds
+where Mn is in the divalent state including compounds such as MnO. Secondly, the transport and
+magnetic properties of the hole doped manganites are conventionally understood from this large on-
+site Hund's rule coupling in manganese and the electron-lattice coupling arising from the Jahn-
+Teller effect in Mn 3+ . The ferromagnetic ground state in hole doped compounds like La 0.7 Ca 0.3
+MnO 3 is driven by the double exchange interaction between Mn 3+ and Mn 4+ . This, however, is
+unlikely to be the dominant mechanism in La 0.7 Ce 0.3 MnO 3 if the manganese is in intermediate
+spin state. The striking similarity between the magnetic and transport properties of La 0.7 Ce 0.3
+MnO 3 and its hole doped counterpart [3] raises questions anew regarding the origin of colossal MR
+in these compounds. It should be pointed out in this context that even in the hole doped compound
+the existence of Mn 3+ and Mn 4+ in the pure high spin state has been questioned recently. From
+point contact Andreev reflection measurements [15] the existence of minority spin carriers in the
+hole doped compound La 0.7 Sr 0.3 MnO 3 was concluded. Studies on tunnel junctions using a
+superconducting electrode and La 0.7 Sr 0.3 MnO 3 [16] also showed the polarization P = (n ↑ (E F
+)-n ↓ (E F ))/(n ↑ (E F )+n ↓ (E F )) (n ↑ and n ↓ being the spin up and spin down DOS) to be of the
+order of 72%, which is much smaller than the polarisation expected for a half-metal [17]. Existing
+band structure calculations [18] predict an even lower spin polarization. These results indicate
+that the manganese is not in the pure high spin state in both electron and hole doped manganites
+with perovskite crystal structure. Therefore the general explanation of transport and magnetic
+properties of colossal MR manganites in terms of double exchange as the dominant mechanism needs a
+closer examination regardless of their high half-metallic transport character.
+
+Fig. 3 shows the resistance versus field (R -H) of the tunnel junction at 100 K. At a very small
+bias current (I = 0.06 µA) the MR is negative while at a large current (I = 3 µA) the MR is
+positive. A description of the bias dependence of the MR at 100 K [Fig. 1(b)] and 200 K (not shown)
+is beyond the ground state picture described in Fig. 2. Here, a detailed knowledge of the band
+structure and the temperature evolution of the bands in La 0.7 Ce 0.3 MnO 3 would be required. Since
+at high bias the large electric field across the insulating tunnel barrier shifts their Fermi
+energies considerably with respect to each other, we first concentrate on the temperature dependent
+TMR observed at low bias. The crossover of the TMR from positive to negative at low bias suggests a
+change in the dominant spin character of the ferromagnet at E F with temperature. This could happen
+for two reasons. First, in transition metal oxides the interplay between competing energy scales can
+induce a crossover from one spin state to another with temperature. For example, in LaCoO 3 where
+the crystal field energy slightly exceeds the Hund's rule coupling energy, Co is in a low spin,
+effectively non-magnetic state at low temperature. Around 100 K the cobalt ions undergo a crossover
+from a low spin state to an intermediate/high spin state accompanied by a change in magnetic and
+electric properties [19]. Since the t 2g ↓ and e 2 g ↑ bands are at similar energy levels (and may
+even overlap) in the manganites, a temperature dependent crossover from an intermediate spin state
+to a high spin state cannot be ruled out in La 0.7 Ce 0.3 MnO 3 . It may be caused, e.g., by
+decreasing ∆ cf with increasing temperature. This needs to be substantiated through other
+measurements. Secondly, even in the absence of such a crossover in the Mn spin state the dominant
+spin character of the carriers at E F in a ferromagnet can change. For example, in a Stoner
+ferromagnet the exchange splitting between spin up and spin down bands decreases with increasing
+temperature, which changes the filling of the up and down spin bands. Therefore, subtle features in
+the DOS as a function of energy E can modify the relative ratio of up (e g ) and down (t 2g ) spins
+at E F without changing the overall spin state of the underlying Mn-ions.
+
+We now focus on the bias dependence of the MR at 100 K and 200 K. A bias voltage V b on a metallic
+tunnel junction shifts the Fermi levels of the two electrodes by eV b . The tunneling of electrons
+across an insulating barrier, however, occurs at equal energy levels. Hence, the tunneling
+probabilities for the magnetization of the two electrodes parallel (antiparallel) to each other, T
+↑↑ (T ↑↓ ), are given by
+
+respectively, where E + = E F + eV b 2 and E -= E F -eV b 2 . Here, n ↑ (E) and n ↓ (E) are the spin
+up and spin down DOS in La 0.7 Ca 0.3 MnO 3 and n ′ ↑ (E) and n ′ ↓ (E) are the corresponding ones
+in La 0.7 Ce 0.3 MnO 3 . The relative magnitude of T ↑↑ and T ↑↓ depend on the details of the spin
+up and spin down DOS. At 100 K and 200 K, the negative MR at low bias voltage suggests that T ↑↑ > T
+↑↓ giving a negative MR. However, at the same temperatures, at large V b the MR may change sign if
+this inequal-ity is altered owing to features in the energy dependent DOS. Moreover, small changes
+in the relative energies of the t 2g ↓ and e 2 g ↑ bands due to V b may change their occupancy which
+may result in a bias dependent crossover. Here, a detailed understanding can emerge only when the
+DOS in La 0.7 Ce 0.3 MnO 3 is known in sufficient detail.
+
+In summary, we have reported the magnetotransport properties of a tunnel junction made of electron
+and hole doped manganites. The observed minority spin carrier transport in La 0.7 Ce 0.3 MnO 3 is of
+fundamental interest to understand the interplay of the Hund's rule coupling energy with other
+energy scales such as Jahn-Teller energy and crystal field energy in doped manganites. We believe
+that this result will motivate further studies of the exact electronic structure of both electron
+and hole doped manganites and may open up an alternative approach towards spintronics.

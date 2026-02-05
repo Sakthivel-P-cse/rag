@@ -1,0 +1,167 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "biological mechanisms and dynamics enabling cooperative traits to emerge and persist in simulations",
+    "interaction with natural selection to influence the evolution of cooperative behavior"
+  ],
+  "next_question": "What specific biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution of cooperative behavior in biological systems?",
+  "accept": [],
+  "reject": [
+    {
+      "chunk_id": "1806.01261v3.tei.tei_chunk-2",
+      "paper_id": "1806.01261v3.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "0612025v1.tei.tei_chunk-3",
+      "paper_id": "0612025v1.tei.tei",
+      "reason": "focuses on neural dynamics, not biological simulations or cooperative traits"
+    },
+    {
+      "chunk_id": "0612025v1.tei.tei_chunk-19",
+      "paper_id": "0612025v1.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "1806.01261v3.tei.tei_chunk-33",
+      "paper_id": "1806.01261v3.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "0612025v1.tei.tei_chunk-21",
+      "paper_id": "0612025v1.tei.tei",
+      "reason": "focuses on neural models, not biological simulations or cooperative traits"
+    }
+  ],
+  "rejected_paper_ids": [
+    "0112110v1.tei.tei",
+    "0401011v1.tei.tei",
+    "0612025v1.tei.tei",
+    "0706.1079v2.tei.tei",
+    "1312.6120v3.tei.tei",
+    "1408.1869v1.tei.tei",
+    "1502.05477v5.tei.tei",
+    "1806.01261v3.tei.tei",
+    "1907.02893v3.tei.tei"
+  ],
+  "search_hint": "biological simulations, cooperative traits, natural selection, evolutionary biology, simulation modeling, emergence of cooperation, group selection, kin selection, reciprocal altruism",
+  "iteration": 4,
+  "accepted_chunks": [],
+  "accepted_chunk_ids": [],
+  "accepted_paper_ids": [],
+  "rejected_chunk_ids": [
+    "0112110v1.tei.tei_chunk-10",
+    "0112110v1.tei.tei_chunk-2",
+    "0112110v1.tei.tei_chunk-9",
+    "0401011v1.tei.tei_chunk-7",
+    "0612025v1.tei.tei_chunk-19",
+    "0612025v1.tei.tei_chunk-21",
+    "0612025v1.tei.tei_chunk-3",
+    "0706.1079v2.tei.tei_chunk-13",
+    "0706.1079v2.tei.tei_chunk-15",
+    "0706.1079v2.tei.tei_chunk-16",
+    "0706.1079v2.tei.tei_chunk-2",
+    "0706.1079v2.tei.tei_chunk-5",
+    "1312.6120v3.tei.tei_chunk-5",
+    "1312.6120v3.tei.tei_chunk-6",
+    "1312.6120v3.tei.tei_chunk-7",
+    "1408.1869v1.tei.tei_chunk-19",
+    "1502.05477v5.tei.tei_chunk-17",
+    "1806.01261v3.tei.tei_chunk-2",
+    "1806.01261v3.tei.tei_chunk-33",
+    "1907.02893v3.tei.tei_chunk-24"
+  ],
+  "accepted_this_round": [],
+  "rejected_this_round": [
+    {
+      "chunk_id": "1806.01261v3.tei.tei_chunk-2",
+      "paper_id": "1806.01261v3.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "0612025v1.tei.tei_chunk-3",
+      "paper_id": "0612025v1.tei.tei",
+      "reason": "focuses on neural dynamics, not biological simulations or cooperative traits"
+    },
+    {
+      "chunk_id": "0612025v1.tei.tei_chunk-19",
+      "paper_id": "0612025v1.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "1806.01261v3.tei.tei_chunk-33",
+      "paper_id": "1806.01261v3.tei.tei",
+      "reason": "irrelevant to biological simulations and cooperative traits"
+    },
+    {
+      "chunk_id": "0612025v1.tei.tei_chunk-21",
+      "paper_id": "0612025v1.tei.tei",
+      "reason": "focuses on neural models, not biological simulations or cooperative traits"
+    }
+  ],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "Insufficient evidence to support any conclusions"
+    ],
+    "evidence_citations": []
+  },
+  "_debug": {
+    "retrieval_query": "What biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution of cooperative behavior?\n\nSearch hints: cooperative traits, biological simulations, evolutionary dynamics, natural selection, selfish behavior, group selection, kin selection, reciprocal altruism, simulation modeling, evolutionary biology, emergence of cooperation",
+    "candidates": [
+      {
+        "paper_id": "1806.01261v3.tei.tei",
+        "chunk_id": "1806.01261v3.tei.tei_chunk-2",
+        "retr_score": 0.26382
+      },
+      {
+        "paper_id": "0612025v1.tei.tei",
+        "chunk_id": "0612025v1.tei.tei_chunk-3",
+        "retr_score": 0.21078849
+      },
+      {
+        "paper_id": "0612025v1.tei.tei",
+        "chunk_id": "0612025v1.tei.tei_chunk-19",
+        "retr_score": 0.20902666
+      },
+      {
+        "paper_id": "1806.01261v3.tei.tei",
+        "chunk_id": "1806.01261v3.tei.tei_chunk-33",
+        "retr_score": 0.20556524
+      },
+      {
+        "paper_id": "0612025v1.tei.tei",
+        "chunk_id": "0612025v1.tei.tei_chunk-21",
+        "retr_score": 0.2048461
+      }
+    ],
+    "excluded_chunk_ids": [
+      "0112110v1.tei.tei_chunk-10",
+      "0112110v1.tei.tei_chunk-2",
+      "0112110v1.tei.tei_chunk-9",
+      "0401011v1.tei.tei_chunk-7",
+      "0706.1079v2.tei.tei_chunk-13",
+      "0706.1079v2.tei.tei_chunk-15",
+      "0706.1079v2.tei.tei_chunk-16",
+      "0706.1079v2.tei.tei_chunk-2",
+      "0706.1079v2.tei.tei_chunk-5",
+      "1312.6120v3.tei.tei_chunk-5",
+      "1312.6120v3.tei.tei_chunk-6",
+      "1312.6120v3.tei.tei_chunk-7",
+      "1408.1869v1.tei.tei_chunk-19",
+      "1502.05477v5.tei.tei_chunk-17",
+      "1907.02893v3.tei.tei_chunk-24"
+    ],
+    "excluded_paper_ids": [
+      "0112110v1.tei.tei",
+      "0401011v1.tei.tei",
+      "0706.1079v2.tei.tei",
+      "1312.6120v3.tei.tei",
+      "1408.1869v1.tei.tei",
+      "1502.05477v5.tei.tei",
+      "1907.02893v3.tei.tei"
+    ],
+    "raw_llm_output_first_2000_chars": "```\n{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"biological mechanisms and dynamics enabling cooperative traits to emerge and persist in simulations\", \"interaction with natural selection to influence the evolution of cooperative behavior\"],\n  \"next_question\": \"What specific biological mechanisms and dynamics enable cooperative traits to emerge and persist in simulations, and how do these mechanisms interact with natural selection to influence the evolution of cooperative behavior in biological systems?\",\n  \"accept\": [],\n  \"reject\": [\n    {\"chunk_id\": \"1806.01261v3.tei.tei_chunk-2\", \"paper_id\": \"1806.01261v3.tei.tei\", \"reason\": \"irrelevant to biological simulations and cooperative traits\"},\n    {\"chunk_id\": \"0612025v1.tei.tei_chunk-3\", \"paper_id\": \"0612025v1.tei.tei\", \"reason\": \"focuses on neural dynamics, not biological simulations or cooperative traits\"},\n    {\"chunk_id\": \"0612025v1.tei.tei_chunk-19\", \"paper_id\": \"0612025v1.tei.tei\", \"reason\": \"irrelevant to biological simulations and cooperative traits\"},\n    {\"chunk_id\": \"1806.01261v3.tei.tei_chunk-33\", \"paper_id\": \"1806.01261v3.tei.tei\", \"reason\": \"irrelevant to biological simulations and cooperative traits\"},\n    {\"chunk_id\": \"0612025v1.tei.tei_chunk-21\", \"paper_id\": \"0612025v1.tei.tei\", \"reason\": \"focuses on neural models, not biological simulations or cooperative traits\"}\n  ],\n  \"rejected_paper_ids\": [\"1806.01261v3.tei.tei\", \"0612025v1.tei.tei\"],\n  \"search_hint\": \"biological simulations, cooperative traits, natural selection, evolutionary biology, simulation modeling, emergence of cooperation, group selection, kin selection, reciprocal altruism\"\n}\n```"
+  }
+}

@@ -1,0 +1,570 @@
+# Proper motions of young stars in Chamaeleon II. New kinematical candidate members of Chamaeleon I and II
+
+**Published:** 12 Jul 2013
+
+## Abstract
+
+Context. The Chamaeleon star-forming region has been extensively studied in the last decades.
+However, most studies have been confined to the densest parts of the clouds. In a previous paper, we
+analysed the kinematical properties of the spectroscopically confirmed population of the Chamaeleon
+I and II clouds. Aims. We want to search for new kinematical candidate members to the Chamaeleon I
+and II moving groups, extending the studied area beyond the clouds, and to characterize these new
+populations using available information from public databases and catalogues. We also want to check
+if the populations of the moving groups are confined to the present dark clouds. Methods. Kinematic
+candidate members were initially selected on the basis of proper motions and colours using the
+Fourth US Naval Observatory CCD Astrograph Catalog (UCAC4). The SEDs of the objects were constructed
+using photometry retrieved from the Virtual Observatory and other resources, and fitted to models of
+stellar photospheres to derive effective temperatures, gravity values, and luminosities. Masses and
+ages were estimated by comparison with theoretical evolutionary tracks in a Hertzprung-Russell
+diagram. Objects with ages 20 Myr were selected as probable members of the moving groups. Results.
+We have identified 51 and 14 candidate members to the Chamaeleon I and II moving groups,
+respectively, of which 17 and 1, respectively, are classified as probable young stars according to
+the SED analysis. Another object in Chamaeleon I located slightly above the 1 Myr isochrone is
+classified as a possible young star. All these objects are diskless stars with masses in the range
+0.3 M/M 1.4 and ages consistent with those reported for the corresponding confirmed members. They
+tend to be located at the boundaries of or outside the dark clouds, preferably to the north-east and
+south-east in the case of Chamaeleon I, and to the north-east in the case of Chamaeleon II.
+Conclusions. The kinematical population of Chamaeleon I and II could be larger and spread over a
+larger area of the sky than suggested by previous studies. However, the results of this study should
+be confirmed with spectroscopic data and more precise kinematic information.
+
+## 1. Introduction
+
+The Chamaeleon complex is composed of three dark clouds, named Chamaeleon I, II, and III (Schwartz
+1977), lying at distances in the range 115-215 pc. Chamaeleon I (Cha I), the oldest of the three (∼2
+Myr) contains more than 300 known young stars (for the latest census, see Luhman 2008), while more
+than 60 stars have been identified in Chamaeleon II (Cha II; 1 Myr; Spezzi et al. 2007Spezzi et al.
+, 2008;;Alcalá et al. 2008, and references therein). No young star population has been identified so
+far in Chamaeleon III (Cha III).
+
+Most studies of the stellar and substellar population in Chamaeleon have focused on the densest
+areas of the clouds and on the search for indications of youth such as infrared excesses, prominent
+Hα emission, or accretion signatures in the object spectra (e.g. Prusti et al. 1991;López Martí et
+al. 2004, 2005;Barrado y Navascués & Jayawardhana 2004;Luhman et al. 2004;Luhman 2007;Spezzi et al.
+2007;Alcalá et al. 2008). To assess the diskless component of the population, X-ray surveys have
+been carried out (e.g. Feigelson et al. 1993;Alcalá et al. 2000;Stelzer et al. 2004). Thus, both the
+class II (with disk) and class III (diskless) populations have been identified in the core regions.
+
+The areas outside the main cloud cores have not been studied as much. In the 1990s, the ROSAT All
+Sky Survey (RASS) unveiled a dispersed population of young X-ray emitting stars towards the
+Chamaeleon area, but not confined to the dark clouds (Alcalá et al. 1995(Alcalá et al. , 1997)).
+Later kinematical studies based on radial velocity (Covino et al. 1997) and proper motion
+measurements (Frink et al. 1998) showed that the sample included objects belonging to different
+kinematical populations, located at different distances, from 60 to about 200 pc, corresponding to
+the Cha I cloud, the foreground Chamaeleontis ( Cha) cluster, and an undetermined field population.
+Further interlopers from 1.
+
+the Cha cluster were later identified in the Chamaeleon sky area (e.g. Mamajek et al. 1999;Feigelson
+et al. 2003;Luhman 2004;Luhman & Muench 2008).
+
+In a previous paper (López Martí et al. 2013, hereafter Paper I), we used proper motions from the
+Third US Naval Observatory CCD Astrograph Catalog (UCAC3; Zacharias et al. 2010) to study the moving
+groups seen towards the Chamaeleon sky area. We showed that the UCAC3 proper motions from the
+previously-known candidate members of the associations are precise enough to clearly distinguish the
+Cha I and II populations from those of the foreground Cha and η Chamaeleontis (η Cha) clusters. Our
+study allowed us to identify a few interlopers among our compiled samples of confirmed young stars
+in each association, and to provide further information on the membership of other candidates from
+the literature without spectroscopic confirmation of youth. In addition, our results suggested that
+the stars in Cha I and II may constitute two different moving groups, which questions the physical
+relation between the clouds. This paper is a continuation of the work presented in Paper I, and
+reports on a search for new candidate members of the Chamaeleon clouds based on UCAC proper motions
+and colours, and taking advantage of Virtual Observatory (VO)1 tools and protocols. Since UCAC is an
+all-sky catalogue, this approach allows us to explore a larger sky area than most of the previous
+searches reported in the literature.
+
+The study presented here was initially performed on UCAC3 data. However, during the publication
+process of Paper I, the fourth and last release of the UCAC catalogue (UCAC4) had become available
+(Zacharias et al. 2013). The UCAC4 catalogue is an improved version of UCAC3, based on the same
+pixel reductions. Improvements over UCAC3 include bug fixes, correction of systematic errors, the
+inclusion of the brightest stars from the Hipparcos, Tycho-2, and FK6 catalogues, and the use of
+APASS photometry in the Johnson B and V bands and the Sloan g , r , and i bands. It is thus a
+cleaner catalogue than UCAC3, but with very similar accuracy and coverage. We checked this by
+constructing the UCAC4 vector-point diagram for the confirmed members of the four associations, and
+comparing it with the UCAC3 diagram presented in Paper I (Fig. 1 in that work). The main difference
+between the two diagrams is that the objects detached from the moving groups in the UCAC3 vector-
+point di-agram, that were shown to have incorrect or dubious proper motion measurements, are missing
+from the UCAC4 diagram. Thus, the main conclusions from Paper I are not altered when UCAC4 data are
+used instead of UCAC3. On the other hand, our comparison of both catalogues revealed a problem with
+the zeropoints of the SuperCosmos R and I photometry included in UCAC3, which made this photometry
+internally inconsistent. Since our candidate selection is based on colours as well as on proper
+motions (see Sect. 2.1), we decided to use the latest version of the catalogue (UCAC4) and the more
+reliable APASS photometry included there for this part of our study. We note that no photometry from
+UCAC3 was used in the analysis of the confirmed members presented in Paper I, and so this problem
+does not compromise the conclusions from that work. To perform a search of new candidate members of
+Cha I and II, we first retrieved all objects in the UCAC4 catalogue within three degrees from the
+center of each cloud as given by SIMBAD (see Table 1). This radius value was chosen to maximize the
+search areas while avoiding spatial overlapping between them; in this way, we prevented the same
+source from being assigned to both clouds, as there is some overlapping in proper motion between the
+Cha I and Cha II moving groups. Then, we defined two boxes in the vector point diagram covering each
+of the moving groups (see Fig. 1); the box limits were set to 1σ from the mean values obtained in
+Paper I for each group. These selection criteria are summarized in Table 1.
+
+## 2. New candidate members of the
+
+This step provided 3175 objects around Cha I and 3831objects around Cha II. Since the proper motion
+of a given star depends not only on its space motion tangential to the sky, but also on its
+distance, the retrieved lists include not only Chamaeleon members, but also foreground and
+background stars. Because the distance and radial velocities of virtually all sources are unknown,
+to purge the selection from contaminants we made use of the photometric information provided by
+UCAC4 (namely the Sloan r and i magnitudes from APASS, and the nearinfrared JHK s magnitudes from
+2MASS), as this photometric set is available for all our objects.We constructed several colourcolour
+and colour-magnitude diagrams that have been shown to be useful tools to identify members of a given
+young association (see Fig. 2). The location of the confirmed members in these diagrams served as a
+guide to identify new candidates. Only those objects whose location in all diagrams agreed with that
+of the confirmed members were selected. Objects brighter than V ∼ 10.5 were discarded, as they are
+probably saturated in APASS according to the catalogue description. 2 We note that no assumptions
+based on theoretical models were used for the selection. The APASS catalogue is complete down to r ∼
+15.5 mag and i ∼ 15 mag, which sets the completeness limit of this study.
+
+The final lists contained 51 objects in Cha I and 14 in Cha II, which are listed in Table 2. 3
+Figure 1 shows their locations in the vector point diagram compared to those of the moving groups
+related to both clouds. Owing to the characteristics of the UCAC4 catalogue, we expect the selected
+sample to be biased towards low-extincted and relatively evolved sources, because those objects in
+early stages of formation and evolution, or affected by high extinction, are very faint or
+undetectable in the optical. Furthermore, the lowest-mass component of both associations is missing,
+as these objects are too faint to be included in UCAC4. Objects with very strong Hα emission may
+also be missed by our selection criteria, as such sources may appear bluer than expected for their
+age and spectral type in the diagrams of Fig. 2. Examples of such objects can be seen among the
+confirmed members of Cha II (right panels).
+
+The close distance and low Galactic latitude of the Chamaeleon clouds make us expect that
+contamination from both foreground and background objects is relatively low. However, because most
+of our studied area around each cloud is affected by virtually no extinction (see Sect. 3.2), this
+contamination should be higher than observed within the cloud cores alone, where the cloud material
+itself blocks most of the background population. The number of unrelated objects selected as
+candidate members in photometric surveys of nearby starforming regions has been shown to be between
+25% and 75% of the selection, depending on the location of the region within the Galaxy and the
+deepness of the survey. If proper motion information is available, such objects are almost
+completely eliminated, as shown in Paper I and in our study of the Lupus clouds (López Martí et al.
+2011;Comerón et al. 2013).
+
+In order to estimate the contamination within our samples, we performed several simulations of the
+Galaxy region in three degrees around the position of Cha I and II using the Besanc ¸on Galaxy Model
+(Robin & Crezé 1986;Robin et al. 2003). The simulations took the errors in photometry and proper
+motions into consideration. We repeated the selection process described in this section using the
+synthetic photometry and proper motions from the simulated catalogues, obtaining the number of
+objects expected to fulfill our criteria if no cluster were present in the direction of the
+Chamaeleon clouds. The resulting samples included between one and three objects in the Cha I area
+and between zero and one in the Cha II area, which would represent only up to 6% and 7%,
+respectively, of our candidate sample for each association. This result again suggests that the
+combination of astrometric and photometric information is very effective in reducing the
+contamination in searches for new members of star forming regions.
+
+However, it must be noted that these simulations only took into account the astrometric errors
+derived from the photometric errors of the souces. Source confusion or centroiding problems may lead
+to incorrect estimations of the proper motions, effectively increasing the amount of contamination
+in our samples. Although the UCAC4 flags allow us to get rid of most of the sources with uncertain
+or incorrect proper motions, some of these objects may still be included in our selected samples.
+Unfortunately, it is not easy to estimate the amount of this contamination. Because these problems
+are most likely to happen in the bright and faint end of the UCAC4 magnitude range, we expect it to
+be relatively high, given the number of objects with r magnitudes larger than 14. On the other hand,
+we may also miss members of the Cha I and II moving groups owing to incorrectly estimated proper
+motions in UCAC4 that place them outside the boundaries of our selection boxes in Fig. 2.
+
+## 2.2. SIMBAD objects
+
+To look for additional information about our selected objects, we checked whether any of our new
+candidates were known to SIMBAD.
+
+This was the case for seventeen stars from the Cha I list and four from the Cha II list,
+representing neartly one third (about 33% and 28.5%, respectively) of the total samples. These
+objects are listed in Table 3, along with their reported proper motions, radial velocities and
+spectral types, if available.
+
+Nearly all the stars in Table 3 have reported proper motions in the Tycho-2 catalogue (Høg et al.
+2000), which are statistically compatible with the UCAC4 measurements within 3σ. Even so, the
+Tycho-2 proper motions place all but three objects outside the corresponding selection box defined
+in Table 1. The exceptions are ChaI-PM-5 (TYC 9418-388-1), ChaI-PM-38 (2MASS J11475667-7536316), and
+ChaII-PM-12 (TYC 9413-205-1), for which the Tycho-2 proper motions are still within the selection
+box in the vector-point diagram. It must be noted, however, that the Tycho-2 measurements are less
+precise than those of UCAC4 for most of the stars listed in Table 3, owing to the lower number of
+epochs used to compute the proper motion, and because nearly all the sources are fainter than the
+complete- ness limit of the Tycho-2 survey (V ∼ 11 mag). Therefore, we decided to keep these objects
+in the subsequent analysis.
+
+For one star, namely ChaI-PM-13 (2MASS J110593816-782421), there is also a radial velocity
+measurement available from the RAVE survey (Siebert et al. 2011), which is slightly lower than the
+mean for Cha I stars reported in Paper I, a further suggestion that this is likely to be a
+contamination object.
+
+Three SIMBAD sources, namely 2MASS J11120518-7712408 , IRAS 12348-7634 (ChaII-PM-9), and CR Mus
+(ChaII-PM-18) do not have reported Tycho-2 proper motions or RAVE radial velocities. The third
+object is a known Mira variable, and hence a sure contaminant.
+
+## 3. SED analysis
+
+To further purge our candidate lists of likely contaminants, and to learn more about the nature of
+our objects, we compiled all the photometry available for them in the Virtual Observatory and in
+other public archives. With these data, we constructed the spectral energy distributions (SEDs),
+which were analysed to derive their fundamental parameters using the latest version of the VO SED
+Analyzer tool 4 (VOSA; Bayo et al. 2008Bayo et al. , 2013)).
+
+## 3.1. Photometry compilation and observed SEDs
+
+Most of the multiwavelength photometry was retrieved with VOSA from a number of public databases
+available through the Virtual Observatory. These data include optical photometry from Tycho-2 (B and
+V bands; Høg et al. 2000) and DENIS (I band; DENIS Consortium 2005), near-infrared JHK s photometry
+from 2MASS (Skrutskie et al. 2006), and mid-infrared photometry from AKARI and WISE (Ishihara et al.
+2010;Cutri & et al. 2012). For the Cha II candidates, we also retrieved the IRAC and MIPS photometry
+(from 3.6 to 24 µm) from the "Cores to Disks" (c2d) Spitzer legacy program (Alcalá et al. 2008),
+also available through VOSA.
+
+Additional Spitzer/IRAC photometry for a few Cha I candidates was obtained after retrieving and
+processing all available observations from the IRSA database (programs 6, 36, 37, 139, 173, and
+30574). We retrieved the corresponding BCD images and associated ancillary products from the public
+archive and processed them following standard procedures with the recommended MOPEX software
+(Makovoz & Marleau 2005). The IRAC observations were obtained with various exposure times (0.6 s, 12
+s, 30 s, and 100 s) and the final sensitivity depends on the coverage and observation history. We
+processed each set independently to cover the widest dynamic range. The procedure within MOPEX
+includes overlap correction, resampling, interpolation (to have an output pixel scale of 0. 6), and
+outlier rejection. The individual frames were then median-combined with Swarp (Bertin et al. 2002)
+using the rms maps produced by MOPEX as weight maps. The resulting photometric catalogues were
+cross-matched with our list of Cha I kinematical candidate members.
+
+4 http://svo2.cab.inta-csic.es/svo/theory/vosa/ The compiled multiwavelength photometry (also
+including the BVg r i APASS photometry from UCAC4) for all the objects is summarized in Table 4. 5
+The data were used to construct the observed SED for each object, which was then visually inspected
+to check the consistency of the photometric datapoints and to examine its shape. Most of the
+candidates display curves suggesting they are bare (diskless) photospheres. This impression is
+confirmed by VOSA, as the tool does not detect any infrared excess for most of the objects. Some
+sources (e.g. ChaI-PM-48) could have a little excess at the longest wavelengths ( 8 µm), usually
+associated with the presence of evolved disks. We discuss these objects later in Sect. 3.3.
+
+## 3.2. Extinction maps
+
+We followed the adaptive grid method developed by Cambrésy et al. (1997) to derive extinction maps
+for the sky areas around the Cha I and II clouds where our new candidates are located. This method
+is based on the voids induced by star forming regions in the uniform distribution of background
+stars, clearly observable with all-sky surveys. We used 2MASS as the parent catalogue, and we had a
+control field at a similar Galactic latitude to model the background population. The average pixel
+size of the maps is 1.5 , although it varies depending on the extinction itself, as the grid of
+coordinates is built according to the local density of sources. Comparison with maps of the same
+regions by other authors (Cambrésy et al. 1997;Kainulainen et al. 2009) shows very good agreement
+for areas with A V ≤ 12 mag. As mentioned earlier, UCAC4 is based on optical catalogues, and so we
+are not likely to find candidates in these very heavily extincted areas. Further details on the
+adaptive grid method are given in Bayo et al. (2013).
+
+We show our extinction maps in Figs. 3 and4, where we have also plotted the projected spatial
+locations of the confirmed members and of our new candidates. Because our candidates are mostly
+located outside the dark clouds, extinction towards them is expected to very low. We used the
+information from the maps to derive extinction estimates (A grid V ) along the line of sight towards
+the location of each of our candidates, which are listed in Table 2. The extinction values have an
+estimated error of 0.05 mag, derived from variations in the control field; therefore, when a zero
+value is indicated, it is implied that A grid V 0.05 mag. With very few exceptions, our candidates
+are not affected by extinction according to our extinction maps. Only a few objects are located in
+areas of low-to-moderate extinction, the highest value corresponding to ChaII-PM-1 (A grid V = 2.81
+mag). It is important to note that the adaptive grid method provides an estimate of the total
+extinction in a given direction. Thus, in an area of high extinction such as the dark cloud cores, A
+grid V can be assumed to be the true A V of the star only if it is located behind the cloud (for a
+detailed discussion, see Bayo et al. 2013). If it is placed before or within the cloud, the amount
+of dust will be lower and the star will be less extincted than suggested by the maps. On the other
+hand, some intrinsic extinction may be present in young stellar objects surrounded by large amounts
+of circumstellar material, but this does not seem to be the case for the vast majority of our
+candidates, as they are diskless according to their SEDs (see Sect. 3.1 above). Thus, without
+information on the individual distance, the A grid V value should be regarded as an upper limit to
+the real extinction affecting a particular object, and the true A V may in principle have any value
+between 0 and A grid V .
+
+## 3.3. SED fitting
+
+The SEDs were fitted to theoretical models in order to estimate effective temperatures,
+luminosities, and surface gravities for the candidates, testing the parameter space summarized in
+Table 5.
+
+The input for the fits included the object name, the coordinates, the user-provided and VO
+photometry, and a distance value.
+
+Since we do not have parallax measurements for our objects, the distance was set to the reported
+mean distances to the clouds: 160 ± 15 pc in the case of Cha I and 178 ± 18 pc for Cha II (Whittet
+et al. 1997). In addition, the information from the extinction maps was used to set the ranges of
+visual extinction (A V ) to be tested by the procedure. Because most of our objects are V /20, the
+VOSA default step when the extinction is not set to a fixed value by the user.
+
+The BT-Settl models (Allard & Homeier 2012) were used to test the range of effective temperatures
+between 4500 K and the minimum effective temperature expected for our candidates, should they be
+young stars located at the distance of the dark clouds. This minimum temperature corresponds to a
+very lowmass star with I-band magnitude in the lower limit of our candidate lists (∼16.5 mag) at the
+distance of each cloud, and was estimated to be about 2700 K and 2800 K for Cha I and II,
+respectively, using the Baraffe et al. (1998) evolutionary tracks. We assumed in this estimation
+that the objects are not older than 50 Myr, and that they are not extincted. The temperature of 4500
+K, on the other hand, is the predicted temperature for TiO formation in the atmospheres of low-mass
+stars. Allard & Homeier (2012) claim that the BT-Settl models have a better treatment of the oxygen
+abundance than any previous models and, therefore, they provide better approximations below 4500 K.
+The Kurucz models (Castelli et al. 1997) were used to test the range between this temperature and
+50000 K, the maximum value provided by this grid. For the few objects having best-fitting
+temperatures of precisely 4500 K, we checked that the results using both models were consistent;
+because the Kurucz models usually provided better fits (according to the χ2 statistics, see below),
+the best-fitting model from this grid was kept as best fit in those cases.
+
+A range of gravities was tested to account for the possibility that the stars have a variety of ages
+and evolutionary stages; 4. however, the results depended very weakly on the gravity values. Only
+solar metallicity was considered, in agreement with the results by Santos et al. (2008) for some
+previously known Cha I members.
+
+Because most of the stars do not have infrared excesses, the number of datapoints to fit was
+relatively high (typically 12 to 15). If an excess was detected, the affected datapoints were not
+considered in the fitting process. Because the possible excesses all started at relatively long
+wavelengths, the number of datapoints left was always enough to perform the fit.
+
+The goodness of the fits was measured by two different statistics: reduced χ 2 minimization ( χ2 )
+and Bayesian probability analysis of the model parameters (for details, see Bayo et al. 2008Bayo et
+al. , 2013)). Because several models provided good approximations to a given SED with only very
+small differences in the χ2 values, the information from the Bayesian analysis helped us to choose
+the most appropriate model by selecting the one whose parameter values had the greatest probability.
+This model was usually (but not always) the one with the lowest χ2 .
+
+For a few objects, the T e f f value with maximum probability is namely in the boundary of the
+considered range, with the probability distribution monotonically increasing toward this value. This
+may happen if the actual most probable temperature value is out of the tested range (such as a T e f
+f lower than 4500 K in the case of the Kurucz models), because the closest value is chosen by the
+algorithm in this case. Therefore, the results of the Bayesian analysis are not trustworthy in these
+cases, and we had to rely only on the χ2 values to decide on the goodness of the fits.
+
+The process provides very good approximations to the SEDs, with χ2 10, for 35% of the Cha I sample
+and 14% of the Cha II sample (18 and 2 objects, respectively). We checked that the best-fitting
+values were the ones with highest Bayesian probabilities, and that the T e f f had probability > 0.5
+(see also discussion in Bayo et al. 2013). The fits that did not fulfill these criteria were
+considered bad, and the objects were not further considered.
+
+The best-fitting results for our candidates are summarized in Table 6, where both the value of the
+χ2 and the Bayesian probabilities are indicated.
+
+## 3.4. Mass and age estimations
+
+The best-fitting effective temperatures and bolometric luminosities allowed us to place the objects
+with good fits in the Hertzprung-Russell diagram (Fig. 5). This way, it was possible to derive
+masses and ages for those candidates and to identify the likely members of the Cha I and II clouds
+using theoretical evolutionary tracks. We used the Baraffe et al. (1998) set of isochrones for this
+analysis. The luminosities, masses, and ages derived in this way are summarized in Tables 6.
+According to our estimations, the objects for which this exercise was possible are not older than 20
+Myr and have masses between 0.3 and 1.3M , supporting that they are likely young, low-mass stars.
+Given the estimated errors in log L and T e f f (about 0.1 dex and 100 K in average, respectively),
+we estimate that the errors in age are about 1, 2 and 5 Myr for objects younger than 5, 10 and 20
+Myr, respectively, and that the errors in mass are of about 0.1M . We caution, however, that the
+errors in log L and T e f f do not take stellar variability or multiplicity into account, so the
+actual errors may be higher, and thus they may be largely responsible for the age scatter we obtain.
+The effect of multiplicity and variability in the VOSA results are discussed in detail in Bayo et
+al. (2011) and Bayo et al. (2013), respectively.
+
+For two of our candidates, namely ChaI-PM-4 and ChaII-PM-14, it was not possible to derive mass and
+age values, as the SED fitting results place them above the 1 Myr isochrone in the Hertzprung-
+Russell diagram. While this location is usually interpreted as an indication of a very young age, we
+think it unlikely in these cases, as neither of the objects possesses a thick disk according to the
+SED analysis. In the case of ChaI-PM-4, given its location close to the 1 Myr isochrone in Fig. 5,
+the errors in T e f f and log L still leave open the possibility that it is a young member of the
+Cha I moving group. We note, however, that this object has reported Tycho-2 proper motions
+completely discrepant from the UCAC4 values, which would be in disagreement with membership to the
+Cha I moving group.
+
+Object ChaII-PM-14, on the other hand, is seen so much above the 1 Myr isochrone that it looks much
+more likely to be a misplacement owing to an incorrect distance estimate. In addition, its best-
+fitting effective temperature is 2800 K, namely on the lowest boundary of the interval tested with
+VOSA for the Cha II candidates, with an estimated Bayesian probability of 100%. As discussed in
+Sect. 3.3, this may be an indication that the true effective temperature of this object is actually
+beyond this boundary value, which is in complete disagreement with ChaII-PM-14 belonging to the Cha
+II moving group. Taken all together, these results suggest a low probability of ChaII-PM-14 being a
+young star.
+
+## 4. Final candidate lists
+
+After the results of the SED analysis described above, we classify as probable members of the moving
+groups (labelled "m") in Table 6) those stars with reliable fits and derived ages younger than about
+100 Myr. This way, from 51 objects reported in Sect. 2.1, we identify 17 probable members of the Cha
+I moving group. Following the discussion from the previous Section, ChaI-PM-4 is considered a
+possible member (label "m?"). The rest of objects from the Cha I candidate sample remain
+unclassified owing to unreliable fits and insufficient or contradictory additional information
+(label "nc").
+
+In the Cha II sample, only one star (ChaII-PM-11) out of the 14 objects selected in Sect. 2.1 is
+classified as a probable member. The other source with a good fit, ChaII-PM-14, is rejected as a
+probable non-member (label "nm"). Following the discussion from Sect. 2.2, also ChaII-PM-18 is
+rejected as a probable non-member. The remaining 11 sources are not classified.
+
+With these figures, the number of identified contaminants (non-members) is null in the Cha I sample
+and amounts to about 14% of the Cha II sample. The former figure is lower, and the latter figure is
+higher than expected from the simulations described in Sect. 2.1. However, because more than 60% of
+our candidates could not be classified with the SED analysis, the true contamination may be higher
+in both clouds.
+
+The final (probable and possible) candidate members are marked with solid symbols in the vector-
+point diagram of Fig. 1. In Table 7, we show the arithmetic and weighted mean proper motions of the
+probable member samples. The table also lists the corresponding means for the confirmed members of
+both moving groups; they have been recalculated using UCAC4 data, but are compatible (although
+slightly higher) with the values given in Paper I.
+
+## 5. Properties of the new candidate members
+
+We now discuss the properies of our new candidate members of Cha I and II, and compare them to the
+spectroscopic members confirmed in Paper I (73 and 22 objects from the Cha I and II moving groups,
+respectively). We remark that the member samples do not include all the known objects in the dark
+clouds, but only those optically detected and with available proper motions in UCAC; hence, they are
+expected to be biased towards relatively evolved and massive objects, and towards low extinctions.
+
+## 5.1. Spatial position
+
+Figure 3 shows the projected location on our extinction map of the confirmed members and our new
+candidate members to the Cha I moving group. While the confirmed members tend to cluster within the
+cloud cores, most of the Cha I candidates are seen spread around the dark cloud, mostly to the north
+and east. This distribution may be partially caused by the fact that the south and west of our
+surveyed area are more extincted than the north and east. Even so, it is interesting to note that
+this is the direction towards the Galactic plane and towards the Musca filament and the Southern
+Coalsack, two regions to which the Chamaeleon cloud complex has been related (King et al. 1979).
+
+Most of our new candidates are sharing locations with known members at the outskirts of the cloud,
+or seem to bridge the gap between the cloud population and a few known dispersed members to the
+north and south-east. Most of our new probable members (that is, those objects with fits considered
+reliable and derived physical parameters consistent with young stars) are located in these two
+groupings. The south-eastern group is particularly interesting, as it is located halfway to the dark
+cloudlet [DB2002b] G300. 23-16.89, in an area where many of the Chamaleontis cluster members are
+found. Interestingly, the only confirmed Cha I member in the south-east group, RXJ1158.5-7913, is
+seen projected toward this small cloudlet, and detached from any other confirmed Cha I members;
+nevertheless, the object was shown in Paper I to have kinematic properties that are in much better
+agreement with membership to the Cha I moving group than to the Cha group. This membership would be
+reinforced if our new candidates are confirmed as young low-mass stars. This would in turn
+strengthen the idea that the [DB2002b] G300.23-16.89 cloud is related to the Chamaeleon complex, or
+at least to the Cha I cloud, as previously suggested in the literature (Whittet et al. 1997).
+
+The spatial distribution of the Cha II members and candidate members is shown in Fig. 4. Most of our
+new candidates are located to the north-east of the dark cloud. Again, as in the case of Cha I, this
+is the direction towards the Galactic plane and the Musca and Southern Coalsack regions, but also
+the lessextincted area in the surveyed region around the dark cloud. Only a few objects (ChaII-PM-6,
+ChaII-PM-7, ChaII-PM-8, and to some extent also ChaII-PM-10) are located in the same areas as the
+confirmed members of the moving group. The only proba- ble member in the sample is also seen not far
+from the confirmed members, to the north-east of the northern dark cloud core.
+
+Interestingly, three Cha II candidates, namely ChaII-PM-1, ChaII-PM-2, and ChaII-PM-3, are seen to
+the south of the Cha II dark cloud, in or near the dark cloud [DB2002b] G303.11-16.08 that seems to
+bridge Cha II and III. Cha III itself lies outside our search area.
+
+## 5.2. Proper motions
+
+Figure 1 shows the locations of our new candidate members to the Cha I and Cha II moving groups in
+the vector-point diagram.
+
+In the Cha I group, the objects tend to cluster in the right half of the selection box depicted in
+that diagram. However, when only the probable members (objects with good fits) are considered, this
+trend is no longer evident. This is confirmed by the left panel of Fig. 6, which shows the proper
+motion histograms for the confirmed and probable members. As shown in Table 7, the mean values of
+the candidate sample ((-18.8 ± 2.8, 2.3 ± 2.0) mas/yr) are fully consistent with the means for the
+confirmed Cha I members.
+
+Also our new candidate members to the Cha II moving group tend to be located to the right half of
+the selection box in the vector point diagram, while one third of the box to the left is devoid of
+objects. The only probable member in the Cha II sample is located in the lower central part of the
+box. The values listed in Table 7 confirm that this source has proper motion values similar to the
+means for the kinematical cloud members.
+
+## 5.3. Physical properties
+
+Figure 7 shows a comparison between the physical parameters derived from the SED fitting for our new
+candidate members and the confirmed members of the Cha I moving group. To achieve a homogeneous
+comparison, the SEDs of the confirmed members were constructed using the photometric data provided
+in Paper I, and fitted to model photospheres as described in Sect. 3.3. The best-fitting result was
+selected in each case, regardless of the χ2 value, provided that the parameters were in good
+agreement with the known spectroscopic properties of the objects. In the final sample, the fits all
+had χ2 < 100 and, in most cases, Bayesian probabilities larger than 50% for the derived T e f f and
+A V values.
+
+The best-fitting results and physical parameters for the Cha I kinematical members are summarized in
+Table 8. We remark that this table includes only those objects with enough datapoints to perform a
+fit. Hence, the sample of confirmed Cha I members with derived physical parameters is far from
+complete: it includes only 39 stars. Furthermore, masses and ages were estimated for only 24 objects
+of this sample, as the rest of sources lie above the 1 Myr isochrone in the Hertzprung-Russell
+diagram. Similarly, the candidate sample includes only those objects classified as probable members
+in the histograms of the lower panels, while the possible member ChaI-PM-4 is also considered in the
+histograms of the upper panels.
+
+The effective temperature distributions for the new members and the confirmed members are shown in
+the upper-left panel of Fig. 7. Despite covering a broad range of effective temperature reaching the
+A-type domain ( 2700T e f f 10000), Mtype stars dominate the confirmed member sample, with only 25%
+of K-type or earlier stars. The temperature range spanned by the candidate sample (3400 T e f f
+4200) is much narrower than that covered by the confirmed member sample, and it seems to have a
+deficit of both early-type and M-type objects. Except for one source that is cooler (namely ChaI-
+PM-48), the candidates have effective temperatures between 3900 and 4200 K, corresponding to mid-K
+spectral types. In agreement with these temperature distributions, the objects in the candidate
+sample also span a much narrower luminosity range than the confirmed members, as seen in the upper-
+right panel of Fig. 7. However, both luminosity distributions peak around log L/L ∼ -0.5.
+
+The tail of bright, hot stars seen in the confirmed member distributions is formed by relatively
+massive stars (compared with the candidate sample) lying above the youngest isochrone in the
+Hertzprung-Russell diagram, and hence very young and in a relatively early evolutionary stage
+according to their SED shapes. If these objects are not considered and we restrict our analysis to
+M-and K-type objects, the temperature and luminosity distributions of confirmed members and
+candidates are quite similar, although a trend towards slightly hotter effective temperatures and
+accordingly brighter luminosities is seen in the new candidates.
+
+The corresponding mass and age distributions are shown in the lower panels of Fig. 7. No masses and
+ages could be derived for the objects placed above the 1 Myr isochrone in the Hertzprung-Russell
+diagram, including the hottest and most luminous members discussed above. Therefore, the mass
+distribution of the Cha I members does not match their effective temperature distribution, and is
+not expected to be representative of the whole cloud population. However, this is not a critical
+issue for our new members, because it affects only one object (ChaI-PM-4). The lower-left panel of
+Fig. 7 shows that the new probable members span a similar range in masses to the confirmed members
+for which this parameter could be estimated, but it tends to objects with higher masses, in
+agreement with the average higher effective temperatures. The lower-right panel of Fig. 7 shows that
+both samples have similar age distributions, as expected if they belong to the same population.
+
+The physical parameters for the confirmed members of the Cha II moving group were derived in the
+same way as explained above for the Cha I members, and compared to the parameter values for the only
+new probable member, ChaII-PM-11. Of the 22 kinematic members identified in Paper I, we were able to
+obtain physical parameters for 14 stars, which are summarized in Table 8. Masses were estimated for
+nine of these objects, while ages could be derived for eight sources. The rest of confirmed members
+lie above the 1 Myr isochrone in the Hertzprung-Russell diagram, and thus no masses or ages could be
+derived for them.
+
+The physical parameters of the new probable member suggest that it is comparable to the lowest-mass
+(thus, coolest and lowest-luminosity) objects in the member sample. We note, however, that lower
+mass objects are known in Cha II, but fall below the UCAC sensitivity and are thus excluded from our
+statistics.
+
+## 6. Summary and conclusions
+
+Based on proper motion and photometric information, we have identified 51 and 14 kinematic candidate
+members to the Cha I and II moving groups, respectively, in an area of three degrees around each
+cloud. The SED analysis suggests that seventeen objects from the Cha I sample and one from the Cha
+II sample are likely young stars, and thus probable members of the moving groups. Another object
+from the Cha I sample is located slightly above the 1 Myr isochrone in the Hertzprung-Russell
+diagram, and is classified as a possible member to the Cha I moving group. The nature of the
+remaining candidates is more uncertain.
+
+Our new probable members span a mass range 0.3 M/M 1.4, and their physical properties are very
+similar to those of the confirmed members of both clouds included in UCAC. Thus, our results suggest
+that the stellar population associated to the current Cha I cloud may be larger and more widespread
+than previously thought. In Cha II, this is more uncertain, because only one object has been
+classified as a probable member. Similar off-cloud populations have been reported in other nearby
+low-mass star forming regions, like e.g. the Lupus clouds (Comerón et al. 2009(Comerón et al. ,
+2013)).
+
+To find the answers to the questions raised by this work, spectroscopic confirmation of the nature
+of our new candidate members is needed, along with more accurate proper motions and more consistent
+age estimates. The Gaia mission of the European Space Agency, complemented with ongoing and future
+spectroscopic surveys, will provide this information with unprecedented precision for most of the
+stars in the sample studied here, allowing a much better understanding of the properties of the
+stellar population and the star formation history in the Chamaeleon clouds.
+
+Belén López Martí et al.: New kinematical candidate members of Chamaeleon catalogue service, both
+operated at the CDS (Strasbourg, France). We used the VO-compliant tools Aladin, developed at the
+CDS, and TOPCAT, currently developed within the AstroGrid project.
+
+In addition, this publication makes use of data products from the Two Micron All Sky Survey (2MASS),
+which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis
+Center/California Institute of Technology, funded by the US National Aeronautics and Space
+Administration and National Science Foundation; and from the Wide-field Infrared Survey Explorer
+(WISE), which is a joint project of the University of California, Los Angeles, and the Jet
+Propulsion Laboratory/California Institute of Technology, funded by the US National Aeronautics and
+Space Administration. a T=Tycho-2 (Høg et al. 2000); R=RAVE (Siebert et al. 2011) b bkg=reported
+background object (Feigelson et al. 2003;Luhman et al. 2004) Belén
+
+---
+## Footnotes
+
+[1] The VO is a project designed to provide the astronomical community with the data access and the
+research tools necessary to enable the exploration of the digital, multi-wavelength universe
+resident in the astronomical data archives. http://www.ivoa.net
+
+[2] http://www.aavso.org/apass
+
+[3] Obviously, the original samples also included most of the confirmed members, which were not included
+in this selection.
+
+[5] Available online.

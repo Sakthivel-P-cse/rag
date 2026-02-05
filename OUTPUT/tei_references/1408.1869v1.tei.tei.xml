@@ -1,0 +1,1325 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Negative Feedback and Physical Limits of Genes</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2022-04-22">April 22, 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Nicolae</forename><forename type="middle">Radu</forename><surname>Zabet</surname></persName>
+							<email>n.r.zabet@gen.cam.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computing</orgName>
+								<orgName type="institution">University of Kent</orgName>
+								<address>
+									<postCode>CT2 7NF</postCode>
+									<settlement>Canterbury</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Cambridge Systems Biology Centre and Department of Genetics</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>Tennis Court Road</addrLine>
+									<postCode>CB2 1QR</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Negative Feedback and Physical Limits of Genes</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-04-22">April 22, 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">23F2A64B9158E282524DC7F7ED2EBF47</idno>
+					<idno type="arXiv">arXiv:1408.1869v1[q-bio.MN]</idno>
+					<note type="submission">Preprint submitted to Journal of Theoretical Biology</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>gene regulatory networks</term>
+					<term>auto-repression</term>
+					<term>output noise</term>
+					<term>response time</term>
+					<term>metabolic cost</term>
+					<term>trade-off</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>This paper compares the auto-repressed gene to a simple one (a gene without auto-regulation) in terms of response time and output noise under the assumption of fixed metabolic cost. The analysis shows that, in the case of non-vanishing leak expression rate, the negative feedback reduces both the switching on and switching off times of a gene. The noise of the auto-repressed gene will be lower than the one of the simple gene only for low leak expression rates. Summing up, for low, but non-vanishing leak expression rates, the auto-repressed gene is both faster and less noisier compared to the simple one.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head n="7.">Acknowledgements</head><p>The author would like to thank <rs type="person">Dr Dominique F.Chu</rs>, <rs type="person">Professor Andrew N.W. Hone</rs>, <rs type="person">Dr Boris Adryan</rs> and the anonymus reviewers for useful comments which lead to improvements of the manuscript and <rs type="person">Felicia Dana Zabet</rs> for proofreading the manuscript.</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Quantitative model for gene regulation by lambda phage repressor</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Ackers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Shea</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="1129" to="1133" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Metabolic efficiency and amino acid composition in the proteomes of escherichia coli and bacillus subtilis</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Akashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gojobori</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="3695" to="3700" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Design Principles of Biological Circuits</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>Chapman &amp; Hall/CRC Mathematical and Computational Biology Series</publisher>
+		</imprint>
+	</monogr>
+	<note>An Introduction To System Biology</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Network motifs: theory and experimental approaches</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Genetics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="450" to="461" />
+			<date type="published" when="2007">2007b</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Stochastic kinetic analysis of developmental pathway bifurcation in phage l-infected escherichia coli cells</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ross</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Mcadams</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genetics</title>
+		<imprint>
+			<biblScope unit="volume">149</biblScope>
+			<biblScope unit="page" from="1633" to="1648" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Gene network shaping of inherent noise spectra</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Austin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Allen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Mccollum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Dar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Wilgus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Sayler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Samatova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Simpson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">439</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="608" to="611" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Noise in protein expression scales with natural protein abundance</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bar-Even</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Paulsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Maheshri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>O'shea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Pilpel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Barkai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Genetics</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="636" to="643" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Engineering stability in gene networks by autoregulation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Becskei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Serrano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">405</biblScope>
+			<biblScope unit="page" from="590" to="593" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Logical reversibility of computation</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Bennett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IBM Journal of Research and Development</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="525" to="532" />
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The thermodynamics of computation -a review</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Bennett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Theoretical Physics</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="905" to="940" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Transcriptional regulation by the numbers: models. Current Opinion in Genetics and Development</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bintu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Buchler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Gerland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kondev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Phillips</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="116" to="124" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Noise management by molecular networks</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Bruggeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Blthgen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">V</forename><surname>Westerhoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">1000506</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">On schemes of combinatorial transcription logic</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Buchler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Gerland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hwa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="5136" to="5141" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Models of transcription factor binding: Sensitivity of activation functions to model assumptions</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Zabet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitavskiy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Theoretical Biology</title>
+		<imprint>
+			<biblScope unit="volume">257</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="419" to="429" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Optimal parameter settings for information processing in gene regulatory networks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Zabet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N W</forename><surname>Hone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BioSystems</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="99" to="108" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Stochastic gene expression in a single cell</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Elowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Levine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Siggia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Swain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">297</biblScope>
+			<biblScope unit="issue">5584</biblScope>
+			<biblScope unit="page" from="1183" to="1186" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Molecular circuits for associative learning in single-celled organisms</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Fernando</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Liekens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E</forename><surname>Bingle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Beck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lenser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Stekel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Rowe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. R. Soc. Interface</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">34</biblScope>
+			<biblScope unit="page" from="463" to="469" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The linear noise approximation for molecular fluctuations within cells</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Hayot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Jayaprakash</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Biology</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="205" to="210" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Ultrasensitivity and noise propagation in a synthetic transcriptional cascade</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hooshangi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Thiberge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weiss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3581" to="3586" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Noise propagation and signaling sensitivity in biological networks: A role for positive feedback</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hornung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Barkai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="55" to="0061" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Signal processing in single cells</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Isaacs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Blake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Collins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">307</biblScope>
+			<biblScope unit="issue">5717</biblScope>
+			<biblScope unit="page" from="1886" to="1888" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Stochasticity in gene expression: from theories to phenotypes</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Elston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Blake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Collins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Genetics</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="451" to="464" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Stochasticity in single gene expression with both intrinsic noise and fluctuation in kinetic parameters</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lei</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Theoretical Biology</title>
+		<imprint>
+			<biblScope unit="volume">256</biblScope>
+			<biblScope unit="page" from="485" to="492" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Ultimate physical limits to computation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lloyd</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">406</biblScope>
+			<biblScope unit="page" from="1047" to="1054" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Plasticity of the cis-regulatory input function of a gene</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Mayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Setty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shavit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zaslaver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Biology</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">45</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Exponential sensitivity of noise-driven switching in genetic networks</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mukhopadhyay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">S</forename><surname>Wingreen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Biology</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Mathematical Biology I. An Introduction</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Murray</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<publisher>Springer</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Single-cell proteomic analysis of s. cerevisiae reveals the architecture of biological noise</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R S</forename><surname>Newman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ghaemmaghami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ihmels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Breslow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Noble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Derisi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Weissman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">441</biblScope>
+			<biblScope unit="page" from="840" to="846" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Summing up the noise in gene networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Paulsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">427</biblScope>
+			<biblScope unit="page" from="415" to="418" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Random signal fluctuations can reduce random fluctuations in regulated components of chemical regulatory networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Paulsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ehrenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page" from="5447" to="5450" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Noise propagation in gene networks</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Pedraza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Van Oudenaarden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">307</biblScope>
+			<biblScope unit="page" from="1965" to="1969" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Negative autoregulation speeds the response times of transcription networks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rosenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Elowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Molecular Biology</title>
+		<imprint>
+			<biblScope unit="volume">323</biblScope>
+			<biblScope unit="page" from="785" to="793" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Gene regulation at the single-cell level</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rosenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Swain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Elowitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">307</biblScope>
+			<biblScope unit="issue">5717</biblScope>
+			<biblScope unit="page" from="1962" to="1965" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Comparison of classical and autogenous systems of regulation in inducible operons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Savageau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">252</biblScope>
+			<biblScope unit="page" from="546" to="549" />
+			<date type="published" when="1974">1974</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Detailed map of a cis-regulatory input function</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Setty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Mayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Surette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="7702" to="7707" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Colored extrinsic fluctuations and stochastic gene expression</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Shahrezaei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Ollivier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Swain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Molecular Systems Biology</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="0196">2008. 196</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Network motifs in the transcriptional regulation network of escherichia coli</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Shen-Orr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Milo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mangan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Genetics</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="64" to="68" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Noisy signal amplification in ultrasensitive signal transduction</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Shibata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Fujimoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="331" to="336" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Non-genetic individuality: chance in the single cell</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Spudich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Koshland</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">262</biblScope>
+			<biblScope unit="page" from="467" to="471" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Strong negative self regulation of prokaryotic transcription factors increases the intrinsic noise of protein expression</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Stekel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Jenkins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Systems Biology</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">A deoxyribozyme-based molecular automaton</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Stojanovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Stefanovic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Biotechnology</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1069" to="1074" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Intrinsic and extrinsic contributions to stochasticity in gene expression</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Swain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Elowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Siggia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<biblScope unit="page" from="12795" to="12800" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Noise-limited frequency signal transmission in gene circuits</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Reza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>You</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical Journal</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="3753" to="3761" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Intrinsic noise in gene regulatory networks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thattai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Van Oudenaarden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page" from="8614" to="8619" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">From specific gene regulation to genomic networks: a global analysis of transcriptional regulation in escherichia coli</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Thieffry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Huerta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Perez-Rueda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Collado-Vides</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BioEssays</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="433" to="440" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Stochastic processes in physics and chemistry</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Van Kampen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<pubPlace>North Holland</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>North-Holland Personal Library</orgName>
+		</respStmt>
+	</monogr>
+	<note>Third Edition. 3rd Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">A critical quantity for noise attenuation in feedback systems</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Nie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">1000764</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Genetic circuit building blocks for cellular computation, communications, and signal processing</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Basu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hooshangi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kalmbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Karig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mehreja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Netravali</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Computing</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="47" to="84" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Directed evolution of a genetic circuit</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yokobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Arnold</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="issue">26</biblScope>
+			<biblScope unit="page" from="16587" to="16591" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title level="m" type="main">Towards modular, scalable and optimal design of transcriptional logic systems</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Zabet</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+		<respStmt>
+			<orgName>School of Computing, University of Kent, UK.</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Ph.D. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Computational limits to binary genes</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Zabet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Chu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Royal Society Interface</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="945" to="954" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Design principles of transcriptional logic circuits</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Zabet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N W</forename><surname>Hone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Chu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 12th International Conference on the Synthesis and Simulation of Living Systems</title>
+		<meeting>the 12th International Conference on the Synthesis and Simulation of Living Systems<address><addrLine>Odense, Denmark</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2010-08-23">19-23 August 2010</date>
+			<biblScope unit="volume">XII</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Physical limits of feedback noise-suppression in biological networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Biology</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">46009</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

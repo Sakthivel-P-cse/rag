@@ -1,0 +1,1279 @@
+{
+  "paper_id": "BDFD02D5C513A63A08416AAB2C0CC5F9",
+  "title": "Neural Message Passing for Quantum Chemistry",
+  "arxiv_id": null,
+  "authors": [
+    {
+      "given": "Justin",
+      "family": "Gilmer"
+    },
+    {
+      "given": "Samuel S",
+      "family": "Schoenholz"
+    },
+    {
+      "given": "Patrick F",
+      "family": "Riley"
+    },
+    {
+      "given": "Oriol",
+      "family": "Vinyals"
+    },
+    {
+      "given": "George E",
+      "family": "Dahl"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Peter",
+          "family": "Battaglia"
+        },
+        {
+          "given": null,
+          "family": "Pascanu"
+        },
+        {
+          "given": null,
+          "family": "Razvan"
+        },
+        {
+          "given": null,
+          "family": "Lai"
+        },
+        {
+          "given": null,
+          "family": "Matthew"
+        },
+        {
+          "given": "Danilo",
+          "family": "Rezende"
+        },
+        {
+          "given": null,
+          "family": "Jimenez"
+        },
+        {
+          "given": "Koray",
+          "family": "Kavukcuoglu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "The Journal of Chemical Physics",
+      "container_title": "The Journal of Chemical Physics",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Axel D",
+          "family": "Becke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jörg",
+          "family": "Behler"
+        },
+        {
+          "given": "Michele",
+          "family": "Parrinello"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "",
+      "container_title": "",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Bing"
+        },
+        {
+          "given": null,
+          "family": "Huang"
+        },
+        {
+          "given": "O",
+          "family": "Lillenfeld"
+        },
+        {
+          "given": null,
+          "family": "Anatole"
+        },
+        {
+          "given": "Dirk",
+          "family": "Bakowies"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Spectral networks and locally connected networks on graphs",
+      "container_title": "Spectral networks and locally connected networks on graphs",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.6203"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Joan",
+          "family": "Bruna"
+        },
+        {
+          "given": null,
+          "family": "Zaremba"
+        },
+        {
+          "given": null,
+          "family": "Wojciech"
+        },
+        {
+          "given": "Arthur",
+          "family": "Szlam"
+        },
+        {
+          "given": "Yann",
+          "family": "Le-Cun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Quantum monte carlo. Science",
+      "container_title": "Quantum monte carlo. Science",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Ceperley"
+        },
+        {
+          "given": "B",
+          "family": "Alder"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "On the properties of neural machine translation: Encoder-decoder approaches",
+      "container_title": "On the properties of neural machine translation: Encoder-decoder approaches",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.1259"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Van",
+          "family": "Merriënboer"
+        },
+        {
+          "given": null,
+          "family": "Bart"
+        },
+        {
+          "given": null,
+          "family": "Bahdanau"
+        },
+        {
+          "given": null,
+          "family": "Dzmitry"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Michaël",
+          "family": "Defferrard"
+        },
+        {
+          "given": null,
+          "family": "Bresson"
+        },
+        {
+          "given": null,
+          "family": "Xavier"
+        },
+        {
+          "given": "Pierre",
+          "family": "Vandergheynst"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David K",
+          "family": "Duvenaud"
+        },
+        {
+          "given": null,
+          "family": "Maclaurin"
+        },
+        {
+          "given": null,
+          "family": "Dougal"
+        },
+        {
+          "given": "Jorge",
+          "family": "Iparraguirre"
+        },
+        {
+          "given": null,
+          "family": "Bombarell"
+        },
+        {
+          "given": null,
+          "family": "Rafael"
+        },
+        {
+          "given": "Timothy",
+          "family": "Hirzel"
+        },
+        {
+          "given": "Alán",
+          "family": "Aspuru-Guzik"
+        },
+        {
+          "given": "Ryan P",
+          "family": "Adams"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Fast machine learning models of electronic and energetic properties consistently reach approximation errors better than dft accuracy",
+      "container_title": "Fast machine learning models of electronic and energetic properties consistently reach approximation errors better than dft accuracy",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Felix",
+          "family": "Faber"
+        },
+        {
+          "given": null,
+          "family": "Hutchison"
+        },
+        {
+          "given": null,
+          "family": "Luke"
+        },
+        {
+          "given": "Bing",
+          "family": "Huang"
+        },
+        {
+          "given": "Justin",
+          "family": "Gilmer"
+        },
+        {
+          "given": null,
+          "family": "Schoenholz"
+        },
+        {
+          "given": "S",
+          "family": "Samuel"
+        },
+        {
+          "given": "George E",
+          "family": "Dahl"
+        },
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Kearnes"
+        },
+        {
+          "given": null,
+          "family": "Steven"
+        },
+        {
+          "given": "Patrick F",
+          "family": "Riley"
+        },
+        {
+          "given": "O",
+          "family": "Lilienfeld"
+        },
+        {
+          "given": null,
+          "family": "Anatole"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "The journal of physical chemistry letters",
+      "container_title": "The journal of physical chemistry letters",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Katja",
+          "family": "Hansen"
+        },
+        {
+          "given": null,
+          "family": "Biegler"
+        },
+        {
+          "given": null,
+          "family": "Franziska"
+        },
+        {
+          "given": null,
+          "family": "Ramakrishnan"
+        },
+        {
+          "given": null,
+          "family": "Raghunathan"
+        },
+        {
+          "given": null,
+          "family": "Pronobis"
+        },
+        {
+          "given": null,
+          "family": "Wiktor"
+        },
+        {
+          "given": "O",
+          "family": "Lilienfeld"
+        },
+        {
+          "given": null,
+          "family": "Anatole"
+        },
+        {
+          "given": "Klaus -",
+          "family": "Mller"
+        },
+        {
+          "given": null,
+          "family": "Robert"
+        },
+        {
+          "given": "Alexandre",
+          "family": "Tkatchenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Rev",
+      "container_title": "Phys. Rev",
+      "year": "1965",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Lars",
+          "family": "Hedin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "IEEE Signal Processing Magazine",
+      "container_title": "IEEE Signal Processing Magazine",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        },
+        {
+          "given": null,
+          "family": "Deng"
+        },
+        {
+          "given": null,
+          "family": "Li"
+        },
+        {
+          "given": null,
+          "family": "Yu"
+        },
+        {
+          "given": null,
+          "family": "Dong"
+        },
+        {
+          "given": "George E",
+          "family": "Dahl"
+        },
+        {
+          "given": null,
+          "family": "Mohamed"
+        },
+        {
+          "given": null,
+          "family": "Abdel-Rahman"
+        },
+        {
+          "given": null,
+          "family": "Jaitly"
+        },
+        {
+          "given": null,
+          "family": "Navdeep"
+        },
+        {
+          "given": null,
+          "family": "Senior"
+        },
+        {
+          "given": null,
+          "family": "Andrew"
+        },
+        {
+          "given": null,
+          "family": "Vanhoucke"
+        },
+        {
+          "given": null,
+          "family": "Vincent"
+        },
+        {
+          "given": null,
+          "family": "Nguyen"
+        },
+        {
+          "given": null,
+          "family": "Patrick"
+        },
+        {
+          "given": "Tara N",
+          "family": "Sainath"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Phys. Rev",
+      "container_title": "Phys. Rev",
+      "year": "1964",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Hohenberg"
+        },
+        {
+          "given": "W",
+          "family": "Kohn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "The Journal of Chemical Physics",
+      "container_title": "The Journal of Chemical Physics",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Lihong",
+          "family": "Hu"
+        },
+        {
+          "given": null,
+          "family": "Wang"
+        },
+        {
+          "given": null,
+          "family": "Xiujun"
+        },
+        {
+          "given": "Laiho",
+          "family": "Wong"
+        },
+        {
+          "given": "Guanhua",
+          "family": "Chen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "The Journal of Chemical Physics",
+      "container_title": "The Journal of Chemical Physics",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bing",
+          "family": "Huang"
+        },
+        {
+          "given": "O",
+          "family": "Lilienfeld"
+        },
+        {
+          "given": null,
+          "family": "Anatole"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Journal of Computer-Aided Molecular Design",
+      "container_title": "Journal of Computer-Aided Molecular Design",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Steven",
+          "family": "Kearnes"
+        },
+        {
+          "given": "Kevin",
+          "family": "Mccloskey"
+        },
+        {
+          "given": null,
+          "family": "Berndl"
+        },
+        {
+          "given": null,
+          "family": "Marc"
+        },
+        {
+          "given": null,
+          "family": "Pande"
+        },
+        {
+          "given": null,
+          "family": "Vijay"
+        },
+        {
+          "given": "Patrick",
+          "family": "Riley"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "A method for stochastic optimization",
+      "container_title": "A method for stochastic optimization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.6980"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Diederik",
+          "family": "Kingma"
+        },
+        {
+          "given": "Jimmy",
+          "family": "Ba"
+        },
+        {
+          "given": null,
+          "family": "Adam"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+      "container_title": "Semi-Supervised Classification with Graph Convolutional Networks",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T N",
+          "family": "Kipf"
+        },
+        {
+          "given": "M",
+          "family": "Welling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": null,
+          "family": "Sutskever"
+        },
+        {
+          "given": null,
+          "family": "Ilya"
+        },
+        {
+          "given": "Geoffrey E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yujia",
+          "family": "Li"
+        },
+        {
+          "given": null,
+          "family": "Tarlow"
+        },
+        {
+          "given": null,
+          "family": "Daniel"
+        },
+        {
+          "given": "Marc",
+          "family": "Brockschmidt"
+        },
+        {
+          "given": "Richard",
+          "family": "Zemel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Journal of chemical information and modeling",
+      "container_title": "Journal of chemical information and modeling",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alessandro",
+          "family": "Lusci"
+        },
+        {
+          "given": null,
+          "family": "Pollastri"
+        },
+        {
+          "given": null,
+          "family": "Gianluca"
+        },
+        {
+          "given": "Pierre",
+          "family": "Baldi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Abhinav. The more you know: Using knowledge graphs for image classification",
+      "container_title": "Abhinav. The more you know: Using knowledge graphs for image classification",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1612.04844"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Kenneth",
+          "family": "Marino"
+        },
+        {
+          "given": "Ruslan",
+          "family": "Salakhutdinov"
+        },
+        {
+          "given": null,
+          "family": "Gupta"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Journal of chemical information and modeling",
+      "container_title": "Journal of chemical information and modeling",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Christian",
+          "family": "Merkwirth"
+        },
+        {
+          "given": "Thomas",
+          "family": "Lengauer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "IEEE Transactions on Neural Networks",
+      "container_title": "IEEE Transactions on Neural Networks",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alessio",
+          "family": "Micheli"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Grégoire",
+          "family": "Montavon"
+        },
+        {
+          "given": null,
+          "family": "Hansen"
+        },
+        {
+          "given": null,
+          "family": "Katja"
+        },
+        {
+          "given": null,
+          "family": "Fazli"
+        },
+        {
+          "given": null,
+          "family": "Siamac"
+        },
+        {
+          "given": "Matthias",
+          "family": "Rupp"
+        },
+        {
+          "given": null,
+          "family": "Biegler"
+        },
+        {
+          "given": null,
+          "family": "Franziska"
+        },
+        {
+          "given": null,
+          "family": "Ziehe"
+        },
+        {
+          "given": null,
+          "family": "Andreas"
+        },
+        {
+          "given": null,
+          "family": "Tkatchenko"
+        },
+        {
+          "given": null,
+          "family": "Alexandre"
+        },
+        {
+          "given": "O",
+          "family": "Lilienfeld"
+        },
+        {
+          "given": null,
+          "family": "Anatole"
+        },
+        {
+          "given": "Klaus-Robert",
+          "family": "Müller"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Proceedings of the 33rd annual international conference on machine learning",
+      "container_title": "Proceedings of the 33rd annual international conference on machine learning",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mathias",
+          "family": "Niepert"
+        },
+        {
+          "given": "Ahmed",
+          "family": null
+        },
+        {
+          "given": "Mohamed",
+          "family": "Kutzkov"
+        },
+        {
+          "given": "Konstantin",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Scientific data",
+      "container_title": "Scientific data",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Raghunathan",
+          "family": "Ramakrishnan"
+        },
+        {
+          "given": null,
+          "family": "Dral"
+        },
+        {
+          "given": "O",
+          "family": "Pavlo"
+        },
+        {
+          "given": "Matthias",
+          "family": "Rupp"
+        },
+        {
+          "given": "Von",
+          "family": "Lilienfeld"
+        },
+        {
+          "given": "Anatole",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Journal of chemical information and modeling",
+      "container_title": "Journal of chemical information and modeling",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Rogers"
+        },
+        {
+          "given": "Mathew",
+          "family": "Hahn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Journal of chemical information and modeling",
+      "container_title": "Journal of chemical information and modeling",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Lars",
+          "family": "Ruddigkeit"
+        },
+        {
+          "given": null,
+          "family": "Van Deursen"
+        },
+        {
+          "given": null,
+          "family": "Ruud"
+        },
+        {
+          "given": null,
+          "family": "Blum"
+        },
+        {
+          "given": "C",
+          "family": "Lorenz"
+        },
+        {
+          "given": "Jean-Louis",
+          "family": "Reymond"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Physical review letters",
+      "container_title": "Physical review letters",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Matthias",
+          "family": "Rupp"
+        },
+        {
+          "given": "Alexandre",
+          "family": "Tkatchenko"
+        },
+        {
+          "given": "Klaus -",
+          "family": "Haand Müller"
+        },
+        {
+          "given": null,
+          "family": "Robert"
+        },
+        {
+          "given": "O",
+          "family": "Lilienfeld"
+        },
+        {
+          "given": null,
+          "family": "Anatole"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "IEEE Transactions on Neural Networks",
+      "container_title": "IEEE Transactions on Neural Networks",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Scarselli"
+        },
+        {
+          "given": null,
+          "family": "Franco"
+        },
+        {
+          "given": null,
+          "family": "Gori"
+        },
+        {
+          "given": null,
+          "family": "Marco"
+        },
+        {
+          "given": "Ah",
+          "family": "Tsoi"
+        },
+        {
+          "given": null,
+          "family": "Chung"
+        },
+        {
+          "given": "Markus",
+          "family": "Hagenbuchner"
+        },
+        {
+          "given": "Gabriele",
+          "family": "Monfardini"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Nature Physics",
+      "container_title": "Nature Physics",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Samuel S",
+          "family": "Schoenholz"
+        },
+        {
+          "given": null,
+          "family": "Cubuk"
+        },
+        {
+          "given": "D",
+          "family": "Ekin"
+        },
+        {
+          "given": null,
+          "family": "Sussman"
+        },
+        {
+          "given": "M",
+          "family": "Daniel"
+        },
+        {
+          "given": "Efthimios",
+          "family": "Kaxiras"
+        },
+        {
+          "given": "Andrea J",
+          "family": "Liu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Nature Communications",
+      "container_title": "Nature Communications",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kristof T",
+          "family": "Schütt"
+        },
+        {
+          "given": null,
+          "family": "Arbabzadah"
+        },
+        {
+          "given": null,
+          "family": "Farhad"
+        },
+        {
+          "given": null,
+          "family": "Chmiela"
+        },
+        {
+          "given": null,
+          "family": "Stefan"
+        },
+        {
+          "given": null,
+          "family": "Müller"
+        },
+        {
+          "given": "R",
+          "family": "Klaus"
+        },
+        {
+          "given": "Alexandre",
+          "family": "Tkatchenko"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1985",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Frank H",
+          "family": "Stillinger"
+        },
+        {
+          "given": "Thomas A",
+          "family": "Weber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Order matters: Sequence to sequence for sets",
+      "container_title": "Order matters: Sequence to sequence for sets",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.06391"
+        }
+      ],
+      "authors": [
+        {
+          "given": null,
+          "family": "Vinyals"
+        },
+        {
+          "given": null,
+          "family": "Oriol"
+        },
+        {
+          "given": null,
+          "family": "Bengio"
+        },
+        {
+          "given": null,
+          "family": "Samy"
+        },
+        {
+          "given": "Manjunath",
+          "family": "Kudlur"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Google's neural machine translation system: Bridging the gap between human and machine translation",
+      "container_title": "Google's neural machine translation system: Bridging the gap between human and machine translation",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1609.08144"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yonghui",
+          "family": "Wu"
+        },
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": null,
+          "family": "Chen"
+        },
+        {
+          "given": null,
+          "family": "Zhifeng"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": null,
+          "family": "Norouzi"
+        },
+        {
+          "given": null,
+          "family": "Mohammad"
+        },
+        {
+          "given": null,
+          "family": "Macherey"
+        },
+        {
+          "given": null,
+          "family": "Wolfgang"
+        },
+        {
+          "given": null,
+          "family": "Krikun"
+        },
+        {
+          "given": null,
+          "family": "Maxim"
+        },
+        {
+          "given": null,
+          "family": "Cao"
+        },
+        {
+          "given": null,
+          "family": "Yuan"
+        },
+        {
+          "given": null,
+          "family": "Gao"
+        },
+        {
+          "given": null,
+          "family": "Qin"
+        },
+        {
+          "given": null,
+          "family": "Macherey"
+        },
+        {
+          "given": null,
+          "family": "Klaus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "",
+      "container_title": "",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Appendix"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "can be interpreted as MPNNs. These models generalize the notion of convolutions a general graph G with N nodes. In the language of MPNNs, these models tend to have very simple message functions and are typically applied to much larger graphs such as social network data. We closely follow the notation defined in",
+      "container_title": "can be interpreted as MPNNs. These models generalize the notion of convolutions a general graph G with N nodes. In the language of MPNNs, these models tend to have very simple message functions and are typically applied to much larger graphs such as social network data. We closely follow the notation defined in",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Defferrard"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

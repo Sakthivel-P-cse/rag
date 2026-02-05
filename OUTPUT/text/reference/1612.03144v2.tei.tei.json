@@ -1,0 +1,1032 @@
+{
+  "paper_id": "B1130E9DB9EC407EB002B5517FA52241",
+  "title": "Feature Pyramid Networks for Object Detection",
+  "arxiv_id": "arXiv:1612.03144v2[cs.CV]",
+  "authors": [
+    {
+      "given": "Tsung-Yi",
+      "family": "Lin"
+    },
+    {
+      "given": "Piotr",
+      "family": "Dollár"
+    },
+    {
+      "given": "Ross",
+      "family": "Girshick"
+    },
+    {
+      "given": "Kaiming",
+      "family": "He"
+    },
+    {
+      "given": "Bharath",
+      "family": "Hariharan"
+    },
+    {
+      "given": "Serge",
+      "family": "Belongie"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "RCA engineer",
+      "container_title": "RCA engineer",
+      "year": "1984",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "E H",
+          "family": "Adelson"
+        },
+        {
+          "given": "C H",
+          "family": "Anderson"
+        },
+        {
+          "given": "J R",
+          "family": "Bergen"
+        },
+        {
+          "given": "P J",
+          "family": "Burt"
+        },
+        {
+          "given": "J M",
+          "family": "Ogden"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Bell"
+        },
+        {
+          "given": "C L",
+          "family": "Zitnick"
+        },
+        {
+          "given": "K",
+          "family": "Bala"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Z",
+          "family": "Cai"
+        },
+        {
+          "given": "Q",
+          "family": "Fan"
+        },
+        {
+          "given": "R S",
+          "family": "Feris"
+        },
+        {
+          "given": "N",
+          "family": "Vasconcelos"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Dai"
+        },
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "Y",
+          "family": "Li"
+        },
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Dalal"
+        },
+        {
+          "given": "B",
+          "family": "Triggs"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "TPAMI",
+      "container_title": "TPAMI",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Dollár"
+        },
+        {
+          "given": "R",
+          "family": "Appel"
+        },
+        {
+          "given": "S",
+          "family": "Belongie"
+        },
+        {
+          "given": "P",
+          "family": "Perona"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "TPAMI",
+      "container_title": "TPAMI",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P F",
+          "family": "Felzenszwalb"
+        },
+        {
+          "given": "R B",
+          "family": "Girshick"
+        },
+        {
+          "given": "D",
+          "family": "Mcallester"
+        },
+        {
+          "given": "D",
+          "family": "Ramanan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Ghiasi"
+        },
+        {
+          "given": "C C",
+          "family": "Fowlkes"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "ICCV",
+      "container_title": "ICCV",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Gidaris"
+        },
+        {
+          "given": "N",
+          "family": "Komodakis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "BMVC",
+      "container_title": "BMVC",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Gidaris"
+        },
+        {
+          "given": "N",
+          "family": "Komodakis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "ICCV",
+      "container_title": "ICCV",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Girshick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Girshick"
+        },
+        {
+          "given": "J",
+          "family": "Donahue"
+        },
+        {
+          "given": "T",
+          "family": "Darrell"
+        },
+        {
+          "given": "J",
+          "family": "Malik"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Hariharan"
+        },
+        {
+          "given": "P",
+          "family": "Arbeláez"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        },
+        {
+          "given": "J",
+          "family": "Malik"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Mask r-cnn",
+      "container_title": "Mask r-cnn",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1703.06870"
+        }
+      ],
+      "authors": [
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "G",
+          "family": "Gkioxari"
+        },
+        {
+          "given": "P",
+          "family": "Dollár"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Honari"
+        },
+        {
+          "given": "J",
+          "family": "Yosinski"
+        },
+        {
+          "given": "P",
+          "family": "Vincent"
+        },
+        {
+          "given": "C",
+          "family": "Pal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Kong"
+        },
+        {
+          "given": "A",
+          "family": "Yao"
+        },
+        {
+          "given": "Y",
+          "family": "Chen"
+        },
+        {
+          "given": "F",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Backpropagation applied to handwritten zip code recognition",
+      "container_title": "Backpropagation applied to handwritten zip code recognition",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Lecun"
+        },
+        {
+          "given": "B",
+          "family": "Boser"
+        },
+        {
+          "given": "J S",
+          "family": "Denker"
+        },
+        {
+          "given": "D",
+          "family": "Henderson"
+        },
+        {
+          "given": "R E",
+          "family": "Howard"
+        },
+        {
+          "given": "W",
+          "family": "Hubbard"
+        },
+        {
+          "given": "L D",
+          "family": "Jackel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T.-Y",
+          "family": "Lin"
+        },
+        {
+          "given": "M",
+          "family": "Maire"
+        },
+        {
+          "given": "S",
+          "family": "Belongie"
+        },
+        {
+          "given": "J",
+          "family": "Hays"
+        },
+        {
+          "given": "P",
+          "family": "Perona"
+        },
+        {
+          "given": "D",
+          "family": "Ramanan"
+        },
+        {
+          "given": "P",
+          "family": "Dollár"
+        },
+        {
+          "given": "C L",
+          "family": "Zitnick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Liu"
+        },
+        {
+          "given": "D",
+          "family": "Anguelov"
+        },
+        {
+          "given": "D",
+          "family": "Erhan"
+        },
+        {
+          "given": "C",
+          "family": "Szegedy"
+        },
+        {
+          "given": "S",
+          "family": "Reed"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "ICLR workshop",
+      "container_title": "ICLR workshop",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "W",
+          "family": "Liu"
+        },
+        {
+          "given": "A",
+          "family": "Rabinovich"
+        },
+        {
+          "given": "A C",
+          "family": "Berg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Long"
+        },
+        {
+          "given": "E",
+          "family": "Shelhamer"
+        },
+        {
+          "given": "T",
+          "family": "Darrell"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "IJCV",
+      "container_title": "IJCV",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D G",
+          "family": "Lowe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Newell"
+        },
+        {
+          "given": "K",
+          "family": "Yang"
+        },
+        {
+          "given": "J",
+          "family": "Deng"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P O",
+          "family": "Pinheiro"
+        },
+        {
+          "given": "R",
+          "family": "Collobert"
+        },
+        {
+          "given": "P",
+          "family": "Dollar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "ECCV",
+      "container_title": "ECCV",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P O",
+          "family": "Pinheiro"
+        },
+        {
+          "given": "T.-Y",
+          "family": "Lin"
+        },
+        {
+          "given": "R",
+          "family": "Collobert"
+        },
+        {
+          "given": "P",
+          "family": "Dollár"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "NIPS",
+      "container_title": "NIPS",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "PAMI",
+      "container_title": "PAMI",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Ren"
+        },
+        {
+          "given": "K",
+          "family": "He"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "J",
+          "family": "Sun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "U-Net: Convolutional networks for biomedical image segmentation",
+      "container_title": "U-Net: Convolutional networks for biomedical image segmentation",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Ronneberger"
+        },
+        {
+          "given": "P",
+          "family": "Fischer"
+        },
+        {
+          "given": "T",
+          "family": "Brox"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Human face detection in visual scenes",
+      "container_title": "Human face detection in visual scenes",
+      "year": "1995",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CMU-CS-95-158R"
+        }
+      ],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Rowley"
+        },
+        {
+          "given": "S",
+          "family": "Baluja"
+        },
+        {
+          "given": "T",
+          "family": "Kanade"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "",
+      "container_title": "",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "O",
+          "family": "Russakovsky"
+        },
+        {
+          "given": "J",
+          "family": "Deng"
+        },
+        {
+          "given": "H",
+          "family": "Su"
+        },
+        {
+          "given": "J",
+          "family": "Krause"
+        },
+        {
+          "given": "S",
+          "family": "Satheesh"
+        },
+        {
+          "given": "S",
+          "family": "Ma"
+        },
+        {
+          "given": "Z",
+          "family": "Huang"
+        },
+        {
+          "given": "A",
+          "family": "Karpathy"
+        },
+        {
+          "given": "A",
+          "family": "Khosla"
+        },
+        {
+          "given": "M",
+          "family": "Bernstein"
+        },
+        {
+          "given": "A C",
+          "family": "Berg"
+        },
+        {
+          "given": "L",
+          "family": "Fei-Fei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Sermanet"
+        },
+        {
+          "given": "D",
+          "family": "Eigen"
+        },
+        {
+          "given": "X",
+          "family": "Zhang"
+        },
+        {
+          "given": "M",
+          "family": "Mathieu"
+        },
+        {
+          "given": "R",
+          "family": "Fergus"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "CVPR",
+      "container_title": "CVPR",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Shrivastava"
+        },
+        {
+          "given": "A",
+          "family": "Gupta"
+        },
+        {
+          "given": "R",
+          "family": "Girshick"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "ICLR",
+      "container_title": "ICLR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K",
+          "family": "Simonyan"
+        },
+        {
+          "given": "A",
+          "family": "Zisserman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "IJCV",
+      "container_title": "IJCV",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J R",
+          "family": "Uijlings"
+        },
+        {
+          "given": "K E",
+          "family": "Van De Sande"
+        },
+        {
+          "given": "T",
+          "family": "Gevers"
+        },
+        {
+          "given": "A W",
+          "family": "Smeulders"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "IEE Proc. on Vision, Image, and Signal Processing",
+      "container_title": "IEE Proc. on Vision, Image, and Signal Processing",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Vaillant"
+        },
+        {
+          "given": "C",
+          "family": "Monrocq"
+        },
+        {
+          "given": "Y",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "BMVC",
+      "container_title": "BMVC",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Zagoruyko"
+        },
+        {
+          "given": "N",
+          "family": "Komodakis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "BMVC",
+      "container_title": "BMVC",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Zagoruyko"
+        },
+        {
+          "given": "A",
+          "family": "Lerer"
+        },
+        {
+          "given": "T.-Y",
+          "family": "Lin"
+        },
+        {
+          "given": "P O",
+          "family": "Pinheiro"
+        },
+        {
+          "given": "S",
+          "family": "Gross"
+        },
+        {
+          "given": "S",
+          "family": "Chintala"
+        },
+        {
+          "given": "P",
+          "family": "Dollár"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

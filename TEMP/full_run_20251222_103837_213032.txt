@@ -1,0 +1,7 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_103837_213032.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): I have a graph with very few labeled nodes. My model overfits badly when labels are scarce. I want to exploit structure better, but I don’t want to add more labels.
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251222_103845_588074.json
+[retrieve] Query (first 200 chars): How can graph neural networks effectively leverage graph structure to improve node classification performance in scenarios with limited labeled nodes, without relying on additional labeling?  Search h
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20

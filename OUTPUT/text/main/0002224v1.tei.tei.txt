@@ -1,0 +1,149 @@
+# Ice XII in its second regime of metastability
+
+**Published:** November 2, 2018
+
+## Abstract
+
+We present neutron powder diffraction results which give unambiguous evidence for the formation of
+the recently identified new crystalline ice phase [4], labeled ice XII, at completely different
+conditions. Ice XII is produced here by compressing hexagonal ice I h at T = 77, 100, 140 and 160 K
+up to 1.8 GPa. It can be maintained at ambient pressure in the temperature range 1.5 < T < 135 K.
+High resolution diffraction is carried out at T = 1.5 K and ambient pressure on ice XII and accurate
+structural properties are obtained from Rietveld refinement. At T = 140 and 160 K additionally ice
+III/IX is formed. The increasing amount of ice III/IX with increasing temperature gives an upper
+limit of T ≈ 150 K for the successful formation of ice XII with the presented procedure.
+
+Although, water has been extensively studied both experimentally and theoretically it still rewards
+us with new and unexpected properties. This has been demonstrated recently by (i) the detection of
+polyamorphism [1][2][3] and (ii) the discovery of a new crystalline phase (ice XII) [4,5]. Having
+been observed in different regions of water's phase diagram the two phenomena were originally
+thought to be disconnected (Figure 1). The phenomenon of polyamorphism, i.e. the existence of two
+distinct amorphous phases, is still lacking a comprehensive understanding [6]. Although
+polyamorphism is equally observed in other substances particularly interesting explanations have
+been put forward for water. These ideas are based on computer simulations [7] and link polyamorphism
+to particularities of the supercooled liquid like phase segregation and a second critical point. Due
+to homogeneous crystallization supercooled water is experimentally inaccessible in the region where
+these phenomena are expected. The hypotheses must, therefore, be checked indirectly, e.g. by
+establishing the glassy character of the amorphous phases. The formation of the highdensity
+amorphous ice (HDA) -achieved by compressing crystalline hexagonal ice I h at temperatures below 150
+K to pressures exceeding 1 GPa (Fig. 1) -has received particular attention in this context
+[7][8][9].
+
+So far, the formation of HDA from ice I h has been reported as a well-defined transition channel.
+The contamination of the amorphous samples by crystalline impurities has been granted little
+attention [10][11][12]. Only recently [13][14][15] strong experimental indications have become
+available which imply that all these contaminations correspond to ice XII. As ice XII was originally
+observed in a completely different region of water's phase diagram this shows that it is a rather
+prolific phase of water. Moreover, the co-production of ice XII has, as we will argue in the
+conclusions, far reaching implications for the I h to HDA transformation and, thus, on the origin of
+water's polyamorphism.
+
+In this letter we show that the structure of ice XII produced at low temperatures is definitely
+identical with the phase characterized by Lobban et al. [4] at higher temperatures. Furthermore, we
+find that no continuous connection between the two regions of apparent metastability exists. And
+finally, we identify the conditions which define whether the compression of I h results in ice XII
+or HDA.
+
+Our results are based on high-resolution neutron powder diffraction experiments on samples which are
+produced at various temperatures. All samples are treated in the following way. About 2.5 ml of D 2
+O (purity 99.9, resistivity 1 MΩcm) is frozen to common hexagonal ice I h and cooled to 77 K in a
+piston-cylinder apparatus. The samples are heated to the desired temperatures, namely 77, 100, 140
+and 160 K and tempered for about 30 minutes. Each sample is then compressed to a maximum nominal
+pressure of 1.8 GPa. The rate of compression is 1 GPa/min at 77 K and 0.5 GPa/min at all other
+temperatures. Once the maximum pressure is attained the samples are cooled back to 77 K and finally
+recovered from the pressure device in liquid nitrogen, where they are powdered by using a mortar and
+a pestle. No pressure changes which could be interpreted as signs of phase transitions are observed
+in the course of cooling under pressure. The sample temperature as measured at the bottom of the
+pressure cylinder apparatus does not increase by more than 10 K during the compression phase.
+
+The diffraction experiments are carried out on the high-resolution diffractometer D2B at the
+Institute-Laue-Langevin in Grenoble, France [16]. A Vanadium sample holder (diameter = 7 mm) and a
+standard cryostat are chosen as sample environment [16]. Two different experimental setups are
+applied. The accurate structure determination of ice XII is carried out at 1.5 K on the sample
+produced at 77 K. For this measurement the horizontal incident beam divergence α 1 is set to 10' and
+the monochromator aperture (MA) to 10 mm. The detector is moved using ∆Θ = 0.05 • steps. In this
+high resolution mode, the applied wavelength λ = 1.59427 ± 0.00006 Å and the instrumental resolution
+are determined from an independent measurement of a silicon powder sample. For good statistics data
+are collected over 15 hours. All other measurements are performed at 110 K, with α 1 = 30' and MA =
+50 mm, ∆Θ = 0.05 • at the given wavelength. These lower resolution data are collected for 120
+minutes (sample prepared at 77 K) and 30 minutes (all other samples) which is sufficient for a
+structural identification of the samples.
+
+Figure 2 displays the results of the high-resolution measurement at 1.5 K. A Rietveld refinement
+[17] is performed without any constrains on the parameters using the program Fullprof [18]. Our
+refinement confirms that the structure of the observed ice phase is unambiguously that of ice XII
+[4,13]. This structure is characterized by twelve water molecules arranged in a tetragonal unit cell
+meeting the symmetry space group I 42d. The refined unit cell parameters are a = 8.2816 ± 0.0002 Å
+and b = 4.0361 ± 0.0001 Å which result in a calculated microscopic density of ρ = 1.4397±0.0003 g/cm
+3 (D 2 O). We present in Table I the refined fractional coordinates and thermal factors and in Table
+II the calculated intra-and intermolecular distances and bond angles. Taking into account the
+different preparational conditions which are used here and in reference [4] the cell constants, mass
+densities and atomic parameters are in good agreement with each other. Profile features in the
+diffraction pattern (Figure 2) which are not due to ice XII can be attributed to the sample
+environment and a slight contamination of the sample by some untransformed I h and simultaneously
+produced amorphous ice. This contamination is taken into account in the refinement by profile (I h ,
+symmetry space group P6 3 /mmc) and background (amorphous ice) matching [18,19]. The peak which due
+to the sample environment is excluded from the calculation. The formation of amorphous ice shows the
+ambivalent nature of the applied pressure induced transition. The final residuals of the refinement
+are R wp = 3.48% and R p = 2.69%.
+
+The diffraction results for samples prepared at different temperatures are compared in Figure 3. The
+presence of ice XII can be clearly identified in all of the data, although, its diffraction pattern
+is obscured progressively by an additional contribution at 140 and 160 K, respectively. To identify
+this additional contribution profile matching methods [18,19] are used for ice phases expected in
+this region of water's phase diagram. The most promising indexing scheme is given by the symmetry
+space group P4 1 2 1 2. This symmetry space group is uniquely inherent to ice III and ice IX, which
+differ in the degree of order in their proton sublattices [20][21][22][23]. As in ice XII, twelve
+water molecules inhabit the tetragonal unit cell of ice III/IX. Table III gives the unit cell
+constants and the corresponding mass densities of ice XII and ice III/IX as determined by the
+profile matching. The profile shape function, which is used in the matching procedure, is fully
+accounted for by the instrument resolution function as determined from the samples prepared at 77
+and 100 K (Figure 3a,b). As a consequence only the cell constants (Table III) are freely adjustable
+for the phase mixtures. Typical residuals of the matching for the ice XII and ice III/IX mixtures
+are R wp ≈ 6% and R p ≈ 8%. The inset of Figure 3 shows a diffraction pattern taken at λ = 3.00 Å on
+the time-of-flight spectrometer IN5 of a sample prepared at T ≈ 165 K. The absence of the (220) peak
+of ice XII which should be well resolved at 2Θ ≈ 70 • indicates that the content of ice XII is
+negligibly small. Thus, above T > 160 K solely ice III/IX is formed. The pressure induced formation
+of ice III/IX from I h at temperatures exceeding 140 K is in agreement with recent extensive studies
+[24,7,8]. Formation of ice V at temperatures exceeding 180 K [8] is not observed in any of our
+samples. This shows that despite the elevated compression rates used in our work the temperature of
+the sample during the compression stage stayed close to the cell temperature.
+
+Summarizing, we have demonstrated that ice I h can be successfully compacted either into the high-
+density amorphous state (HDA) or into the crystalline phase ice XII. Both phases are produced by
+application of pressure exceeding 1.0 GPa at temperatures below 150 K (Figure 1). Ice XII is a
+rather prolific feature in waters phase diagram. Its formation in two seemingly disconnected regions
+is unusual but not entirely surprising when we consider the fact that the formation is governed by
+dynamic variables like the compression rate, and, in addition, is in competition with other
+crystalline and amorphous phases. Ice XII can be recovered at ambient pressure and low temperature
+and can be stored at temperatures lower than 135 K. At higher temperatures it starts to transform
+apparently to the metastable cubic phase [13,25] which itself is a precursor of the stable I h form.
+Production of different ice phases under seemingly identical conditions is not a new observation but
+related to the non-equilibrium character of the transitions. In the case of the metastable ice
+phases IV, XII and stable ice V (see Figure 1) phase discrimination is achieved via the cooling
+rates [4,[26][27][28]. In our example the compression rate seems to be the decisive control
+parameter. Having used higher compression rates than in previous experiments it was possible to
+obtain exclusive formation of ice XII. Given the higher density of recovered ice XII (ρ ≈ 1.44 g/cm
+3 ) in comparison to recovered HDA (ρ ≈ 1.30 g/cm 3 ) and an anticipated kinetic character of the
+transitions such a dependence could be expected. The observation of explosive sound accompanied by
+abrupt loss of pressure indicates the development of shock waves during the compression which could
+play a major role in the transformation process.
+
+The here established competition between crystallization and amorphization under close experimental
+conditions has to be properly acknowledged by all theoretical attempts trying to explain amorphous
+ice formation under pressure. Crystallization implies a reorganization and not merely a deformation
+of water's hydrogen bond network and, therefore, places more stringent conditions on the transition
+mechanism. A purely mechanical instability [9] as recently proposed for the formation of HDA is, to
+our opinion, insufficient to explain the ice XII formation. This holds unless the mechanical
+collapse is accompanied by high molecular mobility as for example in the case of a thermodynamic
+mechanical instability [29] or shock wave melting [30] which allow for crystalline reassembly. The
+requirement for high mobility, necessary for ice XII formation, equally explains the threshold value
+of around 1.0 GPa which corresponds to water's extrapolated melting line. (T = 260 K, p = 0.55 GPa).
+Please note that this region is fully encapsulated in the regime of the stable ice V. In addition, a
+third water phase namely the metastable ice IV can equally be formed in this region by employing an
+appropriate cooling process which is indicated by the vertical arrow. The insert sketches the
+pressure induced transition line of I h (thick solid line) as studied by O. Mishima and followed up
+here. The light shaded area stresses the region in which ice XII is successfully formed in the
+present work. Horizontal arrows indicate that I h transforms by compression below 150 K to ice XII
+or HDA and above 150 K to ice III/IX. The dark shaded area displays the 150 K boundary studied by O.
+Mishima for HDA and equally observed for ice XII here.

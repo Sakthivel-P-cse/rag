@@ -1,0 +1,149 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_123724_552303.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): My NLP model performs poorly on rare words and morphologically rich languages. Is there a simple fix without using huge models?
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251223_123728_338321.json
+[retrieve] Query (first 200 chars): What methods improve NLP model performance on rare words and morphologically rich languages without relying on large pre-trained models?  Search hints: morphological analysis, subword modeling, charac
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251223_123724_552303.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=5
+[judge] refined_question: What methods improve NLP model performance on rare words and morphologically rich languages without relying on large pre-trained models?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): What methods improve NLP model performance on rare words and morphologically rich languages without relying on large pre-trained models?  Search hints: morphological analysis, subword modeling, charac
+[judge] search_hint: morphological analysis, subword modeling, character-level embeddings, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages
+[retrieve] Query (first 200 chars): What methods improve NLP model performance on rare words and morphologically rich languages without relying on large pre-trained models?  Search hints: morphological analysis, subword modeling, charac
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1607.04606v2.tei.tei chunk_id=1607.04606v2.tei.tei_chunk-13 retr_score=0.5958 section=Language modeling :: of the vectors that we propose for morphologically rich languages.  6 Qualitative analysis 6.1 Nearest neighbors.  We report sample qualitative results in Table...
+[judge] cand#2: paper_id=1607.04606v2.tei.tei chunk_id=1607.04606v2.tei.tei_chunk-2 retr_score=0.5743 section=Introduction :: Most of these techniques represent each word of the vocabulary by a distinct vector, without parameter sharing. In particular, they ignore the internal structur...
+[judge] cand#3: paper_id=1607.04606v2.tei.tei chunk_id=1607.04606v2.tei.tei_chunk-12 retr_score=0.5343 section=Effect of the size of n-grams :: character n-grams, we prepend and append special positional characters to represent the beginning and end of word. Therefore, 2-grams will not be enough to prop...
+[judge] cand#4: paper_id=1607.04606v2.tei.tei chunk_id=1607.04606v2.tei.tei_chunk-3 retr_score=0.5293 section=Introduction :: Character level features for NLP. Another area of research closely related to our work are characterlevel models for natural language processing. These models d...
+[judge] cand#5: paper_id=1602.02410v2.tei.tei chunk_id=1602.02410v2.tei.tei_chunk-14 retr_score=0.5202 section=5.4. Word Embeddings vs Character CNN :: Replacing the embedding layer with a parametrized neural network that process characters of a given word allows the model to consume arbitrary words and is not ...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["methods to improve NLP model performance on rare words and morphologically rich languages without relying on large pre-trained models"],   "next_question": "What specific techniques can be used to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes?",   "accept": [     {"chunk_id": "1607.04606v2.tei.tei_chunk-2", "paper_id": "1607.04606v2.tei.tei", "rationale": "proposes a method to learn representations for character n-grams and represent words as the s
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251223_123836_419188.json
+[judge] satisfied=False
+[judge] Accepted this iter: 2 | Rejected this iter: 3 | Total accepted: 2 | Total rejected: 3
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): What specific techniques can be used to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes?  Search hints: morphological analysis
+[judge] search_hint: morphological analysis, subword modeling, character-level embeddings, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages, language modeling, word embeddings
+[retrieve] Query (first 200 chars): What specific techniques can be used to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes?  Search hints: morphological analysis
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1701.06538v1.tei.tei chunk_id=1701.06538v1.tei.tei_chunk-10 retr_score=0.4678 section=100 BILLION WORD GOOGLE NEWS CORPUS :: Figure 3: Language modeling on a 100 billion word corpus. Models have similar computational budgets (8 million ops/timestep).  On the 1-billion-word corpus, add...
+[judge] cand#2: paper_id=1508.07909v5.tei.tei chunk_id=1508.07909v5.tei.tei_chunk-12 retr_score=0.4502 section=Unigram accuracy :: Figure 2 shows results for the English-German ensemble systems on newstest2015. Unigram F 1 of all systems tends to decrease for lowerfrequency words. The basel...
+[judge] cand#3: paper_id=1508.07909v5.tei.tei chunk_id=1508.07909v5.tei.tei_chunk-5 retr_score=0.4449 section=Related Work :: For Statistical Machine Translation (SMT), the translation of unknown words has been the subject of intensive research.  A large proportion of unknown words are...
+[judge] cand#4: paper_id=1608.05859v3.tei.tei chunk_id=1608.05859v3.tei.tei_chunk-7 retr_score=0.4415 section=Results :: Our experiments study the quality of various embeddings, the similarity between them, and the impact of tying them on the word2vec skip-gram model, NNLMs, and N...
+[judge] cand#5: paper_id=1601.06733v7.tei.tei chunk_id=1601.06733v7.tei.tei_chunk-9 retr_score=0.4345 section=Language Modeling :: Our language modeling experiments were conducted on the English Penn Treebank dataset. Following common practice (Mikolov et al., 2010), we trained on sections ...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["techniques to enhance NLP model accuracy for rare words and morphologically rich languages with limited resources and small model sizes"],   "next_question": "What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words?",   "accept": [],   "reject": [     {"chunk_id": "1701.06538v1.tei.tei_chunk-10", "paper_id": "1701.06538v1.tei.tei", "reason": "not relevant to morphologically rich languages"},     {"chunk_id": "1508.0790
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251223_123920_877728.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 2 | Total rejected: 8
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words?  Search hints: morphological analysis
+[judge] search_hint: morphological analysis, subword modeling, character-level embeddings, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages, language modeling, word embeddings, limited training data, small model sizes
+[retrieve] Query (first 200 chars): What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words?  Search hints: morphological analysis
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1508.07909v5.tei.tei chunk_id=1508.07909v5.tei.tei_chunk-4 retr_score=0.4730 section=Subword Translation :: • named entities. Between languages that share an alphabet, names can often be copied from source to target text. Transcription or transliteration may be requir...
+[judge] cand#2: paper_id=1508.07909v5.tei.tei chunk_id=1508.07909v5.tei.tei_chunk-1 retr_score=0.4015 section=None :: **Published:** 10 Jun 2016  Neural machine translation (NMT) models typically operate with a fixed vocabulary, but translation is an open-vocabulary problem. Pr...
+[judge] cand#3: paper_id=1508.07909v5.tei.tei chunk_id=1508.07909v5.tei.tei_chunk-2 retr_score=0.4015 section=Introduction :: For word-level NMT models, the translation of out-of-vocabulary words has been addressed through a back-off to a dictionary look-up (Jean et al., 2015;Luong et ...
+[judge] cand#4: paper_id=1508.07909v5.tei.tei chunk_id=1508.07909v5.tei.tei_chunk-10 retr_score=0.3993 section=Subword statistics :: In practice, we did not include infrequent subword units in the NMT network vocabulary, since there is noise in the subword symbol sets, e.g. because of charact...
+[judge] cand#5: paper_id=1308.0850v5.tei.tei chunk_id=1308.0850v5.tei.tei_chunk-6 retr_score=0.3875 section=Penn Treebank Experiments :: The first set of text prediction experiments focused on the Penn Treebank portion of the Wall Street Journal corpus [22]. This was a preliminary study whose mai...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["specific NLP techniques for morphologically rich languages with limited training data and small model sizes"],   "next_question": "What NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling and character-level embeddings?",   "accept": [     {"chunk_id": "1508.07909v5.tei.tei_chunk-4", "paper_id": "1508.07909v5.tei.tei", "rationale": "discusses subword translation and its potential for improving NLP m
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251223_123941_928495.json
+[judge] satisfied=False
+[judge] Accepted this iter: 2 | Rejected this iter: 1 | Total accepted: 4 | Total rejected: 9
+
+[judge] ===== Iteration 4 =====
+[judge] retrieval_query (first 200 chars): What NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling and character-lev
+[judge] search_hint: subword modeling, character-level embeddings, morphological analysis, rare word representation, small footprint NLP, efficient neural networks, low-resource languages, NLP for morphologically rich languages, language modeling, word embeddings, limited training data, small model sizes
+[retrieve] Query (first 200 chars): What NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling and character-lev
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1608.05859v3.tei.tei chunk_id=1608.05859v3.tei.tei_chunk-2 retr_score=0.4424 section=Introduction :: While U and V can both serve as word embeddings, in the literature, only the former serves this role. In this paper, we compare the quality of the input embeddi...
+[judge] cand#2: paper_id=1510.01378v1.tei.tei chunk_id=1510.01378v1.tei.tei_chunk-6 retr_score=0.4350 section=Language Modeling :: We used the Penn Treebank (PTB) [23] corpus for our language modeling experiments. We use the standard split (929k training words, 73k validation words, and 82k...
+[judge] cand#3: paper_id=1603.09025v5.tei.tei chunk_id=1603.09025v5.tei.tei_chunk-8 retr_score=0.4312 section=CHARACTER-LEVEL PENN TREEBANK :: We show the learning curves in Figure 3(a). BN-LSTM converges faster and generalizes better than the LSTM baseline. Figure 3 (b) shows the generalization of our...
+[judge] cand#4: paper_id=1608.05859v3.tei.tei chunk_id=1608.05859v3.tei.tei_chunk-8 retr_score=0.4239 section=Neural Network Language Models :: We next study the effect of tying the embeddings on the perplexity obtained by the NNLM models. Following (Zaremba et al., 2014), we study two NNLMs. The two mo...
+[judge] cand#5: paper_id=1608.05859v3.tei.tei chunk_id=1608.05859v3.tei.tei_chunk-1 retr_score=0.3932 section=None :: **Published:** 21 Feb 2017  We study the topmost weight matrix of neural network language models. We show that this matrix constitutes a valid word embedding. W...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["insufficient evidence for NLP techniques to improve accuracy for rare words in morphologically rich languages with limited training data and small model sizes"],   "next_question": "What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, character-level embeddings, and efficient neural networks?",   "accept": [],   "reject": [     {"chunk_id": "1608.05859v3.tei.tei_chunk-2", "paper_id": "
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_4_20251223_124000_008388.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 4 | Total rejected: 14
+
+[judge] ===== Iteration 5 =====
+[judge] retrieval_query (first 200 chars): What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, charact
+[judge] search_hint: morphologically rich languages, limited training data, small model sizes, subword modeling, character-level embeddings, efficient neural networks, rare word representation, low-resource languages, NLP for morphologically rich languages
+[retrieve] Query (first 200 chars): What specific NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, charact
+[retrieve] Params: top_n=5 stage1_k=50 stage2_k=25
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 25 points
+[retrieve] Returning 5 chunks
+[judge] Retrieved 5 candidate chunks
+[judge] cand#1: paper_id=1308.0850v5.tei.tei chunk_id=1308.0850v5.tei.tei_chunk-8 retr_score=0.4004 section=Wikipedia Experiments :: In 2006 Marcus Hutter, Jim Bowery and Matt Mahoney organised the following challenge, commonly known as Hutter prize [17]: to compress the first 100 million byt...
+[judge] cand#2: paper_id=1308.0850v5.tei.tei chunk_id=1308.0850v5.tei.tei_chunk-5 retr_score=0.3934 section=Text Prediction :: Text data is discrete, and is typically presented to neural networks using 'onehot' input vectors. That is, if there are K text classes in total, and class k is...
+[judge] cand#3: paper_id=1511.06114v4.tei.tei chunk_id=1511.06114v4.tei.tei_chunk-13 retr_score=0.3883 section=CONCLUSION :: --- ## Footnotes  [1] The corpus has already been tokenized using the default tokenizer from Moses. Words not in these vocabularies are represented by the token...
+[judge] cand#4: paper_id=1610.10099v2.tei.tei chunk_id=1610.10099v2.tei.tei_chunk-10 retr_score=0.3817 section=Model Test :: Table 3. Negative log-likelihood results in bits/byte on the Hutter Prize Wikipedia benchmark.  We first evaluate the ByteNet Decoder separately on a character-...
+[judge] cand#5: paper_id=1705.03122v3.tei.tei chunk_id=1705.03122v3.tei.tei_chunk-9 retr_score=0.3770 section=4.1. Datasets :: WMT'14 English-German. We use the same setup as Luong et al. (2015) which comprises 4.5M sentence pairs for training and we test on newstest2014. 3 As vocabular...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["insufficient evidence for specific NLP techniques to improve accuracy for rare words in morphologically rich languages with limited training data and small model sizes"],   "next_question": "What NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, character-level embeddings, and efficient neural networks, considering the challenges of out-of-vocabulary words and morphological complexity?",   "accep
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_5_20251223_124036_877043.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 5 | Total accepted: 4 | Total rejected: 19
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What NLP techniques can be applied to morphologically rich languages with limited training data and small model sizes to improve accuracy for rare words, focusing on subword modeling, character-level 
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What subword modeling techniques are effective for morphologically rich languages with limited training data?
+[retrieve] Query (first 200 chars): What subword modeling techniques are effective for morphologically rich languages with limited training data?  Search hints: subword modeling, morphologically rich languages, limited training data, wo
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How can character-level embeddings be utilized to improve accuracy for rare words in languages with small model sizes?
+[retrieve] Query (first 200 chars): How can character-level embeddings be utilized to improve accuracy for rare words in languages with small model sizes?  Search hints: character-level embeddings, rare words, small model sizes, convolu
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What efficient neural network architectures can be applied to morphologically rich languages to mitigate the challenges of out-of-vocabulary
+[retrieve] Query (first 200 chars): What efficient neural network architectures can be applied to morphologically rich languages to mitigate the challenges of out-of-vocabulary words and morphological complexity?  Search hints: efficien
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 4 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251223_124127_604656.json

@@ -1,0 +1,512 @@
+{
+  "paper_id": "BBEE8B1016BA215097F2B9CE8F181E0A",
+  "title": "Long Short-Term Memory-Networks for Machine Reading",
+  "arxiv_id": "arXiv:1601.06733v7[cs.CL]",
+  "authors": [
+    {
+      "given": "Jianpeng",
+      "family": "Cheng"
+    },
+    {
+      "given": "Li",
+      "family": "Dong"
+    },
+    {
+      "given": "Mirella",
+      "family": "Lapata"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Proceedings of the 2016 NAACL: HLT",
+      "container_title": "Proceedings of the 2016 NAACL: HLT",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Andreas",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Proceedings of the 2015 EMNLP",
+      "container_title": "Proceedings of the 2015 EMNLP",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Proceedings of the 54th ACL",
+      "container_title": "Proceedings of the 54th ACL",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Bowman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Proceedings of the PASCAL Challenges Workshop on Recognising Textual Entailment",
+      "container_title": "Proceedings of the PASCAL Challenges Workshop on Recognising Textual Entailment",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Cho"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Proceedings of the 14th Annual Conference of the Cognitive Science Society",
+      "container_title": "Proceedings of the 14th Annual Conference of the Cognitive Science Society",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Das"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proceedings of the 22nd IJCAI",
+      "container_title": "Proceedings of the 22nd IJCAI",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Dyer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Proceedings of the 2011 EMNLP",
+      "container_title": "Proceedings of the 2011 EMNLP",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Fader"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Pyschological Science",
+      "container_title": "Pyschological Science",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bod",
+          "family": "Frank"
+        },
+        {
+          "given": "Stefan L",
+          "family": "Frank"
+        },
+        {
+          "given": "Rens",
+          "family": "Bod"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Generating sequences with recurrent neural networks",
+      "container_title": "Generating sequences with recurrent neural networks",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Hermann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Schmidhuber",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "1991",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Proceedings of the 2015 ICLR, San Diego, California",
+      "container_title": "Proceedings of the 2015 ICLR, San Diego, California",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoon",
+          "family": "Kim"
+        },
+        {
+          "given": ";",
+          "family": null
+        },
+        {
+          "given": "Dan",
+          "family": "Klein"
+        },
+        {
+          "given": "Christopher",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Journal of Psycholinguistics",
+      "container_title": "Journal of Psycholinguistics",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Lars",
+          "family": "Konieczny"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Proceedings of the 31st ICML",
+      "container_title": "Proceedings of the 31st ICML",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Koutník"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Proceedings of the 33rd ICML",
+      "container_title": "Proceedings of the 33rd ICML",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Kumar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Proceedings of the 31st ICML",
+      "container_title": "Proceedings of the 31st ICML",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Le",
+          "family": null
+        },
+        {
+          "given": "Mikolov ;",
+          "family": "Quoc"
+        },
+        {
+          "given": "V",
+          "family": "Le"
+        },
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of 11th Interspeech",
+      "container_title": "Proceedings of 11th Interspeech",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Lei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics",
+      "container_title": "Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Pascanu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Psychological Bulletin",
+      "container_title": "Psychological Bulletin",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Keith",
+          "family": "Rayner"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Karl Moritz",
+          "family": "Grefenstette"
+        },
+        {
+          "given": "Tomáš",
+          "family": "Hermann"
+        },
+        {
+          "given": "Phil",
+          "family": "Kočiskỳ"
+        },
+        {
+          "given": ";",
+          "family": "Blunsom"
+        },
+        {
+          "given": "M",
+          "family": "Alexander"
+        },
+        {
+          "given": "Sumit",
+          "family": "Rush"
+        },
+        {
+          "given": "Jason",
+          "family": "Chopra"
+        },
+        {
+          "given": "; Richard",
+          "family": "Weston"
+        },
+        {
+          "given": "Eric H",
+          "family": "Socher"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Huang"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Pennin"
+        },
+        {
+          "given": "Andrew Y",
+          "family": "Manning"
+        },
+        {
+          "given": "Richard",
+          "family": "Ng"
+        },
+        {
+          "given": "Alex",
+          "family": "Socher"
+        },
+        {
+          "given": "Jean",
+          "family": "Perelygin"
+        },
+        {
+          "given": "Jason",
+          "family": "Wu"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Chuang"
+        },
+        {
+          "given": null,
+          "family": "Manning ; Richard"
+        },
+        {
+          "given": "Alex",
+          "family": "Socher"
+        },
+        {
+          "given": "Jean Y",
+          "family": "Perelygin"
+        },
+        {
+          "given": "Jason",
+          "family": "Wu"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Chuang"
+        },
+        {
+          "given": "Andrew Y",
+          "family": "Manning"
+        },
+        {
+          "given": "Christopher",
+          "family": "Ng"
+        },
+        {
+          "given": null,
+          "family": "Potts"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Proceedings of the 53rd ACL",
+      "container_title": "Proceedings of the 53rd ACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Tai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Proceedings of the 15th NAACL",
+      "container_title": "Proceedings of the 15th NAACL",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tran",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Proceedings of the 2016 NAACL: HLT",
+      "container_title": "Proceedings of the 2016 NAACL: HLT",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Wang",
+          "family": null
+        },
+        {
+          "given": "Jiang",
+          "family": null
+        },
+        {
+          "given": "Shuohang",
+          "family": "Wang"
+        },
+        {
+          "given": "Jing",
+          "family": "Jiang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Proceedings of the 2015 ICLR",
+      "container_title": "Proceedings of the 2015 ICLR",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Weston",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Wojciech Zaremba and Ilya Sutskever. 2014. Learning to execute",
+      "container_title": "Wojciech Zaremba and Ilya Sutskever. 2014. Learning to execute",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1508.03790"
+        },
+        {
+          "type": "other",
+          "value": "arXiv:1410.4615"
+        }
+      ],
+      "authors": []
+    }
+  ],
+  "chunks": []
+}

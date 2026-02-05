@@ -1,0 +1,1131 @@
+{
+  "paper_id": "23F2A64B9158E282524DC7F7ED2EBF47",
+  "title": "Negative Feedback and Physical Limits of Genes",
+  "arxiv_id": "arXiv:1408.1869v1[q-bio.MN]",
+  "authors": [
+    {
+      "given": "Nicolae Radu",
+      "family": "Zabet"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "1982",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G K",
+          "family": "Ackers"
+        },
+        {
+          "given": "A D",
+          "family": "Johnson"
+        },
+        {
+          "given": "M A",
+          "family": "Shea"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "H",
+          "family": "Akashi"
+        },
+        {
+          "given": "T",
+          "family": "Gojobori"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Design Principles of Biological Circuits",
+      "container_title": "Design Principles of Biological Circuits",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "U",
+          "family": "Alon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Nature Reviews Genetics",
+      "container_title": "Nature Reviews Genetics",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "U",
+          "family": "Alon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Genetics",
+      "container_title": "Genetics",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Arkin"
+        },
+        {
+          "given": "J",
+          "family": "Ross"
+        },
+        {
+          "given": "H H",
+          "family": "Mcadams"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D W",
+          "family": "Austin"
+        },
+        {
+          "given": "M S",
+          "family": "Allen"
+        },
+        {
+          "given": "J M",
+          "family": "Mccollum"
+        },
+        {
+          "given": "R D",
+          "family": "Dar"
+        },
+        {
+          "given": "J R",
+          "family": "Wilgus"
+        },
+        {
+          "given": "G S",
+          "family": "Sayler"
+        },
+        {
+          "given": "N F",
+          "family": "Samatova"
+        },
+        {
+          "given": "C D",
+          "family": "Cox"
+        },
+        {
+          "given": "M L",
+          "family": "Simpson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Nature Genetics",
+      "container_title": "Nature Genetics",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Bar-Even"
+        },
+        {
+          "given": "J",
+          "family": "Paulsson"
+        },
+        {
+          "given": "N",
+          "family": "Maheshri"
+        },
+        {
+          "given": "M",
+          "family": "Carmi"
+        },
+        {
+          "given": "E",
+          "family": "O'shea"
+        },
+        {
+          "given": "Y",
+          "family": "Pilpel"
+        },
+        {
+          "given": "N",
+          "family": "Barkai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Becskei"
+        },
+        {
+          "given": "L",
+          "family": "Serrano"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "IBM Journal of Research and Development",
+      "container_title": "IBM Journal of Research and Development",
+      "year": "1973",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C H",
+          "family": "Bennett"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "International Journal of Theoretical Physics",
+      "container_title": "International Journal of Theoretical Physics",
+      "year": "1982",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C H",
+          "family": "Bennett"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Transcriptional regulation by the numbers: models. Current Opinion in Genetics and Development",
+      "container_title": "Transcriptional regulation by the numbers: models. Current Opinion in Genetics and Development",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Bintu"
+        },
+        {
+          "given": "N E",
+          "family": "Buchler"
+        },
+        {
+          "given": "H G",
+          "family": "Garcia"
+        },
+        {
+          "given": "U",
+          "family": "Gerland"
+        },
+        {
+          "given": "T",
+          "family": "Hwa"
+        },
+        {
+          "given": "J",
+          "family": "Kondev"
+        },
+        {
+          "given": "R",
+          "family": "Phillips"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "PLoS Computational Biology",
+      "container_title": "PLoS Computational Biology",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F J",
+          "family": "Bruggeman"
+        },
+        {
+          "given": "N",
+          "family": "Blthgen"
+        },
+        {
+          "given": "H V",
+          "family": "Westerhoff"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N E",
+          "family": "Buchler"
+        },
+        {
+          "given": "U",
+          "family": "Gerland"
+        },
+        {
+          "given": "T",
+          "family": "Hwa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Journal of Theoretical Biology",
+      "container_title": "Journal of Theoretical Biology",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Chu"
+        },
+        {
+          "given": "N R",
+          "family": "Zabet"
+        },
+        {
+          "given": "B",
+          "family": "Mitavskiy"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "BioSystems",
+      "container_title": "BioSystems",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D F",
+          "family": "Chu"
+        },
+        {
+          "given": "N R",
+          "family": "Zabet"
+        },
+        {
+          "given": "A N W",
+          "family": "Hone"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M B",
+          "family": "Elowitz"
+        },
+        {
+          "given": "A J",
+          "family": "Levine"
+        },
+        {
+          "given": "E D",
+          "family": "Siggia"
+        },
+        {
+          "given": "P S",
+          "family": "Swain"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "J. R. Soc. Interface",
+      "container_title": "J. R. Soc. Interface",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C T",
+          "family": "Fernando"
+        },
+        {
+          "given": "A M",
+          "family": "Liekens"
+        },
+        {
+          "given": "L E",
+          "family": "Bingle"
+        },
+        {
+          "given": "C",
+          "family": "Beck"
+        },
+        {
+          "given": "T",
+          "family": "Lenser"
+        },
+        {
+          "given": "D J",
+          "family": "Stekel"
+        },
+        {
+          "given": "J E",
+          "family": "Rowe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Physical Biology",
+      "container_title": "Physical Biology",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Hayot"
+        },
+        {
+          "given": "C",
+          "family": "Jayaprakash"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Hooshangi"
+        },
+        {
+          "given": "S",
+          "family": "Thiberge"
+        },
+        {
+          "given": "R",
+          "family": "Weiss"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "PLoS Computational Biology",
+      "container_title": "PLoS Computational Biology",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Hornung"
+        },
+        {
+          "given": "N",
+          "family": "Barkai"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F J",
+          "family": "Isaacs"
+        },
+        {
+          "given": "W J",
+          "family": "Blake"
+        },
+        {
+          "given": "J J",
+          "family": "Collins"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Nature Reviews Genetics",
+      "container_title": "Nature Reviews Genetics",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Kaern"
+        },
+        {
+          "given": "T C",
+          "family": "Elston"
+        },
+        {
+          "given": "W J",
+          "family": "Blake"
+        },
+        {
+          "given": "J J",
+          "family": "Collins"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Journal of Theoretical Biology",
+      "container_title": "Journal of Theoretical Biology",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Lei"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Lloyd"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "PLOS Biology",
+      "container_title": "PLOS Biology",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A E",
+          "family": "Mayo"
+        },
+        {
+          "given": "Y",
+          "family": "Setty"
+        },
+        {
+          "given": "S",
+          "family": "Shavit"
+        },
+        {
+          "given": "A",
+          "family": "Zaslaver"
+        },
+        {
+          "given": "U",
+          "family": "Alon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Physical Biology",
+      "container_title": "Physical Biology",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P",
+          "family": "Mehta"
+        },
+        {
+          "given": "R",
+          "family": "Mukhopadhyay"
+        },
+        {
+          "given": "N S",
+          "family": "Wingreen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Mathematical Biology I. An Introduction",
+      "container_title": "Mathematical Biology I. An Introduction",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J D",
+          "family": "Murray"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J R S",
+          "family": "Newman"
+        },
+        {
+          "given": "S",
+          "family": "Ghaemmaghami"
+        },
+        {
+          "given": "J",
+          "family": "Ihmels"
+        },
+        {
+          "given": "D K",
+          "family": "Breslow"
+        },
+        {
+          "given": "M",
+          "family": "Noble"
+        },
+        {
+          "given": "J L",
+          "family": "Derisi"
+        },
+        {
+          "given": "J S",
+          "family": "Weissman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Paulsson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Physical Review Letters",
+      "container_title": "Physical Review Letters",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Paulsson"
+        },
+        {
+          "given": "M",
+          "family": "Ehrenberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J M",
+          "family": "Pedraza"
+        },
+        {
+          "given": "A",
+          "family": "Van Oudenaarden"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Journal of Molecular Biology",
+      "container_title": "Journal of Molecular Biology",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Rosenfeld"
+        },
+        {
+          "given": "M B",
+          "family": "Elowitz"
+        },
+        {
+          "given": "U",
+          "family": "Alon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Science",
+      "container_title": "Science",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Rosenfeld"
+        },
+        {
+          "given": "J W",
+          "family": "Young"
+        },
+        {
+          "given": "U",
+          "family": "Alon"
+        },
+        {
+          "given": "P S",
+          "family": "Swain"
+        },
+        {
+          "given": "M B",
+          "family": "Elowitz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1974",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M A",
+          "family": "Savageau"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Setty"
+        },
+        {
+          "given": "A E",
+          "family": "Mayo"
+        },
+        {
+          "given": "M G",
+          "family": "Surette"
+        },
+        {
+          "given": "U",
+          "family": "Alon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Molecular Systems Biology",
+      "container_title": "Molecular Systems Biology",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Shahrezaei"
+        },
+        {
+          "given": "J F",
+          "family": "Ollivier"
+        },
+        {
+          "given": "P S",
+          "family": "Swain"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Nature Genetics",
+      "container_title": "Nature Genetics",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S S",
+          "family": "Shen-Orr"
+        },
+        {
+          "given": "R",
+          "family": "Milo"
+        },
+        {
+          "given": "S",
+          "family": "Mangan"
+        },
+        {
+          "given": "U",
+          "family": "Alon"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Shibata"
+        },
+        {
+          "given": "K",
+          "family": "Fujimoto"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Nature",
+      "container_title": "Nature",
+      "year": "1976",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J L",
+          "family": "Spudich"
+        },
+        {
+          "given": "D E",
+          "family": "Koshland"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "BMC Systems Biology",
+      "container_title": "BMC Systems Biology",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D J",
+          "family": "Stekel"
+        },
+        {
+          "given": "D J",
+          "family": "Jenkins"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b40",
+      "title": "Nature Biotechnology",
+      "container_title": "Nature Biotechnology",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M N",
+          "family": "Stojanovic"
+        },
+        {
+          "given": "D",
+          "family": "Stefanovic"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b41",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P S",
+          "family": "Swain"
+        },
+        {
+          "given": "M B",
+          "family": "Elowitz"
+        },
+        {
+          "given": "E D",
+          "family": "Siggia"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b42",
+      "title": "Biophysical Journal",
+      "container_title": "Biophysical Journal",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Tan"
+        },
+        {
+          "given": "F",
+          "family": "Reza"
+        },
+        {
+          "given": "L",
+          "family": "You"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b43",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Thattai"
+        },
+        {
+          "given": "A",
+          "family": "Van Oudenaarden"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b44",
+      "title": "BioEssays",
+      "container_title": "BioEssays",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Thieffry"
+        },
+        {
+          "given": "A M",
+          "family": "Huerta"
+        },
+        {
+          "given": "E",
+          "family": "Perez-Rueda"
+        },
+        {
+          "given": "J",
+          "family": "Collado-Vides"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b45",
+      "title": "Stochastic processes in physics and chemistry",
+      "container_title": "Stochastic processes in physics and chemistry",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N G",
+          "family": "Van Kampen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b46",
+      "title": "PLoS Computational Biology",
+      "container_title": "PLoS Computational Biology",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "L",
+          "family": "Wang"
+        },
+        {
+          "given": "J",
+          "family": "Xin"
+        },
+        {
+          "given": "Q",
+          "family": "Nie"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b47",
+      "title": "Natural Computing",
+      "container_title": "Natural Computing",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Weiss"
+        },
+        {
+          "given": "S",
+          "family": "Basu"
+        },
+        {
+          "given": "S",
+          "family": "Hooshangi"
+        },
+        {
+          "given": "A",
+          "family": "Kalmbach"
+        },
+        {
+          "given": "D",
+          "family": "Karig"
+        },
+        {
+          "given": "R",
+          "family": "Mehreja"
+        },
+        {
+          "given": "I",
+          "family": "Netravali"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b48",
+      "title": "PNAS",
+      "container_title": "PNAS",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Yokobayashi"
+        },
+        {
+          "given": "R",
+          "family": "Weiss"
+        },
+        {
+          "given": "F H",
+          "family": "Arnold"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b49",
+      "title": "Towards modular, scalable and optimal design of transcriptional logic systems",
+      "container_title": "Towards modular, scalable and optimal design of transcriptional logic systems",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N R",
+          "family": "Zabet"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b50",
+      "title": "Journal of the Royal Society Interface",
+      "container_title": "Journal of the Royal Society Interface",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N R",
+          "family": "Zabet"
+        },
+        {
+          "given": "D F",
+          "family": "Chu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b51",
+      "title": "Proceedings of the 12th International Conference on the Synthesis and Simulation of Living Systems",
+      "container_title": "Proceedings of the 12th International Conference on the Synthesis and Simulation of Living Systems",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N R",
+          "family": "Zabet"
+        },
+        {
+          "given": "A N W",
+          "family": "Hone"
+        },
+        {
+          "given": "D F",
+          "family": "Chu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b52",
+      "title": "Physical Biology",
+      "container_title": "Physical Biology",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Zhang"
+        },
+        {
+          "given": "Z",
+          "family": "Yuan"
+        },
+        {
+          "given": "T",
+          "family": "Zhou"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

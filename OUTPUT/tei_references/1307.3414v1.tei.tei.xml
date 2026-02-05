@@ -1,0 +1,1671 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Proper motions of young stars in Chamaeleon II. New kinematical candidate members of Chamaeleon I and II</title>
+				<funder ref="#_dkc3WgR">
+					<orgName type="full">Spanish MICINN</orgName>
+				</funder>
+				<funder ref="#_DwcGWFh">
+					<orgName type="full">Marie Curie Actions of the European Commission</orgName>
+				</funder>
+				<funder ref="#_FEGYrKf #_E9J6wqt">
+					<orgName type="full">Spanish government</orgName>
+				</funder>
+				<funder ref="#_XaCtEMY">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_NQZ5DC2 #_rDGjVRB">
+					<orgName type="full">Madrid regional government</orgName>
+				</funder>
+				<funder ref="#_8ArqUzh">
+					<orgName type="full">Spanish MEC</orgName>
+				</funder>
+				<funder ref="#_UKVUvpE">
+					<orgName type="full">Ramón y Cajal Fellowship Program</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2013-07-12">12 Jul 2013</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Belén</forename><surname>López Martí</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Francisco</forename><surname>Jiménez-Esteban</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Spanish Virtual Observatory</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Suffolk University</orgName>
+								<address>
+									<addrLine>C/ Valle de la Viña 3</addrLine>
+									<postCode>E-28003</postCode>
+									<settlement>Madrid Campus, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amelia</forename><surname>Bayo</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">European Southern Observatory</orgName>
+								<address>
+									<addrLine>Alonso de Córdova 3107</addrLine>
+									<settlement>Vitacura, Santiago</settlement>
+									<country key="CL">Chile</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Max-Planck-Institut für Astronomie</orgName>
+								<address>
+									<addrLine>Königstuhl 17</addrLine>
+									<postCode>D-69117</postCode>
+									<settlement>Heidelberg</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Barrado</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Calar Alto Observatory</orgName>
+								<orgName type="institution">Centro Astronómico Hispano-Alemán</orgName>
+								<address>
+									<addrLine>C/ Jesús Durbán Remón 2-2</addrLine>
+									<postCode>E-04004</postCode>
+									<settlement>Almería</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enrique</forename><surname>Solano</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Spanish Virtual Observatory</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hervé</forename><surname>Bouy</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carlos</forename><surname>Rodrigo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departamento de Astrofísica</orgName>
+								<orgName type="laboratory">Centro de Astrobiología (INTA-CSIC)</orgName>
+								<address>
+									<postBox>P.O. Box 78</postBox>
+									<postCode>E-28261</postCode>
+									<settlement>Villanueva de la Cañada, Madrid</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Spanish Virtual Observatory</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Proper motions of young stars in Chamaeleon II. New kinematical candidate members of Chamaeleon I and II</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2013-07-12">12 Jul 2013</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">974294972A96FA4380B8FB185CD7B4C2</idno>
+					<idno type="arXiv">arXiv:1307.3414v1[astro-ph.SR]</idno>
+					<note type="submission">Received; accepted</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>stars:low-mass</term>
+					<term>brown dwarfsstars: formationstars: pre-main sequencestars: luminosity function</term>
+					<term>mass function astronomical database: miscellaneousvirtual observatory tools</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>Context. The Chamaeleon star-forming region has been extensively studied in the last decades. However, most studies have been confined to the densest parts of the clouds. In a previous paper, we analysed the kinematical properties of the spectroscopically confirmed population of the Chamaeleon I and II clouds. Aims. We want to search for new kinematical candidate members to the Chamaeleon I and II moving groups, extending the studied area beyond the clouds, and to characterize these new populations using available information from public databases and catalogues. We also want to check if the populations of the moving groups are confined to the present dark clouds. Methods. Kinematic candidate members were initially selected on the basis of proper motions and colours using the Fourth US Naval Observatory CCD Astrograph Catalog (UCAC4). The SEDs of the objects were constructed using photometry retrieved from the Virtual Observatory and other resources, and fitted to models of stellar photospheres to derive effective temperatures, gravity values, and luminosities. Masses and ages were estimated by comparison with theoretical evolutionary tracks in a Hertzprung-Russell diagram. Objects with ages 20 Myr were selected as probable members of the moving groups. Results. We have identified 51 and 14 candidate members to the Chamaeleon I and II moving groups, respectively, of which 17 and 1, respectively, are classified as probable young stars according to the SED analysis. Another object in Chamaeleon I located slightly above the 1 Myr isochrone is classified as a possible young star. All these objects are diskless stars with masses in the range 0.3 M/M 1.4 and ages consistent with those reported for the corresponding confirmed members. They tend to be located at the boundaries of or outside the dark clouds, preferably to the north-east and south-east in the case of Chamaeleon I, and to the north-east in the case of Chamaeleon II. Conclusions. The kinematical population of Chamaeleon I and II could be larger and spread over a larger area of the sky than suggested by previous studies. However, the results of this study should be confirmed with spectroscopic data and more precise kinematic information.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements. This work was funded by the <rs type="funder">Spanish MICINN</rs> through grant Consolider-<rs type="grantNumber">CSD2006-00070</rs>. It also benefited from funding from the <rs type="funder">Spanish government</rs> through grants <rs type="grantNumber">AYA2008-02156</rs>, <rs type="grantNumber">AYA2010-21161-C02-02</rs>, and <rs type="grantNumber">AYA2012-38897-C01-01</rs>, and from the <rs type="funder">Madrid regional government</rs> through grant <rs type="grantNumber">PRICIT-S2009ESP-1496</rs>. A. B. was co-funded under the <rs type="funder">Marie Curie Actions of the European Commission</rs> (<rs type="programName">FP7-COFUND</rs>). H. B. is funded by the <rs type="funder">Ramón y Cajal Fellowship Program</rs> under grant number <rs type="grantNumber">RYC-2009-04497</rs>. B. L. M. also thanks support from the <rs type="funder">Spanish government</rs> through project <rs type="grantNumber">AYA2011-30147-C03-03</rs>.</p><p>This publication makes use of VOSA, developed under the <rs type="institution">Spanish Virtual Observatory</rs> project supported from the <rs type="funder">Spanish MEC</rs> through grant <rs type="grantNumber">AYA2008-02156</rs>. It greatly benefited from the use of the SIMBAD database and VIZIER</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_dkc3WgR">
+					<idno type="grant-number">CSD2006-00070</idno>
+				</org>
+				<org type="funding" xml:id="_FEGYrKf">
+					<idno type="grant-number">AYA2008-02156</idno>
+				</org>
+				<org type="funding" xml:id="_XaCtEMY">
+					<idno type="grant-number">AYA2010-21161-C02-02</idno>
+				</org>
+				<org type="funding" xml:id="_NQZ5DC2">
+					<idno type="grant-number">AYA2012-38897-C01-01</idno>
+				</org>
+				<org type="funding" xml:id="_rDGjVRB">
+					<idno type="grant-number">PRICIT-S2009ESP-1496</idno>
+				</org>
+				<org type="funding" xml:id="_DwcGWFh">
+					<orgName type="program" subtype="full">FP7-COFUND</orgName>
+				</org>
+				<org type="funding" xml:id="_UKVUvpE">
+					<idno type="grant-number">RYC-2009-04497</idno>
+				</org>
+				<org type="funding" xml:id="_E9J6wqt">
+					<idno type="grant-number">AYA2011-30147-C03-03</idno>
+				</org>
+				<org type="funding" xml:id="_8ArqUzh">
+					<idno type="grant-number">AYA2008-02156</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div />			</div>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Sterzik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">355</biblScope>
+			<biblScope unit="page">629</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Krautter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">319</biblScope>
+			<biblScope unit="page">184</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Krautter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H M M</forename><surname>Schmitt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">109</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chapman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">676</biblScope>
+			<biblScope unit="page">427</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><surname>Allard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Homeier</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">I</forename><surname>Baraffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chabrier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Allard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Hauschildt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">337</biblScope>
+			<biblScope unit="page">403</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado Y Navascués</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jayawardhana</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">615</biblScope>
+			<biblScope unit="page">840</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Stauffer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">536</biblScope>
+			<biblScope unit="page">63</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rodrigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>submitted</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rodrigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrado Y Navascués</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">492</biblScope>
+			<biblScope unit="page">277</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bertin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mellier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Radovich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Astronomical Society of the Pacific Conference Series</title>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Bohlender</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Durand</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Handley</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">-+</forename><surname>Cambrésy</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="1997">2002. 1997</date>
+			<biblScope unit="volume">281</biblScope>
+			<biblScope unit="page" from="324" to="L325" />
+		</imprint>
+	</monogr>
+	<note>Astronomical Data Analysis Software and Systems XI</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><surname>Castelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gratton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Kurucz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">318</biblScope>
+			<biblScope unit="page">841</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><surname>Comerón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">500</biblScope>
+			<biblScope unit="page">1045</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">F</forename><surname>Comerón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Merín</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page">86</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Allain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">328</biblScope>
+			<biblScope unit="page">187</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">VizieR Online Data Catalog, 2311, 0 DENIS Consortium</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Cutri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">VizieR Online Data Catalog</title>
+		<imprint>
+			<date type="published" when="2005">2012. 2005</date>
+			<biblScope unit="volume">2263</biblScope>
+			<biblScope unit="page">0</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Feigelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Casanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Montmerle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Guibert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page">623</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Feigelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Lawson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Garmire</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">599</biblScope>
+			<biblScope unit="page">1207</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Frink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Brandner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">338</biblScope>
+			<biblScope unit="page">442</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>Hauck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mermilliod</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;AS</title>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page">431</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Infrared astronomical satellite (IRAS) catalogs and atlases</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Helou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Walker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The small scale structure catalog</title>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<biblScope unit="volume">7</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><surname>Høg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fabricius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Makarov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">355</biblScope>
+			<biblScope unit="page">27</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><surname>Ishihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Onaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kataza</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">514</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">J</forename><surname>Kainulainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Beuther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Henning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Plume</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">508</biblScope>
+			<biblScope unit="page">35</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N R</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Tritton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">188</biblScope>
+			<biblScope unit="page">719</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Eislöffel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mundt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">444</biblScope>
+			<biblScope unit="page">175</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Eislöffel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Scholz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mundt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page">555</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jiménez-Esteban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bayo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<editor>
+			<persName><forename type="first">B</forename><surname>López Martí</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">529</biblScope>
+			<biblScope unit="page">816</biblScope>
+			<date type="published" when="2004">2013. 2011. 2004</date>
+		</imprint>
+	</monogr>
+	<note>ApJ</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJS</title>
+		<imprint>
+			<biblScope unit="volume">173</biblScope>
+			<biblScope unit="page">104</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+		<title level="m">Handbook of Star Forming Regions</title>
+		<editor>
+			<persName><forename type="first">The</forename><surname>Southern</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Sky</forename></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Ed</forename><forename type="middle">B</forename><surname>Reipurth</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">II</biblScope>
+			<biblScope unit="page">169</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Muench</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">684</biblScope>
+			<biblScope unit="page">654</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Luhman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Peterson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Megeath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">617</biblScope>
+			<biblScope unit="page">565</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><surname>Makovoz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Marleau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PASP</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page">1113</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Mamajek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Lawson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Feigelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">516</biblScope>
+			<biblScope unit="page">77</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Prusti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">O</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C B</forename><surname>Whittet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Laureijs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="page">303</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Robin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crezé</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page">71</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Robin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reylé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Derrière</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Picaud</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page">523</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>James</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">480</biblScope>
+			<biblScope unit="page">889</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Schwartz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJS</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">161</biblScope>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Siebert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E K</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siviero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page">187</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Skrutskie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Cutri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stiening</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page">1163</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">680</biblScope>
+			<biblScope unit="page">1295</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><surname>Spezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alcalá</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Frasca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Covino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gandolfi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">470</biblScope>
+			<biblScope unit="page">281</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><surname>Stelzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Micela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Neuhäuser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">423</biblScope>
+			<biblScope unit="page">1029</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C B</forename><surname>Whittet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Prusti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A P</forename><surname>Franco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">A&amp;A</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page">1194</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R M</forename><surname>Eisenhardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Mainzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page">1868</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">N</forename><surname>Zacharias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Finch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Girard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page">2184</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">N</forename><surname>Zacharias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Finch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Girard</surname></persName>
+		</author>
+		<idno>44 0.71 ChaI-PM-6 055-010573 11 26 35.10 -79 03 26.7 -19.6±1.6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">145</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-51 077-015492 11 03 49.69 -74</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<idno>PM-1 050-011288 12 47 25.39 -80 08 01.5 -19.0±2.1 -10.7±4.6 17.67 15.80 16.74 14.89 13.75 11.21±0.02 10.47±0.02 10.14±0.02</idno>
+		<title level="m">Cha II moving group ChaII</title>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-3 054-010728 TYC 9419-427-1 -16.0±2.9</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-4 054-010966 TYC 9419-338-1 -15.2±1.3</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-5 055-010397 TYC 9418-388-1 -17.0±0.8</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-6 055-010573 TYC 9419-571-1 -19.6±1.6</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-13 059-010308 2MASS J10593816-7822421 -21.6±1.1</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-20 064-010772 2MASS J11120518-7712408 -15.1±1.5 -2.2±1.7 ChaI-PM-24 067-011535 TYC 9410-196-1 -14.9±1.2</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-26 067-013090 TYC 9411-1199-1 -19.1±3.0</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-27 068-011668 TYC 9397-1013-1 -21.0±1.5</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-35 071-015400 2MASS J11484956-7557548 -16.5±1.0</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-38 072-015687 2MASS J11475667-7536316 -17.5±1.1</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-39 073-015115 TYC 9410-603-1 -23.0±1.1</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-41 073-015916 2MASS J11323348-7535011 -18.8±1.0</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">-</forename><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-50 076-016843 2MASS J11281458-7453084 -21.7±1.6 -0.4±1.1 -29.2±3.1 -0.8±3.0</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-51 077-015492 TYC 9224-2496-1 -18.3±1.8</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-55 078-018479 TYC 9237-1121-1 -15.2±1.2</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<idno>PM-9 066-014936 IRAS 12348-7634 -24.9±2.3 -5.8±2.3</idno>
+		<title level="m">T Chamaeleon II candidates ChaII</title>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">-</forename><surname>Chaii</surname></persName>
+		</author>
+		<idno>PM-14 073-021942 IRAS 13191-7515 -18.0±1.9 -9.0±1.0 -19.7±2.1 -10.8±2.0</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 TYCHO/TYCHO.B 4280.0 3.7725337614949E-14 8.443355761978E-15 ChaI-PM-1 Generic/Johnson.B 4378.1 3.6617001607623E-14 1.0117651446222E-15</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 TYCHO/TYCHO.V 5340.0 8.5480686453463E-14 8.266715283399E-15 ChaI-PM-1 Generic/Johnson.V 5466.1 7.7129282183686E-14 7.1038694155794E-16</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 SLOAN/SDSS.r 6122.3 1.0060360371168E-13 9.265934328653E-16</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 SLOAN/SDSS.i 7439.5 1.1753320341011E-13 5.4126040422267E-15</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 DENIS/DENIS.I 7862.1 1.0792666849298E-13 6.9582894642363E-15</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Chai</surname></persName>
+		</author>
+		<idno>PM-1 2MASS/2MASS.J 12350.0 8.0947895646707E-14 1.7893384111233E-15</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title level="m" type="main">a References: Johnson, Sloan: UCAC4</title>
+		<author>
+			<persName><forename type="first">;</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zacharias</forename><surname>Apass</surname></persName>
+		</author>
+		<idno>PM-1 2MASS/2MASS.H 16620.0 5.8267972939798E-14 2.4686721723789E-15 ...</idno>
+		<editor>Wright et al.</editor>
+		<imprint>
+			<date type="published" when="1998">2013. 2000. 1998. 2005. 2006. 2010. 2008</date>
+			<publisher>Spitzer: Alcalá et al</publisher>
+			<pubPlace>Stromgren; MASS</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<monogr>
+		<title level="m" type="main">IRAS: Helou &amp; Walker (1988) b A null error value indicates a flux upper limit</title>
+		<author>
+			<persName><forename type="first">&amp;</forename><surname>Luhman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename><surname>Muench</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ishihara</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008. 2010</date>
+		</imprint>
+	</monogr>
+	<note>unpublished AKARI</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

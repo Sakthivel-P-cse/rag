@@ -1,0 +1,455 @@
+{
+  "paper_id": "36F1E00299C714D1037BA4EFE59ED4D8",
+  "title": "Landau levels in the case of two degenerate coupled bands: kagomé lattice tight-binding spectrum",
+  "arxiv_id": "arXiv:cond-mat/0210406v1[cond-mat.supr-con]",
+  "authors": [
+    {
+      "given": "Yi",
+      "family": "Xiao"
+    },
+    {
+      "given": "Vincent",
+      "family": "Pelletier"
+    },
+    {
+      "given": "Paul M",
+      "family": "Chaikin"
+    },
+    {
+      "given": "David A",
+      "family": "Huse"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1976",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D R",
+          "family": "Hofstadter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "J. Phys. (Paris)",
+      "container_title": "J. Phys. (Paris)",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Pannetier"
+        },
+        {
+          "given": "J",
+          "family": "Chaussy"
+        },
+        {
+          "given": "R",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Physica 152B",
+      "container_title": "Physica 152B",
+      "year": "1988",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "See"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Alexander"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1979",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F H",
+          "family": "Claro"
+        },
+        {
+          "given": "G H",
+          "family": "Wannier"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "J. Physique",
+      "container_title": "J. Physique",
+      "year": "1985",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1998",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Vidal"
+        },
+        {
+          "given": "R",
+          "family": "Mosseri"
+        },
+        {
+          "given": "B",
+          "family": "Douçot"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Physica C",
+      "container_title": "Physica C",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Pannetier"
+        },
+        {
+          "given": "C C",
+          "family": "Abilio"
+        },
+        {
+          "given": "E",
+          "family": "Serret"
+        },
+        {
+          "given": null,
+          "family": "Th"
+        },
+        {
+          "given": "P",
+          "family": "Fournier"
+        },
+        {
+          "given": "J",
+          "family": "Butaud"
+        },
+        {
+          "given": null,
+          "family": "Vidal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Elser"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Ritchey"
+        },
+        {
+          "given": "P",
+          "family": "Chandra"
+        },
+        {
+          "given": "P",
+          "family": "Coleman"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J T",
+          "family": "Chalker"
+        },
+        {
+          "given": "P C W",
+          "family": "Holdsworth"
+        },
+        {
+          "given": "E F",
+          "family": "Shender"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D A",
+          "family": "Huse"
+        },
+        {
+          "given": "A D",
+          "family": "Rutenberg"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J N",
+          "family": "Reimers"
+        },
+        {
+          "given": "A J",
+          "family": "Berlinsky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "J. Phys",
+      "container_title": "J. Phys",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Villian"
+        },
+        {
+          "given": "R",
+          "family": "Bidaux"
+        },
+        {
+          "given": "J P",
+          "family": "Carton"
+        },
+        {
+          "given": "R",
+          "family": "Conte"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D S",
+          "family": "Greywall"
+        },
+        {
+          "given": "P A",
+          "family": "Busch"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Phys. Rev. Lett",
+      "container_title": "Phys. Rev. Lett",
+      "year": "1990",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D S",
+          "family": "Greywall"
+        },
+        {
+          "given": "P A",
+          "family": "Busch"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "J. Appl. Phys",
+      "container_title": "J. Appl. Phys",
+      "year": "1991",
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M J",
+          "family": "Higgins"
+        },
+        {
+          "given": "Y",
+          "family": "Xiao"
+        },
+        {
+          "given": "S",
+          "family": "Bhattacharya"
+        },
+        {
+          "given": "P M",
+          "family": "Chaikin"
+        },
+        {
+          "given": "S",
+          "family": "Sethuraman"
+        },
+        {
+          "given": "R",
+          "family": "Bojko"
+        },
+        {
+          "given": "D",
+          "family": "Spencer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Xiao"
+        },
+        {
+          "given": "D A",
+          "family": "Huse"
+        },
+        {
+          "given": "P M",
+          "family": "Chaikin"
+        },
+        {
+          "given": "M J",
+          "family": "Higgins"
+        },
+        {
+          "given": "S",
+          "family": "Bhattacharya"
+        },
+        {
+          "given": "D",
+          "family": "Spencer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y.-L",
+          "family": "Lin"
+        },
+        {
+          "given": "F",
+          "family": "Nori"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Phys. Rev. B",
+      "container_title": "Phys. Rev. B",
+      "year": null,
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Z. Phys",
+      "container_title": "Z. Phys",
+      "year": "1933",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R E",
+          "family": "Peierls"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "",
+      "container_title": "",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yi",
+          "family": "Xiao"
+        },
+        {
+          "given": "Princeton",
+          "family": "Univ"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

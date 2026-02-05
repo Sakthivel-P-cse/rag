@@ -1,0 +1,1011 @@
+{
+  "paper_id": "BBC8A906A174E3D4A8E40876102B516D",
+  "title": "A DEEP REINFORCED MODEL FOR ABSTRACTIVE SUMMARIZATION",
+  "arxiv_id": "arXiv:1705.04304v3[cs.CL]",
+  "authors": [
+    {
+      "given": "Romain",
+      "family": "Paulus"
+    },
+    {
+      "given": "Caiming",
+      "family": "Xiong"
+    },
+    {
+      "given": "Richard",
+      "family": "Socher"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Neural machine translation by jointly learning to align and translate",
+      "container_title": "Neural machine translation by jointly learning to align and translate",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1409.0473"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Proceedings of the Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-16)",
+      "container_title": "Proceedings of the Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-16)",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Qian",
+          "family": "Chen"
+        },
+        {
+          "given": "Xiaodan",
+          "family": "Zhu"
+        },
+        {
+          "given": "Zhenhua",
+          "family": "Ling"
+        },
+        {
+          "given": "Si",
+          "family": "Wei"
+        },
+        {
+          "given": "Hui",
+          "family": "Jiang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Long short-term memory-networks for machine reading",
+      "container_title": "Long short-term memory-networks for machine reading",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1601.06733"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Jianpeng",
+          "family": "Cheng"
+        },
+        {
+          "given": "Li",
+          "family": "Dong"
+        },
+        {
+          "given": "Mirella",
+          "family": "Lapata"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Proceedings of NAACL-HLT16",
+      "container_title": "Proceedings of NAACL-HLT16",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sumit",
+          "family": "Chopra"
+        },
+        {
+          "given": "Michael",
+          "family": "Auli"
+        },
+        {
+          "given": "Alexander M",
+          "family": "Rush"
+        },
+        {
+          "given": null,
+          "family": "Harvard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Proceedings of the HLT-NAACL 03 on Text summarization workshop",
+      "container_title": "Proceedings of the HLT-NAACL 03 on Text summarization workshop",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bonnie",
+          "family": "Dorr"
+        },
+        {
+          "given": "David",
+          "family": "Zajic"
+        },
+        {
+          "given": "Richard",
+          "family": "Schwartz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Learning-based single-document summarization with compression and anaphoricity constraints",
+      "container_title": "Learning-based single-document summarization with compression and anaphoricity constraints",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.08887"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Greg",
+          "family": "Durrett"
+        },
+        {
+          "given": "Taylor",
+          "family": "Berg-Kirkpatrick"
+        },
+        {
+          "given": "Dan",
+          "family": "Klein"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Pointing the unknown words",
+      "container_title": "Pointing the unknown words",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.08148"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Caglar",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "Sungjin",
+          "family": "Ahn"
+        },
+        {
+          "given": "Ramesh",
+          "family": "Nallapati"
+        },
+        {
+          "given": "Bowen",
+          "family": "Zhou"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Karl",
+          "family": "Moritz Hermann"
+        },
+        {
+          "given": "Tomas",
+          "family": "Kocisky"
+        },
+        {
+          "given": "Edward",
+          "family": "Grefenstette"
+        },
+        {
+          "given": "Lasse",
+          "family": "Espeholt"
+        },
+        {
+          "given": "Will",
+          "family": "Kay"
+        },
+        {
+          "given": "Mustafa",
+          "family": "Suleyman"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Improving the estimation of word importance for news multi-document summarization-extended technical report",
+      "container_title": "Improving the estimation of word importance for news multi-document summarization-extended technical report",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kai",
+          "family": "Hong"
+        },
+        {
+          "given": "Ani",
+          "family": "Nenkova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kai",
+          "family": "Hong"
+        },
+        {
+          "given": "Mitchell",
+          "family": "Marcus"
+        },
+        {
+          "given": "Ani",
+          "family": "Nenkova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Proceedings of the International Conference on Learning Representations",
+      "container_title": "Proceedings of the International Conference on Learning Representations",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Hakan",
+          "family": "Inan"
+        },
+        {
+          "given": "Khashayar",
+          "family": "Khosravi"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Adam: A method for stochastic optimization",
+      "container_title": "Adam: A method for stochastic optimization",
+      "year": "2014",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1412.6980"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Diederik",
+          "family": "Kingma"
+        },
+        {
+          "given": "Jimmy",
+          "family": "Ba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "17th Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+      "container_title": "17th Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jessy",
+          "family": "Junyi"
+        },
+        {
+          "given": "Kapil",
+          "family": "Li"
+        },
+        {
+          "given": "Amanda",
+          "family": "Thadani"
+        },
+        {
+          "given": null,
+          "family": "Stent"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Text summarization branches out: Proceedings of the ACL-04 workshop",
+      "container_title": "Text summarization branches out: Proceedings of the ACL-04 workshop",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Chin-Yew",
+          "family": "Lin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "How not to evaluate your dialogue system: An empirical study of unsupervised evaluation metrics for dialogue response generation",
+      "container_title": "How not to evaluate your dialogue system: An empirical study of unsupervised evaluation metrics for dialogue response generation",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.08023"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Chia-Wei",
+          "family": "Liu"
+        },
+        {
+          "given": "Ryan",
+          "family": "Lowe"
+        },
+        {
+          "given": "Michael",
+          "family": "Iulian V Serban"
+        },
+        {
+          "given": "Laurent",
+          "family": "Noseworthy"
+        },
+        {
+          "given": "Joelle",
+          "family": "Charlin"
+        },
+        {
+          "given": null,
+          "family": "Pineau"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "ACL (System Demonstrations)",
+      "container_title": "ACL (System Demonstrations)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mihai",
+          "family": "Christopher D Manning"
+        },
+        {
+          "given": "John",
+          "family": "Surdeanu"
+        },
+        {
+          "given": "Jenny Rose",
+          "family": "Bauer"
+        },
+        {
+          "given": "Steven",
+          "family": "Finkel"
+        },
+        {
+          "given": "David",
+          "family": "Bethard"
+        },
+        {
+          "given": null,
+          "family": "Mcclosky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of the International Conference on Learning Representations",
+      "container_title": "Proceedings of the International Conference on Learning Representations",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Stephen",
+          "family": "Merity"
+        },
+        {
+          "given": "Caiming",
+          "family": "Xiong"
+        },
+        {
+          "given": "James",
+          "family": "Bradbury"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Kai",
+          "family": "Chen"
+        },
+        {
+          "given": "Greg S",
+          "family": "Corrado"
+        },
+        {
+          "given": "Jeff",
+          "family": "Dean"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Abstractive text summarization using sequence-to-sequence rnns and beyond",
+      "container_title": "Abstractive text summarization using sequence-to-sequence rnns and beyond",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1602.06023"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Ramesh",
+          "family": "Nallapati"
+        },
+        {
+          "given": "Bowen",
+          "family": "Zhou"
+        },
+        {
+          "given": "C",
+          "family": "¸aglar Gülc ¸ehre"
+        },
+        {
+          "given": "Bing",
+          "family": "Xiang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Proceedings of the 31st AAAI conference",
+      "container_title": "Proceedings of the 31st AAAI conference",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ramesh",
+          "family": "Nallapati"
+        },
+        {
+          "given": "Feifei",
+          "family": "Zhai"
+        },
+        {
+          "given": "Bowen",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Advances In Neural Information Processing Systems",
+      "container_title": "Advances In Neural Information Processing Systems",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mohammad",
+          "family": "Norouzi"
+        },
+        {
+          "given": "Samy",
+          "family": "Bengio"
+        },
+        {
+          "given": "Navdeep",
+          "family": "Jaitly"
+        },
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": "Yonghui",
+          "family": "Wu"
+        },
+        {
+          "given": "Dale",
+          "family": "Schuurmans"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "HLT-NAACL",
+      "container_title": "HLT-NAACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Benjamin",
+          "family": "Nye"
+        },
+        {
+          "given": "Ani",
+          "family": "Nenkova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jeffrey",
+          "family": "Pennington"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Using the output embedding to improve language models",
+      "container_title": "Using the output embedding to improve language models",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1608.05859"
+        }
+      ],
+      "authors": []
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Sequence level training with recurrent neural networks",
+      "container_title": "Sequence level training with recurrent neural networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.06732"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Aurelio",
+          "family": "Marc"
+        },
+        {
+          "given": "Sumit",
+          "family": "Ranzato"
+        },
+        {
+          "given": "Michael",
+          "family": "Chopra"
+        },
+        {
+          "given": "Wojciech",
+          "family": "Auli"
+        },
+        {
+          "given": null,
+          "family": "Zaremba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Self-critical sequence training for image captioning",
+      "container_title": "Self-critical sequence training for image captioning",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1612.00563"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Etienne",
+          "family": "Steven J Rennie"
+        },
+        {
+          "given": "Youssef",
+          "family": "Marcheret"
+        },
+        {
+          "given": "Jarret",
+          "family": "Mroueh"
+        },
+        {
+          "given": "Vaibhava",
+          "family": "Ross"
+        },
+        {
+          "given": null,
+          "family": "Goel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "A neural attention model for abstractive sentence summarization",
+      "container_title": "A neural attention model for abstractive sentence summarization",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1509.00685"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Sumit",
+          "family": "Alexander M Rush"
+        },
+        {
+          "given": "Jason",
+          "family": "Chopra"
+        },
+        {
+          "given": null,
+          "family": "Weston"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Linguistic Data Consortium",
+      "container_title": "Linguistic Data Consortium",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Evan",
+          "family": "Sandhaus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Temporal attention model for neural machine translation",
+      "container_title": "Temporal attention model for neural machine translation",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1608.02927"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Haitao",
+          "family": "Baskaran Sankaran"
+        },
+        {
+          "given": "Yaser",
+          "family": "Mi"
+        },
+        {
+          "given": "Abe",
+          "family": "Al-Onaizan"
+        },
+        {
+          "given": null,
+          "family": "Ittycheriah"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics",
+      "container_title": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Abigail",
+          "family": "See"
+        },
+        {
+          "given": "Peter J",
+          "family": "Liu"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Advances in neural information processing systems",
+      "container_title": "Advances in neural information processing systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Quoc V",
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "AAAI",
+      "container_title": "AAAI",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Arun",
+          "family": "Venkatraman"
+        },
+        {
+          "given": "Martial",
+          "family": "Hebert"
+        },
+        {
+          "given": "Andrew",
+          "family": "Bagnell"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Meire",
+          "family": "Fortunato"
+        },
+        {
+          "given": "Navdeep",
+          "family": "Jaitly"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "Machine learning",
+      "container_title": "Machine learning",
+      "year": "1992",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Williams",
+          "family": "Ronald"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b35",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "1989",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Ronald"
+        },
+        {
+          "given": "David",
+          "family": "Williams"
+        },
+        {
+          "given": null,
+          "family": "Zipser"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b36",
+      "title": "Google's neural machine translation system: Bridging the gap between human and machine translation",
+      "container_title": "Google's neural machine translation system: Bridging the gap between human and machine translation",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1609.08144"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Yonghui",
+          "family": "Wu"
+        },
+        {
+          "given": "Mike",
+          "family": "Schuster"
+        },
+        {
+          "given": "Zhifeng",
+          "family": "Chen"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": "Mohammad",
+          "family": "Le"
+        },
+        {
+          "given": "Wolfgang",
+          "family": "Norouzi"
+        },
+        {
+          "given": "Maxim",
+          "family": "Macherey"
+        },
+        {
+          "given": "Yuan",
+          "family": "Krikun"
+        },
+        {
+          "given": "Qin",
+          "family": "Cao"
+        },
+        {
+          "given": "Klaus",
+          "family": "Gao"
+        },
+        {
+          "given": null,
+          "family": "Macherey"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b37",
+      "title": "AAAI",
+      "container_title": "AAAI",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yinfei",
+          "family": "Yang"
+        },
+        {
+          "given": "Ani",
+          "family": "Nenkova"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b38",
+      "title": "Sanja Fidler, and Raquel Urtasun. Efficient summarization with readagain and copy mechanism",
+      "container_title": "Sanja Fidler, and Raquel Urtasun. Efficient summarization with readagain and copy mechanism",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1611.03382"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Wenyuan",
+          "family": "Zeng"
+        },
+        {
+          "given": "Wenjie",
+          "family": "Luo"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b39",
+      "title": "PREPROCESSING We remove all documents that do not have a full article text, abstract or headline. We concatenate the headline, byline and full article text, separated by special tokens, to produce a single input sequence for each example. We tokenize the input and abstract pairs with the Stanford tokenizer",
+      "container_title": "PREPROCESSING We remove all documents that do not have a full article text, abstract or headline. We concatenate the headline, byline and full article text, separated by special tokens, to produce a single input sequence for each example. We tokenize the input and abstract pairs with the Stanford tokenizer",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Dataset A",
+          "family": "Nyt"
+        },
+        {
+          "given": null,
+          "family": "Manning"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

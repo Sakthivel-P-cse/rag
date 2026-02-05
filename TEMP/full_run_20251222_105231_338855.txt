@@ -1,0 +1,113 @@
+[run] Full log will be written to: C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_105231_338855.txt
+[run] Starting end-to-end pipeline
+[refine] Starting question refinement
+[refine] user_question (first 200 chars): I have a graph with very few labeled nodes. My model overfits badly when labels are scarce. I want to exploit structure better, but I don’t want to add more labels.
+[refine] Saved refined JSON: C:\Users\manoj\Desktop\Research\TEMP\refined_query_20251222_105242_998387.json
+[retrieve] Query (first 200 chars): How can graph neural networks effectively leverage graph structure to improve node classification performance in scenarios with limited labeled nodes, without relying on additional labeling?  Search h
+[retrieve] Params: top_n=10 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 10 chunks
+[judge] log_path=C:\Users\manoj\Desktop\Research\TEMP\full_run_20251222_105231_338855.txt
+[judge] Starting iterative judge (LLM accept/reject mode)
+[judge] iterations=5 top_k_candidates=3
+[judge] refined_question: How can graph neural networks effectively leverage graph structure to improve node classification performance in scenarios with limited labeled nodes, without relying on additional labeling?
+
+[judge] ===== Iteration 1 =====
+[judge] retrieval_query (first 200 chars): How can graph neural networks effectively leverage graph structure to improve node classification performance in scenarios with limited labeled nodes, without relying on additional labeling?  Search h
+[judge] search_hint: graph neural networks, semi-supervised learning (SSL), node classification, graph structure, limited labeled data, overfitting mitigation, transductive learning, inductive learning, graph attention networks (GAT), graph convolutional networks (GCN)
+[retrieve] Query (first 200 chars): How can graph neural networks effectively leverage graph structure to improve node classification performance in scenarios with limited labeled nodes, without relying on additional labeling?  Search h
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1609.02907v4.tei.tei chunk_id=1609.02907v4.tei.tei_chunk-2 retr_score=0.6820 section=INTRODUCTION :: the labeled part of the graph, f (•) can be a neural networklike differentiable function, λ is a weighing factor and X is a matrix of node feature vectors X i ....
+[judge] cand#2: paper_id=1609.02907v4.tei.tei chunk_id=1609.02907v4.tei.tei_chunk-1 retr_score=0.6810 section=None :: **Published:** 22 Feb 2017  We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient variant of convol...
+[judge] cand#3: paper_id=1809.10341v2.tei.tei chunk_id=1809.10341v2.tei.tei_chunk-1 retr_score=0.6734 section=None :: **Published:** 21 Dec 2018  We present Deep Graph Infomax (DGI), a general approach for learning node representations within graph-structured data in an unsuper...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["insufficient evidence for leveraging graph structure to improve node classification performance with limited labeled nodes"],   "next_question": "How can graph neural networks effectively utilize graph structure to enhance node classification accuracy in scenarios with scarce labeled nodes, focusing on semi-supervised learning and graph convolutional networks?",   "accept": [     {"chunk_id": "1609.02907v4.tei.tei_chunk-2", "paper_id": "1609.02907v4.tei.tei", "rationale": "directly addresses leveraging graph structure for node
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_1_20251222_105500_552845.json
+[judge] satisfied=False
+[judge] Accepted this iter: 2 | Rejected this iter: 1 | Total accepted: 2 | Total rejected: 1
+
+[judge] ===== Iteration 2 =====
+[judge] retrieval_query (first 200 chars): How can graph neural networks effectively utilize graph structure to enhance node classification accuracy in scenarios with scarce labeled nodes, focusing on semi-supervised learning and graph convolu
+[judge] search_hint: graph neural networks, semi-supervised learning, node classification, graph structure, limited labeled data, graph convolutional networks, transductive learning, inductive learning
+[retrieve] Query (first 200 chars): How can graph neural networks effectively utilize graph structure to enhance node classification accuracy in scenarios with scarce labeled nodes, focusing on semi-supervised learning and graph convolu
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1809.10341v2.tei.tei chunk_id=1809.10341v2.tei.tei_chunk-5 retr_score=0.6474 section=GRAPH-BASED UNSUPERVISED LEARNING :: In this section, we will present the Deep Graph Infomax method in a top-down fashion: starting with an abstract overview of our specific unsupervised learning s...
+[judge] cand#2: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-30 retr_score=0.6317 section=Open questions :: One pressing question is: where do the graphs come from that graph networks operate over? One of the hallmarks of deep learning has been its ability to perform ...
+[judge] cand#3: paper_id=1809.10341v2.tei.tei chunk_id=1809.10341v2.tei.tei_chunk-3 retr_score=0.5989 section=RELATED WORK :: DIM trains an encoder model to maximize the mutual information between a high-level "global" representation and "local" parts of the input (such as patches of a...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): ``` {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["effective utilization of graph structure for node classification with scarce labeled nodes", "mitigating overfitting in graph neural networks"],   "next_question": "How can graph neural networks effectively utilize graph structure to enhance node classification accuracy in scenarios with limited labeled nodes, focusing on semi-supervised learning, graph convolutional networks, and techniques to mitigate overfitting?",   "accept": [     {"chunk_id": "1809.10341v2.tei.tei_chunk-5", "paper_id": "1809.10341v2.tei.tei", "ration
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_2_20251222_105537_119513.json
+[judge] satisfied=False
+[judge] Accepted this iter: 1 | Rejected this iter: 2 | Total accepted: 3 | Total rejected: 3
+
+[judge] ===== Iteration 3 =====
+[judge] retrieval_query (first 200 chars): How can graph neural networks effectively utilize graph structure to enhance node classification accuracy in scenarios with limited labeled nodes, focusing on semi-supervised learning, graph convoluti
+[judge] search_hint: graph neural networks, semi-supervised learning, node classification, graph structure, limited labeled data, graph convolutional networks, transductive learning, inductive learning, overfitting mitigation, graph-based unsupervised learning
+[retrieve] Query (first 200 chars): How can graph neural networks effectively utilize graph structure to enhance node classification accuracy in scenarios with limited labeled nodes, focusing on semi-supervised learning, graph convoluti
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 3 chunks
+[judge] Retrieved 3 candidate chunks
+[judge] cand#1: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-13 retr_score=0.5976 section=Background :: They have been used within both model-free (Wang et al., 2018b) and model-based (Hamrick et al., 2017;Pascanu et al., 2017;Sanchez- Gonzalez et al., 2018) conti...
+[judge] cand#2: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-28 retr_score=0.5782 section=Discussion :: Again, analogous to a convolutional kernel, the number of samples which are used to optimize a GN's φ e and φ v functions is the number of edges and nodes, resp...
+[judge] cand#3: paper_id=1806.01261v3.tei.tei chunk_id=1806.01261v3.tei.tei_chunk-14 retr_score=0.5712 section=Graph network (GN) block :: In a similar vein, Wang et al. (2018c) introduced the non-local neural network (NLNN), which unified various "self-attention"-style methods (Vaswani et al., 201...
+[judge] Calling LLM to accept/reject top-K candidates + produce next_question...
+[judge] LLM raw output (first 600 chars): {   "satisfied": false,   "solved_parts": [],   "unsolved_parts": ["insufficient evidence for techniques to mitigate overfitting in graph neural networks for node classification tasks with scarce labels"],   "next_question": "What techniques can be used to mitigate overfitting in graph neural networks for node classification tasks with limited labeled nodes, focusing on semi-supervised learning and graph convolutional networks?",   "accept": [],   "reject": [     {"chunk_id": "1806.01261v3.tei.tei_chunk-13", "paper_id": "1806.01261v3.tei.tei", "reason": "not directly relevant to mitigating ove
+[judge] Saved judge JSON: C:\Users\manoj\Desktop\Research\TEMP\judge_iter_3_20251222_105550_443562.json
+[judge] satisfied=False
+[judge] Accepted this iter: 0 | Rejected this iter: 3 | Total accepted: 3 | Total rejected: 6
+
+[judge] ===== Iteration 4 =====
+[judge] retrieval_query (first 200 chars): What techniques can be used to mitigate overfitting in graph neural networks for node classification tasks with limited labeled nodes, focusing on semi-supervised learning and graph convolutional netw
+[judge] search_hint: graph neural networks, semi-supervised learning, node classification, overfitting mitigation, graph convolutional networks, limited labeled data, transductive learning, inductive learning, graph-based unsupervised learning
+[retrieve] Query (first 200 chars): What techniques can be used to mitigate overfitting in graph neural networks for node classification tasks with limited labeled nodes, focusing on semi-supervised learning and graph convolutional netw
+[retrieve] Params: top_n=3 stage1_k=50 stage2_k=20
+[retrieve] Stage1 returned 50 points
+[retrieve] Stage2 returned 20 points
+[retrieve] Returning 0 chunks
+[judge] No candidates retrieved; stopping.
+[multihop] Planning subproblems (max=3)
+[multihop] Main question (first 200 chars): What techniques can be used to mitigate overfitting in graph neural networks for node classification tasks with limited labeled nodes, focusing on semi-supervised learning and graph convolutional netw
+[multihop] Missing factors count: 0
+[run] Planned 3 subproblems
+[multihop] Retrieve subproblem SP1: What semi-supervised learning techniques are effective in mitigating overfitting in graph neural networks for node classification tasks?
+[retrieve] Query (first 200 chars): What semi-supervised learning techniques are effective in mitigating overfitting in graph neural networks for node classification tasks?  Search hints: semi-supervised learning, graph neural networks,
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP1: retrieved 3 chunks
+[multihop] Retrieve subproblem SP2: How do graph convolutional networks contribute to overfitting in node classification tasks with limited labeled nodes, and what architectura
+[retrieve] Query (first 200 chars): How do graph convolutional networks contribute to overfitting in node classification tasks with limited labeled nodes, and what architectural modifications can alleviate this issue?  Search hints: gra
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP2: retrieved 3 chunks
+[multihop] Retrieve subproblem SP3: What regularization techniques can be applied to graph neural networks to prevent overfitting in node classification tasks with scarce label
+[retrieve] Query (first 200 chars): What regularization techniques can be applied to graph neural networks to prevent overfitting in node classification tasks with scarce labeled data?  Search hints: regularization techniques, graph neu
+[retrieve] Params: top_n=3 stage1_k=60 stage2_k=30
+[retrieve] Stage1 returned 60 points
+[retrieve] Stage2 returned 30 points
+[retrieve] Returning 3 chunks
+[multihop] Subproblem SP3: retrieved 3 chunks
+[multihop] Answering subproblem SP1 (evidence chunks=3)
+[multihop] Subproblem SP1 answered (valid_json=True)
+[multihop] Answering subproblem SP2 (evidence chunks=3)
+[multihop] Subproblem SP2 answered (valid_json=True)
+[multihop] Answering subproblem SP3 (evidence chunks=3)
+[multihop] Subproblem SP3 answered (valid_json=True)
+[final] Synthesizing final solution
+[final] Accepted chunks: 3 | Subproblems: 3
+[final] Final synthesis completed
+[run] Saved final solution bundle to: C:\Users\manoj\Desktop\Research\TEMP\final_solution_20251222_105808_081462.json

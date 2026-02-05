@@ -1,0 +1,213 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "stabilization methods for deep neural networks without modifying architecture"
+  ],
+  "next_question": "What specific techniques can be applied to stabilize gradients and prevent loss divergence in deep neural networks during early epochs without altering the existing architecture?",
+  "accept": [
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-2",
+      "paper_id": "1510.01378v1.tei.tei",
+      "rationale": "Discusses normalization for improving convergence in neural networks"
+    },
+    {
+      "chunk_id": "1603.09025v5.tei.tei_chunk-2",
+      "paper_id": "1603.09025v5.tei.tei",
+      "rationale": "Explains batch normalization for controlling distributions in feed-forward neural networks"
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-3",
+      "paper_id": "1510.01378v1.tei.tei",
+      "rationale": "Describes batch normalization for standardizing intermediate representations"
+    },
+    {
+      "chunk_id": "1512.02595v1.tei.tei_chunk-10",
+      "paper_id": "1512.02595v1.tei.tei",
+      "rationale": "Considers batch normalization for deep RNNs"
+    },
+    {
+      "chunk_id": "1811.08883v1.tei.tei_chunk-5",
+      "paper_id": "1811.08883v1.tei.tei",
+      "rationale": "Mentions normalization for training object detectors from scratch"
+    }
+  ],
+  "reject": [],
+  "rejected_paper_ids": [],
+  "search_hint": "deep learning, neural network training, unstable gradients, loss divergence, gradient stabilization, batch normalization, layer normalization, optimization algorithms, recurrent neural networks, feedforward networks",
+  "iteration": 3,
+  "accepted_chunks": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-13",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-9",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1412.6980v9.tei.tei_chunk-11",
+      "paper_id": "1412.6980v9.tei.tei"
+    },
+    {
+      "chunk_id": "1607.06450v1.tei.tei_chunk-1",
+      "paper_id": "1607.06450v1.tei.tei"
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-2",
+      "paper_id": "1510.01378v1.tei.tei"
+    },
+    {
+      "chunk_id": "1603.09025v5.tei.tei_chunk-2",
+      "paper_id": "1603.09025v5.tei.tei"
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-3",
+      "paper_id": "1510.01378v1.tei.tei"
+    },
+    {
+      "chunk_id": "1512.02595v1.tei.tei_chunk-10",
+      "paper_id": "1512.02595v1.tei.tei"
+    },
+    {
+      "chunk_id": "1811.08883v1.tei.tei_chunk-5",
+      "paper_id": "1811.08883v1.tei.tei"
+    }
+  ],
+  "accepted_chunk_ids": [
+    "1412.6980v9.tei.tei_chunk-11",
+    "1502.03167v3.tei.tei_chunk-13",
+    "1502.03167v3.tei.tei_chunk-3",
+    "1502.03167v3.tei.tei_chunk-5",
+    "1502.03167v3.tei.tei_chunk-9",
+    "1510.01378v1.tei.tei_chunk-2",
+    "1510.01378v1.tei.tei_chunk-3",
+    "1512.02595v1.tei.tei_chunk-10",
+    "1602.07868v3.tei.tei_chunk-5",
+    "1603.09025v5.tei.tei_chunk-2",
+    "1607.06450v1.tei.tei_chunk-1",
+    "1811.08883v1.tei.tei_chunk-5"
+  ],
+  "accepted_paper_ids": [
+    "1412.6980v9.tei.tei",
+    "1502.03167v3.tei.tei",
+    "1510.01378v1.tei.tei",
+    "1512.02595v1.tei.tei",
+    "1602.07868v3.tei.tei",
+    "1603.09025v5.tei.tei",
+    "1607.06450v1.tei.tei",
+    "1811.08883v1.tei.tei"
+  ],
+  "rejected_chunk_ids": [
+    "1312.6120v3.tei.tei_chunk-1",
+    "1510.01378v1.tei.tei_chunk-4"
+  ],
+  "accepted_this_round": [
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-2",
+      "paper_id": "1510.01378v1.tei.tei"
+    },
+    {
+      "chunk_id": "1603.09025v5.tei.tei_chunk-2",
+      "paper_id": "1603.09025v5.tei.tei"
+    },
+    {
+      "chunk_id": "1510.01378v1.tei.tei_chunk-3",
+      "paper_id": "1510.01378v1.tei.tei"
+    },
+    {
+      "chunk_id": "1512.02595v1.tei.tei_chunk-10",
+      "paper_id": "1512.02595v1.tei.tei"
+    },
+    {
+      "chunk_id": "1811.08883v1.tei.tei_chunk-5",
+      "paper_id": "1811.08883v1.tei.tei"
+    }
+  ],
+  "rejected_this_round": [],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "Batch Normalization can help stabilize gradients and prevent loss divergence during training by normalizing the inputs to each layer.",
+      "The use of Batch Normalization allows for higher learning rates without ill effects, and can reduce the need for other regularization techniques such as Dropout.",
+      "The normalization of activations can help prevent the saturation of non-linearities and the resulting vanishing gradients."
+    ],
+    "evidence_citations": [
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+        "supports": "1"
+      },
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "chunk_id": "1502.03167v3.tei.tei_chunk-13",
+        "supports": "1"
+      },
+      {
+        "paper_id": "1602.07868v3.tei.tei",
+        "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+        "supports": "1"
+      }
+    ]
+  },
+  "_debug": {
+    "retrieval_query": "What specific methods can be applied to stabilize gradients and prevent loss divergence during the early epochs of deep neural network training, without modifying the existing architecture?\n\nSearch hints: deep learning, neural network training, unstable gradients, loss divergence, gradient stabilization, batch normalization, layer normalization, optimization algorithms, recurrent neural networks",
+    "candidates": [
+      {
+        "paper_id": "1510.01378v1.tei.tei",
+        "chunk_id": "1510.01378v1.tei.tei_chunk-2",
+        "retr_score": 0.36981958
+      },
+      {
+        "paper_id": "1603.09025v5.tei.tei",
+        "chunk_id": "1603.09025v5.tei.tei_chunk-2",
+        "retr_score": 0.3652922
+      },
+      {
+        "paper_id": "1510.01378v1.tei.tei",
+        "chunk_id": "1510.01378v1.tei.tei_chunk-3",
+        "retr_score": 0.3637824
+      },
+      {
+        "paper_id": "1512.02595v1.tei.tei",
+        "chunk_id": "1512.02595v1.tei.tei_chunk-10",
+        "retr_score": 0.359493
+      },
+      {
+        "paper_id": "1811.08883v1.tei.tei",
+        "chunk_id": "1811.08883v1.tei.tei_chunk-5",
+        "retr_score": 0.35893488
+      }
+    ],
+    "excluded_chunk_ids": [
+      "1312.6120v3.tei.tei_chunk-1",
+      "1412.6980v9.tei.tei_chunk-11",
+      "1502.03167v3.tei.tei_chunk-13",
+      "1502.03167v3.tei.tei_chunk-3",
+      "1502.03167v3.tei.tei_chunk-5",
+      "1502.03167v3.tei.tei_chunk-9",
+      "1510.01378v1.tei.tei_chunk-4",
+      "1602.07868v3.tei.tei_chunk-5",
+      "1607.06450v1.tei.tei_chunk-1"
+    ],
+    "excluded_paper_ids": [
+      "1412.6980v9.tei.tei",
+      "1502.03167v3.tei.tei",
+      "1602.07868v3.tei.tei",
+      "1607.06450v1.tei.tei"
+    ],
+    "raw_llm_output_first_2000_chars": "```\n{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"stabilization methods for deep neural networks without modifying architecture\"],\n  \"next_question\": \"What specific techniques can be applied to stabilize gradients and prevent loss divergence in deep neural networks during early epochs without altering the existing architecture?\",\n  \"accept\": [\n    {\"chunk_id\": \"1510.01378v1.tei.tei_chunk-2\", \"paper_id\": \"1510.01378v1.tei.tei\", \"rationale\": \"Discusses normalization for improving convergence in neural networks\"},\n    {\"chunk_id\": \"1603.09025v5.tei.tei_chunk-2\", \"paper_id\": \"1603.09025v5.tei.tei\", \"rationale\": \"Explains batch normalization for controlling distributions in feed-forward neural networks\"},\n    {\"chunk_id\": \"1510.01378v1.tei.tei_chunk-3\", \"paper_id\": \"1510.01378v1.tei.tei\", \"rationale\": \"Describes batch normalization for standardizing intermediate representations\"},\n    {\"chunk_id\": \"1512.02595v1.tei.tei_chunk-10\", \"paper_id\": \"1512.02595v1.tei.tei\", \"rationale\": \"Considers batch normalization for deep RNNs\"},\n    {\"chunk_id\": \"1811.08883v1.tei.tei_chunk-5\", \"paper_id\": \"1811.08883v1.tei.tei\", \"rationale\": \"Mentions normalization for training object detectors from scratch\"}\n  ],\n  \"reject\": [],\n  \"rejected_paper_ids\": [],\n  \"search_hint\": \"deep learning, neural network training, unstable gradients, loss divergence, gradient stabilization, batch normalization, layer normalization, optimization algorithms, recurrent neural networks, feedforward networks\"\n}\n```"
+  }
+}

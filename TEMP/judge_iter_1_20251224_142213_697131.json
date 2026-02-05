@@ -1,0 +1,136 @@
+{
+  "satisfied": false,
+  "solved_parts": [],
+  "unsolved_parts": [
+    "methods to stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs"
+  ],
+  "next_question": "What techniques can be applied to deep neural networks to mitigate unstable gradients and loss divergence during early training epochs without altering the network architecture?",
+  "accept": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei",
+      "rationale": "Discusses gradient stabilization"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+      "paper_id": "1502.03167v3.tei.tei",
+      "rationale": "Mentions normalization to address internal covariate shift"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-13",
+      "paper_id": "1502.03167v3.tei.tei",
+      "rationale": "Describes benefits of batch normalization in training"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+      "paper_id": "1502.03167v3.tei.tei",
+      "rationale": "Explains the issue of vanishing gradients and potential solutions"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-9",
+      "paper_id": "1502.03167v3.tei.tei",
+      "rationale": "Details training with batch-normalized networks"
+    }
+  ],
+  "reject": [],
+  "rejected_paper_ids": [],
+  "search_hint": "deep learning, neural network training, unstable gradients, loss oscillation, gradient stabilization, batch normalization, weight normalization, learning rate scheduling, optimization algorithms",
+  "iteration": 1,
+  "accepted_chunks": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-13",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-9",
+      "paper_id": "1502.03167v3.tei.tei"
+    }
+  ],
+  "accepted_chunk_ids": [
+    "1502.03167v3.tei.tei_chunk-13",
+    "1502.03167v3.tei.tei_chunk-3",
+    "1502.03167v3.tei.tei_chunk-5",
+    "1502.03167v3.tei.tei_chunk-9",
+    "1602.07868v3.tei.tei_chunk-5"
+  ],
+  "accepted_paper_ids": [
+    "1502.03167v3.tei.tei",
+    "1602.07868v3.tei.tei"
+  ],
+  "rejected_chunk_ids": [],
+  "accepted_this_round": [
+    {
+      "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+      "paper_id": "1602.07868v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-13",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+      "paper_id": "1502.03167v3.tei.tei"
+    },
+    {
+      "chunk_id": "1502.03167v3.tei.tei_chunk-9",
+      "paper_id": "1502.03167v3.tei.tei"
+    }
+  ],
+  "rejected_this_round": [],
+  "solved_parts_so_far": [],
+  "iteration_evidence_summary": {
+    "evidence_summary": [
+      "Insufficient evidence to support any methods for stabilizing deep neural network training."
+    ],
+    "evidence_citations": []
+  },
+  "_debug": {
+    "retrieval_query": "What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?\n\nSearch hints: gradient stabilization, loss regularization, early stopping, learning rate scheduling, batch normalization, gradient clipping, weight decay, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation",
+    "candidates": [
+      {
+        "paper_id": "1602.07868v3.tei.tei",
+        "chunk_id": "1602.07868v3.tei.tei_chunk-5",
+        "retr_score": 0.42004898
+      },
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "chunk_id": "1502.03167v3.tei.tei_chunk-5",
+        "retr_score": 0.40765268
+      },
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "chunk_id": "1502.03167v3.tei.tei_chunk-13",
+        "retr_score": 0.3924176
+      },
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "chunk_id": "1502.03167v3.tei.tei_chunk-3",
+        "retr_score": 0.39133173
+      },
+      {
+        "paper_id": "1502.03167v3.tei.tei",
+        "chunk_id": "1502.03167v3.tei.tei_chunk-9",
+        "retr_score": 0.39060846
+      }
+    ],
+    "excluded_chunk_ids": [],
+    "excluded_paper_ids": [],
+    "raw_llm_output_first_2000_chars": "```\n{\n  \"satisfied\": false,\n  \"solved_parts\": [],\n  \"unsolved_parts\": [\"methods to stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs\"],\n  \"next_question\": \"What techniques can be applied to deep neural networks to mitigate unstable gradients and loss divergence during early training epochs without altering the network architecture?\",\n  \"accept\": [\n    {\"chunk_id\": \"1602.07868v3.tei.tei_chunk-5\", \"paper_id\": \"1602.07868v3.tei.tei\", \"rationale\": \"Discusses gradient stabilization\"},\n    {\"chunk_id\": \"1502.03167v3.tei.tei_chunk-5\", \"paper_id\": \"1502.03167v3.tei.tei\", \"rationale\": \"Mentions normalization to address internal covariate shift\"},\n    {\"chunk_id\": \"1502.03167v3.tei.tei_chunk-13\", \"paper_id\": \"1502.03167v3.tei.tei\", \"rationale\": \"Describes benefits of batch normalization in training\"},\n    {\"chunk_id\": \"1502.03167v3.tei.tei_chunk-3\", \"paper_id\": \"1502.03167v3.tei.tei\", \"rationale\": \"Explains the issue of vanishing gradients and potential solutions\"},\n    {\"chunk_id\": \"1502.03167v3.tei.tei_chunk-9\", \"paper_id\": \"1502.03167v3.tei.tei\", \"rationale\": \"Details training with batch-normalized networks\"}\n  ],\n  \"reject\": [],\n  \"rejected_paper_ids\": [],\n  \"search_hint\": \"deep learning, neural network training, unstable gradients, loss oscillation, gradient stabilization, batch normalization, weight normalization, learning rate scheduling, optimization algorithms\"\n}\n```"
+  }
+}

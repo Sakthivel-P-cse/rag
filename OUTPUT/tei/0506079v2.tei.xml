@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Soliton control in modulated optically-induced photonic lattices</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2005-07-31">31 Jul 2005</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ivan</forename><forename type="middle">L</forename><surname>Garanovich</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research School of Physical Sciences and Engineering</orgName>
+								<orgName type="laboratory">Nonlinear Physics Centre and Centre for Ultra-high bandwidth Devices for Optical Systems (CUDOS)</orgName>
+								<orgName type="institution">Australian National University</orgName>
+								<address>
+									<postCode>ACT 0200</postCode>
+									<settlement>Canberra</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andrey</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research School of Physical Sciences and Engineering</orgName>
+								<orgName type="laboratory">Nonlinear Physics Centre and Centre for Ultra-high bandwidth Devices for Optical Systems (CUDOS)</orgName>
+								<orgName type="institution">Australian National University</orgName>
+								<address>
+									<postCode>ACT 0200</postCode>
+									<settlement>Canberra</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuri</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research School of Physical Sciences and Engineering</orgName>
+								<orgName type="laboratory">Nonlinear Physics Centre and Centre for Ultra-high bandwidth Devices for Optical Systems (CUDOS)</orgName>
+								<orgName type="institution">Australian National University</orgName>
+								<address>
+									<postCode>ACT 0200</postCode>
+									<settlement>Canberra</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Soliton control in modulated optically-induced photonic lattices</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2005-07-31">31 Jul 2005</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">617EA499F245D3A1424A0D3AC5CF064B</idno>
+					<idno type="arXiv">arXiv:physics/0506079v2[physics.optics]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>OCIS codes: (190.0190) Nonlinear optics</term>
+					<term>(190.4420) Nonlinear optics, transverse effects in</term>
+					<term>(190.5330) Photorefractive nonlinear optics</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We discuss soliton control in reconfigurable optically-induced photonic lattices created by three interfering beams. We reveal novel dynamical regimes for strongly localized solitons, including binary switching and soliton revivals through resonant wave mixing.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>The study of nonlinear light propagation in periodic photonic lattices has attracted a strong interest due to many possibilities of the light control offered by an interplay between the effects of nonlinearity and periodicity. In particular, a periodic modulation of the refractive index modifies substantially both the linear spectrum and wave diffraction <ref type="bibr" target="#b0">[1]</ref> and, consequently, strongly affects the nonlinear propagation and localization of light in the form of optical solitons <ref type="bibr" target="#b1">[2]</ref>.</p><p>Recent theoretical and experimental studies have demonstrated nonlinear localization of light in the optically-induced photonic lattices where the refractive index is modulated periodically in the transverse direction by an interference pattern of plane waves that illuminate a photorefractive crystal with a strong electro-optic anisotropy <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref>. When the lattice-forming waves are polarized orthogonally to the c-axis of the photorefractive crystal, the periodic interference pattern propagates in the diffraction-free linear regime, thus creating a refractive-index modulation similar to that in weakly coupled waveguide array structures <ref type="bibr" target="#b6">[7]</ref>. Such optically-induced one-dimensional photonic lattices have been employed to demonstrate many fundamental concepts of the linear and nonlinear light propagation in periodic photonic systems, including the generation of lattice <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b16">17]</ref> and spatial gap solitons in defocusing <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b4">5]</ref> and self-focusing <ref type="bibr" target="#b8">[9]</ref> regimes, Bragg scattering and Bloch-wave steering <ref type="bibr" target="#b7">[8]</ref>, tunable negative refraction <ref type="bibr" target="#b9">[10]</ref>, etc.</p><p>In this work, we study the soliton propagation in dynamic optical lattices and identify novel effects associated with the optically-induced refractive index modulation in the longitudinal direction. Such lattices can be created by several interfering beams, which are inclined at different angles with respect to the crystal. In particular, we consider modulated photonic lattices, created in a photorefractive nonlinear medium by three interfering beams, as shown in the examples presented in Figs. <ref type="figure" target="#fig_0">1(a-c</ref>). Here z is the propagation coordinate and beams experience one-dimensional diffraction only along the x direction.</p><p>We note that propagation of broad solitons in such lattices was discussed recently <ref type="bibr" target="#b10">[11]</ref> under the conditions when weak longitudinal modulation acts on solitons as an effective potential. In contrast, we show that the behavior of strongly localized solitons is dramatically different, resulting in, for example, resonant soliton revivals for the lattice of Fig. <ref type="figure" target="#fig_0">1</ref>(a), or a sharp binary switching transition for deep asymmetric lattice modulations [Figs. <ref type="bibr">1(b,c)</ref>]. These results are not related to the effect of diffraction management earlier discussed in Ref. <ref type="bibr" target="#b11">[12]</ref>, and they were not reported in any of the earlier studies of the modulated discrete systems <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Binary soliton steering</head><p>Propagation of an optical beam in an one-dimensional optically-induced lattice can be described by a parabolic equation for the normalized beam envelope E(x, z),</p><formula xml:id="formula_0">i ∂ E ∂ z + D ∂ 2 E ∂ x 2 + F (x, z, |E| 2 )E = 0,<label>(1)</label></formula><p>where x and z are the transverse and propagation coordinates normalized to the characteristic values x s and z s , respectively, D = z s λ /(4πn 0 x 2 s ) is the beam diffraction coefficient, n 0 is the average refractive index of the medium, and λ is the wavelength in vacuum. The induced change of the refractive index in a photorefractive crystal is <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b7">8]</ref>: -γ(</p><formula xml:id="formula_1">F (x, z, |E| 2 ) = (a) (b) (c) z x x x</formula><formula xml:id="formula_2">I b + I p (x, z) + |E| 2 ) -1</formula><p>, where I b is the constant dark irradiance, I p (x, z) is the interference pattern which induces modulations of the refractive index, and γ is a nonlinear coefficient proportional to the applied DC field. In the numerical simulations presented below we use the parameters which are typical for the experimental conditions with optically-induced lattices created in photorefractive crystals <ref type="bibr" target="#b7">[8]</ref>:</p><formula xml:id="formula_3">λ = 0.532µm, n 0 = 2.35, x s = 1µm, z s = 1mm, I b = 1, γ = 9.</formula><p>45, and the transverse period of the lattice in the absence of modulation is d = 15µm.</p><p>Photorefractive crystals exhibit a very strong electro-optic anisotropy, e.g. in SBN:75 the electro-optic coefficient for extraordinary polarized waves is more than 20 times higher than the electro-optic coefficient for ordinary polarized waves <ref type="bibr" target="#b4">[5]</ref>. Thus, the lattice-writing beams polarized orthogonal to the c-axis of the crystal satisfy the same evolution Eq. ( <ref type="formula" target="#formula_0">1</ref>), but without the last term which almost vanishes since the effective nonlinear coefficient is very small <ref type="bibr" target="#b2">[3]</ref>, while extraordinary polarized beam will experience a highly nonlinear evolution. Then, each of the broad lattice beams propagates independently, and it can be presented as a linear planewave solution in the form E lattice = A exp(iβ z + ik x x), where k x is the transverse wavenumber proportional to the inclination angle, and the propagation constant β = -Dk 2</p><p>x defines the longitudinal wavevector component k z . The value of diffraction coefficient D can be controlled by varying the wavelength of lattice beams, and also depends on the crystal anisotropy. We will analyze in detail the case when the effective diffraction coefficients for the probe and lattice beams are the same, which also allows us to perform a comparison with the results of Ref. <ref type="bibr" target="#b10">[11]</ref>. Specifically, we consider a lattice induced by three interfering waves <ref type="bibr" target="#b10">[11]</ref>: (i) two waves with equal amplitudes A 12 and opposite inclination angles, with the corresponding wavenumbers k 12x and -k 12x , and (ii) an additional third wave with amplitude A 3 and wavenumber k 3x . Then, the optical lattice is defined through the wave interference pattern</p><formula xml:id="formula_4">I p (x, z) = |A L | 2 ,</formula><p>where</p><formula xml:id="formula_5">A L = A 3 exp(iβ 3 z + ik 3x x) + 2A 12 exp(iβ 12 z) cos(k 12x x).</formula><p>(</p><formula xml:id="formula_6">)<label>2</label></formula><p>It follows that additional beam (with k 3x = k 12x ) always leads to the lattice modulation both in the transverse and longitudinal directions. We show examples of modulated lattices in Figs. <ref type="figure" target="#fig_0">1(ac</ref>) corresponding to the same wave amplitudes but different inclinations of the third beam (defined by k 3x ) as indicated in the insets. We see that for k 3x = 0 [Fig. <ref type="figure" target="#fig_0">1(a)</ref>] the lattice profile in the transverse cross-section becomes double-periodic corresponding to an alternating sequence of deeper and shallower potential wells resembling a binary superlattice <ref type="bibr" target="#b14">[15]</ref>, however its configuration is periodically inverted due to modulations in the longitudinal direction along z. On the other hand, when k 3x ≃ k 12x , the lattice is slowly modulated in both spatial directions and the left-right reflection symmetry is removed <ref type="bibr" target="#b10">[11]</ref>, see Figs.   First, we consider the soliton dynamics in asymmetric lattices with k 3x ≃ k 12x , and demonstrate the possibility of binary steering of strongly localized solitons, where the soliton propagates in one of two allowed directions when the amplitude A 3 is in one of the two stable regions. The origin of this soliton switching effect is fundamentally different from dragging of broad solitons reported earlier <ref type="bibr" target="#b10">[11]</ref> which is almost directly proportional to the third beam amplitude A 3 .</p><p>We perform numerical modelling of Eq. ( <ref type="formula" target="#formula_0">1</ref>) to study generation of a strongly localized lattice soliton by an input Gaussian beam, E in = A in exp -[(xx 0 )/w] 2 + ik 0x (xx 0 ) which is incident on the crystal at normal angle (i.e. k 0x = 0) and has extra-ordinary linear polarization. When the amplitude of the third wave A 3 is relatively small, the generated soliton starts moving between the neighboring lattice sites, as shown in the animation. As the amplitude A 3 of the modulating beam increases, at certain point strongly localized soliton becomes locked at a particular lattice site, and it propagates straight along the lattice [see Fig. <ref type="figure" target="#fig_1">2</ref>(a) and Fig. <ref type="figure" target="#fig_4">3(a)</ref>], similar to the case of homogeneous structures without longitudinal modulation <ref type="bibr" target="#b15">[16]</ref>. We find that this is the first stable propagation regime which is not sensitive to small variations of the input angle and position [see Figs. <ref type="figure" target="#fig_4">3(b,</ref><ref type="figure">c)]</ref>.</p><p>When the amplitude A 3 grows further, this leads not only to the increase in the modulation depth of the refractive index, but also to the rotation of the lattice high-index sites. This rotation causes the change in the topology of the modulated optical lattice and in some interval of the modulation depth there exists no continuous connectivity between the high-index lattice sites (see animation in Fig. <ref type="figure" target="#fig_1">2</ref>). In this regime the soliton propagation can become highly irregular resembling a regime of random walks, and the soliton can even be completely destroyed by the lattice modulation.</p><p>At a certain value of A 3 , the rotation of the lattice sites experience saturation, the connectivity between the sites reappear (but now it is diagonal in contrast to the first stable region where it was vertical), and the soliton starts to move across the lattice propagating in the direction determined by the angles of the lattice waves and independent of the value of the modulation amplitude A 3 [see Fig. <ref type="figure" target="#fig_1">2</ref>(b) and Fig. <ref type="figure" target="#fig_4">3(a)</ref>]. This is the second stable propagation regime not sensitive to small variations in the input conditions [see Figs.  We can summarize that such binary soliton steering occurs due to the substantial change in the geometry of the optical lattice, where the connectivity between high-index lattice sites changes from vertical to diagonal through a disconnected state when we increase the amplitude of the third modulating wave, as illustrated by an animation in Fig. <ref type="figure" target="#fig_1">2</ref>. Additionally, this binary soliton steering is found to be insensitive to large variations of the soliton amplitude [see Fig. <ref type="figure" target="#fig_6">4(a)</ref>], and the tilt of the soliton increases almost linearly with the difference between the angles of the modulating and lattice-forming beams [see Fig. <ref type="figure" target="#fig_6">4(b)</ref>]. Such a behavior is completely different from the dynamics of broad solitons in weakly modulated lattices <ref type="bibr" target="#b10">[11]</ref>, which feel only spatially averaged, smoothed lattice potential. In contrast, behavior of strongly localized solitons is dominated by the fine geometrical structure of the lattice.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Soliton revivals</head><p>Next, we analyze the soliton dynamics in symmetric modulated lattices when k 3x = 0, as shown in Fig. <ref type="figure" target="#fig_0">1(a)</ref>. According to the basic principles of holography, a beam which is incident on the lattice at the normal angle (with k 0x = 0) will excite resonantly the waves corresponding to other lattice-writing beams with the transverse wavenumbers ±k 12x , which will then be converted back to the original wave. Numerical simulations indeed demonstrate that the spectrum of lowamplitude beam is modulated periodically as it spreads due to linear diffraction, see Fig. <ref type="figure" target="#fig_7">5(a)</ref>. However, even for a weak lattice modulation, the beam dynamics is dramatically modified at higher amplitudes, and we observe a sequence of soliton revivals, as shown in Fig. <ref type="figure" target="#fig_7">5(b)</ref>. We identify three regimes of the soliton propagation: (i) self-focusing of the beam which spatial spectrum is centered around the point κ x = 0, (ii) transformation of the modes from κ x = 0 to larger spatial frequencies, (iii) the spectrum conversion back to the region around the point κ x = 0, and again a periodic repetition of this three-stage process. We note that the period of the soliton revivals does not coincide with the period of the lattice modulation underlying a key difference with the case of the familiar diffraction-managed solitons <ref type="bibr" target="#b12">[13]</ref>. In our case, there exists a continuous coupling and transformation between the modes of the periodic lattice. More detailed analysis of these results, and discussions of their connection to the effects of soliton internal modes <ref type="bibr" target="#b13">[14]</ref> or formation of multi-band breathers <ref type="bibr" target="#b17">[18]</ref> will be presented in a separate study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Conclusions</head><p>We have demonstrated novel effects for the soliton propagation in modulated dynamic optically-induced photonic lattices created by three interfering beams. We have shown the possibility of binary switching for strongly localized solitons where the soliton can propagate in one of two allowed directions when the amplitude of the control beam is below or above a threshold associated with the transformation of the lattice geometry and a respective change in the connectivity between lattice sites. Each of these regimes is stable with respect to the system parameters, in contrast to earlier considered steering of broad beams directly proportional to the control wave amplitude. We have also demonstrated novel regimes in the soliton dynamics under the conditions of resonant wave mixing in a conservative system observed as a series of periodic soliton revivals, which are not associated with the effect of diffraction management.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Examples of one-dimensional photonic lattices modulated by the third beam with the transverse wave number k 3x : (a) k 3x = 0, (b) k 3x = 0.8k 12x , and (c) k 3x = 1.3k 12x . Insets show the wave vectors of two input beams which form the lattice, and the wave vector of the third beam (red, dashed). Parameters are A 12 = 0.25, A 3 = 0.66A 12 and the propagation length is L = 50 mm.</figDesc><graphic coords="3,131.05,114.22,121.23,96.86" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. (1.8MB) All-optical steering of spatial optical solitons controlled by the amplitude of the third lattice beam with inclination k 3x = 1.15k 12x : (a) straight (A 3 = 0.62A 12 ) and (b) tilted (A 3 = 2.02A 12 ) propagation. Left: profiles of optically-induced lattices. Middle: evolution of beam intensities along the propagation direction. Right: soliton profiles at the input (dashed) and output (solid). Animation shows the soliton dynamics as the modulation depth increases from zero (A 3 = 0) to a higher value (A 3 = 2.8A 12 ). Parameters are A 12 = 0.25, A in = 0.5, input beam position x 0 = 0, angle k 0x = 0 and width w = 25µm, and the total propagation length is L = 100 mm.</figDesc><graphic coords="4,247.41,169.36,114.74,91.79" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc>1(b) and (c).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>A 3</head><label>3</label><figDesc>.12d, k 0x =0 k 12 x x 0 =0, k 0x =0.03</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Output soliton position vs. the modulating beam amplitude for different positions and angles of the input Gaussian beam. In (a) marked points 'a', 'b' correspond to the solitons shown in Fig. 2(a) and Fig. 2(b), respectively. Shadings mark stable regions. Parameters are the same as in Fig. 2.</figDesc><graphic coords="4,129.35,459.41,121.70,97.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc>3(b,c)]. At very high values of the modulation amplitude A 3 the soliton do not form due to nonlinearity saturation. A in k 3x /k 12 x</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Output soliton position vs. (a) the amplitude of the input Gaussian beam and (b) the angle between the modulating beam and the lattice-forming beams, defined by the ratio k 3x /k 12x . Dashed line and circles correspond to Fig. 2(a), solid lines and triangles -to Fig. 2(b). Parameters are the same as in Fig. 2.</figDesc><graphic coords="5,311.91,414.74,122.27,97.81" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 5 .</head><label>5</label><figDesc>Fig.5. Example of the resonant soliton revivals in the modulated lattices: (a) linear diffraction at low power (A in = 0.02), (b) revivals and periodic transformations of the soliton in the nonlinear regime (A in = 0.2). Variation of the intensity (left) and spatial Fourier spectrum (right) of the input Gaussian beam along the propagation direction are shown (spatial frequency κ x is normalized to k 12x /4). Parameters are A 12 = 0.25, A 3 = 0.2A 12 , x 0 = 0, k 0x = 0, w = 25µm and the total propagation length is L = 120 mm.</figDesc><graphic coords="6,190.35,325.40,124.05,99.24" type="bitmap" /></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Photonic Bloch waves and photonic band gaps</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>St</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Russell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Birks</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lloyd Lucas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Confined Electrons and Photons</title>
+		<editor>
+			<persName><forename type="first">E</forename><surname>Burstein</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Weisbuch</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Plenum Press</publisher>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="page" from="585" to="633" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Optical Solitons: From Fibers to Photonic Crystals</title>
+		<author>
+			<persName><forename type="middle">S</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Kivshar</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<publisher>Academic Press</publisher>
+			<pubPlace>San Diego</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Discrete solitons in photorefractive optically induced photonic lattices</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Efremidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sears</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Fleischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Segev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">46602</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Observation of discrete solitons in optically induced real time waveguide arrays</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Fleischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Carmon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Segev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Efremidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">23902</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Observation of two-dimensional discrete solitons in optically induced nonlinear photonic lattices</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Fleischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Segev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Efremidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature (London)</title>
+		<imprint>
+			<biblScope unit="volume">422</biblScope>
+			<biblScope unit="page" from="147" to="150" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Spatial solitons in optically induced gratings</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ostrovskaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kivshar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="710" to="712" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Discretizing light behaviour in linear and nonlinear waveguide lattices</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lederer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature (London)</title>
+		<imprint>
+			<biblScope unit="volume">424</biblScope>
+			<biblScope unit="page" from="817" to="823" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Nonlinear Bloch-wave interaction and Bragg scattering in optically induced lattices</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">93901</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Controlled generation and steering of spatial gap solitons</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page">83905</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Rosberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Neshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Krolikowski</surname></persName>
+		</author>
+		<idno>arXiv physics/0503226</idno>
+		<ptr target="http://arxiv.org/abs/physics/0503226" />
+	</analytic>
+	<monogr>
+		<title level="m">Tunable positive and negative refraction in optically-induced photonic lattices</title>
+		<imprint>
+			<date type="published" when="2005">2005. 2005</date>
+		</imprint>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Soliton dragging by dynamic optical lattices</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">V</forename><surname>Kartashov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Torner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Christodoulides</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1378" to="1380" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Diffraction management</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Eisenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Morandotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Aitchison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="1863" to="1866" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Discrete diffraction managed spatial solitons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Ablowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">H</forename><surname>Musslimani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page">254102</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Oscillation and decay of discrete solitons in modulated waveguide arrays</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Peschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lederer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Am. B</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="544" to="549" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Discrete gap solitons in modulated waveguide arrays</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Sukhorukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">S</forename><surname>Kivshar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="2112" to="2114" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Dynamics of discrete solitons in optical waveguide arrays</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Morandotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Peschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Aitchison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Eisenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="2726" to="2729" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Discrete solitons and soliton-Induced dislocations in partially coherent photonic lattices</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Maritn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Eugenieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">123902</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Observation of mutually trapped multiband optical breathers in waveguide arrays</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mandelik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Eisenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Silberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Morandotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Aitchison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">253902</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

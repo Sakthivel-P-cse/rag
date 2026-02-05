@@ -1,0 +1,653 @@
+{
+  "paper_id": "C292499B9DB5C1255DAD434253E0761D",
+  "title": "Trust Region Policy Optimization",
+  "arxiv_id": "arXiv:1502.05477v5[cs.LG]",
+  "authors": [
+    {
+      "given": "John",
+      "family": "Schulman"
+    },
+    {
+      "given": "Philipp",
+      "family": "Moritz"
+    },
+    {
+      "given": "Michael",
+      "family": "Jordan"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "J. Covariant policy search",
+      "container_title": "J. Covariant policy search",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J A",
+          "family": "Bagnell"
+        },
+        {
+          "given": null,
+          "family": "Schneider"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Infinite-horizon policy-gradient estimation",
+      "container_title": "Infinite-horizon policy-gradient estimation",
+      "year": "2011",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1106.0665"
+        }
+      ],
+      "authors": [
+        {
+          "given": "P L",
+          "family": "Bartlett"
+        },
+        {
+          "given": "J",
+          "family": "Baxter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "IEEE Transactions on Systems, Man and Cybernetics",
+      "container_title": "IEEE Transactions on Systems, Man and Cybernetics",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Barto"
+        },
+        {
+          "given": "R",
+          "family": "Sutton"
+        },
+        {
+          "given": "C",
+          "family": "Anderson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Journal of Artificial Intelligence Research",
+      "container_title": "Journal of Artificial Intelligence Research",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M G",
+          "family": "Bellemare"
+        },
+        {
+          "given": "Y",
+          "family": "Naddaf"
+        },
+        {
+          "given": "J",
+          "family": "Veness"
+        },
+        {
+          "given": "M",
+          "family": "Bowling"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Dynamic programming and optimal control",
+      "container_title": "Dynamic programming and optimal control",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Bertsekas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Foundations and Trends in Robotics",
+      "container_title": "Foundations and Trends in Robotics",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Deisenroth"
+        },
+        {
+          "given": "G",
+          "family": "Neumann"
+        },
+        {
+          "given": "J",
+          "family": "Peters"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Gabillon"
+        },
+        {
+          "given": null,
+          "family": "Victor"
+        },
+        {
+          "given": "Mohammad",
+          "family": "Ghavamzadeh"
+        },
+        {
+          "given": "Bruno",
+          "family": "Scherrer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Advances in Neural Information Processing Systems (NIPS)",
+      "container_title": "Advances in Neural Information Processing Systems (NIPS)",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Geng"
+        },
+        {
+          "given": "B",
+          "family": "Porr"
+        },
+        {
+          "given": "F",
+          "family": "Wörgötter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "X",
+          "family": "Guo"
+        },
+        {
+          "given": "S",
+          "family": "Singh"
+        },
+        {
+          "given": "H",
+          "family": "Lee"
+        },
+        {
+          "given": "R L",
+          "family": "Lewis"
+        },
+        {
+          "given": "X",
+          "family": "Wang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Proceedings of IEEE International Conference on",
+      "container_title": "Proceedings of IEEE International Conference on",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nikolaus",
+          "family": "Hansen"
+        },
+        {
+          "given": "Andreas",
+          "family": "Ostermeier"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "The American Statistician",
+      "container_title": "The American Statistician",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David R",
+          "family": "Hunter"
+        },
+        {
+          "given": "Kenneth",
+          "family": "Lange"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sham",
+          "family": "Kakade"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sham",
+          "family": "Kakade"
+        },
+        {
+          "given": "John",
+          "family": "Langford"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Michail G",
+          "family": "Lagoudakis"
+        },
+        {
+          "given": "Ronald",
+          "family": "Parr"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Markov chains and mixing times",
+      "container_title": "Markov chains and mixing times",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D A",
+          "family": "Levin"
+        },
+        {
+          "given": "Y",
+          "family": "Peres"
+        },
+        {
+          "given": "E L",
+          "family": "Wilmer"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sergey",
+          "family": "Levine"
+        },
+        {
+          "given": "Pieter",
+          "family": "Abbeel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Neural Networks: Tricks of the Trade",
+      "container_title": "Neural Networks: Tricks of the Trade",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Martens"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Playing Atari with deep reinforcement learning",
+      "container_title": "Playing Atari with deep reinforcement learning",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1312.5602"
+        }
+      ],
+      "authors": [
+        {
+          "given": "V",
+          "family": "Mnih"
+        },
+        {
+          "given": "K",
+          "family": "Kavukcuoglu"
+        },
+        {
+          "given": "D",
+          "family": "Silver"
+        },
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "I",
+          "family": "Antonoglou"
+        },
+        {
+          "given": "D",
+          "family": "Wierstra"
+        },
+        {
+          "given": "M",
+          "family": "Riedmiller"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Efficient methods in convex programming",
+      "container_title": "Efficient methods in convex programming",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Arkadi",
+          "family": "Nemirovski"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Uncertainty in artificial intelligence (UAI)",
+      "container_title": "Uncertainty in artificial intelligence (UAI)",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A Y",
+          "family": "Ng"
+        },
+        {
+          "given": "M",
+          "family": "Jordan"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Monte Carlo theory, methods and examples",
+      "container_title": "Monte Carlo theory, methods and examples",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Art B",
+          "family": "Owen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Revisiting natural gradient for deep networks",
+      "container_title": "Revisiting natural gradient for deep networks",
+      "year": "2013",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1301.3584"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Neural Networks",
+      "container_title": "Neural Networks",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Peters"
+        },
+        {
+          "given": "S",
+          "family": "Schaal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "AAAI Conference on Artificial Intelligence",
+      "container_title": "AAAI Conference on Artificial Intelligence",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J",
+          "family": "Peters"
+        },
+        {
+          "given": "K",
+          "family": "Mülling"
+        },
+        {
+          "given": "Y",
+          "family": "Altün"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Neurocomputing",
+      "container_title": "Neurocomputing",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jan",
+          "family": "Peters"
+        },
+        {
+          "given": "Stefan",
+          "family": "Schaal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Proceedings of The 30th International Conference on Machine Learning",
+      "container_title": "Proceedings of The 30th International Conference on Machine Learning",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Matteo",
+          "family": "Pirotta"
+        },
+        {
+          "given": null,
+          "family": "Restelli"
+        },
+        {
+          "given": null,
+          "family": "Marcello"
+        },
+        {
+          "given": "Alessio",
+          "family": "Pecorino"
+        },
+        {
+          "given": "Daniele",
+          "family": "Calandriello"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Asymptopia: an exposition of statistical asymptotic theory",
+      "container_title": "Asymptopia: an exposition of statistical asymptotic theory",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Pollard"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Neural computation",
+      "container_title": "Neural computation",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "István",
+          "family": "Szita"
+        },
+        {
+          "given": "András",
+          "family": "Lörincz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "container_title": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Tedrake"
+        },
+        {
+          "given": "T",
+          "family": "Zhang"
+        },
+        {
+          "given": "H",
+          "family": "Seung"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Intelligent Robots and Systems (IROS)",
+      "container_title": "Intelligent Robots and Systems (IROS)",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Todorov"
+        },
+        {
+          "given": null,
+          "family": "Emanuel"
+        },
+        {
+          "given": "Tom",
+          "family": "Erez"
+        },
+        {
+          "given": null,
+          "family": "Tassa"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "In ACM Transactions on Graphics",
+      "container_title": "In ACM Transactions on Graphics",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kevin",
+          "family": "Wampler"
+        },
+        {
+          "given": "Zoran",
+          "family": "Popović"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Numerical optimization",
+      "container_title": "Numerical optimization",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Stephen J",
+          "family": "Wright"
+        },
+        {
+          "given": "Jorge",
+          "family": "Nocedal"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

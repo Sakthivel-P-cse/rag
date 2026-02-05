@@ -1,0 +1,782 @@
+{
+  "paper_id": "1B6C39793B5C9378AD76191E80E10435",
+  "title": "",
+  "arxiv_id": "arXiv:1802.06360v2[cs.LG]",
+  "authors": [
+    {
+      "given": "Raghavendra",
+      "family": "Chalapathy"
+    },
+    {
+      "given": "Aditya Krishna",
+      "family": "Menon"
+    },
+    {
+      "given": "Sanjay",
+      "family": "Chawla"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Outlier detection: A survey",
+      "container_title": "Outlier detection: A survey",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Varun",
+          "family": "Chandola"
+        },
+        {
+          "given": "Arindam",
+          "family": "Banerjee"
+        },
+        {
+          "given": "Vipin",
+          "family": "Kumar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Identification of outliers",
+      "container_title": "Identification of outliers",
+      "year": "1980",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Douglas"
+        },
+        {
+          "given": null,
+          "family": "Hawkins"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Support vector machines, regularization, optimization, and beyond",
+      "container_title": "Support vector machines, regularization, optimization, and beyond",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bernhard",
+          "family": "Schölkopf"
+        },
+        {
+          "given": "Alexander J",
+          "family": "Smola"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Machine learning",
+      "container_title": "Machine learning",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M J",
+          "family": "David"
+        },
+        {
+          "given": null,
+          "family": "Tax"
+        },
+        {
+          "given": null,
+          "family": "Robert Pw Duin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Vladimir Naumovich Vapnik and Vlamimir Vapnik. Statistical learning theory",
+      "container_title": "Vladimir Naumovich Vapnik and Vlamimir Vapnik. Statistical learning theory",
+      "year": "1998",
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proceedings of the Twentieth International Conference on International Conference on Machine Learning",
+      "container_title": "Proceedings of the Twentieth International Conference on International Conference on Machine Learning",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alexander J",
+          "family": "Svn Vishwanathan"
+        },
+        {
+          "given": "M Narasimha",
+          "family": "Smola"
+        },
+        {
+          "given": null,
+          "family": "Murty"
+        },
+        {
+          "given": null,
+          "family": "Simplesvm"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Scaling learning algorithms towards ai. Large-scale kernel machines",
+      "container_title": "Scaling learning algorithms towards ai. Large-scale kernel machines",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        },
+        {
+          "given": "Yann",
+          "family": "Lecun"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "container_title": "Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Chong",
+          "family": "Zhou"
+        },
+        {
+          "given": "Randy C",
+          "family": "Paffenroth"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Robust, deep and inductive anomaly detection",
+      "container_title": "Robust, deep and inductive anomaly detection",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1704.06743"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Raghavendra",
+          "family": "Chalapathy"
+        },
+        {
+          "given": "Aditya",
+          "family": "Krishna Menon"
+        },
+        {
+          "given": "Sanjay",
+          "family": "Chawla"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "International Journal of Machine Learning and Computing",
+      "container_title": "International Journal of Machine Learning and Computing",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T A",
+          "family": "Jerone"
+        },
+        {
+          "given": "Edward J",
+          "family": "Andrews"
+        },
+        {
+          "given": "Lewis D",
+          "family": "Morton"
+        },
+        {
+          "given": null,
+          "family": "Griffin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Pattern Recognition",
+      "container_title": "Pattern Recognition",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sarah M",
+          "family": "Erfani"
+        },
+        {
+          "given": "Sutharshan",
+          "family": "Rajasegarar"
+        },
+        {
+          "given": "Shanika",
+          "family": "Karunasekera"
+        },
+        {
+          "given": "Christopher",
+          "family": "Leckie"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "IEEE Transactions on knowledge and data engineering",
+      "container_title": "IEEE Transactions on knowledge and data engineering",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jialin",
+          "family": "Sinno"
+        },
+        {
+          "given": "Qiang",
+          "family": "Pan"
+        },
+        {
+          "given": null,
+          "family": "Yang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T A",
+          "family": "Jerone"
+        },
+        {
+          "given": "Thomas",
+          "family": "Andrews"
+        },
+        {
+          "given": "Edward J",
+          "family": "Tanay"
+        },
+        {
+          "given": "Lewis D",
+          "family": "Morton"
+        },
+        {
+          "given": null,
+          "family": "Griffin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "",
+      "container_title": "",
+      "year": "2016",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Charu"
+        },
+        {
+          "given": null,
+          "family": "Aggarwal"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Bernhard",
+          "family": "Schölkopf"
+        },
+        {
+          "given": "John C",
+          "family": "Platt"
+        },
+        {
+          "given": "John C",
+          "family": "Shawe-Taylor"
+        },
+        {
+          "given": "Alex J",
+          "family": "Smola"
+        },
+        {
+          "given": "Robert C",
+          "family": "Williamson"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Neurocomputing",
+      "container_title": "Neurocomputing",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Lj Cao"
+        },
+        {
+          "given": "Seng",
+          "family": "Kok"
+        },
+        {
+          "given": null,
+          "family": "Chua"
+        },
+        {
+          "given": null,
+          "family": "Chong"
+        },
+        {
+          "given": null,
+          "family": "Lee"
+        },
+        {
+          "given": null,
+          "family": "Gu"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Machine learning",
+      "container_title": "Machine learning",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Julia",
+          "family": "Neumann"
+        },
+        {
+          "given": "Christoph",
+          "family": "Schnörr"
+        },
+        {
+          "given": "Gabriele",
+          "family": "Steidl"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "International Symposium on Neural Networks",
+      "container_title": "International Symposium on Neural Networks",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yong",
+          "family": "Shean"
+        },
+        {
+          "given": "Chong",
+          "family": null
+        },
+        {
+          "given": "Yong Haur",
+          "family": "Tay"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Deep recurrent neural network-based autoencoders for acoustic novelty detection. Computational intelligence and neuroscience",
+      "container_title": "Deep recurrent neural network-based autoencoders for acoustic novelty detection. Computational intelligence and neuroscience",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Erik",
+          "family": "Marchi"
+        },
+        {
+          "given": "Fabio",
+          "family": "Vesperini"
+        },
+        {
+          "given": "Stefano",
+          "family": "Squartini"
+        },
+        {
+          "given": "Björn",
+          "family": "Schuller"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Sensors",
+      "container_title": "Sensors",
+      "year": "2017",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Muhammad",
+          "family": "Sohaib"
+        },
+        {
+          "given": "Cheol-Hong",
+          "family": "Kim"
+        },
+        {
+          "given": "Jong-Myon",
+          "family": "Kim"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Proceedings of the 35th International Conference on Machine Learning",
+      "container_title": "Proceedings of the 35th International Conference on Machine Learning",
+      "year": "2018",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Lukas",
+          "family": "Ruff"
+        },
+        {
+          "given": "Robert",
+          "family": "Vandermeulen"
+        },
+        {
+          "given": "Nico",
+          "family": "Goernitz"
+        },
+        {
+          "given": "Lucas",
+          "family": "Deecke"
+        },
+        {
+          "given": "Ahmed",
+          "family": "Shoaib"
+        },
+        {
+          "given": "Alexander",
+          "family": "Siddiqui"
+        },
+        {
+          "given": "Emmanuel",
+          "family": "Binder"
+        },
+        {
+          "given": "Marius",
+          "family": "Müller"
+        },
+        {
+          "given": null,
+          "family": "Kloft"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Huan",
+          "family": "Xu"
+        },
+        {
+          "given": "Constantine",
+          "family": "Caramanis"
+        },
+        {
+          "given": "Sujay",
+          "family": "Sanghavi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "Convex optimization",
+      "container_title": "Convex optimization",
+      "year": "2004",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Stephen",
+          "family": "Boyd"
+        },
+        {
+          "given": "Lieven",
+          "family": "Vandenberghe"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Eighth IEEE International Conference on",
+      "container_title": "Eighth IEEE International Conference on",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tony",
+          "family": "Fei"
+        },
+        {
+          "given": "Kai",
+          "family": "Liu"
+        },
+        {
+          "given": "Ming",
+          "family": "Ting"
+        },
+        {
+          "given": "Zhi-Hua",
+          "family": "Zhou"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "On estimation of a probability density function and mode. The annals of mathematical statistics",
+      "container_title": "On estimation of a probability density function and mode. The annals of mathematical statistics",
+      "year": "1962",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Emanuel",
+          "family": "Parzen"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "International Conference on Artificial Neural Networks",
+      "container_title": "International Conference on Artificial Neural Networks",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jonathan",
+          "family": "Masci"
+        },
+        {
+          "given": "Ueli",
+          "family": "Meier"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Unsupervised representation learning with deep convolutional generative adversarial networks",
+      "container_title": "Unsupervised representation learning with deep convolutional generative adversarial networks",
+      "year": "2015",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1511.06434"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Alec",
+          "family": "Radford"
+        },
+        {
+          "given": "Luke",
+          "family": "Metz"
+        },
+        {
+          "given": "Soumith",
+          "family": "Chintala"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "",
+      "container_title": "",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Chollet",
+          "family": "Franc"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Tensorflow: Large-scale machine learning on heterogeneous distributed systems",
+      "container_title": "Tensorflow: Large-scale machine learning on heterogeneous distributed systems",
+      "year": "2016",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1603.04467"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Martín",
+          "family": "Abadi"
+        },
+        {
+          "given": "Ashish",
+          "family": "Agarwal"
+        },
+        {
+          "given": "Paul",
+          "family": "Barham"
+        },
+        {
+          "given": "Eugene",
+          "family": "Brevdo"
+        },
+        {
+          "given": "Zhifeng",
+          "family": "Chen"
+        },
+        {
+          "given": "Craig",
+          "family": "Citro"
+        },
+        {
+          "given": "Greg S",
+          "family": "Corrado"
+        },
+        {
+          "given": "Andy",
+          "family": "Davis"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Dean"
+        },
+        {
+          "given": "Matthieu",
+          "family": "Devin"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "AT&T Labs",
+      "container_title": "AT&T Labs",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yann",
+          "family": "Lecun"
+        },
+        {
+          "given": "Corinna",
+          "family": "Cortes"
+        },
+        {
+          "given": "J C",
+          "family": "Christopher"
+        },
+        {
+          "given": null,
+          "family": "Burges"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "The 2011 International Joint Conference on",
+      "container_title": "The 2011 International Joint Conference on",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Johannes",
+          "family": "Stallkamp"
+        },
+        {
+          "given": "Marc",
+          "family": "Schlipsing"
+        },
+        {
+          "given": "Jan",
+          "family": "Salmen"
+        },
+        {
+          "given": "Christian",
+          "family": "Igel"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Learning multiple layers of features from tiny images",
+      "container_title": "Learning multiple layers of features from tiny images",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Alex",
+          "family": "Krizhevsky"
+        },
+        {
+          "given": "Geoffrey",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Decision-based adversarial attacks: Reliable attacks against black-box machine learning models",
+      "container_title": "Decision-based adversarial attacks: Reliable attacks against black-box machine learning models",
+      "year": "2017",
+      "idnos": [
+        {
+          "type": "arXiv",
+          "value": "arXiv:1712.04248"
+        }
+      ],
+      "authors": [
+        {
+          "given": "Wieland",
+          "family": "Brendel"
+        },
+        {
+          "given": "Jonas",
+          "family": "Rauber"
+        },
+        {
+          "given": "Matthias",
+          "family": "Bethge"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

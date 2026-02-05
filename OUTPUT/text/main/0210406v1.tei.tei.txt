@@ -1,0 +1,415 @@
+# Landau levels in the case of two degenerate coupled bands: kagomé lattice tight-binding spectrum
+
+**Published:** November 9, 2018
+
+## Abstract
+
+The spectrum of charged particles hopping on a kagomé lattice in a uniform transverse magnetic field
+shows an unusual set of Landau levels at low field. They are unusual in two respects: the lowest
+Landau levels are paramagnetic so their energies decrease linearly with increasing field magnitude,
+and the spacings between the levels are not equal. These features are shown to follow from the
+degeneracy of the energy bands in zero magnetic field. We give a general discussion of Landau levels
+in the case of two degenerate bands, and show how the kagomé lattice tight-binding model includes
+one special case of this more general problem. We also discuss the consequences of this for the
+behavior of the critical temperature of a kagomé grid superconducting wire network, which is the
+experimental system that originally motivated this work.
+
+The behavior of electrons in a two-dimensional periodic structure immersed in an external magnetic
+field has been a subject of special interest over the past two decades ever since Hofstadter's
+graphical solution for square lattice 1 . The competition between the periodic potential imposed by
+the lattice structure and the length scale provided by the magnetic field leads to frustration in
+the system and to intricate, detailed, and self-similar features for the subband spectrum of single-
+particle eigenenergies. The magnetic-field-induced frustration in two-dimensional structures has
+also been a subject of active experimental study using superconducting wire networks 2,3 , as the
+linearized Ginzburg-Landau equation for the superconductor and the Schrodinger equation for the
+tight-binding electron wavefunction in these lattices share the same form 4 . The investigation of a
+variety of structures, such as the triangular lattice 5 , the honeycomb lattice 6 , and recently the
+T 3 or dice lattice 7,8 , has revealed the richness and the beauty of physics in these systems.
+
+In this paper, we present our study of the Landau subband spectrum of the kagomé lattice, whose
+distinguishing degenerate ground state has attracted extensive attention over the last decade. The
+kagomé lattice is a two-dimensional lattice of corner-sharing triangles (Fig. 1(a)). The nearest-
+neighbor-coupled Heisenberg antiferromagnet system on a kagomé lattice has been shown to have an
+infinite number of classical ground states, which give rise to a zero temperature extensive entropy
+9,10 . However this degeneracy may be partially lifted by quantum or thermal fluctuations
+[11][12][13] . This so-called order from disorder mechanism 14 selects the states with the largest
+fluctuations (thus the highest entropy or the lowest zeropoint energy), which often are more ordered
+states.
+
+Experimentally, kagomé systems have been previously studied in the context of adsorbed 3 He on
+graphite at millikelvin temperature 9,15,16 , and the layered oxide SrCr 8-x Ga 4+x O 19 10,17 . Our
+recent experimental studies 18 of nearly perfect kagomé structures using superconducting wire
+networks show interesting and complex phase boundaries between the normal and superconducting
+states, which agree well with Y.L. Lin and F. Nori's mean-field calculation based on quantum
+interference 19 . This work shows that a frustrated ground state exists at a magnetic field of one
+half of a flux quantum per triangular plaquette.
+
+The lowest energy states of a charged particle in a nondegenerate band become Landau levels when a
+small magnetic field B is added. The energies of these Landau levels increase linearly in |B|; the
+currents in these states are diamagnetic. The consequence of this for the critical temperature T c
+of a periodic superconducting grid is a local maximum in T c at certain rational values of the
+magnetic flux per unit cell (including, of course, zero magnetic field), with T c decreasing
+linearly in the magnitude of the change of the field away from these special values, as has been
+observed in experiments on various types of wire grids and Josephson-junction arrays. For the
+frustrated kagomé grid, on the other hand, there are two bands of lowest energy states, and the
+currents in the resulting lowest Landau level of the tight-binding model are instead paramagnetic
+and the state's energy decreases linearly in |B|. This results in a minimum in T c vs. field at the
+frustrating value of one-half of a flux quantum per triangular plaquette, as is seen experimentally
+in the kagomé superconducting grids at this frustrating value of the applied field.
+
+Thus from the specific kagomé lattice tight-binding model, we are led to consider the general case
+of Landau levels in a small magnetic field with two degenerate bands. In this paper we examine this
+more general problem first, and then show how the kagomé lattice spectrum reduces to a special case,
+which can be readily solved analytically. We have also obtained extensive numerical results for the
+kagomé tight-binding spectrum, which agree well with our analytic results. We conclude with a
+discussion of the kagomé grid superconducting wire networks that motivated this work.
+
+## I. TWO-BAND LANDAU LEVELS
+
+Here we will explore a generalization of the usual Landau levels for a charged particle moving in
+two dimensions in a uniform magnetic field. The new case we consider is where the particle in zero
+field has two bands that are degenerate at zero momentum. This is the case in the kagomé lattice
+tight-binding model.
+
+What are the "rules" we will use to generalize the usual one-band case? The particle is moving in
+two dimensions. We look in the continuum limit of low momentum p, so only look at the energy to
+order p 2 . At this order in p, the spectrum of the particle's states in zero magnetic field (B = 0)
+is assumed to be isotropic in momentum space, reflecting an underlying system that has at least
+three-fold rotational symmetry. The system is timereversal invariant for B = 0 and the spectrum
+depends only on |B|, not on the sign of B. (Because the motion is two-dimensional, only the normal
+component of the magnetic field enters.)
+
+For a single band, the only Hamiltonian that satisfies all these constraints is the usual
+
+is the gauge-invariant momentum. In a small uniform magnetic field, this gives the usual spectrum of
+equally-spaced Landau levels E n = ω c (n + 1 2 ), with ω c = |qB|/(m * c). The currents are
+diamagnetic for these standard Landau levels.
+
+If instead we have two bands that are degenerate at p = 0 for B = 0, then in addition to the
+momentum, the single-particle states are labelled by a band index, which may be treated as a
+spin-1/2. The general Hamiltonian in this case consists of Hermitian 2 × 2 (Pauli) matrices
+operating on the band index and Hermitian quadratic combinations of Π x and Π y . In addition to the
+zero-angular momentum combination Π 2 that is allowed in the one-band case, there are two Hermitian
+operators quadratic in Π with angular momentum two: Π x Π y + Π y Π x and Π 2
+
+x -Π 2 y , as well as the magnetic field itself, which is proportional to the operator combination
+i(Π x Π y -Π y Π x ).
+
+We have a number of constraints that restrict our choice of Hamiltonian; let us first look at the
+simpler case of B = 0. The general Hermitian Hamiltonian that is quadratic in p is
+
+where the σ i are the Pauli matrices, with σ 0 the identity matrix, and the E i are real quadratic
+functions of p. This is readily diagonalized, with the resulting eigenenergies
+
+Our restriction that the B = 0 spectrum is rotationally invariant then dictates that E 0 (p) = d 0 p
+2 and
+
+with d 0 , d 2 real constants. Another way of writing the Hamiltonian which explicitly breaks it
+into its parts with orbital angular momentum quantum numbers m o = 0, ±2 is
+
+where x, y and z are real 3-vectors in the space spanned by the 3 Pauli matrices, σ 1 , σ 2 , σ 3 .
+Eq.(1.4) requires that these three vectors form a mutually orthogonal triad, with x and y being of
+equal magnitude. Thus we may choose the basis for the band index so that this triad x, y and z are
+parallel to the 1, 2 and 3 axes, respectively. This leaves a three real parameter family of B = 0
+two-band Hamiltonians:
+
+where σ ± = (σ 1 ± iσ 2 )/2 are the usual raising and lowering operators. The spectrum is
+rotationally invariant, as we required:
+
+An important observation about this Hamiltonian Eq.(1.6) is that it conserves a total angular
+momentum, provided that we define the particles in the bands to have an "internal" angular momentum
+whose quantum number m i = ±1 is the eigenvalue of σ 3 in this basis. [We will see below that such
+an "internal" angular momentum m i = ±1 within each unit cell does indeed exist for the low-energy,
+low-momentum states of the kagomé lattice tight-binding model.] The operators σ ± then raise/lower
+the internal angular momentum by 2 quanta, while (p x ± ip y ) 2 raise/lower the orbital angular
+momentum by the same amount. Note that the operators (p x ± ip y ) are not simply the usual orbital
+angular momentum raising and lowering operators L ± ; in addition to changing the orbital angular
+moentum they also change the radial wavefunctions. If neither band has negative energy states at B =
+0, so the ground state is at E = 0, this corresponds to d 0 ≥ d 2 1 + d 2 3 ≥ 0. Now when we add the
+uniform magnetic field, the momentum operator p becomes the gauge-invariant combination Π = p -q c
+A. For B = 0 the two components of Π are noncommuting variables with a c-number commutator
+proportional to the magnetic field:
+
+Thus we can make harmonic-oscillator-type raising and lowering operators a † and a such that
+
+and
+
+(1.10)
+
+Since the magnetic field itself is quadratic in Π (Eq.(1.8)), a term linear in B may also be added
+to the Hamiltonian. This term may not contain the identity Pauli matrix, or it will generate a
+spectrum that is not invariant under inverting B, but it is otherwise unrestricted. Thus we end up
+with the general two-band Hamiltonian satisfying all our "rules":
+
+where b is a real 3-vector. At this point let us note that the current density operator for this
+Hamiltonian
+
+contains, in additional to conventional-looking terms, a term proportional to d 1 that is
+offdiagonal in the band index and linear in the gauge-invariant momentum Π. It is this term that
+allows Landau levels involving both bands to exhibit paramagnetic currents. These currents arise
+from an "interference" between the amplitude in one band and the gradient of the amplitude in the
+other.
+
+The transformation between the Π operators and the raising and lowering operators a and a † is
+singular at B = 0, so it is simplest to just consider one sign of qB at a time. In fact it is for qB
+< 0 that the raising and lowering operators a and a † also raise and lower the orbital angular
+momentum, so let's do that case. Since we are motivated by superconductors we will take B > 0 and q
+= -e * = -2e < 0. This yields
+
+When the 1 or 2 components of b are nonzero, this introduces terms that flip the band index without
+changing the orbital angular momentum, so do not conserve total angular momentum. We have not found
+a closed-form solution for this general case, but for the kagomé lattice problem we are considering,
+these terms are not present. In this case, b 1 = b 2 = 0, the total angular momentum is conserved.
+The orbital angular momentum quantum number m o is also the eigenvalue of the number operator a † a
+and is restricted to be nonnegative for the case qB < 0 that we are now considering. Thus for total
+angular momentum m of 0 or -1, there is just one state, with internal angular momentum quantum
+number m i = -1 and The resulting Landau levels are in general not equally spaced in energy, and
+even when there are no negative energy states at B = 0, some of the Landau levels may be at negative
+energy for B = 0, and thus paramagnetic. Now will look at the kagomé tight-binding model, and show
+that in the low-momentum limit it realizes this two-band Hamiltonian in the simple case of d 0 = d 1
+> 0, d 3 = 0, and b = 0.
+
+## II. KAGOM É TIGHT-BINDING SPECTRUM IN ZERO FIELD
+
+The kagomé lattice is a two dimensional periodic array of corner-sharing triangles with three sites
+per unit cell. As illustrated in Fig. 1(a), a is the triangle edge length, A,B and C denote the
+three sites in a unit cell . The unit cell can be taken as a rhombus of side 2a with angles 2π 3 and
+π 3 at its vertices. In the reciprocal space k = (k x , k y ), the first Brillouin zone is a hexagon
+with a side length of 2π 3a . Some points on the edge of the first Brillouin zone are shown in Fig.
+1
+
+, and H(0, 2π 3a ). We first consider the tight-binding model for a particle making nearest-neighbor
+hops on the kagomé lattice in zero magnetic field. The hopping matrix element is t > 0. This problem
+is readily diagonalized. Since there are three sites per unit cell, there are three bands of
+simultaneous eigenstates of the tight-binding Hamiltonian and the crystal momentum:
+
+where ǫ 0 is the on-site energy of the orbitals. For simplicity, let us set t = 1 and ǫ 0 = 0. The
+spectrum of the second two bands (ǫ 2 , ǫ 3 ) ranges over the interval [-2, +4] and the edges of
+this interval are reached for k = 0. Close to k = 0, these two bands are parabolic with an isotropic
+effective mass. This effective mass is negative m * = -2 /(2ta 2 ) at the top of the upper band at ǫ
+= 4. These two dispersive bands also touch at "Dirac points" at all the corners of the first
+Brillouin zone (such as G and H in Fig. 1
+
+The first band is completely non-dispersive at energy ǫ 1 = -2. Thus the ground state of this
+particle is highly degenerate. Note also that the bottom of the lower dispersive band is also
+degenerate with this flat band at k = 0. Thus here at k = 0 and ǫ = -2 we have two degenerate bands
+of precisely the type discussed in the previous section of this paper. Since one band is flat, we
+have
+
+, in the notation of the previous section. The dispersive band, to quadratic order in the momentum,
+has energy ǫ(k) -ǫ(0) = tk 2 a 2 , so we have
+
+). Some of the degenerate ground states with ǫ = -2 in zero magnetic field are shown in Fig. 2. Fig.
+2(a) and (b) show the states at the Brillouin zone corners, while Fig. 2(c) and(d) show the two
+degenerate states at the zone center with k = 0. For small magnetic field, the lowest Landau levels
+are composed of linear combinations of smooth envelopes times these latter two k = 0 states. The two
+states shown are the eigenstates of the band operator σ 3 . By looking at their wavefunctions within
+a unit cell (one triangle) we can see that σ 3 does indeed measure an "internal" angular momentum
+that has the two possible values m i = ±1 in this case, as anticipated above.
+
+We can further anticipate the results of applying a magnetic field by considering just these states.
+In the absence of coupling between the bands (i.e., for d 1 = 0), the states at the bottom of the
+bands are Landau quantized in the standard fashion, and their energy thus increases linearly with
+|B|. On the other hand, the degeneracy between the bands is split by the matrix element of the
+perturbation (d 1 ) that couples them. In the present case this perturbation is also linearly
+proportional to |B|. Thus whether the lowest-energy states increase or decrease in energy depends on
+the relative magnitudes of the coupling matrix element and the effective band masses. In terms of
+currents, a charged particle (here, a Cooper pair) in a given one-band Landau level has a quantized
+diamagnetic dipole moment that is independent of field. Its energy in a field thus increases with
+|B|. For this specific kagomé lattice case, the wavefunctions within one unit cell also have
+currents and dipole moments as in figure 2 c andd. When these degenerate states are coupled by the
+perturbation they are admixed and this can produce paramagnetic currents. The sum of this and the
+Landau diamagnetic current can be either diamagnetic or paramagnetic for the lowest-energy state
+depending on the relative strength of the parameters. In this case we find net paramagnetism in the
+ground states.
+
+## III. SPECTRUM IN A MAGNETIC FIELD
+
+In the presence of a magnetic field B, the hopping term of the tight-binding Hamiltonian is modified
+by phase factors from the vector potential A, 20 , i.e., t → te iγ ij , where γ ij is the phase
+factor between sites i and j:
+
+where Φ 0 = hc/e * is the flux quantum. The (tight-binding) Schrödinger equation in a magnetic field
+is thus the finite-difference equation:
+
+where the sum is over all the nearest neighbors of site i. It is convenient to measure the magnetic
+field in units of the flux quantum per elementary triangular plaquette of the kagomé lattice. The
+flux through one triangle is Φ = √ 3 4 Ba 2 . Thus the "filling ratio", namely the fraction of a
+flux quantum through each triangle is
+
+Be * a 2 hc .
+
+(3.
+
+3)
+
+The flux through an elementary hexagon is six times this, 6f Φ 0 , while the total flux through a
+unit cell of the kagomé lattice is 8f Φ 0 . When f is a rational number that can be written as 8f =
+k/n, where k and n are integers with no common factors, the total flux through n unit cells of the
+kagomé lattice is an integer multiple of Φ 0 . Then with this magnetic field, a gauge can be chosen
+so that the Hamiltonian has a discrete translational invariance with a unit cell containing n unit
+cells of the kagomé lattice, and thus 3n sites. The spectrum of the Hamiltonian then consists of 3n
+bands. These can be obtained numerically for any such rational f (for n not too large); an
+implementation of this is detailed in Yi Xiao's Ph.D. thesis. 21 The resulting spectrum, namely the
+kagomé version of "Hofstadter's butterfly", is shown in Fig. 3.
+
+The spectrum has various symmetries: It is only the flux modulo the flux quantum that affects the
+spectrum, so if f is changed to f + j with j any integer, the spectrum is unchanged. The spectrum is
+also unchanged on changing f to -f , because if ψ is an eigenstate with energy ǫ for field f , then
+its complex conjugate ψ * is an eigenstate with the same energy ǫ for field -f . These two
+symmetries are not special to the kagomé lattice. The third symmetry is that if f is changed to f +
+1 2 , this is the same as changing t to -t, so the spectrum is inverted. Thus the highest energy
+states for field near f = 1 2 are equivalent to the lowest energy states near zero field. We will
+look at the behavior near zero field, but because of this last symmetry, what we find also applies
+near f = 1 2 .
+
+## IV. LANDAU LEVELS IN THE KAGOM É LATTICE NEAR ZERO FIELD
+
+For small magnetic field, the spectrum of the kagomé lattice tight-binding Hamiltonian shows
+standard equally-spaced Landau levels near the top of the bands, as shown in Fig. 4. Here there is
+just the one band in zero field, with negative effective mass m * = -2 /(2ta 2 ). The resulting
+Landau levels, to linear order in the field, should therefore have energy
+
+The numerical results for this portion of the spectrum are shown in Fig. 4 for f ≥ 1 120 . The first
+few Landau levels are clearly seen, and the asymptotic slopes at small f given by Eq.(4.1) are shown
+for comparison for the first 5 Landau levels. At these values of f the fit is not wonderful, but it
+does seem to be improving with decreasing f , as it should.
+
+More interesting is the bottom of the zero-field spectrum, where there are two degenerate bands.
+This results in non-standard Landau levels when the field is turned on, as discussed above. An
+expanded view of this part of the spectrum is shown in Fig. 5. It shows some Landau levels whose
+energies are increasing linearly with field, as is normal, but these levels are not equally-spaced.
+In addition there are many states whose energies decrease as the field is increased. These latter
+states are the unusual feature we focus on here. Note that because of the symmetry of the spectrum
+discussed above, the same features appear at the top of the spectrum near the frustrating value of
+the magnetic field of f = 1/2.
+
+In the one-band case, knowing the effective mass in zero field and the charge is enough to determine
+the Landau level spectrum to linear order in the magnetic field. For the two-band case, on the other
+hand, (eq. 1.11) there is possibly the Bb • σ term, which vanishes at zero field, so to determine
+the values of the three parameters making up b for the kagomé tight-binding model, we cannot rely
+only on our knowledge of the zero-field spectrum. So we will now treat the low-momentum behavior to
+lowest order in the field. What we will find is that b = 0 and d 3 = 0.
+
+The unit cell of the kagomé lattice contains 3 sites around a triangle. We choose a set of 3 basis
+states within this unit cell that respect as much as possible the three-fold rotational symmetry of
+this system about the center of the triangle. The wavefunction of a state is a complex number
+defined at each lattice point, but only its gauge-invariant properties are physical. These are the
+magnitude of the wavefunction, and the gauge-invariant phase differences between adjacent lattice
+points. For any wavefunction defined at the corners of the triangle in one unit cell, the total
+guage-invariant phase difference added up stepping the three steps around the triangle is 2π(f + m i
+), where m i is an integer. Note m i measures the state's "internal" angular momentum. The gauge-
+invariant phase difference between two adjacent lattice points is only well-defined modulo 2π, so
+let us restrict it to lie in the interval [-π, π]. Thus the three of these phase differences added
+up must be in the range [-3π, 3π], and for the small fields f we consider here, this means the total
+guage-invariant phase difference around the triangle has to be near one of the three values: -2π, 0,
+or 2π and m i is either -1, 0 or 1. The basis states we will use are those where the guage-invariant
+phase differences are the same along all edges of the triangle, being 2π(f + m i )/3, while the
+amplitudes are identical at all three points. In the limit of small momentum and zero field, the
+upper band near energy 4t is made out of the m i = 0 states while the lower bands near energy -2t
+are made out of the two m i = ±1 states.
+
+We take the tight-binding Hamiltonian and rewrite it in terms of these new basis states. This step
+is done in a specific Landau gauge. We then take the low-field, low-momentum limit, assuming that
+the (complex scalar) amplitudes of each of the basis states vary little between adjacent unit cells,
+so a gradient expansion can be made. The resulting three-band Hamiltonian can be written in gauge-
+invariant form as the matrix
+
+in units where a = = 1 and Φ 0 = 2π and where the rows/columns refer to m i = +1, 0, -1 in that
+order. Here we have gone to the orders in Π and B that contribute to the spectrum to linear order in
+|B| and quadratic order in Π. Note that this continuum three-band Hamiltonian conserves total
+angular momentum. To reduce this to the two-band Hamiltonian for the lowest bands only, we treat the
+coupling to the upper band in second-order perturbation theory. This eliminates the terms linear in
+B in the diagonal operators in the above matrix, and the two band Hamiltonian is precisely of the
+form expected (1.11) with b = 0, d 3 = 0 and
+
+). Finally, the Hamiltonian to this order is simply
+
+for f > 0. This Hamiltonian conserves total angular momentum m = m o +m i . The resulting Landau
+level spectrum to linear order in the magnetic field is
+
+For m = -1 and m = 0 there is only the one state with m i = -1, because m o cannot be negative.
+(There are no states with m < -1.) These states' energies are given by the plus sign in the above
+equation; they are the two lowest standard one-band Landau levels made out of only the m i = -1
+band. Since they are standard one-band Landau levels, they show diamagnetic currents. For m > 0, on
+the other hand, both bands enter and the eigenstates are linear combinations of the (m+1)th Landau
+level in the m i = -1 band and the (m-1)th Landau level in the m i = 1 band. The interaction between
+the two bands shifts the energies strongly, with the lower energy state being pushed to below energy
+-2t. The lowest energy state of all is the lower energy (minus sign in the above equation for ǫ ± )
+state with m = 1, which is at energy
+
+This state is a linear combination of the lowest Landau level (m o = 0) in the m i = 1 band and the
+third Landau level (m o = 2) in the m i = -1 band. And it is the interference between these two
+bands that allows this state to be paramagnetic, so its energy decreases with increasing |B|. The
+straight lines in Fig. 5 correspond to the lowest few of the upper (+ in Eq. 4.4) set of Landau
+levels. As f is decreased, the numerically obtained bands fit well to these expected Landau levels.
+A more detailed plot of the lower bands below ǫ = -2t is shown in Fig. 6, in which this range of the
+spectrum is calculated for filling ratio from f = 1/16 down to f = 1/256. For a rational filling
+ratio f = 1/8n, where n is an integer, these lower bands consist of n -1 subbands. Counting the
+states, we find that in the limit of small magnetic field 1/3 of all the states are in this set of
+bands below ǫ = -2t, corresponding to the number of states in the flat ǫ = -2t band at zero field.
+The lowest few Landau levels are also indicated by the straight lines in Fig. 6, and again the
+numerically obtained bands fit well to these as f is reduced.
+
+To examine the very lowest Landau level in more detail, we carried out further numerical calculation
+of the bottom edge of the spectrum to f as low as 1/840. These results are shown in Fig. 7 on log-
+log scales. The straight line corresponds to the small f behavior, = 3.37f , derived above. As can
+be seen, it gives an excellent fit to the numerical results in this low field limit.
+
+This behavior in the kagomé lattice is certainly different from the low field Landau levels of most
+other periodic lattices 1,[5][6][7] , where the ground state energy increases as the magnetic field
+is turned on. In the case of the kagomé latice, the presence of two degenerate bands in zero field
+allows these unusual Landau levels to occur.
+
+## V. APPLICATION TO SUPERCONDUCTING WIRE NETWORKS
+
+The network equation for the mean-field phase boundary of a superconducting wire network, derived
+from linearized Ginzburg-Landau equation, has the same form as that of the tight-binding Schrodinger
+equation in the same geometry 4 . For a periodic network with equal bond length a, the
+superconducting network equation be can expressed as
+
+where ψ i is the order parameter at site i, ξ is the superconducting coherence length, z is the
+coordination number of the lattice, and the sum is over all nearest-neighbor sites of i.
+
+Compared to the tight binding equation of Eq.(3.2), the correspondence between the two system is
+given by
+
+The superconducting transition temperature of the network in a magnetic field is given by the upper
+edge (for t > 0) of the tight-binding spectrum. For the kagomé lattice, z = 4. The upper edge of the
+kagomé tight-binding spectrum is plotted in Fig. 8.
+
+For the phase boundary at the lower field limit (small f ), our previous discussion of the low field
+Landau levels near ǫ = 4 implies a linear relationship between the transition temperature and the
+magnetic field
+
+where ∆T c (f ) = T c (0) -T c (f ) is the suppression of the critical temperature from its zero
+field value.
+
+As shown in Fig. 8, strong maxima or minima in the superconducting phase boundary appear at magnetic
+fields f = p/8 for each integer p, which correspond to p magnetic flux quanta through each unit
+cell. At each of these fields, the tight-binding model is equivalent to a model in zero magnetic
+field with the hopping matrix elements within each unit cell being complex. Since there are three
+sites per unit cell, in each case there are three bands in the spectrum. When the magnetic field is
+changed slightly to f = p 8 + ∆f , the small added magnetic field (of either sign) splits these
+bands into Landau levels, just like near f = 0. For all of these fields, except the special case f =
+1/2, the upper edge of the spectrum is a state at crystal momentum zero in a nondegenerate band.
+Thus changes in the magnetic field produce conventional Landau levels like near f = 0. This causes
+the upper edge of the spectrum to decrease linearly in |∆f |, resulting in a local maximum in the
+superconductor's transition temperature vs. field at those fields. The appearance of a local minimum
+in T c at f = 1/2 is due to the special degeneracy in the highest band that occurs due to the
+magnetic frustration at that field, resulting in Landau levels whose energy moves linearly away from
+the band center as the field is changed from this special value, as discussed above.
+
+A local minimum in T c vs. field also occurs at f = 1/2 in the so-called T 3 or dice lattice 7,8 ,
+but for quite different reasons from the kagomé lattice case. The dice lattice is the dual to the
+kagomé lattice. Its elementary plaquettes are all rhombuses, and f is the number of flux quanta
+passing through each such rhombic plaquette. Like the kagomé lattice, the dice lattice has three
+sites per unit cell. At f = 1/2 in this dice lattice, the spectrum consists of three dispersionless
+(infinite mass) bands 7 , with no degeneracy between the bands. For the dice lattice, the linear
+dependence of the upper edge of the spectrum on field near f = 1/2 arises not from the formation of
+Landau levels, but from an "orbital Zeeman effect". States with nonzero net magnetic moments of
+either sign and localized to just a few lattice sites can be formed out of the highest energy states
+at f = 1/2. The magnetic moments are due to currents circulating around the plaquettes and cause
+these states to have energies that depend linearly on the magnetic field. Although the kagomé latice
+spectrum also has such a dispersionless band at f = 1/2, the localized states that can be made from
+this band in the kagomé case have no net magnetic moment and thus no such orbital Zeeman effect.

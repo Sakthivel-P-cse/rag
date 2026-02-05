@@ -1,0 +1,822 @@
+{
+  "paper_id": "4FA87B60B903026DF17DE8D58C12A036",
+  "title": "Neural Machine Translation of Rare Words with Subword Units",
+  "arxiv_id": "arXiv:1508.07909v5[cs.CL]",
+  "authors": [
+    {
+      "given": "Rico",
+      "family": "Sennrich"
+    },
+    {
+      "given": "Barry",
+      "family": "Haddow"
+    },
+    {
+      "given": "Alexandra",
+      "family": "Birch"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "container_title": "Proceedings of the International Conference on Learning Representations (ICLR)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "Sixth International Conference on Spoken Language Processing",
+      "container_title": "Sixth International Conference on Spoken Language Processing",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Issam",
+          "family": "Bazzi"
+        },
+        {
+          "given": "James R",
+          "family": "Glass"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Proceedings of the 31st International Conference on Machine Learning (ICML)",
+      "container_title": "Proceedings of the 31st International Conference on Machine Learning (ICML)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jan A",
+          "family": "Botha"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Rohan",
+          "family": "Chitnis"
+        },
+        {
+          "given": "John",
+          "family": "Denero"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Bart",
+          "family": "Van Merrienboer"
+        },
+        {
+          "given": "Caglar",
+          "family": "Gulcehre"
+        },
+        {
+          "given": "Dzmitry",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "Fethi",
+          "family": "Bougares"
+        },
+        {
+          "given": "Holger",
+          "family": "Schwenk"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "Proceedings of the ACL-02 Workshop on Morphological and Phonological Learning",
+      "container_title": "Proceedings of the ACL-02 Workshop on Morphological and Phonological Learning",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Mathias",
+          "family": "Creutz"
+        },
+        {
+          "given": "Krista",
+          "family": "Lagus"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Proceedings of the 14th Conference of the European Chapter",
+      "container_title": "Proceedings of the 14th Conference of the European Chapter",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nadir",
+          "family": "Durrani"
+        },
+        {
+          "given": "Hassan",
+          "family": "Sajjad"
+        },
+        {
+          "given": "Hieu",
+          "family": "Hoang"
+        },
+        {
+          "given": "Philipp",
+          "family": "Koehn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Proceedings of the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+      "container_title": "Proceedings of the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Chris",
+          "family": "Dyer"
+        },
+        {
+          "given": "Victor",
+          "family": "Chahuneau"
+        },
+        {
+          "given": "Noah A",
+          "family": "Smith"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "C Users J",
+      "container_title": "C Users J",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Philip",
+          "family": "Gage"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "container_title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Barry",
+          "family": "Haddow"
+        },
+        {
+          "given": "Matthias",
+          "family": "Huck"
+        },
+        {
+          "given": "Alexandra",
+          "family": "Birch"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+      "container_title": "Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sébastien",
+          "family": "Jean"
+        },
+        {
+          "given": "Kyunghyun",
+          "family": "Cho"
+        },
+        {
+          "given": "Roland",
+          "family": "Memisevic"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Nal",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "Phil",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "EACL '03: Proceedings of the Tenth Conference on European Chapter of the Association for Computational Linguistics",
+      "container_title": "EACL '03: Proceedings of the Tenth Conference on European Chapter of the Association for Computational Linguistics",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Yoon",
+          "family": "Kim"
+        },
+        {
+          "given": "Yacine",
+          "family": "Jernite"
+        },
+        {
+          "given": "David",
+          "family": "Sontag"
+        },
+        {
+          "given": "Alexander M",
+          "family": "Rush"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "Proceedings of the ACL-2007 Demo and Poster Sessions",
+      "container_title": "Proceedings of the ACL-2007 Demo and Poster Sessions",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Philipp",
+          "family": "Koehn"
+        },
+        {
+          "given": "Hieu",
+          "family": "Hoang"
+        },
+        {
+          "given": "Alexandra",
+          "family": "Birch"
+        },
+        {
+          "given": "Chris",
+          "family": "Callison-Burch"
+        },
+        {
+          "given": "Marcello",
+          "family": "Federico"
+        },
+        {
+          "given": "Nicola",
+          "family": "Bertoldi"
+        },
+        {
+          "given": "Brooke",
+          "family": "Cowan"
+        },
+        {
+          "given": "Wade",
+          "family": "Shen"
+        },
+        {
+          "given": "Christine",
+          "family": "Moran"
+        },
+        {
+          "given": "Richard",
+          "family": "Zens"
+        },
+        {
+          "given": "Chris",
+          "family": "Dyer"
+        },
+        {
+          "given": "Ondřej",
+          "family": "Bojar"
+        },
+        {
+          "given": "Alexandra",
+          "family": "Constantin"
+        },
+        {
+          "given": "Evan",
+          "family": "Herbst"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "Word hy-phen-a-tion by com-put-er",
+      "container_title": "Word hy-phen-a-tion by com-put-er",
+      "year": "1983",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Franklin M",
+          "family": "Liang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "container_title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Wang",
+          "family": "Ling"
+        },
+        {
+          "given": "Chris",
+          "family": "Dyer"
+        },
+        {
+          "given": "Alan W",
+          "family": "Black"
+        },
+        {
+          "given": "Isabel",
+          "family": "Trancoso"
+        },
+        {
+          "given": "Ramon",
+          "family": "Fermandez"
+        },
+        {
+          "given": "Silvio",
+          "family": "Amir"
+        },
+        {
+          "given": "Luis",
+          "family": "Marujo"
+        },
+        {
+          "given": "Tiago",
+          "family": "Luis"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Character-based Neural Machine Translation",
+      "container_title": "Character-based Neural Machine Translation",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Wang",
+          "family": "Ling"
+        },
+        {
+          "given": "Isabel",
+          "family": "Trancoso"
+        },
+        {
+          "given": "Chris",
+          "family": "Dyer"
+        },
+        {
+          "given": "Alan W",
+          "family": "Black"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "Proceedings of the Seventeenth Conference on Computational Natural Language Learning",
+      "container_title": "Proceedings of the Seventeenth Conference on Computational Natural Language Learning",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Thang",
+          "family": "Luong"
+        },
+        {
+          "given": "Richard",
+          "family": "Socher"
+        },
+        {
+          "given": "Christopher D",
+          "family": "Manning"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Thang",
+          "family": "Luong"
+        },
+        {
+          "given": "Hieu",
+          "family": "Pham"
+        },
+        {
+          "given": "Christopher D",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+      "container_title": "Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Thang",
+          "family": "Luong"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Quoc",
+          "family": "Le"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "Wojciech",
+          "family": "Zaremba"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "Subword Language Modeling with Neural Networks",
+      "container_title": "Subword Language Modeling with Neural Networks",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Anoop",
+          "family": "Deoras"
+        },
+        {
+          "given": "Hai-Son",
+          "family": "Le"
+        },
+        {
+          "given": "Stefan",
+          "family": "Kombrink"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "The 50th Annual Meeting of the Association for Computational Linguistics, Proceedings of the Conference",
+      "container_title": "The 50th Annual Meeting of the Association for Computational Linguistics, Proceedings of the Conference",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Graham",
+          "family": "Neubig"
+        },
+        {
+          "given": "Taro",
+          "family": "Watanabe"
+        },
+        {
+          "given": "Shinsuke",
+          "family": "Mori"
+        },
+        {
+          "given": "Tatsuya",
+          "family": "Kawahara"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "18th Int. Conf. on Computational Linguistics",
+      "container_title": "18th Int. Conf. on Computational Linguistics",
+      "year": "2000",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sonja",
+          "family": "Nießen"
+        },
+        {
+          "given": "Hermann",
+          "family": "Ney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Proceedings of the 30th International Conference on Machine Learning, ICML 2013",
+      "container_title": "Proceedings of the 30th International Conference on Machine Learning, ICML 2013",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Razvan",
+          "family": "Pascanu"
+        },
+        {
+          "given": "Tomas",
+          "family": "Mikolov"
+        },
+        {
+          "given": "Yoshua",
+          "family": "Bengio"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "container_title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Maja",
+          "family": "Popović"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "container_title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Rico",
+          "family": "Sennrich"
+        },
+        {
+          "given": "Barry",
+          "family": "Haddow"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Proceedings of ACL-08: HLT",
+      "container_title": "Proceedings of ACL-08: HLT",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Benjamin",
+          "family": "Snyder"
+        },
+        {
+          "given": "Regina",
+          "family": "Barzilay"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "The 50th Annual Meeting of the Association for Computational Linguistics, Proceedings of the Conference",
+      "container_title": "The 50th Annual Meeting of the Association for Computational Linguistics, Proceedings of the Conference",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Stallard"
+        },
+        {
+          "given": "Jacob",
+          "family": "Devlin"
+        },
+        {
+          "given": "Michael",
+          "family": "Kayser"
+        },
+        {
+          "given": "Yoong",
+          "family": "Keok Lee"
+        },
+        {
+          "given": "Regina",
+          "family": "Barzilay"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "container_title": "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Miloš",
+          "family": "Stanojević"
+        },
+        {
+          "given": "Amir",
+          "family": "Kamran"
+        },
+        {
+          "given": "Philipp",
+          "family": "Koehn"
+        },
+        {
+          "given": "Ondřej",
+          "family": "Bojar"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "Advances in Neural Information Processing Systems 27: Annual Conference on Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems 27: Annual Conference on Neural Information Processing Systems",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Ilya",
+          "family": "Sutskever"
+        },
+        {
+          "given": "Oriol",
+          "family": "Vinyals"
+        },
+        {
+          "given": "V",
+          "family": "Quoc"
+        },
+        {
+          "given": null,
+          "family": "Le"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "Proceedings of 13th Annual Conference of the European Association for Machine Translation (EAMT'09)",
+      "container_title": "Proceedings of 13th Annual Conference of the European Association for Machine Translation (EAMT'09)",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jörg",
+          "family": "Tiedemann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics",
+      "container_title": "Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jörg",
+          "family": "Tiedemann"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Second Workshop on Statistical Machine Translation",
+      "container_title": "Second Workshop on Statistical Machine Translation",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "David",
+          "family": "Vilar"
+        },
+        {
+          "given": "Jan-Thorsten",
+          "family": "Peter"
+        },
+        {
+          "given": "Hermann",
+          "family": "Ney"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Proceedings of the Machine Translation Summit XI",
+      "container_title": "Proceedings of the Machine Translation Summit XI",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Sami",
+          "family": "Virpioja"
+        },
+        {
+          "given": "Jaakko J",
+          "family": "Väyrynen"
+        },
+        {
+          "given": "Mathias",
+          "family": "Creutz"
+        },
+        {
+          "given": "Markus",
+          "family": "Sadeniemi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b34",
+      "title": "ADADELTA: An Adaptive Learning Rate Method",
+      "container_title": "ADADELTA: An Adaptive Learning Rate Method",
+      "year": "2012",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1212.5701"
+        }
+      ],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Matthew"
+        },
+        {
+          "given": null,
+          "family": "Zeiler"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

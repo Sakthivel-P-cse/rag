@@ -1,0 +1,631 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Multifractal statistics of Lagrangian velocity and acceleration in turbulence</title>
+				<funder ref="#_MAeJGdY">
+					<orgName type="full">EU</orgName>
+				</funder>
+				<funder ref="#_EyEPVxd">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2018-09-07">September 7, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">L</forename><surname>Biferale</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Dipartimento di Fisica and INFM</orgName>
+								<orgName type="institution">Università degli Studi di Roma "Tor Vergata"</orgName>
+								<address>
+									<addrLine>Via della Ricerca Scientifica 1</addrLine>
+									<postCode>00133</postCode>
+									<settlement>Roma</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">G</forename><surname>Boffetta</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Dipartimento di Fisica Generale and INFM</orgName>
+								<orgName type="institution">Università degli Studi di Torino</orgName>
+								<address>
+									<addrLine>Via Pietro Giuria 1</addrLine>
+									<postCode>10125</postCode>
+									<settlement>Torino</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution" key="instit1">CNR-ISAC</orgName>
+								<orgName type="institution" key="instit2">Sezione di Torino</orgName>
+								<address>
+									<addrLine>Corso Fiume 4</addrLine>
+									<postCode>10133</postCode>
+									<settlement>Torino</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><surname>Celani</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">CNRS</orgName>
+								<orgName type="institution" key="instit2">INLN</orgName>
+								<address>
+									<postCode>1361, 06560</postCode>
+									<settlement>Route des Lucioles, Valbonne</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Devenish</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Dipartimento di Fisica and INFM</orgName>
+								<orgName type="institution">Università degli Studi di Roma "Tor Vergata"</orgName>
+								<address>
+									<addrLine>Via della Ricerca Scientifica 1</addrLine>
+									<postCode>00133</postCode>
+									<settlement>Roma</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><surname>Lanotte</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">CNR-ISAC</orgName>
+								<orgName type="institution" key="instit2">Sezione di Lecce</orgName>
+								<address>
+									<addrLine>Str. Prov. Lecce-Monteroni km.1200</addrLine>
+									<postCode>73100</postCode>
+									<settlement>Lecce</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">F</forename><surname>Toschi</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution" key="instit1">Istituto per le Applicazioni del Calcolo</orgName>
+								<orgName type="institution" key="instit2">CNR</orgName>
+								<address>
+									<addrLine>Viale del Policlinico 137</addrLine>
+									<postCode>00161</postCode>
+									<settlement>Roma</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Multifractal statistics of Lagrangian velocity and acceleration in turbulence</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-09-07">September 7, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CC28A3100E795AC7C40F63FB81F6421B</idno>
+					<idno type="arXiv">arXiv:nlin/0403020v1[nlin.CD]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>numbers: 47</term>
+					<term>27</term>
+					<term>-i 47</term>
+					<term>10</term>
+					<term>+g</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>The statistical properties of velocity and acceleration fields along the trajectories of fluid particles transported by a fully developed turbulent flow are investigated by means of high resolution direct numerical simulations. We present results for Lagrangian velocity structure functions, the acceleration probability density function and the acceleration variance conditioned on the instantaneous velocity. These are compared with predictions of the multifractal formalism and its merits and limitations are discussed.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><p>The simulations were performed on the <rs type="institution">IBM-SP4 of Cineca (Bologna, Italy)</rs>. We thank in particular <rs type="person">G. Erbacci</rs> and <rs type="person">C. Cavazzoni</rs> for resource allocation and precious technical assistance. We acknowledge support from the <rs type="funder">EU</rs> under the contracts <rs type="grantNumber">HPRN-CT-2002-00300</rs> and <rs type="grantNumber">HPRN-CT-2000-0162</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_MAeJGdY">
+					<idno type="grant-number">HPRN-CT-2002-00300</idno>
+				</org>
+				<org type="funding" xml:id="_EyEPVxd">
+					<idno type="grant-number">HPRN-CT-2000-0162</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Kraichnan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">575</biblScope>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Pope</surname></persName>
+		</author>
+		<title level="m">Turbulent Flows</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">C</forename><surname>Beck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Europhys. Lett</title>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Beck</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">240</biblScope>
+			<date type="published" when="2001">2003. 2001</date>
+		</imprint>
+	</monogr>
+	<note>Phys. Lett. A</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Aringazin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Mazhitov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Lett. A</title>
+		<imprint>
+			<biblScope unit="volume">313</biblScope>
+			<biblScope unit="page">284</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Arimitsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Arimitsu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:cond-mat/0301516</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Gotoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Kraichnan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:nlin.CD/0305040</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">La</forename><surname>Porta</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:physics/0303003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluid Mech</title>
+		<editor>
+			<persName><forename type="first">N</forename><surname>Mordant</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page">121</biblScope>
+			<date type="published" when="2001">2001. 2002</date>
+		</imprint>
+	</monogr>
+	<note>Nature</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">N</forename><surname>Mordant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page">214501</biblScope>
+			<date type="published" when="2001">2003. 2002. 2001</date>
+		</imprint>
+	</monogr>
+	<note>Phys. Rev. Lett.</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">S</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluid Mech</title>
+		<imprint>
+			<biblScope unit="volume">422</biblScope>
+			<biblScope unit="page">207</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Yeung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vedula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Yeung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Rev. Fluid Mech</title>
+		<editor>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Yeung</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">1208</biblScope>
+			<date type="published" when="1999">2002. 2001. 1999</date>
+		</imprint>
+	</monogr>
+	<note>Phys. Fluids</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">G</forename><surname>Boffetta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Sokolov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">94501</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Ishihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kaneda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>L</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Gotoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fukuyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page">3775</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><surname>Biferale</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:nlin.CD/0402032</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">U</forename><surname>Frisch</surname></persName>
+		</author>
+		<editor>A.N. Kolmogorov</editor>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>Cambridge University Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Parisi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Frisch</surname></persName>
+		</author>
+		<title level="m">Turbulence and predictability in geophysical fluid dynamics</title>
+		<meeting><address><addrLine>North-Holland, New York</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1985">1985</date>
+			<biblScope unit="page">84</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><surname>Benzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys., A</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">3521</biblScope>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><surname>Benzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">2299</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><surname>Biferale</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Fluids A</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">428</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Borgas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phil. Trans. R. Soc. Lond. A</title>
+		<imprint>
+			<biblScope unit="volume">342</biblScope>
+			<biblScope unit="page">379</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">L</forename><surname>Chevillard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page">214502</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">G</forename><surname>Boffetta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">66307</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">S</forename><surname>She</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lévêque</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page">336</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><surname>Benzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Sawford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">3478</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluid Mech</title>
+		<imprint>
+			<biblScope unit="volume">452</biblScope>
+			<biblScope unit="page">361</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

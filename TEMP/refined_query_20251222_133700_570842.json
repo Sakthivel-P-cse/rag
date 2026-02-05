@@ -1,0 +1,15 @@
+{
+  "refined_question": "What methods can stabilize deep neural network training without modifying the architecture, addressing unstable gradients and loss oscillation in early epochs?",
+  "intent": "Understand techniques to mitigate unstable gradients and loss divergence in deep neural network training, within the domain of machine learning, specifically focusing on stabilization methods that do not involve redesigning the network architecture",
+  "constraints": [
+    "no architecture redesign",
+    "deep neural networks",
+    "early epoch stabilization"
+  ],
+  "excluded_topics": [
+    "switching to larger pre-trained models",
+    "fine-tuning large pre-trained models",
+    "scaling parameter count as primary solution"
+  ],
+  "search_hint": "gradient stabilization, loss regularization, early stopping, learning rate scheduling, batch normalization, gradient clipping, weight decay, optimization algorithms, deep learning, neural network training, unstable gradients, loss oscillation"
+}

@@ -1,0 +1,289 @@
+22 Sep 1998 Stephan I Tzenov tzenov@fnal.gov Fermi National Accelerator Laboratory P. O. Box 500 60510 Batavia IL USA Fermilab-Pub-98/287 Collision Integrals and the Generalized Kinetic Equation for Charged Particle Beams 22 Sep 1998 D6601B4E8069C4D241805F16247F0E9E arXiv:physics/9809034v1[physics.acc-ph] GROBID - A machine learning software for extracting information from scholarly documents In the present paper we study the role of particle interactions on the evolution of a high energy beam. The interparticle forces taken into account are due to space charge alone. We derive the collision integral for a charged particle beam in the form of Balescu-Lenard and Landau and consider its further simplifications. Finally, the transition to the generalized kinetic equation has been accomplished by using the method of adiabatic elimination of fast variables.
+
+In most of the works so far, dedicated to the study of beam plasma properties the effect of interparticle collisions has been neglected. In many important cases this is a sensible approximation giving satisfactory results, yet one has to elucidate the limits of validity of "collisionless beam" approach and to investigate the role of collision phenomena in beam physics. Collisions are expected to bring about effects such as thermalization, resistivity, diffusion etc. that influence the long term behaviour of charged particle beams. The reasoning commonly adopted for employing the "collisionless beam" approach is that characteristic beam-plasma frequencies are much greater than collision frequencies for a large number of situations in beam physics. Such an assumption is not based on stable physical grounds as pointed in [1] .
+
+The term "collisionless beam" means that interactions between particles giving rise to dissipation and hence leading to establishment of equilibrium state are not taken into account. In a number of cases involving reasonable approximations it is sufficient to compute the macroscopic characteristics (charge and current densities) in relatively big volume elements containing a large number of particles. As a result interaction manifests itself in the form of a mean, self-consistent field thus preserving the reversible character of the dynamics involved, and leading to the time reversible Vlasov's equation.
+
+The notion of "collisional beam" usually conceived as the counterpart of "collisionless beam" implies that dissipation due to redistribution of beam particles is taken into account, resulting in additional term (in the form of Landau or Balescu-Lenard) in the kinetic equation. In a sense, Landau and Vlasov approximations correspond to two limit cases: namely the Landau collision integral takes into account interactions that determine dissipation while the effect of the mean, self-consistent field is not included into the physical picture involved. On the contrary, the latter is the only way interactions manifest themselves in the Vlasov equation, leaving however the question about the role of collisions near particle-wave resonances unanswered. The Balescu-Lenard approximation lies somewhat in between Landau and Vlasov limit cases with the due account of dynamic polarization of the beam, that is a more complete inclusion of collective effects resulting from interactions between charged particles.
+
+In the present paper we derive the collision integrals for charged particle beams. The transition to the unified kinetic, hydrodynamic and diffusion description of particle beam propagation embedded in the generalized kinetic equation [2] is further accomplished building on the concept of a coarse-grained hydrodynamic picture. The latter implies the existence (and their proper definition) of characteristic spacial and temporal scales typical for the hydrodynamic level of description [1] , [3] . Within the elementary cell of continuous medium thus defined it is naturally assumed that local equilibrium state is reached. This state is further described (defining the drift and diffusion coefficients in coordinate space) by the method of adiabatic elimination of fast variables, widely used to match the transition to Smoluchowski equation [4] . The granulation of phase space with the due account of concrete structure of continuous medium results in additional collision integral in the kinetic equation, thus describing the dissipation caused by spacial diffusion of the distribution function and redistribution of particle coordinates [2] , [3] .
+
+The generalized kinetic equation makes it possible to build an unified picture of non equilibrium processes on kinetic and hydrodynamic scales without involving a perturbation expansion in Knudsen number [3] . It can be shown that the set of hydrodynamic equations for cold beams put in appropriate form is equivalent to mesoscopic quantum-like description of particle beam propagation [5] , [6] .
+
+The scope of the presentation given in the paper is as follows. In Sections II and III we formulate and solve the equation for the fluctuations of the microscopic phase space density in the case of a space charge dominated high energy beam. The solution obtained provides the grounds to find explicitly the collision integral in the form of Balescu-Lenard. Sections IV -VI deal with the various forms and simplifications of the collision integral. In Section VII we derive the additional Fokker-Planck term in the generalized kinetic equation. Finally, Section VIII presents the conclusions of our study.
+
+In a previous paper [2] we derived the equation for the microscopic phase space density with a small source, taking into account the proper physical definition of continuous medium. It was the starting point in the transition to the generalized kinetic equation for the one-particle distribution function. The equation for the microscopic phase space density reads as
+
+where N = N x, p (k) ; θ is the true microscopic phase space density written in the variables
+
+They are related to the canonical coordinates x = (x, z, σ) and canonical momenta p = (p x , p z , h) through the following equations
+
+)
+
+)
+
+where u = (x, z) and all other notations are the same as in Ref. [2] . In particular the following designations
+
+)
+
+)
+
+e s = (0, 0, 1) (2.4e) have been introduced in equation (2.1), while N x, p (k) ; θ is the smoothed microscopic phase space density
+
+with a smoothing function G ( x| ρ). The next step consists in averaging the Klimontovich equation (2.1) over the relevant Gibbs ensemble with using the definition of one-particle distribution function [7] N x, p (k) ; θ = nf x, p (k) ; θ , (n = N p /V ) (2.5a)
+
+where N p is the total number of particles in the beam and V is the volume occupied by the beam. By taking into account the representation of the microscopic phase space density and the microscopic force in terms of mean and fluctuating part
+
+we obtain the generalized kinetic equation
+
+where
+
+are the collision integrals. It was previously shown [2] , [3] that the additional collision integral J x, p (k) ; θ can be cast into a Fokker-Planck "collision term", where the Fokker-Planck operator acts in coordinate space only. The equation for the fluctuating part δN reads as
+
+(2.9)
+
+Averaging the Maxwell-Lorentz equations we get
+
+where
+
+(2.11)
+
+The equations for the fluctuating fields are similar to (2.10) and read as
+
+where
+
+Taking divergence of the first of equations (2.12) and utilizing the last one, it can be easily seen that the continuity equation for fluctuating quantities holds
+
+It should be pointed out that the microscopic electromagnetic fields depend on the coordinates x = (x, z, σ) through the microscopic phase space density N written in these coordinates. The rest of this section is dedicated to the derivation of some useful relations, needed for the subsequent exposition. Consider the simple change of variables
+
+Noting that
+
+we easily find
+
+.
+
+Hence
+
+Continuing further we use the relations
+
+and finally get
+
+As far as
+
+for β o ≈ 1 we obtain
+
+(2.15) Thus, integration in the expressions for the charge and current density
+
+goes approximately over the new kinetic momenta p (k) .
+
+In order to determine the collision integral (2.8) we have to solve equation (2.9) governing the evolution of fluctuations δN . Under the assumption that fluctuations are small the second term on the right hand side of equation (2.9) can be neglected
+
+The small source in the initial equation (2.9) has been dropped off as non relevant for the dynamics of small-scale fluctuations. The term containing the mean force in equation (3.1) can be neglected. This is justified when calculating the small-scale fluctuations if
+
+Here T is the temperature of the beam, ω o is the angular frequency of synchronous particle, ν x,z,σ stands for the betatron tunes in the two transverse planes as well as for the synchrotron tune. Furthermore ω p is the beam plasma frequency and r D -the Debye radius. It is worthwhile to note that the physical meaning of Debye radius for particle beams is somewhat different from that commonly used in plasma physics. In fact Debye radius is an equilibrium characteristic of the beam, indicating the exponential decay of the self-field, needed to self-maintain this equilibrium state.
+
+The contribution of small-scale fluctuations can be better extracted if a small source proportional to ∆ is introduced into the left hand side of (3.1)
+
+In going over from equation (3.1) to (3.3) the left hand side has been represented in terms of the variables x = (x, z, σ).
+
+The general solution of the above equation can be written as
+
+where δN ind is a generic solution of (3.3), while δN s accounts for the discrete structure of the beam as a collection of particles. The latter can be determined from [7]
+
+with the initial condition
+
+When small-scale fluctuations are computed f x, p (k) ; θ can be considered a smooth enough function (not varying considerably) and δN s (X; θ) δN s (X 1 ; θ 1 ) depends on θ -θ 1 and xx 1 only. Introducing the Fourier transform:
+
+(2π)
+
+we cast equation (3.5) into the form
+
+Further we introduce the one-sided Fourier transform in the time domain
+
+Multiplication of equation (3.5a ) by e iωτ and subsequent integration on τ yields:
+
+Using the equation
+
+relating the one-sided and two-sided Fourier transform we get
+
+.
+
+The definition of Dirac's δ-function
+
+gives finally
+
+To obtain an arbitrary solution of equation ( 3 .3) we perform the Fourier transform
+
+and find
+
+What remains now is to compute the spectral density of fluctuating force δ F. In doing so we consider an arbitrary function F (x; θ). Let the same function, written in the variables r = (x, z, s = Rθ) and t be F r (r; t). Further we have
+
+where the following change of variables
+
+has been introduced. Therefore the relation we are looking for reads as
+
+Fourier analysing equations (2.12) we find
+
+)
+
+Let us represent the electromagnetic fields as a sum of longitudinal and transversal components
+
+and further simplify the problem by considering
+
+From the continuity equation (2.14) we get
+
+and using (3.13) and (3.16) we conclude that m = k. Thus we obtain
+
+)
+
+Retaining leading terms only, we write the fluctuating force δ F as
+
+Integrating equation (3.11) on p (k) we obtain
+
+and eliminating δ F (ω, k) with (3.19) in hand we get finally
+
+where
+
+is the dielectric susceptibility of the beam. Thus for the spectral density of the fluctuating force we have the following expression: According to (2.8) the collision integral is given by
+
+We shall express the right hand side of (4.1) in terms of the spectral densities of fluctuations δ F and δ N . Let F (x; θ) and G (x 1 ; θ 1 ) be two random functions. The second moment in the variables xx 1 , θ -θ 1 can be written as
+
+As far as the second moment is a real function the spectral density obeys
+
+2) with (4.3) in hand we find
+
+Using (4.4) and taking into account only leading terms in δ F we rewrite (4.1) as
+
+Utilizing the expressions (3.11) and (3.22) we obtain
+
+In formula (4.5) representing the collision integral only the real part of δ FδN ω, k; x, p (k) , θ enters. Therefore the expression to be substituted back into (4.5) reads as
+
+where
+
+Finally, the collision integral (4.5) can be written in the form of Balescu-Lenard as
+
+1 ; θ . (4.9)
+
+The collision integral (4.5) can be put in an equivalent form of a nonlinear Fokker-Planck operator
+
+where the drift and diffusion coefficients
+
+depend on the distribution function itself.
+
+The dielectric function (3.21) depends on the distribution function and consequently the corresponding kinetic equation with the collision integral in the form of Balescu-Lenard is extremely complicated to solve. Thus one should seek reasonable ways for further simplifications. First of all we shall determine the equilibrium state described by f 0 x, p (k) ; θ and satisfying
+
+It can be easily checked that equation (5.1) has a solution of the form
+
+where
+
+(5.3b)
+
+In the above expressions α, β and γ are the well-known Twiss parameters
+
+κ -being the harmonic acceleration number, Φ s -the phase of synchronous particle, ν s is the synchrotron tune and β σ can be interpreted as the "synchrotron beta-function". The quantities ǫ x , ǫ z and ǫ σ are related to the transverse and longitudinal beam size and are referred to as equilibrium beam emittances. To describe a local equilibrium state (see next section) one can formally choose the equilibrium beam emittances ǫ x , ǫ z and ǫ σ proportional to the betafunctions by a universal scaling factor ǫ/R characterizing the equilibrium state. Let us recall that at local equilibrium all the parameters of the distribution are allowed to depend on coordinates and time [7] , which is consistent with the specific choice above. Further, by specifying the generic function (5.2) for slowly varying beam envelopes we find
+
+(5.4)
+
+The equilibrium beam emittances ǫ x , ǫ z and ǫ σ are related to the temperature of the beam through the expression
+
+In order to obtain the collision integral in the form of Landau we consider ǫ (Rk • v, k) = 1 in equation (4.9) and simultaneously take into account the effect of polarization by altering the domain of integration on k for small k. As far as the large values of k are concerned the upper limit of integration can be obtained from the condition that perturbation expansion holds. To proceed further it is convenient to change variables in the Balescu-Lenard kinetic equation according to
+
+This means that the canonical coordinate σ has been transformed according to σ -→ σ |K|, and in order to retain the hamiltonian structure of the microscopic equations of motion the σ -component of the force should also be transformed as F σ -→ -sign (K) F σ . Taking into account the fact that the Balescu-Lenard collision integral is proportional to the square of the fluctuating force we can write
+
+where
+
+Handling the integral
+
+by choosing a reference frame in which the vector g points along the σ -axis, and using cylindrical coordinates in this frame we find
+
+As was mentioned above in order to avoid logarithmic divergences at both limits of integration on k ⊥ in (5.8) we have altered them according to
+
+(5.9)
+
+Thus the Coulomb logarithm L is defined as
+
+(5.10)
+
+The tensor I L (g) can be evaluated in an arbitrary reference frame to give
+
+(5.11)
+
+Finally the collision integral (5.6) can be represented in the form of Landau as
+
+where
+
+is the Landau tensor [8] .
+
+The local equilibrium state is defined as a solution to the equation
+
+where the collision integral is taken either in Balescu-Lenard or Landau form. This solution is well-known to be the Maxwellian distribution
+
+where ρ ( x; θ), ǫ ( x; θ) and u ( x; θ) are functions of x and θ. It should be clear that the local equilibrium state is not a true thermodynamic equilibrium state, since the latter must be homogeneous and stationary. To prove that the distribution (6.2) is a solution of (6.1) when the collision integral is taken in Landau form (5.12) it is sufficient to take into account the obvious identity
+
+Next we note that the Landau collision integral (5.12) can be written as a nonlinear Fokker-Planck operator
+
+where
+
+Our goal in what follows will be to match the transition to the unified kinetic equation. To approach this it is sufficient to compute the drift and diffusion coefficients (6.5b) using the local equilibrium distribution (6.2). A more systematic approximation methods using the linearized Landau collision integral can be found in [8] . Going over to the new variable
+
+we write
+
+where g = C -C 1 and A 0 , A 1 are functions of the modulus of the vector C
+
+)
+
+To compute the integrals (6.8a) and (6.8c) we use spherical coordinates in a reference frame in which vector C points along the σ -axis. We find
+
+where we have used g • C = C 2 -CC 1 cos Θ. Changing variables in the above integrals according to
+
+yields the result:
+
+and similarly
+
+where erf (C) is the error function. Thus for the coefficients A 0 and A 1 in (6.8) we have
+
+where
+
+is the Chandrasekhar function. The drift vector can be written as
+
+The drift and diffusion coefficients can be further evaluated by substituting δ p with the r.m.s. value
+
+Thus we obtain
+
+where
+
+for ρ ( x; θ) ∼ 1. This enables us to cast (6.4) into the form
+
+where
+
+is the relaxation "time".
+
+VII. THE GENERALIZED KINETIC EQUATION.
+
+The transition to local equilibrium, that is the kinetic stage of relaxation, is described by the Balescu-Lenard or the Landau kinetic equation. The latter with due account of the approximate collision integral (6.15) can be written as
+
+It is well-known [4] that the kinetic equation (7.1) is equivalent to the system of Langevin equations:
+
+where ξ (θ) is a white-noise random variable with formal correlation properties
+
+3)
+
+The generalized kinetic equation (2.7) describes the evolution of the beam for time scales greater than the relaxation time θ rel . In order to determine the additional collision integral J x, p (k) ; θ we use the method of adiabatic elimination of fast variables, which in our case are the kinetic momenta p (k) . In the limit of small times θ rel (compared to the time scale of physical interest) the second equation (7.2) relaxes sufficiently fast to the quasi-stationary (local equilibrium) state for which d p (k) /dθ -→ 0. Thus we find
+
+and substituting this into the first of equations (7.2) we arrive at
+
+The above equation (7.5) governs the evolution of particles within the elementary cell of continuous medium, where local equilibrium state is established. Such a coarse-graining procedure gives rise to the additional collision integral in the generalized kinetic equation (2.7). The latter follows straighforwardly from (7.5) and can be written in the form:
+
+VIII. CONCLUDING REMARKS.
+
+In the present paper we have studied the role of electromagnetic interactions between particles on the evolution of a high energy beam. The interparticle forces we have considered here are due to space charge alone. Starting with the reversible dynamics of individual particles and applying a smoothing procedure over the physically infinitesimal spacial scales, we have derived a generalized kinetic equation for kinetic, hydrodynamic and diffusion processes.
+
+We would like to point out an important feature of the approach presented in this work. The irreversibility of beam evolution is introduced at the very beginning in the initial equation (2.1) for the microscopic phase space density. Smoothing destroys information about the motion of individual particles within the unit cell of continuous medium, hence the reversible description becomes no longer feasible. Details of particle dynamics become lost and motion smears out due to dynamic instability, and to the resulting mixing of trajectories in phase space.
+
+The collision integral for a high energy beam has been derived (Sections IV and V) in the form of Balescu-Lenard and Landau. This collision term scales as E -6 o (E o is the energy of the synchronous particle) which comprises a negligibly weak dissipative mechanism for high energy beams.
+
+To accomplish the transition to the generalized kinetic equation the Landau collision term has been simplified by linearizing it around the local equilibrium distribution. The latter suggests a close relation between equilibrium beam emittance and the temperature of the beam.
+
+Finally in Section VII we have derived the additional dissipative term due to the redistribution of particle coordinates. This has been achieved by applying the method of adiabatic elimination of fast variables (kinetic momenta). The physical grounds for this application is provided the fact that within the physically infinitesimal confinement the relatively slow process of smear in configuration space is induced by the sufficiently fast relaxation of particle velocities towards a local equilibrium state. It maybe worthwhile to note that a more systematic approach involving the projection operator technique [4] could be used to derive the additional collision integral in the generalized kinetic equation.
+
+It is a pleasure to thank Pat Colestock, Jim Ellison and Alejandro Aceves for helpful discussions on the subject touched upon in the present paper, as well as David Finley and Steve Holmes for their support of this work.

@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Magnetization plateaus in antiferromagnetic-(ferromagnetic) n polymerized S = 1/2 XXZ chains</title>
+				<funder ref="#_wvaqAd6">
+					<orgName type="full">Ministry of Education, Science, Sports and Culture of Japan</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Natural Science and Engineering Research Council of Canada</orgName>
+					<orgName type="abbreviated">NSERC</orgName>
+				</funder>
+				<funder ref="#_7gbMGR4">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+				<date type="published" when="2000-05-31">31 May 2000</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Chen</surname></persName>
+							<email>chen@chemistry.mcgill.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kazuo</forename><surname>Hida</surname></persName>
+							<email>hida@phy.saitama-u.ac.jp</email>
+						</author>
+						<author>
+							<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Sanctuary</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">McGill University</orgName>
+								<address>
+									<postCode>H3A 2K6</postCode>
+									<settlement>Montreal</settlement>
+									<region>PQ</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Saitama University</orgName>
+								<address>
+									<postCode>338-8570</postCode>
+									<settlement>Urawa</settlement>
+									<region>Saitama</region>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Depart-ment of Chemistry</orgName>
+								<orgName type="institution">McGill University</orgName>
+								<address>
+									<postCode>H3A</postCode>
+									<settlement>Montreal</settlement>
+									<region>PQ</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Magnetization plateaus in antiferromagnetic-(ferromagnetic) n polymerized S = 1/2 XXZ chains</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2000-05-31">31 May 2000</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">44E39CB0165B1C352C6462E80D391ABD</idno>
+					<idno type="arXiv">arXiv:cond-mat/0005544v1[cond-mat.stat-mech]</idno>
+					<note type="submission">Received November 17, 2018</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>magnetization plateau</term>
+					<term>level spectroscopy</term>
+					<term>exact diagonalization</term>
+					<term>BKT transition</term>
+					<term>twisted boundary condition</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div><p>The plateau-non-plateau transition in the antiferromagnetic-(ferromagnetic)n polymerized S = 1/2 XXZ chains under the magnetic field is investigated. The universality class of this transition belongs to the Brezinskii-Kosterlitz-Thouless (BKT) type. The critical points are determined by level spectroscopy analysis of the numerical diagonalization data for 4 ≤ p ≤ 13 where p(≡ n+1) is the size of a unit cell. It is found that the critical strength of ferromagnetic coupling decreases with p for small p but increases for larger enough p. It is also found that the plateau for large p is wide enough for moderate values of exchange coupling so that it should be easily observed experimentally. This is in contrast to the plateaus for p = 3 chains which are narrow for a wide range of exchange coupling even away from the critical point.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><p>supplying us the numerical data of ref. 9. The numerical calculation is performed using the program package TITPACK version 2 coded by <rs type="person">H. Nishimori</rs> on <rs type="grantNumber">HITAC S820</rs> and <rs type="grantNumber">SR2201</rs> at the <rs type="institution">Information Processing Center of Saitama University</rs> and the FACOM VPP500 at the <rs type="affiliation">Supercomputer Center of Institute for Solid State Physics, University of Tokyo</rs>. This work is supported by a <rs type="grantName">Grant-in-Aid for Scientific Research</rs> from the <rs type="funder">Ministry of Education, Science, Sports and Culture of Japan</rs> and a research grant from the <rs type="funder">Natural Science and Engineering Research Council of Canada (NSERC)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_7gbMGR4">
+					<idno type="grant-number">HITAC S820</idno>
+				</org>
+				<org type="funding" xml:id="_wvaqAd6">
+					<idno type="grant-number">SR2201</idno>
+					<orgName type="grant-name">Grant-in-Aid for Scientific Research</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">M</forename><surname>Oshikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yamanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Affleck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<date type="published" when="1984">1997. 1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">2359</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Commun</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">245</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Tonegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nakao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaburagi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">3317</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Totsuka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Lett. A</title>
+		<imprint>
+			<biblScope unit="volume">228</biblScope>
+			<biblScope unit="page">103</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Totsuka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page">3454</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">T</forename><surname>Sakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takahashi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page">3201</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takahashi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">1126</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">9765</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A: Gen</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">4601</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+		<idno>cond-mat/9907481</idno>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">Y</forename><surname>Narumi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hagiwara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kindo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takahashi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica</title>
+		<imprint>
+			<biblScope unit="page">234</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">W</forename><surname>Shiramura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takatsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kurniawan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Uekusa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ohashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takizawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Mitamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Goto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">1548</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys.Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page">2207</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">3357</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Hida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">1463</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">D</forename><surname>Shanks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Math. Phys</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="1955">1955</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A: Math. Gen</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">5451</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kitazawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. A.: Math. Gen</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">7341</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title />
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ajiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Asano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Inami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Aruga-Katori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Goto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">859</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>

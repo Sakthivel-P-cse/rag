@@ -1,0 +1,628 @@
+{
+  "paper_id": "373A6E78EA17118C4603A7E0330BAD33",
+  "title": "Generating Sequences With Recurrent Neural Networks",
+  "arxiv_id": "arXiv:1308.0850v5[cs.NE]",
+  "authors": [
+    {
+      "given": "Alex",
+      "family": "Graves"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "nuanced annotations than just text, for example stylistic features, different forms of the same letter",
+      "container_title": "nuanced annotations than just text, for example stylistic features, different forms of the same letter",
+      "year": null,
+      "idnos": [],
+      "authors": []
+    },
+    {
+      "bibl_id": "b1",
+      "title": "IEEE Transactions on Neural Networks",
+      "container_title": "IEEE Transactions on Neural Networks",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "P",
+          "family": "Simard"
+        },
+        {
+          "given": "P",
+          "family": "Frasconi"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "Mixture density networks",
+      "container_title": "Mixture density networks",
+      "year": "1994",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Bishop"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "Neural Networks for Pattern Recognition",
+      "container_title": "Neural Networks for Pattern Recognition",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "C",
+          "family": "Bishop"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "Proceedings of the Twenty-nine International Conference on Machine Learning (ICML'12)",
+      "container_title": "Proceedings of the Twenty-nine International Conference on Machine Learning (ICML'12)",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "N",
+          "family": "Boulanger-Lewandowski"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "P",
+          "family": "Vincent"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "IEEE Transactions on Communications",
+      "container_title": "IEEE Transactions on Communications",
+      "year": "1984",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "J G",
+          "family": "Cleary"
+        },
+        {
+          "given": "Ian",
+          "family": null
+        },
+        {
+          "given": "I H",
+          "family": "Witten"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "A first look at music composition using lstm recurrent neural networks",
+      "container_title": "A first look at music composition using lstm recurrent neural networks",
+      "year": null,
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Eck"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Journal of Machine Learning Research",
+      "container_title": "Journal of Machine Learning Research",
+      "year": "2002",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "F",
+          "family": "Gers"
+        },
+        {
+          "given": "N",
+          "family": "Schraudolph"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b8",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b9",
+      "title": "ICML Representation Learning Worksop",
+      "container_title": "ICML Representation Learning Worksop",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b10",
+      "title": "Proc. ICASSP",
+      "container_title": "Proc. ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "A",
+          "family": "Mohamed"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b11",
+      "title": "Neural Networks",
+      "container_title": "Neural Networks",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b12",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Graves"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b13",
+      "title": "The Minimum Description Length Principle (Adaptive Computation and Machine Learning)",
+      "container_title": "The Minimum Description Length Principle (Adaptive Computation and Machine Learning)",
+      "year": "2007",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "P D",
+          "family": "Grünwald"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b14",
+      "title": "A Practical Guide to Training Restricted Boltzmann Machines",
+      "container_title": "A Practical Guide to Training Restricted Boltzmann Machines",
+      "year": "2010",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b15",
+      "title": "A Field Guide to Dynamical Recurrent Neural Networks",
+      "container_title": "A Field Guide to Dynamical Recurrent Neural Networks",
+      "year": "2001",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "P",
+          "family": "Frasconi"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b16",
+      "title": "Neural Computation",
+      "container_title": "Neural Computation",
+      "year": "1997",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "J",
+          "family": "Schmidhuber"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b17",
+      "title": "The Human Knowledge Compression Contest",
+      "container_title": "The Human Knowledge Compression Contest",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Hutter"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b18",
+      "title": "IEEE Transactions on",
+      "container_title": "IEEE Transactions on",
+      "year": "1996",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "K.-C",
+          "family": "Jim"
+        },
+        {
+          "given": "C",
+          "family": "Giles"
+        },
+        {
+          "given": "B",
+          "family": "Horne"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b19",
+      "title": "The tagged LOB corpus user's manual; Norwegian Computing Centre for the Humanities",
+      "container_title": "The tagged LOB corpus user's manual; Norwegian Computing Centre for the Humanities",
+      "year": "1986",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "S",
+          "family": "Johansson"
+        },
+        {
+          "given": "R",
+          "family": "Atwell"
+        },
+        {
+          "given": "R",
+          "family": "Garside"
+        },
+        {
+          "given": "G",
+          "family": "Leech"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b20",
+      "title": "A machine learning perspective on predictive coding with paq",
+      "container_title": "A machine learning perspective on predictive coding with paq",
+      "year": "2011",
+      "idnos": [
+        {
+          "type": "other",
+          "value": "CoRR, abs/1108.3298"
+        }
+      ],
+      "authors": [
+        {
+          "given": "B",
+          "family": "Knoll"
+        },
+        {
+          "given": "N",
+          "family": "De Freitas"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b21",
+      "title": "Proc. 8th Int. Conf. on Document Analysis and Recognition",
+      "container_title": "Proc. 8th Int. Conf. on Document Analysis and Recognition",
+      "year": "2005",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Liwicki"
+        },
+        {
+          "given": "H",
+          "family": "Bunke"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b22",
+      "title": "COMPUTATIONAL LINGUISTICS",
+      "container_title": "COMPUTATIONAL LINGUISTICS",
+      "year": "1993",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M P",
+          "family": "Marcus"
+        },
+        {
+          "given": "B",
+          "family": "Santorini"
+        },
+        {
+          "given": "M A",
+          "family": "Marcinkiewicz"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b23",
+      "title": "Statistical Language Models based on Neural Networks",
+      "container_title": "Statistical Language Models based on Neural Networks",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Mikolov"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b24",
+      "title": "Subword language modeling with neural networks",
+      "container_title": "Subword language modeling with neural networks",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Mikolov"
+        },
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "A",
+          "family": "Deoras"
+        },
+        {
+          "given": "H",
+          "family": "Le"
+        },
+        {
+          "given": "S",
+          "family": "Kombrink"
+        },
+        {
+          "given": "J",
+          "family": "Cernocky"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b25",
+      "title": "Advances in Neural Information Processing Systems",
+      "container_title": "Advances in Neural Information Processing Systems",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mnih"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b26",
+      "title": "Proceedings of the 29th International Conference on Machine Learning",
+      "container_title": "Proceedings of the 29th International Conference on Machine Learning",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "A",
+          "family": "Mnih"
+        },
+        {
+          "given": "Y W",
+          "family": "Teh"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b27",
+      "title": "Proc. ICASSP",
+      "container_title": "Proc. ICASSP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T N",
+          "family": "Sainath"
+        },
+        {
+          "given": "A",
+          "family": "Mohamed"
+        },
+        {
+          "given": "B",
+          "family": "Kingsbury"
+        },
+        {
+          "given": "B",
+          "family": "Ramabhadran"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b28",
+      "title": "Better generative models for sequential data problems: Bidirectional recurrent mixture density networks",
+      "container_title": "Better generative models for sequential data problems: Bidirectional recurrent mixture density networks",
+      "year": "1999",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "M",
+          "family": "Schuster"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b29",
+      "title": "The recurrent temporal restricted boltzmann machine",
+      "container_title": "The recurrent temporal restricted boltzmann machine",
+      "year": "2008",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        },
+        {
+          "given": "G W",
+          "family": "Taylor"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b30",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2011",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "I",
+          "family": "Sutskever"
+        },
+        {
+          "given": "J",
+          "family": "Martens"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b31",
+      "title": "Proc. 26th Annual International Conference on Machine Learning",
+      "container_title": "Proc. 26th Annual International Conference on Machine Learning",
+      "year": "2009",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "G W",
+          "family": "Taylor"
+        },
+        {
+          "given": "G E",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b32",
+      "title": "Lecture 6.5 -rmsprop: Divide the gradient by a running average of its recent magnitude",
+      "container_title": "Lecture 6.5 -rmsprop: Divide the gradient by a running average of its recent magnitude",
+      "year": "2012",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "T",
+          "family": "Tieleman"
+        },
+        {
+          "given": "G",
+          "family": "Hinton"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b33",
+      "title": "Back-propagation: Theory, Architectures and Applications",
+      "container_title": "Back-propagation: Theory, Architectures and Applications",
+      "year": "1995",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "R",
+          "family": "Williams"
+        },
+        {
+          "given": "D",
+          "family": "Zipser"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

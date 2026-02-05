@@ -1,0 +1,14 @@
+# Database dependencies
+psycopg2-binary>=2.9.9
+qdrant-client>=1.7.0
+numpy>=1.24.0
+
+# LLM API client
+httpx>=0.27.0
+
+# Embedding models (optional but recommended)
+sentence-transformers>=2.2.0
+torch>=2.0.0
+
+# For development/testing
+python-dotenv>=1.0.0

@@ -1,0 +1,158 @@
+{
+  "paper_id": "A988EE046B70676B2A3E7D667878BFAE",
+  "title": "Effective Approaches to Attention-based Neural Machine Translation",
+  "arxiv_id": "arXiv:1508.04025v5[cs.CL]",
+  "authors": [
+    {
+      "given": "Minh-Thang",
+      "family": "Luong"
+    },
+    {
+      "given": "Hieu",
+      "family": "Pham"
+    },
+    {
+      "given": "Christopher D",
+      "family": "Manning"
+    }
+  ],
+  "references": [
+    {
+      "bibl_id": "b0",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "D",
+          "family": "Bahdanau"
+        },
+        {
+          "given": "K",
+          "family": "Cho"
+        },
+        {
+          "given": "Y",
+          "family": "Bengio"
+        },
+        {
+          "given": "Christian",
+          "family": "Buck"
+        },
+        {
+          "given": "Kenneth",
+          "family": "Heafield"
+        },
+        {
+          "given": "Bas",
+          "family": "Van Ooyen"
+        },
+        {
+          "given": ";",
+          "family": "Cho"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b1",
+      "title": "ICML",
+      "container_title": "ICML",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Gregor"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b2",
+      "title": "ACL",
+      "container_title": "ACL",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Jean",
+          "family": null
+        }
+      ]
+    },
+    {
+      "bibl_id": "b3",
+      "title": "EMNLP",
+      "container_title": "EMNLP",
+      "year": "2013",
+      "idnos": [],
+      "authors": [
+        {
+          "given": "Blunsom",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "N",
+          "family": "Kalchbrenner"
+        },
+        {
+          "given": "P",
+          "family": "Blunsom"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b4",
+      "title": "NAACL",
+      "container_title": "NAACL",
+      "year": "2003",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Koehn"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b5",
+      "title": "NAACL",
+      "container_title": "NAACL",
+      "year": "2006",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Liang"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b6",
+      "title": "Sequence to sequence learning with neural networks",
+      "container_title": "Sequence to sequence learning with neural networks",
+      "year": "2014",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Sutskever"
+        }
+      ]
+    },
+    {
+      "bibl_id": "b7",
+      "title": "Wojciech Zaremba, Ilya Sutskever, and Oriol Vinyals",
+      "container_title": "Wojciech Zaremba, Ilya Sutskever, and Oriol Vinyals",
+      "year": "2015",
+      "idnos": [],
+      "authors": [
+        {
+          "given": null,
+          "family": "Xu"
+        }
+      ]
+    }
+  ],
+  "chunks": []
+}

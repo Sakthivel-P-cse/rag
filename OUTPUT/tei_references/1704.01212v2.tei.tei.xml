@@ -1,0 +1,1239 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Neural Message Passing for Quantum Chemistry</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher />
+				<availability status="unknown"><licence /></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Justin</forename><surname>Gilmer</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Samuel</forename><forename type="middle">S</forename><surname>Schoenholz</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Patrick</forename><forename type="middle">F</forename><surname>Riley</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">George</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+						</author>
+						<title level="a" type="main">Neural Message Passing for Quantum Chemistry</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date />
+						</imprint>
+					</monogr>
+					<idno type="MD5">BDFD02D5C513A63A08416AAB2C0CC5F9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-12-22T07:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid" />
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div><p>Supervised learning on molecules has incredible potential to be useful in chemistry, drug discovery, and materials science. Luckily, several promising and closely related neural network models invariant to molecular symmetries have already been described in the literature. These models learn a message passing algorithm and aggregation procedure to compute a function of their entire input graph. At this point, the next step is to find a particularly effective variant of this general approach and apply it to chemical prediction benchmarks until we either solve them or reach the limits of the approach. In this paper, we reformulate existing models into a single common framework we call Message Passing Neural Networks (MPNNs) and explore additional novel variations within this framework. Using MPNNs we demonstrate state of the art results on an important molecular property prediction benchmark; these results are strong enough that we believe future work should focus on datasets with larger molecules or more accurate ground truth labels.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We would like to thank <rs type="person">Lukasz Kaiser</rs>, <rs type="person">Geoffrey Irving</rs>, <rs type="person">Alex Graves</rs>, and <rs type="person">Yujia Li</rs> for helpful discussions. Thank you to <rs type="person">Adrian Roitberg</rs> for pointing out an issue with the use of partial charges in an earlier version of this paper.</p></div>
+			</div>			<div type="references">
+
+				</div>
+		<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Interaction networks for learning about objects, relations and physics</title>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Battaglia</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Razvan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Matthew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Danilo</forename><surname>Rezende</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jimenez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Koray</forename><surname>Kavukcuoglu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="4502" to="4510" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Density-functional thermochemistry. iii. the role of exact exchange</title>
+		<author>
+			<persName><forename type="first">Axel</forename><forename type="middle">D</forename><surname>Becke</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.464913</idno>
+		<ptr target="http://dx.doi.org/10.1063/1.464913" />
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Chemical Physics</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="5648" to="5652" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Generalized neural-network representation of high-dimensional potential-energy surfaces</title>
+		<author>
+			<persName><forename type="first">Jörg</forename><surname>Behler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michele</forename><surname>Parrinello</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.98.146401</idno>
+		<ptr target="http://link.aps.org/doi/10.1103/PhysRevLett.98.146401" />
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">146401</biblScope>
+			<date type="published" when="2007-04">Apr 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Bing</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lillenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anatole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dirk</forename><surname>Bakowies</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>personal communication</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">Joan</forename><surname>Bruna</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zaremba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wojciech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Szlam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Le-Cun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1312.6203</idno>
+		<title level="m">Spectral networks and locally connected networks on graphs</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<author>
+			<persName><forename type="first">David</forename><surname>Ceperley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Alder</surname></persName>
+		</author>
+		<title level="m">Quantum monte carlo. Science</title>
+		<imprint>
+			<date type="published" when="1986">1986</date>
+			<biblScope unit="volume">231</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">On the properties of neural machine translation: Encoder-decoder approaches</title>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Van</forename><surname>Merriënboer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bart</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dzmitry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1409.1259</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Convolutional neural networks on graphs with fast localized spectral filtering</title>
+		<author>
+			<persName><forename type="first">Michaël</forename><surname>Defferrard</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bresson</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Xavier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Vandergheynst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="3837" to="3845" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Convolutional networks on graphs for learning molecular fingerprints</title>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">K</forename><surname>Duvenaud</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Maclaurin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dougal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jorge</forename><surname>Iparraguirre</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bombarell</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rafael</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothy</forename><surname>Hirzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alán</forename><surname>Aspuru-Guzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><forename type="middle">P</forename><surname>Adams</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="2224" to="2232" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Fast machine learning models of electronic and energetic properties consistently reach approximation errors better than dft accuracy</title>
+		<author>
+			<persName><forename type="first">Felix</forename><surname>Faber</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hutchison</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Luke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenholz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Samuel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oriol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kearnes</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Steven</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><forename type="middle">F</forename><surname>Riley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lilienfeld</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anatole</surname></persName>
+		</author>
+		<ptr target="https://arxiv.org/abs/1702.05532" />
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Machine learning predictions of molecular properties: Accurate many-body potentials and nonlocality in chemical space</title>
+		<author>
+			<persName><forename type="first">Katja</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Biegler</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Franziska</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ramakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Raghunathan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pronobis</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wiktor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lilienfeld</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anatole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klaus</forename><forename type="middle">-</forename><surname>Mller</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Robert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandre</forename><surname>Tkatchenko</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpclett.5b00831</idno>
+		<ptr target="http://dx.doi.org/10.1021/acs.jpclett.5b00831" />
+	</analytic>
+	<monogr>
+		<title level="j">The journal of physical chemistry letters</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="2326" to="2331" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">New method for calculating the one-particle green's function with application to the electron-gas problem</title>
+		<author>
+			<persName><forename type="first">Lars</forename><surname>Hedin</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRev.139.A796</idno>
+		<ptr target="http://link.aps.org/doi/10.1103/PhysRev.139.A796" />
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<date type="published" when="1965-08">Aug 1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups</title>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Abdel-Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jaitly</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Navdeep</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Senior</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Andrew</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Patrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tara</forename><forename type="middle">N</forename><surname>Sainath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Signal Processing Magazine</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="82" to="97" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Inhomogeneous electron gas</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hohenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kohn</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRev.136.B864</idno>
+		<ptr target="http://link.aps.org/doi/10.1103/PhysRev.136.B864" />
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page" from="864" to="B871" />
+			<date type="published" when="1964-11">Nov 1964</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Combined first-principles calculation and neural-network correction approach for heat of formation</title>
+		<author>
+			<persName><forename type="first">Lihong</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Xiujun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Laiho</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guanhua</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Chemical Physics</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="11501" to="11507" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Communication: Understanding molecular representations in machine learning: The role of uniqueness and target similarity</title>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lilienfeld</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anatole</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4964627</idno>
+		<ptr target="http://dx.doi.org/10.1063/1.4964627" />
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Chemical Physics</title>
+		<imprint>
+			<biblScope unit="volume">145</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page">161102</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Molecular graph convolutions: Moving beyond fingerprints</title>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Kearnes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Mccloskey</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Berndl</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Marc</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pande</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vijay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Riley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer-Aided Molecular Design</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="595" to="608" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<author>
+			<persName><forename type="first">Diederik</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Ba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Adam</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.6980</idno>
+		<title level="m">A method for stochastic optimization</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Semi-Supervised Classification with Graph Convolutional Networks</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Welling</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016-09">September 2016</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv eprints</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Imagenet classification with deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ilya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="1097" to="1105" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Gated graph sequence neural networks</title>
+		<author>
+			<persName><forename type="first">Yujia</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tarlow</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Daniel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marc</forename><surname>Brockschmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Zemel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICLR</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Deep architectures and deep learning in chemoinformatics: the prediction of aqueous solubility for drug-like molecules</title>
+		<author>
+			<persName><forename type="first">Alessandro</forename><surname>Lusci</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pollastri</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gianluca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Baldi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of chemical information and modeling</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1563" to="1575" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Abhinav. The more you know: Using knowledge graphs for image classification</title>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Marino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruslan</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gupta</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1612.04844</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Automatic generation of complementary descriptors with molecular graph networks</title>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Merkwirth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Lengauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of chemical information and modeling</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1159" to="1168" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Neural network for graphs: A contextual constructive approach</title>
+		<author>
+			<persName><forename type="first">Alessio</forename><surname>Micheli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="498" to="511" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Learning invariant representations of molecules for atomization energy prediction</title>
+		<author>
+			<persName><forename type="first">Grégoire</forename><surname>Montavon</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Katja</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fazli</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Siamac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Rupp</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Biegler</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Franziska</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ziehe</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Andreas</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tkatchenko</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Alexandre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lilienfeld</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anatole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klaus-Robert</forename><surname>Müller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="440" to="448" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Learning convolutional neural networks for graphs</title>
+		<author>
+			<persName><forename type="first">Mathias</forename><surname>Niepert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ahmed</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohamed</forename><surname>Kutzkov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Konstantin</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 33rd annual international conference on machine learning</title>
+		<meeting>the 33rd annual international conference on machine learning</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Quantum chemistry structures and properties of 134 kilo molecules</title>
+		<author>
+			<persName><forename type="first">Raghunathan</forename><surname>Ramakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Pavlo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Rupp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Von</forename><surname>Lilienfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anatole</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific data</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Extended-connectivity fingerprints</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Rogers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mathew</forename><surname>Hahn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of chemical information and modeling</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="742" to="754" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Enumeration of 166 billion organic small molecules in the chemical universe database gdb-17</title>
+		<author>
+			<persName><forename type="first">Lars</forename><surname>Ruddigkeit</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Van Deursen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ruud</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Blum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lorenz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jean-Louis</forename><surname>Reymond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of chemical information and modeling</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2864" to="2875" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Fast and accurate modeling of molecular atomization energies with machine learning</title>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Rupp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandre</forename><surname>Tkatchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klaus</forename><forename type="middle">-</forename><surname>Haand Müller</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Robert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lilienfeld</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anatole</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.108.058301</idno>
+		<ptr target="http://dx.doi.org/10.1103/PhysRevLett.108.058301" />
+	</analytic>
+	<monogr>
+		<title level="j">Physical review letters</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">58301</biblScope>
+			<date type="published" when="2012-01">Jan 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The graph neural network model</title>
+		<author>
+			<persName><surname>Scarselli</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Franco</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gori</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Marco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ah</forename><surname>Tsoi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Markus</forename><surname>Hagenbuchner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriele</forename><surname>Monfardini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="61" to="80" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">A structural approach to relaxation in glassy liquids</title>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">S</forename><surname>Schoenholz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cubuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ekin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sussman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Daniel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Efthimios</forename><surname>Kaxiras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrea</forename><forename type="middle">J</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Physics</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Quantumchemical insights from deep tensor neural networks</title>
+		<author>
+			<persName><forename type="first">Kristof</forename><forename type="middle">T</forename><surname>Schütt</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Arbabzadah</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Farhad</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chmiela</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Stefan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Klaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandre</forename><surname>Tkatchenko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Communications</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Computer simulation of local order in condensed phases of silicon</title>
+		<author>
+			<persName><forename type="first">Frank</forename><forename type="middle">H</forename><surname>Stillinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">A</forename><surname>Weber</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.31.5262</idno>
+		<ptr target="http://link.aps.org/doi/10.1103/PhysRevB.31.5262" />
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="5262" to="5271" />
+			<date type="published" when="1985-04">Apr 1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Order matters: Sequence to sequence for sets</title>
+		<author>
+			<persName><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oriol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Samy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manjunath</forename><surname>Kudlur</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1511.06391</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<author>
+			<persName><forename type="first">Yonghui</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhifeng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Quoc</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Norouzi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mohammad</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Macherey</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wolfgang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Krikun</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Maxim</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Macherey</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Klaus</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1609.08144</idno>
+		<title level="m">Google's neural machine translation system: Bridging the gap between human and machine translation</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title />
+		<author>
+			<persName><surname>Appendix</surname></persName>
+		</author>
+		<imprint />
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">can be interpreted as MPNNs. These models generalize the notion of convolutions a general graph G with N nodes. In the language of MPNNs, these models tend to have very simple message functions and are typically applied to much larger graphs such as social network data. We closely follow the notation defined in</title>
+		<author>
+			<persName><surname>Defferrard</surname></persName>
+		</author>
+		<editor>Defferrard et al.</editor>
+		<imprint>
+			<date type="published" when="2013">2016. 2013. 2016. 2013. 2016</date>
+			<publisher>Kipf &amp; Welling</publisher>
+		</imprint>
+	</monogr>
+	<note>Interpretation of Laplacian based models as MPNNs Another family of models defined in. equation 5</note>
+</biblStruct>
+
+				</listBibl>
+			</back>
+	</text>
+</TEI>
