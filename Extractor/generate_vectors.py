@@ -4,7 +4,6 @@ import os
 from typing import Any, Dict, List, Tuple
 
 import numpy as np
-import psycopg2
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, PointStruct, VectorParams
 import uuid
@@ -26,27 +25,14 @@ def chunk_id_to_uuid(chunk_id: str) -> str:
 class VectorGenerator:
     def __init__(
         self,
-        postgres_config: Dict[str, Any],
         qdrant_host: str = "localhost",
         qdrant_port: int = 6333,
     ):
-        self.postgres_config = postgres_config
         self.qdrant_host = qdrant_host
         self.qdrant_port = qdrant_port
-        self.pg_conn = None
         self.qdrant_client = None
         self.model_1 = None
         self.model_2 = None
-
-    def connect_postgres(self) -> None:
-        self.pg_conn = psycopg2.connect(
-            host=self.postgres_config["host"],
-            port=int(self.postgres_config.get("port", 5433)),
-            database=self.postgres_config["database"],
-            user=self.postgres_config["user"],
-            password=self.postgres_config.get("password", ""),
-        )
-        print(f"✓ Connected to PostgreSQL database: {self.postgres_config['database']}")
 
     def connect_qdrant(self) -> None:
         self.qdrant_client = QdrantClient(host=self.qdrant_host, port=self.qdrant_port)
@@ -57,8 +43,8 @@ class VectorGenerator:
             raise ImportError("sentence-transformers is required. Install with: pip install sentence-transformers")
 
         print("\nLoading embedding models...")
-        print("  Loading all-MiniLM-L6-v2 (384 dimensions)...")
-        self.model_1 = SentenceTransformer("all-MiniLM-L6-v2")
+        print("  Loading BAAI/bge-small-en-v1.5 (384 dimensions)...")
+        self.model_1 = SentenceTransformer("BAAI/bge-small-en-v1.5")
         print("  Loading all-mpnet-base-v2 (768 dimensions)...")
         self.model_2 = SentenceTransformer("all-mpnet-base-v2")
         print("✓ Embedding models loaded successfully")
@@ -78,54 +64,9 @@ class VectorGenerator:
         )
         print(f"✓ Qdrant collection '{collection_name}' created")
 
-    def get_chunks_without_vectors(self) -> List[Dict[str, Any]]:
-        cursor = self.pg_conn.cursor()
-        cursor.execute(
-            """
-            SELECT chunk_id, paper_id, chunk_text, section, year
-            FROM chunks
-            WHERE vector_generated = FALSE
-            ORDER BY paper_id, chunk_id
-            """
-        )
-        rows = cursor.fetchall()
-        cursor.close()
-
-        chunks = []
-        for row in rows:
-            chunks.append(
-                {
-                    "chunk_id": row[0],
-                    "paper_id": row[1],
-                    "chunk_text": row[2],
-                    "section": row[3],
-                    "year": row[4],
-                }
-            )
-        return chunks
-
-    def generate_embeddings(self, text: str) -> Tuple[np.ndarray, np.ndarray]:
-        vector_1 = self.model_1.encode(text, convert_to_numpy=True, show_progress_bar=False)
-        vector_2 = self.model_2.encode(text, convert_to_numpy=True, show_progress_bar=False)
-        return vector_1.astype(np.float32), vector_2.astype(np.float32)
-
-    def update_vector_status(self, chunk_ids: List[str]) -> None:
-        cursor = self.pg_conn.cursor()
-        cursor.execute(
-            """
-            UPDATE chunks
-            SET vector_generated = TRUE, updated_at = CURRENT_TIMESTAMP
-            WHERE chunk_id = ANY(%s)
-            """,
-            (chunk_ids,),
-        )
-        self.pg_conn.commit()
-        cursor.close()
-
-    def process_chunks(self, collection_name: str = "research_papers", batch_size: int = 10) -> None:
-        chunks = self.get_chunks_without_vectors()
+    def process_chunks(self, chunks: List[Dict[str, Any]], collection_name: str = "research_papers", batch_size: int = 10) -> None:
         if not chunks:
-            print("\n✓ All chunks already have vectors generated!")
+            print("\n✓ No chunks to process!")
             return
 
         print(f"\nFound {len(chunks)} chunks to process")
@@ -135,7 +76,14 @@ class VectorGenerator:
 
         for chunk in chunks:
             try:
-                vector_1, vector_2 = self.generate_embeddings(chunk["chunk_text"])
+                # Handle potential key differences between DB schema and JSON format
+                text = chunk.get("chunk_text") or chunk.get("text", "")
+                if not text:
+                    raise ValueError(f"No text found in chunk {chunk.get('chunk_id')}")
+                vector_1 = self.model_1.encode(text, convert_to_numpy=True, show_progress_bar=False)
+                vector_2 = self.model_2.encode(text, convert_to_numpy=True, show_progress_bar=False)
+                vector_1 = vector_1.astype(np.float32)
+                vector_2 = vector_2.astype(np.float32)
 
                 points_batch.append(
                     PointStruct(
@@ -147,7 +95,8 @@ class VectorGenerator:
                         payload={
                             "chunk_id": chunk["chunk_id"],
                             "paper_id": chunk["paper_id"],
-                            "section": chunk.get("section"),
+                            "paragraph_index": chunk.get("paragraph_index"),
+                            "chunk_text": text,
                             "year": chunk.get("year"),
                         },
                     )
@@ -155,7 +104,6 @@ class VectorGenerator:
 
                 if len(points_batch) >= batch_size:
                     self.qdrant_client.upsert(collection_name=collection_name, points=points_batch)
-                    self.update_vector_status([p.payload["chunk_id"] for p in points_batch])
                     total_processed += len(points_batch)
                     print(f"  Processed {total_processed}/{len(chunks)} chunks...")
                     points_batch = []
@@ -166,38 +114,58 @@ class VectorGenerator:
 
         if points_batch:
             self.qdrant_client.upsert(collection_name=collection_name, points=points_batch)
-            self.update_vector_status([p.payload["chunk_id"] for p in points_batch])
             total_processed += len(points_batch)
 
         print(f"\n✓ Successfully processed {total_processed} chunks")
 
 
+import json
+from pathlib import Path
+
+
+def load_chunks_from_json(directory: Path, pattern: str = "*_chunks.json") -> List[Dict[str, Any]]:
+    if not directory.exists():
+        print(f"✗ Directory not found: {directory}")
+        return []
+
+    json_files = list(directory.glob(pattern))
+    if not json_files:
+        print(f"✗ No JSON files found matching '{pattern}' in {directory}")
+        return []
+
+    all_chunks = []
+    for json_file in json_files:
+        try:
+            with open(json_file, 'r', encoding='utf-8') as f:
+                chunks = json.load(f)
+                if isinstance(chunks, list):
+                    all_chunks.extend(chunks)
+        except Exception as e:
+            print(f"✗ Failed to load {json_file}: {e}")
+    return all_chunks
+
+
 def run(
     *,
-    postgres_config: Dict[str, Any],
+    chunked_text_dir: Path,
     qdrant_host: str = "localhost",
     qdrant_port: int = 6333,
     collection_name: str = "research_papers",
     batch_size: int = 10,
 ) -> None:
-    vg = VectorGenerator(postgres_config, qdrant_host=qdrant_host, qdrant_port=qdrant_port)
-    vg.connect_postgres()
+    chunks = load_chunks_from_json(chunked_text_dir)
+    vg = VectorGenerator(qdrant_host=qdrant_host, qdrant_port=qdrant_port)
     vg.connect_qdrant()
     vg.load_embedding_models()
     vg.create_qdrant_collection(collection_name=collection_name)
-    vg.process_chunks(collection_name=collection_name, batch_size=batch_size)
+    vg.process_chunks(chunks=chunks, collection_name=collection_name, batch_size=batch_size)
 
 
 if __name__ == "__main__":
-    postgres_config = {
-        "host": os.getenv("POSTGRES_HOST", "localhost"),
-        "port": int(os.getenv("POSTGRES_PORT", "5433")),
-        "database": os.getenv("POSTGRES_DB", "research_papers"),
-        "user": os.getenv("POSTGRES_USER", "postgres"),
-        "password": os.getenv("POSTGRES_PASSWORD", "password"),
-    }
+    WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
+    
     run(
-        postgres_config=postgres_config,
+        chunked_text_dir=WORKSPACE_ROOT / "OUTPUT" / "Chunked_text",
         qdrant_host=os.getenv("QDRANT_HOST", "localhost"),
         qdrant_port=int(os.getenv("QDRANT_PORT", "6333")),
         collection_name=os.getenv("QDRANT_COLLECTION", "research_papers"),

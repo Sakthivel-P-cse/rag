@@ -89,7 +89,6 @@ def main() -> None:
     from Extractor import convert_into_text
     from Extractor import convert_into_json
     from Extractor import chunking
-    from Extractor import load_to_postgres
     from Extractor import generate_vectors
 
     grobid_server = os.getenv("GROBID_SERVER", "http://localhost:8070")
@@ -99,13 +98,6 @@ def main() -> None:
     move_processed_papers = _env_bool("MOVE_PROCESSED_PAPERS", True)
     clean_output = _env_bool("CLEAN_OUTPUT", False)
 
-    postgres_config = {
-        "host": os.getenv("POSTGRES_HOST", "localhost"),
-        "port": int(os.getenv("POSTGRES_PORT", "5433")),
-        "database": os.getenv("POSTGRES_DB", "research_papers"),
-        "user": os.getenv("POSTGRES_USER", "postgres"),
-        "password": os.getenv("POSTGRES_PASSWORD", "password"),
-    }
     qdrant_host = os.getenv("QDRANT_HOST", "localhost")
     qdrant_port = int(os.getenv("QDRANT_PORT", "6333"))
     qdrant_collection = os.getenv("QDRANT_COLLECTION", "research_papers")
@@ -138,20 +130,10 @@ def main() -> None:
     chunking.run(workspace_root=workspace_root)
 
     print("\n" + "=" * 80)
-    print("STEP 6: Load chunks + paper metadata into PostgreSQL")
-    print("=" * 80)
-    load_to_postgres.run(
-        postgres_config=postgres_config,
-        chunked_text_dir=workspace_root / "OUTPUT" / "Chunked_text",
-        reference_dir=workspace_root / "OUTPUT" / "text" / "reference",
-        build_citation_graph=build_citation_graph,
-    )
-
-    print("\n" + "=" * 80)
-    print("STEP 7: Generate vectors + load to Qdrant")
+    print("STEP 6: Generate vectors + load to Qdrant")
     print("=" * 80)
     generate_vectors.run(
-        postgres_config=postgres_config,
+        chunked_text_dir=workspace_root / "OUTPUT" / "Chunked_text",
         qdrant_host=qdrant_host,
         qdrant_port=qdrant_port,
         collection_name=qdrant_collection,

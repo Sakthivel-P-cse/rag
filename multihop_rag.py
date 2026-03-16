@@ -35,6 +35,13 @@ Configuration
 
 from __future__ import annotations
 
+# Load .env file if present (python-dotenv)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # rely on actual env vars if dotenv not installed
+
 import argparse
 import json
 import os
@@ -160,14 +167,6 @@ LLM_API_KEY_DEFAULT = os.getenv("OPENROUTER_API_KEY") or os.getenv("LLM_API_KEY"
 LLM_MODEL_DEFAULT = "meta-llama/Llama-3.3-70B-Instruct"
 LLM_MODEL_FAST_DEFAULT = "meta-llama/llama-3.1-8b-instruct"
 LLM_TIMEOUT_DEFAULT_S = 60
-
-POSTGRES_CONFIG_DEFAULT: Dict[str, Any] = {
-	"host": "localhost",
-	"port": 5433,
-	"database": "research_papers",
-	"user": "postgres",
-	"password": "password",
-}
 
 QDRANT_CONFIG_DEFAULT: Dict[str, Any] = {
 	"host": "localhost",
@@ -1301,10 +1300,11 @@ def _coerce_solution_text(value: Any) -> str:
 
 
 class DualRetriever:
-	"""Dual-encoder retriever: small (vector_1) + big (vector_2) in parallel."""
+	"""Dual-encoder retriever: small (vector_1) + big (vector_2) in parallel with GraphRAG."""
 
-	def __init__(self, db: DatabaseManager, collection_name: str = "research_papers"):
+	def __init__(self, db: DatabaseManager, citation_db=None, collection_name: str = "research_papers"):
 		self.db = db
+		self.citation_db = citation_db
 		self.collection_name = collection_name
 
 		if not _SENTENCE_TRANSFORMERS_AVAILABLE:
@@ -1313,8 +1313,10 @@ class DualRetriever:
 				"Install with: pip install sentence-transformers"
 			)
 
-		self.model_small = SentenceTransformer("all-MiniLM-L6-v2")
+		self.model_small = SentenceTransformer("BAAI/bge-small-en-v1.5")
 		self.model_big = SentenceTransformer("all-mpnet-base-v2")
+		from sentence_transformers import CrossEncoder
+		self.model_cross = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
 
 	def retrieve_channel(
 		self,
@@ -1418,39 +1420,48 @@ class DualRetriever:
 		small_scores = {c.chunk_id: float(c.score_small or c.combined_score or 0.0) for c in stage1}
 		allowed_ids = list(small_scores.keys())
 
-		# Stage 2: rerank within Stage-1 candidates using big encoder + Qdrant filter.
-		vec_big = self.model_big.encode(q, convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
-		try:
-			from qdrant_client.models import Filter, FieldCondition, MatchAny
-			flt = Filter(must=[FieldCondition(key="chunk_id", match=MatchAny(any=allowed_ids))])
-			res = self.db.qdrant_client.query_points(
-				collection_name=self.collection_name,
-				query=vec_big.tolist(),
-				using="vector_2",
-				limit=min(stage2_k, len(allowed_ids)),
-				query_filter=flt,
-			)
-			hits = getattr(res, "points", []) or []
-		except TypeError:
-			# Older qdrant-client versions use 'filter' instead of 'query_filter'.
-			from qdrant_client.models import Filter, FieldCondition, MatchAny
-			flt = Filter(must=[FieldCondition(key="chunk_id", match=MatchAny(any=allowed_ids))])
-			res = self.db.qdrant_client.query_points(
-				collection_name=self.collection_name,
-				query=vec_big.tolist(),
-				using="vector_2",
-				limit=min(stage2_k, len(allowed_ids)),
-				filter=flt,
-			)
-			hits = getattr(res, "points", []) or []
+		# Stage 2: rerank within Stage-1 candidates using CrossEncoder.
+		stage1_rows = []
+		for cid in allowed_ids:
+			row = self.db.get_chunk_by_id(cid)
+			if row:
+				stage1_rows.append(row)
+		
+		if not stage1_rows:
+			return []
+
+		cross_inputs = [[q, row.get("chunk_text", "")] for row in stage1_rows]
+		cross_scores = self.model_cross.predict(cross_inputs)
+		
+		# GraphRAG edge extraction
+		cited_papers = set()
+		if self.citation_db:
+			# Find the top papers from stage 1 to fetch their citations
+			top_stage1_papers = set()
+			stage1_sorted = sorted(stage1, key=lambda c: float(c.score_small or c.combined_score or 0.0), reverse=True)
+			for c in stage1_sorted[:5]:
+				row = self.db.get_chunk_by_id(c.chunk_id)
+				if row and row.get("paper_id"):
+					top_stage1_papers.add(str(row["paper_id"]))
+			
+			for pid in top_stage1_papers:
+				try:
+					edges = self.citation_db.get_edges_for_paper(pid)
+					for edge in edges:
+						cited_papers.add(edge.get("cited_paper_id"))
+				except Exception:
+					pass
 
 		out: List[ChunkCandidate] = []
-		for pt in hits:
-			payload = getattr(pt, "payload", None) or {}
-			cid = str(payload.get("chunk_id") or "").strip()
-			if not cid:
-				continue
-			b = float(getattr(pt, "score", 0.0) or 0.0)
+		for row, s2 in zip(stage1_rows, cross_scores):
+			cid = str(row["chunk_id"])
+			b = float(s2)
+			
+			# GraphRAG Scoring Boost: If the chunk belongs to a cited paper, boost its score.
+			pid = str(row.get("paper_id") or "")
+			if pid and pid in cited_papers:
+				b += 2.0  # Logit boost for being cited by a top paper
+			
 			s = float(small_scores.get(cid, 0.0))
 			out.append(ChunkCandidate(chunk_id=cid, score_small=s, score_big=b, combined_score=b))
 		out.sort(key=lambda c: c.score_big, reverse=True)
@@ -1651,8 +1662,6 @@ def _env_int(name: str, default: int) -> int:
 		return default
 
 
-def _postgres_config() -> Dict[str, Any]:
-	return dict(POSTGRES_CONFIG_DEFAULT)
 
 
 def _paper_id_from_chunk_id(chunk_id: str) -> str:
@@ -2054,29 +2063,19 @@ def _natural_sort_key(text: str) -> List[Any]:
 
 
 def _safe_get_paper_meta(db: DatabaseManager, paper_id: str) -> Dict[str, Any]:
-	"""Best-effort paper metadata lookup.
-
-	Falls back to just paper_id if the papers table is missing/unavailable.
-	"""
+	"""Best-effort paper metadata lookup using first chunk in Qdrant."""
 	pid = str(paper_id)
 	try:
-		cur = db.pg_conn.cursor()
-		cur.execute(
-			"""SELECT paper_id, title, year, source, total_chunks
-			   FROM papers WHERE paper_id = %s""",
-			(pid,),
-		)
-		row = cur.fetchone()
-		cur.close()
-		if not row:
-			return {"paper_id": pid}
-		return {
-			"paper_id": row[0],
-			"title": row[1],
-			"year": row[2],
-			"source": row[3],
-			"total_chunks": row[4],
-		}
+		chunks = db.get_chunks_by_paper(pid)
+		if chunks:
+			return {
+				"paper_id": pid,
+				"title": "",
+				"year": chunks[0].get("year"),
+				"source": "",
+				"total_chunks": len(chunks),
+			}
+		return {"paper_id": pid}
 	except Exception:
 		return {"paper_id": pid}
 
@@ -2197,20 +2196,54 @@ def run(
 	graph_store = ContextGraphStore(out_dir)
 
 	# DB connections
-	pg = _postgres_config()
 	q_host = str(QDRANT_CONFIG_DEFAULT.get("host", "localhost"))
 	q_port = int(QDRANT_CONFIG_DEFAULT.get("port", 6333))
 	collection = str(QDRANT_CONFIG_DEFAULT.get("collection", "research_papers"))
 
-	db = DatabaseManager(pg, qdrant_host=q_host, qdrant_port=q_port, collection_name=collection)
-	db.connect_postgres()
+	db = DatabaseManager(qdrant_host=q_host, qdrant_port=q_port, collection_name=collection)
 	db.connect_qdrant()
 
-	citation_db = CitationGraphManager(pg, use_bm25=True)
+	citation_db = CitationGraphManager()
 	citation_db.connect()
 
-	retriever = DualRetriever(db, collection_name=collection)
+	retriever = DualRetriever(db, citation_db=citation_db, collection_name=collection)
 	global_claims = GlobalClaimStore()
+
+	global_claims = GlobalClaimStore()
+
+	# SEMANTIC CACHE: Check for similar queries
+	cache_db_path = out_dir / "semantic_cache.sqlite"
+	import sqlite3
+	try:
+		with sqlite3.connect(cache_db_path) as conn:
+			conn.execute('''CREATE TABLE IF NOT EXISTS semantic_cache (
+								id INTEGER PRIMARY KEY AUTOINCREMENT,
+								question TEXT UNIQUE,
+								embedding BLOB,
+								final_solution TEXT
+							)''')
+			cursor = conn.cursor()
+			cursor.execute("SELECT question, embedding, final_solution FROM semantic_cache")
+			cached_rows = cursor.fetchall()
+
+			if cached_rows:
+				# Embed the incoming user problem to compare
+				prob_vec = retriever.model_small.encode(str(problem), convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
+
+				for cached_q, blob, cached_solution in cached_rows:
+					try:
+						cached_vec = np.frombuffer(blob, dtype=np.float32)
+						# Compute Cosine Similarity
+						sim = np.dot(prob_vec, cached_vec) / (np.linalg.norm(prob_vec) * np.linalg.norm(cached_vec))
+						if sim > 0.95:
+							print(f"\n[SEMANTIC CACHE HIT] Found similar query (>0.95 similarity): '{cached_q}'")
+							print("Returning cached final solution immediately.")
+							print("\n" + str(cached_solution).strip())
+							return
+					except Exception:
+						continue
+	except Exception as e:
+		print(f"[CACHE ERROR] Ignored: {e}")
 
 	# MODULE 1 — QUESTION REFINER
 	refiner_prompt = PROMPT_REFINER.replace("{{USER_PROBLEM}}", str(problem))
@@ -3364,7 +3397,11 @@ def run(
 	# 3) citations used
 	# 4) papers used
 	# 5) rest of previous format
+	import re
 	outcome = str(synth.get("hidden_solution", ""))
+	outcome = re.sub(r'\[.*?\]|\(.*?(chunk|claim).*?\)|\[SP\d+.*?\]|\(SP\d+.*?\)', '', outcome)
+	outcome = re.sub(r'\s+', ' ', outcome).strip()
+
 	final_report: Dict[str, Any] = {
 		"subproblem_results": results,
 		"outcome": outcome,
@@ -3375,7 +3412,7 @@ def run(
 		"final_confidence": synth.get("final_confidence"),
 	}
 
-	print(json.dumps(final_report, ensure_ascii=False, indent=2))
+	print(outcome)
 
 	# Persist final
 	final_conf = float(final_report.get("final_confidence") or 0.0)
@@ -3389,6 +3426,18 @@ def run(
 		},
 		status=final_status,
 	)
+
+	# Update Semantic Cache with final solution
+	try:
+		prob_vec = retriever.model_small.encode(str(problem), convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
+		with sqlite3.connect(cache_db_path) as conn:
+			conn.execute(
+				"INSERT OR REPLACE INTO semantic_cache (question, embedding, final_solution) VALUES (?, ?, ?)",
+				(str(problem), prob_vec.tobytes(), str(outcome))
+			)
+			conn.commit()
+	except Exception as e:
+		print(f"[CACHE UPDATE ERROR] Ignored: {e}")
 
 
 def main():

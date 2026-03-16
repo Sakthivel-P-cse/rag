@@ -1,3 +1,10 @@
+# Load environment variables from .env file (if present)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed; rely on actual env vars
+
 LLM_URL = "https://openrouter.ai/api/v1"
 LLM_MODEL_DEFAULT = "meta-llama/Llama-3.3-70B-Instruct"
 # LLM_MODEL_FAST_DEFAULT = "meta-llama/llama-3.1-8b-instruct"
@@ -36,10 +43,8 @@ LLM_SYSTEM_PROMPT_EVIDENCE_ONLY = (
     "Output must follow the requested JSON schema exactly."
 )
 
-# API Key
-# HARDCODED API KEY (avoid committing secrets; prefer env vars)
-# IMPORTANT: keep this empty in source control.
-LLM_API_KEY_HARDCODED = "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"
+# API Key — loaded from .env via OPENROUTER_API_KEY (see .env file)
+LLM_API_KEY_HARDCODED = None  # kept for backwards compat; .env is preferred
 
 # Fallback to environment variables if hardcoded key is empty
 import os
@@ -163,6 +168,53 @@ def call_llm(
     result = json.loads(raw)
     # Extract the output text from the response
     return result["choices"][0]["message"]["content"]
+
+import aiohttp
+import asyncio
+
+async def async_call_llm(
+    prompt,
+    model=LLM_MODEL_DEFAULT,
+    api_key=LLM_API_KEY_DEFAULT,
+    base_url=LLM_URL,
+    timeout=LLM_TIMEOUT_DEFAULT_S,
+    *,
+    system_prompt: str = LLM_SYSTEM_PROMPT_EVIDENCE_ONLY,
+    temperature: float = 0.0,
+):
+    """(Async) Send a prompt to the LLM API and return the model's output."""
+    if not str(api_key or "").strip():
+        raise RuntimeError(
+            "Missing API key. Set OPENROUTER_API_KEY (or LLM_API_KEY) in your environment."
+        )
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+    sys = str(system_prompt or "").strip()
+    messages = []
+    if sys:
+        messages.append({"role": "system", "content": sys})
+    messages.append({"role": "user", "content": prompt})
+
+    payload = {
+        "model": model,
+        "messages": messages,
+        "temperature": float(temperature),
+    }
+    url = (base_url.rstrip("/") + "/chat/completions")
+    
+    timeout_client = aiohttp.ClientTimeout(total=float(timeout))
+    async with aiohttp.ClientSession(timeout=timeout_client) as session:
+        try:
+            async with session.post(url, headers=headers, json=payload) as resp:
+                if resp.status != 200:
+                    body = await resp.text()
+                    raise RuntimeError(f"LLM HTTPError {resp.status}: {body[:2000]}")
+                result = await resp.json()
+                return result["choices"][0]["message"]["content"]
+        except Exception as e:
+            raise RuntimeError(f"LLM request failed: {e}") from e
 
 # print(query_llm("Hello, how are you?"))
 
@@ -304,7 +356,6 @@ def retrieve_chunks_for_question(
     top_n: int = 10,
     stage1_k: int = 100,
     stage2_k: int = 20,
-    postgres_config: dict | None = None,
     qdrant_host: str = "localhost",
     qdrant_port: int = 6333,
     collection_name: str = "research_papers",
@@ -337,7 +388,6 @@ def retrieve_chunks_for_question(
         top_n=top_n,
         stage1_k=stage1_k,
         stage2_k=stage2_k,
-        postgres_config=postgres_config,
         qdrant_host=qdrant_host,
         qdrant_port=qdrant_port,
         collection_name=collection_name,
@@ -352,7 +402,6 @@ def retrieve_top_chunks(
     stage2_k: int = 20,
     exclude_paper_ids: set[str] | None = None,
     exclude_chunk_ids: set[str] | None = None,
-    postgres_config: dict | None = None,
     qdrant_host: str = "localhost",
     qdrant_port: int = 6333,
     collection_name: str = "research_papers",
@@ -392,16 +441,6 @@ def retrieve_top_chunks(
     if stage1_k < stage2_k:
         stage1_k = stage2_k
 
-    if postgres_config is None:
-        # Prefer env vars if present; otherwise default to port 5433 (Docker mapped port).
-        postgres_config = {
-            "host": os.getenv("PGHOST") or "localhost",
-            "port": int(os.getenv("PGPORT") or 5433),
-            "database": os.getenv("PGDATABASE") or "research_papers",
-            "user": os.getenv("PGUSER") or "postgres",
-            "password": os.getenv("PGPASSWORD") or "password",
-        }
-
     from Extractor.database import DatabaseManager
     import numpy as np
 
@@ -410,38 +449,11 @@ def retrieve_top_chunks(
     except Exception as e:
         raise ImportError("sentence-transformers is required. Install with: pip install sentence-transformers") from e
 
-    # Connect DBs (with a small port fallback for Postgres).
-    port0 = int(postgres_config.get("port") or 5433)
-    tried_ports: list[int] = []
-    last_pg_err: Exception | None = None
-
-    for p in [port0, 5433, 5432]:
-        if p in tried_ports:
-            continue
-        tried_ports.append(p)
-        cfg = dict(postgres_config)
-        cfg["port"] = int(p)
-        db = DatabaseManager(
-            postgres_config=cfg,
-            qdrant_host=qdrant_host,
-            qdrant_port=qdrant_port,
-            collection_name=collection_name,
-        )
-        try:
-            db.connect_postgres()
-            last_pg_err = None
-            break
-        except Exception as e:
-            last_pg_err = e
-            continue
-
-    if last_pg_err is not None:
-        raise RuntimeError(
-            "PostgreSQL connection failed. Tried ports: "
-            + ", ".join(str(x) for x in tried_ports)
-            + ". Ensure Postgres is running and PGHOST/PGPORT are correct."
-        ) from last_pg_err
-
+    db = DatabaseManager(
+        qdrant_host=qdrant_host,
+        qdrant_port=qdrant_port,
+        collection_name=collection_name,
+    )
     try:
         db.connect_qdrant()
     except Exception as e:
@@ -450,8 +462,10 @@ def retrieve_top_chunks(
             "Ensure Qdrant is running and QDRANT_HOST/QDRANT_PORT are correct."
         ) from e
 
-    model_small = SentenceTransformer("all-MiniLM-L6-v2")
+    model_small = SentenceTransformer("BAAI/bge-small-en-v1.5")
     model_big = SentenceTransformer("all-mpnet-base-v2")
+    from sentence_transformers import CrossEncoder
+    model_cross = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
 
     excluded_papers = exclude_paper_ids or set()
     excluded_chunks = exclude_chunk_ids or set()
@@ -502,62 +516,38 @@ def retrieve_top_chunks(
         _run_log("[retrieve] Stage1 produced no chunk_ids")
         return []
 
-    # Stage 2: rerank within stage-1 IDs using vector_2 (with filter)
-    vec_big = model_big.encode(q, convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
-    must_not: list[FieldCondition] = []
-    if excluded_chunks:
-        must_not.append(FieldCondition(key="chunk_id", match=MatchAny(any=sorted(list(excluded_chunks)))))
-    if excluded_papers:
-        must_not.append(FieldCondition(key="paper_id", match=MatchAny(any=sorted(list(excluded_papers)))))
-    flt = Filter(
-        must=[FieldCondition(key="chunk_id", match=MatchAny(any=stage1_ids))],
-        must_not=(must_not or None),
-    )
-
-    try:
-        res2 = db.qdrant_client.query_points(
-            collection_name=collection_name,
-            query=vec_big.tolist(),
-            using="vector_2",
-            limit=min(stage2_k, len(stage1_ids)),
-            query_filter=flt,
-        )
-    except TypeError:
-        # Older qdrant-client uses 'filter' instead of 'query_filter'
-        res2 = db.qdrant_client.query_points(
-            collection_name=collection_name,
-            query=vec_big.tolist(),
-            using="vector_2",
-            limit=min(stage2_k, len(stage1_ids)),
-            filter=flt,
-        )
-
-    stage2_points = getattr(res2, "points", []) or []
-    _run_log(f"[retrieve] Stage2 returned {len(stage2_points)} points")
-    results = []
-
-    for pt in stage2_points:
-        payload = getattr(pt, "payload", None) or {}
-        cid = str(payload.get("chunk_id") or "").strip()
-        if not cid:
-            continue
-        if cid in excluded_chunks:
+    # Stage 2: rerank within stage-1 IDs using cross-encoder
+    stage1_rows = []
+    for cid in stage1_ids:
+        if excluded_chunks and cid in excluded_chunks:
             continue
         row = db.get_chunk_by_id(cid)
         if not row:
             continue
         pid = str(row.get("paper_id") or "").strip()
-        if pid and pid in excluded_papers:
+        if excluded_papers and (pid in excluded_papers):
             continue
-        s2 = float(getattr(pt, "score", 0.0) or 0.0)
-        row = dict(row)
-        row["score_stage1"] = float(score_stage1.get(cid, 0.0))
-        row["score_stage2"] = s2
-        row["score"] = s2
-        results.append(row)
+        stage1_rows.append(row)
+
+    if not stage1_rows:
+        return []
+
+    cross_inputs = [[q, row.get("chunk_text", "")] for row in stage1_rows]
+    cross_scores = model_cross.predict(cross_inputs)
+    
+    results = []
+    for row, s2 in zip(stage1_rows, cross_scores):
+        cid = row["chunk_id"]
+        row_dict = dict(row)
+        row_dict["score_stage1"] = float(score_stage1.get(cid, 0.0))
+        row_dict["score_stage2"] = float(s2)
+        row_dict["score"] = float(s2)
+        results.append(row_dict)
 
         if len(results) >= int(top_n):
-            break
+            # Wait, cross-encoder scores them all. We don't want to break early because they haven't been sorted!
+            # We sort them first, then return top_n.
+            pass
 
     results.sort(key=lambda r: float(r.get("score", 0.0) or 0.0), reverse=True)
     _run_log(f"[retrieve] Returning {len(results[:top_n])} chunks")
@@ -620,7 +610,6 @@ def judge_iterative(
     exclude_already_accepted_papers: bool = True,
     stop_when_satisfied: bool = True,
     min_accepted_chunks_to_stop: int = 1,
-    postgres_config: dict | None = None,
     qdrant_host: str = "localhost",
     qdrant_port: int = 6333,
     collection_name: str = "research_papers",
@@ -775,7 +764,6 @@ def judge_iterative(
             stage2_k=max(20, int(top_k_candidates) * 5),
             exclude_paper_ids=exclude_papers,
             exclude_chunk_ids=exclude_chunks,
-            postgres_config=postgres_config,
             qdrant_host=qdrant_host,
             qdrant_port=qdrant_port,
             collection_name=collection_name,
@@ -1233,7 +1221,6 @@ def multihop_retrieve_subproblem_chunks(
     exclude_paper_ids: set[str] | None = None,
     exclude_chunk_ids: set[str] | None = None,
     per_subproblem_top_n: int = 3,
-    postgres_config: dict | None = None,
     qdrant_host: str = "localhost",
     qdrant_port: int = 6333,
     collection_name: str = "research_papers",
@@ -1257,7 +1244,6 @@ def multihop_retrieve_subproblem_chunks(
             stage2_k=max(30, int(per_subproblem_top_n) * 10),
             exclude_paper_ids=set(ex_papers),
             exclude_chunk_ids=set(ex_chunks),
-            postgres_config=postgres_config,
             qdrant_host=qdrant_host,
             qdrant_port=qdrant_port,
             collection_name=collection_name,
@@ -1425,28 +1411,16 @@ def answer_subproblems(
     subproblem_chunks: dict[str, list[dict]],
     max_chunk_chars: int = 1800,
 ) -> dict[str, dict]:
-    """Answer each subproblem using ONLY its retrieved chunks.
+    """Answer each subproblem using ONLY its retrieved chunks concurrently.
 
     Returns dict keyed by subproblem id -> answer JSON.
     """
-    answers: dict[str, dict] = {}
-
-    def _pack_chunk(c: dict) -> dict:
-        return {
-            "paper_id": c.get("paper_id"),
-            "chunk_id": c.get("chunk_id"),
-            "section": c.get("section"),
-            "year": c.get("year"),
-            "text": _truncate_text(str(c.get("chunk_text") or "").strip(), int(max_chunk_chars)),
-        }
-
-    for sp in subproblems or []:
-        if not isinstance(sp, dict):
-            continue
+    
+    async def _process_subproblem(sp: dict) -> tuple[str, dict]:
         sid = str(sp.get("id") or "").strip()
         question = str(sp.get("question") or "").strip()
         if not sid or not question:
-            continue
+            return sid, {}
 
         chunks = subproblem_chunks.get(sid) or []
         packed = [_pack_chunk(c) for c in chunks]
@@ -1486,10 +1460,15 @@ OUTPUT SCHEMA:
   "sufficient": <boolean>
 }}
 """
-
         _run_log(f"[multihop] Answering subproblem {sid} (evidence chunks={len(packed)})")
-        out = call_llm(prompt)
-        obj = _parse_json_from_llm(out)
+        try:
+            out = await async_call_llm(prompt)
+            obj = _parse_json_from_llm(out)
+        except Exception as e:
+            _run_log(f"[multihop] Error subproblem {sid}: {e}")
+            out = ""
+            obj = None
+
         if not isinstance(obj, dict):
             obj = {
                 "subproblem_id": sid,
@@ -1502,9 +1481,27 @@ OUTPUT SCHEMA:
                 "used_paper_ids": [],
                 "sufficient": False,
             }
-        answers[sid] = obj
         _run_log(f"[multihop] Subproblem {sid} answered (valid_json={isinstance(obj, dict)})")
-    return answers
+        return sid, obj
+
+    def _pack_chunk(c: dict) -> dict:
+        return {
+            "paper_id": c.get("paper_id"),
+            "chunk_id": c.get("chunk_id"),
+            "section": c.get("section"),
+            "year": c.get("year"),
+            "text": _truncate_text(str(c.get("chunk_text") or "").strip(), int(max_chunk_chars)),
+        }
+
+    async def _run_all():
+        tasks = []
+        for sp in subproblems or []:
+            if isinstance(sp, dict):
+                tasks.append(_process_subproblem(sp))
+        results = await asyncio.gather(*tasks)
+        return {sid: obj for sid, obj in results if sid}
+
+    return asyncio.run(_run_all())
 
 
 
@@ -1622,7 +1619,11 @@ if __name__ == "__main__":
         print(f"\n[run] Saved final solution bundle to: {saved_solution}")
         print("\nFINAL ANSWER:")
         paras = solution.get("final_answer_paragraphs")
+        import re
         if isinstance(paras, list) and paras:
+            paras = [re.sub(r'\[.*?\]|\(.*?(chunk|claim).*?\)', '', str(p)) for p in paras]
             print("\n\n".join(str(p) for p in paras if str(p).strip()))
         else:
-            print(solution.get("final_answer") or "")
+            ans = str(solution.get("final_answer") or "")
+            ans = re.sub(r'\[.*?\]|\(.*?(chunk|claim).*?\)', '', ans)
+            print(ans)
