@@ -2,6 +2,8 @@ import os
 import shutil
 from pathlib import Path
 
+from rag_utils.metrics import configure_metrics_logger, stage_timer
+
 
 def _env_bool(name: str, default: bool) -> bool:
     v = os.getenv(name)
@@ -66,7 +68,7 @@ def _cleanup_output_dirs(*, workspace_root: Path) -> None:
     if not output_root.exists():
         return
 
-    # These are intermediate artifacts; DB + Qdrant become the source of truth.
+    # These are intermediate artifacts; FAISS + metadata become the source of truth.
     # Keep OUTPUT/ itself (and any future logs) but remove heavy intermediates.
     to_remove = [
         output_root / "tei",
@@ -84,6 +86,9 @@ def _cleanup_output_dirs(*, workspace_root: Path) -> None:
 def main() -> None:
     workspace_root = Path(__file__).resolve().parent
 
+    # Configure structured metrics logging once for the ingestion pipeline
+    configure_metrics_logger()
+
     from Extractor import TextExtraction
     from Extractor import SeparateContentReferences
     from Extractor import convert_into_text
@@ -98,47 +103,52 @@ def main() -> None:
     move_processed_papers = _env_bool("MOVE_PROCESSED_PAPERS", True)
     clean_output = _env_bool("CLEAN_OUTPUT", False)
 
-    qdrant_host = os.getenv("QDRANT_HOST", "localhost")
-    qdrant_port = int(os.getenv("QDRANT_PORT", "6333"))
-    qdrant_collection = os.getenv("QDRANT_COLLECTION", "research_papers")
+    faiss_index_dir = Path(os.getenv("FAISS_INDEX_DIR", str(workspace_root / "faiss_store")))
+    faiss_collection = os.getenv("FAISS_COLLECTION", "research_papers")
     vector_batch_size = int(os.getenv("VECTOR_BATCH_SIZE", "10"))
     build_citation_graph = _env_bool("BUILD_CITATION_GRAPH", True)
 
     print("=" * 80)
     print("STEP 1: GROBID TEI + raw text extraction")
     print("=" * 80)
-    TextExtraction.run(workspace_root=workspace_root, grobid_server=grobid_server, input_dir=papers_dir)
+    with stage_timer("doc_loading", extra={"step": "tei_extraction"}):
+        TextExtraction.run(workspace_root=workspace_root, grobid_server=grobid_server, input_dir=papers_dir)
 
     print("\n" + "=" * 80)
     print("STEP 2: Split TEI into main vs references")
     print("=" * 80)
-    SeparateContentReferences.run(workspace_root=workspace_root)
+    with stage_timer("doc_loading", extra={"step": "tei_split"}):
+        SeparateContentReferences.run(workspace_root=workspace_root)
 
     print("\n" + "=" * 80)
     print("STEP 3: Convert main TEI -> text")
     print("=" * 80)
-    convert_into_text.run(workspace_root=workspace_root)
+    with stage_timer("doc_loading", extra={"step": "tei_to_text"}):
+        convert_into_text.run(workspace_root=workspace_root)
 
     print("\n" + "=" * 80)
     print("STEP 4: Convert references TEI -> JSON")
     print("=" * 80)
-    convert_into_json.run(workspace_root=workspace_root)
+    with stage_timer("doc_loading", extra={"step": "tei_refs_to_json"}):
+        convert_into_json.run(workspace_root=workspace_root)
 
     print("\n" + "=" * 80)
     print("STEP 5: Chunk main text -> chunk JSON")
     print("=" * 80)
-    chunking.run(workspace_root=workspace_root)
+    # chunking.run will emit its own detailed metrics; keep a coarse timer here too.
+    with stage_timer("chunking_total"):
+        chunking.run(workspace_root=workspace_root)
 
     print("\n" + "=" * 80)
-    print("STEP 6: Generate vectors + load to Qdrant")
+    print("STEP 6: Generate vectors + load to FAISS")
     print("=" * 80)
-    generate_vectors.run(
-        chunked_text_dir=workspace_root / "OUTPUT" / "Chunked_text",
-        qdrant_host=qdrant_host,
-        qdrant_port=qdrant_port,
-        collection_name=qdrant_collection,
-        batch_size=vector_batch_size,
-    )
+    with stage_timer("embedding_and_indexing", extra={"batch_size": vector_batch_size}):
+        generate_vectors.run(
+            chunked_text_dir=workspace_root / "OUTPUT" / "Chunked_text",
+            faiss_index_dir=faiss_index_dir,
+            collection_name=faiss_collection,
+            batch_size=vector_batch_size,
+        )
 
     if move_processed_papers:
         print("\n" + "=" * 80)

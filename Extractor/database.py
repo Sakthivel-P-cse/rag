@@ -1,107 +1,167 @@
 """
 Database Setup for Research Paper Chunking System
-- PostgreSQL: Stores chunked texts and metadata
-- Qdrant: Stores vector representations (2 vectors per chunk in FP32)
-- Common key: chunk_id links both databases
+- FAISS: Stores dual-vector representations (2 vectors per chunk in FP32)
+- Common key: chunk_id links vectors to metadata
 """
 
+from __future__ import annotations
+
+import json
 import os
-from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, VectorParams, PointStruct
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+import faiss
 import numpy as np
-from typing import List, Dict, Any, Optional
-import uuid
-from datetime import datetime
+
+from rag_utils.metrics import stage_timer
 
 
-def chunk_id_to_uuid(chunk_id: str) -> str:
-    """Convert chunk_id string to a valid UUID for Qdrant."""
-    # Generate a deterministic UUID from the chunk_id string
-    return str(uuid.uuid5(uuid.NAMESPACE_DNS, chunk_id))
+def _normalize(vec: np.ndarray, dim: int) -> np.ndarray:
+    """L2-normalize a vector for cosine similarity via inner product."""
+    arr = np.asarray(vec, dtype=np.float32).reshape(-1)
+    if arr.size != dim:
+        raise ValueError(f"Vector has dim {arr.size}, expected {dim}")
+    norm = float(np.linalg.norm(arr))
+    if norm > 0:
+        arr = arr / norm
+    return arr
 
 
 class DatabaseManager:
-    """Manages PostgreSQL and Qdrant databases for chunked text storage."""
-    
+    """Manages FAISS indexes and metadata for chunked text storage."""
+
     def __init__(
         self,
-        qdrant_host: str = "localhost",
-        qdrant_port: int = 6333,
-        collection_name: str = "research_papers"
+        *,
+        index_dir: str | Path | None = None,
+        collection_name: str = "research_papers",
+        vector_size_1: int = 384,
+        vector_size_2: int = 768,
     ):
-        """
-        Initialize database connections.
-        
-        Args:
-            qdrant_host: Qdrant server host
-            qdrant_port: Qdrant server port
-            collection_name: Name for Qdrant collection
-        """
-        self.qdrant_host = qdrant_host
-        self.qdrant_port = qdrant_port
         self.collection_name = collection_name
-        
-        # Initialize connections
-        self.qdrant_client = None
-        
+        self.index_dir = Path(index_dir or os.getenv("FAISS_INDEX_DIR") or (Path(__file__).resolve().parents[1] / "faiss_store"))
+        self.index_dir = self.index_dir.expanduser().resolve()
+        self.vector_size_1 = int(vector_size_1)
+        self.vector_size_2 = int(vector_size_2)
+
+        # Index type can be configured via env var, default to flat for
+        # correctness. Supported: "flat", "ivf", "hnsw".
+        self.index_type = (os.getenv("FAISS_INDEX_TYPE") or "flat").lower()
+
+        self.indexes: dict[str, faiss.IndexIDMap] = {}
+        self.metadata: dict[str, dict[str, Any]] = {}
+        self.id_to_chunk: dict[int, str] = {}
+        self.chunk_to_id: dict[str, int] = {}
+        self.next_id: int = 0
+
+        self._meta_path = self.index_dir / "metadata.json"
+        self._index_paths = {
+            "vector_1": self.index_dir / "vector_1.index",
+            "vector_2": self.index_dir / "vector_2.index",
+        }
+
     def connect_postgres(self):
-        """Deprecated."""
-        pass
-    
+        """Deprecated stub kept for backward compatibility."""
+        return None
+
     def connect_qdrant(self):
-        """Establish Qdrant connection."""
-        try:
-            self.qdrant_client = QdrantClient(
-                host=self.qdrant_host,
-                port=self.qdrant_port
-            )
-            print(f"✓ Connected to Qdrant at {self.qdrant_host}:{self.qdrant_port}")
-        except Exception as e:
-            print(f"✗ Failed to connect to Qdrant: {e}")
-            raise
-    
+        """Alias kept for backward compatibility; initializes FAISS instead."""
+        return self.connect_faiss()
+
+    def connect_faiss(self):
+        """Load or initialize FAISS indexes and metadata."""
+        self.index_dir.mkdir(parents=True, exist_ok=True)
+        self._load_metadata()
+        self._load_or_init_index("vector_1", self.vector_size_1)
+        self._load_or_init_index("vector_2", self.vector_size_2)
+        print(f"✓ FAISS ready at {self.index_dir}")
+
     def setup_postgres_schema(self):
-        """Deprecated."""
-        pass
-    
-    def setup_qdrant_collection(self, vector_size_1: int = 768, vector_size_2: int = 1024):
+        """Deprecated stub kept for backward compatibility."""
+        return None
+
+    def setup_qdrant_collection(self, *_, **__):
+        """No-op; FAISS indexes are created on connect."""
+        return None
+
+    def _build_base_index(self, dim: int) -> faiss.Index:
+        """Create a FAISS index according to configured index_type.
+
+        Defaults to IndexFlatIP for exact search. IVF/HNSW are available for
+        larger collections when configured via FAISS_INDEX_TYPE.
         """
-        Create Qdrant collection with two vector fields.
-        
-        Args:
-            vector_size_1: Dimension of first vector (e.g., sentence-transformers)
-            vector_size_2: Dimension of second vector (e.g., custom embeddings)
-        """
+        if self.index_type == "ivf":
+            # Use a heuristic for nlist; can be tuned externally later.
+            nlist = int(os.getenv("FAISS_IVF_NLIST", "4096"))
+            quantizer = faiss.IndexFlatIP(dim)
+            index = faiss.IndexIVFFlat(quantizer, dim, nlist, faiss.METRIC_INNER_PRODUCT)
+            # IVF requires training before use; caller must ensure training
+            return index
+        if self.index_type == "hnsw":
+            m = int(os.getenv("FAISS_HNSW_M", "32"))
+            index = faiss.IndexHNSWFlat(dim, m)
+            return index
+        # Fallback: exact search
+        return faiss.IndexFlatIP(dim)
+
+    def _load_or_init_index(self, name: str, dim: int) -> None:
+        path = self._index_paths[name]
+        if path.exists():
+            idx = faiss.read_index(str(path))
+            if not isinstance(idx, faiss.IndexIDMap):
+                idx = faiss.IndexIDMap(idx)
+            self.indexes[name] = idx
+            return
+        base = self._build_base_index(dim)
+        self.indexes[name] = faiss.IndexIDMap(base)
+
+    def _load_metadata(self) -> None:
+        if not self._meta_path.exists():
+            self.metadata = {}
+            self.id_to_chunk = {}
+            self.chunk_to_id = {}
+            self.next_id = 0
+            return
         try:
-            # Check if collection exists
-            collections = self.qdrant_client.get_collections().collections
-            collection_names = [c.name for c in collections]
-            
-            if self.collection_name in collection_names:
-                print(f"⚠ Collection '{self.collection_name}' already exists")
-                return
-            
-            # Create collection with named vectors (FP32 by default in Qdrant)
-            self.qdrant_client.create_collection(
-                collection_name=self.collection_name,
-                vectors_config={
-                    "vector_1": VectorParams(
-                        size=vector_size_1,
-                        distance=Distance.COSINE
-                    ),
-                    "vector_2": VectorParams(
-                        size=vector_size_2,
-                        distance=Distance.COSINE
-                    )
-                }
-            )
-            print(f"✓ Qdrant collection '{self.collection_name}' created")
-            print(f"  - vector_1: {vector_size_1} dimensions (FP32, Cosine)")
-            print(f"  - vector_2: {vector_size_2} dimensions (FP32, Cosine)")
-        except Exception as e:
-            print(f"✗ Failed to create Qdrant collection: {e}")
-            raise
-    
+            with open(self._meta_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            self.metadata = data.get("chunks", {}) or {}
+
+            ids: list[int] = []
+            self.chunk_to_id = {}
+            self.id_to_chunk = {}
+            for cid, meta in self.metadata.items():
+                fid = int(meta.get("faiss_id", len(ids)))
+                self.chunk_to_id[cid] = fid
+                self.id_to_chunk[fid] = cid
+                ids.append(fid)
+
+            self.next_id = max(ids) + 1 if ids else 0
+        except Exception:
+            # Fall back to empty state on any parse error
+            self.metadata = {}
+            self.chunk_to_id = {}
+            self.id_to_chunk = {}
+            self.next_id = 0
+
+    def _persist(self) -> None:
+        self.index_dir.mkdir(parents=True, exist_ok=True)
+        payload = {"next_id": self.next_id, "chunks": self.metadata}
+        with open(self._meta_path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        for name, idx in self.indexes.items():
+            faiss.write_index(idx, str(self._index_paths[name]))
+
+    def _reserve_id(self, chunk_id: str) -> int:
+        if chunk_id in self.chunk_to_id:
+            return self.chunk_to_id[chunk_id]
+        fid = self.next_id
+        self.next_id += 1
+        self.chunk_to_id[chunk_id] = fid
+        self.id_to_chunk[fid] = chunk_id
+        return fid
+
     def insert_chunk(
         self,
         chunk_id: str,
@@ -118,233 +178,176 @@ class DatabaseManager:
         citations_out: Optional[List[str]] = None,
         keywords: Optional[List[str]] = None,
         prev_chunk_id: Optional[str] = None,
-        next_chunk_id: Optional[str] = None
-    ):
-        """
-        Insert chunk into both PostgreSQL and Qdrant.
-        
-        Args:
-            chunk_id: Unique identifier (common key)
-            paper_id: Paper identifier
-            chunk_text: The actual text content
-            vector_1: First vector representation (FP32 numpy array)
-            vector_2: Second vector representation (FP32 numpy array)
-            section: Section heading
-            paragraph_index: Index of starting paragraph
-            token_count: Number of tokens in chunk
-            overlap_tokens: Number of overlapping tokens
-            overlap_percent: Percentage of overlap
-            year: Publication year
-            citations_out: List of citation IDs
-            keywords: List of keywords
-            prev_chunk_id: ID of previous chunk
-            next_chunk_id: ID of next chunk
-        """
+        next_chunk_id: Optional[str] = None,
+    ) -> bool:
+        """Insert a single chunk into FAISS + metadata."""
         try:
-            # Insert into Qdrant
-            point = PointStruct(
-                id=chunk_id_to_uuid(chunk_id),  # Convert to UUID for Qdrant
-                vector={
-                    "vector_1": vector_1.astype(np.float32).tolist(),
-                    "vector_2": vector_2.astype(np.float32).tolist()
-                },
-                payload={
-                    "chunk_id": chunk_id,  # Store original chunk_id in payload
+            if chunk_id in self.metadata:
+                # Avoid duplicating entries in the index; keep first write.
+                return True
+            with stage_timer("faiss_insert_single", extra={"paper_id": paper_id}):
+                fid = self._reserve_id(chunk_id)
+                v1 = _normalize(vector_1, self.vector_size_1)
+                v2 = _normalize(vector_2, self.vector_size_2)
+
+                self.indexes["vector_1"].add_with_ids(np.expand_dims(v1, axis=0), np.array([fid], dtype=np.int64))
+                self.indexes["vector_2"].add_with_ids(np.expand_dims(v2, axis=0), np.array([fid], dtype=np.int64))
+
+                self.metadata[chunk_id] = {
+                    "faiss_id": int(fid),
+                    "chunk_id": chunk_id,
                     "paper_id": paper_id,
                     "section": section,
                     "paragraph_index": paragraph_index,
                     "chunk_text": chunk_text,
-                    "year": year
+                    "year": year,
+                    "prev_chunk_id": prev_chunk_id,
+                    "next_chunk_id": next_chunk_id,
+                    "token_count": token_count,
+                    "overlap_tokens": overlap_tokens,
+                    "overlap_percent": overlap_percent,
+                    "citations_out": citations_out or [],
+                    "keywords": keywords or [],
                 }
-            )
-            
-            self.qdrant_client.upsert(
-                collection_name=self.collection_name,
-                points=[point]
-            )
-            
             return True
         except Exception as e:
             print(f"✗ Failed to insert chunk {chunk_id}: {e}")
             return False
-    
-    def insert_chunks_batch(self, chunks_data: List[Dict[str, Any]]):
-        """Insert multiple chunks in batch into Qdrant."""
+
+    def insert_chunks_batch(self, chunks_data: List[Dict[str, Any]]) -> bool:
+        """Insert multiple chunks in batch into FAISS."""
+        if not chunks_data:
+            print("✓ No chunks to insert")
+            return True
         try:
-            qdrant_points = []
-
-            for chunk in chunks_data:
-                qdrant_points.append(
-                    PointStruct(
-                        id=chunk_id_to_uuid(chunk["chunk_id"]),
-                        vector={
-                            "vector_1": chunk["vector_1"].astype(np.float32).tolist(),
-                            "vector_2": chunk["vector_2"].astype(np.float32).tolist(),
-                        },
-                        payload={
-                            "chunk_id": chunk["chunk_id"],
-                            "paper_id": chunk["paper_id"],
-                            "section": chunk.get("section", ""),
-                            "paragraph_index": chunk.get("paragraph_index"),
-                            "chunk_text": chunk["chunk_text"],
-                            "year": chunk.get("year"),
-                        },
+            with stage_timer("faiss_insert_batch", extra={"num_chunks": len(chunks_data)}):
+                for chunk in chunks_data:
+                    if not chunk:
+                        continue
+                    cid = chunk.get("chunk_id")
+                    if not cid:
+                        continue
+                    if cid in self.metadata:
+                        # Skip duplicates to avoid growing the index indefinitely
+                        continue
+                    self.insert_chunk(
+                        chunk_id=cid,
+                        paper_id=chunk.get("paper_id", ""),
+                        chunk_text=chunk.get("chunk_text") or chunk.get("text", ""),
+                        vector_1=np.asarray(chunk.get("vector_1"), dtype=np.float32),
+                        vector_2=np.asarray(chunk.get("vector_2"), dtype=np.float32),
+                        section=chunk.get("section"),
+                        paragraph_index=chunk.get("paragraph_index"),
+                        year=chunk.get("year"),
+                        prev_chunk_id=chunk.get("prev_chunk_id"),
+                        next_chunk_id=chunk.get("next_chunk_id"),
                     )
-                )
 
-            self.qdrant_client.upsert(collection_name=self.collection_name, points=qdrant_points)
-
-            print(f"✓ Inserted {len(chunks_data)} chunks successfully")
+                self._persist()
+            print(f"✓ Inserted {len(chunks_data)} chunks into FAISS")
             return True
         except Exception as e:
             print(f"✗ Failed to insert batch: {e}")
             return False
-    
+
     def search_similar(
         self,
         query_vector: np.ndarray,
         vector_name: str = "vector_1",
         limit: int = 10,
-        score_threshold: Optional[float] = None
+        score_threshold: Optional[float] = None,
+        exclude_chunk_ids: Optional[set[str]] = None,
+        exclude_paper_ids: Optional[set[str]] = None,
     ) -> List[Dict[str, Any]]:
+        """Search for similar chunks using FAISS.
+
+        For IVF indexes, the FAISS_NPROBE environment variable can be used to
+        tune search recall vs. latency. For HNSW, FAISS_HNSW_EFSEARCH controls
+        the breadth of search.
         """
-        Search for similar chunks using vector similarity.
-        
-        Args:
-            query_vector: Query vector (FP32 numpy array)
-            vector_name: Which vector to search ("vector_1" or "vector_2")
-            limit: Maximum number of results
-            score_threshold: Minimum similarity score
-            
-        Returns:
-            List of dicts with chunk_id, score, and metadata
-        """
-        try:
-            # Use query method for newer qdrant-client versions
-            search_result = self.qdrant_client.query_points(
-                collection_name=self.collection_name,
-                query=query_vector.astype(np.float32).tolist(),
-                using=vector_name,
-                limit=limit,
-                score_threshold=score_threshold
-            )
-            
-            results = []
-            for hit in search_result.points:
-                # Get full metadata from Qdrant Payload
-                chunk_id = hit.payload.get('chunk_id', str(hit.id))
-                
-                results.append({
-                    "chunk_id": chunk_id,
-                    "score": hit.score,
-                    "chunk_text": hit.payload.get("chunk_text", ""),
-                    "paper_id": hit.payload.get("paper_id", ""),
-                    "section": hit.payload.get("section", ""),
-                    "year": hit.payload.get("year")
-                })
-            
-            return results
-        except Exception as e:
-            print(f"✗ Search failed: {e}")
+        vn = str(vector_name or "vector_1").strip()
+        if vn not in self.indexes:
             return []
-    
-    def get_chunk_by_id(self, chunk_id: str) -> Optional[Dict[str, Any]]:
-        """Retrieve chunk metadata from Qdrant by ID."""
-        try:
-            from qdrant_client.models import Filter, FieldCondition, MatchValue
-            res = self.qdrant_client.scroll(
-                collection_name=self.collection_name,
-                scroll_filter=Filter(
-                    must=[
-                        FieldCondition(
-                            key="chunk_id",
-                            match=MatchValue(value=chunk_id)
-                        )
-                    ]
-                ),
-                limit=1
-            )
-            records, _ = res
-            if records:
-                hit = records[0]
-                return {
-                    "chunk_id": hit.payload.get("chunk_id"),
-                    "paper_id": hit.payload.get("paper_id"),
-                    "section": hit.payload.get("section"),
-                    "paragraph_index": hit.payload.get("paragraph_index"),
-                    "chunk_text": hit.payload.get("chunk_text"),
-                    "year": hit.payload.get("year"),
-                    "created_at": None
+        index = self.indexes[vn]
+
+        # Tune index parameters when applicable
+        base = index
+        if isinstance(index, faiss.IndexIDMap):
+            base = index.index
+        if isinstance(base, faiss.IndexIVFFlat):
+            try:
+                nprobe = int(os.getenv("FAISS_NPROBE", "16"))
+                base.nprobe = nprobe
+            except Exception:
+                pass
+        if isinstance(base, faiss.IndexHNSWFlat):
+            try:
+                ef = int(os.getenv("FAISS_HNSW_EFSEARCH", "64"))
+                base.hnsw.efSearch = ef
+            except Exception:
+                pass
+
+        vec = _normalize(query_vector, self.vector_size_1 if vn == "vector_1" else self.vector_size_2)
+        with stage_timer("faiss_search", extra={"vector_name": vn, "limit": int(limit)}):
+            scores, ids = index.search(np.expand_dims(vec, axis=0), int(max(1, limit)))
+
+        results: List[Dict[str, Any]] = []
+        exclude_chunk_ids = exclude_chunk_ids or set()
+        exclude_paper_ids = exclude_paper_ids or set()
+
+        for score, fid in zip(scores[0], ids[0]):
+            if int(fid) == -1:
+                continue
+            cid = self.id_to_chunk.get(int(fid))
+            if not cid:
+                continue
+            meta = self.metadata.get(cid) or {}
+            if cid in exclude_chunk_ids:
+                continue
+            if meta.get("paper_id") and meta.get("paper_id") in exclude_paper_ids:
+                continue
+            if score_threshold is not None and float(score) < float(score_threshold):
+                continue
+            results.append(
+                {
+                    "chunk_id": cid,
+                    "score": float(score),
+                    "chunk_text": meta.get("chunk_text", ""),
+                    "paper_id": meta.get("paper_id", ""),
+                    "section": meta.get("section", ""),
+                    "year": meta.get("year"),
                 }
+            )
+        return results
+
+    def get_chunk_by_id(self, chunk_id: str) -> Optional[Dict[str, Any]]:
+        """Retrieve chunk metadata by ID from the local store."""
+        cid = str(chunk_id)
+        meta = self.metadata.get(cid)
+        if not meta:
             return None
-        except Exception as e:
-            print(f"✗ Failed to get chunk: {e}")
-            return None
-    
+        return dict(meta)
+
     def get_chunks_by_paper(self, paper_id: str) -> List[Dict[str, Any]]:
-        """Retrieve all chunks for a specific paper using Qdrant."""
-        try:
-            from qdrant_client.models import Filter, FieldCondition, MatchValue
-            all_chunks = []
-            offset = None
-            while True:
-                res = self.qdrant_client.scroll(
-                    collection_name=self.collection_name,
-                    scroll_filter=Filter(
-                        must=[
-                            FieldCondition(
-                                key="paper_id",
-                                match=MatchValue(value=paper_id)
-                            )
-                        ]
-                    ),
-                    limit=100,
-                    offset=offset
-                )
-                records, next_page_offset = res
-                for hit in records:
-                    all_chunks.append({
-                        "chunk_id": hit.payload.get("chunk_id"),
-                        "section": hit.payload.get("section"),
-                        "paragraph_index": hit.payload.get("paragraph_index"),
-                        "chunk_text": hit.payload.get("chunk_text"),
-                        "year": hit.payload.get("year"),
-                    })
-                if next_page_offset is None:
-                    break
-                offset = next_page_offset
-                
-            all_chunks.sort(key=lambda x: x.get("paragraph_index") or 0)
-            return all_chunks
-        except Exception as e:
-            print(f"✗ Failed to get chunks for paper: {e}")
-            return []
+        """Retrieve all chunks for a specific paper from the local store."""
+        pid = str(paper_id)
+        all_chunks = [dict(m) for m in self.metadata.values() if str(m.get("paper_id")) == pid]
+        all_chunks.sort(key=lambda x: x.get("paragraph_index") or 0)
+        return all_chunks
 
     def get_chunk_ids_by_paper(self, paper_id: str) -> List[str]:
-        """Retrieve all chunk_ids for a specific paper from Qdrant."""
         chunks = self.get_chunks_by_paper(paper_id)
         return [c.get("chunk_id") for c in chunks if c.get("chunk_id")]
-    
+
     def close(self):
-        """Close database connections."""
-        if self.qdrant_client:
-            print("✓ Qdrant connection closed")
+        """Persist indexes and metadata."""
+        self._persist()
+        print("✓ FAISS indexes saved")
 
 
 # Example usage and testing
 if __name__ == "__main__":
-    # Initialize database manager with Qdrant only
-    db = DatabaseManager(
-        qdrant_host='localhost',
-        qdrant_port=6333,
-        collection_name='research_papers'
-    )
-    
-    try:
-        db.connect_qdrant()
-        db.setup_qdrant_collection(vector_size_1=384, vector_size_2=768)
-        print("\n✓ Qdrant connected and collection ready")
-    except Exception as e:
-        print(f"\n✗ Error: {e}")
-    finally:
-        db.close()
+    db = DatabaseManager()
+    db.connect_faiss()
+    print("\n✓ FAISS connected and ready")
+    db.close()

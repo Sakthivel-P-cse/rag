@@ -4,6 +4,8 @@ from typing import Optional
 
 import requests
 
+from rag_utils.metrics import stage_timer, log_stage
+
 
 def ensure_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
@@ -55,7 +57,8 @@ def run(
         print(f"No PDFs in {input_dir}")
         return
 
-    for pdf in pdfs:
+    with stage_timer("doc_loading", extra={"step": "tei_extraction", "num_docs": len(pdfs)}):
+        for pdf in pdfs:
         rel = pdf.relative_to(input_dir)
         tei_out = tei_dir / rel.with_suffix(".tei.xml")
         text_out = text_dir / rel.with_suffix(".txt")

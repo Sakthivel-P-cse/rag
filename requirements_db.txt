@@ -1,12 +1,19 @@
-# Database dependencies
-psycopg2-binary>=2.9.9
-qdrant-client>=1.7.0
+"""
+Runtime dependencies for the RAG stack.
+
+This file intentionally lists only the libraries actually used by the
+current FAISS-based pipeline (no more Postgres/Qdrant client).
+"""
+
+# Core numeric / vector ops
 numpy>=1.24.0
+faiss-cpu>=1.7.4
 
-# LLM API client
+# LLM HTTP clients
 httpx>=0.27.0
+aiohttp>=3.10.0
 
-# Embedding models (required for vector generation & BM25 dedup)
+# Embedding models (dual encoders + cross-encoder)
 sentence-transformers>=2.2.0
 torch>=2.0.0
 
@@ -16,5 +23,8 @@ rank-bm25>=0.2.2
 # Tokenizer used for chunk size counting
 tiktoken>=0.7.0
 
-# For development/testing
+# PDF → TEI/text extraction
+requests>=2.31.0
+
+# For env-based configuration
 python-dotenv>=1.0.0

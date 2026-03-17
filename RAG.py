@@ -5,10 +5,25 @@ try:
 except ImportError:
     pass  # python-dotenv not installed; rely on actual env vars
 
-LLM_URL = "https://openrouter.ai/api/v1"
-LLM_MODEL_DEFAULT = "meta-llama/Llama-3.3-70B-Instruct"
-# LLM_MODEL_FAST_DEFAULT = "meta-llama/llama-3.1-8b-instruct"
-LLM_TIMEOUT_DEFAULT_S = 60
+from rag_utils.metrics import stage_timer, log_stage
+
+import os
+
+# Default LLM configuration.
+# These can be overridden via environment variables to support different providers
+# including local Ollama (OpenAI-compatible) servers.
+#
+# For Ollama, a typical setup is:
+#   export LLM_BASE_URL="http://localhost:11434/v1"
+#   export LLM_MODEL="llama3.1:8b-instruct"   # or any installed Ollama model
+#   (no API key required)
+
+LLM_URL = os.getenv("LLM_BASE_URL", "https://openrouter.ai/api/v1")
+# Big, high-quality model for normal runs
+LLM_MODEL_DEFAULT = os.getenv("LLM_MODEL", "meta-llama/Llama-3.3-70B-Instruct")
+# Smaller, cheaper/faster model for "fast" runs
+LLM_MODEL_FAST_DEFAULT = os.getenv("LLM_MODEL_FAST", "meta-llama/llama-3.1-8b-instruct")
+LLM_TIMEOUT_DEFAULT_S = int(os.getenv("LLM_TIMEOUT_S", "60"))
 
 # Shared run logging (for step-by-step visibility)
 RUN_VERBOSE_DEFAULT = True
@@ -43,12 +58,11 @@ LLM_SYSTEM_PROMPT_EVIDENCE_ONLY = (
     "Output must follow the requested JSON schema exactly."
 )
 
-# API Key — loaded from .env via OPENROUTER_API_KEY (see .env file)
+# API Key — optional for local providers like Ollama.
+# For hosted providers (OpenRouter, OpenAI, etc.) load from env.
 LLM_API_KEY_HARDCODED = None  # kept for backwards compat; .env is preferred
 
 # Fallback to environment variables if hardcoded key is empty
-import os
-
 LLM_API_KEY_DEFAULT = LLM_API_KEY_HARDCODED or os.getenv("OPENROUTER_API_KEY") or os.getenv("LLM_API_KEY") or ""
 
 # Function to call the LLM API with a prompt and return the output
@@ -113,13 +127,14 @@ def _parse_json_from_llm(text: str) -> dict | list | None:
 # Prompt Injection
 def call_llm(
     prompt,
-    model=LLM_MODEL_DEFAULT,
+    model: str | None = None,
     api_key=LLM_API_KEY_DEFAULT,
     base_url=LLM_URL,
     timeout=LLM_TIMEOUT_DEFAULT_S,
     *,
     system_prompt: str = LLM_SYSTEM_PROMPT_EVIDENCE_ONLY,
     temperature: float = 0.0,
+    fast: bool = False,
 ):
     """Send a prompt to the LLM API and return the model's output.
 
@@ -127,14 +142,26 @@ def call_llm(
     - We use a SYSTEM message to more strongly enforce evidence-only behavior.
     - `temperature=0` reduces randomness and usually improves schema compliance.
     """
-    if not str(api_key or "").strip():
+    # Select model: if caller didn't override model, choose based on `fast` flag.
+    if model is None:
+        model = LLM_MODEL_FAST_DEFAULT if fast else LLM_MODEL_DEFAULT
+
+    base_url = str(base_url or "").rstrip("/")
+    api_key = str(api_key or "")
+    is_local = base_url.startswith("http://localhost") or base_url.startswith("http://127.0.0.1")
+
+    # Hosted providers require an API key; local providers like Ollama do not.
+    if (not is_local) and not api_key.strip():
         raise RuntimeError(
-            "Missing API key. Set OPENROUTER_API_KEY (or LLM_API_KEY) in your environment."
+            "Missing API key. Set OPENROUTER_API_KEY or LLM_API_KEY in your environment, "
+            "or set LLM_BASE_URL to a local provider like Ollama."
         )
+
     headers = {
-        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
+    if api_key.strip():
+        headers["Authorization"] = f"Bearer {api_key}"
     sys = str(system_prompt or "").strip()
     messages = []
     if sys:
@@ -174,24 +201,35 @@ import asyncio
 
 async def async_call_llm(
     prompt,
-    model=LLM_MODEL_DEFAULT,
+    model: str | None = None,
     api_key=LLM_API_KEY_DEFAULT,
     base_url=LLM_URL,
     timeout=LLM_TIMEOUT_DEFAULT_S,
     *,
     system_prompt: str = LLM_SYSTEM_PROMPT_EVIDENCE_ONLY,
     temperature: float = 0.0,
+    fast: bool = False,
 ):
     """(Async) Send a prompt to the LLM API and return the model's output."""
-    if not str(api_key or "").strip():
+    base_url = str(base_url or "").rstrip("/")
+    api_key = str(api_key or "")
+    is_local = base_url.startswith("http://localhost") or base_url.startswith("http://127.0.0.1")
+
+    if (not is_local) and not api_key.strip():
         raise RuntimeError(
-            "Missing API key. Set OPENROUTER_API_KEY (or LLM_API_KEY) in your environment."
+            "Missing API key. Set OPENROUTER_API_KEY or LLM_API_KEY in your environment, "
+            "or set LLM_BASE_URL to a local provider like Ollama."
         )
+
     headers = {
-        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
+    if api_key.strip():
+        headers["Authorization"] = f"Bearer {api_key}"
     sys = str(system_prompt or "").strip()
+    # Select model: if caller didn't override model, choose based on `fast` flag.
+    if model is None:
+        model = LLM_MODEL_FAST_DEFAULT if fast else LLM_MODEL_DEFAULT
     messages = []
     if sys:
         messages.append({"role": "system", "content": sys})
@@ -356,8 +394,7 @@ def retrieve_chunks_for_question(
     top_n: int = 10,
     stage1_k: int = 100,
     stage2_k: int = 20,
-    qdrant_host: str = "localhost",
-    qdrant_port: int = 6333,
+    faiss_index_dir: str | None = None,
     collection_name: str = "research_papers",
 ):
     """Refine a user question, then retrieve top-N chunks using the refined query.
@@ -388,8 +425,7 @@ def retrieve_chunks_for_question(
         top_n=top_n,
         stage1_k=stage1_k,
         stage2_k=stage2_k,
-        qdrant_host=qdrant_host,
-        qdrant_port=qdrant_port,
+        faiss_index_dir=faiss_index_dir,
         collection_name=collection_name,
     )
     return chunks, refined
@@ -402,17 +438,16 @@ def retrieve_top_chunks(
     stage2_k: int = 20,
     exclude_paper_ids: set[str] | None = None,
     exclude_chunk_ids: set[str] | None = None,
-    qdrant_host: str = "localhost",
-    qdrant_port: int = 6333,
+    faiss_index_dir: str | None = None,
     collection_name: str = "research_papers",
 ):
     """Two-stage retrieval for your RAG pipeline.
 
     Stage 1 (recall):
-    - Embed query with all-MiniLM-L6-v2 and retrieve `stage1_k` candidates from Qdrant `vector_1`.
+    - Embed query with all-MiniLM-L6-v2 and retrieve `stage1_k` candidates from the FAISS `vector_1` index.
 
     Stage 2 (semantic refinement / rerank):
-    - Embed query with all-mpnet-base-v2 and rerank ONLY within stage-1 candidates using Qdrant `vector_2`.
+    - Embed query with all-mpnet-base-v2 and rerank ONLY within stage-1 candidates using the FAISS `vector_2` index.
 
     Returns:
     - List[dict]: top-N chunk rows from Postgres with added scores:
@@ -449,17 +484,13 @@ def retrieve_top_chunks(
     except Exception as e:
         raise ImportError("sentence-transformers is required. Install with: pip install sentence-transformers") from e
 
-    db = DatabaseManager(
-        qdrant_host=qdrant_host,
-        qdrant_port=qdrant_port,
-        collection_name=collection_name,
-    )
+    db = DatabaseManager(index_dir=faiss_index_dir, collection_name=collection_name)
     try:
-        db.connect_qdrant()
+        db.connect_faiss()
     except Exception as e:
         raise RuntimeError(
-            f"Qdrant connection failed on {qdrant_host}:{qdrant_port}. "
-            "Ensure Qdrant is running and QDRANT_HOST/QDRANT_PORT are correct."
+            f"FAISS index could not be loaded at {db.index_dir}. "
+            "Ensure FAISS_INDEX_DIR points to a valid index."
         ) from e
 
     model_small = SentenceTransformer("BAAI/bge-small-en-v1.5")
@@ -470,48 +501,25 @@ def retrieve_top_chunks(
     excluded_papers = exclude_paper_ids or set()
     excluded_chunks = exclude_chunk_ids or set()
 
-    from qdrant_client.models import Filter, FieldCondition, MatchAny
-
-    # Ensure excluded chunk_ids / paper_ids are not fetched again by Qdrant.
-    stage1_filter = None
-    if excluded_chunks or excluded_papers:
-        must_not_conds: list[FieldCondition] = []
-        if excluded_chunks:
-            must_not_conds.append(FieldCondition(key="chunk_id", match=MatchAny(any=sorted(list(excluded_chunks)))))
-        if excluded_papers:
-            must_not_conds.append(FieldCondition(key="paper_id", match=MatchAny(any=sorted(list(excluded_papers)))))
-        stage1_filter = Filter(must_not=must_not_conds)
-
     # Stage 1: recall with vector_1
-    vec_small = model_small.encode(q, convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
-    try:
-        res1 = db.qdrant_client.query_points(
-            collection_name=collection_name,
-            query=vec_small.tolist(),
-            using="vector_1",
+    with stage_timer("retrieval_stage1", extra={"stage1_k": int(stage1_k)}):
+        vec_small = model_small.encode(q, convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
+        stage1_hits = db.search_similar(
+            vec_small,
+            vector_name="vector_1",
             limit=stage1_k,
-            query_filter=stage1_filter,
+            exclude_chunk_ids=excluded_chunks,
+            exclude_paper_ids=excluded_papers,
         )
-    except TypeError:
-        # Older qdrant-client uses 'filter' instead of 'query_filter'
-        res1 = db.qdrant_client.query_points(
-            collection_name=collection_name,
-            query=vec_small.tolist(),
-            using="vector_1",
-            limit=stage1_k,
-            filter=stage1_filter,
-        )
-    stage1_points = getattr(res1, "points", []) or []
-    _run_log(f"[retrieve] Stage1 returned {len(stage1_points)} points")
+    _run_log(f"[retrieve] Stage1 returned {len(stage1_hits)} points")
     stage1_ids: list[str] = []
     score_stage1: dict[str, float] = {}
-    for pt in stage1_points:
-        payload = getattr(pt, "payload", None) or {}
-        cid = str(payload.get("chunk_id") or "").strip()
+    for hit in stage1_hits:
+        cid = str(hit.get("chunk_id") or "").strip()
         if not cid:
             continue
         stage1_ids.append(cid)
-        score_stage1[cid] = float(getattr(pt, "score", 0.0) or 0.0)
+        score_stage1[cid] = float(hit.get("score", 0.0) or 0.0)
     if not stage1_ids:
         _run_log("[retrieve] Stage1 produced no chunk_ids")
         return []
@@ -533,7 +541,8 @@ def retrieve_top_chunks(
         return []
 
     cross_inputs = [[q, row.get("chunk_text", "")] for row in stage1_rows]
-    cross_scores = model_cross.predict(cross_inputs)
+    with stage_timer("retrieval_stage2", extra={"stage2_k": int(stage2_k), "num_candidates": len(stage1_rows)}):
+        cross_scores = model_cross.predict(cross_inputs)
     
     results = []
     for row, s2 in zip(stage1_rows, cross_scores):
@@ -550,8 +559,14 @@ def retrieve_top_chunks(
             pass
 
     results.sort(key=lambda r: float(r.get("score", 0.0) or 0.0), reverse=True)
-    _run_log(f"[retrieve] Returning {len(results[:top_n])} chunks")
-    return results[:top_n]
+    final = results[:top_n]
+    log_stage(
+        "retrieval",
+        num_items=len(final),
+        extra={"stage1_k": int(stage1_k), "stage2_k": int(stage2_k), "top_n": int(top_n)},
+    )
+    _run_log(f"[retrieve] Returning {len(final)} chunks")
+    return final
 
 
 def _save_json_temp(obj: dict, *, prefix: str) -> str:
@@ -610,8 +625,7 @@ def judge_iterative(
     exclude_already_accepted_papers: bool = True,
     stop_when_satisfied: bool = True,
     min_accepted_chunks_to_stop: int = 1,
-    qdrant_host: str = "localhost",
-    qdrant_port: int = 6333,
+    faiss_index_dir: str | None = None,
     collection_name: str = "research_papers",
 ):
     """Iterative LLM-driven judge loop.
@@ -666,7 +680,8 @@ def judge_iterative(
         if not user_question:
             raise ValueError("Provide refined/refined_json_path or user_question")
         _log("[judge] No refined JSON provided; refining user_question now...")
-        refined = refine_query(user_question)
+        with stage_timer("llm_refine_query"):
+            refined = refine_query(user_question)
     if not refined:
         raise ValueError("Refined query JSON is empty/invalid")
 
@@ -757,17 +772,17 @@ def judge_iterative(
         exclude_chunks = set(accepted_chunk_ids) | set(rejected_chunk_ids)
 
         # Retrieve candidates (top_k_candidates) using your 2-stage retriever
-        candidates = retrieve_top_chunks(
-            retrieval_query,
-            top_n=int(top_k_candidates),
-            stage1_k=max(50, int(top_k_candidates) * 10),
-            stage2_k=max(20, int(top_k_candidates) * 5),
-            exclude_paper_ids=exclude_papers,
-            exclude_chunk_ids=exclude_chunks,
-            qdrant_host=qdrant_host,
-            qdrant_port=qdrant_port,
-            collection_name=collection_name,
-        )
+        with stage_timer("retrieval_iteration", extra={"iteration": it, "top_k_candidates": int(top_k_candidates)}):
+            candidates = retrieve_top_chunks(
+                retrieval_query,
+                top_n=int(top_k_candidates),
+                stage1_k=max(50, int(top_k_candidates) * 10),
+                stage2_k=max(20, int(top_k_candidates) * 5),
+                exclude_paper_ids=exclude_papers,
+                exclude_chunk_ids=exclude_chunks,
+                faiss_index_dir=faiss_index_dir,
+                collection_name=collection_name,
+            )
 
         # If retrieval yields no candidates, do NOT stop early.
         # Let the LLM reframe the next_question/search_hint to broaden retrieval, and continue until max iterations.
@@ -862,7 +877,8 @@ OUTPUT SCHEMA (STRICT):
 
         _log("[judge] Calling LLM to accept/reject top-K candidates + produce next_question...")
 
-        llm_out = call_llm(prompt)
+        with stage_timer("llm_judge_iteration", extra={"iteration": it, "num_candidates": len(candidates)}):
+            llm_out = call_llm(prompt)
         lo = str(llm_out or "")
         _log(f"[judge] LLM raw output (first 600 chars): {lo[:600].replace(chr(10),' ')}")
         judge_json = _parse_json_from_llm(llm_out)
@@ -1015,7 +1031,8 @@ OUTPUT SCHEMA:
   "evidence_citations": [{{"paper_id": "<string>", "chunk_id": "<string>", "supports": "<short>"}}]
 }}
 """
-            mini_out = call_llm(mini_prompt)
+            with stage_timer("llm_iteration_summary", extra={"iteration": it}):
+                mini_out = call_llm(mini_prompt)
             mini_obj = _parse_json_from_llm(mini_out)
             if isinstance(mini_obj, dict):
                 judge_json["iteration_evidence_summary"] = mini_obj
@@ -1221,8 +1238,7 @@ def multihop_retrieve_subproblem_chunks(
     exclude_paper_ids: set[str] | None = None,
     exclude_chunk_ids: set[str] | None = None,
     per_subproblem_top_n: int = 3,
-    qdrant_host: str = "localhost",
-    qdrant_port: int = 6333,
+    faiss_index_dir: str | None = None,
     collection_name: str = "research_papers",
 ):
     """Retrieve chunks per subproblem using the existing two-stage retriever."""
@@ -1244,8 +1260,7 @@ def multihop_retrieve_subproblem_chunks(
             stage2_k=max(30, int(per_subproblem_top_n) * 10),
             exclude_paper_ids=set(ex_papers),
             exclude_chunk_ids=set(ex_chunks),
-            qdrant_host=qdrant_host,
-            qdrant_port=qdrant_port,
+            faiss_index_dir=faiss_index_dir,
             collection_name=collection_name,
         )
         results[sid] = chunks

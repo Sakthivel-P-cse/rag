@@ -19,7 +19,7 @@ scientific reasoning itself is delegated to the LLM. The LLM performs:
 - sub-problem expansion (depth-controlled)
 - final hidden-solution synthesis
 
-Retrieval itself is still a system operation (Qdrant dual-vector search)
+Retrieval itself is still a system operation (FAISS dual-vector search)
 using your two embedding models.
 
 Configuration
@@ -28,9 +28,8 @@ Configuration
       LLM_API_KEY
       LLM_MODEL      (default: gpt-4o-mini)
 
-  - Qdrant/Postgres via existing env vars used across this repo:
-      PGHOST, PGPORT, PGDATABASE, PGUSER, PGPASSWORD
-      QDRANT_HOST, QDRANT_PORT, QDRANT_COLLECTION
+  - FAISS index via env vars used across this repo:
+	  FAISS_INDEX_DIR, FAISS_COLLECTION
 """
 
 from __future__ import annotations
@@ -60,6 +59,7 @@ import numpy as np
 
 from Extractor.database import DatabaseManager
 from Extractor.citation_graph import CitationGraphManager
+from rag_utils.metrics import stage_timer, log_stage
 
 
 _CHAT_SEMAPHORE: Optional[threading.BoundedSemaphore] = None
@@ -156,22 +156,27 @@ def _semantic_dedup_claims_by_mechanism(
 # NOTE: Hard-coding secrets is not recommended for production. This section exists
 # only because you requested a single-file, no-env setup.
 
-# If you're using OpenRouter, use:
+# If you're using OpenRouter, a typical setup is:
 #   base URL: https://openrouter.ai/api/v1
 #   model:    meta-llama/Llama-3.3-70B-Instruct
-LLM_BASE_URL_DEFAULT = "https://openrouter.ai/api/v1"
-# Do NOT hard-code secrets. Set one of these env vars:
+#
+# For Ollama (local, OpenAI-compatible) a typical setup is:
+#   export LLM_BASE_URL="http://localhost:11434/v1"
+#   export LLM_MODEL="llama3.1:8b-instruct"    # or any installed Ollama model
+#   (no API key required)
+
+LLM_BASE_URL_DEFAULT = os.getenv("LLM_BASE_URL", "https://openrouter.ai/api/v1")
+# Do NOT hard-code secrets. For hosted providers set one of these env vars:
 #   - OPENROUTER_API_KEY (recommended)
 #   - LLM_API_KEY
 LLM_API_KEY_DEFAULT = os.getenv("OPENROUTER_API_KEY") or os.getenv("LLM_API_KEY") or ""
-LLM_MODEL_DEFAULT = "meta-llama/Llama-3.3-70B-Instruct"
-LLM_MODEL_FAST_DEFAULT = "meta-llama/llama-3.1-8b-instruct"
-LLM_TIMEOUT_DEFAULT_S = 60
+LLM_MODEL_DEFAULT = os.getenv("LLM_MODEL", "meta-llama/Llama-3.3-70B-Instruct")
+LLM_MODEL_FAST_DEFAULT = os.getenv("LLM_MODEL_FAST", "meta-llama/llama-3.1-8b-instruct")
+LLM_TIMEOUT_DEFAULT_S = int(os.getenv("LLM_TIMEOUT_S", "60"))
 
-QDRANT_CONFIG_DEFAULT: Dict[str, Any] = {
-	"host": "localhost",
-	"port": 6333,
-	"collection": "research_papers",
+FAISS_CONFIG_DEFAULT: Dict[str, Any] = {
+	"index_dir": os.getenv("FAISS_INDEX_DIR") or str(Path(__file__).resolve().parent / "faiss_store"),
+	"collection": os.getenv("FAISS_COLLECTION", "research_papers"),
 }
 
 
@@ -971,8 +976,15 @@ class LLMClient:
 			self.base_url = "https://api.openai.com/v1"
 		if not self.model:
 			self.model = "gpt-4o-mini"
-		if not self.api_key:
-			raise ValueError("Missing LLM_API_KEY. Set env var LLM_API_KEY or pass --llm-api-key.")
+
+		# Hosted providers require an API key; local providers like Ollama (localhost)
+		# typically do not. Allow empty api_key when using a localhost base_url.
+		is_local = self.base_url.startswith("http://localhost") or self.base_url.startswith("http://127.0.0.1")
+		if (not is_local) and not self.api_key:
+			raise ValueError(
+				"Missing LLM_API_KEY. Set env var LLM_API_KEY/OPENROUTER_API_KEY or pass --llm-api-key, "
+				"or set LLM_BASE_URL to a local provider like Ollama."
+			)
 
 	def chat_json(self, *, user_prompt: str, temperature: float = 0.0, max_tokens: int = 900) -> Dict[str, Any]:
 		cache_key = ("GLOBAL", str(user_prompt), float(temperature), int(max_tokens), str(self.model))
@@ -1068,11 +1080,12 @@ class LLMClient:
 			url = f"{self.base_url}/chat/completions"
 			headers = {
 				"Content-Type": "application/json",
-				"Authorization": f"Bearer {self.api_key}",
 				# Helpful for OpenRouter; safe to include elsewhere.
 				"HTTP-Referer": "http://localhost",
 				"X-Title": "multihop_rag",
 			}
+			if self.api_key:
+				headers["Authorization"] = f"Bearer {self.api_key}"
 
 			last_error: Optional[str] = None
 			for attempt in range(3):
@@ -1342,7 +1355,7 @@ class DualRetriever:
 			vec = self.model_small.encode(q, convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
 		else:
 			vec = self.model_big.encode(q, convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
-		hits = self._qdrant_query(vec, vn, int(prefetch_k))
+		hits = self._faiss_query(vec, vn, int(prefetch_k))
 		cands: List[ChunkCandidate] = []
 		for cid, score in (hits or {}).items():
 			s = float(score)
@@ -1365,8 +1378,8 @@ class DualRetriever:
 		vec_big = self.model_big.encode(query, convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
 
 		with ThreadPoolExecutor(max_workers=2) as ex:
-			fut_small = ex.submit(self._qdrant_query, vec_small, "vector_1", prefetch_k)
-			fut_big = ex.submit(self._qdrant_query, vec_big, "vector_2", prefetch_k)
+			fut_small = ex.submit(self._faiss_query, vec_small, "vector_1", prefetch_k)
+			fut_big = ex.submit(self._faiss_query, vec_big, "vector_2", prefetch_k)
 			small_hits = fut_small.result()
 			big_hits = fut_big.result()
 
@@ -1409,12 +1422,13 @@ class DualRetriever:
 			stage1_k = stage2_k
 
 		# Stage 1: broad recall using small encoder.
-		stage1 = self.retrieve_channel(
-			q,
-			vector_name="vector_1",
-			top_k=stage1_k,
-			prefetch_k=stage1_k,
-		)
+		with stage_timer("mh_retrieval_stage1", extra={"stage1_k": int(stage1_k)}):
+			stage1 = self.retrieve_channel(
+				q,
+				vector_name="vector_1",
+				top_k=stage1_k,
+				prefetch_k=stage1_k,
+			)
 		if not stage1:
 			return []
 		small_scores = {c.chunk_id: float(c.score_small or c.combined_score or 0.0) for c in stage1}
@@ -1431,7 +1445,8 @@ class DualRetriever:
 			return []
 
 		cross_inputs = [[q, row.get("chunk_text", "")] for row in stage1_rows]
-		cross_scores = self.model_cross.predict(cross_inputs)
+		with stage_timer("mh_retrieval_stage2", extra={"stage2_k": int(stage2_k), "num_candidates": len(stage1_rows)}):
+			cross_scores = self.model_cross.predict(cross_inputs)
 		
 		# GraphRAG edge extraction
 		cited_papers = set()
@@ -1465,7 +1480,13 @@ class DualRetriever:
 			s = float(small_scores.get(cid, 0.0))
 			out.append(ChunkCandidate(chunk_id=cid, score_small=s, score_big=b, combined_score=b))
 		out.sort(key=lambda c: c.score_big, reverse=True)
-		return out[:top_n]
+		final = out[:top_n]
+		log_stage(
+			"mh_retrieval",
+			num_items=len(final),
+			extra={"stage1_k": int(stage1_k), "stage2_k": int(stage2_k), "top_n": int(top_n)},
+		)
+		return final
 
 	def retrieve_top_chunks(
 		self,
@@ -1489,18 +1510,17 @@ class DualRetriever:
 			rows.append(row)
 		return rows
 
-	def _qdrant_query(self, vector: np.ndarray, vector_name: str, limit: int) -> Dict[str, float]:
-		res = self.db.qdrant_client.query_points(
-			collection_name=self.collection_name,
-			query=vector.tolist(),
-			using=vector_name,
-			limit=limit,
+	def _faiss_query(self, vector: np.ndarray, vector_name: str, limit: int) -> Dict[str, float]:
+		hits = self.db.search_similar(
+			vector,
+			vector_name=vector_name,
+			limit=int(limit),
 		)
 		scores: Dict[str, float] = {}
-		for pt in getattr(res, "points", []) or []:
-			chunk_id = (pt.payload or {}).get("chunk_id")
-			if chunk_id:
-				scores[str(chunk_id)] = float(pt.score)
+		for h in hits:
+			cid = h.get("chunk_id")
+			if cid:
+				scores[str(cid)] = float(h.get("score", 0.0) or 0.0)
 		return scores
 
 	def _merge_hits(self, small: Dict[str, float], big: Dict[str, float]) -> List[ChunkCandidate]:
@@ -2063,7 +2083,7 @@ def _natural_sort_key(text: str) -> List[Any]:
 
 
 def _safe_get_paper_meta(db: DatabaseManager, paper_id: str) -> Dict[str, Any]:
-	"""Best-effort paper metadata lookup using first chunk in Qdrant."""
+	"""Best-effort paper metadata lookup using first chunk in FAISS metadata."""
 	pid = str(paper_id)
 	try:
 		chunks = db.get_chunks_by_paper(pid)
@@ -2195,13 +2215,12 @@ def run(
 	out_dir = Path("RAG_LOGS")
 	graph_store = ContextGraphStore(out_dir)
 
-	# DB connections
-	q_host = str(QDRANT_CONFIG_DEFAULT.get("host", "localhost"))
-	q_port = int(QDRANT_CONFIG_DEFAULT.get("port", 6333))
-	collection = str(QDRANT_CONFIG_DEFAULT.get("collection", "research_papers"))
+	# DB connections (FAISS)
+	index_dir = Path(str(FAISS_CONFIG_DEFAULT.get("index_dir") or "faiss_store"))
+	collection = str(FAISS_CONFIG_DEFAULT.get("collection", "research_papers"))
 
-	db = DatabaseManager(qdrant_host=q_host, qdrant_port=q_port, collection_name=collection)
-	db.connect_qdrant()
+	db = DatabaseManager(index_dir=index_dir, collection_name=collection)
+	db.connect_faiss()
 
 	citation_db = CitationGraphManager()
 	citation_db.connect()
@@ -2247,7 +2266,8 @@ def run(
 
 	# MODULE 1 — QUESTION REFINER
 	refiner_prompt = PROMPT_REFINER.replace("{{USER_PROBLEM}}", str(problem))
-	refined_obj = llm.chat_json(user_prompt=refiner_prompt, temperature=0.0, max_tokens=TOK_REFINE)
+	with stage_timer("mh_llm_refine"):
+		refined_obj = llm.chat_json(user_prompt=refiner_prompt, temperature=0.0, max_tokens=TOK_REFINE)
 	refined = RefinedProblem(
 		original=str(problem),
 		refined_question=str(refined_obj.get("refined_question", "")).strip(),
@@ -2268,7 +2288,8 @@ def run(
 	# MODULE 2 — SUB-PROBLEM PLANNER
 	planner_prompt = PROMPT_PLANNER.replace("{{REFINED_QUESTION}}", refined.refined_question)
 	planner_prompt = planner_prompt.replace("{{MAX_SUBPROBLEMS}}", str(max(1, int(max_subproblems))))
-	planned = llm.chat_json(user_prompt=planner_prompt, temperature=0.0, max_tokens=TOK_PLAN)
+	with stage_timer("mh_llm_plan"):
+		planned = llm.chat_json(user_prompt=planner_prompt, temperature=0.0, max_tokens=TOK_PLAN)
 	sp_items = planned.get("subproblems") or []
 	if not isinstance(sp_items, list) or not sp_items:
 		raise ValueError("Planner returned no subproblems")
@@ -3454,7 +3475,7 @@ def main():
 	parser.add_argument("--max-iterations", type=int, default=3, help="Max retries per subproblem")
 	parser.add_argument("--max-subproblems", type=int, default=3, help="How many sub-problems to plan (fast runs: 3)")
 	parser.add_argument("--top-k", type=int, default=8, help="How many candidates to judge")
-	parser.add_argument("--prefetch-k", type=int, default=24, help="Qdrant prefetch per vector")
+	parser.add_argument("--prefetch-k", type=int, default=24, help="FAISS prefetch per vector")
 	parser.add_argument(
 		"--no-global-paper-shortlist",
 		action="store_true",
@@ -3514,6 +3535,10 @@ def main():
 	_set_chat_semaphore(max(0, int(args.max_inflight_requests)))
 
 	conf = max(0.0, min(1.0, float(args.confidence)))
+	print(
+		f"[multihop_rag] Using LLM model='{args.llm_model}' (fast={args.fast}) "
+		f"via base_url='{args.llm_base_url}', timeout={args.llm_timeout}s"
+	)
 	llm = LLMClient(
 		base_url=str(args.llm_base_url),
 		api_key=str(args.llm_api_key),

@@ -4,6 +4,8 @@ from pathlib import Path
 from typing import Optional
 import xml.etree.ElementTree as ET
 
+from rag_utils.metrics import stage_timer
+
 
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 
@@ -149,23 +151,23 @@ def tei_to_markdown(tei_path: Path) -> str:
 def convert_folder(input_dir: Path, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    for path in input_dir.glob("**/*"):
-        if not path.is_file():
-            continue
-        if path.suffix.lower() not in {".xml", ".tei"} and not path.name.endswith(".tei.xml"):
-            continue
+    paths = [p for p in input_dir.glob("**/*") if p.is_file()]
+    with stage_timer("doc_loading", extra={"step": "tei_to_markdown", "num_docs": len(paths)}):
+        for path in paths:
+            if path.suffix.lower() not in {".xml", ".tei"} and not path.name.endswith(".tei.xml"):
+                continue
 
-        try:
-            text = tei_to_markdown(path)
-        except Exception as e:
-            print(f"Failed to parse {path}: {e}")
-            continue
+            try:
+                text = tei_to_markdown(path)
+            except Exception as e:
+                print(f"Failed to parse {path}: {e}")
+                continue
 
-        rel = path.relative_to(input_dir)
-        out_file = (output_dir / rel).with_suffix(".txt")
-        out_file.parent.mkdir(parents=True, exist_ok=True)
-        out_file.write_text(text, encoding="utf-8")
-        print(f"Written: {out_file}")
+            rel = path.relative_to(input_dir)
+            out_file = (output_dir / rel).with_suffix(".txt")
+            out_file.parent.mkdir(parents=True, exist_ok=True)
+            out_file.write_text(text, encoding="utf-8")
+            print(f"Written: {out_file}")
 
 
 def run(*, workspace_root: Optional[Path] = None, input_dir: Optional[Path] = None, output_dir: Optional[Path] = None) -> None:
