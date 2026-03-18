@@ -1519,126 +1519,134 @@ OUTPUT SCHEMA:
     return asyncio.run(_run_all())
 
 
+def run_full_pipeline(
+    user_question: str,
+    *,
+    iterations: int = 3,
+    stop_when_satisfied: bool = True,
+    top_n_chunks: int = 10,
+    stage1_k: int = 50,
+    stage2_k: int = 20,
+) -> dict:
+    """Run the end-to-end RAG + multihop pipeline non-interactively.
 
-if __name__ == "__main__":
-    # Create a single run log file so you can inspect every step.
+    This is a thin, reusable wrapper around the demo logic in the
+    __main__ block, designed for API/production use.
+
+    Returns a JSON-serializable dict with the main artefacts, including
+    the final synthesized solution.
+    """
+    global RUN_LOG_PATH
+
+    q = str(user_question or "").strip()
+    if not q:
+        raise ValueError("user_question must be a non-empty string")
+
+    # Create a single run log file so callers can inspect every step.
     RUN_LOG_PATH = _make_temp_path(prefix="full_run", ext="txt")
     _run_log(f"[run] Full log will be written to: {RUN_LOG_PATH}")
-
-    q = "I’m training a deep neural network and I’m seeing very unstable gradients in the first few epochs. The loss oscillates a lot and sometimes diverges. I want a principled way to stabilize training without redesigning the architecture. What can I do?"
     _run_log("[run] Starting end-to-end pipeline")
+
     refined = refine_query(q)
-    print(refined)
+    if not refined:
+        raise RuntimeError("refine_query returned no result")
 
     # Reuse the same refined JSON/dict (do NOT refine twice)
-    chunks, _ = retrieve_chunks_for_question(q, refined=refined, top_n=10, stage1_k=50, stage2_k=20)
-    for i, ch in enumerate(chunks, 1):
-        preview = str(ch.get("chunk_text") or "")
-        preview = preview.replace("\n", " ").strip()
-        if len(preview) > 220:
-            preview = preview[:220] + "..."
-        print(
-            f"\n{i}. paper_id={ch.get('paper_id')} chunk_id={ch.get('chunk_id')} "
-            f"score={ch.get('score'):.4f} year={ch.get('year')} section={ch.get('section')}"
-        )
-        print(f"   {preview}")
+    chunks, _ = retrieve_chunks_for_question(
+        q,
+        refined=refined,
+        top_n=int(top_n_chunks),
+        stage1_k=int(stage1_k),
+        stage2_k=int(stage2_k),
+    )
 
-    # Example: run judge loop using the refined dict directly (most robust)
-    if refined:
-        # Ask user how many iterations (MAX) to run before final answer.
-        try:
-            raw = input("\nMax judge iterations to run before answering? (default 3): ").strip()
-        except Exception:
-            raw = ""
-        try:
-            iterations = int(raw) if raw else 3
-        except Exception:
-            iterations = 3
-        if iterations < 1:
-            iterations = 1
+    # Main judge loop
+    if int(iterations) < 1:
+        iterations = 1
 
-        # Early stopping behavior
-        try:
-            raw_stop = input("Stop early if judge becomes satisfied? (Y/n): ").strip().lower()
-        except Exception:
-            raw_stop = ""
-        stop_when_satisfied = False if raw_stop in {"n", "no", "0", "false"} else True
+    final_judge, accepted = judge_iterative(
+        refined=refined,
+        user_question=q,
+        iterations=int(iterations),
+        stop_when_satisfied=bool(stop_when_satisfied),
+        verbose=True,
+        log_path=RUN_LOG_PATH,
+    )
 
-        run_log = RUN_LOG_PATH
-        print(f"\n[run] Full log will be written to: {run_log}")
-        final_judge, accepted = judge_iterative(
-            refined=refined,
-            user_question=q,
-            iterations=iterations,
-            stop_when_satisfied=stop_when_satisfied,
-            verbose=True,
-            log_path=run_log,
-        )
-
-        try:
-            js = final_judge.get("judge_summary") or {}
-            print(
-                f"\n[run] Judge iterations requested={js.get('iterations_requested')} completed={js.get('iterations_completed')} satisfied={js.get('satisfied')}"
-            )
-        except Exception:
-            pass
-
-        print("\nJUDGE SUMMARY:")
-        print(json.dumps(final_judge.get("judge_summary") or {}, ensure_ascii=False, indent=2))
-
-        # Multi-hop final solution phase (do NOT use multihop_rag judging; only planning + retrieval + synthesis)
+    # Multi-hop final solution phase (do NOT use multihop_rag judging; only planning + retrieval + synthesis)
+    missing: list[str] = []
+    try:
+        mf = (final_judge.get("judge_summary") or {}).get("missing_factors_by_iteration") or []
+        if mf:
+            missing = mf[-1].get("missing_factors") or []
+    except Exception:
         missing = []
-        try:
-            mf = (final_judge.get("judge_summary") or {}).get("missing_factors_by_iteration") or []
-            if mf:
-                missing = mf[-1].get("missing_factors") or []
-        except Exception:
-            missing = []
 
-        subproblems = multihop_plan_subproblems(
-            refined_question=str((final_judge.get("judge_summary") or {}).get("final_refined_question") or q),
-            missing_factors=missing,
-            max_subproblems=3,
-        )
-        _run_log(f"[run] Planned {len(subproblems)} subproblems")
-        sub_chunks = multihop_retrieve_subproblem_chunks(
-            subproblems,
-            exclude_paper_ids=set((final_judge.get("judge_summary") or {}).get("rejected_paper_ids") or []),
-            exclude_chunk_ids=set((final_judge.get("judge_summary") or {}).get("rejected_chunk_ids") or []),
-        )
+    subproblems = multihop_plan_subproblems(
+        refined_question=str((final_judge.get("judge_summary") or {}).get("final_refined_question") or q),
+        missing_factors=missing,
+        max_subproblems=3,
+    )
+    _run_log(f"[run] Planned {len(subproblems)} subproblems")
+    sub_chunks = multihop_retrieve_subproblem_chunks(
+        subproblems,
+        exclude_paper_ids=set((final_judge.get("judge_summary") or {}).get("rejected_paper_ids") or []),
+        exclude_chunk_ids=set((final_judge.get("judge_summary") or {}).get("rejected_chunk_ids") or []),
+    )
 
-        # Answer each subproblem using ONLY its retrieved evidence.
-        sub_answers = answer_subproblems(
-            subproblems=subproblems,
-            subproblem_chunks=sub_chunks,
-        )
-        solution = synthesize_final_solution(
-            user_question=q,
-            judge_final_json=final_judge,
-            accepted_chunks=accepted,
-            subproblem_chunks=sub_chunks,
-            subproblem_answers=sub_answers,
-        )
-        saved_solution = _save_json_temp(
-            {
-                "judge_summary": final_judge.get("judge_summary") or {},
-                "accepted_chunks": accepted,
-                "subproblems": subproblems,
-                "subproblem_chunks": sub_chunks,
-                "subproblem_answers": sub_answers,
-                "solution": solution,
-            },
-            prefix="final_solution",
-        )
-        _run_log(f"[run] Saved final solution bundle to: {saved_solution}")
-        print(f"\n[run] Saved final solution bundle to: {saved_solution}")
-        print("\nFINAL ANSWER:")
-        paras = solution.get("final_answer_paragraphs")
-        import re
-        if isinstance(paras, list) and paras:
-            paras = [re.sub(r'\[.*?\]|\(.*?(chunk|claim).*?\)', '', str(p)) for p in paras]
-            print("\n\n".join(str(p) for p in paras if str(p).strip()))
-        else:
-            ans = str(solution.get("final_answer") or "")
-            ans = re.sub(r'\[.*?\]|\(.*?(chunk|claim).*?\)', '', ans)
-            print(ans)
+    # Answer each subproblem using ONLY its retrieved evidence.
+    sub_answers = answer_subproblems(
+        subproblems=subproblems,
+        subproblem_chunks=sub_chunks,
+    )
+    solution = synthesize_final_solution(
+        user_question=q,
+        judge_final_json=final_judge,
+        accepted_chunks=accepted,
+        subproblem_chunks=sub_chunks,
+        subproblem_answers=sub_answers,
+    )
+    saved_solution = _save_json_temp(
+        {
+            "judge_summary": final_judge.get("judge_summary") or {},
+            "accepted_chunks": accepted,
+            "subproblems": subproblems,
+            "subproblem_chunks": sub_chunks,
+            "subproblem_answers": sub_answers,
+            "solution": solution,
+        },
+        prefix="final_solution",
+    )
+    _run_log(f"[run] Saved final solution bundle to: {saved_solution}")
+
+    # Return a structured, JSON-serializable bundle
+    return {
+        "question": q,
+        "refined": refined,
+        "chunks_preview": chunks,
+        "final_judge": final_judge,
+        "accepted_chunks": accepted,
+        "subproblems": subproblems,
+        "subproblem_chunks": sub_chunks,
+        "subproblem_answers": sub_answers,
+        "solution": solution,
+        "run_log_path": RUN_LOG_PATH,
+        "saved_solution_path": saved_solution,
+    }
+
+
+if __name__ == "__main__":
+    # Preserve the original interactive demo behavior.
+    q = "I’m training a deep neural network and I’m seeing very unstable gradients in the first few epochs. The loss oscillates a lot and sometimes diverges. I want a principled way to stabilize training without redesigning the architecture. What can I do?"
+    result = run_full_pipeline(q)
+    print("\nFINAL ANSWER:")
+    solution = result.get("solution") or {}
+    paras = solution.get("final_answer_paragraphs")
+    import re
+    if isinstance(paras, list) and paras:
+        paras = [re.sub(r'\[.*?\]|\(.*?(chunk|claim).*?\)', '', str(p)) for p in paras]
+        print("\n\n".join(str(p) for p in paras if str(p).strip()))
+    else:
+        ans = str(solution.get("final_answer") or "")
+        ans = re.sub(r'\[.*?\]|\(.*?(chunk|claim).*?\)', '', ans)
+        print(ans)

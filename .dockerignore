@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.log
+
+.git
+.gitignore
+.vscode/
+.venv/
+.env
+
+# Local data, logs, and temp artefacts not needed in the image
+RAG_LOGS/
+TEMP/
+RESULTS/
+
+# Raw and intermediate corpora; production should use prebuilt FAISS indexes
+OUTPUT/
+"Research Papers"/
+
+# Editor / OS noise
+*.swp
+.DS_Store

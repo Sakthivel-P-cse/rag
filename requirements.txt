@@ -1,0 +1,29 @@
+# Runtime dependencies for the RAG stack and API service
+
+# Core numeric / vector ops
+numpy>=1.24.0
+faiss-cpu>=1.7.4
+
+# LLM HTTP clients
+httpx>=0.27.0
+aiohttp>=3.10.0
+
+# Embedding models (dual encoders + cross-encoder)
+sentence-transformers>=2.2.0
+torch>=2.0.0
+
+# BM25 keyword search (used by citation_graph.py and bm25_search.py)
+rank-bm25>=0.2.2
+
+# Tokenizer used for chunk size counting
+tiktoken>=0.7.0
+
+# PDF → TEI/text extraction
+requests>=2.31.0
+
+# For env-based configuration
+python-dotenv>=1.0.0
+
+# API server for Cloud Run
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
